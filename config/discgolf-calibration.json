@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "declaredAt": "2026-11-07",
+  "purpose": "Engine A distance calibration for the disc golf league. ONE declared parameter maps the card onto the engine; everything scale-coupled lives here, not in the physics and not as magic constants in the runner.",
+  "distanceScale": 0.0455,
+  "derivation": {
+    "method": "Measured, not eyeballed. calibration-battery.mjs threw every disc in the three citizens bags through simulateThrow as built (noise off, no wind, slot recipes) and recorded the release-speed -> distance map (logs/calibration-battery.json).",
+    "engineCharacter": "Release speed v0 = (22 + 8*speed/14) * power m/s. Distance saturates hard in v0 (drag deceleration ~250 m/s^2 at a full-power driver release): tripling v0 from ~9 to ~29 m/s only doubles distance (4.0 -> 7.96 units). The whole bag spans 5.05 (putter) to 7.96 (Boss) units at power 1.0.",
+    "referenceDrive": {
+      "disc": "boss",
+      "power": 1.0,
+      "recipe": "distance slot: hyzer 6, aimPitch 10",
+      "releaseSpeedMs": 29.43,
+      "measuredCarryUnits": 7.963
+    },
+    "targetDriveCardUnits": 175,
+    "targetRationale": "Set from the card's own par structure: a par 3 should play drive + approach/putt, a par 4 two full shots + approach + putt. At 175 the reference drive covers 46 percent of the longest par 4 (380), reaches the 155 ace run, and leaves a real second shot on the 195-240 par 3s. It is also the honest reading of the engine arm: the engine tops out at 29.4 m/s release but its drag profile makes that worth an intermediate-amateur carry, not a touring pro carry.",
+    "formula": "distanceScale = measuredCarryUnits / targetDriveCardUnits = 7.963 / 175 = 0.0455",
+    "round1Comparison": {
+      "round1Scale": 0.05,
+      "round1ImpliedDriveCardUnits": 159,
+      "note": "Round 1s eyeballed 0.05 implied a 159-unit drive: drives covered only ~31% of the longest hole, which is why H5 played +1.5 for the veterans and every long hole needed three full sends."
+    },
+    "validationRevision": {
+      "firstTarget": 220,
+      "firstScale": 0.0362,
+      "result": "REJECTED by validation: 6 simulated rounds per card, narration off, citizens at current career counts. Veteran totals 16-21 on par 30 (field mean about -11): with an honest caddy the veterans floored execution noise (sigma scale ~0.19) is too tight for a 220-unit drive - reachable par 3s were holed from the tee (Mara aced H1, remaining 0.5). Par was not earned; it was automatic.",
+      "revisedTarget": 175,
+      "revisedScale": 0.0455,
+      "note": "The engine + exact-aim caddy has almost no lateral error channel at veteran sigma; distance is the difficulty the calibration controls. The target drive is that control, and it is declared here rather than hidden in hole distances."
+    },
+    "validationRevision2": {
+      "change": "capture radius re-expressed as a card-unit rule: 6 card units (0.273 engine units at scale 0.0455), replacing the flat 0.75 engine units inherited from Round 1",
+      "evidence": "Validation at scale 0.0455 with the 0.75 circle: every par 3 played at veteran mean 1.50-2.58 (H1/H6 at 1.50 = half the drives effectively holed), par 4s at 2.75-3.92, veteran totals 19-25, rookie totals overlapping the veterans (23-30). No distance setting fixes a 16-unit gimme circle; the circle is the leak."
+    },
+    "validationFinal": {
+      "method": "round-runner-2.mjs in validation mode (NARRATE=0, scratch ledger path, scratch skill states reset to current career counts before each run), 6 rounds per card, seeds salted 11-16",
+      "round1CardAtFullDistances": {
+        "maraMean": 24.8,
+        "julesMean": 32.8,
+        "veteranFieldMean": 28.8,
+        "pipMean": 42.0,
+        "par": 30,
+        "read": "Par reachable, not trivial. Mara's power game feasts on the original card's short holes (H1 veteran mean -1.42, H8 -1.00) while Jules works at +2.8 - exactly the bunching the Round 2 mutation then corrects."
+      },
+      "round2Card": {
+        "maraMean": 30.0,
+        "julesMean": 30.5,
+        "pipMean": 41.3,
+        "pipPickupsPerRound": 0.5,
+        "par": 30,
+        "perHoleVeteranMeanVsPar": {
+          "H1": 0.42,
+          "H2": 0.17,
+          "H3": -0.33,
+          "H4": -0.25,
+          "H5": 1.08,
+          "H6": -0.5,
+          "H7": 0.08,
+          "H8": -0.75,
+          "H9": 0.33
+        },
+        "read": "Both veterans sit at par +/- 0.5 over 6 rounds; every hole within +/- 1.1 of par; H5 the clear championship hole; the rookie at +11 with an occasional pickup - honest golf at all three skill levels."
+      }
+    }
+  },
+  "whyCardMapsToEngine_notEngineScalesToCard": "The two are the same transform mathematically (integrate raw, relabel). The card side wins because: (1) the physics file is Magnuss upstream thrower - the league copy stays pristine and its test suite keeps meaning; (2) the noise model was tuned and documented in engine-native units (POWER_SIGMA documented as a +-1-unit spray on a drive; hyzer/aim sigmas only have gameplay meaning against the engine-native capture radius 0.75 and obstacle geometry) - scaling the engine x27 would silently re-tune every one of those constants; (3) the landing classifier thresholds inside simulateThrow are absolute engine units and would break under an internal scale.",
+  "maxStrokes": 8,
+  "caddy": {
+    "carryTable": "logs/calibration-battery.json",
+    "referenceCarryUnits": 7.963,
+    "slotThresholdsInCarry": {
+      "distance": 0.98,
+      "fairway": 0.6,
+      "midrange": 0.3
+    },
+    "fullShotTargetFraction": 0.97,
+    "puttTargetFraction": 1.0,
+    "note": "Shot selection inverts the measured carry table per disc (power := the power whose measured carry matches the target), replacing Round 1s scale-bound power formulas and their 0.22 putter floor - the floor forced ~2.1 units of carry on every short putt, which is the measured cause of the close-putt overshoot (Round 1: Mara 2/6 and Pip 2/10 holed from <=2.0 units; Jules, whose putts happened to start further out, 2/2)."
+  },
+  "captureCardUnits": 6,
+  "captureRule": "The holing circle is a league rule in CARD units: a throw finishes the hole when it comes to rest within 6 card units of the basket (a generous holing circle for a sim - a real basket catches far tighter). captureRadiusUnits = captureCardUnits * distanceScale = 0.273 engine units at scale 0.0455. Round 1 ran 0.75 engine units flat (= 15 card units at its 0.05 scale, a 15-unit gimme circle) - masked there by systematic underthrowing, exposed by validation once the caddy was honest: with a 0.75-unit circle every approach that reached the green was effectively holed, and veteran means sat at -7 to -11 with aces on tap. Putting is where strokes live; the circle is what prices them."
+}

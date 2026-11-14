@@ -1,0 +1,146 @@
+{
+ "_comment": "craftmind-league governor config. Budgets are per agent, rolling 3600s window, enforced on chat-completion calls only. mindSeconds = wall latency of the upstream call (seconds of model attention). Agent identity comes from the bot's apiKey: 'league-<agentname>'.",
+ "agentUpstreams": {
+  "_comment": "Optional per-agent upstream override, e.g. \"cody\": \"http://127.0.0.1:8181/v1\" for the CPU Qwen3-VL-8B, or a cloud endpoint as the ladder's top rung.",
+  "cody-actor": "http://127.0.0.1:8311/v1",
+  "syndicate-captain": "http://127.0.0.1:8311/v1",
+  "syndicate-cob": "http://127.0.0.1:8311/v1",
+  "syndicate-mari": "http://127.0.0.1:8311/v1",
+  "syndicate-och": "http://127.0.0.1:8311/v1",
+  "syndicate-verm": "http://127.0.0.1:8311/v1",
+  "town-anka": "http://127.0.0.1:8311/v1",
+  "town-ilya": "http://127.0.0.1:8311/v1",
+  "town-maren": "http://127.0.0.1:8311/v1",
+  "town-roster": "http://127.0.0.1:8311/v1",
+  "town-runa": "http://127.0.0.1:8311/v1",
+  "town-social": "http://127.0.0.1:8311/v1",
+  "town-stian": "http://127.0.0.1:8311/v1",
+  "town-stock": "http://127.0.0.1:8311/v1",
+  "town-theo": "http://127.0.0.1:8311/v1",
+  "town-tomas": "http://127.0.0.1:8311/v1",
+  "town-vera": "http://127.0.0.1:8311/v1",
+  "town-works": "http://127.0.0.1:8311/v1"
+ },
+ "budgets": {
+  "agents": {
+   "cody": {
+    "callsPerHour": 240,
+    "mindSecondsPerHour": 300
+   },
+   "cody-actor": {
+    "callsPerHour": 240,
+    "mindSecondsPerHour": 600
+   },
+   "geist": {
+    "callsPerHour": 300,
+    "mindSecondsPerHour": 900
+   },
+   "geist-mind": {
+    "callsPerHour": 300,
+    "mindSecondsPerHour": 900
+   },
+   "pulse-smith": {
+    "callsPerHour": 60,
+    "mindSecondsPerHour": 900
+   },
+   "syndicate-captain": {
+    "callsPerHour": 240,
+    "mindSecondsPerHour": 900
+   },
+   "syndicate-cob": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "syndicate-mari": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "syndicate-och": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "syndicate-reflect": {
+    "callsPerHour": 60,
+    "mindSecondsPerHour": 1800
+   },
+   "syndicate-verm": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-anka": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-ilya": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-maren": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-reflect": {
+    "callsPerHour": 60,
+    "mindSecondsPerHour": 1800
+   },
+   "town-roster": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-runa": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-smith": {
+    "callsPerHour": 60,
+    "mindSecondsPerHour": 900
+   },
+   "town-social": {
+    "callsPerHour": 60,
+    "mindSecondsPerHour": 300
+   },
+   "town-stian": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-stock": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-theo": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-tomas": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-vera": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "town-works": {
+    "callsPerHour": 120,
+    "mindSecondsPerHour": 300
+   },
+   "vega": {
+    "callsPerHour": 300,
+    "mindSecondsPerHour": 600
+   }
+  },
+  "default": {
+   "callsPerHour": 120,
+   "mindSecondsPerHour": 120
+  }
+ },
+ "ledgerPath": "/home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl",
+ "listen": {
+  "host": "127.0.0.1",
+  "port": 8642
+ },
+ "upstream": {
+  "_comment": "Default model endpoint: the Thor's warm Qwen3-Coder-30B llama-server (presence brain). Chat-capable, OpenAI-shaped /v1. NOTE: :8094 (d1-2B) is a decision model and refuses chat completions (501) \u2014 do not point chat at it.",
+  "apiKey": "",
+  "base": "http://127.0.0.1:8310/v1"
+ }
+}

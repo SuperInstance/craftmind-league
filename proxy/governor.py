@@ -1,0 +1,313 @@
+#!/usr/bin/env python3
+"""
+craftmind-league governor — the attention budget, promoted to mind-seconds.
+
+A thin OpenAI-shaped proxy that sits between the league's bots and a
+local model endpoint. The bots' llm.apiUrl points HERE; the governor
+forwards to the real upstream (llama-server on the Thor), meters every
+chat-completion call in MIND-SECONDS (wall latency of the upstream
+call — the seconds of model attention the community actually spent),
+enforces a per-agent hourly budget (calls + mind-seconds, rolling
+window), and appends one receipt line per call to the league ledger
+(ledger/mind-calls.jsonl).
+
+This is the promotion CRAFTMIND-MAP §5.3 asks for: craftmind's
+AttentionBudget counts calls; this counts cost, per agent, with a
+durable receipt. When an agent is over budget the governor answers
+429 with an OpenAI-shaped error — craftmind's brain treats that as
+an API failure and degrades to its canned replies, which is the
+designed behaviour (the reflex tier keeps playing; only the
+expensive seat is closed).
+
+Agent identity: the bot's apiKey IS the identity. Convention:
+apiKey = "league-<agentname>" (see bots/runs/<agent>/craftmind.config.js).
+Anything else is metered as its raw token string, or "anonymous".
+
+Stdlib only. Python 3.10+.
+"""
+
+import http.client
+import json
+import os
+import sys
+import threading
+import time
+from collections import defaultdict, deque
+from datetime import datetime, timezone
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.parse import urlparse
+
+DEFAULT_CONFIG = "/home/caseydigennaro/craftmind-league/config/governor.json"
+WINDOW_S = 3600  # rolling one-hour budget window
+
+
+def now_iso():
+    return datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+
+
+class Governor:
+    def __init__(self, cfg):
+        self.cfg = cfg
+        self.upstream_base = cfg["upstream"]["base"].rstrip("/")
+        self.upstream_key = cfg["upstream"].get("apiKey", "")
+        self.agent_upstreams = {
+            k: v.rstrip("/") for k, v in cfg.get("agentUpstreams", {}).items()
+        }
+        self.ledger_path = cfg["ledgerPath"]
+        self.lock = threading.Lock()
+        # agent -> deque of (epoch_ts, mind_seconds)
+        self.window = defaultdict(deque)
+
+    # ── budgets ──────────────────────────────────────────────────────
+    def budget_for(self, agent):
+        budgets = self.cfg.get("budgets", {})
+        merged = dict(budgets.get("default", {}))
+        merged.update(budgets.get("agents", {}).get(agent, {}))
+        return merged
+
+    def _prune(self, agent, now):
+        q = self.window[agent]
+        while q and now - q[0][0] > WINDOW_S:
+            q.popleft()
+
+    def admit(self, agent):
+        """Return (ok, usage_dict). Admit-then-meter: a call is allowed
+        while the agent is under both caps; its cost lands after."""
+        now = time.time()
+        b = self.budget_for(agent)
+        with self.lock:
+            self._prune(agent, now)
+            q = self.window[agent]
+            calls = len(q)
+            seconds = sum(s for _, s in q)
+        usage = {
+            "calls_used": calls,
+            "calls_limit": b.get("callsPerHour"),
+            "mind_seconds_used": round(seconds, 3),
+            "mind_seconds_limit": b.get("mindSecondsPerHour"),
+        }
+        if b.get("callsPerHour") is not None and calls >= b["callsPerHour"]:
+            return False, usage
+        if b.get("mindSecondsPerHour") is not None and seconds >= b["mindSecondsPerHour"]:
+            return False, usage
+        return True, usage
+
+    def charge(self, agent, seconds):
+        with self.lock:
+            self.window[agent].append((time.time(), seconds))
+
+    def usage_snapshot(self):
+        now = time.time()
+        out = {}
+        with self.lock:
+            agents = list(self.window.keys())
+        for a in agents:
+            _, u = self.admit(a)  # admit() prunes; ok-flag discarded here
+            out[a] = u
+        return out
+
+    # ── ledger ───────────────────────────────────────────────────────
+    def receipt(self, rec):
+        line = json.dumps(rec, separators=(",", ":")) + "\n"
+        with self.lock:
+            with open(self.ledger_path, "a", encoding="utf-8") as f:
+                f.write(line)
+
+
+GOV = None  # set in main()
+
+
+def agent_from_auth(header):
+    if not header:
+        return "anonymous"
+    tok = header.split(" ", 1)[-1].strip()
+    if tok.startswith("league-"):
+        return tok[len("league-"):].lower() or "anonymous"
+    return tok[:32] or "anonymous"
+
+
+class Handler(BaseHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
+
+    def log_message(self, fmt, *args):  # quiet; receipts are the log
+        pass
+
+    # ── helpers ──────────────────────────────────────────────────────
+    def _send_json(self, code, obj):
+        body = json.dumps(obj).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _error(self, code, message, err_type="rate_limit_error", err_code=None):
+        self._send_json(code, {"error": {"message": message, "type": err_type,
+                                         "code": err_code}})
+
+    # ── verbs ────────────────────────────────────────────────────────
+    # -- chunked request bodies --------------------------------------
+    def _read_chunked(self):
+        """De-chunk a Transfer-Encoding: chunked request body.
+
+        http.server never de-chunks for us, and some clients (raw
+        Node http.request without an explicit Content-Length) send
+        nothing else.  Before 2026-11-07 the body was silently read
+        as empty AND the chunked header was forwarded upstream with
+        Content-Length: 0, so the upstream waited forever for chunk
+        frames that never came (the resident mind-link 300 s hangs).
+        """
+        out = bytearray()
+        while True:
+            line = self.rfile.readline(65536).strip()
+            if not line:
+                break
+            try:
+                size = int(line.split(b";", 1)[0], 16)
+            except ValueError:
+                break
+            if size == 0:
+                # consume any trailers up to the blank line
+                while True:
+                    t = self.rfile.readline(65536)
+                    if t in (b"\r\n", b"\n", b""):
+                        break
+                break
+            out.extend(self.rfile.read(size))
+            self.rfile.readline(65536)  # trailing CRLF after the chunk
+        return bytes(out)
+
+    def do_GET(self):
+        if self.path == "/healthz":
+            return self._send_json(200, {"ok": True, "service": "craftmind-league-governor",
+                                         "upstream": GOV.upstream_base})
+        if self.path == "/budget":
+            return self._send_json(200, {"window_s": WINDOW_S,
+                                         "agents": GOV.usage_snapshot()})
+        return self._forward()
+
+    def do_POST(self):
+        return self._forward()
+
+    def _forward(self):
+        agent = agent_from_auth(self.headers.get("Authorization"))
+        is_chat = self.path.rstrip("/").endswith("/chat/completions")
+        model = None
+        body = b""
+        te = (self.headers.get("Transfer-Encoding") or "").lower()
+        if "chunked" in te:
+            body = self._read_chunked()
+        else:
+            length = int(self.headers.get("Content-Length") or 0)
+            if length:
+                body = self.rfile.read(length)
+        if is_chat and body:
+            try:
+                model = json.loads(body).get("model")
+            except Exception:
+                pass
+
+        if is_chat:
+            ok, usage = GOV.admit(agent)
+            if not ok:
+                GOV.receipt({"ts": now_iso(), "agent": agent, "model": model,
+                             "status": 429, "mind_seconds": 0,
+                             "prompt_tokens": None, "completion_tokens": None,
+                             "total_tokens": None, "refused": "mind_budget_exhausted",
+                             "budget": usage})
+                return self._error(
+                    429,
+                    f"mind budget exhausted for agent '{agent}' "
+                    f"({usage['calls_used']}/{usage['calls_limit']} calls, "
+                    f"{usage['mind_seconds_used']}/{usage['mind_seconds_limit']} mind-seconds this hour)",
+                    err_code="mind_budget_exhausted")
+
+        base = GOV.agent_upstreams.get(agent, GOV.upstream_base)
+        up = urlparse(base)
+        suffix = self.path
+        # self.path is the tail the client used (e.g. /v1/chat/completions);
+        # upstream base already ends in /v1 — forward the part after it.
+        if suffix.startswith("/v1/"):
+            suffix = suffix[len("/v1"):]
+        target = up.path.rstrip("/") + suffix
+
+        headers = {}
+        for k, v in self.headers.items():
+            if k.lower() in ("host", "content-length", "authorization", "connection", "transfer-encoding"):
+                continue
+            headers[k] = v
+        if GOV.upstream_key:
+            headers["Authorization"] = f"Bearer {GOV.upstream_key}"
+        headers["Content-Length"] = str(len(body))
+
+        started = time.time()
+        status = 502
+        captured = bytearray()
+        try:
+            conn = http.client.HTTPConnection(up.hostname, up.port or 80, timeout=300)
+            conn.request(self.command, target, body=body or None, headers=headers)
+            resp = conn.getresponse()
+            status = resp.status
+            self.send_response(status)
+            for k, v in resp.getheaders():
+                if k.lower() in ("content-length", "transfer-encoding", "connection"):
+                    continue
+                self.send_header(k, v)
+            self.send_header("Transfer-Encoding", "chunked")
+            self.end_headers()
+            while True:
+                chunk = resp.read(8192)
+                if not chunk:
+                    break
+                if len(captured) < 2_000_000:
+                    captured.extend(chunk)
+                self.wfile.write(b"%x\r\n%s\r\n" % (len(chunk), chunk))
+                self.wfile.flush()
+            self.wfile.write(b"0\r\n\r\n")
+            self.wfile.flush()
+            conn.close()
+        except Exception as e:
+            if is_chat:
+                pass  # receipt below records the 502
+            try:
+                self._error(502, f"governor: upstream unreachable: {e}",
+                            err_type="api_error", err_code="upstream_unreachable")
+            except Exception:
+                pass
+        latency = time.time() - started
+
+        if is_chat:
+            GOV.charge(agent, latency)
+            usage_tok = {"prompt_tokens": None, "completion_tokens": None,
+                         "total_tokens": None}
+            try:
+                parsed = json.loads(bytes(captured))
+                if isinstance(parsed.get("usage"), dict):
+                    for k in usage_tok:
+                        usage_tok[k] = parsed["usage"].get(k)
+                if model is None:
+                    model = parsed.get("model")
+            except Exception:
+                pass  # streamed or non-JSON: tokens stay null, seconds still metered
+            GOV.receipt({"ts": now_iso(), "agent": agent, "model": model,
+                         "status": status, "mind_seconds": round(latency, 3),
+                         **usage_tok})
+
+
+def main():
+    global GOV
+    cfg_path = os.environ.get("GOVERNOR_CONFIG", DEFAULT_CONFIG)
+    with open(cfg_path, encoding="utf-8") as f:
+        cfg = json.load(f)
+    GOV = Governor(cfg)
+    host = cfg["listen"].get("host", "127.0.0.1")
+    port = int(cfg["listen"]["port"])
+    os.makedirs(os.path.dirname(cfg["ledgerPath"]), exist_ok=True)
+    srv = ThreadingHTTPServer((host, port), Handler)
+    print(f"governor on http://{host}:{port} → {cfg['upstream']['base']} "
+          f"(ledger {cfg['ledgerPath']})", flush=True)
+    srv.serve_forever()
+
+
+if __name__ == "__main__":
+    main()

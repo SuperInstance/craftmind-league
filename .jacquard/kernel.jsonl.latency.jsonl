@@ -1,0 +1,187 @@
+{"ts": "2026-11-08T07:24:25.604166+00:00", "tool": "bash", "verdict": "deny", "decision_ms": 3.978, "proposal_id": "9759f112ca664e3804c5ba1228fed780448fbdb25e643c1ee9fbe06f90708775", "outcome": "queue"}
+{"ts": "2026-11-08T07:24:25.728862+00:00", "tool": "bash", "verdict": "deny", "decision_ms": 1.901, "proposal_id": "ed4ce15119a70692455bff01b6e02697d9dbbb0e3c357599e6cbac56799863ac", "outcome": "queue"}
+{"ts": "2026-11-08T07:24:37.072979+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 1.878, "proposal_id": "ce75a328fa6e64751467eb6144f8b432031cafa840e50cf879ad99583f650132", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:37.222106+00:00", "tool": "grep", "verdict": "allow", "decision_ms": 1.955, "proposal_id": "dd0ea3bbc6ecce44a0903cf605408d03e4e3b6c183eae5f713cde067a3244d1d", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:37.399721+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.071, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:37.416887+00:00", "tool": "grep", "verdict": "pass", "decision_ms": 0.067, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:39.732555+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.175, "proposal_id": "7305876256a0c5de55159633c6989fe41ae48d7d9b2c585fb65a5c22defca827", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:39.849557+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.432, "proposal_id": "54d146b63a9683a695196ef174150ba55ca1ecad16a905a93a5fbe71253cc5d9", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:39.957004+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.594, "proposal_id": "47a2d36bedb2bc15ec2810ee9ebc7421a6bb3f8de0cdc5a8f224346d088e852b", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:40.090469+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.072, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:40.116919+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.081, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:40.122200+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.155, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:50.771013+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.467, "proposal_id": "c011c7e94b49eb9b5451e70aae79341731096a304a5a190b209fc9dace801d32", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:50.888077+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.732, "proposal_id": "997736d34de340eb2d12864aeba69fa4b10fba7e9781394208e5147b0b8fff30", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:51.008115+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.954, "proposal_id": "b5d870201ea2c98f9725b1037c7f4626e553378c4cf269961c401cd94f363ca9", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:51.151513+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.247, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:51.158575+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.078, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:51.162645+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.249, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:57.322577+00:00", "tool": "read", "verdict": "allow", "decision_ms": 2.849, "proposal_id": "63377aa09e26d5a98d7797c8c4276cfa16ab9521d2a62e5acb9aab01533f8bfd", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:57.443331+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.065, "proposal_id": "700f55b7f7eb158666a518c47082e3304a8fbfa2a2738a366b527b5424b75961", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:57.562301+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.189, "proposal_id": "788eae2133798f1eb8032a4ed9dcdc75df2281b86b40882fcafd138e47ac4f50", "outcome": "allow"}
+{"ts": "2026-11-08T07:24:57.681840+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.084, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:57.691876+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.122, "outcome": "pass"}
+{"ts": "2026-11-08T07:24:57.696290+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.099, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:00.238048+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.409, "proposal_id": "100651e497e6320f362b94f6d28f6a05082a22356a118913152e99becb65b550", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:00.353258+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.362, "proposal_id": "0edb6c49686dea11598b769bfe6d4de11fb78ef5b1261cb471af3e0c4f527a6b", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:00.462995+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.34, "proposal_id": "ecb9e1d95b534852cb5b0611cd9190dfab4980bb8c518237516971f077776751", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:00.565203+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.071, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:00.579127+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.099, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:00.584704+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.097, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:03.411832+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.626, "proposal_id": "f7f0d48ade0ba88e660a4bfdc4c5ae1f8e0a8e42385c98e17e32c92db23f5e4b", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:03.533518+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.461, "proposal_id": "c99fe654c5dbf0ef321457f6aecd3084e0f625b0ac0b1a81d5439089e419d267", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:03.658638+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 4.021, "proposal_id": "a75aacace7101713c5797ec6ee1c1fd9c135674a7f49b03e7519d2c4c6a0c3ec", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:03.793301+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.061, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:03.816065+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.136, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:03.830629+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.093, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:06.601847+00:00", "tool": "read", "verdict": "allow", "decision_ms": 3.889, "proposal_id": "595418dc6a4a68995d662dfd8562021363b81f675ab9622a66ddad6fb9e62782", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:06.712667+00:00", "tool": "read", "verdict": "allow", "decision_ms": 4.342, "proposal_id": "0b42ade21127a49e46c6f6062bca698b590ad3a3b53c3bbbc8b66d25682875e4", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:06.831945+00:00", "tool": "read", "verdict": "allow", "decision_ms": 4.22, "proposal_id": "c516fb6b930001e1e19986fedcb1dcceaa840cdd1673c366274451322155821a", "outcome": "allow"}
+{"ts": "2026-11-08T07:25:06.946823+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.098, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:06.950924+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.065, "outcome": "pass"}
+{"ts": "2026-11-08T07:25:06.962233+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.169, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:00.545533+00:00", "tool": "read", "verdict": "allow", "decision_ms": 4.577, "proposal_id": "d8e023538b94534253418eb28928dbf1b813a175450a750b8361ed9ee65839c8", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:00.667554+00:00", "tool": "read", "verdict": "allow", "decision_ms": 4.582, "proposal_id": "9a12ea388dcebcd3aeec805ffb9d17b955d1eea578b1380ee68373ea0e3395ec", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:00.783178+00:00", "tool": "read", "verdict": "allow", "decision_ms": 4.766, "proposal_id": "cc4332b5f125caf30f32726848df11895bc753891cb4dbc2278f3468837a5fd9", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:00.897424+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.082, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:00.902195+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.078, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:00.914255+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.16, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:07.576379+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 4.718, "proposal_id": "3528889047b37149390b07e4ce8196f68f5bf13c6890ebbc1661c7135efb6964", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:07.702811+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 4.946, "proposal_id": "effba7e2acae623b01407adb0a15953c3bd63a8a0283f70d74728e875cf859c6", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:07.846359+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.078, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:07.860627+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.065, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:11.805156+00:00", "tool": "read", "verdict": "allow", "decision_ms": 5.305, "proposal_id": "b5c4a148c718d2ad1119681e43f0eecff304e67a75362e26dead4e14cd9205b8", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:11.923663+00:00", "tool": "read", "verdict": "allow", "decision_ms": 5.241, "proposal_id": "e806052e086ebbfae751c0b45b1802a27631e26d3996511d8b56c3720794d7f6", "outcome": "allow"}
+{"ts": "2026-11-08T07:26:12.042666+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.129, "outcome": "pass"}
+{"ts": "2026-11-08T07:26:12.050018+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.085, "outcome": "pass"}
+{"ts": "2026-11-08T07:27:39.039192+00:00", "tool": "write", "verdict": "deny", "decision_ms": 6.727, "proposal_id": "6f7ae6fe97708f4079e425a9831d60f8fa6864aedd743e99ee2f788e04d92fc5", "outcome": "queue"}
+{"ts": "2026-11-08T07:27:56.989544+00:00", "tool": "write", "verdict": "deny", "decision_ms": 8.055, "proposal_id": "eb2655f4b4d06aaa7d81960f511242ea05b6ce3a67c314f2e07ce64ba9ca0368", "outcome": "queue"}
+{"ts": "2026-11-08T07:27:59.530877+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 7.196, "proposal_id": "7756acf9cb8ca91c191cdf10ace93ff4f9d04b377aadd97a4e7c3bfc22a90af5", "outcome": "allow"}
+{"ts": "2026-11-08T07:27:59.676951+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.071, "outcome": "pass"}
+{"ts": "2026-11-08T07:28:19.378398+00:00", "tool": "write", "verdict": "deny", "decision_ms": 5.858, "proposal_id": "eb2655f4b4d06aaa7d81960f511242ea05b6ce3a67c314f2e07ce64ba9ca0368", "outcome": "queue"}
+{"ts": "2026-11-08T21:43:01.084708+00:00", "tool": "read", "verdict": "allow", "decision_ms": 9.066, "proposal_id": "7502b766a2676ef9309caf9468294c5fec2884c475d4015b50f16babc8290c2f", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:01.208496+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.157, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:01.426416+00:00", "tool": "bash", "verdict": "deny", "decision_ms": 7.021, "proposal_id": "1e9c15e81604f31604c4e0cb9ece37755f90ea246e234e42384548671847d650", "outcome": "queue"}
+{"ts": "2026-11-08T21:43:04.710294+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.055, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:04.824395+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.052, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:04.942876+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 7.209, "proposal_id": "71fe4ff01ecef37482f0a49a5c2793aea2c7da729f3c96c55ae6a08a6218ff6e", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:05.054699+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.059, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:05.386622+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.118, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:05.405992+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.11, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:08.815861+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.059, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:08.940622+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 7.46, "proposal_id": "92d1517cd9936b63b1e23c89438ea42377882d95b3c2c634f612d9600de66dbd", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:09.927646+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.454, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:10.408508+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.066, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:14.684833+00:00", "tool": "bash", "verdict": "deny", "decision_ms": 7.927, "proposal_id": "a042094ffac27cf9279148d6e76a4acbd4daf07e6e81cb0cd5a947690bda9838", "outcome": "queue"}
+{"ts": "2026-11-08T21:43:18.174863+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 8.034, "proposal_id": "5526718ce972b08049e361c7872916fc1320392ce5a858e504790bb463d96d0b", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:18.294655+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 8.119, "proposal_id": "6bb571da47ed1fa0290666a10d20aa599e80a1425c88aa2ccf2d850ba60c3d06", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:18.424786+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 8.604, "proposal_id": "2cbe97837c6e40e11fbdb12ad940cd9a81c85ede4901d24d9c854a5b1ae46e28", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:20.373591+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.053, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:20.418195+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.053, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:20.455051+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.052, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:23.442183+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 8.918, "proposal_id": "b04cb0e4082d1608ca2743efbd32b2c6578f53d7168716e45c19ce76768723a1", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:23.558223+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 8.754, "proposal_id": "30c1fef895be4631d606ee01a12563a92895170790a724f696043cce55f47070", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:23.700458+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 8.742, "proposal_id": "642c907f700bf68ccbed0575d30ffe5ce5dc40f74ed6da74a25cc2f3400aaf65", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:23.875450+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.091, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:23.885664+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.053, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:23.894720+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.092, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:29.367102+00:00", "tool": "read", "verdict": "allow", "decision_ms": 9.018, "proposal_id": "74e67673aab1caaf938e7c137f4200aa425ba9f5f1b52519a0bcf9b8cc58da46", "outcome": "allow"}
+{"ts": "2026-11-08T21:43:29.485394+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.056, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:29.597021+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.057, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:29.702319+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.173, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:29.991918+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.076, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:29.996497+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.101, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:34.734471+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.062, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:34.843614+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.054, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:34.942316+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.057, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:35.050828+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.052, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:35.429073+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.059, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:35.463802+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.158, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:35.470416+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.081, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:35.597248+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.118, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:39.812883+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.048, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:39.907900+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.046, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:40.024081+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.046, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:40.122843+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.049, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:40.483622+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.066, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:40.496748+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.112, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:40.512585+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.093, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:40.573380+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.076, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.084577+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.051, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.180953+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.049, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.275188+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.05, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.382596+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.047, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.753794+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.067, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.781817+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.078, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.793251+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.178, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:46.808464+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.088, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.215102+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.057, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.331175+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.049, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.454649+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.048, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.574924+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.056, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.849445+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.065, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.872613+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.058, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.891257+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.068, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:50.918744+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.076, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:54.857919+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.048, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:54.964002+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.058, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:55.063894+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.05, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:55.162986+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.049, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:55.501885+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.059, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:55.556409+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.101, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:55.561669+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.164, "outcome": "pass"}
+{"ts": "2026-11-08T21:43:55.695729+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.063, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:00.699883+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.056, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:00.805383+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.06, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:00.932982+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.054, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:01.039381+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.05, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:01.430144+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.076, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:01.467413+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.091, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:01.492596+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.229, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:01.626121+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.147, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:15.087174+00:00", "tool": "read", "verdict": "allow", "decision_ms": 8.78, "proposal_id": "9bb77a21f8d961ac382764eef571e4e99e38b1b2b60ca5daacc29bf70c11a996", "outcome": "allow"}
+{"ts": "2026-11-08T21:44:15.203679+00:00", "tool": "read", "verdict": "allow", "decision_ms": 9.219, "proposal_id": "45fcb3fd5a07752239c275e2bc21452c6723772dbce648e205b32354a49da4ba", "outcome": "allow"}
+{"ts": "2026-11-08T21:44:15.332494+00:00", "tool": "read", "verdict": "allow", "decision_ms": 9.388, "proposal_id": "5e0dc0eae189a6682aad614d7d3cc693041d3a8164cb6e168ea0763d6074ad82", "outcome": "allow"}
+{"ts": "2026-11-08T21:44:15.468563+00:00", "tool": "read", "verdict": "allow", "decision_ms": 8.566, "proposal_id": "1743c1b6ebee14eee73744296868c6f005369ad83e4b9d223b1ec34577fc130a", "outcome": "allow"}
+{"ts": "2026-11-08T21:44:15.589533+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.15, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:15.601331+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.235, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:15.610566+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.11, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:15.619913+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.137, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:21.106773+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.062, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:21.221206+00:00", "tool": "read", "verdict": "allow", "decision_ms": 9.57, "proposal_id": "223f35a782a884b3edd412841f4e81bd015b6a9cc697a54b9447d1230361ed50", "outcome": "allow"}
+{"ts": "2026-11-08T21:44:21.353181+00:00", "tool": "read", "verdict": "allow", "decision_ms": 9.045, "proposal_id": "e6a55938952ffcbb6b1460b2c6208db6eaf68ab115ea2c30f3c02eddd0e19ea3", "outcome": "allow"}
+{"ts": "2026-11-08T21:44:21.481868+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.058, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:21.600411+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.309, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:21.612603+00:00", "tool": "read", "verdict": "pass", "decision_ms": 0.222, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:21.925042+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.063, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:21.947035+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.218, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:27.601380+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.06, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:27.700131+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.046, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:27.822705+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.057, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:27.932967+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.063, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:28.316845+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.057, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:28.337737+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.062, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:28.375755+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.069, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:28.394886+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.168, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:33.269522+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.062, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:33.370660+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.054, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:33.493114+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.047, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:33.616114+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.051, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:33.965803+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.062, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:34.009047+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.066, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:34.027812+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.066, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:34.147670+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.077, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:39.361981+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.044, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:39.461917+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.048, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:39.568008+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.055, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:39.952949+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.104, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:39.969984+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.187, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:39.992673+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.139, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:48.201767+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.061, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:48.302784+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.05, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:48.690524+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.135, "outcome": "pass"}
+{"ts": "2026-11-08T21:44:49.050809+00:00", "tool": "web_fetch", "verdict": "pass", "decision_ms": 0.253, "outcome": "pass"}
+{"ts": "2026-11-08T21:46:13.615648+00:00", "tool": "write", "verdict": "deny", "decision_ms": 12.968, "proposal_id": "41cd660f70d84f985ab7a5e44e25d66c590f43e23fcef2fdd9d0854c94b49961", "outcome": "queue"}
+{"ts": "2026-11-08T21:46:47.700824+00:00", "tool": "write", "verdict": "deny", "decision_ms": 8.836, "proposal_id": "41cd660f70d84f985ab7a5e44e25d66c590f43e23fcef2fdd9d0854c94b49961", "outcome": "queue"}
+{"ts": "2026-11-08T21:46:51.777822+00:00", "tool": "glob", "verdict": "allow", "decision_ms": 11.012, "proposal_id": "10c8e75ab5b09dcffda1ddc5cb8986a91dd7ce5d7967096b8d880cbcf3d85d61", "outcome": "allow"}
+{"ts": "2026-11-08T21:46:53.194432+00:00", "tool": "glob", "verdict": "pass", "decision_ms": 0.056, "outcome": "pass"}

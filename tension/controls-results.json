@@ -1,0 +1,79 @@
+{
+ "score_ver": "tension-1.0.0",
+ "verdict": "NOT-PROMOTED",
+ "promotion_stops_at": "C0",
+ "controls": [
+  {
+   "id": "C0",
+   "name": "Writer and movers (throwaway body)",
+   "status": "NOT RUN",
+   "evidence": "Requires a live throwaway-body session (inflict damage, place a zombie at 8 blocks, set dusk, unplug the sampler). This lane is offline-only by commission. PROMOTION STOPS HERE: the trust ladder's shadow rung requires C0–C2. Additionally, p_M — the term C0 would exercise most directly — has no grounding store in the archive at all."
+  },
+  {
+   "id": "C1",
+   "name": "Determinism + restart",
+   "status": "PASS",
+   "evidence": "recompute twice: byte-identical=true (sha 19bb63974af0…). Restart at midpoint: 2532 post-recovery seconds compared on 10 columns (onset edge-state excluded — not checkpointed), mismatches=0."
+  },
+  {
+   "id": "C2",
+   "name": "Log verbosity (adapted: sampling verbosity/cadence of the state series — the score consumes no log rows, so the study's row-drop test is applied to its actual input)",
+   "status": "FAIL",
+   "evidence": "day3/drop50: Spearman=0.9788, phase agreement=93.6% over 4281 s — FAIL; day3/halve: Spearman=0.9868, phase agreement=92.8% over 4248 s — FAIL; day3/triple: Spearman=1.0000, phase agreement=100.0% over 4295 s — pass; day10/drop50: Spearman undefined (base series constant), max|ΔT|=0 — identity holds, phase agreement=100.0% over 4971 s — pass; day10/halve: Spearman undefined (base series constant), max|ΔT|=0 — identity holds, phase agreement=100.0% over 4965 s — pass; day10/triple: Spearman undefined (base series constant), max|ΔT|=0 — identity holds, phase agreement=100.0% over 5103 s — pass. Pass keeps p_V eligible for future weighting; p_V remains weight 0 in this version regardless."
+  },
+  {
+   "id": "C3",
+   "name": "Baseline race (the 'free transcript' test)",
+   "status": "PASS (letter only — see rider)",
+   "evidence": "Pooled 26059 per-second observations, 263 positive (non-harness ≥5 hp loss or death within 60 s). AUC: T=0.561, hp alone=0.498, log rows/min (verbosity)=0.299. Legs NOT RUNNABLE: hostile count and time of day — no such series exists in the recorded stores. T beats every available baseline. RIDER: winning this race is a weak claim — AUC(T) sits far below C8's 0.75 absolute bar (see C8), the verbosity baseline is anti-predictive rather than competitive, and the hp inputs/labels for days 1–5 rest on the mis-scaled trace hp field (filing §2). C8 is the operative test."
+  },
+  {
+   "id": "C4",
+   "name": "Harness share (retro-run, incl. day 9)",
+   "status": "PASS as a per-day gate — day 9 FAILS it and is excluded",
+   "evidence": "day1: harness share=0.0% (bar ≤20%), top-decile rows=190, of which on harness-tagged ticks=0, peak T=0.989; day2: harness share=0.0% (bar ≤20%), top-decile rows=386, of which on harness-tagged ticks=0, peak T=0.696; day3: harness share=0.9% (bar ≤20%), top-decile rows=429, of which on harness-tagged ticks=17, peak T=1.000; day4: harness share=0.0% (bar ≤20%), top-decile rows=483, of which on harness-tagged ticks=0, peak T=0.053; day5: harness share=0.0% (bar ≤20%), top-decile rows=534, of which on harness-tagged ticks=0, peak T=0.997; day9: harness share=99.1% (bar ≤20%), top-decile rows=72, of which on harness-tagged ticks=72, peak T=1.000; day10: harness share=0.0% (bar ≤20%), top-decile rows=510, of which on harness-tagged ticks=120, peak T=0.000. Pooled harness share=0.6% — but the study's bar is per-day (\"≤20% for a day to be used for pacing\"), and day 9 fails it at 98.2%: on the retro-run the gate does exactly its job, certifying days 1–5 and 10 and refusing day 9, whose entire tension integral sits on harness-tagged ticks (its peaks are the crew's own death window — study failure mode 2, confirmed empirically). Day 10's top-decile membership is a tie artefact (510 rows tie at T=0). Harness-tagged ticks = FEED/RESPAWN mask windows from the traces + day 9's record-tagged harness death window (19:14:12–19:23:52Z, ±30 s)."
+  },
+  {
+   "id": "C5",
+   "name": "Camera and narration, by intervention",
+   "status": "NOT RUN",
+   "evidence": "Requires a scripted actor in a throwaway world on the real Orin (3 camera arms × narration on/off × 2 replicates). Live-world intervention is outside this lane's constraints."
+  },
+  {
+   "id": "C6",
+   "name": "Lead-lag screen (apparatus cadence proxy: driver cycle rate)",
+   "status": "SCREEN-ONLY (per study; C5 decides, and C5 was not run)",
+   "evidence": "day1: Spearman(T, acts/min) at lag 0 = -0.190; |lag0| exceeded by 149/200 circular rotations; day2: Spearman(T, acts/min) at lag 0 = undefined (T constant that day); |lag0| exceeded by 0/200 circular rotations; day3: Spearman(T, acts/min) at lag 0 = 0.338; |lag0| exceeded by 93/200 circular rotations; day4: Spearman(T, acts/min) at lag 0 = -0.121; |lag0| exceeded by 117/200 circular rotations; day5: Spearman(T, acts/min) at lag 0 = -0.490; |lag0| exceeded by 0/200 circular rotations; day9: Spearman(T, acts/min) at lag 0 = 0.354; |lag0| exceeded by 125/200 circular rotations; day10: Spearman(T, acts/min) at lag 0 = undefined (T constant that day); |lag0| exceeded by 0/200 circular rotations. The only apparatus cadence recorded in the stores is the driver's own cycle rate; camera cuts and narration events are not in any recorded store, so this screen cannot clear the apparatus — it can only fail to detect one coupling."
+  },
+  {
+   "id": "C7",
+   "name": "Paired observation (server state vs citizen client view)",
+   "status": "NOT RUN",
+   "evidence": "No paired series exists: the traces are a single (client-relayed) view, and server-side state survives only as sparse overwritten snapshots (e.g. pulse/cody-state.json), not a series. Agreement ≥0.9 cannot be computed."
+  },
+  {
+   "id": "C8",
+   "name": "Predictive validity",
+   "status": "FAIL",
+   "evidence": "AUC of T for non-harness ≥5 hp loss or death in the next 60 s = 0.561 (bar: ≥0.75 and above C3 baselines hp=0.498, rows/min=0.299). Bar NOT met. Note: with p_M dropped (no hostiles store), the score sees mob jeopardy only once damage lands — a structural handicap recorded in the filing."
+  },
+  {
+   "id": "C9",
+   "name": "Human construct validity (blind paired clips)",
+   "status": "NOT RUN",
+   "evidence": "Requires ~20 minutes of a human watcher's blind judgements. Not obtainable by this lane; must not be self-certified."
+  },
+  {
+   "id": "C10",
+   "name": "Sham score (rotated-T consumer metrics)",
+   "status": "NOT RUN — VACUOUS ON THE ARCHIVE",
+   "evidence": "The metric it guards ('placements cluster at troughs') has no instances: no consumer existed during the recorded days and no placement was ever made by or against this score (scenario #1 predates it and was sited by the Director's own judgement). The sham machinery is specified in the filing for automatic running once a consumer exists."
+  },
+  {
+   "id": "C11",
+   "name": "Causal payoff (randomised placement timing)",
+   "status": "NOT RUN",
+   "evidence": "Requires weeks of randomised eligible placements across days. Only this control could support 'pacing works'; nothing in this lane speaks to it."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "day": "day5",
+ "score_ver": "tension-1.0.0",
+ "trace_file": "/home/caseydigennaro/craftmind-league/pulse/direct-drive-trace-day5-20261109.jsonl",
+ "input_sha256": "d4771dc834799a56f11ae0d291a495d10157c70ddfc9d9309af83a8a2ddf509a",
+ "code_sha256": "06b0575c416c1b8b60a8dede8710012099001fd7ec4da7e864318f9db74544be",
+ "row_count": 5407,
+ "samples": 433,
+ "window_utc": [
+  "2026-11-09T13:12:22.000Z",
+  "2026-11-09T14:42:28.000Z"
+ ],
+ "grid": "1 s step-hold over per-cycle trace samples (20 ticks nominal per row)",
+ "terms_grounding": {
+  "p_H": "trace hp samples (server-sent state); rate = trailing 10 s drops, static = 0.5*(1-hp/20)^2, static zeroed in RESPAWN window",
+  "p_F": "trace food samples ONLY — saturation is not recorded anywhere; drain = trailing 300 s food decreases",
+  "p_E": "derived from hp drop events + deaths; harness-owned deaths (115,116,121,122,123) excluded from the E=1 set",
+  "p_V": "state-diff classes over the sample series; weight 0, never enters T"
+ },
+ "terms_dropped": [
+  "p_M — no hostiles-with-distance series exists in any recorded store (traces carry hp/food/pos per cycle only)"
+ ],
+ "terms_null": [
+  "p_N — null on daylight-held days per spec; on unheld/unverified days no world-time series exists to ground seconds-to-hostile-light"
+ ],
+ "held_daylight": false,
+ "deaths_in_window": [],
+ "feed_events": []
+}

@@ -1,0 +1,218 @@
+{
+ "budget": {
+  "day10_comparison": "Day 10 spent ~250 cycles on this chain's fragments across the day (including the full final 40) and closed at cobble 1/8, furnace not attempted with materials.",
+  "expected_cycles": "55-70 cycles from wood-in-hand to placed furnace; ~90 from bare hands",
+  "nominal_commands": 24,
+  "tax_pricing": "goto legs x3 attempts (36% arrival), dig x1.4 (58/83), craft x1.5 (15/22), felltree x2.5 (13/33), climb excluded (0/13)"
+ },
+ "compiled": "2026-11-09",
+ "id": "furnace-sequence",
+ "kind": "skill-asset",
+ "plan": [
+  {
+   "action": "ASSESS from the state read: count logs, planks, sticks, pickaxes, cobblestone in inventory. Skip every later step whose output is already held (day 10 wasted 7 cycles re-crafting sticks/pickaxe it already held five of).",
+   "evidence": "day10 trace cycles 281-287 (redundant crafts) read against close .dat (wooden_pickaxe x5 held)",
+   "evidence_status": "PROVEN",
+   "step": "S0",
+   "verb": "look"
+  },
+  {
+   "action": "WOOD. If read-back logs < 4: felltree a trunk AT FOOT LEVEL (day 4's lesson: crowns without trunks yield nothing; day 10's first surface-era harvest, cycle 58, was foot-level). Repeat until read-back logs >= 4 (one spare log over the 3-log minimum, against wear and loss).",
+   "evidence": "day10 trace cycles 58, 263; day10 felltree 13/33 per-attempt - price 3 attempts per tree",
+   "evidence_status": "PROVEN",
+   "step": "S1",
+   "verb": "felltree"
+  },
+  {
+   "action": "GO TO THE TABLE. goto the crafting table's known place (Cody: (64,67,-94)). Short hops on relief (R6). If the table is absent, detour: craft 4 planks from 1 log, place crafting_table on flat ground at the body's feet.",
+   "evidence": "table standing since day2 trace cycle 107 ('already holds crafting_table'); place verb day10 3/6",
+   "evidence_status": "PROVEN",
+   "step": "S2",
+   "verb": "goto"
+  },
+  {
+   "action": "PLANKS. craft oak_planks until read-back planks >= 12 (9 consumed by the chain + wear margin).",
+   "evidence": "day10 trace cycles 282, 285 (craft oak_planks ok)",
+   "evidence_status": "PROVEN",
+   "step": "S3",
+   "verb": "craft"
+  },
+  {
+   "action": "STICKS. craft stick until read-back sticks >= 4 (2 for the pickaxe, 2 spare against pickaxe re-craft).",
+   "evidence": "day10 trace cycle 286",
+   "evidence_status": "PROVEN",
+   "step": "S4",
+   "verb": "craft"
+  },
+  {
+   "action": "PICKAXE. craft wooden_pickaxe; verify by read-back (pickaxe held). Pickaxe wear is real (day 10 crafted 5 across the day at cycles 45, 190, 203, 257, 287): keep the S3/S4 reserves unspent so a re-craft is one step, not a new chain. Apply R5 on any failure.",
+   "evidence": "day10 trace cycles 45, 190, 203, 257, 287; failures at 201 (F1) and 283 (F2)",
+   "evidence_status": "PROVEN",
+   "step": "S5",
+   "verb": "craft"
+  },
+  {
+   "action": "GO TO STONE, FROM ABOVE GRADE. Known stone, in preference order: (a) the opened seam at (90-92, y64, -104..-106) - 8 day-10 drops still lie in the row; entering the seam IS the recovery; (b) surface stone at (71-72, y60-63, -88) - 4+ drops in the hollow, same recovery shape; (c) any surface stone sighted from above grade. Approach along the surface; short hops (R6). Do NOT dig the home pit's walls (drowning hazard, day 9) and do not prospect by digging a dirt column beside a fixed stance (day10 cycles 288-291 found dirt and air and repeated the forbidden geometry).",
+   "evidence": "day10 trace cycles 264-303 + day-10 record close state; day9 drowning (record)",
+   "evidence_status": "PROVEN",
+   "step": "S6",
+   "verb": "goto"
+  },
+  {
+   "action": "SEAM STANCE (R2). Step INTO the seam row: goto the seam floor cell so the body's feet are at the seam floor's level inside the row, facing along it. Only then dig laterally.",
+   "evidence": "Positive arm unproven - no held trace. Negative arm proven twice (day10 episodes 1 and 2). This step is the asset's central hypothesis and day 11's first test.",
+   "evidence_status": "UNPROVEN",
+   "step": "S7",
+   "verb": "goto"
+  },
+  {
+   "action": "WORK THE ROW (R1, R3, R4). Dig the seam row laterally at foot level, one cell at a time; after every <=3 digs, advance one cell along the row (goto the next seam cell) so the body passes over the drop cells. NEVER dig 2+ below the feet (R3). Count cobble ONLY by read-back; continue until read-back cobblestone >= 8. Expected digs 8-12 for 8 held (drop scatter), vs day 10's 14 digs for 1 held.",
+   "evidence": "The dig verb and its failure modes are proven (day10 dig 58/83); the stance+advance pattern is unproven as a combination - it is the negation of the two proven loss geometries.",
+   "evidence_status": "UNPROVEN",
+   "step": "S8",
+   "verb": "dig"
+  },
+  {
+   "action": "RETURN. goto home/table by short hops (R6), priced at 3 attempts per leg.",
+   "evidence": "day10 trace cycles 275-280",
+   "evidence_status": "PROVEN",
+   "step": "S9",
+   "verb": "goto"
+  },
+  {
+   "action": "CRAFT THE FURNACE. At the table, with read-back cobblestone >= 8 in inventory: craft furnace. Apply R5/F3 on failure: read state, name the shortage from state; if state shows no shortage, the failure is new evidence - file it verbatim and stop; do not retry identically.",
+   "evidence": "NEVER attempted with >=8 cobble held in any held trace. Day 3 attempted it 8 times holding <=4 cobble and got the unnamed failure every time; the >=8 case is genuinely open.",
+   "evidence_status": "UNPROVEN",
+   "step": "S10",
+   "verb": "craft"
+  },
+  {
+   "action": "PLACE THE FURNACE. place furnace on flat ground at the home pad beside the table - NOT in the pit columns (x 65..66, z -93..-91) and not on the pit's rim.",
+   "evidence": "The place verb is proven for other blocks (day2 cobble/table places; day10 place 3/6); a placed furnace has never been read back in any trace.",
+   "evidence_status": "UNPROVEN",
+   "step": "S11",
+   "verb": "place"
+  }
+ ],
+ "provenance": {
+  "composed_of": [
+   "R1 count-from-state",
+   "R2 seam stance",
+   "R3 single-level seam",
+   "R4 collect-is-not-recovery",
+   "R5 craft discipline (F1/F2/F3)",
+   "R6 movement-tax pricing"
+  ],
+  "created_by": "skill-library compilation lane (parent-dispatched), 2026-11-09; offline only - no world contact, no driver code changed",
+  "derived_from": [
+   "pulse/direct-drive-trace-day10-20261109.jsonl (303 cycles; the load-bearing source: both drop-loss episodes, the craft recovery sequence, the movement-tax rates)",
+   "pulse/direct-drive-trace-day3-20261109.jsonl (the 8 identical failed furnace crafts; the unnamed failure dialect)",
+   "pulse/direct-drive-trace-day9-20261109.jsonl (the cherry_planks phantom, cycles 9 and 11; the named stick shortage, cycle 7)",
+   "pulse/direct-drive-trace-day2-20261109.jsonl (cobble in hand and furnace intended twice, never attempted; the table standing at (64,67,-94))",
+   "pulse/DIRECT-DRIVE-DAY10-20261109.md (close verdict, action curve, close .dat inventory parse)"
+  ],
+  "trace_hash": {
+   "DIRECT-DRIVE-DAY10-20261109.md": "sha256:e272bfdb0ae2bac7a4067ab305b64e6413d5e70fb5eec0e5fca42815d022a30b",
+   "direct-drive-trace-day10-20261109.jsonl": "sha256:ad76342777133fa2a51dec3446a12a3f060fab4614e655b8f33eb0fcd225caad",
+   "direct-drive-trace-day2-20261109.jsonl": "sha256:59b3b53be92487c7013f1bb99d330bd0ac19db6a95bb1d9dea0c27e9c9429759",
+   "direct-drive-trace-day3-20261109.jsonl": "sha256:e5f03ff6d61231b796e97a88a6dc5dbb9af715cdd556bf4a906c764cb178ae2f",
+   "direct-drive-trace-day9-20261109.jsonl": "sha256:7a0b4efd2897031c518f59e789256d4d508b274b960bceb847e61e3966612049"
+  }
+ },
+ "rules": [
+  {
+   "evidence": "day10 trace cycles 264-274 + day-10 record close .dat parse",
+   "id": "R1",
+   "rule": "COUNT FROM STATE, NEVER FROM DIGS. Progress on every material (logs, planks, sticks, cobble) is counted only from the inventory read-back in the driver's state. A dig result of ok increments nothing. Day-10 proof: cycle 274 declared 'Eight cobble!' from 8 dig-ok results; the close .dat held cobblestone x1."
+  },
+  {
+   "evidence": "day10 trace cycles 264-274 (pos + dig rows). NEGATIVE ARM PROVEN (two episodes); POSITIVE ARM UNPROVEN - no held trace shows seam-stance pickup; nearest positive evidence is felltree's 'gathered drops' when the body moves through drop cells.",
+   "id": "R2",
+   "rule": "STAND IN THE SEAM. Before digging a stone seam laterally, move the body INTO the seam row (feet at the seam floor's level, inside the cavity row) so drops spawn at the body's feet. Never dig a seam row from a stance above it. Day-10 episode 1: body fixed at (89.7,67,-105.5) for cycles 264-273, seam at y64 three below; 8 drops left in the row, 0 collected."
+  },
+  {
+   "evidence": "day10 trace cycles 296-302",
+   "id": "R3",
+   "rule": "NEVER CHASE A DESCENDING SEAM DOWNWARD. Work a seam at ONE level. Digging a block 2+ below the body's feet from a fixed stance opens a hollow under the drops. If the seam descends, first step down onto the seam floor by digging the foot-level block in front, or abandon the seam for a level one. Day-10 episode 2: cycles 298-300 dug y62, y61, y60 from stances at y65/y63; 4+ drops fell into the hollow past reach."
+  },
+  {
+   "evidence": "day10 trace cycles 63, 301",
+   "id": "R4",
+   "rule": "COLLECT IS NOT A RECOVERY VERB. On day 10 collect was issued twice (cycles 63 and 301) and reported 'visited 0' both times; at cycle 301 it saw 3 drops and gathered none provably (inventory stayed 1). Recovery of a drop = move the body's feet onto the drop's cell (goto the cell), never collect from a stance."
+  },
+  {
+   "evidence": "day3 trace (furnace crafts), day9 trace cycles 7/9/11, day10 trace cycles 201, 281-287. The F2 recovery (planks recraft -> dependent crafts succeed) was observed once (day10 285->287) and contradicted once (day10 282->283): filed as heuristic, not proven rule.",
+   "id": "R5",
+   "rule": "CRAFT DISCIPLINE. (F1) If a craft failure NAMES an ingredient ('missing ingredients - X - you hold A of B'), craft or fetch X and retry ONCE. (F2) If it names an ingredient the citizen has NEVER held (the cherry_planks phantom, days 9-10: the resolver keys some recipes to cherry_planks he does not hold), re-craft planks once, then retry once; a second phantom failure STOPS the chain and is filed - do not loop. (F3) If the failure names NOTHING ('no craftable recipe for furnace at table', day 3 x8), read the inventory and name the shortage from state yourself; if state shows no shortage, suspect table reach: goto the table cell and retry once. NEVER repeat an identical failed craft more than once without an intervening state change (day 3 repeated the identical failing furnace craft at cycles 8, 68, 80, 82, 96, 145, 146, 234)."
+  },
+  {
+   "evidence": "day10 record action-curve table + trace cycles 275-280",
+   "id": "R6",
+   "rule": "MOVEMENT TAX IS PRICED, AND CLIMB DOES NOT EXIST. Day-10 rates: goto arrival 49/136 (36%), climb 0/13, dig 58/83, craft 15/22, place 3/6. Price every goto leg at 3 attempts and use SHORT HOPS (2-4 blocks) on broken relief - Cody's own discovered technique, 4 of 6 arrivals on the day-10 home leg (cycles 275-280) vs 36% overall. This plan contains NO climb step: level changes are by dig (down) and place (up) only."
+  }
+ ],
+ "situation": {
+  "preconditions": [
+   "No furnace in inventory (by inventory read-back, not by memory).",
+   "A crafting table is standing at a known place (Cody's table at (64,67,-94) has stood since day 2) or 4 planks can be spared to place one.",
+   "Daylight held / floor clear: this asset contains no survival steps and must not run across a night boundary unheld."
+  ],
+  "s": "The citizen needs a furnace (to cook food / smelt) and does not hold one. Applies at any stance where wood is reachable and a crafting table stands or can be placed. This is the chain Cody attempted on days 2, 3, 9 and 10 and never completed in ten days: not because the plan order was wrong (day 10: correct from cycle 1 to 303, fault_owner harness) but because (a) dug cobblestone was counted from dig results instead of inventory state and its drops were left where the body never stood, and (b) craft failures were retried identically without diagnosing the missing ingredient from state (day 3: 8 identical failed furnace crafts)."
+ },
+ "status": "ADMITTED-WITH-UNPROVEN-TAIL",
+ "status_note": "Admitted under the library write gate (see README.md): provenance complete, every step evidenced from held traces or marked UNPROVEN, and the offline replay against day 10's final 40 cycles shows the asset changes that day's ending (cobble 1/8 held -> 8/8 held by read-back, furnace craft reached). Steps S10-S11 have never been executed with full materials in any held trace and are marked UNPROVEN. A skill is capital only when reused: promotion to PROVEN requires the day-11 second use logged in uses[].",
+ "uses": [
+  {
+   "day": "day-11-played (relaunch)",
+   "notes": "Second use of the asset (the Gate B stop attempt was a non-use and carries no entry). Ran REORDERED vs the filed plan: the hollow pocket chartered for S6 was empty at wake - day-10 census held 4 loose cobble drops there; they aged out under held daylight (despawn reconciled in FURNACE-SKILL-20261109.md), so S2 (perceive) found the tread log instead of drops and S3 ran as felltree (cycle 4, ok) BEFORE S6. Stone was then dug fresh at home (cycles 25-26: stone at (61,63,-92) and (62,63,-92) dug from a standing stance at the pad west edge, y67 - NOT the chartered S7 seam stance at the pocket). Read-back evidence: held cobblestone peaked at 2 (cycle-27 say: \"Two cobble.\"; wake held 1). S10 (craft furnace at >=8 cobble) and S11 (place + read-back) were NEVER attempted - the day was ended at cycle 31 by a floor PARK (daylight_unrestorable; the landing commands demonstrably landed; the floor verify window missed them - mirror one-byte offset), fault_owner: harness. Post-day .dat inventory differs from held counts materially (cobble 1, oak_log 15, planks 4, sticks 9, pickaxe 6, dirt 3; oak_planks x9 drop on the ground at his final position) - an inventory-transfer gap across the day, filed as an incident in the day record; the read-back peak of 2 stands on the trace + his own say. The S7/S8 positive arm and S10/S11 remain UNPROVEN; the asset status is unchanged.",
+   "outcome": "ran-reordered-partial",
+   "trace": "pulse/direct-drive-trace-day11-20261110.jsonl cycles 1-31 (played window 2026-11-10T00:59:36Z-01:07:04Z)"
+  },
+  {
+   "day": "day-12 (played, full 85-minute window 2026-11-10T03:12:35Z-04:37:35Z)",
+   "notes": "Third use. The count CLOSED for the first time: held cobblestone read 8 at cycle 19 and peaked at 15 (his own count-from-state says: 'Eight cobble!' c19, 'fifteen cobble' c49; post-day .dat reads cobblestone 15 \u2014 the count-from-state discipline held end to end). S1 SKIP correct (oak_log 15). S2 GO: table at (64,67,-94) reached cycle 1, arrived verified. S3 TOP UP performed: craft oak_planks x12 at cycle 2 (ok) \u2014 held planks 4->16, .dat close 15 after one placed en route. S4 SKIP correct (sticks 9). S5 SKIP correct (6 wooden pickaxes; no stone_pickaxe attempted, so the R5 cobbled_deepslate dialect case did not recur). S6 GO: fresh dig at the hollow pocket \u2014 first dig cycle 5 at (69,62,-88) from stance y66. S7 SEAM STANCE \u2014 PERFORMED for the first time: cycles 12-19 he dug the seam DOWNWARD at his own level, stance descending y63->y58 across digs at (71,62..58,-89) and (72,58..60,-89), every dig at or below his feet, count read back after each dig in his says (1,2,3,4,5,6, then 'Eight cobble!' at c19) \u2014 the positive arm is SUPPORTED on the count evidence: 8/8 held, zero drops lost to a descending seam, against day 10's 13-of-14 lost. S8: the row was worked past the count (15 held) but the RETURN never completed \u2014 the same descent that made the seam safe made the shaft unclimbable on this stack: climb 32 commands 0 ok, pillar places repeatedly failed or were re-dug; he self-extracted only at ~cycle 321 via a dug notch to (72,62,-87), reaching open ground y65, and the day ended mid-return at (71.3,65,-82.7). S9 return INCOMPLETE (not home; climb excluded held \u2014 0/32 today, now 0/46 across days 10-12). S10/S11 NEVER ATTEMPTED despite the count being met from cycle 19 \u2014 the day's binding constraint was extraction, not stone: fault_owner harness (movement stack) with world contributing (hollow relief). NEW RULE CANDIDATE (not yet a rule): a seam dug downward must be capped \u2014 dig the row at ONE level and stop descending once the count is met, or pre-cut the exit stair before the count closes; the descent is the trap. Incident D watch: post-day .dat reconciles with the trace and his says (cobble 15 = his c49 count and the state mirror's final read; planks 15 = 4+12-1 placed; oak_log 11 vs 15 start \u2014 4 consumed by the c2 craft; dirt 3->0 and apple 1->0 unaccounted in trace rows, filed as a small open gap, NOT the day-11 scale).",
+   "outcome": "ran-full-window-partial-furnace-not-crafted",
+   "trace": "pulse/direct-drive-trace-day12-20261110.jsonl cycles 1-329 (327 cycle rows + spawn/wake/end)"
+  },
+  {
+   "day": "day-13 (played, shortened window 2026-11-10T05:20:45Z-06:14:43Z; ended early by the 3-death stop rule via a lane hand-stop after the driver's stuck cycle defeated its cycle-head checks)",
+   "notes": "S10 (craft) and S11 (place) were NEVER attempted: zero craft commands in the trace. The wake read-back confirmed Branch A (cobblestone 15 held, hp/food 20/20 at (71.3,65,-82.7); floor VERIFY_FEED 29 porkchops, zero gives), but the home approach failed on broken ground (cycles 1-19: walker timeouts around the pad, the table at (64,67,-94) never reached) and at cycle 38 a goto dropped him ~6 blocks into a hole at (70,59,-87.7) - a FALL, not a dig, so neither the S7.0 clause's governed case nor the dig-guard's trigger (first stone-family dig) covered the descent. The DIG-GUARD (charter harness change, fixture-proven 18/18 offline) armed once at 05:28:41Z at entry level 65 and disarmed 4s later on its designed trigger (count-closed, held 15); every later dig was post-disarm. All 46 digs before the hole were at or above any cap; zero refusals. In the hole he dug S7.0-shaped notches (own level + one above) and gained single steps (y59->60 twice) that never composed into an exit - the investigation's non-composition finding again. He self-extracted at ~06:06Z (placed cobble step, cycle 205-206), was killed by a creeper at the exit (06:07:06Z) LOSING THE WHOLE INVENTORY (the 15 cobblestone and 29 porkchops dropped and never recovered), respawned at (36.5,73,-86.5), and died 8 more times in 4 minutes (creeper x1 more, zombie x7) while the driver's floor-reflex flee/burrow sequence held the body inside one stuck cycle (212) that never returned to the cycle head where the gate check and the 3-death abort live. The floor PARKED correctly at 3 deaths (06:09:24Z, deaths_today>=max_deaths); the lane stopped the driver by hand at 06:14:43Z. Deaths 123 -> 132 (derived; floor COUNT_DEATH x9 agrees). Post-day stores: .dat inventory EMPTY, pos (36.5,73,-86.5) (the respawn point); fresh region copy: no furnace block in the nine home chunks - FURNACE: NO from both stores. S10/S11 remain UNPROVEN; the asset status is unchanged. The S7.0 clause's day-13 disposition (REVISED, two named revisions) is filed in furnace-sequence-EXTRACTION-AMENDMENT-20261109.md.",
+   "outcome": "not-attempted-tail-day-lost-to-extraction-and-death-burst",
+   "trace": "pulse/direct-drive-trace-day13-20261110.jsonl (209 cycle rows, numbered to 211; record pulse/DIRECT-DRIVE-DAY13-20261109.md)"
+  },
+  {
+   "day": "day-14 (played, foreshortened window 2026-11-10T06:57:13Z-07:08:06Z)",
+   "outcome": "not-attempted-day-lost",
+   "notes": "Fifth use. The day was chartered in full (charter pulse/DAY14-CHARTER-20261109.md): respawn wake empty-handed, 32 cooked porkchops provisioned in the Gate B provisioning window (verified from the post-quit .dat snapshot; floor VERIFY_FEED passed first-read, have 32), home leg, wood chain at home, the count re-closed at the hollow under revised S7.0, S10/S11 at home. The day never reached the chain. Death 1 (Zombie, 06:57:39Z, during cycle 1's first goto) fell at the LOGIN hilltop - and his respawn proved to be ~(37.5,68,-105.3), ~19 blocks south: the .dat Pos is the login position, NOT the respawn point (charter premise corrected in the day record). The provisioned pork dropped at the death site, was never recovered, and despawned (~07:02:39Z). He worked the respawn tree country instead (felltree 5 attempts/2 ok, craft 4/3 - planks and sticks from his own fells) under repeated zombie pressure in returning rain (the floor holds time, not weather; the wake-window clear had expired). Deaths 2 (07:06:14Z, mid-craft in a relief pocket) and 3 (07:08:01Z, mid-flee) ended the day on the floor's park at exactly 3: the repaired reflex layer read the park mid-flee and aborted at flee-hop-2 (07:08:06Z) - the day-13 H1 failure closed live. S6/S7 never engaged; no cobblestone was ever held; the revised dig-guard (R1/R2) never armed (zero dig-guard rows) - carried untested-live, see the amendment note's day-14 disposition. S10/S11 remain UNPROVEN for the fourth consecutive day; the asset status is unchanged. Post-day .dat inventory EMPTY (death-3 drops at the respawn country unrecovered); post-day region scan (64 chunks, r.0.-1): NO furnace anywhere; home byte-identical (table standing at (64,67,-94), pad grass, scenario-#3 cobblestone still standing at (65,66,-88)). Deaths 132 -> 135, all Zombie, derived; fault_owner: world (hostile pressure at both the login pocket and the respawn country, in rain gloom the charter named but could not hold off), with a harness-side premise correction (respawn point != login position) owned by the charter.",
+   "trace": "pulse/direct-drive-trace-day14-20261110.jsonl cycles 1-34 (32 cycle rows; cycles 31/33 interrupted by deaths, 35 the abort cycle)"
+  },
+  {
+   "day": "day-15 (played, full window 2026-11-10T07:42:19Z-09:07:19Z)",
+   "outcome": "not-attempted-tail-day-lost-to-the-bowl-at-home",
+   "notes": "Sixth use. The day was chartered in full (charter pulse/DAY15-CHARTER-20261109.md): wake at the day-14 close point inside the respawn scatter country (re-derived after the provisioning window's death: respawn (33.5,67,-96.5), hp 20, pork 32 provisioned and verified from the post-quit .dat), SURVIVAL TRANSIT on the census-named northern line, wood chain at home, the count at the hollow under revised S7.0, S10/S11 at home. THE TRANSIT SUCCEEDED \u2014 the first survived transit home: 2 floor-escape flees under skeleton fire (hp bottomed 8.97), home ground reached ~cycle 10, ZERO deaths in the run (the day's only death, #136 Zombie, fell inside the Gate B provisioning window before the floor opened; baseline re-derived 135 -> 136 and the wake facts re-read). Then the day's NEW joint: at cycle 11 his goto stepped him DOWN into a low cell at (61.7,63,-91.6) beside the pad \u2014 below-grade home ground entered TOOL-LESS, before the wood chain had run (its only felltree, cycle 2, failed from a dip). From there: 257 cycles in the bowl. Bare-handed stone drops nothing, so the count was void; climb 0/16 (14x no blocks in inventory); placed-rung attempts placed at the wrong level; his guard-legal lateral digging lowered his floor stepwise to y61, raising every wall (post-day close: (61.7,62,-91.3), inventory {cooked_porkchop: 29}, post-day .dat + region parse: no cobblestone ever held, NO furnace anywhere, table + scenario-#3 cobble standing). The dig-guard ARMED live for the first time (07:46:34Z, stone-phase-entry, entry 63) and never refused \u2014 every dig stayed at/above the cap; R1's disarm never came into play (no count to close). The walker fence (the day's chartered FIX for day-14's I4) shipped fixture-proven 18/18 and never fired live; displacement during stationary verbs measured NONE (verdict arm (i): invariant held unforced). One failover (cycles 192-193 model-fail x2 -> governor:qwen3-coder-30b for 79 cycles), trace-rowed. S10/S11 UNPROVEN for the FIFTH consecutive day; the asset status is unchanged. fault_owner: harness (the one-step movement limit walls any below-grade cell; no verb exits it) + world contributing (the low cell sits on the home approach). The charter's pre-registered prevention for day 16 is named in the day-15 record section 6: a BELOW-GRADE GUARD (no goto/dig lowering him >=2 below pad level inside home district while he holds no pickaxe) + WOOD CHAIN FIRST, verified pickaxe-in-hand before any eastward goto.",
+   "trace": "pulse/direct-drive-trace-day15-20261110.jsonl cycles 1-268 (268 cycle rows)"
+  },
+  {
+   "day": "day-16 (played, full window 2026-11-10T09:41:36Z-11:06:26Z)",
+   "outcome": "not-attempted-day-lost-to-the-sealed-bowl",
+   "notes": "Seventh use. Chartered in full (pulse/DAY16-CHARTER-20261109.md): wake IN the bowl at home (61.7,62,-91.3), fed (29 porkchops), tool-less; exit first (east step primary, placed rung spare), wood chain verified from held state, the count at home under ALL guards (dig-guard + the charter's NEW below-grade guard), S10/S11 sixth day. THE EXIT NEVER HAPPENED: the census east-step read was wrong as a stance (the (62,-91) column tops at 66 but no floor stance makes it a +1 step; every face out of the pocket is +4/+5 against the one-step limit), and the below-grade guard \u2014 correct against every single call, 69 refusals (50 goto, 19 dig), zero descent all day (the bowl floor cell is byte-identical stone at close) \u2014 applied its absolute pad bound to a citizen who STARTED below it and thereby refused the mid-level stair targets too (incident H1 in the day record: the exit was sealed from the outside by a house instrument). One place landed all day (cycle 48, dirt at (62,65,-89), top +5 over his feet \u2014 the day-15 tread error verbatim). The wood chain never began (zero craft commands; the wood-chain-verified held-state row never fired \u2014 no pickaxe ever held); the count never began; S10/S11 not attempted for a sixth day. Rim hostiles under held daylight (the bowl is a gloom cell) drove 89 reflex flees; hp never left 20; deaths ZERO (136 -> 136, derived three ways). Furnace NO both stores (post-day .dat {cooked_porkchop: 27}; fresh region parse zero furnace palette entries in 64 chunks). The S7.0 dig-guard produced ZERO live rows a third day \u2014 it never armed, and the reason is now structural: the below-grade guard stands in front of it, so it can only arm on days he already holds a pickaxe. Record: pulse/DIRECT-DRIVE-DAY16-20261109.md. Day-17 prevention pre-registered there (guard bound relative to a below-bound citizen; exit rehearsed on a throwaway body 3/3 before the day; rung placeable at his feet; gloom priced)."
+  },
+  {
+   "day": 17,
+   "date": "2026-11-10",
+   "outcome": "not-run-gate-held",
+   "note": "Day 17 did not launch: the charter's rehearsal gate (exit proven 3/3 on a throwaway body before any wake) ran in full and no mechanism passed (place-ladder 0/3, notch-cut 0/3, place-at-feet 0/3, notch-stair 0/3 in two forms). The sequence was never started; S10/S11 unattempted a seventh day. The gate's refusal is the asset's evidence too: the sequence's preconditions now include a verified exit from wherever the citizen sleeps - a precondition no earlier day stated because no earlier day tested it before the wake. Record: pulse/DIRECT-DRIVE-DAY17-20261109.md."
+  },
+  {
+   "day": 18,
+   "date": "2026-11-13",
+   "outcome": "not-run-exit-only",
+   "detail": "Day 18 variant R: the verified exit (the placed stair) was used \u2014 Cody left the bowl (first exit, cycle 135) \u2014 but he never reached home as a workplace and never held wood or a pickaxe; the furnace sequence S0-S11 was not started. The skill tail (S10/S11) remains unproven for another recorded day. See pulse/DIRECT-DRIVE-DAY18-20261112.md."
+  }
+ ],
+ "verification": {
+  "failure_filing": "Any step that fails twice under its rule files: the step id, the verbatim failure detail, the read-back state at failure, and which rule governed the retry. The failure is filed INTO this asset's record (a new version), not around it.",
+  "v": "Completion is proven only from stores the actor cannot write, in two stages. (1) CRAFT: after S10, the saved player .dat (parsed post-run, as day 10's close did) shows a furnace in inventory; the in-run state read is advisory only - day 10 proved a citizen's says are not state (cycle 274). (2) PLACEMENT: after S11, the placed cell read from a fresh region-file copy (or the server's in-memory block read) shows a furnace block at the placed coordinates, and the .dat no longer holds it. A day that ends at stage (1) is filed as FURNACE CRAFTED, NOT PLACED - partial credit, never rounded up."
+ },
+ "version": "1.0.0"
+}

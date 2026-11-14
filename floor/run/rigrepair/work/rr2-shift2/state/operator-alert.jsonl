@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T02:38:22.738Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:/home/caseydigennaro/craftmind-league/floor/run/rigrepair/work/rr2-shift2/contract.json","reason":"FLOOR_OPEN","seq":3,"contract_sha":"91aa6517a425768685b0fcc60d05afdc378426a2c456059a046830b3282b23f9"}
+{"ts":"2026-11-10T02:38:27.563Z","act":"NOTIFY","trigger_id":"sigterm","evidence_ref":"process","reason":"FLOOR_CLOSE","seq":11,"contract_sha":"91aa6517a425768685b0fcc60d05afdc378426a2c456059a046830b3282b23f9"}

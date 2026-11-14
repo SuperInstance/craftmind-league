@@ -1,0 +1,3 @@
+{"ts":"2026-11-10T06:57:40.692Z","act":"COUNT_DEATH","death_ts":"2026-11-10T06:57:39.064Z","n_today":1,"seq":10,"contract_sha":"45dae2b5717fc6ad7fd50fe2fd5154e3c082f541302020be118788b482f84ff3"}
+{"ts":"2026-11-10T07:06:15.709Z","act":"COUNT_DEATH","death_ts":"2026-11-10T07:06:14.117Z","n_today":2,"seq":23,"contract_sha":"45dae2b5717fc6ad7fd50fe2fd5154e3c082f541302020be118788b482f84ff3"}
+{"ts":"2026-11-10T07:08:05.716Z","act":"COUNT_DEATH","death_ts":"2026-11-10T07:08:01.709Z","n_today":3,"seq":28,"contract_sha":"45dae2b5717fc6ad7fd50fe2fd5154e3c082f541302020be118788b482f84ff3"}

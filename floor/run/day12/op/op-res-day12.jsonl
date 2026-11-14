@@ -1,0 +1,33 @@
+{"ts":"2026-11-10T03:10:03.586Z","id":"preflight-ping-day12","ok":false,"error":"unknown cmd undefined"}
+{"ts":"2026-11-10T03:10:07.585Z","id":"preflight-notify-day12","ok":false,"error":"unknown cmd undefined"}
+{"ts":"2026-11-10T03:10:23.188Z","id":"preflight-ping-day12","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+{"ts":"2026-11-10T03:10:25.988Z","id":"preflight-notify-day12","ok":true,"recorded":true}
+{"ts":"2026-11-10T03:10:35.990Z","id":"floor-park-1","ok":true,"recorded":true}
+{"ts":"2026-11-10T03:11:34.906Z","id":"floor-feed-1","ok":true,"gave":"/give Cody cooked_porkchop 32","srv":["No player was found"]}
+{"ts":"2026-11-10T03:11:37.707Z","id":"floor-feed-2","ok":true,"gave":"/give Cody cooked_porkchop 32","srv":["No player was found"]}
+{"ts":"2026-11-10T03:11:40.509Z","id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:11:40.509Z","id":"floor-park-4","ok":true,"recorded":true}
+{"ts":"2026-11-10T03:12:17.312Z","id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:16:17.375Z","id":"floor-daylight-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:20:17.422Z","id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Pillar won't take either. But the ground east reads dirt at y65 — that's a step up, not a wall. Let me try walking east onto it, low and short."]}
+{"ts":"2026-11-10T03:24:17.471Z","id":"floor-daylight-4","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:28:17.122Z","id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:32:17.177Z","id":"floor-daylight-6","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:36:17.224Z","id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Every cell my eyes name comes back empty — nothing exists where they point. But the world also said my cobblestone landed at (71,60,-88), one above my feet. So there's a floor there. I'll hop up onto "]}
+{"ts":"2026-11-10T03:40:17.270Z","id":"floor-daylight-8","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:44:17.316Z","id":"floor-daylight-9","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T03:48:17.360Z","id":"floor-daylight-10","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Ceiling's open above me now. Let me try climbing straight up the hole I just dug."]}
+{"ts":"2026-11-10T03:52:17.428Z","id":"floor-daylight-11","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Pillar won't place either. This hole's got no door and no ladder. Crew — I'm calling it: below-grade cell at (72, 59, -88), nothing works. Lift me to the pad at (62, 67, -92) and I'll take the day fro","[MagnusandMouse: Teleported MagnusandMouse to 73.700000, 60.600000, -85.700000]"]}
+{"ts":"2026-11-10T03:56:17.472Z","id":"floor-daylight-12","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:00:17.502Z","id":"floor-daylight-13","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:04:17.537Z","id":"floor-daylight-14","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:08:17.568Z","id":"floor-daylight-15","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:12:17.618Z","id":"floor-daylight-16","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Not one leg moves me now — same as the pit on day 5. I'm stuck in a below-grade cell and the walker won't take a step. Crew, hands on me: set me on the open shoulder south of the pit at (62,67,-88), l"]}
+{"ts":"2026-11-10T04:16:17.267Z","id":"floor-daylight-17","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:20:17.307Z","id":"floor-daylight-18","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Still here, still boxed. But I've got a pickaxe and cobble in my pocket — if the walls won't let me walk, I'll make a door. Digging the block west of me down to my foot level and seeing if the floor l"]}
+{"ts":"2026-11-10T04:24:17.346Z","id":"floor-daylight-19","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> That's a real step east — first movement in a while. Now the column east of that reads floor at my feet too; keep going."]}
+{"ts":"2026-11-10T04:28:17.400Z","id":"floor-daylight-20","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:32:17.456Z","id":"floor-daylight-21","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Alright, I'll go back to the way home from spawn and do it right — no shortcuts. I'll head south along z -89, then north to the pad, and take a tree from there."]}
+{"ts":"2026-11-10T04:36:17.501Z","id":"floor-daylight-22","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T04:39:09.839Z","id":"floor-park-23","ok":true,"recorded":true}
+{"ts":"2026-11-10T04:41:17.861Z","id":"close-quit-day12","ok":true,"bye":true}

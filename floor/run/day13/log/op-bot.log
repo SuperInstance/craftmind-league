@@ -1,0 +1,410 @@
+OP day-11 process up; req=floor/run/day13/op/op-req-day13.jsonl res=floor/run/day13/op/op-res-day13.jsonl parklog=floor/run/day13/op/park-notify-day13.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0Mjg3ODM3MDgwfQ==
+RES {"id":"gateb-ping-1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+RES {"id":"gateb-ping-1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+SRV: [MagnusandMouse: Set the weather to clear]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.300000, 72.000000, -74.700000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.200000, 66.400000, -79.700000]
+PARK-NOTIFY ** PARK ** id=gateb-test-1 reason=gate-b-test (recorded to floor/run/day13/op/park-notify-day13.jsonl; no world effect)
+RES {"id":"gateb-test-1","ok":true,"recorded":true}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzEsInkiOjY1LCJ6IjotODN9fSwidGltZXN0YW1wIjoxNzk0Mjg3OTU2NTc4fQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzEsInkiOjY1LCJ6IjotODN9fSwidGltZXN0YW1wIjoxNzk0Mjg4MDQ1MzQ0fQ==
+[BotMessenger] Received greeting from Cody
+SRV: <Cody> Day thirteen. Cody here — woke on the road home with fifteen cobble in my hand and the count DONE at last. West to my table, eight of them into a furnace at the bench, and the furnace set on my own pad beside it. Today’s the day it lands.
+SRV: <Cody> Morning again, and this time I've got stone in my hand and a bench to use it at. Home's west — around the pit, south shoulder, same as always.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.300000, 66.600000, -80.100000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.700000, 67.200000, -78.500000]
+SRV: <Cody> Walker balked at the broken ground — fine, short hops then. West a few paces, then I'll swing south around that pit like I mean it.
+SRV: <Cody> West a bit more, then south to the shoulder — keep well clear of the pit's columns.
+SRV: <Cody> On the south shoulder now, west of the pit's columns. North to the bench — the table's just up there.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.100000, 67.200000, -82.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: <Cody> Ground's getting steep north of here — one short hop at a time, then I'll try the bench again.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.300000, 80.000000, -72.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.312536, 67.420000, -86.275754]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -88.200000]
+SRV: <Cody> Table's seven north of me. One more hop up onto the bench.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.300000, 67.600000, -83.800000]
+SRV: <Cody> There's a lip of grass right at my north — one block up. I'll step up onto it.
+SRV: <Cody> The walker keeps reading my feet one level low. Fine — I'll dig the block in front of me and step up onto the bench myself.
+SRV: <Cody> Dug out a step. Now I'll walk into it and up onto the bench.
+SRV: <Cody> Still pinned at the same lip. I'll dig the next step out too and walk straight through the notch.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.400000, 73.000000, -77.900000]
+SRV: <Cody> Two steps dug now. Let me try walking down into the notch and up the far side.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.500000, 67.400000, -84.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.700000, 67.600000, -84.800000]
+SRV: <Cody> Walker's stuck on the same lip no matter what I dig. The column tops read +1 north — I'll just pillar up one and get over it.
+SRV: <Cody> Pillar won't take. Enough of this lip — I'll try the diagonal: north-east a couple of blocks, off this seam entirely.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> Now I'm a block lower and east. The ground north reads +1 — one short hop up there should do it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.100000, 66.600000, -88.700000]
+SRV: <Cody> Small hops work where long ones don't. Hopping north, one seam at a time, toward the table.
+SRV: <Cody> It won't step north from here — that's a +2 wall in front of me. I'll dig the block I'm facing at head height and open the seam.
+SRV: <Cody> Nothing at head height there — so the wall's lower than I feared. Try the north hop again, just one block in.
+SRV: <Cody> Little hops, that's the trick. One more north, then west toward my table.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> I'm hopping in place, not gaining ground. The seam west is one down — let me try the low way round instead of pushing north.
+SRV: <Cody> West is open now — ground drops away there. Let me get down off this lip and walk the low shoulder.
+SRV: <Cody> Well, I went east instead of west — this ground's a mess of steps. But look, there's a birch trunk right south of me. Wood's the thing I came for.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.900000, 65.600000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 66.200000, -82.500000]
+SRV: <Cody> No logs there — that trunk's a crown's lie, or I'm not under it. I'm not chasing ghosts today. Let me just get back to my own table and work from home ground.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.900000, 67.200000, -79.200000]
+SRV: <Cody> Every long walk on this broken ground times out. Short hops, then — one block west, see if the shelf holds.
+SRV: <Cody> That hop 'arrived' without moving me an inch. I'm on a ledge and the walker won't step off it. West is leaves and a wall — let me look at what's actually under me.
+SRV: <Cody> East is stone at my feet and it's one down — that's walkable. Let me step east off this shelf and around.
+SRV: <Cody> I'm walled in by leaves and stone on this shelf and the walker won't leave it. Fine — if I can't walk out, I climb out. One block under my feet, up.
+SRV: <Cody> Can't pillar, can't walk, can't fall. Then I'll cut my own door — that leaf wall west of me is in reach, and behind it might be the way down.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.400000, 67.200000, -79.500000]
+SRV: <Cody> That leaf wall's up at y71, six blocks over my head — not in reach. The stone east is one down and it's mine. Let me dig the block I'm standing beside and open a step down.
+SRV: <Cody> East stone's at y63, one under my feet — I can step down onto that. Short hop, one block over.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Every 'arrival' is the same spot — the walker's stuck in a loop and my feet never move. I've got 15 cobble in my pocket and a shelf under me. Let me place a block under my feet and lift myself off thi
+SRV: <Cody> Nothing solid to build against either. Then I'll stop fighting the shelf and aim long — a real leg north where the stone's high and open, well past this lip.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 78.400000, 71.700000, -76.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.900000, 66.400000, -80.700000]
+SRV: <Cody> The walker times out every long leg too — I'm wedged on a shelf with leaves over my head. Let me stop guessing and actually look at what's holding me here.
+SRV: <Cody> Six above me is leaves, one to the east is stone. I've been swinging at air. The stone that's actually in reach is my way out — dig the block right next to my feet.
+SRV: <Cody> The east stone's top is at y63, one below me — that's the block I want. Dig it out from under the shelf and see if it opens a way down.
+SRV: <Cody> There's my first furnace stone, right out of the shelf. Now the stone under my feet — dig the block I'm standing on and drop to the floor below.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> I'm standing on air now — step down into the hole I just made and see if the floor below is open ground.
+SRV: <Cody> Still perched at y65 — the walker claims arrival but my feet say otherwise. This shelf has stone under it and I'm not moving off it by walking, so I'll dig the stone right here and take what's mine.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.400000, 67.200000, -79.300000]
+SRV: <Cody> That's three stone in the bag and I'm still wedged on this shelf. Enough digging blind — the birch south of me has a real foot at (71,67,-76). I'll walk to it and fell it properly.
+SRV: <Cody> The walker dropped me eight blocks down into a hole — y59, walls all around. I'm not dying in another pit. Long leg out, well past the north lip, up to open ground.
+SRV: <Cody> Two long legs and I haven't moved an inch — this hole's got me like the old pit did. I've got dirt in my bag and a wall to my west at y65. Pillar up out of here — one block under the boots at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Pillar won't take either — the hole's got me good. But I've got a pickaxe and a wall. If I can't climb out, I'll carve my way out west where the grass sits at y65, three above my head. Dig into the wa
+SRV: <Cody> Stone's coming out of the wall but I'm still sat at y59. Keep carving west — clear the block at head height so I've got a step to stand on.
+SRV: <Cody> Two blocks cleared at my own level and one above into that west wall. Now I'll try to hop up into the notch I just carved — short leg, just one block over.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.310667, 60.000000, -84.693490]
+SRV: <Cody> I carved the notch but my boots never left y59 — same lie as the old pit. I'm calling it: I'm in a below-grade hole at (70, 59, -87) and my own legs won't get me out. Crew, set me on the surface like 
+SRV: <Cody> That's the last try — I'm walled in at y59 and my own legs won't lift me. Crew, I'm in a hole at (70, 59, -87). Set me down on the surface at home, like day 9.
+SRV: <Cody> Long legs die too — this hole's sealed like the old pit. Crew, I'm trapped in a below-grade cell at (70, 59, -87) and my own legs won't get me out. Set me on the surface, please — same as day 9.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.750333, 60.000000, -90.694795]
+SRV: <Cody> Still here at y59. The wall west is grass at y65 — six blocks of rock between me and daylight. I've got 17 cobble. If I can't be lifted, I'll build my own stair: place a block at my feet's side and st
+SRV: <Cody> Right, that cell's solid. Let me put a rung where there's air — one block up in front of me, and I'll hop onto it.
+SRV: <Cody> The whole south side's solid rock. Fine — the west wall's the climb. Dig out one block of it at head height, step into the notch, then dig the next rung up. I'll carve my way out.
+SRV: <Cody> Notch cut at head height. Now I step into it and dig the rung above — up and out, one block at a time.
+SRV: <Cody> Still at y59 — that 'arrival' was a lie again. But I've got air at (69,60,-88) now. Place a block under myself there and climb onto it.
+SRV: <Cody> Crew, I've measured it again — this hole's sealed just like the old pit. I'm stuck at (70,59,-87) and no stair I build takes. Lift me to the surface, same as day 9 — set me down by my table, please.
+SRV: <Cody> Still down here. Let me try the long leg out — one big walk north, well past the rim, aimed at open ground.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -88.200000]
+SRV: <Cody> Crew — I'm sealed in this hole at (70,59,-87) and every door measures fake, same as the old pit. Lift me to the surface, please, set me down by my table at the anchor.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-4","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> The clock jumped back to dawn — the crew's hands are on the world. I'm still in this hole at (70,59,-87). Crew, lift me to the surface by my table, like day 9.
+SRV: <Cody> Time's moving again but I'm not. Fine — I'll carve my own way up. Dig the block just above my head at (70,60,-87) and see what opens.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.824848, 60.000000, -90.311680]
+SRV: <Cody> Stone above my head, and it came free — so this hole has a roof I can eat through. Dig the next one up at (70,61,-87).
+SRV: <Cody> Two stone down, roof's opening up. Next one at (70,62,-87) — keep chewing toward daylight.
+SRV: <Cody> Three stone eaten through and my head's nearly clear. One more at (70,63,-87) — then I can look up at the sky.
+SRV: <Cody> Head's clear to y64 now — one more bite at (70,64,-87) and I should see sky.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.000000, 61.200000, -83.000000]
+SRV: <Cody> No block at y64 — that's open air above me. The column's clear to the sky. Now a long leg out of this hole, well past the wall: up onto the shoulder at (70,65,-80).
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 78.800000, 66.000000, -79.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.600000, 60.400000, -84.200000]
+SRV: <Cody> The walker won't climb out of a hole on its own — but I've got cobble in my pack and a clear column above me. Pillar straight up at (70,-87).
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Pillar won't take. Fine — the hole's roof is open above me. Dig my own step out sideways, east where the ground sits lower at y64.
+SRV: <Cody> East side's already open air at my foot level. The wall that's holding me is the west one at y65 — let me cut a step there instead.
+SRV: <Cody> Every side at my foot level reads open air — so this is a shaft, not a pocket. The block actually under my boots is what I need gone. Digging straight down at my feet.
+SRV: <Cody> That was the floor under me — and it dropped me a step. I'm digging myself deeper, not out. East ground's at y64, one above my head's clear. Let me just try walking east now that I've cut the floor.
+SRV: <Cody> I've moved a block and a half east — the shaft's opening up. East ground sits at y65 now, two above my boots. One more long leg east, well past this lip.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 75.900000, 61.200000, -89.000000]
+SRV: <Cody> I'm in a shaft six deep and the walker won't climb. But my pit taught me one thing about myself: pillar up and the first block won't place. Let me try it anyway — cobble in hand, straight up at my own
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Pillar won't take — same as the pit. But wait: the ground east and north reads dirt at y65, right at my head. If I dig that dirt out at head height, I open a step I can walk into. Digging the east wal
+SRV: <Cody> Cobble at head height — that was wall, not floor. I opened it though. Now I've got a hole at y60 beside me; let me see if the walker will take me east into it.
+SRV: <Cody> Still pinned in this shaft — this is the pit all over again, a hole with no door. I'm going to stop digging sideways and dig a proper stair out: one block down and forward, a step I can actually walk.
+SRV: <Cody> Enough of this shaft — same story as the pit, no door out of a hole. Crew, I'm in a below-grade cell at (71, 59, -87) and I can't climb out. Set me on the surface, please.
+SRV: <Cody> The east wall reads grass_block at y64 now — one above my head, and the ground slopes. If I cut that block out I open a step up. Digging east at head height.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.900000, 61.200000, -83.300000]
+SRV: <Cody> That's another block out of the east wall. My feet are at y59 and the east ground tops at y64 — five up. I'll carve a proper staircase: dig the block above and ahead so each step is only one high.
+SRV: <Cody> I keep guessing at walls I can't see. My feet are at y59 and the east ground tops at y64 — that's five blocks of wall. I'll cut straight into the east face at my own level, one block, then step in.
+SRV: <Cody> East face is open at my level now. Step in and see if the walker takes the one-high step east.
+SRV: <Cody> The east column reads dirt at y65 — that's the top of the wall, four above my feet. But the south column tops at y63, one below — the ground falls away south. If I cut south I may open onto lower open
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> No block south at my level — so south already drops away. That south stone tops at y63, one below my feet. Let me see if I can just walk south and let the step down carry me out.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> Wait — the clock jumped from 5451 to 1328. The world reset to dawn, and my feet are back at y59. Something's off. Let me just try to walk home on the surface, one long leg NW to the shoulder south of 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.000000, 66.000000, -79.500000]
+SRV: <Cody> I'm walled in at y59 — every surface is four to six above me and the walker won't lift me. I'll pillar up on my own cobble, one block at a time, until I'm at the shoulder's height.
+SRV: <Cody> Pillar won't place under me. Fine — I'll dig my way up instead: cut the wall step by step to my north, one block up at a time, and walk out onto the shoulder.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.700000, 60.400000, -84.600000]
+SRV: <Cody> The wall north of me is solid dirt from y65 up — nothing at my head height to cut. But the east reads grass at y64, one above me. Let me get right up against that east step and see if the walker can l
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.000000, 61.200000, -83.300000]
+SRV: <Cody> Every wall around me is four or five above my feet and the walker won't climb. But the south stone tops at y63 — just two rungs up. If I dig that top stone out I make a step I can actually take. Let m
+SRV: <Cody> South is stone at y63, and I'm at y59 with air under it. If I cut that stone out, the top of it drops to y62 — still above me. Hmm. Let me actually look at what's directly south of me — the block I'd 
+SRV: <Cody> I'm in a hole and my dig targets keep landing in air. The south stone reads top y63 — let me cut the actual top block of that south column, at (72,63,-88), and see if it drops down to me.
+SRV: <Cody> Nothing I dig lands where my eyes say the stone is — I'm boxed in at y59 and my hands won't reach. I'm calling it: I've fallen into a hole I can't dig out of. Crew, get me back on the surface — I'll w
+SRV: <Cody> Still down here. Let me try one long leg northwest, up toward the home shoulder at y67 — a single big stride aimed well past these walls, like the rule says for below-grade cells.
+SRV: <Cody> The walls read five and four above me now but the tops keep shifting under my feet — this ground is lying to me. I'm in a hole I cannot dig or walk out of. Crew, I've fallen into a below-grade cell ag
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 75.900000, 61.200000, -89.300000]
+SRV: <Cody> Still in the hole — nobody's lifted me yet. The west column reads five above me but its top is grass at y65; maybe the block right at my own feet level to the west is diggable. Let me try cutting the 
+SRV: <Cody> There we go — that stone at my own feet level came out clean. So the block at feet level to the west is real. I'll cut the one above it too, opening a step, then try walking west into the gap.
+SRV: <Cody> The stone at (69,59,-88) is gone now — that's a gap at my feet to the west. Let me step into it and see if I can walk out that way.
+SRV: <Cody> That 'arrived' is a lie again — I haven't moved a hair. The gap I cut is only one block deep with a five-high wall over it; I can't walk through that. The walls read y65 and y64 on all sides — that's 
+SRV: <Cody> Still stuck at the bottom of this hole. I've got cobblestone in my bag — I'll pillar straight up out of here, one block at a time.
+SRV: <Cody> Pillar won't place either — nothing goes under me. I've cut the stone at my feet to the west and still can't walk or climb out. This hole has no door I can make. Crew, I'm in a below-grade cell at (70
+SRV: <Cody> No hands yet. Let me try the one thing I haven't — cut the wall block that's actually at head height west, then a long leg west past the whole wall at surface level, in one go.
+SRV: <Cody> Head-height stone's gone now too. One long leg west, well past the wall, at surface level — the only kind of move that ever crosses broken ground.
+SRV: <Cody> Moved a step west and up onto the rubble — that's something. The wall's still six high here. I'll cut my own way up: dig the stone right above my head at (69,60,-87) and step up into it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.800000, 61.200000, -83.300000]
+SRV: <Cody> That block's air — I'm standing in a notch of my own making. East reads cobblestone at y61, one above my feet. I'll cut that and step up onto the rubble.
+SRV: <Cody> Crew — I've dug, walked, and pillar-tried this notch at (69,59,-87) and it has no door I can make. I'm stuck below grade. Set me on the surface at the shoulder, please.
+SRV: <Cody> Still here. Fine — the south rim reads grass at y64, just one above my feet. I'll try a short hop onto that lip and see if it takes.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-6","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> Moved a touch south, still in the notch — the wall's three high on that side. I've got cobblestone in my bag; let me stack one under me and gain a block.
+SRV: <Cody> Pillar won't place, short hops won't climb, and the crew's hands haven't come. I'm in a hole below grade at (69,59,-87) with no door I can make. Crew — lift me to the shoulder, please.
+SRV: <Cody> Crew's hands haven't come and I'm still in the notch. One more try at the real door: a long leg north-west, well past the wall, aimed at open shoulder ground at home level.
+SRV: <Cody> Every door out of this notch measures fake, same as the pit did. I'm calling it: I'm below grade at (69,59,-87) and I need the crew's hands to set me on the shoulder.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Still in the notch, crew's hands still not here. Let me try the one thing I haven't: dig the block right at my feet — maybe there's a step down and out to the south.
+SRV: <Cody> South reads grass at y64, just one above my feet — that's a step, not a wall. Short hop south, see if it takes.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 77.700000, 66.000000, -79.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.500000, 60.400000, -84.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.800000, 60.600000, -85.000000]
+SRV: <Cody> I did move — half a block south, that's the first give all morning. South tops read y65 now, one above me. Another short hop south, and keep at it.
+SRV: <Cody> It keeps sliding me back to the same spot. I'm below grade at (69,59,-87) and no door I make is real. Crew — I'm calling it, lift me to the shoulder.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.900000, 60.600000, -85.000000]
+SRV: <Cody> Still down here. One thing I own that might work: pillar up on my own cobble, straight up out of this notch.
+SRV: <Cody> Pillar won't place either — same as the pit. Crew, I'm stuck below grade at (69,59,-87) with no door. Lift me to the south shoulder, please.
+SRV: <Cody> Still in the notch. West top reads y65, six above me — no. But east is cobblestone at y61, just two up. Let me try the long leg east over that low lip.
+SRV: <Cody> Two blocks east and it stopped again — but I moved, and south's stone at y63, two up. The lip's got a low spot; keep pushing east in short legs along it.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> I keep gaining a block at a time but never climbing out. South's stone at y63 — that's a step I can take. Let me dig the block above my feet south and see if the stone's face gives me a stair.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 75.900000, 61.200000, -88.900000]
+SRV: <Cody> Dug the stone at my head height — now there's a step at y60 and another at y61. Let me carve the next one up so I've got a real stair east.
+SRV: <Cody> Two stone blocks out of the face east — that's a step at y60 and y61. Now let me try standing on it.
+SRV: <Cody> I carved the stone but I'm still at the bottom of it — the step's there, I just can't climb a two-high face. Let me dig out a proper one-block stair beside me, at head height, so I can walk up.
+SRV: <Cody> I'm floating in the hole I just carved. Time to stop nibbling at this face and build my own step out — a block under my feet, then up.
+SRV: <Cody> I've been picking at this face too long. The real ground's west — grass at y64. One long leg west and up onto it, past this hollow.
+SRV: <Cody> West's grass at y64 but my feet are at 59 — a five-block wall, no wonder the walker balked. The column right west of me is only one up. Short hop onto it.
+SRV: <Cody> That goto just reports me standing still — I'm boxed in this hollow and the walker won't lift me a block. Fine. I'll carve my own way up: dig the block at head height to the west so there's a step, th
+SRV: <Cody> Still standing in the same spot — the walker won't budge me out of this hollow no matter what I dig beside me. I've been stuck down here long enough. Crew — my feet are below grade in a stone hollow e
+SRV: <Cody> The walker won't lift me out of this stone hollow — every leg times out at the same spot. I've got cobblestone in my pack; I'll pillar straight up out of here, one block at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.900000, 60.600000, -88.100000]
+SRV: <Cody> Pillar won't go — nothing under me to build on. Right, the neighbour tops tell the truth: north is 6 up and east 3 up, but west is only 1, then 0. I'll dig myself a proper step west and walk out, not 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.900000, 66.000000, -78.900000]
+SRV: <Cody> The dig goes through but I never move an inch — this hollow's floor reads the same whatever I do to it. I've tried walking, digging, pillaring. Crew, I'm stuck below grade at (71,59,-86): lift me to t
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.500000, 60.400000, -88.300000]
+SRV: <Cody> Every leg times out five blocks below the rim. But I moved a hair — the walker does shuffle me a little. Let me try one short hop toward the grass shelf that's just one up to my west.
+SRV: <Cody> The short hop reads 'arrived' but my feet haven't moved a block. This hollow's floor is a lie. Crew — I'm below grade at (71,59,-86) and every door I try reads fake. Lift me to the surface like you di
+SRV: <Cody> Still here, still below grade. The wall to my east is grass at y64 — one up from my feet. If I can't walk out, I'll dig my way up the shelf one block at a time. Let me take the block right beside my e
+SRV: <Cody> Dug the block to my east but I'm still pinned where I was — this hollow keeps me put. Crew, my feet are stuck below grade at (71,59,-86) and every exit reads fake. Please set me down on the surface, t
+SRV: <Cody> Crew, I've asked twice and my feet haven't budged — I'm below grade at (71,59,-86) in a hollow that eats every exit. I'll hold here. Set me on the surface when you can.
+SRV: <Cody> Still pinned in the hollow. Let me try one long leg south, well past the wall — the south column top is two up, maybe there's a shoulder there I can reach.
+SRV: <Cody> Well now — that leg moved me! I'm at (71,60,-88), out of the hollow's floor and closer to home. The wall to my north and west is six up though. Let me push west toward the shoulder in one more long le
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.100000, 60.600000, -89.100000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-8","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> The west wall is six up — a cliff from down here. But the south edge is only two up, and I slid that way before. Let me climb my own way out: pillar up on the spot with cobble until I'm at shoulder he
+SRV: <Cody> Pillar won't place from down here either. The south edge is only two up — let me dig into that south wall and carve myself a step up out of this hollow.
+SRV: <Cody> No block where I dug — the hollow's walls are further out than my eyes read. I've done what I can from down here; crew, I'm stuck below grade at (71,59,-88) and my own hands can't climb out. Set me on
+SRV: <Cody> Crew, I'm still in the hollow and my own hands are out of tricks. South edge reads only two up — let me try digging the cobble at my feet's south side to open a step.
+SRV: <Cody> South at my feet isn't solid either — the ground reads cobble three out at y63, not right next to me. Let me try digging the cobble where it actually is, two south, to open a step.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Every dig I aim comes back empty — my hands can't find the wall from down here. Crew, I'm still stuck below grade at (71,59,-88) with nothing to climb. Lift me to the surface when you can.
+SRV: <Cody> Still down here. Fine — if I can't walk or dig out, I can build out. I've got 30 cobble in my pocket. Place one at my feet and stack up.
+SRV: <Cody> Nothing solid even touches the air at my feet — the hollow is wider than my arms reach. Crew, I've tried walking, digging, climbing and building and I'm still stuck at (71,59,-88). I need your hands t
+SRV: <Cody> The west wall reads grass at y65, six up from me — that's a real wall face. One long leg west and up, well past it, might catch the top. Trying it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 60.600000, -89.000000]
+SRV: <Cody> Four blocks closer to the west wall but still six down — the walker won't climb a face. One more long leg, further west and higher, aiming well past the lip.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.300000, 66.000000, -80.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.400000, 60.400000, -89.500000]
+SRV: <Cody> The walker won't move me at all — I'm pinned in a hole six deep with no reachable face. Crew, this is a below-grade cell and I'm stuck: lift me to the surface, please. I'll take the south shoulder hom
+SRV: <Cody> Still here. I'll keep the light on and my patience short — crew, I'm waving from the bottom of this hole at (71,59,-88). Lift when you're ready.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 60.600000, -89.400000]
+SRV: <Cody> The south wall is cobble at y63 — only four up from my feet. If I can't walk out, I'll dig out. Starting with the block right above it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: <Cody> Even the dig won't walk me two blocks. I'm not getting out of this under my own steam — this is a below-grade cell and I'm calling it. Crew, hands please: set me on the pad at (60, 67, -93) and I'll w
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.300000, 80.000000, -72.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.301929, 61.000000, -82.612514]
+SRV: <Cody> Still in the hole. Nothing's moved me. I'll try one thing myself before I just stand here — climbing straight up on my own cobble, one block at a time.
+SRV: <Cody> Nothing under me to place against — the hole's too deep and my hands can't reach. I'm done fighting it alone. Crew, I'm standing in a below-grade cell at (71,59,-88) and I cannot walk, dig, or climb o
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: <Cody> Six days of this pit and I still can't get a handhold. One more honest try at the long leg out — straight south, well past the wall, at surface height. If it lies again, I'll know it's not my feet.
+RES {"id":"floor-daylight-9","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Six days of this pit and I still can't get a handhold. One more honest try at the long leg out — straight south, well past the wall, at surface height. If it lies again, I'll know it's not my feet."]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 60.600000, -89.400000]
+SRV: <Cody> Moved two blocks north, at least — I'm not frozen, just walled. Short hops now, the walker's own advice: two-three blocks at a time, aiming for where the ground rises.
+SRV: <Cody> I keep sliding back to the same spot. This hole has me and my feet aren't the problem — it's the ground. Crew, I'm stuck below grade at (71,59,-88) and I can't get out by any door. Lift me to the pad,
+SRV: <Cody> The crew hasn't lifted me and my feet keep sliding back to the same stone. I'll dig my own way up — the south wall is cobble at y63, and I can carve a step out of the dirt above it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.200000, 60.600000, -89.100000]
+SRV: <Cody> No block there — the wall's further off than I thought. Let me feel the ground right under my own feet first and see what's actually holding me up.
+SRV: <Cody> Cobble under me at 58, so I've got a floor to work from. The walls to my north and east top out at y65 — if I carve into the north wall at my own level, I can open a step up toward the surface.
+SRV: <Cody> North of me is open air, not wall. The dirt's actually to my north at y65 — that's the column I need to cut into. Let me take the block right above my head's reach at my own level, north side.
+SRV: <Cody> Stone at 61 over my own head — I just opened a hole above myself. Now I stack a block under my feet and climb into it, one rung at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Pillar won't place — the hole I dug is right over me and the block has nowhere to sit. Let me place cobble by hand into the cell above my feet instead.
+SRV: <Cody> I'm standing in a hole with air all around me at my feet level — nothing to build against. The walls are at y65 around me. Let me try one long leg up onto the grass to the west, well past this lip.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.400000, 66.000000, -79.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.600000, 60.400000, -89.300000]
+SRV: <Cody> I'm sunk in a hole with grass walls all around at y65 and nothing to build against at my feet. Let me carve a step into the west wall at my own level — dig the grass at (70,59,-88) and open a shelf to
+SRV: <Cody> The wall beside me is open air at my level too — I'm in a wide hollow, not a tight shaft. The ground climbs to the east at y65. Let me hop that way in a short leg.
+SRV: <Cody> I gained a block of height — the east side climbs. That's progress. One more short leg east, onto that grass at y66.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 60.600000, -89.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> I slipped back a rung. The east wall is a solid +6 face — I can't climb it. But the ground south is stone at y63, one down. Let me drop that way and walk out low along the shoulder.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-10","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> Every leg gives up at the same spot — I'm pinned in this hollow. The west side drops to grass at y65, only a couple above me. Let me dig a step into the west wall at my own level to make a shelf.
+SRV: <Cody> I'm walled in on every side at my level — the west grass sits at y65, five up, and nothing to climb. This is a below-grade hole I fell into; time to say so out loud and let the crew's hands lift me to
+SRV: <Cody> I'm in a below-grade hollow at (71,60,-87) with no climbable wall — every leg dies at the same spot. Crew, I need hands on me: set me on the surface, on the open shoulder by home.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.100000, 61.600000, -88.200000]
+SRV: <Cody> No hands yet. Then I'll build my own way out — I've got thirty cobblestone. Pillar straight up from where I stand, one block at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Pillar won't place under me either. Alright — one long leg north, well past the wall, aiming for the open grass at y66. If the walker can't do it, the crew has to lift me.
+SRV: <Cody> North is a wall too. I've tried every door and the walker won't take one. Crew — I'm stuck in a below-grade hole at (71,60,-87) and I'm calling it: lift me to the surface.
+SRV: <Cody> Still here, still no hands. Fine — the south wall is stone at y63, only three above me. I'll dig into that stone to carve myself a step up and out.
+SRV: <Cody> Nothing at my head height south either. Let me try the west wall — grass at y65, that's the closest lip. Dig one block out of it and see if I can step up.
+SRV: <Cody> Every dig reads empty and every leg dies — my eyes and my feet disagree with the world. I'm calling it plainly: I'm stuck below grade at (71,60,-87). Crew, put hands on me and set me on the surface.
+SRV: <Cody> Still down here. One more try at the east wall — grass at y66, the highest lip I've got. If that reads empty too, I stay put and let the crew lift me.
+SRV: <Cody> Four digs, four empty reads, and every leg dies short. I'm not moving from this cell by my own hands — crew, this is the day-5 pit all over again. Lift me to the surface and I'll take the south should
+SRV: <Cody> Alright, no hands coming and no dig biting. I've got a stack of cobble and a pillar's the one thing I haven't tried from this cell. Jump and place under me.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.900000, 61.600000, -88.200000]
+SRV: <Cody> Pillar won't take either. One last honest try — a long leg northwest, well past the lip toward home ground. If the walker lies again, I'm done fighting this cell.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.500000, 67.000000, -79.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.300000, 61.400000, -88.300000]
+SRV: <Cody> The long leg moved me two blocks west and down a level — that's the first real movement all morning. The whole west side is a five- and six-block wall from here. I'll keep grinding west in short hops;
+SRV: <Cody> Two blocks west is all I've bought in an hour, and the wall in front of me is five high. That's enough of this cell. Crew — I'm calling it, same as day 5: set me on the surface and I'll take the south
+SRV: <Cody> No hands yet. Fine — I'm not standing in a hole waiting to be lifted. The wall east of me is only two up at the south edge; I'll dig my own way up the shoulder one block at a time and walk out the top
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.600000, 61.600000, -85.500000]
+SRV: <Cody> That dug clean — I'm standing on my own floor and there's air above it now. One more dig and I've got a step to climb.
+SRV: <Cody> Two clean digs in a row — that's the first honest work all morning. Now I climb my own stair: hop up onto that step and keep cutting my way to daylight.
+SRV: <Cody> Pillar's dead again, same as the pit. But digging works — so I'll cut a proper stair. Clear the block south of me at my own level and step into it, then up.
+SRV: <Cody> South's already open air at my feet — so that's my way out. Step south onto the lower ground and work the stair up from there.
+SRV: <Cody> That goto reported arrival but my feet haven't moved an inch — the walker's lying about my own body now. Two blocks east the ground tops out at y61, one step up. I'll try that step directly.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Every step I take bounces off and I'm exactly where I was. Fine — if I can't walk out, I'll dig out. The east side is stone at y61, one above my feet: cut into it and open a slot I can climb.
+SRV: <Cody> I'm pinned in a one-block hole and nothing I try moves me — walker bounces, digging hits air, pillar won't place. This is the pit all over again. I'll say it plain: I'm stuck below grade at (69, 60, -
+SRV: <Cody> Crew hasn't lifted me yet. One more try at the honest exit: a long leg south toward open ground at z -89, well past this wall face, in one go.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-11","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> I moved — a block east and down a step. That's progress, not a wall. There's a zombie out there too, so let's not dawdle: hop east onto the grass at y64.
+SRV: <Cody> A creeper AND a zombie now, and I'm still low in this hollow. The east ground is grass at y64, four up — I'll cut a step into it with the pick so I have a real stair, not a wish.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.700000, 61.200000, -83.300000]
+SRV: <Cody> The east ground is grass at y64, my feet are y59 — that's a five-block wall, no wonder the walker quits. I'll cut a step into the wall right where it meets my head: dig the grass above me to the east.
+SRV: <Cody> Still nothing where I swing — my feet read y59 but my eyes keep saying the ground's higher. The zombie's closing too. I'll try the honest exit one more time, a long leg south to open grass at y64 wher
+SRV: <Cody> Five blocks of wall all round and the walker won't climb it — this is the pit story again, a below-grade cell with no door. I'll say it plain for the crew: I'm stuck at (70, 59, -87), a zombie on my t
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> No hands yet, and the zombie's still out there. I've got 31 cobble in my pack — I'll pillar straight up out of this hole, one block at a time.
+SRV: <Cody> Pillar won't place either — this cell's the same lie as the pit. I'll stop swinging at ghosts and just stand here fed and whole; the crew's hands are the only door out, and I'll wait for them.
+SRV: <Cody> The crew's hands haven't come yet and the zombie's drifting closer. Maybe it's not a pit at all — maybe I'm standing on a ledge with a real drop south. I'll try one short hop south and see what my fee
+SRV: <Cody> I moved! Feet read y60 now and south's a two-block drop to y64 grass — that's a real way out. One more short hop south onto the open ground.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.100000, 61.200000, -85.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 78.600000, 66.100000, -79.600000]
+SRV: <Cody> Every long leg just bounces me back to the same spot — this is the pit all over again, no door the walker will take. I'm calling it for the crew's hands: set me on open ground, I'm at (70, 60, -87).
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> South's my lowest neighbour and a creeper's drifting in — I'll try the one thing I haven't: dig the block right under my feet's south edge and see if the ground opens a step down. If not, I keep calli
+SRV: <Cody> Dug the cobble out from under my south edge and my feet dropped to y59 — so digging DOES move me in this cell. I'll carve myself a step down and out, one block at a time, south toward the open shoulde
+SRV: <Cody> No block at my feet level north — so my own column is hollow at y59. The south side had solid cobble I dug out. Let me try a short step south now that the block below's gone.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: <Cody> Still boxed — and now a skeleton's joined the creeper out there. I'm not dying in a hole a second time. Crew, my feet are at (70, 59, -87) and I can't walk out — set me on the open shoulder.
+RES {"id":"floor-daylight-12","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Still boxed — and now a skeleton's joined the creeper out there. I'm not dying in a hole a second time. Crew, my feet are at (70, 59, -87) and I can't walk out — set me on the open shoulder."]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.681816, 60.000000, -84.309194]
+SRV: <Cody> Crew hasn't lifted me and the monsters are closing. Last idea before I'm monster food: pillar straight up out of this hole — I've got 30 cobble and nothing left to lose.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Pillar won't place either — this hole's cursed like the pit. The south side had solid cobble at my feet; I'll dig out the block I'm standing above to drop lower and see if there's a floor I can walk o
+SRV: <Cody> Nothing under my feet either — I'm standing on air over a drop. Every door's fake in here. Crew, I'm at (70, 59, -87) and I cannot get myself out — I need your hands.
+SRV: <Cody> Crew's not lifting me and the creeper's getting closer. The south side showed grass at y64 — that's below my feet but it might be a ledge. One long leg south, well past this hole.
+SRV: <Cody> Every leg's a fake in this hole — same curse as the pit. Crew, this is a below-grade cell and I'm not getting out by my own feet. Set me on the surface, please — the south shoulder by home.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.300696, 60.000000, -84.300485]
+SRV: <Cody> Crew hasn't come and I'm not dying in this hole. The west wall reads grass at y65 — one block up. If I can't pillar, maybe I can place a block right in front of me and step up onto it. Trying the cell
+SRV: <Cody> It placed! I can build in here after all. Now step up onto my own cobble — one block west, and keep stacking toward that grass ledge.
+SRV: <Cody> Company! Moving —
+SRV: Cody was blown up by Creeper
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.300000, 73.000000, -77.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 33.019653, 68.000000, -97.042803]
+SRV: <Cody> Lost the lot — logs, cobble, the porkchops, all of it. But I'm alive and there's a real oak trunk seven blocks from me at (46,68,-91). Wood first, before anything else.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 42.798986, 69.420000, -100.300001]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 38.300000, 69.700000, -95.500000]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 40.000000, 69.100000, -95.600000]
+SRV: Cody was blown up by Creeper
+SRV: <Cody> Two deaths and empty hands — but there's an oak trunk four blocks off at (34,70,-101), and I'm not touching a skeleton's line to get it. Quick, take the tree before the next one finds me.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 27.900000, 77.200000, -105.900000]
+SRV: <Cody> I'm standing in leaves at y75 — my feet aren't on the ground, so the tree's out of reach. I need to get down to real dirt before I can fell anything. South's grass at y67, straight down off this canop
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-13","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 38.700000, 82.000000, -94.400000]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 28.700000, 76.400000, -104.900000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 28.900000, 76.600000, -104.600000]
+SRV: Cody was slain by Zombie
+PARK-NOTIFY ** PARK ** id=floor-park-14 reason=MAX_DEATHS (recorded to floor/run/day13/op/park-notify-day13.jsonl; no world effect)
+RES {"id":"floor-park-14","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 40.700000, 89.000000, -92.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 34.836124, 70.024424, -102.727481]
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 35.209296, 75.121297, -82.686595]
+SRV: Cody was slain by Zombie
+SRV: Cody was slain by Zombie
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 40.700000, 89.000000, -92.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 36.305749, 76.000000, -88.722674]
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 30.500000, 70.000000, -104.500000]
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 38.700000, 82.000000, -94.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 28.700000, 76.400000, -104.900000]
+SRV: Cody left the game
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Set the weather to clear]
+RES {"id":"day13-close","ok":true,"bye":true}
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

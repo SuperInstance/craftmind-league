@@ -1,0 +1,19 @@
+{"cmd":"ping","id":"gateb-ping-1"}
+{"cmd":"ping","id":"gateb-ping-1"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"park-notify","id":"gateb-test-1","reason":"gate-b-test"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-2","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-3","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-4","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-5","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-6","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-7","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-8","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-9","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-10","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-11","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-12","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-13","text":"/time set 1000"}
+{"cmd":"park-notify","id":"floor-park-14","reason":"MAX_DEATHS"}
+{"cmd":"quit","id":"day13-close"}

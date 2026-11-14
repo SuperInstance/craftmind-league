@@ -1,0 +1,10 @@
+PASS RR1-old OLD floor misses the day (3 attempts, park daylight_unrestorable) — asserts=3 attempts=1,2,3 park=true befores=58833/58912/58991 (day: 58833/58996/59159)
+PASS RR1-new REPAIRED floor verifies all three landings attempt-1 — asserts=3 attempts=1,1,1 park=false befores=58833/58912/58991 (attempt-1 before byte-equal the day's 58833; each landing line at before-1 by construction)
+PASS RR2-1 REPAIRED floor verifies a landing line starting at before-1 — asserts=2 attempts=1,1 park=false before=40000 (line at 39999; round 2 starting proves round 1 verified and a chat request reached the channel — a wedged floor cannot pass)
+PASS RR2-2 REPAIRED floor verifies a landing line starting at before-2 — asserts=2 attempts=1,1 park=false before=40000 (line at 39998; round 2 starting proves round 1 verified and a chat request reached the channel — a wedged floor cannot pass)
+PASS RR2-5 REPAIRED floor verifies a landing line starting at before-5 — asserts=2 attempts=1,1 park=false before=40000 (line at 39995; round 2 starting proves round 1 verified and a chat request reached the channel — a wedged floor cannot pass)
+PASS RR2b-old OLD floor verifies the unshifted landing (not broken everywhere) — asserts=2 attempts=1,1 park=false before=40000 (round-2 start = round-1 completion, as RR2)
+PASS RR2b-new REPAIRED floor does NOT verify a mirror with no landing — asserts=3 park=daylight_unrestorable
+PASS RR3 one landing satisfies exactly one round; round 2 parks after 3 attempts — asserts=4 attempts=1,1,2,3 park=daylight_unrestorable
+
+RIG-REPAIR FIXTURE: 8/8 PASS

@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T16:38:19.476Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:/home/caseydigennaro/craftmind-league/floor/run/t4/contract.json","reason":"FLOOR_OPEN","seq":2,"contract_sha":"fadd381168f506e6b545f0c82f088b1c204bae4ecf4a9504ef37bbbde9913199"}
+{"ts":"2026-11-10T16:38:19.477Z","act":"LEASE_ISSUE","trigger_id":"floor_open","evidence_ref":"lease:/home/caseydigennaro/craftmind-league/floor/run/t4/lease.json","lease_id":"lease-1794328699477","ttl_s":4,"seq":4,"contract_sha":"fadd381168f506e6b545f0c82f088b1c204bae4ecf4a9504ef37bbbde9913199"}

@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T09:41:06.599Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:floor/run/day16/contract-day16.json","reason":"FLOOR_OPEN","seq":3,"contract_sha":"166afff117c176ace7856ff14c4ec02b8d8282072a70c28f00f12f5d0d209fed"}
+{"ts":"2026-11-10T11:07:34.419Z","act":"NOTIFY","trigger_id":"sigterm","evidence_ref":"process","reason":"FLOOR_CLOSE","seq":115,"contract_sha":"166afff117c176ace7856ff14c4ec02b8d8282072a70c28f00f12f5d0d209fed"}

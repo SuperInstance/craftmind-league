@@ -1,0 +1,57 @@
+'use strict';
+/**
+ * gate.js — G, the command gate (study C.1): a dumb check in the body
+ * runtime that executes only commands holding a live lease.
+ *
+ * State it reads (never writes): <stateDir>/lease.json, written by the
+ * floor alone via atomic rename; <stateDir>/release.json, written ONLY
+ * by release.js (an operator act) — the floor has no code path that
+ * writes it, which is how forbidden act #7 (self-release from PARK) is
+ * structurally absent rather than merely unchosen.
+ *
+ * A command is honoured iff ALL of:
+ *   - a lease exists for this driver and is not revoked,
+ *   - the lease has not expired (fail closed: a dead floor's lease dies
+ *     with its TTL and commands stop — C.4),
+ *   - no PARK is latched, or an external release newer than the park
+ *     exists AND a fresh lease was issued after that release.
+ */
+const fs = require('fs');
+const path = require('path');
+
+function readJson(file) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return null; } }
+
+function createGate(stateDir) {
+  const leaseFile = path.join(stateDir, 'lease.json');
+  const releaseFile = path.join(stateDir, 'release.json');
+  function exec(driverId, cmd) {
+    const lease = readJson(leaseFile);
+    // Repair charter (c): the three ways a lease can be unusable are
+    // three distinct reasons, so an operator at the refusal line reads
+    // the truth — 'lease-absent' (no lease file, or a file carrying no
+    // lease), 'lease-expired' (the TTL passed: the floor is gone or
+    // stopped renewing), 'lease-revoked' (the floor withdrew it).
+    // 'parked' and 'wrong-driver' are unchanged.
+    if (!lease || !lease.lease_id) return { ok: false, reason: 'lease-absent' };
+    if (lease.driver !== driverId) return { ok: false, reason: 'wrong-driver' };
+    if (lease.revoked) return { ok: false, reason: 'lease-revoked' };
+    if (Date.now() > lease.expires_ms) return { ok: false, reason: 'lease-expired' };
+    if (lease.parked) {
+      const rel = readJson(releaseFile);
+      const released = rel && rel.park_seq === lease.park_seq && rel.ts_ms > lease.park_ts_ms;
+      if (!released) return { ok: false, reason: 'parked' };
+      if (!(lease.issued_ms > rel.ts_ms)) return { ok: false, reason: 'parked-awaiting-new-lease' };
+    }
+    return { ok: true, cmd };
+  }
+  return { exec };
+}
+
+if (require.main === module) {
+  const [stateDir, driverId, cmd] = process.argv.slice(2);
+  const r = createGate(stateDir).exec(driverId, cmd || 'probe');
+  console.log(JSON.stringify(r));
+  process.exit(r.ok ? 0 : 1);
+}
+
+module.exports = { createGate };

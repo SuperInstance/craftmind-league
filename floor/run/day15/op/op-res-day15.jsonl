@@ -1,0 +1,32 @@
+{"ts":"2026-11-10T07:37:48.601Z","id":"ping1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+{"ts":"2026-11-10T07:37:48.601Z","id":"pn-test","ok":true,"recorded":true}
+{"ts":"2026-11-10T07:37:56.202Z","id":"ping1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+{"ts":"2026-11-10T07:38:01.003Z","id":"pn-test","ok":true,"recorded":true}
+{"ts":"2026-11-10T07:38:19.908Z","id":"wx1","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+{"ts":"2026-11-10T07:39:06.718Z","id":"give1","ok":true,"gave":"/give Cody cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody","Cody left the game"]}
+{"ts":"2026-11-10T07:39:44.329Z","id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T07:40:42.742Z","id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","Cody joined the game","<Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6MzMsInkiOjY3LCJ6IjotOTd9fSwidGltZXN0YW1wIjoxNzk0Mjk2NDQxNjE5fQ==","Cody left the game"]}
+{"ts":"2026-11-10T07:42:04.765Z","id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","Cody joined the game","<Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6MzMsInkiOjY3LCJ6IjotOTd9fSwidGltZXN0YW1wIjoxNzk0Mjk2NTIzNzEyfQ==","<Cody> Day fifteen. Cody here — woke in the tree country with empty hands; the count and the pork are two days gone. The crew put porkchops in my pack before I woke. Home first — the walk is the dangerous part, north of the pocket — then stone at home, and the fu","<Cody> rnace built where it stands."]}
+{"ts":"2026-11-10T07:46:04.822Z","id":"floor-daylight-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T07:50:04.865Z","id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T07:54:04.920Z","id":"floor-daylight-4","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","[MagnusandMouse: Teleported MagnusandMouse to 64.698806, 64.000000, -94.693902]"]}
+{"ts":"2026-11-10T07:58:04.972Z","id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:02:05.028Z","id":"floor-daylight-6","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Every leg fails and I'm sliding back south. The walls around me read top y66-67 — five blocks above my feet. I've got no blocks to pillar. This is the pit's cousin: a below-grade cell that eats every "]}
+{"ts":"2026-11-10T08:06:04.675Z","id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:10:04.732Z","id":"floor-daylight-8","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Every hop slides me back to the same low spot — I'm in a bowl the walker can't climb out of, and I've got no blocks to pillar. I'm not dying here of stubbornness. Hands, I'm calling it: lift me onto t"]}
+{"ts":"2026-11-10T08:14:04.774Z","id":"floor-daylight-9","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:18:04.821Z","id":"floor-daylight-10","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:22:04.863Z","id":"floor-daylight-11","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","[MagnusandMouse: Teleported MagnusandMouse to 69.600000, 68.200000, -81.700000]"]}
+{"ts":"2026-11-10T08:26:04.913Z","id":"floor-daylight-12","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:30:04.950Z","id":"floor-daylight-13","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:34:04.988Z","id":"floor-daylight-14","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:38:05.029Z","id":"floor-daylight-15","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:42:05.075Z","id":"floor-daylight-16","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:46:05.119Z","id":"floor-daylight-17","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:50:04.762Z","id":"floor-daylight-18","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:54:04.800Z","id":"floor-daylight-19","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T08:58:04.858Z","id":"floor-daylight-20","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T09:02:04.907Z","id":"floor-daylight-21","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T09:06:04.973Z","id":"floor-daylight-22","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T09:08:57.313Z","id":"floor-park-23","ok":true,"recorded":true}
+{"ts":"2026-11-10T09:10:02.932Z","id":"bye","ok":true,"bye":true}

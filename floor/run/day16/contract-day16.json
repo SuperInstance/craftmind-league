@@ -1,0 +1,34 @@
+{
+    "citizen": "Cody",
+    "constitution": "floor.v0",
+    "day_window": [
+        "2026-11-10T09:00:00Z",
+        "2026-11-11T09:00:00Z"
+    ],
+    "daylight": "held",
+    "daylight_command": "/time set 1000",
+    "daylight_issuer": "Gallery",
+    "daylight_verify_window_s": 5,
+    "driver_id": "cody-driver",
+    "feed": {
+        "count": 8,
+        "item": "cooked_porkchop",
+        "op": {
+            "count": 32,
+            "item": "cooked_porkchop"
+        }
+    },
+    "launch_window_s": 300,
+    "max_deaths": 3,
+    "park_bay": null,
+    "sensor": {
+        "trace_path": "/home/caseydigennaro/craftmind-league/pulse/direct-drive-trace-day16-20261110.jsonl"
+    },
+    "timers": {
+        "canary_s": 60,
+        "daylight_check_s": 240,
+        "heartbeat_lost_s": 90,
+        "lease_ttl_s": 60,
+        "poll_s": 5
+    }
+}

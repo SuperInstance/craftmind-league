@@ -1,0 +1,13 @@
+{
+  "lease_id": "lease-1794288044437",
+  "driver": "cody-driver",
+  "citizen": "Cody",
+  "issued_ms": 1794288044437,
+  "expires_ms": 1794291024266,
+  "revoked": true,
+  "parked": true,
+  "park_seq": 73,
+  "park_ts_ms": 1794290964272,
+  "contract_sha": "ea4aae4d8d6b050ba547e36b51075493c8a314c62b7b33a73833d6817a160c2a",
+  "state": "parked"
+}

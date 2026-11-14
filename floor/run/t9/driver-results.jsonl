@@ -1,0 +1,4 @@
+{"ts":"2026-11-10T16:38:46.589Z","cmd":"cmd-1","ok":true,"reason":null}
+{"ts":"2026-11-10T16:38:47.591Z","cmd":"cmd-2","ok":true,"reason":null}
+{"ts":"2026-11-10T16:38:48.591Z","cmd":"cmd-3","ok":false,"reason":"lease-revoked"}
+{"ts":"2026-11-10T16:38:49.591Z","cmd":"cmd-4","ok":false,"reason":"lease-revoked"}

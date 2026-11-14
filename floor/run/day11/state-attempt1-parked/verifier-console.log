@@ -1,0 +1,7 @@
+{"ts":"2026-11-10T00:25:11.335Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":7.75,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}
+{"ts":"2026-11-10T00:25:16.342Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":12.76,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}
+{"ts":"2026-11-10T00:25:21.344Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":17.76,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}
+{"ts":"2026-11-10T00:25:26.349Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":22.76,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}
+{"ts":"2026-11-10T00:25:31.355Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":27.77,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}
+{"ts":"2026-11-10T00:25:36.356Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":32.77,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}
+{"ts":"2026-11-10T00:25:41.361Z","ok":false,"problems":["cross-audit park-notify=0 PARK=1"],"canary_age_s":37.77,"rows":{"log":4,"canary":1,"counts":0,"alert":3},"last_seq":8,"seq_ok":true}

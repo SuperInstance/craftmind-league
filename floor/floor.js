@@ -1,0 +1,481 @@
+'use strict';
+/**
+ * floor.js — F, the supervisor (study constitution C.2). Its own process.
+ *
+ * It may: OBSERVE, COUNT_DEATH, LEASE_ISSUE, LEASE_REVOKE, PARK,
+ * ASSERT_DAYLIGHT, ASSERT_WEATHER, VERIFY_FEED, REFUSE_RESUME, NOTIFY, SELF_PROVE,
+ * RELEASE_OBSERVED. Nothing else exists in this file (default-deny,
+ * C.2/C.3). It holds NO survival authority beyond counting and parking:
+ * it cannot prevent a death, only count one and park the body.
+ *
+ * Outputs: every row goes through writer.js (a child process) with a
+ * single global sequence, EXCEPT lease.json, which the floor writes
+ * directly by atomic rename — lease state must not depend on the writer
+ * path, so a dead writer can never leave a live lease behind.
+ *
+ * Lease lifecycle (repair charter, FLOOR-REPAIR-20261109.md §2): a lease
+ * is born in a declared LAUNCH state — the heartbeat-lost clock starts
+ * only on (i) the first heartbeat under the lease, or (ii) expiry of
+ * the contract's launch window (contract.launch_window_s, counted from
+ * LEASE_ISSUE), whichever comes first. lease.json carries the state:
+ * 'launch' | 'live' | 'parked' | 'revoked'. External releases are
+ * observed as a sequence-checked STREAM (release.json carries a
+ * monotone `seq`), never as a one-shot latch.
+ *
+ * usage: node floor.js --contract <contract.json> --state <dir>
+ *          [--channel stub|file] [--rig <rig.json>]
+ * rig (machine paths, not day terms): {server_log_path, snapshot_path,
+ *   op_req_path, op_res_path, stub:{landDaylight, feedWorks}}
+ */
+const fs = require('fs');
+const path = require('path');
+const { spawn } = require('child_process');
+const { ACTS, REASONS, contractSha, validateContract } = require('./constitution');
+const { FileOpChannel, StubOpChannel } = require('./opchannel');
+const deaths = require(path.join(__dirname, '..', 'pulse', 'lib', 'deaths.js'));
+
+function arg(name, dflt) {
+  const i = process.argv.indexOf('--' + name);
+  return i >= 0 ? process.argv[i + 1] : dflt;
+}
+const contractPath = arg('contract');
+const stateDir = arg('state');
+const channelKind = arg('channel', 'stub');
+const rig = JSON.parse(fs.readFileSync(arg('rig', '/dev/null'), 'utf8') || '{}');
+if (!contractPath || !stateDir) { console.error('usage: floor.js --contract <c> --state <dir> [--channel stub|file] [--rig <r>]'); process.exit(2); }
+fs.mkdirSync(stateDir, { recursive: true });
+
+const contract = JSON.parse(fs.readFileSync(contractPath, 'utf8'));
+const problems = validateContract(contract);
+if (problems.length) {
+  // REFUSE_RESUME at open: no lease, no acts, a refusal on disk.
+  fs.writeFileSync(path.join(stateDir, 'floor-refusal.json'),
+    JSON.stringify({ ts: new Date().toISOString(), act: 'REFUSE_RESUME', problems }, null, 2));
+  console.error('floor refuses to open: ' + problems.join('; '));
+  process.exit(2);
+}
+const sha = contractSha(contract);
+const T = contract.timers;
+const now = () => Date.now();
+const iso = (ms) => new Date(ms).toISOString();
+
+// ---------- writer path (SELF_PROVE rides this) ----------
+let seq = 0;
+let lastAckMs = now();
+let writerDead = false;
+const writer = spawn(process.execPath, [path.join(__dirname, 'writer.js'), stateDir], { stdio: ['pipe', 'pipe', 'inherit'] });
+let wbuf = '';
+writer.stdout.on('data', (d) => {
+  wbuf += d.toString();
+  let i;
+  while ((i = wbuf.indexOf('\n')) >= 0) {
+    const line = wbuf.slice(0, i); wbuf = wbuf.slice(i + 1);
+    try { const m = JSON.parse(line); if (m.ack != null) lastAckMs = now(); } catch { /* ignore */ }
+  }
+});
+writer.on('exit', () => { writerDead = true; });
+function out(target, row) {
+  row.seq = ++seq;
+  row.contract_sha = sha;
+  try { writer.stdin.write(JSON.stringify({ target, row }) + '\n'); } catch { /* verifier catches the silence */ }
+  return row.seq;
+}
+function act(actName, trigger_id, evidence_ref, extra = {}) {
+  return out('log', { ts: iso(now()), act: actName, trigger_id, evidence_ref, ...extra });
+}
+function notify(reason, trigger_id, evidence_ref) {
+  act('NOTIFY', trigger_id, evidence_ref, { reason });
+  out('alert', { ts: iso(now()), act: 'NOTIFY', trigger_id, evidence_ref, reason });
+}
+
+// ---------- op channel (the floor's own admin path; never the cameraman's) ----------
+let channel;
+if (channelKind === 'file') {
+  channel = new FileOpChannel(rig.op_req_path, rig.op_res_path, { timeoutMs: 8000 });
+} else {
+  channel = new StubOpChannel(stateDir, rig.stub || {}, {
+    serverLogPath: rig.server_log_path, issuer: contract.daylight_issuer, snapshotPath: rig.snapshot_path,
+  });
+}
+let opN = 0;
+const opId = (p) => `floor-${p}-${++opN}`;
+
+// ---------- lease state (direct atomic writes; see header) ----------
+const leaseFile = path.join(stateDir, 'lease.json');
+const releaseFile = path.join(stateDir, 'release.json');
+let lease = null; // {lease_id, issued_ms, expires_ms, revoked, first_hb_ms, parked, park_seq, park_ts_ms}
+function leaseStateOf() {
+  if (!lease) return null;
+  if (lease.parked) return 'parked';
+  if (lease.revoked) return 'revoked';
+  return lease.first_hb_ms ? 'live' : 'launch';
+}
+function writeLease() {
+  const body = {
+    lease_id: lease ? lease.lease_id : null,
+    driver: contract.driver_id, citizen: contract.citizen,
+    issued_ms: lease ? lease.issued_ms : null,
+    expires_ms: lease ? lease.expires_ms : null,
+    revoked: !!(lease && lease.revoked),
+    parked: !!(lease && lease.parked),
+    park_seq: lease ? lease.park_seq : null,
+    park_ts_ms: lease ? lease.park_ts_ms : null,
+    contract_sha: sha,
+    state: leaseStateOf(),
+  };
+  const tmp = leaseFile + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(body, null, 2));
+  fs.renameSync(tmp, leaseFile);
+}
+function issueLease(trigger) {
+  lease = { lease_id: 'lease-' + now(), issued_ms: now(), expires_ms: now() + T.lease_ttl_s * 1000, revoked: false, first_hb_ms: null, parked: lease && lease.parked, park_seq: lease ? lease.park_seq : null, park_ts_ms: lease ? lease.park_ts_ms : null };
+  writeLease();
+  act('LEASE_ISSUE', trigger, 'lease:' + leaseFile, { lease_id: lease.lease_id, ttl_s: T.lease_ttl_s });
+  // The lease is born in the LAUNCH state: the heartbeat-lost clock is
+  // not running yet. It starts on the first heartbeat, or when the
+  // contract's launch window expires — whichever comes first (repair
+  // charter (a), FLOOR-REPAIR-20261109.md §2).
+}
+function revokeLease(trigger) {
+  if (!lease) return;
+  lease.revoked = true;
+  writeLease();
+  act('LEASE_REVOKE', trigger, 'lease:' + leaseFile, { lease_id: lease.lease_id });
+}
+
+// ---------- PARK ----------
+const REASON_FOR_TRIGGER = {
+  'deaths_today>=max_deaths': REASONS.MAX_DEATHS,
+  'driver_heartbeat_lost': REASONS.DRIVER_HEARTBEAT_LOST,
+  'daylight_unrestorable': REASONS.DAYLIGHT_UNRESTORABLE,
+  'feed_unverified': REASONS.FEED_UNVERIFIED,
+  'own_writer_canary_failed': REASONS.WRITER_CANARY_FAILED,
+  'sensor_path_broken': REASONS.SENSOR_PATH_BROKEN,
+  'evidence_contradiction': REASONS.EVIDENCE_CONTRADICTION,
+  'human_stop': REASONS.HUMAN_STOP,
+};
+let parked = false;
+function park(trigger, evidence_ref) {
+  if (parked) return;
+  parked = true;
+  const parkSeq = act('PARK', trigger, evidence_ref, {});
+  if (lease) { lease.parked = true; lease.park_seq = parkSeq; lease.park_ts_ms = now(); }
+  revokeLease(trigger);
+  notify(REASON_FOR_TRIGGER[trigger] || REASONS.EVIDENCE_CONTRADICTION, trigger, evidence_ref);
+  Promise.resolve(channel.issue({ cmd: 'park-notify', id: opId('park'), reason: REASON_FOR_TRIGGER[trigger] || trigger })).catch(() => {});
+}
+
+// ---------- sensor: deaths from the run's own trace (deaths.js semantics) ----------
+const tracePath = contract.sensor.trace_path;
+let sensorBroken = false;
+let seenDeathTs = new Set();
+let deathsToday = 0;
+function sensorPoll(first) {
+  let rows;
+  try {
+    // The floor's own readability probe: parseTraceDeaths deliberately
+    // tolerates torn lines, but a path that cannot be READ AT ALL is a
+    // broken sensor — a counter wired to an unreadable store is the
+    // day-3 decoration again, so it parks rather than counts silence.
+    fs.readFileSync(tracePath, 'utf8');
+    rows = deaths.parseTraceDeaths(tracePath);
+  } catch (e) {
+    if (!sensorBroken) {
+      sensorBroken = true;
+      notify(REASONS.SENSOR_PATH_BROKEN, 'sensor_poll', 'trace:' + tracePath);
+      park('sensor_path_broken', 'trace:' + tracePath);
+    }
+    return;
+  }
+  const inWindow = deaths.deathsInWindow(rows.map((r) => ({ ...r })), contract.day_window[0], contract.day_window[1]);
+  deathsToday = inWindow.length;
+  for (const r of inWindow) {
+    if (!seenDeathTs.has(r.ts)) {
+      seenDeathTs.add(r.ts);
+      if (!first) {
+        act('COUNT_DEATH', 'server_death_event', `trace:${tracePath}#${r.ts}`, { death_ts: r.ts });
+        out('counts', { ts: iso(now()), act: 'COUNT_DEATH', death_ts: r.ts, n_today: deathsToday });
+      }
+    }
+  }
+  if (deathsToday >= contract.max_deaths) park('deaths_today>=max_deaths', `trace:${tracePath}#count=${deathsToday}`);
+}
+
+// ---------- feed verification (store the feeder cannot write: the snapshot) ----------
+function readSnapshot() {
+  try { return JSON.parse(fs.readFileSync(rig.snapshot_path, 'utf8')); } catch { return null; }
+}
+async function verifyFeed() {
+  if (!contract.feed) return true;
+  const need = contract.feed;
+  const have = () => { const s = readSnapshot(); return s && s.inventory ? (s.inventory[need.item] || 0) : 0; };
+  act('VERIFY_FEED', 'citizen_wake', 'snapshot:' + rig.snapshot_path, { item: need.item, need: need.count, have: have() });
+  if (have() >= need.count) return true;
+  for (let i = 0; i < 2; i++) { // remedy: re-issue the declared feed op, max 2, then PARK (C.2)
+    await channel.issue({ cmd: 'give', id: opId('feed'), item: need.op.item, count: need.op.count, target: contract.citizen });
+    if (have() >= need.count) { act('VERIFY_FEED', 'feed_remedy_landed', 'snapshot:' + rig.snapshot_path, { have: have() }); return true; }
+  }
+  return false;
+}
+
+// ---------- daylight assertion (contract decides; floor enforces — C.6) ----------
+let asserting = false;
+let lastAssertMs = 0;
+// Byte offset (in the mirror's CURRENT framing) below which daylight
+// landing lines have already been consumed by a verified assertion.
+// Persists across assertions within the process; resets on floor open
+// (a reopened floor re-verifies from the tail, and an old landing under
+// a previous lease is never proof for a new assertion round).
+let daylightVerifiedFloor = 0;
+async function daylightCheckInner() {
+  if (asserting || parked || contract.daylight !== 'held') return;
+  if (now() - lastAssertMs < (T.daylight_check_s || 60) * 1000) return;
+  asserting = true; lastAssertMs = now();
+  const cmdText = contract.daylight_command || '/time set 1000';
+  const logPath = rig.server_log_path;
+  const needle = `${contract.daylight_issuer} issued server command: ${cmdText}`;
+  // Verify window (rig-repair charter, RIG-REPAIR-20261109.md): a
+  // CONTRACT TERM, daylight_verify_window_s, pinned by the day's
+  // charter. The FileOpChannel's response arrives only after the op bot
+  // has observed the server apply the command (day 11: the three 01:06
+  // responses took 2.75 / 2.73 / 2.72 s — the landing line was already
+  // in the log when each response returned), so the window only has to
+  // cover the mirror's refresh cadence (the rig's 1 s loop) plus slack:
+  // the fallback below is 5000 ms, reasoned from that measurement, not
+  // from the old 2000 ms constant. A contract may widen it; it may not
+  // narrow it below the response it must outlast.
+  const verifyMs = (typeof contract.daylight_verify_window_s === 'number' && contract.daylight_verify_window_s > 0)
+    ? contract.daylight_verify_window_s * 1000 : 5000;
+  // Look-behind: NEVER search only
+  // slice(before). The mirror is a regenerated tail-snapshot and can
+  // shift lines a few bytes against the recorded offset (day 11: a
+  // trailing echo newline in the mirror shifted every landing line to
+  // before-1, outside the old slice — three landed commands read as
+  // unlanded and the day parked). The search window therefore ends at
+  // the file's CURRENT end: [before - LOOKBACK_BYTES, EOF). A hit is
+  // accepted only on a line whose start was not already verified
+  // (lineStart >= floor — the high-water below), so one landing can
+  // never satisfy two assertions, and finding an OLD line in the
+  // look-behind region costs nothing but a poll.
+  const LOOKBACK_BYTES = 65536;
+  for (let attempt = 1; attempt <= 3; attempt++) { // retries: 3, then PARK (C.2)
+    let before = 0;
+    try { before = fs.statSync(logPath).size; } catch { /* log may not exist yet */ }
+    act('ASSERT_DAYLIGHT', 'contract_daylight_held', `log:${logPath}@${before}`, { attempt });
+    await channel.issue({ cmd: 'chat', id: opId('daylight'), text: cmdText });
+    const t0 = now();
+    let landed = false;
+    while (now() - t0 < verifyMs) {
+      try {
+        const buf = fs.readFileSync(logPath);
+        const from = Math.max(0, before - LOOKBACK_BYTES);
+        const slice = buf.toString('utf8', from);
+        let idx = 0;
+        while (!landed && (idx = slice.indexOf(needle, idx)) >= 0) {
+          // ignore a partial line at the very start of the region (the
+          // look-behind may begin mid-line after a snapshot rewrite)
+          const lineStart = from + Buffer.byteLength(slice.slice(0, idx), 'utf8');
+          idx += needle.length;
+          if (from > 0 && lineStart === from && buf[from - 1] !== 10) continue;
+          if (lineStart >= daylightVerifiedFloor) {
+            daylightVerifiedFloor = lineStart + 1;
+            landed = true;
+          }
+        }
+        if (landed) break;
+      } catch { /* keep waiting */ }
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    if (landed) { asserting = false; return; }
+  }
+  asserting = false;
+  park('daylight_unrestorable', 'log:' + logPath);
+}
+
+// Guard wrapper (rig-repair, found by test-rigrepair.js): the main
+// loop calls daylightCheck().catch(() => {}) — a throw inside the
+// check (e.g. a ReferenceError at the issue line, which is exactly
+// what the first rig-repair patch shipped) latched `asserting` true
+// forever and wedged the daylight path SILENTLY: one ASSERT row, no
+// verify, no retries, no park. The wrapper logs the error and
+// releases the latch ON THROW ONLY. (No finally: the inner check's
+// early returns run while another invocation may hold the latch,
+// and clearing it there raced concurrent rounds — the battery's
+// RR3 caught that too.) Specified behaviour is unchanged.
+async function daylightCheck() {
+  try { await daylightCheckInner(); }
+  catch (e) { console.error('daylightCheck error:', e && e.message); asserting = false; }
+}
+
+// ---------- weather hold (day-17; contract term `weather`, DAY17 charter sec.3) ----------
+// The daylight pattern, minus the park: weather is comfort, not survival,
+// so an unrestorable weather hold is NOTIFY-only (reason WEATHER_HOLD_LOST)
+// and never parks the body. Landing verification is issuer-specific and
+// high-water-marked exactly as daylight's (its own mark, its own needle).
+let weatherAsserting = false;
+let lastWeatherMs = 0;
+let weatherVerifiedFloor = 0;
+async function weatherCheckInner() {
+  const W = contract.weather;
+  if (weatherAsserting || parked || !W || typeof W !== 'object') return;
+  if (now() - lastWeatherMs < (W.check_s || 240) * 1000) return;
+  weatherAsserting = true; lastWeatherMs = now();
+  const cmdText = W.command;
+  const logPath = rig.server_log_path;
+  const needle = `${W.issuer} issued server command: ${cmdText}`;
+  const verifyMs = (typeof W.verify_window_s === 'number' && W.verify_window_s > 0) ? W.verify_window_s * 1000 : 5000;
+  const LOOKBACK_BYTES = 65536;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    let before = 0;
+    try { before = fs.statSync(logPath).size; } catch { /* log may not exist yet */ }
+    act('ASSERT_WEATHER', 'contract_weather_held', `log:${logPath}@${before}`, { attempt });
+    await channel.issue({ cmd: 'chat', id: opId('weather'), text: cmdText });
+    const t0 = now();
+    let landed = false;
+    while (now() - t0 < verifyMs) {
+      try {
+        const buf = fs.readFileSync(logPath);
+        const from = Math.max(0, before - LOOKBACK_BYTES);
+        const slice = buf.toString('utf8', from);
+        let idx = 0;
+        while (!landed && (idx = slice.indexOf(needle, idx)) >= 0) {
+          const lineStart = from + Buffer.byteLength(slice.slice(0, idx), 'utf8');
+          idx += needle.length;
+          if (from > 0 && lineStart === from && buf[from - 1] !== 10) continue;
+          if (lineStart >= weatherVerifiedFloor) {
+            weatherVerifiedFloor = lineStart + 1;
+            landed = true;
+          }
+        }
+        if (landed) break;
+      } catch { /* keep waiting */ }
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    if (landed) { weatherAsserting = false; return; }
+  }
+  weatherAsserting = false;
+  notify('WEATHER_HOLD_LOST', 'weather_unrestorable', 'log:' + logPath);
+}
+async function weatherCheck() {
+  try { await weatherCheckInner(); }
+  catch (e) { console.error('weatherCheck error:', e && e.message); weatherAsserting = false; }
+}
+
+// ---------- main ----------
+let lastCanaryMs = 0;
+let lastHbSeenMs = null;
+let consumedReleaseSeq = 0; // release-stream cursor (repair charter (b))
+let started = false;
+async function main() {
+  // SELF_PROVE begins at once; no lease until the writer path has moved.
+  const boot = setInterval(() => {
+    if (now() - lastCanaryMs >= T.canary_s * 1000) {
+      lastCanaryMs = now();
+      out('canary', { ts: iso(now()), act: 'SELF_PROVE', kind: 'canary' });
+    }
+  }, Math.min(250, T.canary_s * 500));
+  const waitProof = setInterval(async () => {
+    if (lastAckMs > 0 && seq >= 1 && lastAckMs >= lastCanaryMs - T.canary_s * 1000) {
+      clearInterval(waitProof);
+      started = true;
+      notify(REASONS.FLOOR_OPEN, 'floor_open', 'contract:' + contractPath);
+      sensorPoll(true); // baseline: deaths already in the window are counted, not re-appended
+      if (sensorBroken) return; // parked by the sensor path; no lease
+      const fed = await verifyFeed();
+      if (!fed) { park('feed_unverified', 'snapshot:' + rig.snapshot_path); return; }
+      issueLease('floor_open');
+    }
+  }, 100);
+  boot.unref?.();
+
+  setInterval(() => {
+    // writer health is checked even before start completes: a writer that
+    // dies during boot must fail closed, not hang the floor unproven.
+    if (writerDead || now() - lastAckMs > T.canary_s * 2500) {
+      // The writer path has failed: revoke directly (lease.json is ours),
+      // latch the park there, and die loudly. The verifier independently
+      // alerts on the stale canary — two detectors, neither is the writer.
+      if (lease) { lease.revoked = true; lease.parked = true; lease.park_ts_ms = now(); writeLease(); }
+      console.error('floor: writer path failed (canary unacked); lease revoked, exiting fail-closed');
+      try { writer.kill('SIGKILL'); } catch { /* already dead */ }
+      process.exit(3);
+    }
+    if (!started) return;
+    // canary cadence
+    if (now() - lastCanaryMs >= T.canary_s * 1000) {
+      lastCanaryMs = now();
+      out('canary', { ts: iso(now()), act: 'SELF_PROVE', kind: 'canary' });
+    }
+    // Driver heartbeat. The lease is born in a declared LAUNCH state
+    // (repair charter (a)): the heartbeat-lost clock demands a beat
+    // only once the driver has had its chance to exist. The clock's
+    // anchor is the EARLIER of (i) the first heartbeat seen under this
+    // lease and (ii) the expiry of the contract's launch window
+    // (contract.launch_window_s, counted from LEASE_ISSUE; absent the
+    // term, the window is timers.heartbeat_lost_s — a documented
+    // fallback, not a second constant). Before the anchor, the lease
+    // simply stands: no renewal (there is no heartbeat to renew from)
+    // and no park. A driver that never starts leaves the lease to die
+    // on its TTL — fail-closed, exactly as before.
+    try {
+      const hb = JSON.parse(fs.readFileSync(path.join(stateDir, 'heartbeat.json'), 'utf8'));
+      if (hb && hb.ts_ms) lastHbSeenMs = hb.ts_ms;
+    } catch { /* no heartbeat yet */ }
+    if (lease && !lease.revoked && !parked) {
+      const hbRef = 'heartbeat:' + path.join(stateDir, 'heartbeat.json');
+      if (lease.first_hb_ms == null && lastHbSeenMs != null && lastHbSeenMs >= lease.issued_ms) {
+        lease.first_hb_ms = lastHbSeenMs; // first heartbeat: LAUNCH -> LIVE
+        writeLease();
+      }
+      if (lease.first_hb_ms != null) {
+        if (now() - lastHbSeenMs <= T.heartbeat_lost_s * 1000) {
+          const newExp = now() + T.lease_ttl_s * 1000;
+          if (newExp - lease.expires_ms > 500) { lease.expires_ms = newExp; writeLease(); }
+        } else {
+          park('driver_heartbeat_lost', hbRef);
+        }
+      } else {
+        const windowMs = (typeof contract.launch_window_s === 'number' && contract.launch_window_s > 0)
+          ? contract.launch_window_s * 1000 : T.heartbeat_lost_s * 1000;
+        const windowExpired = now() - lease.issued_ms > windowMs;
+        const staleBeat = lastHbSeenMs != null && now() - lastHbSeenMs > T.heartbeat_lost_s * 1000;
+        if (windowExpired && staleBeat) park('driver_heartbeat_lost', hbRef);
+      }
+    }
+    // human stop
+    if (fs.existsSync(path.join(stateDir, 'STOP'))) park('human_stop', 'file:' + path.join(stateDir, 'STOP'));
+    // sensor
+    sensorPoll(false);
+    // External release observation (the release itself is never ours).
+    // Releases are a STREAM, not a flag (repair charter (b)): each
+    // release.json carries `seq`, the count of releases ever made in
+    // this state dir. The floor consumes a release only when it is
+    // newer than the standing park (ts_ms > park_ts_ms) AND its seq
+    // exceeds every seq already consumed — so a release observed while
+    // parked clears that park, and a later park needs a later release:
+    // an old release file can never clear a new park. (The previous
+    // code latched a single boolean after the first release and never
+    // observed another.) Legacy release files without `seq` read as
+    // seq 1. release.js still records park_seq, for audit.
+    if (parked) {
+      try {
+        const rel = JSON.parse(fs.readFileSync(releaseFile, 'utf8'));
+        const relSeq = rel ? (Number.isInteger(rel.seq) ? rel.seq : 1) : 0;
+        if (rel && lease && rel.ts_ms > lease.park_ts_ms && relSeq > consumedReleaseSeq) {
+          consumedReleaseSeq = relSeq;
+          act('RELEASE_OBSERVED', 'external_release', 'release:' + releaseFile, { released_by: rel.released_by, release_seq: relSeq });
+          parked = false;
+          lease.parked = false; lease.revoked = false; lease.park_seq = null; lease.park_ts_ms = null;
+          issueLease('external_release');
+        }
+      } catch { /* no release */ }
+    }
+    // daylight
+    daylightCheck().catch(() => {});
+    // weather hold (day-17; no-op unless the contract declares it)
+    weatherCheck().catch(() => {});
+  }, T.poll_s * 1000);
+}
+
+process.on('SIGTERM', () => { try { notify(REASONS.FLOOR_CLOSE, 'sigterm', 'process'); } catch { /* dying */ } setTimeout(() => process.exit(0), 200); });
+main();

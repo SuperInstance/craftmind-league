@@ -1,0 +1,59 @@
+{
+    "budget_gate_basis": {
+        "baseline_window_days": [
+            12,
+            15,
+            16
+        ],
+        "beta_inf_wc_per_min": 0.6991,
+        "ceiling_wc_per_min": 2.3163,
+        "credit": 0,
+        "day_budget_wc": 196.8855,
+        "floor_binding_term": "liveness",
+        "floor_wc_per_min": 1.0,
+        "gate_ruling_variant_N": "PASS (183.0 wc day-16 basis, under B; all-capable stress case 238.40 wc, under hard cap)",
+        "gate_ruling_variant_R": "OVER-TARGET (337.85 wc projected = 171.6% of B, under hard cap; addendum recommends full 85 min over-target, overage filed in advance)",
+        "hard_cap_wc": 393.771,
+        "note": "The floor does not read this block (constitution.js validates the standing fields only); it is the run lane's gate record, carried in the contract file so the day's budget basis travels with its pins.",
+        "scenario_authoring_A": "GAP (unmetered) \u2014 carried, never priced",
+        "source": "ledger/F1-F2-20261109.md + pulse/DAY18-BUDGET-ADDENDUM-20261109.md (verified against ledger/deliberation/out/budget.json at rig build)"
+    },
+    "citizen": "Cody",
+    "constitution": "floor.v0",
+    "day_window": [
+        "2026-11-13T09:00:00Z",
+        "2026-11-14T09:00:00Z"
+    ],
+    "daylight": "held",
+    "daylight_command": "/time set 1000",
+    "daylight_issuer": "Gallery",
+    "daylight_verify_window_s": 5,
+    "driver_id": "cody-driver",
+    "feed": {
+        "count": 8,
+        "item": "cooked_porkchop",
+        "op": {
+            "count": 32,
+            "item": "cooked_porkchop"
+        }
+    },
+    "launch_window_s": 300,
+    "max_deaths": 3,
+    "park_bay": null,
+    "sensor": {
+        "trace_path": "/home/caseydigennaro/craftmind-league/pulse/direct-drive-trace-day18-20261110.jsonl"
+    },
+    "timers": {
+        "canary_s": 60,
+        "daylight_check_s": 240,
+        "heartbeat_lost_s": 90,
+        "lease_ttl_s": 60,
+        "poll_s": 5
+    },
+    "weather": {
+        "check_s": 240,
+        "command": "/weather clear",
+        "issuer": "Gallery",
+        "verify_window_s": 5
+    }
+}

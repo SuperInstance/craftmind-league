@@ -1,0 +1,4 @@
+{"ts":"2026-11-10T03:10:25.987Z","id":"preflight-notify-day12","reason":"preflight-test","trigger":null}
+{"ts":"2026-11-10T03:10:35.990Z","id":"floor-park-1","reason":"SENSOR_PATH_BROKEN","trigger":null}
+{"ts":"2026-11-10T03:11:40.509Z","id":"floor-park-4","reason":"FEED_UNVERIFIED","trigger":null}
+{"ts":"2026-11-10T04:39:09.839Z","id":"floor-park-23","reason":"DRIVER_HEARTBEAT_LOST","trigger":null}

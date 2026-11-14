@@ -1,0 +1,7 @@
+PASS R1 day-11 sequence rehearsed: lease survives the Gate B pause; late driver reaches cycle 1+ — VERIFY_FEED row=true; after 18s pause: parked=false revoked=false state=launch PARK rows=0; sim exit=0 start_ok=true cycles ok=6/6; final lease state=live; pause-to-first-beat=18.17s
+PASS R2 driver never launched -> no zombie lease (launch park after the window; never renewed, never honoured) — stood in window (state=launch, unparked)=true; PARK trigger=driver_heartbeat_lost at +5.21s from issue (window 5s + lost 3s bound); gate probe ok=false reason=lease-revoked; final lease state=parked
+PASS R3 driver killed -> park within the heartbeat-lost bound — park latency=2.98s (bound 3s + poll slack); trigger=driver_heartbeat_lost
+PASS R4 release stream: park 2 requires release 2 (no single-shot latch) — release seqs=1,2; under park 2 with only seq-1 release standing: gate=lease-revoked (park revokes as it latches, so revoked precedes parked at the gate), driver attempts rejected=2/2; RELEASE_OBSERVED rows=2 seqs=1,2
+PASS R5 gate refusal reasons distinguish absent / expired / revoked — absent=lease-absent; expired=lease-expired; revoked=lease-revoked; distinct=true
+
+REPAIR FIXTURE: 5/5 PASS

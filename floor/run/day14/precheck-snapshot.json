@@ -1,0 +1,16 @@
+{
+ "inventory": {},
+ "source": {
+  "dat": "~/minecraft-server/world/players/data/5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67.dat",
+  "dat_bytes": 1655,
+  "dat_sha256": "c39540fe6e61e3f39ad0a4be3ca7a02d1a09e72040f2e21f2102aec12a005605",
+  "food": 20,
+  "health": 20.0,
+  "pos": [
+   36.5,
+   73.0,
+   -86.5
+  ]
+ },
+ "ts": "2026-11-10T06:40:30Z"
+}

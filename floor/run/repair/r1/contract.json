@@ -1,0 +1,33 @@
+{
+  "constitution": "floor.v0",
+  "citizen": "Cody",
+  "driver_id": "cody-driver",
+  "max_deaths": 3,
+  "daylight": "free",
+  "daylight_command": "/time set 1000",
+  "daylight_issuer": "FloorOp",
+  "sensor": {
+    "trace_path": "/home/caseydigennaro/craftmind-league/floor/run/repair/r1/trace.jsonl"
+  },
+  "day_window": [
+    "2026-11-09T00:00:00Z",
+    "2026-11-12T00:00:00Z"
+  ],
+  "feed": {
+    "item": "cooked_porkchop",
+    "count": 8,
+    "op": {
+      "item": "cooked_porkchop",
+      "count": 32
+    }
+  },
+  "park_bay": null,
+  "launch_window_s": 8,
+  "timers": {
+    "lease_ttl_s": 30,
+    "heartbeat_lost_s": 3,
+    "canary_s": 1,
+    "poll_s": 0.25,
+    "daylight_check_s": 2
+  }
+}

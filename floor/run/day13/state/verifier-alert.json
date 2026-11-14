@@ -1,0 +1,17 @@
+{
+  "ts": "2026-11-10T06:16:11.748Z",
+  "ok": false,
+  "problems": [
+    "cross-audit park-notify=0 PARK=1",
+    "cross-audit chat=0 ASSERT_DAYLIGHT=13"
+  ],
+  "canary_age_s": 23.16,
+  "rows": {
+    "log": 28,
+    "canary": 56,
+    "counts": 9,
+    "alert": 2
+  },
+  "last_seq": 95,
+  "seq_ok": true
+}

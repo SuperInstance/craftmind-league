@@ -1,0 +1,10 @@
+{
+  "server_log_path": "/home/caseydigennaro/craftmind-league/floor/run/t7b/server.log",
+  "snapshot_path": "/home/caseydigennaro/craftmind-league/floor/run/t7b/snapshot.json",
+  "op_req_path": "/home/caseydigennaro/craftmind-league/floor/run/t7b/op-req-live.jsonl",
+  "op_res_path": "/home/caseydigennaro/craftmind-league/floor/run/t7b/op-res-live.jsonl",
+  "stub": {
+    "landDaylight": true,
+    "feedWorks": false
+  }
+}

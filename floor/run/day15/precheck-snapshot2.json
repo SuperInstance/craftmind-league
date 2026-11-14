@@ -1,0 +1,18 @@
+{
+ "inventory": {
+  "cooked_porkchop": 32
+ },
+ "source": {
+  "dat": "~/minecraft-server/world/players/data/5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67.dat",
+  "dat_bytes": 1664,
+  "dat_sha256": "39392d9d354afa1d772ac82725f512cd9671b8551ba66ed90b96ce6bcfee4b8a",
+  "food": 20,
+  "health": 20.0,
+  "pos": [
+   33.5,
+   67.0,
+   -96.5
+  ]
+ },
+ "ts": "2026-11-10T07:39:23Z"
+}

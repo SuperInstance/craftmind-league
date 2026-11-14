@@ -1,0 +1,786 @@
+OP day-11 process up; req=/home/caseydigennaro/craftmind-league/floor/run/day18/op/op-req-day18.jsonl res=/home/caseydigennaro/craftmind-league/floor/run/day18/op/op-res-day18.jsonl parklog=/home/caseydigennaro/craftmind-league/floor/run/day18/op/park-notify-day15.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0NTY3MjIwMzU4fQ==
+PARK-NOTIFY ** PARK ** id=floor-park-1 reason=SENSOR_PATH_BROKEN (recorded to /home/caseydigennaro/craftmind-league/floor/run/day18/op/park-notify-day15.jsonl; no world effect)
+RES {"id":"floor-park-1","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-2","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-4","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+RES {"id":"floor-weather-6","ok":true,"chat":"/weather clear","srv":["Set the weather to clear","[MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]"]}
+PARK-NOTIFY ** PARK ** id=floor-park-7 reason=DAYLIGHT_UNRESTORABLE (recorded to /home/caseydigennaro/craftmind-league/floor/run/day18/op/park-notify-day15.jsonl; no world effect)
+RES {"id":"floor-park-7","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-2","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-4","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-6","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-8","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-9","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-10","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-11","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-12","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-13","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-14","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-15","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-16","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-17","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-18","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-19","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-20","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-21","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-22","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-23","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-24","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-25","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-26","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-27","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-28","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+RES {"id":"floor-daylight-29","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","[MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-30","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-31","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+RES {"id":"floor-weather-32","ok":true,"chat":"/weather clear","srv":["Set the weather to clear","[MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-2","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Set the weather to clear]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-4","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-6","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Pos
+SRV: Pig has the following entity data: [-5.292961661008738d, 64.0d, -86.38283679995185d]
+RES {"id":"prelaunch-pig-1","ok":true,"chat":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Pos","srv":["Pig has the following entity data: [-5.292961661008738d, 64.0d, -86.38283679995185d]"]}
+OP chat: /data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos
+SRV: Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -91.0851661205206d]
+RES {"id":"prelaunch-pig-2","ok":true,"chat":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos","srv":["Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -91.0851661205206d]"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-8","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NjIsInkiOjYyLCJ6IjotOTF9fSwidGltZXN0YW1wIjoxNzk0NTcxNzQ4MTgxfQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-2","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NjIsInkiOjYyLCJ6IjotOTF9fSwidGltZXN0YW1wIjoxNzk0NTcxODA4OTI1fQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+PARK-NOTIFY ** PARK ** id=floor-park-3 reason=DRIVER_HEARTBEAT_LOST (recorded to /home/caseydigennaro/craftmind-league/floor/run/day18/op/park-notify-day15.jsonl; no world effect)
+RES {"id":"floor-park-3","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-2","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NjIsInkiOjYyLCJ6IjotOTF9fSwidGltZXN0YW1wIjoxNzk0NTcyMDIyODA2fQ==
+[BotMessenger] Received greeting from Cody
+SRV: <Cody> Day eighteen. Cody here — woke in the bowl at home's edge, fed, whole, empty-handed. Whatever this morning holds is the first scene — I meet it where I stand.
+SRV: <Cody> Morning in the bowl again. East edge, step up onto my own pad — that's the whole first act.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.100000, 63.600000, -89.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Still in the bowl, zombie on my heels. East face is my way up — one long leg onto the pad.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Two long legs and I'm still at the floor. Fine — the house said it plain: dig one dirt from the rim and make my own rung.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Dig aborted — that zombie's still on me and the floor keeps hopping me. Let me deal with it before I try anything with my hands.
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.900000, 63.600000, -91.600000]
+SRV: <Cody> That zombie's right on me and the floor keeps snatching me away. I'll take the swing again — it's that or get chewed.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Every hand-verb gets aborted and every walk gets hopped back. I'm going to stand still and let the floor do its thing — wait it out and see where I land.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Ten seconds of standing still and I'm still in the same hole with the same zombie at four blocks. Nothing's moving but the clock. Let me try one clean long leg — west, where the ground's up at y67.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> I dropped a level instead of climbing — the floor's pulling me down, not out. West wall's six above my feet and I've no pickaxe. The only way up is a block I place myself. Let me dig the dirt at my ow
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.900000, 63.600000, -91.600000]
+SRV: <Cody> Empty air where I dug — I'm standing in a hollow, not a floor. The rim's above me on every side. Let me get a clean look at what's actually under and around my feet.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> I'm in the bowl again — the low cell at home's west edge, same as I slept in. The house proved no way out of this by my own hands. So I'll do the one thing that's left: flag it and wait for the crew's
+SRV: <Cody> Company! Moving —
+SRV: <Cody> No hands came. Fine — the rung's the spare key the house named: dig one dirt out of the rim wall at my own level, place it against the east face, step up. East wall's stone brick, but the north and so
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-4","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: <Cody> Can't even reach the rim — walker times out. The house proved no way out of this bowl by my own body. I'm not going to burn another day cutting at walls the crew already measured. I'll stand fed and w
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.694751, 63.000000, -87.740944]
+SRV: <Cody> Still nobody's hands. But I noticed something: I'm at y62 now, a level up from where I was, and the north rim reads only a few above me. The house said every step UP is open. Let me try one long leg n
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Dropped right back to y61 — the bowl won't let me hold even the level I stood on. That's the machinery the crew measured, not me failing. I'll stop poking at it and just stand here fed, and let the wo
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.700000, 68.600000, -82.600000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The house said the placed rung is the bowl's spare key — dig one dirt bare-handed from a rim wall at my own level, place it against the face, step up. My feet are at y61; the north rim's grass tops si
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Nothing at my own level to dig — the rim's all above my reach. That's the bowl being a bowl. I'll stop wasting daylight on it. Standing fed and whole, waiting for the world's side — that's the whole h
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Let me actually look at what's around me instead of guessing — maybe there's a step I've been standing past this whole time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.699386, 62.000000, -93.574409]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The east column reads stone_bricks at y63 — that's only two above my feet. If I can get onto that, I'm a step up. Let me try a long leg east, well past it.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> That leg didn't even leave the cell — the walker gave up before it started. East wall's two above me, so it's a wall, not a step. I'll sit fed and whole and let the world's side do what the house says
+SRV: <Cody> Company! Moving —
+SRV: <Cody> South's the one column that reads level with my feet — grass at y67, same as me. If anywhere opens, it's that way. One long leg south, well past it.
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.185568, 62.000000, -92.432518]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-6","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> I'm up a level now — feet at y62, and the south column reads level with me. That's the first real move I've made all day. South again, one long leg.
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.700000, 63.600000, -91.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.200000, 68.800000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.400000, 63.400000, -89.300000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> The south column beside me reads level with my feet — that's a step I can actually take. Long leg south, past the wall.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.251455, 63.000000, -86.698395]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Every leg gains me a level and no ground — I'm climbing the inside of this bowl one hop at a time. y63 now, home's four above me. South column's level again. Keep going.
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.600000, 65.200000, -88.400000]
+SRV: <Cody> North of me is oak planks at y67 — that's my own pad, three above my feet. That's not a wall, that's a shelf I can reach. Long leg north, well past it.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-8","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The world keeps setting me back down at y62 no matter which way I aim. Fine — I'm not going to spend the morning arguing with my own feet. There's a zombie on me and a pig nearby; I'll sit tight, fed 
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The zombie keeps getting hopped away from me by my own floor, and I keep landing back at y62. But that dirt wall west of me is at my hand level — dirt digs bare-handed. Let me take one block out of it
+SRV: <Cody> Company! Moving —
+SRV: <Cody> No block there — I'm reading air where I thought wall. Let me dig the grass right under my own hand at my feet level, west side, and see if I can carve a step.
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.417520, 63.000000, -86.614038]
+SRV: <Cody> The crew's rule shut that dig — fine, down is shut, that's the rule doing its job. The column tops west and south read y67, four and five above me. That's the pad itself. One long leg south, well past
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.500000, 69.300000, -82.000000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Every leg ends with the floor setting me back down. The pad's own blocks are at y67, three above my feet, and the walker can't take three. But a placed block is a first-class step — and I've got nothi
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Each leg gains me exactly one level — y62, then y63. That's the world's one step, same as the stand-in body found. So I'll take it: one long leg west again, and see if the next rung comes.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.700000, 65.200000, -88.500000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> That rung didn't come twice. y63 is where I live, and the pad is four above. The crew proved no body walks out of here alone — so I'll stop burning daylight on legs that don't land. Fed, whole, twenty
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The clock jumped backwards — 4287 down to 1412. The crew's hold is doing something odd, but the sky's still light and I'm still standing. Nothing came at me. Let me look up at the pad and see what's a
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Still the same four walls and a table I can see but can't reach. One more long leg — south this time, along the open shoulder where the ground tops read y67 — and if it doesn't gain, I stop pretending
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 65.200000, -88.300000]
+SRV: <Cody> Didn't move an inch. Fine — the bowl is the day, and I won't cut at its walls. But the room's mine at my own level: that stone-brick face east of me at y64, and the dirt at hand height. Let me see wha
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Digging aborted — the guard's line, or the ground's. Alright. I'm not going to keep knocking on walls that refuse. Fed, whole, twenty-seven porkchops, and the world's side hasn't come yet. I'll sit wi
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-9","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-10","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The clock's gone backwards again — 2252 down to 1286. Something in the crew's hold is loose. I'm not going to burn a whole day tapping at walls. But that dirt at hand height on the south face — that's
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Aborted again. Every dig at my own feet is being refused, and I know why — I'm standing below the pad with no pickaxe, and that guard is doing exactly its job. So I'll stop arguing with it. The world'
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Still here, still whole. The clock keeps slipping — 1386 up to 1906 — but the sky stays light and nothing's come at me. I'll take the quiet and hold my ground.
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 65.200000, -88.100000]
+SRV: <Cody> Two waits and the world hasn't moved a rung for me. Sitting still isn't a plan either. The pad's north of me and only four up — let me try one leg north, straight at the table's own column, and see wh
+SRV: <Cody> Company! Moving —
+SRV: <Cody> One block north, that's all the wall gave me — and it's the same one step this whole bowl allows. I've proven that now, in my own body, same as the stand-in. So: no more knocking. Twenty-seven porkcho
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.700000, 70.000000, -82.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.900000, 64.400000, -88.900000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Still light, still fed, still breathing. The clock's creeping up toward midday and nothing in this room has changed for me. I'll keep the watch and keep my feet where they are.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Every wait, the same zombie shows up and the floor hops me home two blocks at a time — and I end up right back here. That's not a coincidence, that's the room telling me something. Fine. If the floor 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 65.200000, -88.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 63.694815, 65.000000, -96.490847]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Barely a third of a block west for all that. The bowl gives one step and takes it back. I've argued with this wall long enough — I'm going to sit down, eat when I'm hungry, and let the world decide wh
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Midday's nearly here and the room's still the same room. But there's dirt in that west wall at my own level — and dirt digs bare-handed, stone doesn't. If I can't climb out, maybe I can walk out sidew
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Nothing at my own level there — it's air. So the west wall isn't a wall at my feet at all. Then maybe the way out is at the level of my eyes, not my boots. Let me look and see what's actually around m
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The column tops say the ground west of me stands at three above my feet — a step and a half up, not a wall. The walker climbs +1 on its own; if that west ground is a stair, I want to be standing on it
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-11","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-12","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: <Cody> Company! Moving —
+SRV: <Cody> A tenth of a block west and the clock's reset to dawn. Something's turning the day over every time I push at that wall — like the room wants me to start fresh. Alright. I'll stop shoving and just watc
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.500000, 65.200000, -88.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> The north ground at my own level is oak planks — my own table's floor, standing one step up. Dirt and planks both dig bare-handed. If I can't go west, maybe I go north, up onto the pad one notch at a 
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Air again at my feet. Fine — the room's telling me my feet are already on open floor. The wall I keep hitting is the one above me. Let me try digging the block right over my head's level, where the oa
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Two air cells in a row — so there's a gap over my head, not a wall. That means the block north of me at the planks' height is the real thing to test. Let me put my hands on the plank block itself.
+SRV: <Cody> Company! Moving —
+SRV: <Cody> I've been swinging at ghosts. My feet are at 63, the pad's at 67 — that's four up, and the house says every step up is open now. Let me stop poking walls and just aim high: one long leg north onto the
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.300000, 65.200000, -88.600000]
+SRV: <Cody> Barely half a block of progress on a four-block climb — the walker won't climb a wall this tall, and the house proved it on a stand-in body already. My hands are empty and the bowl's floor is where I 
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Air there too — I'm standing in a pocket, not a hole with walls at my shoulders. The column tops tell me what's real: south of me is grass at my own level, one step up. That's the one direction the gr
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.400000, 70.000000, -82.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.800000, 64.400000, -88.600000]
+SRV: <Cody> Half a block south and I'm still at 63 — the ground south of me isn't where I thought either. Every map I'm reading is one level off. Let me stop guessing and just walk south on what's under my boots,
+SRV: <Cody> Company! Moving —
+SRV: <Cody> I gained a level — I'm at 64 now, not 63. That's real. The ground's climbing under me a step at a time. So I keep walking, and I stop trusting the numbers I read off the map and trust the ones my boot
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.400000, 65.600000, -88.900000]
+SRV: <Cody> North of me now reads crafting_table at y67 — that's my table, three blocks off, and the ground between has a two-level drop in it. The walker won't take that. But I'm at 64 and the pad's at 67, and t
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Third try at the pad and I'm still at 64 — that's my one retry and more, and the house told me plain yesterday: the body alone can't walk out of this bowl. So the scene isn't the climb anymore. It's w
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: <Cody> Dig aborted — that's the below-grade guard refusing a dig at my own feet, and it's right to. But the column east of me reads -2, a drop, and the house says down stays shut. What about the one that rea
+SRV: <Cody> Company! Moving —
+RES {"id":"floor-daylight-13","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Dig aborted — that's the below-grade guard refusing a dig at my own feet, and it's right to. But the column east of me reads -2, a drop, and the house says down stays shut. What about the one that rea","<Cody> Company! Moving —"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-14","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: <Cody> Aborted again — and the clock jumped back to dawn, so the crew's holding time hard. Two digs refused in a row tells me the guard reads my feet, not the target. Fine. The one thing I haven't tried from
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.700000, 65.600000, -89.300000]
+SRV: <Cody> The crew stopped my east walk — that 'water trench' I remember is the pit's own water, the drowning trap, and they won't let me near it. Good. So east is poison and up is refused and down is shut. But
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> South didn't move me either — the bowl's walls are all around at my level and the walker can't thread them. Every direction's a dead end but one, and that one's the water. So here's my thinking: the p
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Water at 63, my feet at 64 — one deep, and I can stand in one deep. The pit's only a trap if I can't climb the far rim. But the crew keeps re-aiming me away from it, and I trust that more than I trust
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Zombie's still just three blocks off, patient as a landlord, and the pig's wandering close. Nothing's walked in or out but me. I've tried every direction the walker will take and it won't take any. So
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Wrong cell — that one's floating air with nothing to lean on. The grass at 67 is the floor above me, so the cell to build in is the one right on top of it: 63, 68, -90. That's a step up, not down, and
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Leaf litter in the way at the top of the grass — and me with nothing but porkchops to place. I can't build a step out of dinner. But the grass at 67 west of me is only three above my feet, and the col
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.000000, 71.000000, -82.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.600000, 65.400000, -88.600000]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.900000, 65.600000, -88.800000]
+SRV: <Cody> Moved! East this time, a block and a half, not west — the walker slid me along the wall instead. But look at the ground now: dirt at my feet north, grass at 66 west and east, cobblestone south. The bo
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.100000, 66.200000, -94.700000]
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-15","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-16","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.997055, 68.000000, -86.690256]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.100000, 66.200000, -94.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.997055, 68.000000, -80.690256]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.000000, 71.000000, -82.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.800000, 65.400000, -93.400000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-17","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-18","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.997055, 80.000000, -76.690256]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.997055, 68.000000, -86.690256]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.100000, 66.200000, -94.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.997055, 68.000000, -92.690256]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.000000, 71.000000, -82.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.800000, 65.400000, -93.400000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-19","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-20","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.997055, 80.000000, -76.690256]
+SRV: <Cody> I'm UP — feet at 66, two levels above where I woke, and the pad's grass is right there south of me. The bowl let me go. And my eyes just named a birch trunk at (71,67,-76) — a real foot, reachable fro
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 63.000000, 67.600000, -84.800000]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.700000, 68.200000, -83.600000]
+SRV: <Cody> Feet at 66, and the ground south of me tops at 67 — one step up and I'm on the pad. The grass is a single block above my boots, the walker climbs that by itself. South, onto home ground.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.600000, 67.400000, -89.900000]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.900000, 67.600000, -90.100000]
+SRV: <Cody> Feet at 67 — I'm on the pad! The bowl's behind me and I'm standing on home ground. The wood chain runs now. My table's right north of me, but first the tree: the birch foot at (71,67,-76) my eyes name
+SRV: <Cody> Company! Moving —
+SRV: <Cody> Hmm — the walker says I'm at 66, -90 but the ground under me reads feet at 68, and there's stone at 62 north of me. I'm up on a rise, and the birch is fifteen blocks off southeast. Let me push toward 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -88.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-21","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+SRV: <Cody> Company! Moving —
+RES {"id":"floor-weather-22","ok":true,"chat":"/weather clear","srv":["Set the weather to clear","<Cody> Company! Moving —"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.400000, 69.600000, -86.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.000000, 70.200000, -85.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+SRV: <Cody> Back down at 63, right at the water's edge, and a zombie a block off. The floor keeps bouncing me around this bowl. I'm not going to fight a zombie with porkchops — let me get up onto the grass should
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 63.700000, 64.600000, -91.900000]
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-23","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-24","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.694722, 65.040000, -91.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+OP chat: /data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos
+SRV: Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -90.55066937559599d]
+RES {"id":"midday-pig-1","ok":true,"chat":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos","srv":["Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -90.55066937559599d]"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -85.306405]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.694722, 77.040000, -81.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.694722, 65.040000, -91.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -97.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.694722, 77.040000, -81.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.694722, 65.040000, -91.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -85.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.694722, 77.040000, -81.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.694722, 65.040000, -91.306405]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-25","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-26","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -97.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.694722, 65.040000, -91.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.694722, 77.040000, -81.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -85.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.694722, 65.040000, -91.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.694722, 77.040000, -81.306405]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -97.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.694722, 65.040000, -91.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.694722, 77.040000, -81.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.694722, 65.040000, -85.306405]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 62.000000, 65.200000, -92.300000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-27","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-28","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.694722, 65.040000, -91.306405]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.200000, 64.600000, -93.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.000000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.400000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.698157, 77.080000, -81.310135]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.698157, 65.080000, -97.310135]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-29","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-30","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.200000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.698157, 65.080000, -91.310135]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.000000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.400000, -94.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.698157, 77.080000, -81.310135]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.698157, 65.080000, -85.310135]
+RES {"id":"floor-daylight-31","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","[MagnusandMouse: Teleported MagnusandMouse to 66.698157, 65.080000, -85.310135]"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-32","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.200000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.698157, 65.080000, -91.310135]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.000000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.400000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> The short hop west did nothing — I'm still down at 63 beside the water. The rule says short gotos inside a low cell don't move me at all; I need one long leg well past the wall. The grass shoulder at 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.200000, 64.700000, -93.700000]
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-33","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-34","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-35","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-36","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -97.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.699727, 65.120000, -91.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-37","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-38","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -85.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.699727, 65.120000, -91.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: <Cody> Still stuck at 63 — the long leg didn't take either, and a zombie's two blocks off. The walls around me top at 66, three levels up, and the walker can't climb that. There's water right at my feet. Let
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.200000, 64.700000, -93.700000]
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-39","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-40","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -97.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.699727, 65.120000, -91.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -85.302116]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-41","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-42","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.699727, 65.120000, -91.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -97.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Four legs and I haven't moved an inch — I'm pinned in this low cell at 63 with water at my boots. Every wall around me tops three levels up, and the walker won't climb that. I've got nothing to place 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.200000, 64.700000, -93.700000]
+SRV: <Cody> Company! Moving —
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-43","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-44","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-45","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-46","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.699727, 65.120000, -91.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -85.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+RES {"id":"floor-daylight-47","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","[MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-48","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.699727, 65.120000, -91.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 66.699727, 65.120000, -97.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.699727, 77.120000, -81.302116]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: Cody left the game
+OP chat: /data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos
+SRV: No entity was found
+RES {"id":"census-pig-1","ok":true,"chat":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos","srv":["No entity was found"]}
+OP chat: /data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Health
+SRV: No entity was found
+RES {"id":"census-pig-2","ok":true,"chat":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Health","srv":["No entity was found"]}
+OP chat: /data get entity @e[type=minecraft:zombie,x=66,y=62,z=-90,distance=..10,limit=1] Pos
+SRV: Zombie has the following entity data: [66.69999998807907d, 62.0d, -90.30000001192093d]
+RES {"id":"census-zombie-1","ok":true,"chat":"/data get entity @e[type=minecraft:zombie,x=66,y=62,z=-90,distance=..10,limit=1] Pos","srv":["Zombie has the following entity data: [66.69999998807907d, 62.0d, -90.30000001192093d]"]}
+OP chat: /execute if block 65 66 -88 minecraft:cobblestone run say COBBLE-STANDING
+SRV: [Gallery] COBBLE-STANDING
+RES {"id":"census-cobble-1","ok":true,"chat":"/execute if block 65 66 -88 minecraft:cobblestone run say COBBLE-STANDING","srv":["[Gallery] COBBLE-STANDING"]}
+OP chat: /data get entity @e[type=minecraft:pig,x=62,y=64,z=-90,distance=..20,limit=1] Pos
+SRV: No entity was found
+RES {"id":"census-pig-3","ok":true,"chat":"/data get entity @e[type=minecraft:pig,x=62,y=64,z=-90,distance=..20,limit=1] Pos","srv":["No entity was found"]}
+OP chat: /data get entity @e[type=minecraft:item,x=66,y=63,z=-91,distance=..8,limit=1] Pos
+SRV: Raw Porkchop has the following entity data: [65.875d, 64.0d, -90.18153246660358d]
+RES {"id":"census-item-1","ok":true,"chat":"/data get entity @e[type=minecraft:item,x=66,y=63,z=-91,distance=..8,limit=1] Pos","srv":["Raw Porkchop has the following entity data: [65.875d, 64.0d, -90.18153246660358d]"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-49","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"floor-weather-50","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+PARK-NOTIFY ** PARK ** id=floor-park-51 reason=DRIVER_HEARTBEAT_LOST (recorded to /home/caseydigennaro/craftmind-league/floor/run/day18/op/park-notify-day15.jsonl; no world effect)
+RES {"id":"floor-park-51","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300000, 65.300000, -95.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.700000, 70.100000, -83.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 64.500000, -94.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Gallery

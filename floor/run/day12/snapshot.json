@@ -1,0 +1,28 @@
+{
+ "inventory": {
+  "birch_log": 10,
+  "cobblestone": 15,
+  "cooked_porkchop": 29,
+  "egg": 3,
+  "leaf_litter": 9,
+  "oak_button": 18,
+  "oak_log": 11,
+  "oak_planks": 15,
+  "oak_sapling": 1,
+  "stick": 9,
+  "wooden_pickaxe": 6
+ },
+ "source": {
+  "dat": "~/minecraft-server/world/players/data/5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67.dat",
+  "dat_bytes": 1897,
+  "dat_sha256": "8735a654674473159a2c9d3efca3503a0cede3c7dc4e73fb1dcb73ffd68c62b2",
+  "food": 20,
+  "health": 20.0,
+  "pos": [
+   71.33175922666429,
+   65.0,
+   -82.69349016550845
+  ]
+ },
+ "ts": "2026-11-10T04:41:07Z"
+}

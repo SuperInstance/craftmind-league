@@ -1,0 +1,143 @@
+OP day-11 process up; req=floor/run/day14/op/op-req-day14.jsonl res=floor/run/day14/op/op-res-day14.jsonl parklog=floor/run/day14/op/park-notify-day14.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjkzNTI5NDAwfQ==
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 27.900000, 77.200000, -105.900000]
+RES {"id":"gateb-ping-1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 38.700000, 82.000000, -94.400000]
+PARK-NOTIFY ** PARK ** id=gateb-pn-1 reason=gate-b-test (recorded to floor/run/day14/op/park-notify-day14.jsonl; no world effect)
+RES {"id":"gateb-pn-1","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 28.700000, 76.400000, -104.900000]
+OP chat: /weather clear
+SRV: Set the weather to clear
+RES {"id":"gateb-weather-1","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6MzYsInkiOjczLCJ6IjotODd9fSwidGltZXN0YW1wIjoxNzk0MjkzNTg4NjMyfQ==
+[BotMessenger] Received greeting from Cody
+OP chat: /give Cody cooked_porkchop 32
+SRV: Gave 32 [Cooked Porkchop] to Cody
+SRV: Cody left the game
+RES {"id":"gateb-give-1","ok":true,"gave":"/give Cody cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody","Cody left the game"]}
+SRV: [MagnusandMouse: Set the weather to clear]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 38.700000, 82.000000, -94.400000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 28.700000, 76.400000, -104.900000]
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","[MagnusandMouse: Teleported MagnusandMouse to 28.700000, 76.400000, -104.900000]"]}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6MzYsInkiOjczLCJ6IjotODd9fSwidGltZXN0YW1wIjoxNzk0MjkzNzU1NDE2fQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6MzYsInkiOjczLCJ6IjotODd9fSwidGltZXN0YW1wIjoxNzk0MjkzODMzOTM2fQ==
+[BotMessenger] Received greeting from Cody
+SRV: <Cody> Day fourteen. Cody here — woke on the hill with empty hands; yesterday took the count and the pork with it. The crew put porkchops in my pack before I woke. Home first — my table, my pen, my wheat are still mine — then stone at home, and the furnace built 
+SRV: <Cody> where it stands.
+SRV: <Cody> Morning again, and this time my pack's full of pork. Home's east — but there's a real oak trunk by spawn my eyes named yesterday. Wood first, then stone, then the furnace.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 28.900000, 76.600000, -104.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 32.200000, 75.200000, -85.200000]
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 46.500000, 87.000000, -76.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 43.488775, 69.000000, -105.306077]
+SRV: <Cody> Woke up a different place and empty-handed — but my eyes are naming real trunks now. That oak at (34,70,-101) is six blocks off. Wood first, always wood first.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 39.457116, 68.457441, -99.302578]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 33.900000, 69.200000, -102.700000]
+SRV: <Cody> Felltree didn't reach — I'm still seven blocks off that oak. Let me walk to its foot first, then take it down.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 32.304982, 69.000000, -104.389015]
+SRV: <Cody> The walker keeps giving up short on this broken ground. Short hops, that's the rule — two or three blocks at a time toward that oak.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 36.700000, 67.600000, -105.800000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 46.400000, 73.700000, -97.000000]
+SRV: <Cody> That walker's moving me the wrong way — every hop drifts me east, away from the oak. The oak at (46,68,-101) is seven blocks off to the southeast and closer to where I keep ending up. Try that one.
+SRV: <Cody> Closer now — the oak at (46,68,-101) is five blocks off. Let me just take it from here; the felltree reaches the trunk.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 39.600000, 68.400000, -103.900000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 38.300000, 69.200000, -104.100000]
+SRV: <Cody> It worked — but the pack still reads empty. That log must've dropped where I couldn't grab it. Let me collect before it's gone.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 40.600000, 68.600000, -101.700000]
+SRV: <Cody> Felled and gathered, but the pack still reads empty — that log went somewhere I can't see. The oak south at (46,68,-91) is thirteen off; let me get right up under a trunk and take one down close, then
+SRV: <Cody> Both trunks are within my reach from right here — the birch at (45,69,-111) and the oak at (50,68,-110). Take the oak first, then I'll see if the logs actually land this time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 48.300000, 71.200000, -113.200000]
+SRV: <Cody> Five oak logs in hand — that's the keystone I've been chasing for days. Now the chain: planks first, right here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 47.372996, 69.000000, -106.860537]
+SRV: <Cody> Twelve planks. Now sticks, then a crafting table of my own so I'm not depending on the one back at the anchor.
+SRV: <Cody> Well — the walker carried me right into the dip while I was crafting. But look: my own table from yesterday is two blocks south, and I'm standing, fed, whole. While I'm here I'll use it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> A pickaxe in hand at last — and I'm sitting in the dip where I died four times. I won't dig here. But there's stone under my feet and a way out over the lip; let me get up onto the shoulder first befo
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 77.300000, 66.200000, -104.000000]
+SRV: <Cody> Still down in the pocket — the walker won't climb out in short legs. One long leg, east and up past the lip, to open ground at (82,68,-97).
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> I'm climbing, one block up each try — 65 now. The pocket walls want a pillar, not a walk. I've got planks; let me just stack myself up out of here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 77.300000, 65.600000, -95.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Climb needs me on the column first. Fine — the pocket's east rim has a grass top at y65 right by me. Step east onto it, then walk the long leg out over the lip.
+SRV: <Cody> Two blocks east and it won't step — that's the pocket's wall, not a walk. The pocket's mouth is up and over the lip to the south. Long leg that way, well past it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.600000, 71.600000, -90.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 77.800000, 66.400000, -95.100000]
+SRV: <Cody> Enough walking into walls. The pocket floor's broken — I'll just dig my own way out. Cut the step ahead of me and lay a block behind to climb on.
+SRV: <Cody> Dug a step down — wrong direction. I'll place the dirt back and instead dig the block at my feet's level to the east so I can step up onto the y65 grass rim.
+SRV: <Cody> Cut a notch in the rim — now step east into it at y65 and I'm on the lip.
+SRV: <Cody> The walker just won't step east — the block at my east is still y65, a full block above my feet and it can't hop it. Pile a dirt block under myself right here and get up to its level.
+SRV: <Cody> Column tops read -1 at my east now — that notch worked. One more step east and I'm up on the rim.
+SRV: <Cody> The walker keeps claiming success and staying put — it's not crossing that lip. Fine. If I can't walk up, I'll dig the rim down to my level so there's nothing to climb.
+SRV: <Cody> The rim's still a block up at my east — dig that y65 grass down too so the step's level with my feet.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.100000, 65.600000, -101.400000]
+SRV: <Cody> The walker won't leave this spot east — the pocket's got me again, same as it held me yesterday. But the tree's the whole point and it's SE, over open rim. One long leg well past this lip, toward the 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Well — that long leg lifted me a rung at least, I'm standing up on the pocket's edge now at y65. And there's a spider in the neighbourhood. One more long leg, east and up, toward the oak.
+SRV: <Cody> Two long legs and the pocket's still got my boots — and now a zombie's out there at 22. The pocket's not a route, it's a trap that already killed me four times. I'm refusing it. Climb straight up out 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.300000, 66.600000, -95.800000]
+SRV: <Cody> Pillar won't place either — this pocket's got me proper, same as yesterday. But my crafting table's right here, and I've got a log and sticks. I'll make planks and a proper pickaxe right where I stand
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 87.100000, 78.000000, -88.300000]
+SRV: <Cody> Dead again in the pocket. But look at this — I wake up in the trees, and there's a real oak trunk two blocks north of me at (29,70,-107). First log of my life. Let's take it down by the foot.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 29.685906, 77.000000, -109.337713]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 35.431449, 77.000000, -104.693058]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.000000, 67.000000, -92.200000]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-4","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> I'm up in the leaves, not on the ground — the felltree read no trunk because I'm standing in the canopy. That oak's foot is at (29,70,-107), four north of me. Let me get myself down to the ground firs
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 25.000000, 77.200000, -105.100000]
+SRV: <Cody> Company! Moving —
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 26.700000, 76.600000, -103.100000]
+SRV: <Cody> Now I'm down on the ground and that oak's foot is within reach — (29,70,-107), right there. Skeleton and zombie about, so I'll be quick. Taking it by the trunk, bottom up.
+SRV: <Cody> Company! Moving —
+SRV: Cody was slain by Zombie
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 41.500000, 82.000000, -93.500000]
+PARK-NOTIFY ** PARK ** id=floor-park-5 reason=MAX_DEATHS (recorded to floor/run/day14/op/park-notify-day14.jsonl; no world effect)
+RES {"id":"floor-park-5","ok":true,"recorded":true}
+SRV: <Cody> Crew is calling time on this take. Saving where I stand — Cody.
+SRV: Cody left the game
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Set the weather to clear]
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Gallery

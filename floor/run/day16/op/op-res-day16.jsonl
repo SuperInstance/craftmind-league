@@ -1,0 +1,26 @@
+{"ts":"2026-11-10T09:40:11.082Z","id":"ping-day16-1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+{"ts":"2026-11-10T09:40:14.283Z","id":"test-day16","ok":true,"recorded":true}
+{"ts":"2026-11-10T09:40:27.184Z","id":"weather-day16","ok":true,"chat":"/weather clear","srv":["Set the weather to clear"]}
+{"ts":"2026-11-10T09:41:13.993Z","id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T09:45:14.050Z","id":"floor-daylight-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T09:49:14.092Z","id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> The neighbour map says one column beside me tops out at just one above my feet — that's the step. Let me look at what's actually at my east shoulder before I reach for it."]}
+{"ts":"2026-11-10T09:53:14.143Z","id":"floor-daylight-4","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> There it is — dirt in hand, and the guard let it go because its top was high enough. Now I've got the bowl's spare key: place this dirt as a rung against the east face and step up. The east column at "]}
+{"ts":"2026-11-10T09:57:14.180Z","id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:01:14.225Z","id":"floor-daylight-6","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> The walker crept me north to (62.6, 62, -89.3) — I'm now one level up from where I woke, and the north neighbour tops at just +5... but look: the east neighbour now reads +1 above me. I'm climbing. Le"]}
+{"ts":"2026-11-10T10:05:14.273Z","id":"floor-daylight-7","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Here's a thought I keep skipping: the east column top is 66 — one below pad. The buried step is at 66. If I dig the block directly above my feet — that's at my own foot level plus one, top 62, still w"]}
+{"ts":"2026-11-10T10:09:13.919Z","id":"floor-daylight-8","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:13:13.964Z","id":"floor-daylight-9","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:17:14.004Z","id":"floor-daylight-10","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:21:14.039Z","id":"floor-daylight-11","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:25:14.076Z","id":"floor-daylight-12","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> No block at 65 — air there. The east column's grass top reads 66, so the solid block is at (62,66,-90). Dig that one.","<Cody> Company! Moving —"]}
+{"ts":"2026-11-10T10:29:14.130Z","id":"floor-daylight-13","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:33:14.168Z","id":"floor-daylight-14","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Company! Moving —"]}
+{"ts":"2026-11-10T10:37:14.206Z","id":"floor-daylight-15","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:41:14.248Z","id":"floor-daylight-16","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:45:14.299Z","id":"floor-daylight-17","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:49:14.336Z","id":"floor-daylight-18","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)","<Cody> Company! Moving —"]}
+{"ts":"2026-11-10T10:53:14.381Z","id":"floor-daylight-19","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T10:57:14.028Z","id":"floor-daylight-20","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T11:01:14.074Z","id":"floor-daylight-21","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T11:05:14.124Z","id":"floor-daylight-22","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-10T11:07:30.448Z","id":"quit-day16","ok":true,"bye":true}

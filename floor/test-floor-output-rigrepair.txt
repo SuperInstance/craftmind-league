@@ -1,0 +1,16 @@
+PASS T0 static constitution checks — bad-require=none sdk=false floor-writes-release=false
+PASS T1 deaths derivation (real stores) — total=123 (want 123); day9 window=3 n=121,122,123 (want 3, 121,122,123); day10 window=0 (want 0); traces merged=11
+PASS T2 driver killed -> revoke + PARK — park-detection latency=2.99s; PARK row=true; LEASE_REVOKE row=true; post-park gate probe ok=false reason=lease-revoked
+PASS T3 spam during PARK rejected; release is external only — attempts during park=2 all rejected=true; RELEASE_OBSERVED=true; released_by=test-operator
+PASS T4 floor killed -> lease expires, verifier flags stale canary — fail-closed observed; verifier exit=2 problems=["canary-stale age_s=4.3 bound_s=2"]
+PASS T5 writer killed -> detected, fail closed — floor self-detection: exit code=3 (3 = writer-path failure, lease revoked directly); verifier detection latency=2.04s at canary bound 2s
+PASS T6 daylight asserted + verified via own issuer — fixture log contains no cameraman lines at all — the hold is the floor’s own channel
+PASS T6b daylight unrestorable -> 3 retries -> PARK — assert attempts=3; park trigger=daylight_unrestorable
+PASS T7 feed verified from snapshot; remedy landed — snapshot porkchops=32; give re-issues=1
+PASS T7b feed never lands -> 2 re-issues -> PARK, no lease — give re-issues=2; lease issued=false
+PASS T8 replay validator refuses unlisted act — verifier exit=2 problems=["unlisted-act TELEPORT_CITIZEN seq=2"]
+PASS T9 three deaths counted via writer path -> PARK — counts rows=3; COUNT_DEATH acts=3; park trigger=deaths_today>=max_deaths
+PASS T10 sensor path broken -> NOTIFY + PARK — a counter that cannot read parks; it never counts silence as safety
+PASS T11 FileOpChannel round-trip vs fixture op bot — op results=1; channel = the fleet req/res JSONL shape
+
+14/14 PASS

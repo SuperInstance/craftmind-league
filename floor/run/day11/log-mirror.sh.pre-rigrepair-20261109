@@ -1,0 +1,51 @@
+#!/bin/bash
+# log-mirror.sh — Thor-local mirror of the Orin server-log tail
+# (charter §5 / readiness §12 item 5). The floor's daylight
+# verification reads rig.server_log_path; live, that path is THIS
+# mirror: a read-only tail of the Orin's latest.log, refreshed over
+# ssh. Read-only toward the Orin: one `tail -c` per refresh, nothing
+# written there, no game login, no server command.
+#
+# Each refresh REPLACES the mirror with the log's last MIRROR_BYTES
+# (default 512 KiB — far more than a daylight cycle appends) and
+# stamps mirror-stamp.json {ts, bytes, source_size}. The floor only
+# ever reads bytes appended after its own recorded offset; because a
+# refresh is a full tail-snapshot, an offset taken before a refresh
+# stays valid as long as the window between refreshes appends less
+# than MIRROR_BYTES (at the observed append rate, minutes of log).
+#
+# usage: log-mirror.sh once          one refresh, prints stamp json
+#        log-mirror.sh loop [secs]   refresh every secs (default 1)
+set -u
+DIR="$(cd "$(dirname "$0")" && pwd)"
+MIRROR="$DIR/server-log-mirror.log"
+STAMP="$DIR/mirror-stamp.json"
+HOST="${ORIN_SSH:-casey@192.168.0.50}"
+REMOTE="${ORIN_LOG:-~/minecraft-server/logs/latest.log}"
+BYTES="${MIRROR_BYTES:-524288}"
+
+refresh() {
+  local tmp="$MIRROR.tmp.$$"
+  if ssh -o ConnectTimeout=5 -o BatchMode=yes "$HOST" \
+       "tail -c $BYTES $REMOTE 2>/dev/null; echo; stat -c %s $REMOTE 2>/dev/null" \
+       > "$tmp.raw" 2>/dev/null; then
+    local srcsize
+    srcsize=$(tail -n 1 "$tmp.raw")
+    head -n -1 "$tmp.raw" > "$tmp"
+    rm -f "$tmp.raw"
+    mv "$tmp" "$MIRROR"
+    printf '{"ts": "%s", "bytes": %s, "source_size": %s, "source": "%s:%s"}\n' \
+      "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(stat -c %s "$MIRROR")" "${srcsize:-0}" "$HOST" "$REMOTE" > "$STAMP"
+    cat "$STAMP"
+  else
+    rm -f "$tmp" "$tmp.raw"
+    echo '{"ok": false, "stage": "ssh"}' >&2
+    return 1
+  fi
+}
+
+case "${1:-once}" in
+  once) refresh ;;
+  loop) while true; do refresh >/dev/null 2>&1 || true; sleep "${2:-1}"; done ;;
+  *) echo "usage: log-mirror.sh once|loop [secs]" >&2; exit 2 ;;
+esac

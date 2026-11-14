@@ -1,0 +1,10 @@
+{"cmd":"ping","id":"gateb-relaunch-ping-1"}
+{"cmd":"park-notify","id":"gateb-relaunch-park-test-1","reason":"GATE_B_RELAUNCH_TEST"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-2","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-3","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-4","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-5","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-daylight-6","text":"/time set 1000"}
+{"cmd":"park-notify","id":"floor-park-7","reason":"DAYLIGHT_UNRESTORABLE"}
+{"cmd":"quit","id":"relaunch-close-quit"}

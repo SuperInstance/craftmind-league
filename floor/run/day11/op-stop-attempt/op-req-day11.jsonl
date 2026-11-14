@@ -1,0 +1,6 @@
+{"cmd":"ping","id":"gateb-ping-1"}
+{"cmd":"park-notify","id":"floor-park-1","reason":"SENSOR_PATH_BROKEN"}
+{"cmd":"park-notify","id":"gateb-park-test-1","reason":"GATE_B_TEST"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"park-notify","id":"floor-park-2","reason":"DRIVER_HEARTBEAT_LOST"}
+{"cmd":"park-notify","id":"floor-park-3","reason":"DRIVER_HEARTBEAT_LOST"}

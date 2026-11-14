@@ -1,0 +1,111 @@
+{"cmd":"park-notify","id":"floor-park-1","reason":"SENSOR_PATH_BROKEN"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-2","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-3","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-4","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-5","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-6","text":"/weather clear"}
+{"cmd":"park-notify","id":"floor-park-7","reason":"DAYLIGHT_UNRESTORABLE"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-2","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-3","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-4","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-5","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-6","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-7","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-8","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-9","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-10","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-11","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-12","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-13","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-14","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-15","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-16","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-17","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-18","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-19","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-20","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-21","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-22","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-23","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-24","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-25","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-26","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-27","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-28","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-29","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-30","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-31","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-32","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-2","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-3","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-4","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-5","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-6","text":"/weather clear"}
+{"cmd":"chat","id":"prelaunch-pig-1","text":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Pos"}
+{"cmd":"chat","id":"prelaunch-pig-2","text":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos"}
+{"cmd":"chat","id":"floor-daylight-7","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-8","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-2","text":"/weather clear"}
+{"cmd":"park-notify","id":"floor-park-3","reason":"DRIVER_HEARTBEAT_LOST"}
+{"cmd":"chat","id":"floor-daylight-1","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-2","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-3","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-4","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-5","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-6","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-7","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-8","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-9","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-10","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-11","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-12","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-13","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-14","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-15","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-16","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-17","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-18","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-19","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-20","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-21","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-22","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-23","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-24","text":"/weather clear"}
+{"cmd":"chat","id":"midday-pig-1","text":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos"}
+{"cmd":"chat","id":"floor-daylight-25","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-26","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-27","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-28","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-29","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-30","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-31","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-32","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-33","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-34","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-35","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-36","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-37","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-38","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-39","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-40","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-41","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-42","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-43","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-44","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-45","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-46","text":"/weather clear"}
+{"cmd":"chat","id":"floor-daylight-47","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-48","text":"/weather clear"}
+{"cmd":"chat","id":"census-pig-1","text":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Pos"}
+{"cmd":"chat","id":"census-pig-2","text":"/data get entity @e[type=minecraft:pig,x=66,y=63,z=-91,distance=..6,limit=1] Health"}
+{"cmd":"chat","id":"census-zombie-1","text":"/data get entity @e[type=minecraft:zombie,x=66,y=62,z=-90,distance=..10,limit=1] Pos"}
+{"cmd":"chat","id":"census-cobble-1","text":"/execute if block 65 66 -88 minecraft:cobblestone run say COBBLE-STANDING"}
+{"cmd":"chat","id":"census-pig-3","text":"/data get entity @e[type=minecraft:pig,x=62,y=64,z=-90,distance=..20,limit=1] Pos"}
+{"cmd":"chat","id":"census-item-1","text":"/data get entity @e[type=minecraft:item,x=66,y=63,z=-91,distance=..8,limit=1] Pos"}
+{"cmd":"chat","id":"floor-daylight-49","text":"/time set 1000"}
+{"cmd":"chat","id":"floor-weather-50","text":"/weather clear"}
+{"cmd":"park-notify","id":"floor-park-51","reason":"DRIVER_HEARTBEAT_LOST"}

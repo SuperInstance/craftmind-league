@@ -1,0 +1,16 @@
+{
+  "ts": "2026-11-10T05:20:35.908Z",
+  "ok": false,
+  "problems": [
+    "cross-audit chat=0 ASSERT_DAYLIGHT=1"
+  ],
+  "canary_age_s": 21.73,
+  "rows": {
+    "log": 4,
+    "canary": 3,
+    "counts": 0,
+    "alert": 1
+  },
+  "last_seq": 8,
+  "seq_ok": true
+}

@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T16:38:13.968Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:/home/caseydigennaro/craftmind-league/floor/run/t3/contract.json","reason":"FLOOR_OPEN","seq":3,"contract_sha":"97ac78fa46bfd7287fb40f9132fc168096e116cabf6fe3a89e7963b44d6eea08"}
+{"ts":"2026-11-10T16:38:15.172Z","act":"NOTIFY","trigger_id":"human_stop","evidence_ref":"file:/home/caseydigennaro/craftmind-league/floor/run/t3/STOP","reason":"HUMAN_STOP","seq":9,"contract_sha":"97ac78fa46bfd7287fb40f9132fc168096e116cabf6fe3a89e7963b44d6eea08"}

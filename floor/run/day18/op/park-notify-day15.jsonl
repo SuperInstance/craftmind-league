@@ -1,0 +1,4 @@
+{"ts":"2026-11-13T10:53:53.622Z","id":"floor-park-1","reason":"SENSOR_PATH_BROKEN","trigger":null}
+{"ts":"2026-11-13T10:55:08.438Z","id":"floor-park-7","reason":"DAYLIGHT_UNRESTORABLE","trigger":null}
+{"ts":"2026-11-13T12:11:44.535Z","id":"floor-park-3","reason":"DRIVER_HEARTBEAT_LOST","trigger":null}
+{"ts":"2026-11-13T13:49:45.368Z","id":"floor-park-51","reason":"DRIVER_HEARTBEAT_LOST","trigger":null}

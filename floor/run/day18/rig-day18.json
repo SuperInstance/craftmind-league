@@ -1,0 +1,6 @@
+{
+  "server_log_path": "/home/caseydigennaro/craftmind-league/floor/run/day18/server-log-mirror.log",
+  "snapshot_path": "/home/caseydigennaro/craftmind-league/floor/run/day18/snapshot.json",
+  "op_req_path": "/home/caseydigennaro/craftmind-league/floor/run/day18/op/op-req-day18.jsonl",
+  "op_res_path": "/home/caseydigennaro/craftmind-league/floor/run/day18/op/op-res-day18.jsonl"
+}

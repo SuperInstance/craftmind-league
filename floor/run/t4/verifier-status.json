@@ -1,0 +1,16 @@
+{
+  "ts": "2026-11-10T16:38:24.735Z",
+  "ok": false,
+  "problems": [
+    "canary-stale age_s=4.3 bound_s=2"
+  ],
+  "canary_age_s": 4.31,
+  "rows": {
+    "log": 2,
+    "canary": 2,
+    "counts": 0,
+    "alert": 1
+  },
+  "last_seq": 5,
+  "seq_ok": true
+}

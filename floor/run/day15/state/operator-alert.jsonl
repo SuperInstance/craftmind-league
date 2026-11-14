@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T07:41:57.385Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:floor/run/day15/contract-day15.json","reason":"FLOOR_OPEN","seq":3,"contract_sha":"1a9dc7dfdd51eeccbb73ffe046d7ea8dc5183d7f36c1c038281b58f8c239a52c"}
+{"ts":"2026-11-10T09:08:57.281Z","act":"NOTIFY","trigger_id":"driver_heartbeat_lost","evidence_ref":"heartbeat:floor/run/day15/state/heartbeat.json","reason":"DRIVER_HEARTBEAT_LOST","seq":117,"contract_sha":"1a9dc7dfdd51eeccbb73ffe046d7ea8dc5183d7f36c1c038281b58f8c239a52c"}

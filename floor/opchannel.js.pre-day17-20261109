@@ -1,0 +1,86 @@
+'use strict';
+/**
+ * opchannel.js — the floor's admin path to the world, in the fleet's
+ * existing op-channel shape: a separate-process op bot consumes request
+ * JSON lines {cmd, id, ...} from a request file and appends result JSON
+ * lines {ts, id, ok, ...} to a result file (see pulse/op-day10.js).
+ *
+ * The floor NEVER uses the cameraman's typed channel (C.2 ASSERT_DAYLIGHT:
+ * "channel: floor's own admin path"). Two implementations:
+ *
+ *  FileOpChannel — the real shape. Appends the request, polls the result
+ *    file for the id. Live use points it at a real op bot's req/res files
+ *    under a day charter. Exercised offline against fake-op.js.
+ *
+ *  StubOpChannel — the fixture double. Records every request to
+ *    op-req.jsonl in the state dir (the cross-audit source) and simulates
+ *    the world-side effects the floor verifies elsewhere: a landed
+ *    daylight command appends the issuer-specific line to the fixture
+ *    server log; a landed feed `give` updates the fixture inventory
+ *    snapshot. Which effects land is scripted by the test.
+ */
+const fs = require('fs');
+const path = require('path');
+
+function appendLine(file, obj) { fs.appendFileSync(file, JSON.stringify(obj) + '\n'); }
+function readLines(file) {
+  try { return fs.readFileSync(file, 'utf8').split('\n').filter((l) => l.trim()); }
+  catch { return []; }
+}
+
+class FileOpChannel {
+  constructor(reqPath, resPath, opts = {}) {
+    this.reqPath = reqPath; this.resPath = resPath;
+    this.timeoutMs = opts.timeoutMs || 10000;
+  }
+  async issue(req) {
+    appendLine(this.reqPath, req);
+    const t0 = Date.now();
+    for (;;) {
+      for (const line of readLines(this.resPath)) {
+        try { const r = JSON.parse(line); if (r.id === req.id) return r; } catch { /* torn */ }
+      }
+      if (Date.now() - t0 > this.timeoutMs) return { id: req.id, ok: false, error: 'timeout' };
+      await new Promise((r) => setTimeout(r, 100));
+    }
+  }
+}
+
+class StubOpChannel {
+  // script: {landDaylight: bool, feedWorks: bool}
+  constructor(stateDir, script = {}, world = {}) {
+    this.reqFile = path.join(stateDir, 'op-req.jsonl');
+    this.script = script;
+    this.world = world; // {serverLogPath, issuer, snapshotPath}
+    this.requests = [];
+  }
+  async issue(req) {
+    this.requests.push(req);
+    appendLine(this.reqFile, req);
+    await new Promise((r) => setTimeout(r, 30));
+    if (req.cmd === 'chat' && /\/time set/.test(req.text || '')) {
+      if (this.script.landDaylight) {
+        const line = `[00:00:01] [Server thread/INFO]: ${this.world.issuer} issued server command: ${req.text}`;
+        fs.appendFileSync(this.world.serverLogPath, line + '\n');
+        return { id: req.id, ok: true, landed: true };
+      }
+      return { id: req.id, ok: true, landed: false };
+    }
+    if (req.cmd === 'give') {
+      if (this.script.feedWorks) {
+        let snap = { inventory: {} };
+        try { snap = JSON.parse(fs.readFileSync(this.world.snapshotPath, 'utf8')); } catch { /* fresh */ }
+        snap.inventory = snap.inventory || {};
+        snap.inventory[req.item] = (snap.inventory[req.item] || 0) + (req.count || 0);
+        snap.ts = new Date().toISOString();
+        fs.writeFileSync(this.world.snapshotPath, JSON.stringify(snap));
+        return { id: req.id, ok: true, landed: true };
+      }
+      return { id: req.id, ok: true, landed: false };
+    }
+    // ping / park-notify / quit and anything else: accepted, no world effect.
+    return { id: req.id, ok: true };
+  }
+}
+
+module.exports = { FileOpChannel, StubOpChannel };

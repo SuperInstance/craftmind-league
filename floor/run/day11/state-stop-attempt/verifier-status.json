@@ -1,0 +1,14 @@
+{
+  "ts": "2026-11-10T00:39:09.787Z",
+  "ok": true,
+  "problems": [],
+  "canary_age_s": 23.35,
+  "rows": {
+    "log": 12,
+    "canary": 14,
+    "counts": 0,
+    "alert": 3
+  },
+  "last_seq": 29,
+  "seq_ok": true
+}

@@ -1,0 +1,490 @@
+[00:00:03] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:00:06] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:00:19] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:00:32] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:00:32] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:00:43] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:00:55] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:01:08] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:01:10] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:01:10] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:01:13] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:01:25] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:01:37] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:01:37] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:01:49] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:02:02] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:02:15] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:02:18] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:02:31] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:02:45] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:02:45] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:02:58] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:03:10] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:03:24] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:03:26] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:03:40] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:03:54] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:03:54] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:04:07] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:04:19] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:04:31] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:04:34] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:04:48] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:05:01] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:05:01] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:05:14] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:05:26] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:05:39] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:05:41] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:05:54] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:06:06] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 74.0 82.0 -91.0 135.0 46.7
+[00:06:06] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+[00:06:15] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 44.0 79.0 -84.0 135.0 46.7
+[00:06:15] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+[00:06:23] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 92.8 82.0 -87.7 135.0 46.7
+[00:06:23] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 92.800000, 82.000000, -87.700000]
+[00:06:30] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 87.2 77.0 -103.7 135.0 46.7
+[00:06:30] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 87.200000, 77.000000, -103.700000]
+[00:06:39] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 71.0 83.0 -110.3 135.0 46.7
+[00:06:39] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 71.000000, 83.000000, -110.300000]
+[00:06:47] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:06:55] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:06:55] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:06:58] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:06:58] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:07:12] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:07:25] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:07:38] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:07:41] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:07:54] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:08:07] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:08:07] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:08:19] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:08:32] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:08:44] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:08:47] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:09:01] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:09:14] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:09:14] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:09:28] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:09:41] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:09:54] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:09:57] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:10:09] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:10:21] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:10:21] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:10:35] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:10:47] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:11:00] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:11:03] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:11:15] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:11:29] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:11:29] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:11:43] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:11:54] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:12:08] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:12:09] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:12:09] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:12:13] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:12:25] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:12:36] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:12:36] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:12:49] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:13:00] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:13:12] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:13:15] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:13:28] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:13:40] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:13:40] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:13:51] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:14:03] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:14:16] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:14:19] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:14:33] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:14:45] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:14:45] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:14:58] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:15:11] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:15:24] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:15:26] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:15:39] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:15:41] [User Authenticator #218/INFO]: UUID of player MapProbe4 is d3e34b2e-a3c6-3694-9902-0768b973e653
+[00:15:42] [Server thread/INFO]: MapProbe4 joined the game
+[00:15:42] [Server thread/INFO]: MapProbe4[/192.168.0.78:57068] logged in with entity id 105266 at ([minecraft:overworld]37.5, 66.0, -99.5)
+[00:15:51] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:15:51] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:16:04] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:16:15] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:16:27] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:16:30] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:16:38] [Server thread/INFO]: MapProbe4 issued server command: /setblock 65 66 -88 minecraft:oak_log[axis=z]
+[00:16:38] [Server thread/INFO]: [MapProbe4: Changed the block at 65, 66, -88]
+[00:16:44] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:16:53] [Server thread/INFO]: MapProbe4 issued server command: /data get block 65 66 -88
+[00:16:55] [Server thread/INFO]: MapProbe4 issued server command: /scoreboard objectives add chk dummy
+[00:16:56] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:16:56] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:16:57] [Server thread/INFO]: MapProbe4 issued server command: /scoreboard players set #chk chk 7
+[00:16:57] [Server thread/INFO]: [MapProbe4: Set [chk] for #chk to 7]
+[00:16:58] [Server thread/INFO]: MapProbe4 issued server command: /execute store result score #chk chk if block 65 66 -88 minecraft:oak_log[axis=z]
+[00:16:59] [Server thread/INFO]: MapProbe4 issued server command: /save-all flush
+[00:17:00] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[00:17:00] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[00:17:00] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[00:17:00] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[00:17:00] [Server thread/INFO]: [MapProbe4: Saved the game]
+[00:17:10] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:17:23] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:17:23] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:17:26] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:17:33] [Server thread/INFO]: MapProbe4 lost connection: Disconnected
+[00:17:33] [Server thread/INFO]: MapProbe4 left the game
+[00:17:38] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:17:41] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:17:54] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:18:05] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:18:05] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:18:17] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:18:31] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:18:44] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:18:47] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:18:59] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:19:13] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:19:13] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:19:25] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:19:38] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:19:51] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:19:54] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:20:06] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:20:18] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:20:18] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:20:32] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:20:43] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:20:56] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:20:59] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:21:10] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:21:23] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:21:23] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:21:35] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:21:48] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:22:02] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:22:05] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:22:17] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:22:29] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:22:29] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:22:32] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:22:32] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:22:44] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:22:57] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:23:09] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:23:12] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:23:25] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:23:39] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:23:39] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:23:50] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:24:02] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:24:23] [Server thread/INFO]: MagnusandMouse issued server command: /weather clear
+[00:24:23] [Server thread/INFO]: [MagnusandMouse: Set the weather to clear]
+[00:24:44] [User Authenticator #219/INFO]: UUID of player Gallery is 4c6ae3d3-342b-3aa0-ab31-a02a9e403356
+[00:24:44] [Server thread/INFO]: Gallery joined the game
+[00:24:44] [Server thread/INFO]: Gallery[/192.168.0.78:50760] logged in with entity id 105559 at ([minecraft:overworld]30.5, 82.0, -87.5)
+[00:24:44] [Async Chat Thread - #254/INFO]: [Not Secure] <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjcwMjg0OTEzfQ==
+[00:25:50] [Server thread/INFO]: Galleri issued server command: /time set 1000
+[00:25:50] [Server thread/INFO]: [Gallery: Set minecraft:overworld to 1000 tick(s)]
+[00:27:24] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:27:36] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:27:49] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:27:49] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:28:02] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:28:15] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:28:27] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:28:29] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 74.0 82.0 -91.0 135.0 46.7
+[00:28:29] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+[00:28:31] [User Authenticator #220/INFO]: UUID of player Cody is 5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67
+[00:28:31] [Server thread/INFO]: Cody joined the game
+[00:28:31] [Server thread/INFO]: Cody[/192.168.0.78:56750] logged in with entity id 105564 at ([minecraft:overworld]70.30200202185343, 64.0, -88.57932832220436)
+[00:28:31] [Async Chat Thread - #256/INFO]: [Not Secure] <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcwNTExODEzfQ==
+[00:28:31] [Server thread/INFO]: Cody lost connection: Disconnected
+[00:28:31] [Server thread/INFO]: Cody left the game
+[00:28:37] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 44.0 79.0 -84.0 135.0 46.7
+[00:28:37] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+[00:28:45] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:28:53] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:29:05] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:29:17] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:29:17] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:29:29] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:29:41] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:29:54] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:29:56] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:30:08] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:30:10] [User Authenticator #221/INFO]: UUID of player Cody is 5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67
+[00:30:11] [Server thread/INFO]: Cody joined the game
+[00:30:11] [Server thread/INFO]: Cody[/192.168.0.78:41864] logged in with entity id 105568 at ([minecraft:overworld]70.30200202185343, 64.0, -88.57932832220436)
+[00:30:11] [Async Chat Thread - #258/INFO]: [Not Secure] <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcwNjExMTA0fQ==
+[00:30:11] [Server thread/INFO]: Cody lost connection: Disconnected
+[00:30:11] [Server thread/INFO]: Cody left the game
+[00:30:22] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:30:22] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:30:35] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:30:47] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:30:59] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:31:02] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:31:15] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:31:27] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:31:27] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:31:38] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:31:50] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:32:03] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:32:06] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:32:18] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:32:29] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:32:29] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:32:41] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:32:55] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:33:08] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:33:11] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:33:22] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:33:36] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:33:36] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:33:48] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:34:00] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:34:12] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:34:14] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:34:28] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:34:40] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:34:40] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:34:54] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:35:05] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:35:19] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:35:21] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:35:33] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:35:45] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:35:45] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:35:59] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:36:12] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:36:25] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:36:27] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:36:40] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:36:53] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:36:53] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:37:05] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:37:17] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:37:29] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:37:32] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:37:44] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:37:56] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:37:56] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:38:07] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:38:22] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:38:22] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:38:25] [Server thread/INFO]: MagnusandMouse issued server command: /weather clear
+[00:38:25] [Server thread/INFO]: [MagnusandMouse: Set the weather to clear]
+[00:39:13] [Server thread/INFO]: Gallery lost connection: Disconnected
+[00:39:13] [Server thread/INFO]: Gallery left the game
+[00:41:23] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:41:37] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:41:49] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:41:49] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:42:03] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:42:15] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:42:27] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:42:29] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 74.0 82.0 -91.0 135.0 46.7
+[00:42:29] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+[00:42:37] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 44.0 79.0 -84.0 135.0 46.7
+[00:42:37] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+[00:42:45] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:42:53] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:43:07] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:43:19] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:43:19] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:43:30] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:43:30] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:43:33] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:43:44] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:43:56] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:43:59] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:44:12] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:44:24] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:44:24] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:44:38] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:44:50] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:45:01] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:45:04] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:45:17] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:45:28] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:45:28] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:45:41] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:45:53] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:46:04] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:46:07] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:46:22] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:46:33] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:46:33] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:46:45] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:46:58] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:47:11] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:47:14] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:47:26] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:47:38] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:47:38] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:47:51] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:48:02] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:48:16] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:48:18] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:48:30] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:48:41] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:48:41] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:48:44] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:48:44] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:48:58] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:49:11] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:49:24] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:49:27] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:49:38] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:49:51] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:49:51] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:50:04] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:50:18] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:50:31] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:50:34] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:50:46] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:50:59] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:50:59] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:51:14] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:51:26] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:51:39] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:51:41] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:51:56] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:52:09] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:52:09] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:52:21] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:52:34] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:52:47] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:52:50] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:52:50] [User Authenticator #222/INFO]: UUID of player Gallery is 4c6ae3d3-342b-3aa0-ab31-a02a9e403356
+[00:52:50] [Server thread/INFO]: Gallery joined the game
+[00:52:50] [Server thread/INFO]: Gallery[/192.168.0.78:55864] logged in with entity id 105593 at ([minecraft:overworld]30.5, 82.0, -87.5)
+[00:52:50] [Async Chat Thread - #260/INFO]: [Not Secure] <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjcxOTcwNjU0fQ==
+[00:52:50] [Server thread/INFO]: Galleri issued server command: /time set 1000
+[00:52:50] [Server thread/INFO]: [Gallery: Set minecraft:overworld to 1000 tick(s)]
+[00:53:01] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:53:14] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:53:14] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:53:26] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:53:39] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:53:45] [User Authenticator #223/INFO]: UUID of player Gallery is 4c6ae3d3-342b-3aa0-ab31-a02a9e403356
+[00:53:45] [Server thread/INFO]: Gallery lost connection: You logged in from another location
+[00:53:45] [Server thread/INFO]: Gallery left the game
+[00:53:46] [Server thread/INFO]: Gallery joined the game
+[00:53:46] [Server thread/INFO]: Gallery[/192.168.0.78:55656] logged in with entity id 105594 at ([minecraft:overworld]30.5, 82.0, -87.5)
+[00:53:46] [Async Chat Thread - #261/INFO]: [Not Secure] <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjcyMDI2MTA3fQ==
+[00:53:51] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:53:53] [Server thread/INFO]: MagnusandMouse issued server command: /time set 1000
+[00:53:53] [Server thread/INFO]: [MagnusandMouse: Set minecraft:overworld to 1000 tick(s)]
+[00:53:56] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:54:08] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:54:21] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:54:21] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:54:34] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:54:47] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:54:48] [Server thread/INFO]: Galleri issued server command: /time set 1000
+[00:54:48] [Server thread/INFO]: [Gallery: Set minecraft:overworld to 1000 tick(s)]
+[00:54:59] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:55:02] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:55:16] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~6 facing entity Cody eyes
+[00:55:28] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:55:28] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:55:42] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-6 ~2 ~0 facing entity Cody eyes
+[00:55:55] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:56:07] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:56:10] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:56:24] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~0 ~2 ~-6 facing entity Cody eyes
+[00:56:38] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 67.7 66.2 -85.0 -144.2 12.5
+[00:56:38] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+[00:56:50] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[00:57:01] [Server thread/INFO]: MagnusandMouse issued server command: /spectate Cody MagnusandMouse
+[00:57:13] [Server thread/INFO]: MagnusandMouse issued server command: /spectate
+[00:57:16] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~10 ~14 ~10 facing entity Cody eyes
+[00:57:27] [Server thread/INFO]: MagnusandMouse issued server command: /weather clear
+[00:57:27] [Server thread/INFO]: [MagnusandMouse: Set the weather to clear]
+[00:58:10] [User Authenticator #224/INFO]: UUID of player Cody is 5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67
+[00:58:10] [Server thread/INFO]: Cody joined the game
+[00:58:10] [Server thread/INFO]: Cody[/192.168.0.78:49382] logged in with entity id 105599 at ([minecraft:overworld]70.30200202185343, 64.0, -88.57932832220436)
+[00:58:10] [Async Chat Thread - #262/INFO]: [Not Secure] <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcyMjkwNzA4fQ==
+[00:58:10] [Server thread/INFO]: Cody lost connection: Disconnected
+[00:58:10] [Server thread/INFO]: Cody left the game
+[00:58:49] [Server thread/INFO]: Galleri issued server command: /time set 1000
+[00:58:49] [Server thread/INFO]: [Gallery: Set minecraft:overworld to 1000 tick(s)]
+[00:59:03] [User Authenticator #225/INFO]: UUID of player Cody is 5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67
+[00:59:04] [Server thread/INFO]: Cody joined the game
+[00:59:04] [Server thread/INFO]: Cody[/192.168.0.78:45686] logged in with entity id 105608 at ([minecraft:overworld]70.30200202185343, 64.0, -88.57932832220436)
+[00:59:04] [Async Chat Thread - #262/INFO]: [Not Secure] <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcyMzQ0MTU0fQ==
+[00:59:04] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Day eleven. Cody here — woke in the stone hollow where yesterday ended, one cobble in hand and the furnace still wanting seven. Walking home west along the south shoulder — the pit stays on my left and I stay out of it — then stone, counted honest, and the
+[00:59:04] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody>  furnace at last.
+[00:59:06] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> Morning. I'm standing in the hollow with one cobble and a furnace still hungry — home's just west along the south shoulder, and I'll walk it the safe way, south of that pit, never across it.
+[00:59:06] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 68.7 65.6 -86.3 -144.2 -0.4
+[00:59:06] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 68.700000, 65.600000, -86.300000]
+[00:59:39] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> Well — there's a real oak trunk five blocks west of me, foot at (65,66,-88). I'm not passing that up. Wood first, then home.
+[00:59:58] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 78.3 71.0 -80.5 135.0 27.9
+[00:59:58] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 78.300000, 71.000000, -80.500000]
+[01:00:10] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 68.4 65.4 -85.9 -144.5 -3.9
+[01:00:10] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 68.400000, 65.400000, -85.900000]
+[01:00:15] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> That trunk's out of reach from where I stand — the ground between us is a step up. Let me hop west a couple of blocks first, then take it.
+[01:00:49] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> There it is — the oak's foot is within reach now. Down you come, trunk first.
+[01:00:53] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-3 ~1 ~3 facing entity Cody eyes
+[01:00:53] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 64.500000, 66.000000, -83.544526]
+[01:01:07] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> One more log in the pack. Now let me get down to the home shoulder — west and a step down toward the table.
+[01:01:27] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 74.0 82.0 -91.0 135.0 46.7
+[01:01:27] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+[01:01:35] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 44.0 79.0 -84.0 135.0 46.7
+[01:01:35] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+[01:01:41] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> I'm boxed in by a step on every side but one — let me take the short hop south where the ground's open, then work my way west.
+[01:01:43] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~6 ~2 ~0 facing entity Cody eyes
+[01:01:43] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 75.500074, 66.000000, -87.207102]
+[01:01:51] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 68.0 70.0 -88.2 145.6 11.2
+[01:01:51] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -88.200000]
+[01:02:14] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> I keep sliding east instead of west — the ground's fighting me. Let me try a single block west and see if the walker can hold it.
+[01:02:17] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 64.2 67.2 -89.6 -48.7 12.5
+[01:02:17] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 64.200000, 67.200000, -89.600000]
+[01:02:17] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Still pinned east by that rise. One more short hop west, right onto the grass.
+[01:02:21] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Every side but south is a wall of leaves and stone. Let me break out south onto open ground and circle round to the table from below.
+[01:02:49] [Server thread/INFO]: Galleri issued server command: /time set 1000
+[01:02:49] [Server thread/INFO]: [Gallery: Set minecraft:overworld to 1000 tick(s)]
+[01:02:54] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> The walker keeps sliding me north instead of south. South's open grass — one short hop onto it.
+[01:02:56] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 69.0 70.0 -94.2 145.6 11.2
+[01:02:56] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+[01:03:10] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> This little rise has me boxed. Time to stop shuffling and just cut west through — one block at a time toward the table.
+[01:03:21] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> North's a wall of leaves at my head. Let me break the one right above my feet and see if the ground opens up.
+[01:03:24] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Enough shuffling on this rise. The walker's been sliding me — let me aim a longer leg straight at the pad's west edge and trust the south shoulder.
+[01:03:57] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> That got me up onto the shoulder proper — table's only four blocks north. One short hop to it.
+[01:04:00] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~3 ~1 ~-3 facing entity Cody eyes
+[01:04:00] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 68.072917, 68.000000, -92.699162]
+[01:04:13] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Home at last, table at my elbow. I've got 18 oak logs and 10 birch in my pack — let me turn some of that into planks and get the furnace chain going.
+[01:04:16] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Planks in hand. Now the pickaxe head needs sticks — and I've got cobblestone and a stone pickaxe to make.
+[01:04:40] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Sticks and planks and a table at my elbow. Now a proper stone pickaxe — I've got the cobblestone for it.
+[01:04:43] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Deepslate? No — I want plain cobblestone, three of it. The bench is reading something odd; let me just make a wooden pickaxe first to go dig the stone myself.
+[01:04:50] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> Wooden pickaxe in hand — now let me go dig the stone for my furnace. The shoulder south of the pit gives out to dirt, so I'll dig down a couple blocks right here.
+[01:04:53] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> No block under my feet there — the ground's at my own level. Let me dig the grass I'm standing on and see what's beneath it.
+[01:04:56] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> My feet are floating a half-block above the ground — that's why nothing's where I'm digging. Let me step over to the pad's west edge and work from solid ground.
+[01:05:00] [Async Chat Thread - #264/INFO]: [Not Secure] <Cody> Solid ground now. Let me dig down into the shoulder here and see if the dirt gives out to stone.
+[01:05:04] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Grass came up clean. One deeper — dirt, then maybe stone.
+[01:05:10] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Two down, still dirt. One more — stone's usually just under the shoulder here.
+[01:05:13] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Still dirt. One more down — I'm not stopping till I hit stone.
+[01:05:16] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 58.7 68.6 -91.4 -110.2 -0.4
+[01:05:16] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 58.700000, 68.600000, -91.400000]
+[01:05:20] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Two cobble. Keep going — this seam's wide enough to feed me.
+[01:05:24] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> That one's already open air. Try the other side of the seam.
+[01:05:54] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> Careful — I've wandered down to the pit's rim. Back off the edge and work the stone from where I can stand safe.
+[01:06:01] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 69.0 70.0 -94.2 145.6 11.2
+[01:06:01] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+[01:06:26] [Server thread/INFO]: MagnusandMouse issued server command: /tp MagnusandMouse 71.4 73.0 -83.4 135.0 27.9
+[01:06:26] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 71.400000, 73.000000, -83.400000]
+[01:06:28] [Async Chat Thread - #265/INFO]: [Not Secure] <Cody> I'm standing down in a dug dip beside my own pit — not going anywhere from here by wishing. Let me step up onto the open shoulder south of it.
+[01:06:38] [Server thread/INFO]: MagnusandMouse issued server command: /execute at Cody run tp MagnusandMouse ~-3 ~1 ~-3 facing entity Cody eyes
+[01:06:38] [Server thread/INFO]: [MagnusandMouse: Teleported MagnusandMouse to 60.300895, 65.000000, -93.442435]
+
+[01:06:49] [Server thread/INFO]: Gallery issued server command: /time set 1000
+[01:06:53] [Server thread/INFO]: Gallery issued server command: /time set 1000
+[01:06:58] [Server thread/INFO]: Gallery issued server command: /time set 1000

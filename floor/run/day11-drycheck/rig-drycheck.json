@@ -1,0 +1,6 @@
+{
+ "server_log_path": "/home/caseydigennaro/craftmind-league/floor/run/day11-drycheck/fixture-server.log",
+ "snapshot_path": "/home/caseydigennaro/craftmind-league/floor/run/day11/snapshot.json",
+ "op_req_path": "/home/caseydigennaro/craftmind-league/floor/run/day11-drycheck/op-req.jsonl",
+ "op_res_path": "/home/caseydigennaro/craftmind-league/floor/run/day11-drycheck/op-res.jsonl"
+}

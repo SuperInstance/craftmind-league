@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T00:06:19.472Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:contract-drycheck.json","reason":"FLOOR_OPEN","seq":3,"contract_sha":"9f8a4a8bcd654c72e983038b61169d19b5034276cca44f400b235284d062b5c3"}
+{"ts":"2026-11-10T00:06:55.638Z","act":"NOTIFY","trigger_id":"sigterm","evidence_ref":"process","reason":"FLOOR_CLOSE","seq":8,"contract_sha":"9f8a4a8bcd654c72e983038b61169d19b5034276cca44f400b235284d062b5c3"}

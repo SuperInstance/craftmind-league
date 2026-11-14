@@ -1,0 +1,16 @@
+{
+  "ts": "2026-11-10T16:38:45.097Z",
+  "ok": false,
+  "problems": [
+    "unlisted-act TELEPORT_CITIZEN seq=2"
+  ],
+  "canary_age_s": 0.03,
+  "rows": {
+    "log": 2,
+    "canary": 1,
+    "counts": 0,
+    "alert": 0
+  },
+  "last_seq": 3,
+  "seq_ok": true
+}

@@ -1,0 +1,14 @@
+{"ts":"2026-11-11T18:52:05.668Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-11T18:52:34.390Z","id":"p0","ok":true,"sent":"/scoreboard objectives add chk dummy","srv":["An objective already exists by that name"]}
+{"ts":"2026-11-11T18:52:35.891Z","id":"p1","ok":true,"sent":"/scoreboard players set #chk chk 7","srv":["Set [chk] for #chk to 7"]}
+{"ts":"2026-11-11T18:52:37.393Z","id":"p2","ok":true,"sent":"/execute store result score #chk chk if block 64 62 -91 minecraft:stone_bricks","srv":["Test failed"]}
+{"ts":"2026-11-11T18:52:38.894Z","id":"sb1","ok":true,"sent":"/setblock 64 60 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 60, -91"]}
+{"ts":"2026-11-11T18:52:40.394Z","id":"sb2","ok":true,"sent":"/setblock 64 61 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 61, -91"]}
+{"ts":"2026-11-11T18:52:41.896Z","id":"sb3","ok":true,"sent":"/setblock 64 62 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 62, -91"]}
+{"ts":"2026-11-11T18:52:43.397Z","id":"sb4","ok":true,"sent":"/setblock 64 63 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 63, -91"]}
+{"ts":"2026-11-11T18:52:44.898Z","id":"sb5","ok":true,"sent":"/setblock 64 64 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 64, -91"]}
+{"ts":"2026-11-11T18:52:46.399Z","id":"sb6","ok":true,"sent":"/setblock 64 65 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 65, -91"]}
+{"ts":"2026-11-11T18:52:47.900Z","id":"sb7","ok":true,"sent":"/setblock 64 66 -91 minecraft:stone_bricks","srv":["Changed the block at 64, 66, -91"]}
+{"ts":"2026-11-11T18:52:49.401Z","id":"p3","ok":true,"sent":"/execute store result score #chk chk if block 64 62 -91 minecraft:stone_bricks","srv":["Test passed"]}
+{"ts":"2026-11-11T18:52:51.901Z","id":"p4","ok":true,"sent":"/save-all flush","srv":["Saving the game (this may take a moment!)","Saved the game"]}
+{"ts":"2026-11-11T18:53:08.894Z","id":"q1","ok":true,"bye":true}

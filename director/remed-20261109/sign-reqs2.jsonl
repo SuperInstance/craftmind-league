@@ -1,0 +1,3 @@
+{"cmd": "exec", "id": "sign-place2", "text": "/setblock 40 64 -56 minecraft:oak_sign[rotation=8]", "wait": 1500}
+{"cmd": "exec", "id": "sign-merge2", "text": "/data merge block 40 64 -56 {front_text:{messages:[\"ROOF WIND TOOK IT.\",\"WALL WANTS 3 LOGS.\",\"FOLD\\u2019S OPEN SOUTH \\u2014\",\"MIND THE PIGS.\"]}}", "wait": 1500}
+{"cmd": "exec", "id": "sign-read2", "text": "/data get block 40 64 -56", "wait": 2500}

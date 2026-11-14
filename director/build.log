@@ -1,0 +1,909 @@
+Director builder process up; req=/home/caseydigennaro/craftmind-league/director/build-req.jsonl res=/home/caseydigennaro/craftmind-league/director/build-res.jsonl
+SRV: Gallery joined the game
+BUILDER spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+SRV: An objective already exists by that name
+SRV: <Cody> Now let's make planks. Three logs into twelve boards, and a table of my own if I need one.
+SRV: Set [chk] for #chk to 7
+SRV: <Cody> Twelve planks already — the hands knew the count before I did. Now sticks, and a pickaxe to go with them.
+SRV: Changed the block at 36, 64, -57
+SRV: <Cody> Sticks in hand. Now the pickaxe — table's right here at the anchor.
+RES {"id":"b37023f3","ok":true,"sent":"/setblock 36 64 -57 minecraft:oak_log","srv":["Changed the block at 36, 64, -57","<Cody> Sticks in hand. Now the pickaxe — table's right here at the anchor."]}
+SRV: Changed the block at 36, 65, -57
+RES {"id":"c622163d","ok":true,"sent":"/setblock 36 65 -57 minecraft:oak_log","srv":["Changed the block at 36, 65, -57"]}
+SRV: Changed the block at 38, 64, -61
+RES {"id":"e930c1d2","ok":true,"sent":"/setblock 38 64 -61 minecraft:oak_log","srv":["Changed the block at 38, 64, -61"]}
+SRV: Changed the block at 38, 64, -60
+RES {"id":"0320a902","ok":true,"sent":"/setblock 38 64 -60 minecraft:oak_log","srv":["Changed the block at 38, 64, -60"]}
+SRV: Changed the block at 38, 64, -59
+RES {"id":"f731f33d","ok":true,"sent":"/setblock 38 64 -59 minecraft:oak_log","srv":["Changed the block at 38, 64, -59"]}
+SRV: Changed the block at 38, 64, -58
+RES {"id":"28965854","ok":true,"sent":"/setblock 38 64 -58 minecraft:oak_log","srv":["Changed the block at 38, 64, -58"]}
+SRV: Changed the block at 38, 64, -57
+RES {"id":"0dd0fa9a","ok":true,"sent":"/setblock 38 64 -57 minecraft:oak_log","srv":["Changed the block at 38, 64, -57"]}
+SRV: Changed the block at 38, 65, -66
+RES {"id":"4d19c8fc","ok":true,"sent":"/setblock 38 65 -66 minecraft:oak_fence","srv":["Changed the block at 38, 65, -66"]}
+SRV: Changed the block at 38, 65, -65
+RES {"id":"22c2545f","ok":true,"sent":"/setblock 38 65 -65 minecraft:oak_fence","srv":["Changed the block at 38, 65, -65"]}
+SRV: Changed the block at 38, 65, -64
+RES {"id":"43446dab","ok":true,"sent":"/setblock 38 65 -64 minecraft:oak_fence","srv":["Changed the block at 38, 65, -64"]}
+SRV: Changed the block at 38, 65, -63
+RES {"id":"a78e84e2","ok":true,"sent":"/setblock 38 65 -63 minecraft:oak_fence","srv":["Changed the block at 38, 65, -63"]}
+SRV: Changed the block at 38, 65, -62
+RES {"id":"f221881c","ok":true,"sent":"/setblock 38 65 -62 minecraft:oak_fence","srv":["Changed the block at 38, 65, -62"]}
+SRV: Changed the block at 38, 65, -61
+RES {"id":"0e23d5e3","ok":true,"sent":"/setblock 38 65 -61 minecraft:oak_log","srv":["Changed the block at 38, 65, -61"]}
+SRV: Changed the block at 38, 65, -60
+SRV: <Cody> Huh — the sticks went somewhere else. Two more from planks, then the pickaxe.
+RES {"id":"a0df439d","ok":true,"sent":"/setblock 38 65 -60 minecraft:oak_log","srv":["Changed the block at 38, 65, -60","<Cody> Huh — the sticks went somewhere else. Two more from planks, then the pickaxe."]}
+SRV: Changed the block at 38, 65, -59
+RES {"id":"906421ea","ok":true,"sent":"/setblock 38 65 -59 minecraft:oak_log","srv":["Changed the block at 38, 65, -59"]}
+SRV: Changed the block at 38, 65, -58
+RES {"id":"dbfa2c49","ok":true,"sent":"/setblock 38 65 -58 minecraft:oak_log","srv":["Changed the block at 38, 65, -58"]}
+SRV: Changed the block at 38, 65, -57
+RES {"id":"d01217f0","ok":true,"sent":"/setblock 38 65 -57 minecraft:oak_log","srv":["Changed the block at 38, 65, -57"]}
+SRV: Changed the block at 39, 64, -61
+RES {"id":"6a50cf2e","ok":true,"sent":"/setblock 39 64 -61 minecraft:oak_log","srv":["Changed the block at 39, 64, -61"]}
+SRV: Changed the block at 39, 64, -57
+RES {"id":"3e57872a","ok":true,"sent":"/setblock 39 64 -57 minecraft:oak_log","srv":["Changed the block at 39, 64, -57"]}
+SRV: Changed the block at 39, 65, -61
+RES {"id":"a8b4582f","ok":true,"sent":"/setblock 39 65 -61 minecraft:oak_log","srv":["Changed the block at 39, 65, -61"]}
+SRV: Changed the block at 39, 66, -66
+RES {"id":"5e6b53df","ok":true,"sent":"/setblock 39 66 -66 minecraft:oak_fence","srv":["Changed the block at 39, 66, -66"]}
+SRV: Changed the block at 40, 64, -57
+RES {"id":"98087a21","ok":true,"sent":"/setblock 40 64 -57 minecraft:oak_log","srv":["Changed the block at 40, 64, -57"]}
+SRV: Changed the block at 40, 65, -61
+RES {"id":"80af5362","ok":true,"sent":"/setblock 40 65 -61 minecraft:oak_log","srv":["Changed the block at 40, 65, -61"]}
+SRV: Changed the block at 40, 66, -61
+RES {"id":"aa5f3710","ok":true,"sent":"/setblock 40 66 -61 minecraft:oak_log","srv":["Changed the block at 40, 66, -61"]}
+SRV: Changed the block at 40, 67, -66
+RES {"id":"6c820eb6","ok":true,"sent":"/setblock 40 67 -66 minecraft:oak_fence","srv":["Changed the block at 40, 67, -66"]}
+SRV: Changed the block at 41, 65, -57
+RES {"id":"52c03d70","ok":true,"sent":"/setblock 41 65 -57 minecraft:oak_log","srv":["Changed the block at 41, 65, -57"]}
+SRV: Changed the block at 41, 66, -61
+RES {"id":"e16e518e","ok":true,"sent":"/setblock 41 66 -61 minecraft:oak_log","srv":["Changed the block at 41, 66, -61"]}
+SRV: Changed the block at 41, 67, -66
+RES {"id":"9987b4f1","ok":true,"sent":"/setblock 41 67 -66 minecraft:oak_fence","srv":["Changed the block at 41, 67, -66"]}
+SRV: Changed the block at 41, 67, -61
+RES {"id":"ea4294f1","ok":true,"sent":"/setblock 41 67 -61 minecraft:oak_log","srv":["Changed the block at 41, 67, -61"]}
+SRV: Changed the block at 42, 64, -60
+RES {"id":"9fde9007","ok":true,"sent":"/setblock 42 64 -60 minecraft:oak_log","srv":["Changed the block at 42, 64, -60"]}
+SRV: <Cody> Cherry planks? I don't hold cherry anything — the hands grabbed the wrong recipe. Four sticks is what I need for a pickaxe; let's try that straight.
+SRV: Changed the block at 42, 64, -59
+RES {"id":"8fe5d9b5","ok":true,"sent":"/setblock 42 64 -59 minecraft:oak_log","srv":["<Cody> Cherry planks? I don't hold cherry anything — the hands grabbed the wrong recipe. Four sticks is what I need for a pickaxe; let's try that straight.","Changed the block at 42, 64, -59"]}
+SRV: Changed the block at 42, 64, -58
+RES {"id":"2b9463e5","ok":true,"sent":"/setblock 42 64 -58 minecraft:oak_log","srv":["Changed the block at 42, 64, -58"]}
+SRV: Changed the block at 42, 64, -57
+RES {"id":"6d7a3f3c","ok":true,"sent":"/setblock 42 64 -57 minecraft:oak_log","srv":["Changed the block at 42, 64, -57"]}
+SRV: Changed the block at 42, 65, -60
+RES {"id":"3c291e8f","ok":true,"sent":"/setblock 42 65 -60 minecraft:oak_log","srv":["Changed the block at 42, 65, -60"]}
+SRV: Changed the block at 42, 65, -59
+RES {"id":"7fa6bcd3","ok":true,"sent":"/setblock 42 65 -59 minecraft:oak_log","srv":["Changed the block at 42, 65, -59"]}
+SRV: Changed the block at 42, 65, -58
+RES {"id":"7489e6e8","ok":true,"sent":"/setblock 42 65 -58 minecraft:oak_log","srv":["Changed the block at 42, 65, -58"]}
+SRV: Changed the block at 42, 65, -57
+RES {"id":"ea8f638a","ok":true,"sent":"/setblock 42 65 -57 minecraft:oak_log","srv":["Changed the block at 42, 65, -57"]}
+SRV: Changed the block at 42, 66, -61
+RES {"id":"b152499b","ok":true,"sent":"/setblock 42 66 -61 minecraft:oak_log","srv":["Changed the block at 42, 66, -61"]}
+SRV: Changed the block at 42, 67, -66
+RES {"id":"034aae05","ok":true,"sent":"/setblock 42 67 -66 minecraft:oak_fence","srv":["Changed the block at 42, 67, -66"]}
+SRV: Changed the block at 42, 67, -65
+RES {"id":"a312f09f","ok":true,"sent":"/setblock 42 67 -65 minecraft:oak_fence","srv":["Changed the block at 42, 67, -65"]}
+SRV: Changed the block at 42, 67, -64
+RES {"id":"df5b1c0a","ok":true,"sent":"/setblock 42 67 -64 minecraft:oak_fence","srv":["Changed the block at 42, 67, -64"]}
+SRV: Changed the block at 42, 67, -63
+RES {"id":"c344eecd","ok":true,"sent":"/setblock 42 67 -63 minecraft:oak_fence","srv":["Changed the block at 42, 67, -63"]}
+SRV: Changed the block at 42, 67, -62
+RES {"id":"f9fd7d62","ok":true,"sent":"/setblock 42 67 -62 minecraft:oak_fence","srv":["Changed the block at 42, 67, -62"]}
+SRV: Changed the block at 42, 67, -61
+RES {"id":"0d04f1fa","ok":true,"sent":"/setblock 42 67 -61 minecraft:oak_log","srv":["Changed the block at 42, 67, -61"]}
+SRV: Changed the block at 44, 64, -57
+RES {"id":"900d8442","ok":true,"sent":"/setblock 44 64 -57 minecraft:oak_fence","srv":["Changed the block at 44, 64, -57"]}
+SRV: Changed the block at 44, 65, -57
+SRV: <Cody> The bench keeps reaching for cherry planks I've never had. My oak planks are gone too — something ate them. Let me look at my own two hands and see what's actually in them.
+RES {"id":"3c2b8695","ok":true,"sent":"/setblock 44 65 -57 minecraft:oak_fence","srv":["Changed the block at 44, 65, -57","<Cody> The bench keeps reaching for cherry planks I've never had. My oak planks are gone too — something ate them. Let me look at my own two hands and see what's actually in them."]}
+SRV: <Cody> The bench is confused and my oak planks vanished into it. I still have four sticks and a good table — one more honest try for the pickaxe, and if it plays cherry again I'll go cut a fresh log.
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"e48db7e4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: <Cody> That's the retry gone — bench wants cherry planks that don't exist on this whole shoulder. Fine. The oak NW at (58,-105) is the plan: cut it at the foot and get real logs in my hands.
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8e9d30f9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"eed63241","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"f13d1226","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"b59db174","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"48766930","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"a9f5a23a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"3875dac4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"b99c49ec","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"4617e0fd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"20f70ff4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> No logs at that foot — the eyes and the trunk disagree again. I'll walk over and look at the oak myself before I swing.
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8f502916","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"cb10e445","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"a030af19","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+RES {"id":"7cc40db6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+RES {"id":"3a24fba4","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+SRV: Saved the game
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"9822e935","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"d0bad2bc","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+SRV: <Cody> The walker says it arrived but my feet are still at home — that old lie again. The oak's a short real walk NW; I'll go in small hops and trust my feet.
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"932565c5","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+RES {"id":"f3b1797b","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+RES {"id":"e3e8bf86","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+SRV: Saved the game
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"fe2b50d1","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"5fba7988","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"bf3cc6a3","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"96e6f58f","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"4d2eb385","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7c63db5a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> I've slid down into the pit mouth again — feet at y62, below grade. Not climbing, not fighting it. Crew, set me back on the surface like this morning, and I'll take the long leg east to real timber.
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"34c4f3a1","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"9f887965","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"a5e0f801","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"43ca72e6","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"e24f6fb4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"ba7001c4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"5fc0a032","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8ed13cf7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"f69f5b6b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"91bd0e95","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: <Cody> Still down in the pit mouth at y63 — the walker won't lift me out. I'll say it plain: I'm in a below-grade cell. Crew, hands, set me on the surface — then I go east for that birch.
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8d92d74a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"24627890","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> Three blocks down and the walker won't lift me. I'll build my own way up — pillar straight out of this mouth with the dirt in my pocket.
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7e38b4d8","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"a5fe7917","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"4d106658","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+SRV: <Cody> Pillar won't place either — same as the pit. I'm in a below-grade cell and every door's fake. Crew, hands, lift me to the surface at the pad; I'll do the day from up there.
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"5521b0dd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"6779eae3","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7ad12006","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"61afcc88","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"bc6c2589","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"f0347155","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+SRV: Could not set the block
+RES {"id":"e61b9dc7","ok":true,"sent":"/setblock 36 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"6c0ca4f2","ok":true,"sent":"/setblock 36 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"d4b77d76","ok":true,"sent":"/setblock 38 64 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"eacb9616","ok":true,"sent":"/setblock 38 64 -60 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"84cf7931","ok":true,"sent":"/setblock 38 64 -59 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"9c92ae92","ok":true,"sent":"/setblock 38 64 -58 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"d7899399","ok":true,"sent":"/setblock 38 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"103d290a","ok":true,"sent":"/setblock 38 65 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"880fb093","ok":true,"sent":"/setblock 38 65 -65 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"fbe854d6","ok":true,"sent":"/setblock 38 65 -64 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"8926e2b7","ok":true,"sent":"/setblock 38 65 -63 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"1db59f4c","ok":true,"sent":"/setblock 38 65 -62 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"3709424c","ok":true,"sent":"/setblock 38 65 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"a6fb4c07","ok":true,"sent":"/setblock 38 65 -60 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"5767df1d","ok":true,"sent":"/setblock 38 65 -59 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"e145159f","ok":true,"sent":"/setblock 38 65 -58 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"cc119863","ok":true,"sent":"/setblock 38 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"e5e9337c","ok":true,"sent":"/setblock 39 64 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"add0994d","ok":true,"sent":"/setblock 39 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"557e2441","ok":true,"sent":"/setblock 39 65 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"3ded20f3","ok":true,"sent":"/setblock 39 66 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"24c722a6","ok":true,"sent":"/setblock 40 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"69b89f7c","ok":true,"sent":"/setblock 40 65 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"9892f758","ok":true,"sent":"/setblock 40 66 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"0d59c162","ok":true,"sent":"/setblock 40 67 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"ea04a72d","ok":true,"sent":"/setblock 41 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"5dfca0a3","ok":true,"sent":"/setblock 41 66 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"096f6cf9","ok":true,"sent":"/setblock 41 67 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"88b2182d","ok":true,"sent":"/setblock 41 67 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"a0c00740","ok":true,"sent":"/setblock 42 64 -60 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"cfe61ce5","ok":true,"sent":"/setblock 42 64 -59 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"38bca5eb","ok":true,"sent":"/setblock 42 64 -58 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"d9d254ca","ok":true,"sent":"/setblock 42 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"3936b63a","ok":true,"sent":"/setblock 42 65 -60 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"a4848e3f","ok":true,"sent":"/setblock 42 65 -59 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"4ae99134","ok":true,"sent":"/setblock 42 65 -58 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"95750560","ok":true,"sent":"/setblock 42 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"a8ba9ea3","ok":true,"sent":"/setblock 42 66 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"a33f4840","ok":true,"sent":"/setblock 42 67 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"d19593b4","ok":true,"sent":"/setblock 42 67 -65 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"2a249287","ok":true,"sent":"/setblock 42 67 -64 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"2589571e","ok":true,"sent":"/setblock 42 67 -63 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"b71badc7","ok":true,"sent":"/setblock 42 67 -62 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"14bd5e1a","ok":true,"sent":"/setblock 42 67 -61 minecraft:oak_log","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"88017cb7","ok":true,"sent":"/setblock 44 64 -57 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Could not set the block
+RES {"id":"f056ff17","ok":true,"sent":"/setblock 44 65 -57 minecraft:oak_fence","srv":["Could not set the block"]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"851fdf9a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: <Cody> I'm sat in the pit at y63, every door fake, same as the pit's whole story. Crew, hands — set me on the pad. Then I want that birch east, and I'm going to keep my feet on the surface this time.
+SRV: Saved the game
+RES {"id":"92dc5e9d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7d647feb","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"dc15b88b","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+SRV: <Cody> Still in the pit at y63. The column tops east are y64 — one block up, that's a step the walker can take. I'll try a short hop east onto that ledge and work my way out from there.
+RES {"id":"554b36fb","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"d3ddf568","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"0e1fca03","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"9a686014","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+SRV: MagnusandMouse left the game
+RES {"id":"df13f480","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8d91e02a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+SRV: <Cody> I'm still holed up in the pit mouth at y62, and the walls around me are four and five blocks high now. This is the same trap as day five. Crew, hands — I'm calling it: set me on the surface, I'm not c
+RES {"id":"a00acb0d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"b5a90712","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7f943c02","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"24d6b1ad","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: <Cody> I'm on the pit floor at y62 and it's the same story as day five — every door's fake. Crew, hands, I need setting on the pad. I'll keep asking till I'm up there.
+SRV: Saved the game
+RES {"id":"764c5d48","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"19b3a7da","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"6e9340bd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"00f84364","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"01c1e872","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"6c881d2d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"6d232392","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> Still down here at y62 and the walls are four, five blocks high. One more ask, crew — hands, lift me to the pad. If not, I'll dig my own way up the east wall, block by block.
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"4dfc26e7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"a6284281","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"bdb30e50","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"566bc9f9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> No hands coming, so I dig my own door. The dirt wall north of me tops out at y65 — I'll dig into it and carve a step up.
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"777f87cf","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"9e08868a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: <Cody> That cell's already open air. The dirt wall's north at y65 — dig the block right there at (65,65,-93) and carve my step up.
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"80ba9974","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7723a495","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: <Cody> That block's gone now — the north column reads zero, same as my feet. I've carved into the wall face. Let me try stepping north into that notch and see if my feet actually move.
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"4c7af19c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> My feet moved — barely, but they moved, and that notch I dug is a real step now. Let me dig the block above the notch too, open a proper stair, then climb north onto the surface.
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"c8278edf","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"662b611e","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"6711dd2f","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8edca447","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"008c8c4a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"59f224b5","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"ab1c070b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"810960e0","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"91f2e74f","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"8db53ae7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Cody drowned
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"a8516696","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"17d103b3","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: <Cody> Died in my own pit again — but I woke out west with my eyes working and a real oak trunk named right there at (35,70,-91). No point mourning the porkchops. First log of my life, and it's eight blocks 
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"7ffc2900","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"58a70a82","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"e22214ae","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"e46c0c64","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+SRV: Set [chk] for #chk to 7
+SRV: Test passed
+kicked: [object Object]
+RES {"id":"ee83137a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+RES {"id":"f13f19f8","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+RES {"id":"01ceb950","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+RES {"id":"297b37c5","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+RES {"id":"38cd6747","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+RES {"id":"170dd6d6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+RES {"id":"22fc0aa2","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+RES {"id":"70566b3e","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+RES {"id":"5bb0489e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+RES {"id":"c76120b9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+RES {"id":"6b61723e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+RES {"id":"c8166de7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+RES {"id":"b8e1397e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+RES {"id":"5ef3a163","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+RES {"id":"3174b5c2","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+RES {"id":"3435074d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+RES {"id":"9bf8c997","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+RES {"id":"e04c0cc0","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+RES {"id":"df28be51","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+RES {"id":"3efb4e26","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+RES {"id":"ce91642c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+RES {"id":"741cb449","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+RES {"id":"6f6b8438","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+RES {"id":"f63a0ee5","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+RES {"id":"568fdf3e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+RES {"id":"94854fec","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+RES {"id":"c4e9605c","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+RES {"id":"25aa0395","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+RES {"id":"e6afd210","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+RES {"id":"7ccd053c","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+RES {"id":"899c246d","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+RES {"id":"1ac92ca4","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+RES {"id":"ce6f6aa8","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+RES {"id":"4703231f","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+RES {"id":"10000c52","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+RES {"id":"3dcfc88b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+RES {"id":"73b5bf63","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+RES {"id":"092e4c8b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+RES {"id":"11294202","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+RES {"id":"4683c667","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+RES {"id":"6736732a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+RES {"id":"5d8f9648","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+RES {"id":"29d6bcdc","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+RES {"id":"a22d4b31","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+RES {"id":"ede792ec","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+RES {"id":"0aaff5e9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+RES {"id":"de2f2d3b","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+RES {"id":"405db985","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+RES {"id":"56150ebf","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+RES {"id":"ed23ff8b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+RES {"id":"64d40cc5","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+RES {"id":"8ddac6cc","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+RES {"id":"5bd677d7","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+RES {"id":"d3adc5ee","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+RES {"id":"5e2184d9","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+RES {"id":"502d46a3","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+RES {"id":"5499a6d8","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+RES {"id":"de5f8a2a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+RES {"id":"5e7abaad","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+RES {"id":"16cdddc1","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+RES {"id":"25f6a10c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+RES {"id":"637635fb","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+RES {"id":"9e9e98c6","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+RES {"id":"ab8bb51e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+RES {"id":"ba4d6889","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+RES {"id":"b04b4e38","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+RES {"id":"d0a2e5ec","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+RES {"id":"de08ba96","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+RES {"id":"571cfcf3","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+RES {"id":"8ba49cca","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+RES {"id":"71e6d933","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+RES {"id":"a2f15f57","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+RES {"id":"176a1438","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+RES {"id":"02e7fe47","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+RES {"id":"bf534c5d","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+RES {"id":"5ee4f90c","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+RES {"id":"9c94d8e1","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+RES {"id":"84b0d99a","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+RES {"id":"0fa6456e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+RES {"id":"0513d926","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+RES {"id":"35884470","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+RES {"id":"4905d9f3","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+RES {"id":"df713d59","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+RES {"id":"d9975ffd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+RES {"id":"88ab383c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+RES {"id":"e5f377ad","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+RES {"id":"5d778cd4","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+RES {"id":"0fbb5599","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+RES {"id":"4ca5d971","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+RES {"id":"59209b07","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+RES {"id":"b1a80d67","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+RES {"id":"c11f8f15","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+RES {"id":"6c0d497a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+RES {"id":"24af0f6a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+RES {"id":"b7cc1368","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+RES {"id":"5a3a468d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+RES {"id":"f68e3f18","ok":true,"sent":"/setblock 36 64 -57 minecraft:oak_log","srv":[]}
+RES {"id":"946ca6c2","ok":true,"sent":"/setblock 36 65 -57 minecraft:oak_log","srv":[]}
+RES {"id":"67d02ccb","ok":true,"sent":"/setblock 38 64 -61 minecraft:oak_log","srv":[]}
+RES {"id":"da870a27","ok":true,"sent":"/setblock 38 64 -60 minecraft:oak_log","srv":[]}
+RES {"id":"37c7eda7","ok":true,"sent":"/setblock 38 64 -59 minecraft:oak_log","srv":[]}
+RES {"id":"e1401b1e","ok":true,"sent":"/setblock 38 64 -58 minecraft:oak_log","srv":[]}
+RES {"id":"48a8a484","ok":true,"sent":"/setblock 38 64 -57 minecraft:oak_log","srv":[]}
+RES {"id":"6b314b51","ok":true,"sent":"/setblock 38 65 -66 minecraft:oak_fence","srv":[]}
+RES {"id":"a7bd9214","ok":true,"sent":"/setblock 38 65 -65 minecraft:oak_fence","srv":[]}
+RES {"id":"a7abc8a1","ok":true,"sent":"/setblock 38 65 -64 minecraft:oak_fence","srv":[]}
+RES {"id":"2437bbe6","ok":true,"sent":"/setblock 38 65 -63 minecraft:oak_fence","srv":[]}
+RES {"id":"ab064bad","ok":true,"sent":"/setblock 38 65 -62 minecraft:oak_fence","srv":[]}
+RES {"id":"18ace730","ok":true,"sent":"/setblock 38 65 -61 minecraft:oak_log","srv":[]}
+RES {"id":"49db226b","ok":true,"sent":"/setblock 38 65 -60 minecraft:oak_log","srv":[]}
+RES {"id":"4dd05c5f","ok":true,"sent":"/setblock 38 65 -59 minecraft:oak_log","srv":[]}
+RES {"id":"e9455585","ok":true,"sent":"/setblock 38 65 -58 minecraft:oak_log","srv":[]}
+RES {"id":"ff341cc6","ok":true,"sent":"/setblock 38 65 -57 minecraft:oak_log","srv":[]}
+RES {"id":"eebb2a47","ok":true,"sent":"/setblock 39 64 -61 minecraft:oak_log","srv":[]}
+RES {"id":"94a630cd","ok":true,"sent":"/setblock 39 64 -57 minecraft:oak_log","srv":[]}
+RES {"id":"304aa6d5","ok":true,"sent":"/setblock 39 65 -61 minecraft:oak_log","srv":[]}
+RES {"id":"15ac4f24","ok":true,"sent":"/setblock 39 66 -66 minecraft:oak_fence","srv":[]}
+RES {"id":"25b6cc5b","ok":true,"sent":"/setblock 40 64 -57 minecraft:oak_log","srv":[]}
+RES {"id":"fc48c09c","ok":true,"sent":"/setblock 40 65 -61 minecraft:oak_log","srv":[]}
+RES {"id":"9ed75bce","ok":true,"sent":"/setblock 40 66 -61 minecraft:oak_log","srv":[]}
+RES {"id":"8480b989","ok":true,"sent":"/setblock 40 67 -66 minecraft:oak_fence","srv":[]}
+RES {"id":"b81590a8","ok":true,"sent":"/setblock 41 65 -57 minecraft:oak_log","srv":[]}
+RES {"id":"92800836","ok":true,"sent":"/setblock 41 66 -61 minecraft:oak_log","srv":[]}
+RES {"id":"f5307e44","ok":true,"sent":"/setblock 41 67 -66 minecraft:oak_fence","srv":[]}
+RES {"id":"4f2cd959","ok":true,"sent":"/setblock 41 67 -61 minecraft:oak_log","srv":[]}
+RES {"id":"25fe82ca","ok":true,"sent":"/setblock 42 64 -60 minecraft:oak_log","srv":[]}
+RES {"id":"8b12b8e9","ok":true,"sent":"/setblock 42 64 -59 minecraft:oak_log","srv":[]}
+RES {"id":"9518c5a9","ok":true,"sent":"/setblock 42 64 -58 minecraft:oak_log","srv":[]}
+RES {"id":"91f6293c","ok":true,"sent":"/setblock 42 64 -57 minecraft:oak_log","srv":[]}
+RES {"id":"a51ff77f","ok":true,"sent":"/setblock 42 65 -60 minecraft:oak_log","srv":[]}
+RES {"id":"2d4a6d54","ok":true,"sent":"/setblock 42 65 -59 minecraft:oak_log","srv":[]}
+RES {"id":"a9f27d97","ok":true,"sent":"/setblock 42 65 -58 minecraft:oak_log","srv":[]}
+RES {"id":"d7f5c416","ok":true,"sent":"/setblock 42 65 -57 minecraft:oak_log","srv":[]}
+RES {"id":"76a8cd03","ok":true,"sent":"/setblock 42 66 -61 minecraft:oak_log","srv":[]}
+RES {"id":"3052428d","ok":true,"sent":"/setblock 42 67 -66 minecraft:oak_fence","srv":[]}
+RES {"id":"20d4e8e1","ok":true,"sent":"/setblock 42 67 -65 minecraft:oak_fence","srv":[]}
+RES {"id":"0b36c65e","ok":true,"sent":"/setblock 42 67 -64 minecraft:oak_fence","srv":[]}
+RES {"id":"ec227964","ok":true,"sent":"/setblock 42 67 -63 minecraft:oak_fence","srv":[]}
+RES {"id":"67a9aea4","ok":true,"sent":"/setblock 42 67 -62 minecraft:oak_fence","srv":[]}
+RES {"id":"d400cb74","ok":true,"sent":"/setblock 42 67 -61 minecraft:oak_log","srv":[]}
+RES {"id":"439d5a1a","ok":true,"sent":"/setblock 44 64 -57 minecraft:oak_fence","srv":[]}
+RES {"id":"8b34e165","ok":true,"sent":"/setblock 44 65 -57 minecraft:oak_fence","srv":[]}
+RES {"id":"74145e0c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+RES {"id":"ff296c47","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+RES {"id":"a2766af6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+RES {"id":"289d74d9","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+RES {"id":"611c49bd","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+RES {"id":"d7112f98","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+RES {"id":"9e6050de","ok":true,"sent":"/setblock 40 64 -56 minecraft:oak_sign[facing=south]","srv":[]}
+RES {"id":"afb3abc5","ok":true,"sent":"/data merge block 40 64 -56 {front_text:{messages:['\"ROOF WIND TOOK IT\"','\"WALL WANTS 3 LOGS\"','\"FOLD OPEN SOUTH\"','\"MIND THE PIGS\"'],has_glowing_text:0b,color:\"black\"}}","srv":[]}
+RES {"id":"f2d71dc9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+RES {"id":"940b0391","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+RES {"id":"3a1bc6b6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+RES {"id":"73075e49","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+RES {"id":"d7cd40f1","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+RES {"id":"77c0b753","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+RES {"id":"5c52baff","ok":true,"sent":"/data get block 40 64 -56","srv":[]}
+RES {"id":"fc90ece9","ok":true,"fileRead":true,"expect":"minecraft:oak_sign[facing=south]","at":[40,64,-56]}
+RES {"id":"c2f58f83","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+RES {"id":"063e7491","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+RES {"id":"7096800d","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+RES {"id":"7b77efc5","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+RES {"id":"5fd55c84","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+RES {"id":"cfeb5358","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+RES {"id":"a67ff801","ok":true,"sent":"/summon minecraft:pig 40 67 -64","srv":[]}
+RES {"id":"06083512","ok":true,"sent":"/summon minecraft:pig 39 67 -65","srv":[]}
+RES {"id":"f00ddeec","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+RES {"id":"86f5131c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+RES {"id":"dc5d2e53","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+RES {"id":"3fc5dfae","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+RES {"id":"0fe04744","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+RES {"id":"a881156b","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+RES {"id":"c0429ead","ok":true,"sent":"/summon minecraft:chicken 41 67 -63","srv":[]}
+RES {"id":"e0c2ad83","ok":true,"sent":"/save-all flush","srv":[]}
+RES {"id":"b4a49caa","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+RES {"id":"9e84bd96","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+RES {"id":"723fba66","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+RES {"id":"d2b5fc3b","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+RES {"id":"f209b1ce","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+RES {"id":"7a14b654","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+RES {"id":"2a8f1eaf","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+RES {"id":"781de247","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+RES {"id":"fa4adc5e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+RES {"id":"fd5ea266","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+RES {"id":"fcf9464e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+RES {"id":"6b25ef30","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+RES {"id":"d8d5345f","ok":true,"fileRead":true,"expect":"minecraft:oak_sign","at":[40,64,-56]}
+RES {"id":"8a05605a","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+RES {"id":"9721325a","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+RES {"id":"6c7aede9","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+RES {"id":"956c6b9e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+RES {"id":"91fa05bc","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+RES {"id":"d9abef1a","ok":true,"fileRead":true,"expect":"minecraft:oak_sign[facing=south]","at":[40,64,-56]}
+RES {"id":"b4233875","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+RES {"id":"00b3f194","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+RES {"id":"4b26755c","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+RES {"id":"d052ea6c","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+RES {"id":"a3798500","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+RES {"id":"2333293e","ok":true,"sent":"/execute if entity @e[type=minecraft:pig,x=40,y=66,z=-64,distance=..6] run scoreboard players set #chk chk 1","srv":[]}
+RES {"id":"d617c27a","ok":true,"sent":"/save-all flush","srv":[]}
+RES {"id":"114f8bf7","ok":true,"sent":"/execute if entity @e[type=minecraft:chicken,x=41,y=66,z=-63,distance=..6] run scoreboard players set #chk chk 1","srv":[]}
+RES {"id":"3079ef40","ok":true,"sent":"/save-all flush","srv":[]}
+RES {"id":"d8bad3a4","ok":true,"sent":"/execute positioned 40 66 -64 if entity @e[type=minecraft:pig,distance=..8] run scoreboard players set #chk chk 3","srv":[]}
+RES {"id":"6558d3d2","ok":true,"sent":"/save-all flush","srv":[]}
+RES {"id":"94dc6328","ok":true,"sent":"/execute positioned 41 66 -63 if entity @e[type=minecraft:chicken,distance=..8] run scoreboard players set #chk chk 5","srv":[]}
+RES {"id":"57db569c","ok":true,"sent":"/save-all flush","srv":[]}
+RES {"id":"06619ec9","ok":true,"sent":"/execute positioned 40 66 -64 if entity @e[type=minecraft:pig,distance=..8] run tellraw Gallery {\"text\":\"PIGPRESENT\"}","srv":[]}
+RES {"id":"3152cdea","ok":true,"sent":"/setblock 40 64 -56 minecraft:oak_sign[facing=south]","srv":[]}
+RES {"id":"3b558c40","ok":true,"sent":"/setblock 40 64 -56 minecraft:oak_sign[facing=south]","srv":[]}
+RES {"id":"50ed8395","ok":true,"fileRead":true,"expect":"minecraft:oak_sign","at":[40,64,-56]}
+RES {"id":"0818488a","ok":true,"sent":"/summon minecraft:pig 40 67 -64","srv":[]}
+RES {"id":"9437a5eb","ok":true,"sent":"/execute if entity @e[type=minecraft:pig,x=40,y=66,z=-64,distance=..6] run scoreboard players set #chk chk 1","srv":[]}
+RES {"id":"77973023","ok":true,"sent":"/save-all flush","srv":[]}
+RES {"id":"729a9b94","ok":true,"sent":"/summon minecraft:pig 39 67 -65","srv":[]}
+RES {"id":"a400431c","ok":true,"sent":"/summon minecraft:chicken 41 67 -63","srv":[]}
+RES {"id":"575ca798","ok":true,"sent":"/give Gallery minecraft:stick 1","srv":[]}
+RES {"id":"a0ff8fcf","ok":true,"sent":"/kill @e[type=minecraft:pig,x=40,y=66,z=-64,distance=..8]","srv":[]}
+RES {"id":"5b5b250b","ok":true,"sent":"/tp Gallery 40.5 66 -60.5","srv":[]}
+RES {"id":"4470b2f5","ok":true,"spawned":true,"pos":{"x":30.5,"y":82,"z":-87.5}}
+RES {"id":"dbb6ea07","ok":true,"sent":"/say BUILDER-ALIVE-CHECK","srv":[]}
+RES {"id":"ea98b656","ok":true,"bye":true}

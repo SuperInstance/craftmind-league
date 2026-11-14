@@ -1,0 +1,12 @@
+{"id":"s0","cmd":"exec","text":"/tp MapProbe4 64 78 -92","wait":2000}
+{"id":"s1","cmd":"exec","text":"/data get entity @e[type=minecraft:zombie,x=55,y=50,z=-105,dx=20,dy=30,dz=30,limit=1,sort=nearest] Pos","wait":1500}
+{"id":"s2","cmd":"exec","text":"/execute if entity @e[type=minecraft:zombie,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-ZOMBIE-PRESENT","wait":1200}
+{"id":"s3","cmd":"exec","text":"/execute if entity @e[type=minecraft:creeper,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-CREEPER-PRESENT","wait":1200}
+{"id":"s4","cmd":"exec","text":"/execute if entity @e[type=minecraft:skeleton,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-SKELETON-PRESENT","wait":1200}
+{"id":"s5","cmd":"exec","text":"/execute if entity @e[type=minecraft:spider,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-SPIDER-PRESENT","wait":1200}
+{"id":"s6","cmd":"exec","text":"/execute if entity @e[type=minecraft:pig,x=36,y=50,z=-120,dx=60,dy=30,dz=60] run say SWEEP-PIG-PRESENT","wait":1200}
+{"id":"g1","cmd":"exec","text":"/summon minecraft:pig 66.5 62 -90.5","wait":2000}
+{"id":"g2","cmd":"exec","text":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Pos","wait":1500}
+{"id":"g3","cmd":"exec","text":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Health","wait":1500}
+{"id":"g4","cmd":"exec","text":"/save-all flush","wait":2500}
+{"id":"z9","cmd":"quit"}

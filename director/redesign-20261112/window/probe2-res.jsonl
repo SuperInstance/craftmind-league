@@ -1,0 +1,4 @@
+{"ts":"2026-11-13T10:25:29.048Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-13T10:25:37.021Z","id":"e1","ok":true,"sent":"/execute if block 66 65 -90 minecraft:grass_block run say CELL-GRASS","srv":["[MapProbe4] CELL-GRASS"]}
+{"ts":"2026-11-13T10:25:38.522Z","id":"e2","ok":true,"sent":"/execute if block 66 65 -90 minecraft:dirt run say CELL-DIRT","srv":[]}
+{"ts":"2026-11-13T10:25:38.523Z","id":"e3","ok":true,"bye":true}

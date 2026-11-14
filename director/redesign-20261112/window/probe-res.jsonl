@@ -1,0 +1,4 @@
+{"ts":"2026-11-13T10:25:08.543Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-13T10:25:16.530Z","id":"d1","ok":true,"sent":"/data get block 66 65 -90","srv":["The target block is not a block entity"]}
+{"ts":"2026-11-13T10:25:18.031Z","id":"d2","ok":true,"sent":"/data get block 66 66 -90","srv":["The target block is not a block entity"]}
+{"ts":"2026-11-13T10:25:18.031Z","id":"d3","ok":true,"bye":true}

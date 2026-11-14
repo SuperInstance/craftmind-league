@@ -1,0 +1,105 @@
+MP4 remediation bot up; req=/home/caseydigennaro/craftmind-league/director/redesign-20261112/window/mp4-req.jsonl res=/home/caseydigennaro/craftmind-league/director/redesign-20261112/window/mp4-res.jsonl
+SRV: MapProbe4 joined the game
+MP4 spawned as MapProbe4 at {"x":37.5,"y":66,"z":-99.5}
+RES {"id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: An objective already exists by that name
+RES {"id":"p0","ok":true,"sent":"/scoreboard objectives add chk dummy","srv":["[MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]","An objective already exists by that name"]}
+SRV: Set [chk] for #chk to 7
+RES {"id":"p1","ok":true,"sent":"/scoreboard players set #chk chk 7","srv":["Set [chk] for #chk to 7"]}
+SRV: Test failed
+RES {"id":"p2","ok":true,"sent":"/execute store result score #chk chk if block 66 64 -91 minecraft:stone_bricks","srv":["Test failed"]}
+SRV: Test failed
+RES {"id":"p3","ok":true,"sent":"/execute store result score #chk chk if block 64 67 -91 minecraft:air","srv":["Test failed"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: Changed the block at 63, 64, -90
+RES {"id":"sb1","ok":true,"sent":"/setblock 63 64 -90 minecraft:air","srv":["Changed the block at 63, 64, -90"]}
+SRV: Changed the block at 64, 64, -91
+RES {"id":"sb2","ok":true,"sent":"/setblock 64 64 -91 minecraft:air","srv":["Changed the block at 64, 64, -91"]}
+SRV: Changed the block at 64, 65, -91
+RES {"id":"sb3","ok":true,"sent":"/setblock 64 65 -91 minecraft:air","srv":["Changed the block at 64, 65, -91"]}
+SRV: Changed the block at 64, 66, -91
+RES {"id":"sb4","ok":true,"sent":"/setblock 64 66 -91 minecraft:air","srv":["Changed the block at 64, 66, -91"]}
+SRV: Changed the block at 64, 67, -91
+RES {"id":"sb5","ok":true,"sent":"/setblock 64 67 -91 minecraft:air","srv":["Changed the block at 64, 67, -91"]}
+SRV: Changed the block at 65, 66, -91
+RES {"id":"sb6","ok":true,"sent":"/setblock 65 66 -91 minecraft:air","srv":["Changed the block at 65, 66, -91"]}
+SRV: Changed the block at 66, 65, -91
+RES {"id":"sb7","ok":true,"sent":"/setblock 66 65 -91 minecraft:air","srv":["Changed the block at 66, 65, -91"]}
+SRV: Changed the block at 66, 66, -90
+RES {"id":"sb8","ok":true,"sent":"/setblock 66 66 -90 minecraft:air","srv":["Changed the block at 66, 66, -90"]}
+SRV: Changed the block at 66, 64, -91
+RES {"id":"sb9","ok":true,"sent":"/setblock 66 64 -91 minecraft:stone_bricks","srv":["Changed the block at 66, 64, -91"]}
+SRV: Test passed
+RES {"id":"q1","ok":true,"sent":"/execute store result score #chk chk if block 66 64 -91 minecraft:stone_bricks","srv":["Test passed"]}
+SRV: Test passed
+RES {"id":"q2","ok":true,"sent":"/execute store result score #chk chk if block 64 67 -91 minecraft:air","srv":["Test passed"]}
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+RES {"id":"q3","ok":true,"sent":"/save-all flush","srv":["Saving the game (this may take a moment!)","Saved the game"]}
+RES {"id":"q4","ok":true,"bye":true}
+MP4 remediation bot up; req=/home/caseydigennaro/craftmind-league/director/redesign-20261112/window/mp4-req.jsonl res=/home/caseydigennaro/craftmind-league/director/redesign-20261112/window/mp4-res.jsonl
+RES {"id":"p0","ok":false,"error":"not spawned"}
+RES {"id":"p1","ok":false,"error":"not spawned"}
+RES {"id":"p2","ok":false,"error":"not spawned"}
+RES {"id":"p3","ok":false,"error":"not spawned"}
+RES {"id":"sb1","ok":false,"error":"not spawned"}
+RES {"id":"sb2","ok":false,"error":"not spawned"}
+RES {"id":"sb3","ok":false,"error":"not spawned"}
+RES {"id":"sb4","ok":false,"error":"not spawned"}
+RES {"id":"sb5","ok":false,"error":"not spawned"}
+RES {"id":"sb6","ok":false,"error":"not spawned"}
+RES {"id":"sb7","ok":false,"error":"not spawned"}
+RES {"id":"sb8","ok":false,"error":"not spawned"}
+RES {"id":"sb9","ok":false,"error":"not spawned"}
+RES {"id":"q1","ok":false,"error":"not spawned"}
+RES {"id":"q2","ok":false,"error":"not spawned"}
+RES {"id":"q3","ok":false,"error":"not spawned"}
+RES {"id":"q4","ok":true,"bye":true}
+SRV: MapProbe4 joined the game
+MP4 spawned as MapProbe4 at {"x":37.5,"y":66,"z":-99.5}
+RES {"id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+MP4 remediation bot up; req=probe-req.jsonl res=probe-res.jsonl
+SRV: MapProbe4 joined the game
+MP4 spawned as MapProbe4 at {"x":37.5,"y":66,"z":-99.5}
+RES {"id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+SRV: The target block is not a block entity
+RES {"id":"d1","ok":true,"sent":"/data get block 66 65 -90","srv":["The target block is not a block entity"]}
+SRV: The target block is not a block entity
+RES {"id":"d2","ok":true,"sent":"/data get block 66 66 -90","srv":["The target block is not a block entity"]}
+RES {"id":"d3","ok":true,"bye":true}
+MP4 remediation bot up; req=probe2-req.jsonl res=probe2-res.jsonl
+SRV: MapProbe4 joined the game
+MP4 spawned as MapProbe4 at {"x":37.5,"y":66,"z":-99.5}
+RES {"id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+SRV: [MapProbe4] CELL-GRASS
+RES {"id":"e1","ok":true,"sent":"/execute if block 66 65 -90 minecraft:grass_block run say CELL-GRASS","srv":["[MapProbe4] CELL-GRASS"]}
+RES {"id":"e2","ok":true,"sent":"/execute if block 66 65 -90 minecraft:dirt run say CELL-DIRT","srv":[]}
+RES {"id":"e3","ok":true,"bye":true}
+MP4 remediation bot up; req=sweep-req.jsonl res=sweep-res.jsonl
+SRV: MapProbe4 joined the game
+MP4 spawned as MapProbe4 at {"x":37.5,"y":66,"z":-99.5}
+RES {"id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+SRV: Teleported MapProbe4 to 64.500000, 78.000000, -91.500000
+RES {"id":"s0","ok":true,"sent":"/tp MapProbe4 64 78 -92","srv":["Teleported MapProbe4 to 64.500000, 78.000000, -91.500000"]}
+SRV: Zombie has the following entity data: [66.5825973623149d, 62.0d, -90.30000001192093d]
+RES {"id":"s1","ok":true,"sent":"/data get entity @e[type=minecraft:zombie,x=55,y=50,z=-105,dx=20,dy=30,dz=30,limit=1,sort=nearest] Pos","srv":["Zombie has the following entity data: [66.5825973623149d, 62.0d, -90.30000001192093d]"]}
+SRV: [MapProbe4] SWEEP-ZOMBIE-PRESENT
+RES {"id":"s2","ok":true,"sent":"/execute if entity @e[type=minecraft:zombie,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-ZOMBIE-PRESENT","srv":["[MapProbe4] SWEEP-ZOMBIE-PRESENT"]}
+RES {"id":"s3","ok":true,"sent":"/execute if entity @e[type=minecraft:creeper,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-CREEPER-PRESENT","srv":[]}
+RES {"id":"s4","ok":true,"sent":"/execute if entity @e[type=minecraft:skeleton,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-SKELETON-PRESENT","srv":[]}
+RES {"id":"s5","ok":true,"sent":"/execute if entity @e[type=minecraft:spider,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-SPIDER-PRESENT","srv":[]}
+RES {"id":"s6","ok":true,"sent":"/execute if entity @e[type=minecraft:pig,x=36,y=50,z=-120,dx=60,dy=30,dz=60] run say SWEEP-PIG-PRESENT","srv":[]}
+SRV: Summoned new Pig
+RES {"id":"g1","ok":true,"sent":"/summon minecraft:pig 66.5 62 -90.5","srv":["Summoned new Pig"]}
+SRV: Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -91.20171232585429d]
+RES {"id":"g2","ok":true,"sent":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Pos","srv":["Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -91.20171232585429d]"]}
+SRV: Pig has the following entity data: 10.0f
+RES {"id":"g3","ok":true,"sent":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Health","srv":["Pig has the following entity data: 10.0f"]}
+SRV: Saving the game (this may take a moment!)
+SRV: Saved the game
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]
+RES {"id":"g4","ok":true,"sent":"/save-all flush","srv":["Saving the game (this may take a moment!)","Saved the game","[MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.600000, 69.000000, -82.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.800000, 63.400000, -89.200000]
+RES {"id":"z9","ok":true,"bye":true}

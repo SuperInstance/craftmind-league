@@ -1,0 +1,20 @@
+{"id":"p0","cmd":"exec","text":"/scoreboard objectives add chk dummy","wait":1200}
+{"id":"p1","cmd":"exec","text":"/scoreboard players set #chk chk 7","wait":1200}
+{"id":"p2","cmd":"exec","text":"/execute store result score #chk chk if block 66 64 -91 minecraft:stone_bricks","wait":1500}
+{"id":"p3","cmd":"exec","text":"/execute store result score #chk chk if block 64 67 -91 minecraft:air","wait":1500}
+{"id":"sb1","cmd":"exec","text":"/setblock 63 64 -90 minecraft:air","wait":1200}
+{"id":"sb2","cmd":"exec","text":"/setblock 64 64 -91 minecraft:air","wait":1200}
+{"id":"sb3","cmd":"exec","text":"/setblock 64 65 -91 minecraft:air","wait":1200}
+{"id":"sb4","cmd":"exec","text":"/setblock 64 66 -91 minecraft:air","wait":1200}
+{"id":"sb5","cmd":"exec","text":"/setblock 64 67 -91 minecraft:air","wait":1200}
+{"id":"sb6","cmd":"exec","text":"/setblock 65 66 -91 minecraft:air","wait":1200}
+{"id":"sb7","cmd":"exec","text":"/setblock 66 65 -91 minecraft:air","wait":1200}
+{"id":"sb8","cmd":"exec","text":"/setblock 66 66 -90 minecraft:air","wait":1200}
+{"id":"sb9","cmd":"exec","text":"/setblock 66 64 -91 minecraft:stone_bricks","wait":1200}
+{"id":"q1","cmd":"exec","text":"/execute store result score #chk chk if block 66 64 -91 minecraft:stone_bricks","wait":1500}
+{"id":"q2","cmd":"exec","text":"/execute store result score #chk chk if block 64 67 -91 minecraft:air","wait":1500}
+{"id":"q3","cmd":"exec","text":"/save-all flush","wait":2500}
+{"id":"q4","cmd":"quit"}
+{"id":"d1","cmd":"exec","text":"/data get block 66 65 -90","wait":1500}
+{"id":"d2","cmd":"exec","text":"/data get block 66 66 -90","wait":1500}
+{"id":"d3","cmd":"quit"}

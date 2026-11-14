@@ -1,0 +1,9 @@
+{"ts":"2026-11-10T00:15:42.181Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-10T00:16:30.275Z","id":"ping1","ok":true,"spawned":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-10T00:16:40.780Z","id":"setblock1","ok":true,"sent":"/setblock 65 66 -88 minecraft:oak_log[axis=z]","srv":["Changed the block at 65, 66, -88"]}
+{"ts":"2026-11-10T00:16:55.979Z","id":"dataget1","ok":true,"sent":"/data get block 65 66 -88","srv":["The target block is not a block entity"]}
+{"ts":"2026-11-10T00:16:57.180Z","id":"probe-obj","ok":true,"sent":"/scoreboard objectives add chk dummy","srv":["An objective already exists by that name","[MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]"]}
+{"ts":"2026-11-10T00:16:58.381Z","id":"probe-sentinel","ok":true,"sent":"/scoreboard players set #chk chk 7","srv":["Set [chk] for #chk to 7"]}
+{"ts":"2026-11-10T00:16:59.881Z","id":"probe-store","ok":true,"sent":"/execute store result score #chk chk if block 65 66 -88 minecraft:oak_log[axis=z]","srv":["Test passed"]}
+{"ts":"2026-11-10T00:17:02.882Z","id":"probe-flush","ok":true,"sent":"/save-all flush","srv":["Saving the game (this may take a moment!)","Saved the game"]}
+{"ts":"2026-11-10T00:17:33.484Z","id":"quit1","ok":true,"bye":true}

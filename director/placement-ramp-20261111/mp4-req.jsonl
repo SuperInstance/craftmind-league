@@ -1,0 +1,13 @@
+{"id":"p0","cmd":"exec","text":"/scoreboard objectives add chk dummy","wait":1500}
+{"id":"p1","cmd":"exec","text":"/scoreboard players set #chk chk 7","wait":1500}
+{"id":"p2","cmd":"exec","text":"/execute store result score #chk chk if block 64 62 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb1","cmd":"exec","text":"/setblock 64 60 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb2","cmd":"exec","text":"/setblock 64 61 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb3","cmd":"exec","text":"/setblock 64 62 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb4","cmd":"exec","text":"/setblock 64 63 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb5","cmd":"exec","text":"/setblock 64 64 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb6","cmd":"exec","text":"/setblock 64 65 -91 minecraft:stone_bricks","wait":1500}
+{"id":"sb7","cmd":"exec","text":"/setblock 64 66 -91 minecraft:stone_bricks","wait":1500}
+{"id":"p3","cmd":"exec","text":"/execute store result score #chk chk if block 64 62 -91 minecraft:stone_bricks","wait":1500}
+{"id":"p4","cmd":"exec","text":"/save-all flush","wait":2500}
+{"id":"q1","cmd":"quit"}

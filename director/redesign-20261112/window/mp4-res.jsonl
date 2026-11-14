@@ -1,0 +1,36 @@
+{"ts":"2026-11-13T10:17:48.156Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-13T10:17:59.420Z","id":"p0","ok":true,"sent":"/scoreboard objectives add chk dummy","srv":["[MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]","An objective already exists by that name"]}
+{"ts":"2026-11-13T10:18:00.620Z","id":"p1","ok":true,"sent":"/scoreboard players set #chk chk 7","srv":["Set [chk] for #chk to 7"]}
+{"ts":"2026-11-13T10:18:02.122Z","id":"p2","ok":true,"sent":"/execute store result score #chk chk if block 66 64 -91 minecraft:stone_bricks","srv":["Test failed"]}
+{"ts":"2026-11-13T10:18:03.622Z","id":"p3","ok":true,"sent":"/execute store result score #chk chk if block 64 67 -91 minecraft:air","srv":["Test failed"]}
+{"ts":"2026-11-13T10:18:12.622Z","id":"sb1","ok":true,"sent":"/setblock 63 64 -90 minecraft:air","srv":["Changed the block at 63, 64, -90"]}
+{"ts":"2026-11-13T10:18:13.824Z","id":"sb2","ok":true,"sent":"/setblock 64 64 -91 minecraft:air","srv":["Changed the block at 64, 64, -91"]}
+{"ts":"2026-11-13T10:18:15.025Z","id":"sb3","ok":true,"sent":"/setblock 64 65 -91 minecraft:air","srv":["Changed the block at 64, 65, -91"]}
+{"ts":"2026-11-13T10:18:16.226Z","id":"sb4","ok":true,"sent":"/setblock 64 66 -91 minecraft:air","srv":["Changed the block at 64, 66, -91"]}
+{"ts":"2026-11-13T10:18:17.426Z","id":"sb5","ok":true,"sent":"/setblock 64 67 -91 minecraft:air","srv":["Changed the block at 64, 67, -91"]}
+{"ts":"2026-11-13T10:18:18.627Z","id":"sb6","ok":true,"sent":"/setblock 65 66 -91 minecraft:air","srv":["Changed the block at 65, 66, -91"]}
+{"ts":"2026-11-13T10:18:19.829Z","id":"sb7","ok":true,"sent":"/setblock 66 65 -91 minecraft:air","srv":["Changed the block at 66, 65, -91"]}
+{"ts":"2026-11-13T10:18:21.030Z","id":"sb8","ok":true,"sent":"/setblock 66 66 -90 minecraft:air","srv":["Changed the block at 66, 66, -90"]}
+{"ts":"2026-11-13T10:18:22.230Z","id":"sb9","ok":true,"sent":"/setblock 66 64 -91 minecraft:stone_bricks","srv":["Changed the block at 66, 64, -91"]}
+{"ts":"2026-11-13T10:18:30.524Z","id":"q1","ok":true,"sent":"/execute store result score #chk chk if block 66 64 -91 minecraft:stone_bricks","srv":["Test passed"]}
+{"ts":"2026-11-13T10:18:32.025Z","id":"q2","ok":true,"sent":"/execute store result score #chk chk if block 64 67 -91 minecraft:air","srv":["Test passed"]}
+{"ts":"2026-11-13T10:18:34.526Z","id":"q3","ok":true,"sent":"/save-all flush","srv":["Saving the game (this may take a moment!)","Saved the game"]}
+{"ts":"2026-11-13T10:18:34.526Z","id":"q4","ok":true,"bye":true}
+{"ts":"2026-11-13T10:24:40.217Z","id":"p0","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"p1","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"p2","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"p3","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb1","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb2","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb3","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb4","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb5","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb6","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb7","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb8","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"sb9","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.218Z","id":"q1","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.219Z","id":"q2","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.219Z","id":"q3","ok":false,"error":"not spawned"}
+{"ts":"2026-11-13T10:24:40.219Z","id":"q4","ok":true,"bye":true}
+{"ts":"2026-11-13T10:24:40.237Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}

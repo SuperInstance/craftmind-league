@@ -1,0 +1,22 @@
+{"cmd":"exec","id":"selftest","text":"/give MapProbe4 cooked_porkchop 1","wait":1500}
+{"cmd":"exec","id":"opcheck","text":"/op MapProbe4","wait":1500}
+{"cmd":"exec","id":"summon-pig1","text":"/summon minecraft:pig 40 67 -64","wait":1500}
+{"cmd":"exec","id":"summon-pig2","text":"/summon minecraft:pig 41 67 -64","wait":1500}
+{"cmd":"exec","id":"summon-chk1","text":"/summon minecraft:chicken 39 67 -63","wait":1500}
+{"cmd":"exec","id":"q-pigs","text":"/execute if entity @e[type=minecraft:pig,x=38,y=60,z=-66,dx=4,dy=10,dz=4] run say REMEDCHECK pigs-in-fold YES","wait":1200}
+{"cmd":"exec","id":"q-chk","text":"/data get entity @e[type=minecraft:chicken,x=38,y=60,z=-66,dx=4,dy=10,dz=4,limit=1]","wait":1500}
+{"cmd":"exec","id":"q-pig1","text":"/data get entity @e[type=minecraft:pig,x=38,y=60,z=-66,dx=4,dy=10,dz=4,limit=1]","wait":1500}
+{"cmd":"exec","id":"q-pig2","text":"/data get entity @e[type=minecraft:pig,x=38,y=60,z=-66,dx=4,dy=10,dz=4,sort=furthest,limit=1]","wait":1500}
+{"cmd": "exec", "id": "sign-place", "text": "/setblock 40 64 -56 minecraft:oak_sign[facing=south]", "wait": 1500}
+{"cmd": "exec", "id": "sign-merge", "text": "/data merge block 40 64 -56 {front_text:{messages:[\"ROOF WIND TOOK IT.\",\"WALL WANTS 3 LOGS.\",\"FOLD\\u2019S OPEN SOUTH \\u2014\",\"MIND THE PIGS.\"]}}", "wait": 1500}
+{"cmd": "exec", "id": "sign-read", "text": "/data get block 40 64 -56", "wait": 2000}
+{"cmd": "exec", "id": "sign-place2", "text": "/setblock 40 64 -56 minecraft:oak_sign[rotation=8]", "wait": 1500}
+{"cmd": "exec", "id": "sign-merge2", "text": "/data merge block 40 64 -56 {front_text:{messages:[\"ROOF WIND TOOK IT.\",\"WALL WANTS 3 LOGS.\",\"FOLD\\u2019S OPEN SOUTH \\u2014\",\"MIND THE PIGS.\"]}}", "wait": 1500}
+{"cmd": "exec", "id": "sign-read2", "text": "/data get block 40 64 -56", "wait": 2500}
+{"cmd":"exec","id":"spider-q1","text":"/data get entity @e[type=minecraft:spider,x=30,y=55,z=-72,dx=22,dy=25,dz=24,limit=1]","wait":1500}
+{"cmd":"exec","id":"spider-q2","text":"/data get entity @e[type=minecraft:spider,x=30,y=55,z=-72,dx=22,dy=25,dz=24,sort=furthest,limit=1]","wait":1500}
+{"cmd":"exec","id":"q-pig1b","text":"/data get entity @e[type=minecraft:pig,x=38,y=60,z=-66,dx=4,dy=10,dz=4,limit=1] Pos","wait":1500}
+{"cmd":"exec","id":"q-pig2b","text":"/data get entity @e[type=minecraft:pig,x=38,y=60,z=-66,dx=4,dy=10,dz=4,sort=furthest,limit=1] Pos","wait":1500}
+{"cmd":"exec","id":"q-chkb","text":"/data get entity @e[type=minecraft:chicken,x=38,y=60,z=-66,dx=4,dy=10,dz=4,limit=1] Pos","wait":1500}
+{"cmd":"exec","id":"saveall","text":"/save-all flush","wait":2500}
+{"cmd":"quit","id":"final-quit"}

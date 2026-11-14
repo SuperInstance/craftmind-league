@@ -1,0 +1,8 @@
+{"id":"ping1","cmd":"ping"}
+{"id":"setblock1","cmd":"exec","text":"/setblock 65 66 -88 minecraft:oak_log[axis=z]","wait":2500}
+{"id":"dataget1","cmd":"exec","text":"/data get block 65 66 -88","wait":2500}
+{"id":"probe-obj","cmd":"exec","text":"/scoreboard objectives add chk dummy","wait":1200}
+{"id":"probe-sentinel","cmd":"exec","text":"/scoreboard players set #chk chk 7","wait":1200}
+{"id":"probe-store","cmd":"exec","text":"/execute store result score #chk chk if block 65 66 -88 minecraft:oak_log[axis=z]","wait":1500}
+{"id":"probe-flush","cmd":"exec","text":"/save-all flush","wait":3000}
+{"id":"quit1","cmd":"quit"}

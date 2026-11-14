@@ -1,0 +1,407 @@
+{"ts":"2026-11-09T19:10:18.998Z","id":"b37023f3","ok":true,"sent":"/setblock 36 64 -57 minecraft:oak_log","srv":["Changed the block at 36, 64, -57","<Cody> Sticks in hand. Now the pickaxe — table's right here at the anchor."]}
+{"ts":"2026-11-09T19:10:19.220Z","id":"c622163d","ok":true,"sent":"/setblock 36 65 -57 minecraft:oak_log","srv":["Changed the block at 36, 65, -57"]}
+{"ts":"2026-11-09T19:10:19.441Z","id":"e930c1d2","ok":true,"sent":"/setblock 38 64 -61 minecraft:oak_log","srv":["Changed the block at 38, 64, -61"]}
+{"ts":"2026-11-09T19:10:19.662Z","id":"0320a902","ok":true,"sent":"/setblock 38 64 -60 minecraft:oak_log","srv":["Changed the block at 38, 64, -60"]}
+{"ts":"2026-11-09T19:10:19.883Z","id":"f731f33d","ok":true,"sent":"/setblock 38 64 -59 minecraft:oak_log","srv":["Changed the block at 38, 64, -59"]}
+{"ts":"2026-11-09T19:10:20.104Z","id":"28965854","ok":true,"sent":"/setblock 38 64 -58 minecraft:oak_log","srv":["Changed the block at 38, 64, -58"]}
+{"ts":"2026-11-09T19:10:20.325Z","id":"0dd0fa9a","ok":true,"sent":"/setblock 38 64 -57 minecraft:oak_log","srv":["Changed the block at 38, 64, -57"]}
+{"ts":"2026-11-09T19:10:20.546Z","id":"4d19c8fc","ok":true,"sent":"/setblock 38 65 -66 minecraft:oak_fence","srv":["Changed the block at 38, 65, -66"]}
+{"ts":"2026-11-09T19:10:20.768Z","id":"22c2545f","ok":true,"sent":"/setblock 38 65 -65 minecraft:oak_fence","srv":["Changed the block at 38, 65, -65"]}
+{"ts":"2026-11-09T19:10:20.989Z","id":"43446dab","ok":true,"sent":"/setblock 38 65 -64 minecraft:oak_fence","srv":["Changed the block at 38, 65, -64"]}
+{"ts":"2026-11-09T19:10:21.210Z","id":"a78e84e2","ok":true,"sent":"/setblock 38 65 -63 minecraft:oak_fence","srv":["Changed the block at 38, 65, -63"]}
+{"ts":"2026-11-09T19:10:21.430Z","id":"f221881c","ok":true,"sent":"/setblock 38 65 -62 minecraft:oak_fence","srv":["Changed the block at 38, 65, -62"]}
+{"ts":"2026-11-09T19:10:21.651Z","id":"0e23d5e3","ok":true,"sent":"/setblock 38 65 -61 minecraft:oak_log","srv":["Changed the block at 38, 65, -61"]}
+{"ts":"2026-11-09T19:10:21.872Z","id":"a0df439d","ok":true,"sent":"/setblock 38 65 -60 minecraft:oak_log","srv":["Changed the block at 38, 65, -60","<Cody> Huh — the sticks went somewhere else. Two more from planks, then the pickaxe."]}
+{"ts":"2026-11-09T19:10:22.093Z","id":"906421ea","ok":true,"sent":"/setblock 38 65 -59 minecraft:oak_log","srv":["Changed the block at 38, 65, -59"]}
+{"ts":"2026-11-09T19:10:22.314Z","id":"dbfa2c49","ok":true,"sent":"/setblock 38 65 -58 minecraft:oak_log","srv":["Changed the block at 38, 65, -58"]}
+{"ts":"2026-11-09T19:10:22.534Z","id":"d01217f0","ok":true,"sent":"/setblock 38 65 -57 minecraft:oak_log","srv":["Changed the block at 38, 65, -57"]}
+{"ts":"2026-11-09T19:10:22.755Z","id":"6a50cf2e","ok":true,"sent":"/setblock 39 64 -61 minecraft:oak_log","srv":["Changed the block at 39, 64, -61"]}
+{"ts":"2026-11-09T19:10:22.975Z","id":"3e57872a","ok":true,"sent":"/setblock 39 64 -57 minecraft:oak_log","srv":["Changed the block at 39, 64, -57"]}
+{"ts":"2026-11-09T19:10:23.196Z","id":"a8b4582f","ok":true,"sent":"/setblock 39 65 -61 minecraft:oak_log","srv":["Changed the block at 39, 65, -61"]}
+{"ts":"2026-11-09T19:10:23.416Z","id":"5e6b53df","ok":true,"sent":"/setblock 39 66 -66 minecraft:oak_fence","srv":["Changed the block at 39, 66, -66"]}
+{"ts":"2026-11-09T19:10:23.638Z","id":"98087a21","ok":true,"sent":"/setblock 40 64 -57 minecraft:oak_log","srv":["Changed the block at 40, 64, -57"]}
+{"ts":"2026-11-09T19:10:23.858Z","id":"80af5362","ok":true,"sent":"/setblock 40 65 -61 minecraft:oak_log","srv":["Changed the block at 40, 65, -61"]}
+{"ts":"2026-11-09T19:10:24.078Z","id":"aa5f3710","ok":true,"sent":"/setblock 40 66 -61 minecraft:oak_log","srv":["Changed the block at 40, 66, -61"]}
+{"ts":"2026-11-09T19:10:24.298Z","id":"6c820eb6","ok":true,"sent":"/setblock 40 67 -66 minecraft:oak_fence","srv":["Changed the block at 40, 67, -66"]}
+{"ts":"2026-11-09T19:10:24.518Z","id":"52c03d70","ok":true,"sent":"/setblock 41 65 -57 minecraft:oak_log","srv":["Changed the block at 41, 65, -57"]}
+{"ts":"2026-11-09T19:10:24.740Z","id":"e16e518e","ok":true,"sent":"/setblock 41 66 -61 minecraft:oak_log","srv":["Changed the block at 41, 66, -61"]}
+{"ts":"2026-11-09T19:10:24.960Z","id":"9987b4f1","ok":true,"sent":"/setblock 41 67 -66 minecraft:oak_fence","srv":["Changed the block at 41, 67, -66"]}
+{"ts":"2026-11-09T19:10:25.181Z","id":"ea4294f1","ok":true,"sent":"/setblock 41 67 -61 minecraft:oak_log","srv":["Changed the block at 41, 67, -61"]}
+{"ts":"2026-11-09T19:10:25.401Z","id":"9fde9007","ok":true,"sent":"/setblock 42 64 -60 minecraft:oak_log","srv":["Changed the block at 42, 64, -60"]}
+{"ts":"2026-11-09T19:10:25.621Z","id":"8fe5d9b5","ok":true,"sent":"/setblock 42 64 -59 minecraft:oak_log","srv":["<Cody> Cherry planks? I don't hold cherry anything — the hands grabbed the wrong recipe. Four sticks is what I need for a pickaxe; let's try that straight.","Changed the block at 42, 64, -59"]}
+{"ts":"2026-11-09T19:10:25.841Z","id":"2b9463e5","ok":true,"sent":"/setblock 42 64 -58 minecraft:oak_log","srv":["Changed the block at 42, 64, -58"]}
+{"ts":"2026-11-09T19:10:26.062Z","id":"6d7a3f3c","ok":true,"sent":"/setblock 42 64 -57 minecraft:oak_log","srv":["Changed the block at 42, 64, -57"]}
+{"ts":"2026-11-09T19:10:26.282Z","id":"3c291e8f","ok":true,"sent":"/setblock 42 65 -60 minecraft:oak_log","srv":["Changed the block at 42, 65, -60"]}
+{"ts":"2026-11-09T19:10:26.504Z","id":"7fa6bcd3","ok":true,"sent":"/setblock 42 65 -59 minecraft:oak_log","srv":["Changed the block at 42, 65, -59"]}
+{"ts":"2026-11-09T19:10:26.726Z","id":"7489e6e8","ok":true,"sent":"/setblock 42 65 -58 minecraft:oak_log","srv":["Changed the block at 42, 65, -58"]}
+{"ts":"2026-11-09T19:10:26.945Z","id":"ea8f638a","ok":true,"sent":"/setblock 42 65 -57 minecraft:oak_log","srv":["Changed the block at 42, 65, -57"]}
+{"ts":"2026-11-09T19:10:27.165Z","id":"b152499b","ok":true,"sent":"/setblock 42 66 -61 minecraft:oak_log","srv":["Changed the block at 42, 66, -61"]}
+{"ts":"2026-11-09T19:10:27.385Z","id":"034aae05","ok":true,"sent":"/setblock 42 67 -66 minecraft:oak_fence","srv":["Changed the block at 42, 67, -66"]}
+{"ts":"2026-11-09T19:10:27.605Z","id":"a312f09f","ok":true,"sent":"/setblock 42 67 -65 minecraft:oak_fence","srv":["Changed the block at 42, 67, -65"]}
+{"ts":"2026-11-09T19:10:27.825Z","id":"df5b1c0a","ok":true,"sent":"/setblock 42 67 -64 minecraft:oak_fence","srv":["Changed the block at 42, 67, -64"]}
+{"ts":"2026-11-09T19:10:28.045Z","id":"c344eecd","ok":true,"sent":"/setblock 42 67 -63 minecraft:oak_fence","srv":["Changed the block at 42, 67, -63"]}
+{"ts":"2026-11-09T19:10:28.265Z","id":"f9fd7d62","ok":true,"sent":"/setblock 42 67 -62 minecraft:oak_fence","srv":["Changed the block at 42, 67, -62"]}
+{"ts":"2026-11-09T19:10:28.485Z","id":"0d04f1fa","ok":true,"sent":"/setblock 42 67 -61 minecraft:oak_log","srv":["Changed the block at 42, 67, -61"]}
+{"ts":"2026-11-09T19:10:28.706Z","id":"900d8442","ok":true,"sent":"/setblock 44 64 -57 minecraft:oak_fence","srv":["Changed the block at 44, 64, -57"]}
+{"ts":"2026-11-09T19:10:28.926Z","id":"3c2b8695","ok":true,"sent":"/setblock 44 65 -57 minecraft:oak_fence","srv":["Changed the block at 44, 65, -57","<Cody> The bench keeps reaching for cherry planks I've never had. My oak planks are gone too — something ate them. Let me look at my own two hands and see what's actually in them."]}
+{"ts":"2026-11-09T19:10:37.280Z","id":"e48db7e4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+{"ts":"2026-11-09T19:10:39.383Z","id":"8e9d30f9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+{"ts":"2026-11-09T19:10:41.486Z","id":"eed63241","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+{"ts":"2026-11-09T19:10:43.590Z","id":"f13d1226","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+{"ts":"2026-11-09T19:10:45.692Z","id":"b59db174","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+{"ts":"2026-11-09T19:10:47.794Z","id":"48766930","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+{"ts":"2026-11-09T19:10:56.486Z","id":"a9f5a23a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+{"ts":"2026-11-09T19:10:58.588Z","id":"3875dac4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+{"ts":"2026-11-09T19:11:00.688Z","id":"b99c49ec","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+{"ts":"2026-11-09T19:11:02.790Z","id":"4617e0fd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+{"ts":"2026-11-09T19:11:04.892Z","id":"20f70ff4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+{"ts":"2026-11-09T19:11:06.994Z","id":"8f502916","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+{"ts":"2026-11-09T19:11:16.890Z","id":"cb10e445","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+{"ts":"2026-11-09T19:11:18.991Z","id":"a030af19","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+{"ts":"2026-11-09T19:11:21.093Z","id":"7cc40db6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+{"ts":"2026-11-09T19:11:23.195Z","id":"3a24fba4","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+{"ts":"2026-11-09T19:11:25.298Z","id":"9822e935","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+{"ts":"2026-11-09T19:11:27.400Z","id":"d0bad2bc","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+{"ts":"2026-11-09T19:11:37.696Z","id":"932565c5","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+{"ts":"2026-11-09T19:11:39.798Z","id":"f3b1797b","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+{"ts":"2026-11-09T19:11:41.900Z","id":"e3e8bf86","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+{"ts":"2026-11-09T19:11:44.003Z","id":"fe2b50d1","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+{"ts":"2026-11-09T19:11:46.104Z","id":"5fba7988","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+{"ts":"2026-11-09T19:11:48.205Z","id":"bf3cc6a3","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+{"ts":"2026-11-09T19:11:56.500Z","id":"96e6f58f","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+{"ts":"2026-11-09T19:11:58.602Z","id":"4d2eb385","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+{"ts":"2026-11-09T19:12:00.704Z","id":"7c63db5a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+{"ts":"2026-11-09T19:12:02.805Z","id":"34c4f3a1","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+{"ts":"2026-11-09T19:12:04.906Z","id":"9f887965","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+{"ts":"2026-11-09T19:12:07.009Z","id":"a5e0f801","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+{"ts":"2026-11-09T19:12:15.705Z","id":"43ca72e6","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+{"ts":"2026-11-09T19:12:17.806Z","id":"e24f6fb4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+{"ts":"2026-11-09T19:12:19.906Z","id":"ba7001c4","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+{"ts":"2026-11-09T19:12:22.007Z","id":"5fc0a032","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+{"ts":"2026-11-09T19:12:24.108Z","id":"8ed13cf7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+{"ts":"2026-11-09T19:12:26.210Z","id":"f69f5b6b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+{"ts":"2026-11-09T19:12:34.912Z","id":"91bd0e95","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+{"ts":"2026-11-09T19:12:37.013Z","id":"8d92d74a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+{"ts":"2026-11-09T19:12:39.114Z","id":"24627890","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+{"ts":"2026-11-09T19:12:41.215Z","id":"7e38b4d8","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+{"ts":"2026-11-09T19:12:43.316Z","id":"a5fe7917","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+{"ts":"2026-11-09T19:12:45.417Z","id":"4d106658","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+{"ts":"2026-11-09T19:12:54.516Z","id":"5521b0dd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+{"ts":"2026-11-09T19:12:56.618Z","id":"6779eae3","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+{"ts":"2026-11-09T19:12:58.720Z","id":"7ad12006","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+{"ts":"2026-11-09T19:13:00.820Z","id":"61afcc88","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+{"ts":"2026-11-09T19:13:02.924Z","id":"bc6c2589","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+{"ts":"2026-11-09T19:13:05.024Z","id":"f0347155","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+{"ts":"2026-11-09T19:13:05.438Z","id":"e61b9dc7","ok":true,"sent":"/setblock 36 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:05.659Z","id":"6c0ca4f2","ok":true,"sent":"/setblock 36 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:05.879Z","id":"d4b77d76","ok":true,"sent":"/setblock 38 64 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:06.100Z","id":"eacb9616","ok":true,"sent":"/setblock 38 64 -60 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:06.321Z","id":"84cf7931","ok":true,"sent":"/setblock 38 64 -59 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:06.542Z","id":"9c92ae92","ok":true,"sent":"/setblock 38 64 -58 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:06.762Z","id":"d7899399","ok":true,"sent":"/setblock 38 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:06.982Z","id":"103d290a","ok":true,"sent":"/setblock 38 65 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:07.204Z","id":"880fb093","ok":true,"sent":"/setblock 38 65 -65 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:07.424Z","id":"fbe854d6","ok":true,"sent":"/setblock 38 65 -64 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:07.645Z","id":"8926e2b7","ok":true,"sent":"/setblock 38 65 -63 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:07.866Z","id":"1db59f4c","ok":true,"sent":"/setblock 38 65 -62 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:08.087Z","id":"3709424c","ok":true,"sent":"/setblock 38 65 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:08.308Z","id":"a6fb4c07","ok":true,"sent":"/setblock 38 65 -60 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:08.529Z","id":"5767df1d","ok":true,"sent":"/setblock 38 65 -59 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:08.749Z","id":"e145159f","ok":true,"sent":"/setblock 38 65 -58 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:08.969Z","id":"cc119863","ok":true,"sent":"/setblock 38 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:09.189Z","id":"e5e9337c","ok":true,"sent":"/setblock 39 64 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:09.410Z","id":"add0994d","ok":true,"sent":"/setblock 39 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:09.631Z","id":"557e2441","ok":true,"sent":"/setblock 39 65 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:09.852Z","id":"3ded20f3","ok":true,"sent":"/setblock 39 66 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:10.072Z","id":"24c722a6","ok":true,"sent":"/setblock 40 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:10.292Z","id":"69b89f7c","ok":true,"sent":"/setblock 40 65 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:10.513Z","id":"9892f758","ok":true,"sent":"/setblock 40 66 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:10.734Z","id":"0d59c162","ok":true,"sent":"/setblock 40 67 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:10.954Z","id":"ea04a72d","ok":true,"sent":"/setblock 41 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:11.174Z","id":"5dfca0a3","ok":true,"sent":"/setblock 41 66 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:11.395Z","id":"096f6cf9","ok":true,"sent":"/setblock 41 67 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:11.615Z","id":"88b2182d","ok":true,"sent":"/setblock 41 67 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:11.836Z","id":"a0c00740","ok":true,"sent":"/setblock 42 64 -60 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:12.057Z","id":"cfe61ce5","ok":true,"sent":"/setblock 42 64 -59 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:12.278Z","id":"38bca5eb","ok":true,"sent":"/setblock 42 64 -58 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:12.499Z","id":"d9d254ca","ok":true,"sent":"/setblock 42 64 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:12.720Z","id":"3936b63a","ok":true,"sent":"/setblock 42 65 -60 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:12.940Z","id":"a4848e3f","ok":true,"sent":"/setblock 42 65 -59 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:13.160Z","id":"4ae99134","ok":true,"sent":"/setblock 42 65 -58 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:13.381Z","id":"95750560","ok":true,"sent":"/setblock 42 65 -57 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:13.602Z","id":"a8ba9ea3","ok":true,"sent":"/setblock 42 66 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:13.823Z","id":"a33f4840","ok":true,"sent":"/setblock 42 67 -66 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:14.044Z","id":"d19593b4","ok":true,"sent":"/setblock 42 67 -65 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:14.264Z","id":"2a249287","ok":true,"sent":"/setblock 42 67 -64 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:14.485Z","id":"2589571e","ok":true,"sent":"/setblock 42 67 -63 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:14.705Z","id":"b71badc7","ok":true,"sent":"/setblock 42 67 -62 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:14.926Z","id":"14bd5e1a","ok":true,"sent":"/setblock 42 67 -61 minecraft:oak_log","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:15.147Z","id":"88017cb7","ok":true,"sent":"/setblock 44 64 -57 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:15.368Z","id":"f056ff17","ok":true,"sent":"/setblock 44 65 -57 minecraft:oak_fence","srv":["Could not set the block"]}
+{"ts":"2026-11-09T19:13:17.719Z","id":"851fdf9a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+{"ts":"2026-11-09T19:13:19.820Z","id":"92dc5e9d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+{"ts":"2026-11-09T19:13:21.920Z","id":"7d647feb","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+{"ts":"2026-11-09T19:13:24.022Z","id":"dc15b88b","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+{"ts":"2026-11-09T19:13:26.123Z","id":"554b36fb","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+{"ts":"2026-11-09T19:13:28.224Z","id":"d3ddf568","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+{"ts":"2026-11-09T19:13:30.524Z","id":"0e1fca03","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+{"ts":"2026-11-09T19:13:32.625Z","id":"9a686014","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+{"ts":"2026-11-09T19:13:34.726Z","id":"df13f480","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+{"ts":"2026-11-09T19:13:36.827Z","id":"8d91e02a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+{"ts":"2026-11-09T19:13:38.927Z","id":"a00acb0d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+{"ts":"2026-11-09T19:13:41.028Z","id":"b5a90712","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+{"ts":"2026-11-09T19:13:43.326Z","id":"7f943c02","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+{"ts":"2026-11-09T19:13:45.427Z","id":"24d6b1ad","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+{"ts":"2026-11-09T19:13:47.530Z","id":"764c5d48","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+{"ts":"2026-11-09T19:13:49.631Z","id":"19b3a7da","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+{"ts":"2026-11-09T19:13:51.732Z","id":"6e9340bd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+{"ts":"2026-11-09T19:13:53.832Z","id":"00f84364","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+{"ts":"2026-11-09T19:13:56.132Z","id":"01c1e872","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,64,-57]}
+{"ts":"2026-11-09T19:13:58.234Z","id":"6c881d2d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[36,65,-57]}
+{"ts":"2026-11-09T19:14:00.335Z","id":"6d232392","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-61]}
+{"ts":"2026-11-09T19:14:02.436Z","id":"4dfc26e7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-60]}
+{"ts":"2026-11-09T19:14:04.536Z","id":"a6284281","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-59]}
+{"ts":"2026-11-09T19:14:06.638Z","id":"bdb30e50","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-58]}
+{"ts":"2026-11-09T19:14:08.932Z","id":"566bc9f9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+{"ts":"2026-11-09T19:14:11.034Z","id":"777f87cf","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+{"ts":"2026-11-09T19:14:13.137Z","id":"9e08868a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+{"ts":"2026-11-09T19:14:15.238Z","id":"80ba9974","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+{"ts":"2026-11-09T19:14:17.340Z","id":"7723a495","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+{"ts":"2026-11-09T19:14:19.441Z","id":"4c7af19c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+{"ts":"2026-11-09T19:14:21.736Z","id":"c8278edf","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+{"ts":"2026-11-09T19:14:23.838Z","id":"662b611e","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+{"ts":"2026-11-09T19:14:25.940Z","id":"6711dd2f","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+{"ts":"2026-11-09T19:14:28.042Z","id":"8edca447","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+{"ts":"2026-11-09T19:14:30.143Z","id":"008c8c4a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+{"ts":"2026-11-09T19:14:32.246Z","id":"59f224b5","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+{"ts":"2026-11-09T19:14:34.538Z","id":"ab1c070b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+{"ts":"2026-11-09T19:14:36.641Z","id":"810960e0","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+{"ts":"2026-11-09T19:14:38.743Z","id":"91f2e74f","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+{"ts":"2026-11-09T19:14:40.843Z","id":"8db53ae7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+{"ts":"2026-11-09T19:14:42.943Z","id":"a8516696","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+{"ts":"2026-11-09T19:14:45.047Z","id":"17d103b3","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+{"ts":"2026-11-09T19:14:47.341Z","id":"7ffc2900","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,64,-57]}
+{"ts":"2026-11-09T19:14:49.441Z","id":"58a70a82","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-66]}
+{"ts":"2026-11-09T19:14:51.543Z","id":"e22214ae","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-65]}
+{"ts":"2026-11-09T19:14:53.644Z","id":"e46c0c64","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-64]}
+{"ts":"2026-11-09T19:14:55.744Z","id":"ee83137a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-63]}
+{"ts":"2026-11-09T19:14:57.847Z","id":"f13f19f8","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[38,65,-62]}
+{"ts":"2026-11-09T19:15:00.144Z","id":"01ceb950","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+{"ts":"2026-11-09T19:15:02.247Z","id":"297b37c5","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+{"ts":"2026-11-09T19:15:04.349Z","id":"38cd6747","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+{"ts":"2026-11-09T19:15:06.450Z","id":"170dd6d6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+{"ts":"2026-11-09T19:15:08.552Z","id":"22fc0aa2","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+{"ts":"2026-11-09T19:15:10.655Z","id":"70566b3e","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+{"ts":"2026-11-09T19:15:12.953Z","id":"5bb0489e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+{"ts":"2026-11-09T19:15:15.055Z","id":"c76120b9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+{"ts":"2026-11-09T19:15:17.157Z","id":"6b61723e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+{"ts":"2026-11-09T19:15:19.259Z","id":"c8166de7","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+{"ts":"2026-11-09T19:15:21.361Z","id":"b8e1397e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+{"ts":"2026-11-09T19:15:23.464Z","id":"5ef3a163","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+{"ts":"2026-11-09T19:15:25.766Z","id":"3174b5c2","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+{"ts":"2026-11-09T19:15:27.869Z","id":"3435074d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+{"ts":"2026-11-09T19:15:29.971Z","id":"9bf8c997","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+{"ts":"2026-11-09T19:15:32.073Z","id":"e04c0cc0","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+{"ts":"2026-11-09T19:15:34.176Z","id":"df28be51","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+{"ts":"2026-11-09T19:15:36.277Z","id":"3efb4e26","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+{"ts":"2026-11-09T19:15:38.576Z","id":"ce91642c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-61]}
+{"ts":"2026-11-09T19:15:40.679Z","id":"741cb449","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-60]}
+{"ts":"2026-11-09T19:15:42.781Z","id":"6f6b8438","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-59]}
+{"ts":"2026-11-09T19:15:44.883Z","id":"f63a0ee5","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-58]}
+{"ts":"2026-11-09T19:15:46.986Z","id":"568fdf3e","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[38,65,-57]}
+{"ts":"2026-11-09T19:15:49.087Z","id":"94854fec","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-61]}
+{"ts":"2026-11-09T19:15:51.399Z","id":"c4e9605c","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+{"ts":"2026-11-09T19:15:53.500Z","id":"25aa0395","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+{"ts":"2026-11-09T19:15:55.601Z","id":"e6afd210","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+{"ts":"2026-11-09T19:15:57.704Z","id":"7ccd053c","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+{"ts":"2026-11-09T19:15:59.807Z","id":"899c246d","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+{"ts":"2026-11-09T19:16:01.909Z","id":"1ac92ca4","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+{"ts":"2026-11-09T19:16:04.213Z","id":"ce6f6aa8","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+{"ts":"2026-11-09T19:16:06.315Z","id":"4703231f","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+{"ts":"2026-11-09T19:16:08.418Z","id":"10000c52","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+{"ts":"2026-11-09T19:16:10.521Z","id":"3dcfc88b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+{"ts":"2026-11-09T19:16:12.625Z","id":"73b5bf63","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+{"ts":"2026-11-09T19:16:14.728Z","id":"092e4c8b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+{"ts":"2026-11-09T19:16:17.032Z","id":"11294202","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+{"ts":"2026-11-09T19:16:19.134Z","id":"4683c667","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+{"ts":"2026-11-09T19:16:21.236Z","id":"6736732a","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+{"ts":"2026-11-09T19:16:23.339Z","id":"5d8f9648","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+{"ts":"2026-11-09T19:16:25.442Z","id":"29d6bcdc","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+{"ts":"2026-11-09T19:16:27.545Z","id":"a22d4b31","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+{"ts":"2026-11-09T19:16:29.847Z","id":"ede792ec","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,64,-57]}
+{"ts":"2026-11-09T19:16:31.950Z","id":"0aaff5e9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[39,65,-61]}
+{"ts":"2026-11-09T19:16:34.052Z","id":"de2f2d3b","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[39,66,-66]}
+{"ts":"2026-11-09T19:16:36.155Z","id":"405db985","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,64,-57]}
+{"ts":"2026-11-09T19:16:38.257Z","id":"56150ebf","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,65,-61]}
+{"ts":"2026-11-09T19:16:40.360Z","id":"ed23ff8b","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[40,66,-61]}
+{"ts":"2026-11-09T19:16:42.662Z","id":"64d40cc5","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+{"ts":"2026-11-09T19:16:44.763Z","id":"8ddac6cc","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+{"ts":"2026-11-09T19:16:46.866Z","id":"5bd677d7","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+{"ts":"2026-11-09T19:16:48.968Z","id":"d3adc5ee","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+{"ts":"2026-11-09T19:16:51.070Z","id":"5e2184d9","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+{"ts":"2026-11-09T19:16:53.172Z","id":"502d46a3","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+{"ts":"2026-11-09T19:16:55.473Z","id":"5499a6d8","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+{"ts":"2026-11-09T19:16:57.575Z","id":"de5f8a2a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+{"ts":"2026-11-09T19:16:59.678Z","id":"5e7abaad","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+{"ts":"2026-11-09T19:17:01.780Z","id":"16cdddc1","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+{"ts":"2026-11-09T19:17:03.882Z","id":"25f6a10c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+{"ts":"2026-11-09T19:17:05.984Z","id":"637635fb","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+{"ts":"2026-11-09T19:17:08.284Z","id":"9e9e98c6","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+{"ts":"2026-11-09T19:17:10.386Z","id":"ab8bb51e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+{"ts":"2026-11-09T19:17:12.488Z","id":"ba4d6889","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+{"ts":"2026-11-09T19:17:14.590Z","id":"b04b4e38","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+{"ts":"2026-11-09T19:17:16.693Z","id":"d0a2e5ec","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+{"ts":"2026-11-09T19:17:18.796Z","id":"de08ba96","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+{"ts":"2026-11-09T19:17:21.095Z","id":"571cfcf3","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[40,67,-66]}
+{"ts":"2026-11-09T19:17:23.197Z","id":"8ba49cca","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,65,-57]}
+{"ts":"2026-11-09T19:17:25.300Z","id":"71e6d933","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,66,-61]}
+{"ts":"2026-11-09T19:17:27.401Z","id":"a2f15f57","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[41,67,-66]}
+{"ts":"2026-11-09T19:17:29.503Z","id":"176a1438","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[41,67,-61]}
+{"ts":"2026-11-09T19:17:31.605Z","id":"02e7fe47","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-60]}
+{"ts":"2026-11-09T19:17:33.907Z","id":"bf534c5d","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+{"ts":"2026-11-09T19:17:36.009Z","id":"5ee4f90c","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+{"ts":"2026-11-09T19:17:38.111Z","id":"9c94d8e1","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+{"ts":"2026-11-09T19:17:40.213Z","id":"84b0d99a","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+{"ts":"2026-11-09T19:17:42.316Z","id":"0fa6456e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+{"ts":"2026-11-09T19:17:44.715Z","id":"0513d926","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+{"ts":"2026-11-09T19:17:46.816Z","id":"35884470","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+{"ts":"2026-11-09T19:17:48.919Z","id":"4905d9f3","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+{"ts":"2026-11-09T19:17:51.021Z","id":"df713d59","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+{"ts":"2026-11-09T19:17:53.123Z","id":"d9975ffd","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+{"ts":"2026-11-09T19:17:55.225Z","id":"88ab383c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+{"ts":"2026-11-09T19:17:57.523Z","id":"e5f377ad","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+{"ts":"2026-11-09T19:17:59.625Z","id":"5d778cd4","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+{"ts":"2026-11-09T19:18:01.726Z","id":"0fbb5599","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+{"ts":"2026-11-09T19:18:03.827Z","id":"4ca5d971","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+{"ts":"2026-11-09T19:18:05.929Z","id":"59209b07","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+{"ts":"2026-11-09T19:18:08.337Z","id":"b1a80d67","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-59]}
+{"ts":"2026-11-09T19:18:10.441Z","id":"c11f8f15","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-58]}
+{"ts":"2026-11-09T19:18:12.544Z","id":"6c0d497a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,64,-57]}
+{"ts":"2026-11-09T19:18:14.646Z","id":"24af0f6a","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-60]}
+{"ts":"2026-11-09T19:18:16.749Z","id":"b7cc1368","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-59]}
+{"ts":"2026-11-09T19:18:18.850Z","id":"5a3a468d","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-58]}
+{"ts":"2026-11-09T19:18:19.274Z","id":"f68e3f18","ok":true,"sent":"/setblock 36 64 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:19.494Z","id":"946ca6c2","ok":true,"sent":"/setblock 36 65 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:19.715Z","id":"67d02ccb","ok":true,"sent":"/setblock 38 64 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:19.936Z","id":"da870a27","ok":true,"sent":"/setblock 38 64 -60 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:20.157Z","id":"37c7eda7","ok":true,"sent":"/setblock 38 64 -59 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:20.377Z","id":"e1401b1e","ok":true,"sent":"/setblock 38 64 -58 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:20.598Z","id":"48a8a484","ok":true,"sent":"/setblock 38 64 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:20.819Z","id":"6b314b51","ok":true,"sent":"/setblock 38 65 -66 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:21.040Z","id":"a7bd9214","ok":true,"sent":"/setblock 38 65 -65 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:21.261Z","id":"a7abc8a1","ok":true,"sent":"/setblock 38 65 -64 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:21.482Z","id":"2437bbe6","ok":true,"sent":"/setblock 38 65 -63 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:21.702Z","id":"ab064bad","ok":true,"sent":"/setblock 38 65 -62 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:21.922Z","id":"18ace730","ok":true,"sent":"/setblock 38 65 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:22.143Z","id":"49db226b","ok":true,"sent":"/setblock 38 65 -60 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:22.364Z","id":"4dd05c5f","ok":true,"sent":"/setblock 38 65 -59 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:22.585Z","id":"e9455585","ok":true,"sent":"/setblock 38 65 -58 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:22.806Z","id":"ff341cc6","ok":true,"sent":"/setblock 38 65 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:23.027Z","id":"eebb2a47","ok":true,"sent":"/setblock 39 64 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:23.248Z","id":"94a630cd","ok":true,"sent":"/setblock 39 64 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:23.468Z","id":"304aa6d5","ok":true,"sent":"/setblock 39 65 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:23.689Z","id":"15ac4f24","ok":true,"sent":"/setblock 39 66 -66 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:23.909Z","id":"25b6cc5b","ok":true,"sent":"/setblock 40 64 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:24.130Z","id":"fc48c09c","ok":true,"sent":"/setblock 40 65 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:24.351Z","id":"9ed75bce","ok":true,"sent":"/setblock 40 66 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:24.572Z","id":"8480b989","ok":true,"sent":"/setblock 40 67 -66 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:24.793Z","id":"b81590a8","ok":true,"sent":"/setblock 41 65 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:25.013Z","id":"92800836","ok":true,"sent":"/setblock 41 66 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:25.233Z","id":"f5307e44","ok":true,"sent":"/setblock 41 67 -66 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:25.454Z","id":"4f2cd959","ok":true,"sent":"/setblock 41 67 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:25.675Z","id":"25fe82ca","ok":true,"sent":"/setblock 42 64 -60 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:25.895Z","id":"8b12b8e9","ok":true,"sent":"/setblock 42 64 -59 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:26.116Z","id":"9518c5a9","ok":true,"sent":"/setblock 42 64 -58 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:26.337Z","id":"91f6293c","ok":true,"sent":"/setblock 42 64 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:26.557Z","id":"a51ff77f","ok":true,"sent":"/setblock 42 65 -60 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:26.777Z","id":"2d4a6d54","ok":true,"sent":"/setblock 42 65 -59 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:26.998Z","id":"a9f27d97","ok":true,"sent":"/setblock 42 65 -58 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:27.219Z","id":"d7f5c416","ok":true,"sent":"/setblock 42 65 -57 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:27.440Z","id":"76a8cd03","ok":true,"sent":"/setblock 42 66 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:27.661Z","id":"3052428d","ok":true,"sent":"/setblock 42 67 -66 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:27.882Z","id":"20d4e8e1","ok":true,"sent":"/setblock 42 67 -65 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:28.103Z","id":"0b36c65e","ok":true,"sent":"/setblock 42 67 -64 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:28.324Z","id":"ec227964","ok":true,"sent":"/setblock 42 67 -63 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:28.545Z","id":"67a9aea4","ok":true,"sent":"/setblock 42 67 -62 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:28.764Z","id":"d400cb74","ok":true,"sent":"/setblock 42 67 -61 minecraft:oak_log","srv":[]}
+{"ts":"2026-11-09T19:18:28.985Z","id":"439d5a1a","ok":true,"sent":"/setblock 44 64 -57 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:29.206Z","id":"8b34e165","ok":true,"sent":"/setblock 44 65 -57 minecraft:oak_fence","srv":[]}
+{"ts":"2026-11-09T19:18:31.560Z","id":"74145e0c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+{"ts":"2026-11-09T19:18:33.662Z","id":"ff296c47","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+{"ts":"2026-11-09T19:18:35.765Z","id":"a2766af6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+{"ts":"2026-11-09T19:18:37.867Z","id":"289d74d9","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+{"ts":"2026-11-09T19:18:39.969Z","id":"611c49bd","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+{"ts":"2026-11-09T19:18:42.072Z","id":"d7112f98","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+{"ts":"2026-11-09T19:18:43.471Z","id":"9e6050de","ok":true,"sent":"/setblock 40 64 -56 minecraft:oak_sign[facing=south]","srv":[]}
+{"ts":"2026-11-09T19:18:49.476Z","id":"afb3abc5","ok":true,"sent":"/data merge block 40 64 -56 {front_text:{messages:['\"ROOF WIND TOOK IT\"','\"WALL WANTS 3 LOGS\"','\"FOLD OPEN SOUTH\"','\"MIND THE PIGS\"'],has_glowing_text:0b,color:\"black\"}}","srv":[]}
+{"ts":"2026-11-09T19:18:51.579Z","id":"f2d71dc9","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,65,-57]}
+{"ts":"2026-11-09T19:18:53.681Z","id":"940b0391","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,66,-61]}
+{"ts":"2026-11-09T19:18:55.782Z","id":"3a1bc6b6","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-66]}
+{"ts":"2026-11-09T19:18:57.884Z","id":"73075e49","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-65]}
+{"ts":"2026-11-09T19:18:59.987Z","id":"d7cd40f1","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-64]}
+{"ts":"2026-11-09T19:19:02.088Z","id":"77c0b753","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-63]}
+{"ts":"2026-11-09T19:19:03.490Z","id":"5c52baff","ok":true,"sent":"/data get block 40 64 -56","srv":[]}
+{"ts":"2026-11-09T19:19:09.596Z","id":"fc90ece9","ok":true,"fileRead":true,"expect":"minecraft:oak_sign[facing=south]","at":[40,64,-56]}
+{"ts":"2026-11-09T19:19:11.997Z","id":"c2f58f83","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+{"ts":"2026-11-09T19:19:14.099Z","id":"063e7491","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+{"ts":"2026-11-09T19:19:16.200Z","id":"7096800d","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+{"ts":"2026-11-09T19:19:18.301Z","id":"7b77efc5","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+{"ts":"2026-11-09T19:19:20.404Z","id":"5fd55c84","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+{"ts":"2026-11-09T19:19:22.506Z","id":"cfeb5358","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+{"ts":"2026-11-09T19:19:23.705Z","id":"a67ff801","ok":true,"sent":"/summon minecraft:pig 40 67 -64","srv":[]}
+{"ts":"2026-11-09T19:19:27.307Z","id":"06083512","ok":true,"sent":"/summon minecraft:pig 39 67 -65","srv":[]}
+{"ts":"2026-11-09T19:19:33.215Z","id":"f00ddeec","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[42,67,-62]}
+{"ts":"2026-11-09T19:19:35.317Z","id":"86f5131c","ok":true,"fileRead":true,"expect":"minecraft:oak_log","at":[42,67,-61]}
+{"ts":"2026-11-09T19:19:37.421Z","id":"dc5d2e53","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,64,-57]}
+{"ts":"2026-11-09T19:19:39.522Z","id":"3fc5dfae","ok":true,"fileRead":true,"expect":"minecraft:oak_fence","at":[44,65,-57]}
+{"ts":"2026-11-09T19:19:41.624Z","id":"0fe04744","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,65,-57]}
+{"ts":"2026-11-09T19:19:43.728Z","id":"a881156b","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,65,-57]}
+{"ts":"2026-11-09T19:19:44.929Z","id":"c0429ead","ok":true,"sent":"/summon minecraft:chicken 41 67 -63","srv":[]}
+{"ts":"2026-11-09T19:19:49.035Z","id":"e0c2ad83","ok":true,"sent":"/save-all flush","srv":[]}
+{"ts":"2026-11-09T19:19:52.442Z","id":"b4a49caa","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+{"ts":"2026-11-09T19:19:54.545Z","id":"9e84bd96","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+{"ts":"2026-11-09T19:19:56.648Z","id":"723fba66","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+{"ts":"2026-11-09T19:19:58.750Z","id":"d2b5fc3b","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+{"ts":"2026-11-09T19:20:00.853Z","id":"f209b1ce","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+{"ts":"2026-11-09T19:20:02.956Z","id":"7a14b654","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+{"ts":"2026-11-09T19:20:13.264Z","id":"2a8f1eaf","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-57]}
+{"ts":"2026-11-09T19:20:15.365Z","id":"781de247","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-60]}
+{"ts":"2026-11-09T19:20:17.467Z","id":"fa4adc5e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,63,-59]}
+{"ts":"2026-11-09T19:20:19.570Z","id":"fd5ea266","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,66,-63]}
+{"ts":"2026-11-09T19:20:21.672Z","id":"fcf9464e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,66,-63]}
+{"ts":"2026-11-09T19:20:23.774Z","id":"6b25ef30","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,68,-64]}
+{"ts":"2026-11-09T19:20:26.080Z","id":"d8d5345f","ok":true,"fileRead":true,"expect":"minecraft:oak_sign","at":[40,64,-56]}
+{"ts":"2026-11-09T19:20:31.286Z","id":"8a05605a","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+{"ts":"2026-11-09T19:20:33.388Z","id":"9721325a","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+{"ts":"2026-11-09T19:20:35.491Z","id":"6c7aede9","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+{"ts":"2026-11-09T19:20:37.594Z","id":"956c6b9e","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+{"ts":"2026-11-09T19:20:39.696Z","id":"91fa05bc","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+{"ts":"2026-11-09T19:20:42.099Z","id":"d9abef1a","ok":true,"fileRead":true,"expect":"minecraft:oak_sign[facing=south]","at":[40,64,-56]}
+{"ts":"2026-11-09T19:20:46.908Z","id":"b4233875","ok":true,"fileRead":true,"expect":"minecraft:air","at":[38,66,-66]}
+{"ts":"2026-11-09T19:20:49.012Z","id":"00b3f194","ok":true,"fileRead":true,"expect":"minecraft:air","at":[39,67,-66]}
+{"ts":"2026-11-09T19:20:51.113Z","id":"4b26755c","ok":true,"fileRead":true,"expect":"minecraft:air","at":[40,68,-66]}
+{"ts":"2026-11-09T19:20:53.217Z","id":"d052ea6c","ok":true,"fileRead":true,"expect":"minecraft:air","at":[41,68,-66]}
+{"ts":"2026-11-09T19:20:55.320Z","id":"a3798500","ok":true,"fileRead":true,"expect":"minecraft:air","at":[42,68,-66]}
+{"ts":"2026-11-09T19:21:08.630Z","id":"2333293e","ok":true,"sent":"/execute if entity @e[type=minecraft:pig,x=40,y=66,z=-64,distance=..6] run scoreboard players set #chk chk 1","srv":[]}
+{"ts":"2026-11-09T19:21:12.032Z","id":"d617c27a","ok":true,"sent":"/save-all flush","srv":[]}
+{"ts":"2026-11-09T19:21:17.438Z","id":"114f8bf7","ok":true,"sent":"/execute if entity @e[type=minecraft:chicken,x=41,y=66,z=-63,distance=..6] run scoreboard players set #chk chk 1","srv":[]}
+{"ts":"2026-11-09T19:21:22.045Z","id":"3079ef40","ok":true,"sent":"/save-all flush","srv":[]}
+{"ts":"2026-11-09T19:21:40.278Z","id":"d8bad3a4","ok":true,"sent":"/execute positioned 40 66 -64 if entity @e[type=minecraft:pig,distance=..8] run scoreboard players set #chk chk 3","srv":[]}
+{"ts":"2026-11-09T19:21:45.287Z","id":"6558d3d2","ok":true,"sent":"/save-all flush","srv":[]}
+{"ts":"2026-11-09T19:21:52.697Z","id":"94dc6328","ok":true,"sent":"/execute positioned 41 66 -63 if entity @e[type=minecraft:chicken,distance=..8] run scoreboard players set #chk chk 5","srv":[]}
+{"ts":"2026-11-09T19:21:57.701Z","id":"57db569c","ok":true,"sent":"/save-all flush","srv":[]}
+{"ts":"2026-11-09T19:22:08.819Z","id":"06619ec9","ok":true,"sent":"/execute positioned 40 66 -64 if entity @e[type=minecraft:pig,distance=..8] run tellraw Gallery {\"text\":\"PIGPRESENT\"}","srv":[]}
+{"ts":"2026-11-09T19:22:40.854Z","id":"3152cdea","ok":true,"sent":"/setblock 40 64 -56 minecraft:oak_sign[facing=south]","srv":[]}
+{"ts":"2026-11-09T19:23:02.179Z","id":"3b558c40","ok":true,"sent":"/setblock 40 64 -56 minecraft:oak_sign[facing=south]","srv":[]}
+{"ts":"2026-11-09T19:23:08.688Z","id":"50ed8395","ok":true,"fileRead":true,"expect":"minecraft:oak_sign","at":[40,64,-56]}
+{"ts":"2026-11-09T19:23:19.002Z","id":"0818488a","ok":true,"sent":"/summon minecraft:pig 40 67 -64","srv":[]}
+{"ts":"2026-11-09T19:23:22.204Z","id":"9437a5eb","ok":true,"sent":"/execute if entity @e[type=minecraft:pig,x=40,y=66,z=-64,distance=..6] run scoreboard players set #chk chk 1","srv":[]}
+{"ts":"2026-11-09T19:23:27.012Z","id":"77973023","ok":true,"sent":"/save-all flush","srv":[]}
+{"ts":"2026-11-09T19:23:35.825Z","id":"729a9b94","ok":true,"sent":"/summon minecraft:pig 39 67 -65","srv":[]}
+{"ts":"2026-11-09T19:23:39.027Z","id":"a400431c","ok":true,"sent":"/summon minecraft:chicken 41 67 -63","srv":[]}
+{"ts":"2026-11-09T19:23:59.056Z","id":"575ca798","ok":true,"sent":"/give Gallery minecraft:stick 1","srv":[]}
+{"ts":"2026-11-09T19:24:02.661Z","id":"a0ff8fcf","ok":true,"sent":"/kill @e[type=minecraft:pig,x=40,y=66,z=-64,distance=..8]","srv":[]}
+{"ts":"2026-11-09T19:24:43.024Z","id":"5b5b250b","ok":true,"sent":"/tp Gallery 40.5 66 -60.5","srv":[]}
+{"ts":"2026-11-09T19:25:01.556Z","id":"4470b2f5","ok":true,"spawned":true,"pos":{"x":30.5,"y":82,"z":-87.5}}
+{"ts":"2026-11-09T19:25:09.072Z","id":"dbb6ea07","ok":true,"sent":"/say BUILDER-ALIVE-CHECK","srv":[]}
+{"ts":"2026-11-09T19:25:15.585Z","id":"ea98b656","ok":true,"bye":true}

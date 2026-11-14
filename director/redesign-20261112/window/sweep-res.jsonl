@@ -1,0 +1,13 @@
+{"ts":"2026-11-13T10:50:24.533Z","id":"spawn","ok":true,"pos":{"x":37.5,"y":66,"z":-99.5}}
+{"ts":"2026-11-13T10:50:33.063Z","id":"s0","ok":true,"sent":"/tp MapProbe4 64 78 -92","srv":["Teleported MapProbe4 to 64.500000, 78.000000, -91.500000"]}
+{"ts":"2026-11-13T10:50:34.564Z","id":"s1","ok":true,"sent":"/data get entity @e[type=minecraft:zombie,x=55,y=50,z=-105,dx=20,dy=30,dz=30,limit=1,sort=nearest] Pos","srv":["Zombie has the following entity data: [66.5825973623149d, 62.0d, -90.30000001192093d]"]}
+{"ts":"2026-11-13T10:50:35.765Z","id":"s2","ok":true,"sent":"/execute if entity @e[type=minecraft:zombie,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-ZOMBIE-PRESENT","srv":["[MapProbe4] SWEEP-ZOMBIE-PRESENT"]}
+{"ts":"2026-11-13T10:50:36.965Z","id":"s3","ok":true,"sent":"/execute if entity @e[type=minecraft:creeper,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-CREEPER-PRESENT","srv":[]}
+{"ts":"2026-11-13T10:50:38.166Z","id":"s4","ok":true,"sent":"/execute if entity @e[type=minecraft:skeleton,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-SKELETON-PRESENT","srv":[]}
+{"ts":"2026-11-13T10:50:39.366Z","id":"s5","ok":true,"sent":"/execute if entity @e[type=minecraft:spider,x=55,y=50,z=-105,dx=20,dy=30,dz=30] run say SWEEP-SPIDER-PRESENT","srv":[]}
+{"ts":"2026-11-13T10:50:40.568Z","id":"s6","ok":true,"sent":"/execute if entity @e[type=minecraft:pig,x=36,y=50,z=-120,dx=60,dy=30,dz=60] run say SWEEP-PIG-PRESENT","srv":[]}
+{"ts":"2026-11-13T10:51:00.666Z","id":"g1","ok":true,"sent":"/summon minecraft:pig 66.5 62 -90.5","srv":["Summoned new Pig"]}
+{"ts":"2026-11-13T10:51:02.168Z","id":"g2","ok":true,"sent":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Pos","srv":["Pig has the following entity data: [66.44999998807907d, 63.10000002384186d, -91.20171232585429d]"]}
+{"ts":"2026-11-13T10:51:03.669Z","id":"g3","ok":true,"sent":"/data get entity @e[type=minecraft:pig,limit=1,sort=nearest] Health","srv":["Pig has the following entity data: 10.0f"]}
+{"ts":"2026-11-13T10:51:06.170Z","id":"g4","ok":true,"sent":"/save-all flush","srv":["Saving the game (this may take a moment!)","Saved the game","[MagnusandMouse: Teleported MagnusandMouse to 58.600000, 64.200000, -88.600000]"]}
+{"ts":"2026-11-13T10:51:34.681Z","id":"z9","ok":true,"bye":true}

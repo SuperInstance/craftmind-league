@@ -1,0 +1,9 @@
+PASS  W1 weather term: ASSERT_WEATHER rows exist
+PASS  W1 weather landed: no WEATHER_HOLD_LOST notify
+PASS  W1 no park
+PASS  W2 no weather term: zero ASSERT_WEATHER rows
+PASS  W3 unlanded: ASSERT_WEATHER attempted >= 3 times
+PASS  W3 unlanded: WEATHER_HOLD_LOST notified
+PASS  W3 unlanded: STILL NO PARK (weather is not a park trigger)
+
+WEATHER-DAY17 FIXTURE: 7 PASS / 0 FAIL

@@ -1,0 +1,20 @@
+PASS  guard span present in driver source
+PASS  arm: first stone dig permitted
+PASS  arm: entry recorded = stance feet level (63)
+PASS  arm: trace row dig-guard-arm filed
+PASS  arm: cap = entry-2 (61)
+PASS  at-cap: dig with top == cap (61) permitted
+PASS  below-cap: dig with top 60 < cap 61 refused
+PASS  below-cap: refusal carries a truthful reason naming entry + cap
+PASS  below-cap: trace row dig-guard filed with target + entry + cap
+PASS  lateral: dig at the capped level (top 61) permitted
+PASS  armed: a dirt dig below cap is also refused (the hole does not care what it is made of)
+PASS  new-stance: stone dig >6 blocks from the arm point re-arms
+PASS  new-stance: entry now 67, cap 65
+PASS  new-stance: the NEW cap binds (top 64 < 65 refused)
+PASS  disarm: with read-back cobble >= 8 the same dig is permitted
+PASS  disarm: trace row dig-guard-disarm filed (count-closed)
+PASS  wiring: dig branch calls digGuardDig before prims.digBlock
+PASS  wiring: refusal returns before execution (dg.refuse early-return present)
+
+DIG-GUARD FIXTURE: 18 PASS / 0 FAIL

@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-57-49-496Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T19:57:49.564Z",
+ "parent": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-56-52-699Z.js",
+ "rationale": "The previous script had several issues: it didn't properly handle the spawn protection constraint, failed to place the crafting table before crafting the pickaxe, and didn't ensure sufficient resources were gathered before attempting recipes. The evidence shows that the bot had oak_planks but no crafting_table or wooden_pickaxe, indicating the table placement failed or wasn't attempted. I've revised the script to ensure proper resource gathering, correct placement order, and better state checking.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T19:57:49.482+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 23.445,
+  "prompt_tokens": 4886,
+  "completion_tokens": 1227,
+  "total_tokens": 6113
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

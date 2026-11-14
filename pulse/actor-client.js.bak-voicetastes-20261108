@@ -1,0 +1,309 @@
+'use strict';
+/**
+ * actor-client.js — CODY'S SYSTEM-2 ACTOR (First Casting, step 3;
+ * design of record: rolling-perception-work/casting/
+ * CASTING-CENSUS-AND-DESIGN-2026-11-07.md; declared in
+ * pulse/ledger.jsonl: casting-fire-20261107).
+ *
+ * A small resident model (Qwen3-0.6B on :8311) reached ONLY through
+ * the league governor (identity league-cody-actor, upstream override
+ * to :8311) supplies what the character loop's reflexes cannot:
+ *   - narration lines written from live loop state (the loop's
+ *     template lines remain the fallback on ANY actor failure —
+ *     silence degrades, never blocks), and
+ *   - a bounded re-ranking of the open project list (relocate, while
+ *     open, is never re-ranked away; done projects are never picked;
+ *     the loop applies the ranking, the actor never drives).
+ * On a slow tick (~75 s) plus event beats (milestone, flee, death;
+ * min spacing 30 s) it also works the System-3 seam: it FILES
+ * consults to the GLM book (commons/consults/glm.jsonl) on the loop's
+ * stuck / project-complete hooks (cap 2 per rolling hour) and
+ * CONSUMES answers when they land (one narration quote + a recorded
+ * fact; a suggestion is never evidence — only the world confirms).
+ *
+ * Enable gate: CODY_ACTOR=1 in the process env, OR the file
+ * pulse/actor-on.flag exists (checked every beat). The flag-file path
+ * exists so the flip needs no process restart while another lane owns
+ * Cody's restarts. Kill: remove the flag / relaunch without the env.
+ */
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+
+const PULSE = '/home/caseydigennaro/craftmind-league/pulse';
+const FLAG_PATH = path.join(PULSE, 'actor-on.flag');
+const BOOK_PATH = '/home/caseydigennaro/craftmind-league/commons/consults/glm.jsonl';
+const SEEN_PATH = path.join(PULSE, 'actor-consults-seen.json');
+const GOVERNOR_URL = 'http://127.0.0.1:8642/v1/chat/completions';
+const GOVERNOR_KEY = 'league-cody-actor';
+const MODEL = 'qwen3-0.6b-actor';
+const CITIZEN = 'cody';
+const PROJECT_IDS = ['relocate', 'pickaxe', 'pad', 'hut', 'chest', 'pen'];
+const BEAT_MS = 75000;
+const BEAT_MIN_SPACING_MS = 30000;
+const HTTP_TIMEOUT_MS = 25000;
+const CONSULT_CAP_PER_HOUR = 2;
+
+const rt = {
+  started: false,
+  beating: false,
+  beats: 0,
+  failures: 0,
+  lastBeatAt: 0,
+  lastOkAt: 0,
+  pendingLine: null,      // { text, at }
+  pendingFromLibrary: false,
+  lastRank: null,         // [ids]
+  lastLineSpoken: '',
+  eventDue: false,
+  consultsFiled: 0,
+  answersConsumed: 0,
+  libraryFacts: [],       // last 5 {ts, question, excerpt}
+  seenAnswers: new Set(),
+  hooks: null,            // { sayDirect(line), context(), ledger(entry) }
+  bot: null,
+};
+
+function nowIso() { return new Date().toISOString(); }
+function log(...a) { console.log('[ACTOR]', ...a); }
+
+function enabled() {
+  if (process.env.CODY_ACTOR === '1') return true;
+  try { return fs.existsSync(FLAG_PATH); } catch { return false; }
+}
+
+// ── governor call (Content-Length set explicitly — this league has
+//    the scars from chunked bodies through the governor) ────────────
+function chatComplete(messages, maxTokens) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      model: MODEL,
+      messages,
+      temperature: 0.7,
+      max_tokens: maxTokens || 110,
+      // Measured on this box (2026-11-07): Qwen3's default thinking
+      // mode spends the whole 110-token budget in reasoning_content
+      // and returns empty content. The actor needs the answer, not
+      // the deliberation — thinking OFF is part of the casting.
+      chat_template_kwargs: { enable_thinking: false },
+    });
+    const req = http.request(GOVERNOR_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        'Authorization': 'Bearer ' + GOVERNOR_KEY,
+      },
+      timeout: HTTP_TIMEOUT_MS,
+    }, (res) => {
+      let data = '';
+      res.on('data', (c) => { data += c; });
+      res.on('end', () => {
+        if (res.statusCode !== 200) return reject(new Error('governor ' + res.statusCode + ': ' + data.slice(0, 160)));
+        try {
+          const j = JSON.parse(data);
+          const text = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+          if (!text) return reject(new Error('empty completion'));
+          resolve(text);
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on('timeout', () => { req.destroy(new Error('actor call timeout')); });
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+// ── consult book ─────────────────────────────────────────────────────
+function readBook() {
+  try {
+    return fs.readFileSync(BOOK_PATH, 'utf8').split('\n').filter(Boolean)
+      .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+  } catch { return []; }
+}
+function appendBook(rec) {
+  try { fs.appendFileSync(BOOK_PATH, JSON.stringify(rec) + '\n'); return true; } catch (e) { log('book append failed:', e.message); return false; }
+}
+function loadSeen() {
+  try { rt.seenAnswers = new Set(JSON.parse(fs.readFileSync(SEEN_PATH, 'utf8'))); } catch { rt.seenAnswers = new Set(); }
+}
+function saveSeen() {
+  try { fs.writeFileSync(SEEN_PATH, JSON.stringify([...rt.seenAnswers])); } catch {}
+}
+function contextDigest(ctx) {
+  if (!ctx) return 'state unknown';
+  const inv = Object.entries(ctx.inventory || {}).map(([k, v]) => v + ' ' + k).join(', ') || 'empty hands';
+  return ('at (' + ctx.pos.x + ', ' + ctx.pos.y + ', ' + ctx.pos.z + '), health ' + ctx.health +
+    ', food ' + ctx.food + ', intent: ' + ctx.intent + ' (project ' + ctx.project + ', step ' + ctx.step +
+    '), carrying: ' + inv + ', completed so far: ' + ((ctx.milestones || []).join(', ') || 'nothing yet') +
+    ', homestead anchor at (64, 67, -93), world spawn at (32, 70, -96), spawn-protection radius 16 (digs inside it are silently cancelled)');
+}
+function fileConsult(kind, question, ctx, opts) {
+  const test = !!(opts && opts.test);
+  if (!test) {
+    const hourAgo = Date.now() - 3600000;
+    const recent = readBook().filter((r) => r.citizen === CITIZEN && r.kind === 'consult' && !r.test && new Date(r.ts).getTime() > hourAgo).length;
+    if (recent >= CONSULT_CAP_PER_HOUR) { log('consult cap reached; not filing', kind); return null; }
+  }
+  const id = CITIZEN + '-' + Date.now().toString(36) + '-' + Math.floor(Math.random() * 1296).toString(36);
+  const rec = {
+    id, type: 'consult', citizen: CITIZEN, community: 'glm', ts: nowIso(), kind,
+    question, context_digest: contextDigest(ctx), status: 'open',
+    filedBy: test ? 'operator-test' : 'cody-character-loop', test,
+  };
+  if (!appendBook(rec)) return null;
+  rt.consultsFiled++;
+  log('consult filed', id, kind, test ? '(test)' : '');
+  if (rt.hooks && rt.hooks.ledger) rt.hooks.ledger({ ts: nowIso(), kind: 'actor-consult-filed', id: 'actor-consult-' + id, what: 'Actor filed a GLM consult (' + kind + (test ? ', operator test' : '') + '): ' + question.slice(0, 300), class: 'character' });
+  return id;
+}
+function pollAnswers() {
+  const book = readBook();
+  const fresh = [];
+  for (const r of book) {
+    if (r.type !== 'answer' || r.citizen !== CITIZEN || rt.seenAnswers.has(r.id)) continue;
+    rt.seenAnswers.add(r.id);
+    fresh.push(r);
+  }
+  if (fresh.length) saveSeen();
+  return fresh;
+}
+function firstSentence(text) {
+  const t = String(text || '').replace(/\s+/g, ' ').trim();
+  const m = t.match(/^[^.!?]{10,180}[.!?]/);
+  return (m ? m[0] : t.slice(0, 180)).trim();
+}
+function consumeAnswers() {
+  const fresh = pollAnswers();
+  for (const r of fresh) {
+    rt.answersConsumed++;
+    if (r.status === 'answered' && r.answer) {
+      const excerpt = firstSentence(r.answer);
+      rt.libraryFacts.push({ ts: r.ts, question: String(r.question || '').slice(0, 140), excerpt });
+      if (rt.libraryFacts.length > 5) rt.libraryFacts.shift();
+      rt.pendingLine = { text: ('The library says: ' + excerpt).slice(0, 170), at: Date.now() };
+      rt.pendingFromLibrary = true;
+      log('consult answer consumed', r.id, '->', rt.pendingLine.text.slice(0, 90));
+      if (rt.hooks && rt.hooks.ledger) rt.hooks.ledger({ ts: nowIso(), kind: 'actor-consult-answer', id: 'actor-answer-' + r.id, what: 'GLM consult answer consumed by the actor (narration quote queued; fact recorded; suggestion only — world evidence still decides): ' + String(r.answer).slice(0, 400), class: 'character' });
+    } else {
+      log('consult closed unanswered', r.id, '(silence is a legal answer)');
+      if (rt.hooks && rt.hooks.ledger) rt.hooks.ledger({ ts: nowIso(), kind: 'actor-consult-unanswered', id: 'actor-unanswered-' + r.id, what: 'GLM consult ' + r.id + ' closed unanswered after driver attempts; the actor notes it and moves on.', class: 'character' });
+    }
+  }
+  return fresh.length;
+}
+
+// ── the beat ─────────────────────────────────────────────────────────
+function buildPrompt(ctx) {
+  const open = (ctx.openProjects || []).map((p) => p.id).join(', ') || 'none';
+  const sys = 'You are Cody, a Minecraft player building a small homestead. You talk like a player: first person, plain, brief, a little dry humour. You never mention AI, models, prompts, or being a character in a system.';
+  const user =
+    'Your situation: ' + contextDigest(ctx) + '\n' +
+    'Open projects (not yet done): ' + open + '. You are currently working on: ' + (ctx.project || 'none') + '.\n' +
+    'Reply with EXACTLY two lines and nothing else:\n' +
+    'LINE: <one short sentence, at most 18 words, saying what you are doing or thinking right now>\n' +
+    'RANK: <the open project ids in the order you would tackle them, comma-separated>';
+  return [{ role: 'system', content: sys }, { role: 'user', content: user }];
+}
+function parseBeat(text) {
+  const lm = text.match(/LINE:\s*(.+)/i);
+  const rm = text.match(/RANK:\s*(.+)/i);
+  let line = null, rank = null;
+  if (lm) {
+    line = lm[1].trim().replace(/^["']|["']$/g, '').replace(/\s+/g, ' ');
+    if (line.length > 170) line = line.slice(0, 170);
+    if (line.length < 3 || /http|www\./i.test(line)) line = null;
+  }
+  if (rm) {
+    rank = rm[1].toLowerCase().split(/[,\s]+/).map((s) => s.trim()).filter((s) => PROJECT_IDS.includes(s));
+    rank = [...new Set(rank)];
+    if (!rank.length) rank = null;
+  }
+  return { line, rank };
+}
+async function beat(reason) {
+  if (rt.beating || !rt.hooks || !rt.bot || !rt.bot.entity) return;
+  if (Date.now() - rt.lastBeatAt < BEAT_MIN_SPACING_MS && reason === 'tick') return;
+  rt.beating = true;
+  try {
+    consumeAnswers();
+    const ctx = rt.hooks.context();
+    const text = await chatComplete(buildPrompt(ctx), 110);
+    const { line, rank } = parseBeat(text);
+    rt.beats++;
+    rt.lastBeatAt = Date.now();
+    rt.lastOkAt = Date.now();
+    if (rank) rt.lastRank = rank;
+    if (line) {
+      rt.pendingLine = { text: line, at: Date.now() };
+      rt.pendingFromLibrary = false;
+      log('beat ok (' + reason + '):', line, '| rank:', rank ? rank.join('>') : '(none)');
+      if (rt.hooks.sayDirect && Date.now() - (rt.hooks.lastChatAt ? rt.hooks.lastChatAt() : 0) > 30000) {
+        rt.hooks.sayDirect(line);
+        rt.pendingLine = null;
+      }
+    } else {
+      log('beat ok but no usable LINE; raw:', text.slice(0, 120).replace(/\n/g, ' / '));
+    }
+  } catch (e) {
+    rt.failures++;
+    rt.lastBeatAt = Date.now();
+    log('beat failed (' + reason + '):', e.message, '— template narration continues');
+  } finally {
+    rt.beating = false;
+  }
+}
+
+// ── public surface used by character-plugin.js ───────────────────────
+function start(bot, hooks) {
+  if (rt.started) return;
+  rt.started = true;
+  rt.bot = bot;
+  rt.hooks = hooks;
+  loadSeen();
+  const iv = setInterval(() => {
+    if (!enabled()) return;
+    if (rt.eventDue) { rt.eventDue = false; beat('event'); }
+    else beat('tick');
+  }, BEAT_MS);
+  if (iv.unref) iv.unref();
+  // First beat shortly after arming (still gated), so the flip is
+  // visible in the feed within a minute, not a full tick later.
+  setTimeout(() => { if (enabled()) beat('arm'); }, 20000);
+  log('actor client armed (gate:', process.env.CODY_ACTOR === '1' ? 'env' : 'flag-file', ')');
+}
+function noteEvent(kind) { if (enabled()) rt.eventDue = true; log('actor event noted:', kind); }
+function takeLine() {
+  if (!rt.pendingLine) return null;
+  if (Date.now() - rt.pendingLine.at > 120000) { rt.pendingLine = null; return null; }
+  const t = rt.pendingLine.text;
+  rt.pendingLine = null;
+  return t;
+}
+function getRank() { return rt.lastRank; }
+function fileStuck(projectId, title, ctx) {
+  return fileConsult('stuck',
+    'I am Cody, a Minecraft citizen building a homestead. I have been stuck on the project "' + title + '" for over ten minutes with no measurable progress. What should I try differently? Practical steps only, at most 200 words.',
+    ctx);
+}
+function fileProjectComplete(projectId, title, ctx) {
+  return fileConsult('project-complete',
+    'I am Cody, a Minecraft citizen building a homestead. I just finished the project "' + title + '". What should I build, improve, or name next for my settlement? At most 200 words, practical and specific.',
+    ctx);
+}
+function stats() {
+  return {
+    enabled: enabled(),
+    beats: rt.beats,
+    failures: rt.failures,
+    lastBeatAt: rt.lastBeatAt ? new Date(rt.lastBeatAt).toISOString() : null,
+    lastLine: rt.pendingLine ? rt.pendingLine.text : null,
+    lastRank: rt.lastRank,
+    consultsFiled: rt.consultsFiled,
+    answersConsumed: rt.answersConsumed,
+    libraryFacts: rt.libraryFacts,
+  };
+}
+
+module.exports = { start, enabled, takeLine, getRank, noteEvent, fileStuck, fileProjectComplete, stats, _fileConsult: fileConsult, _contextDigest: contextDigest };

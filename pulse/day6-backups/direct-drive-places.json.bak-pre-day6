@@ -1,0 +1,87 @@
+[
+ {
+  "name": "the pen",
+  "note": "The fenced pen west of home; this spot is its east gate, the way in and out, facing home. You killed a pig at its fence line and ate; you dug its gate for a way out and put a gate back. Inside on day 4's waking: the cow pair and two chickens. Pigs would not stay in it — they wander the home bench loose instead.",
+  "seeded": "day4-reseed: gate edge (64,67,-101)",
+  "visits": 17,
+  "x": 64,
+  "y": 67,
+  "z": -101,
+  "lastSeen": "2026-11-09T09:20:04.265Z"
+ },
+ {
+  "name": "your crafting table at the anchor",
+  "note": "Your table stands on the home shoulder by the anchor (64, 67, -93). You placed it on day 1 and worked at it on day 2. On day-4's waking: the wheat was ripe — four yellow plants at the patch's home-side edge; the pen holds the cow pair and two chickens; the pigs would not stay penned and wander the home bench loose.",
+  "seeded": "day2-trace c107-108",
+  "visits": 1915,
+  "x": 64,
+  "y": 67,
+  "z": -94,
+  "lastSeen": "2026-11-09T14:42:09.335Z"
+ },
+ {
+  "name": "the wheat patch",
+  "note": "A little wheat patch on farmland east of home, water in a trench through its middle. This spot is a wheat plant itself, at the home-side edge of the patch — the plants stand at (65,-95), (65,-96), (65,-97) and (67,-97). On day 4's waking all four were ripe and yellow. Dig the PLANTS, not the middle: the middle is the water trench.",
+  "seeded": "day4-reseed: plant cell (65,67,-95), census 2026-11-09T10:14Z + restock verify",
+  "visits": 16,
+  "x": 65,
+  "y": 67,
+  "z": -95,
+  "lastSeen": "2026-11-09T10:56:44.207Z"
+ },
+ {
+  "name": "the dip",
+  "note": "The low bowl south-east of home. Broken, steppy ground; you have been stuck in it more than once and the walker lies about arriving there. Cross it only with a plan, or not at all.",
+  "seeded": "day2-trace passim",
+  "visits": 40,
+  "x": 74,
+  "y": 64,
+  "z": -100
+ },
+ {
+  "name": "your stone pit",
+  "note": "YOUR worked pit at home — you dug it on day 4 hunting furnace stone, and its floor is where the stone is. Bounds: columns (65..66, -92), floor at y63, a few blocks deep below the pad. THE WAY OUT IS YOUR OWN STAIR: the dirt stair you built against its west side, up to (64, 66, -92), and from there onto the pad. You ended day 4 standing at its floor beside that stair, one climb short. This pit is not a trap and not the pocket — it is a place you work: down the stair to dig stone, up the stair to get out.",
+  "seeded": "day5: pit as worked place with his stair, from day-4 trace close (final save (65.31,63,-92.52); stair dirt placed (64,65,-92) and (64,66,-92) by Cody, day-4 trace)",
+  "visits": 2,
+  "x": 65,
+  "y": 63,
+  "z": -92,
+  "lastSeen": "2026-11-09T12:11:35.729Z"
+ },
+ {
+  "name": "a gate in a fence line",
+  "x": 65,
+  "y": 67,
+  "z": -100,
+  "note": "You found this yourself.",
+  "visits": 7,
+  "lastSeen": "2026-11-09T09:19:20.946Z"
+ },
+ {
+  "name": "your crafting table",
+  "x": 77,
+  "y": 64,
+  "z": -98,
+  "note": "You found this yourself — it is the crafting table YOU placed in the pocket yesterday while hunting stone. It stands in the place that held you.",
+  "visits": 82,
+  "lastSeen": "2026-11-09T09:57:40.565Z"
+ },
+ {
+  "name": "the pocket that held me",
+  "note": "The low pocket in the dip, south-east of home — this spot is its mouth, the lip you cross to drop in. Yesterday it held you for an hour while you hunted furnace stone, and when the spiders and the bow skeleton came, the old flee could not get you out: you died there four times and lost everything you carried. Your table still stands in its depths at (77, 64, -98). The ground in there is broken steps; the only ways out are short hops, up and over the lip. You may refuse this place. Stone exists elsewhere.",
+  "seeded": "day4-reseed: pocket mouth (73,66,-96), from day-3 trace + day-4 flee test",
+  "visits": 1,
+  "x": 73,
+  "y": 66,
+  "z": -96
+ },
+ {
+  "name": "the respawn country",
+  "note": "Bare ground far west of home, where the dead wake. You woke here on day 4, fed and empty-handed. Home is EAST of here, roughly thirty blocks: your table, your pen, your wheat. You have never walked this way in this body — your memory of home must carry you.",
+  "seeded": "day4-reseed: wake site (34.5,64,-94.5), day-3 close save",
+  "visits": 1,
+  "x": 34,
+  "y": 64,
+  "z": -94
+ }
+]

@@ -1,0 +1,4 @@
+[TRIAL] trial-S1-2026-11-07T21-52-39-085Z starting; window 15 min; candidate /home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T21-52-07-809Z.js
+[TRIAL] Cody up for trial: pos {"x":26.5,"y":73,"z":-93.3} stage S1
+[TRIAL] trial-S1-2026-11-07T21-52-39-085Z verdict FAIL {"craftingTable":true,"woodenPickaxe":false}
+[TRIAL] Cody relaunched on active set: state feed live

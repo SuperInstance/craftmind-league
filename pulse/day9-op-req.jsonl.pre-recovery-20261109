@@ -1,0 +1,6 @@
+{"cmd": "give", "target": "Cody", "item": "minecraft:cooked_porkchop", "count": 1, "id": "selftest-ef41ca74"}
+{"cmd": "give", "target": "Cody", "item": "minecraft:cooked_porkchop", "count": 32, "id": "feed-6de5d5e2"}
+{"cmd": "chat", "text": "/tp Cody 60.5 67 -92.5", "id": "reloc-f9af98b0"}
+{"cmd": "give", "target": "Cody", "item": "minecraft:cooked_porkchop", "count": 32, "id": "feed2-d4be3a4b"}
+{"cmd": "give", "target": "Cody", "item": "minecraft:cooked_porkchop", "count": 32, "id": "feed3-4bf18aee"}
+{"cmd": "quit", "id": "quit-fb626314"}

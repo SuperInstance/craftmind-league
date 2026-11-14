@@ -1,0 +1,3 @@
+{"ts": "2026-11-07T21:17:31.378Z", "pos": {"x": 68.4, "y": 65.2, "z": -84.3}, "deaths": 29, "outOfHollow": true, "nearestTree": 1.7, "trigger": true, "consec": 1}
+{"ts": "2026-11-07T21:17:51.378Z", "pos": {"x": 68.4, "y": 65.2, "z": -84.3}, "deaths": 29, "outOfHollow": true, "nearestTree": 1.7, "trigger": true, "consec": 2}
+{"event": "TRIGGER-FIRED", "pos": {"x": 68.4, "y": 65.2, "z": -84.3}}

@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-38-27-380Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T19:38:27.454Z",
+ "parent": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T04-37-56-639Z.js",
+ "rationale": "The script had several issues: it didn't properly handle the spawn protection constraint, had inefficient log collection logic, and didn't account for the need to move away from spawn. I've rewritten it to ensure Cody moves outside spawn protection, finds and mines logs properly, crafts planks and sticks, places a crafting table, and finally crafts a wooden pickaxe. The key improvements are: 1) proper spawn protection avoidance by moving to a safe location outside the 16-block radius, 2) better handling of the crafting table placement and usage, 3) more robust log collection, and 4) clearer state checking.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T19:38:27.365+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 24.677,
+  "prompt_tokens": 5048,
+  "completion_tokens": 1147,
+  "total_tokens": 6195
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

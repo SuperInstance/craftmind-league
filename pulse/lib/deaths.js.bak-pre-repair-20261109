@@ -1,0 +1,41 @@
+'use strict';
+/**
+ * deaths.js — DEATH COUNTING FROM A STORE THE MODEL CANNOT FAKE
+ * (day-4 repair (1); seeded substrate).
+ *
+ * WHY: on day 3 the driver's 3-death abort read pulse/deaths.jsonl —
+ * a file whose writer is a different component that never appended —
+ * so deathsNow() returned the stale baseline all day while Cody died
+ * four times in 66 seconds (ledger direct-drive-day3-deaths-incident).
+ * An abort wired to an unwritten file is a decoration.
+ *
+ * WHAT: deaths are counted from the run's own trace file
+ * (pulse/direct-drive-trace.jsonl), which the driver process appends
+ * from the server's death signal (mineflayer's 'death' event fires on
+ * the server's respawn packet — the model cannot mint one, and the
+ * trace is append-only in the driver). The counter resumes from the
+ * trace on a mid-day restart, so a relaunched driver inherits the
+ * day's true death count. The abort predicate lives here too, so the
+ * dry test (pulse/test-deaths-day4.js) exercises the shipped logic.
+ */
+const fs = require('fs');
+
+function countTraceDeaths(tracePath) {
+  let n = 0;
+  let text = '';
+  try { text = fs.readFileSync(tracePath, 'utf8'); } catch { return 0; }
+  for (const line of text.split('\n')) {
+    if (!line.trim()) continue;
+    try {
+      const rec = JSON.parse(line);
+      if (rec && rec.kind === 'death') n++;
+    } catch { /* torn line: not evidence, not a death */ }
+  }
+  return n;
+}
+
+function shouldAbort(deathsThisRun, limit) {
+  return deathsThisRun >= (limit == null ? 3 : limit);
+}
+
+module.exports = { countTraceDeaths, shouldAbort };

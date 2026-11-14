@@ -1,0 +1,76 @@
+{
+ "ts": "2026-11-08T03:34:50.209Z",
+ "startPos": {
+  "x": 38.67,
+  "y": 65,
+  "z": -94.69
+ },
+ "arms": [],
+ "d0": {
+  "cols": {
+   "38,-96": [
+    "62:UNLOADED",
+    "63:UNLOADED",
+    "64:UNLOADED",
+    "65:UNLOADED",
+    "66:UNLOADED",
+    "67:UNLOADED",
+    "68:UNLOADED",
+    "69:UNLOADED",
+    "70:UNLOADED",
+    "71:UNLOADED"
+   ],
+   "38,-97": [
+    "62:UNLOADED",
+    "63:UNLOADED",
+    "64:UNLOADED",
+    "65:UNLOADED",
+    "66:UNLOADED",
+    "67:UNLOADED",
+    "68:UNLOADED",
+    "69:UNLOADED",
+    "70:UNLOADED",
+    "71:UNLOADED"
+   ],
+   "39,-101": [
+    "62:UNLOADED",
+    "63:UNLOADED",
+    "64:UNLOADED",
+    "65:UNLOADED",
+    "66:UNLOADED",
+    "67:UNLOADED",
+    "68:UNLOADED",
+    "69:UNLOADED",
+    "70:UNLOADED",
+    "71:UNLOADED"
+   ],
+   "39,-102": [
+    "62:UNLOADED",
+    "63:UNLOADED",
+    "64:UNLOADED",
+    "65:UNLOADED",
+    "66:UNLOADED",
+    "67:UNLOADED",
+    "68:UNLOADED",
+    "69:UNLOADED",
+    "70:UNLOADED",
+    "71:UNLOADED"
+   ],
+   "40,-102": [
+    "62:UNLOADED",
+    "63:UNLOADED",
+    "64:UNLOADED",
+    "65:UNLOADED",
+    "66:UNLOADED",
+    "67:UNLOADED",
+    "68:UNLOADED",
+    "69:UNLOADED",
+    "70:UNLOADED",
+    "71:UNLOADED"
+   ]
+  },
+  "feetBlock": null,
+  "underBlock": null,
+  "onGround": false
+ }
+}

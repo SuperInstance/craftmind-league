@@ -1,0 +1,20 @@
+[
+ {
+  "name": "the water trench",
+  "x": 66,
+  "y": 62,
+  "z": -91,
+  "note": "You found this yourself.",
+  "visits": 55,
+  "lastSeen": "2026-11-13T13:36:55.746Z"
+ },
+ {
+  "name": "your crafting table",
+  "x": 64,
+  "y": 67,
+  "z": -94,
+  "note": "You found this yourself.",
+  "visits": 11,
+  "lastSeen": "2026-11-13T12:55:02.434Z"
+ }
+]

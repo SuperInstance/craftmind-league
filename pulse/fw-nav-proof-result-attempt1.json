@@ -1,0 +1,69 @@
+{
+ "runId": "fwproof-20261107T1930Z",
+ "startedAt": "2026-11-07T19:27:31.712Z",
+ "status": "complete",
+ "stack": "framework: bot.pathfinder.setGoal(goals.GoalNear) with bot.js Movements (resident wander stack); no helm, no gotoNear, no teleports",
+ "startPos": {
+  "x": 45.32,
+  "y": 67,
+  "z": -82.34
+ },
+ "legs": [
+  {
+   "to": "WP1",
+   "waypoint": {
+    "x": 51.5,
+    "y": 66,
+    "z": -82.5
+   },
+   "startPos": {
+    "x": 45.32,
+    "y": 67,
+    "z": -82.34
+   },
+   "endPos": {
+    "x": 50.37,
+    "y": 66,
+    "z": -82.49
+   },
+   "displacementXZ": 5.05,
+   "minDistToWaypoint": 1.13,
+   "durationSec": 1.2,
+   "arrived": true,
+   "damaged": false,
+   "verdict": "PASS"
+  },
+  {
+   "to": "WP2",
+   "waypoint": {
+    "x": 58.5,
+    "y": 68,
+    "z": -82.5
+   },
+   "startPos": {
+    "x": 50.68,
+    "y": 65.92,
+    "z": -82.49
+   },
+   "endPos": {
+    "x": 50.68,
+    "y": 65.92,
+    "z": -82.49
+   },
+   "displacementXZ": 0,
+   "minDistToWaypoint": 7.8,
+   "durationSec": 120.1,
+   "arrived": false,
+   "damaged": false,
+   "verdict": "FAIL"
+  }
+ ],
+ "verdict": "FAIL",
+ "endedAt": "2026-11-07T19:29:34.060Z",
+ "endPos": {
+  "x": 50.68,
+  "y": 65.92,
+  "z": -82.49
+ },
+ "totalDisplacementXZ": 5.05
+}

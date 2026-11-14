@@ -1,0 +1,2 @@
+{"ts":"2026-11-09T15:38:47.427Z","kind":"spawn","pos":{"x":64.30093480359493,"y":63,"z":-91.6879872820111},"hp":0.3333320617675781,"food":0,"deathsWorld":120,"deathsRun":0,"route":"deepinfra:deepseek-v4.1-flash","model":"deepseek-ai/DeepSeek-V4.1-Flash-1017","places":9}
+{"ts":"2026-11-09T15:38:47.428Z","kind":"wake","step":"start","pos":{"x":64.3,"y":63,"z":-91.7},"hp":0.33,"food":0}

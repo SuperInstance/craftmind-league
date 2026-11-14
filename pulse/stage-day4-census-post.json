@@ -1,0 +1,997 @@
+{
+ "ok": true,
+ "mode": "repair-verify",
+ "ts": "2026-11-09T10:15:24.017Z",
+ "summoned": {
+  "pigs": 2,
+  "chickens": 2
+ },
+ "pen": {
+  "59,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "59,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "59,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "59,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "59,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "59,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "59,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "59,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "60,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "60,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "60,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "60,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "60,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "60,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "60,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "60,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "short_grass",
+    "age": null
+   }
+  },
+  "61,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "61,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "61,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "61,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "61,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "61,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "61,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "61,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "62,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "62,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "62,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "62,-101": {
+   "y66": {
+    "name": "dirt",
+    "age": null
+   },
+   "y67": {
+    "name": "cobblestone",
+    "age": null
+   }
+  },
+  "62,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "62,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "62,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "62,-97": {
+   "y66": {
+    "name": "dirt",
+    "age": null
+   },
+   "y67": {
+    "name": "grass_block",
+    "age": null
+   }
+  },
+  "63,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "63,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "63,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "63,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "63,-100": {
+   "y66": {
+    "name": "dirt",
+    "age": null
+   },
+   "y67": {
+    "name": "grass_block",
+    "age": null
+   }
+  },
+  "63,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "63,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "63,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "64,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "64,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "64,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "64,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence_gate",
+    "age": null
+   }
+  },
+  "64,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "64,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "64,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "64,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "65,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "65,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "65,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "65,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "65,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence_gate",
+    "age": null
+   }
+  },
+  "65,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "65,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "65,-97": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "wheat",
+    "age": "7"
+   }
+  },
+  "66,-104": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-103": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-102": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-101": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "66,-100": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "66,-99": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "66,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-97": {
+   "y66": {
+    "name": "water",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  }
+ },
+ "plot": {
+  "64,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "64,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "64,-96": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "64,-95": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "64,-94": {
+   "y66": {
+    "name": "dirt",
+    "age": null
+   },
+   "y67": {
+    "name": "crafting_table",
+    "age": null
+   }
+  },
+  "65,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "oak_fence",
+    "age": null
+   }
+  },
+  "65,-97": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "wheat",
+    "age": "7"
+   }
+  },
+  "65,-96": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "wheat",
+    "age": "7"
+   }
+  },
+  "65,-95": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "wheat",
+    "age": "7"
+   }
+  },
+  "65,-94": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-97": {
+   "y66": {
+    "name": "water",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-96": {
+   "y66": {
+    "name": "water",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-95": {
+   "y66": {
+    "name": "water",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "66,-94": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "67,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "67,-97": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "wheat",
+    "age": "7"
+   }
+  },
+  "67,-96": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "67,-95": {
+   "y66": {
+    "name": "farmland",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "67,-94": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "68,-98": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "68,-97": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "68,-96": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "air",
+    "age": null
+   }
+  },
+  "68,-95": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  },
+  "68,-94": {
+   "y66": {
+    "name": "grass_block",
+    "age": null
+   },
+   "y67": {
+    "name": "leaf_litter",
+    "age": null
+   }
+  }
+ },
+ "home": {
+  "t63": {
+   "name": "oak_planks",
+   "age": null
+  },
+  "t64": {
+   "name": "crafting_table",
+   "age": null
+  },
+  "anchor": {
+   "name": "air",
+   "age": null
+  },
+  "pocketTable": {
+   "name": "crafting_table",
+   "age": null
+  },
+  "pocketFloor": {
+   "name": "air",
+   "age": null
+  }
+ },
+ "stockInsidePen": {
+  "pig": 0,
+  "cow": 2,
+  "chicken": 0,
+  "sheep": 0
+ },
+ "nearAnchor": [
+  {
+   "name": "pig",
+   "x": 27.5,
+   "y": 65,
+   "z": -73.3,
+   "dAnchor": 41.5
+  },
+  {
+   "name": "cow",
+   "x": 63.4,
+   "y": 67,
+   "z": -101.6,
+   "dAnchor": 8.6
+  },
+  {
+   "name": "cow",
+   "x": 61.4,
+   "y": 67,
+   "z": -99.4,
+   "dAnchor": 6.9
+  },
+  {
+   "name": "pig",
+   "x": 105.2,
+   "y": 71,
+   "z": -80.3,
+   "dAnchor": 43.3
+  },
+  {
+   "name": "pig",
+   "x": 58.2,
+   "y": 67,
+   "z": -59.8,
+   "dAnchor": 33.7
+  },
+  {
+   "name": "spider",
+   "x": 36,
+   "y": 67.1,
+   "z": -90.7,
+   "dAnchor": 28.1
+  },
+  {
+   "name": "skeleton",
+   "x": 45.3,
+   "y": 69,
+   "z": -124.3,
+   "dAnchor": 36.5
+  },
+  {
+   "name": "skeleton",
+   "x": 36.8,
+   "y": 69,
+   "z": -88.8,
+   "dAnchor": 27.6
+  },
+  {
+   "name": "pig",
+   "x": 54.4,
+   "y": 68,
+   "z": -92.7,
+   "dAnchor": 9.6
+  }
+ ],
+ "galleryPos": "(64.5, 67, -95.5)"
+}

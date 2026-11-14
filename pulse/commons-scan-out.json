@@ -1,0 +1,2105 @@
+{
+ "columns": {
+  "34,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "34,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "34,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "34,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone"
+  ],
+  "34,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "34,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:dirt",
+   "69:grass_block"
+  ],
+  "34,-102": [
+   "60:copper_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:dirt",
+   "69:grass_block",
+   "71:oak_leaves",
+   "72:oak_leaves",
+   "73:oak_leaves",
+   "74:oak_leaves"
+  ],
+  "34,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:dirt",
+   "69:dirt",
+   "70:oak_log",
+   "71:oak_log",
+   "72:oak_log",
+   "73:oak_log",
+   "74:oak_leaves"
+  ],
+  "34,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "68:grass_block",
+   "72:oak_leaves",
+   "73:oak_leaves",
+   "74:oak_leaves"
+  ],
+  "34,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone"
+  ],
+  "34,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone"
+  ],
+  "34,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "34,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:dirt",
+   "64:dirt",
+   "65:stone"
+  ],
+  "34,-95": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "34,-94": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "34,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:dirt",
+   "64:grass_block",
+   "71:oak_leaves",
+   "72:oak_leaves"
+  ],
+  "35,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:dirt",
+   "69:grass_block"
+  ],
+  "35,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "35,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone"
+  ],
+  "35,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "35,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:grass_block"
+  ],
+  "35,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:dirt",
+   "69:grass_block"
+  ],
+  "35,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:grass_block",
+   "72:oak_leaves",
+   "73:oak_leaves"
+  ],
+  "35,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "72:oak_leaves",
+   "73:oak_leaves",
+   "74:oak_leaves"
+  ],
+  "35,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone"
+  ],
+  "35,-99": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "35,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "35,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "35,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:grass_block"
+  ],
+  "35,-95": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "35,-94": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "35,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block",
+   "71:oak_leaves",
+   "72:oak_leaves"
+  ],
+  "36,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "36,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "36,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "36,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "36,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:dirt",
+   "69:grass_block"
+  ],
+  "36,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "67:dirt",
+   "68:grass_block",
+   "72:birch_leaves"
+  ],
+  "36,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone",
+   "72:birch_leaves"
+  ],
+  "36,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone"
+  ],
+  "36,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:stone"
+  ],
+  "36,-99": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "36,-98": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "36,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "36,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:grass_block"
+  ],
+  "36,-95": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "36,-94": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "36,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "37,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "37,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "37,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "37,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "37,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "72:birch_leaves"
+  ],
+  "37,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block",
+   "72:birch_leaves",
+   "73:birch_leaves",
+   "74:birch_leaves"
+  ],
+  "37,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "37,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "37,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "37,-99": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "37,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "37,-97": [
+   "60:copper_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "37,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "37,-95": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "37,-94": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "37,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:grass_block"
+  ],
+  "38,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "38,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "38,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "38,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "72:birch_leaves",
+   "73:birch_leaves",
+   "74:birch_leaves"
+  ],
+  "38,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "71:birch_log",
+   "72:birch_log",
+   "73:birch_log",
+   "74:birch_leaves"
+  ],
+  "38,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "72:birch_leaves",
+   "73:birch_leaves",
+   "74:birch_leaves"
+  ],
+  "38,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-97": [
+   "60:copper_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "38,-95": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:grass_block"
+  ],
+  "38,-94": [
+   "60:stone",
+   "61:copper_ore",
+   "62:dirt",
+   "63:dirt",
+   "64:grass_block"
+  ],
+  "38,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:dirt",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "39,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "39,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "39,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "72:birch_leaves"
+  ],
+  "39,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block",
+   "72:birch_leaves",
+   "73:birch_leaves",
+   "74:birch_leaves"
+  ],
+  "39,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block",
+   "72:birch_leaves",
+   "73:birch_leaves"
+  ],
+  "39,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "39,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:dirt",
+   "64:dirt",
+   "65:stone"
+  ],
+  "39,-94": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:dirt",
+   "65:grass_block"
+  ],
+  "39,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:dirt",
+   "65:dirt",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "69:leaf_litter"
+  ],
+  "40,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "40,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "40,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "40,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "40,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "40,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "72:birch_leaves"
+  ],
+  "40,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "72:birch_leaves"
+  ],
+  "40,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "40,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "40,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "40,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "40,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "40,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "40,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "40,-94": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:dirt",
+   "65:dirt",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "40,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:dirt",
+   "65:dirt",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "41,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-107": [
+   "60:stone",
+   "61:lapis_ore",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-106": [
+   "60:lapis_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "41,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "41,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "41,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "41,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "41,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "41,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "41,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:dirt",
+   "64:dirt",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "41,-93": [
+   "60:stone",
+   "61:stone",
+   "62:dirt",
+   "63:dirt",
+   "64:dirt",
+   "65:dirt",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "42,-108": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-107": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "42,-106": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "42,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block",
+   "69:leaf_litter"
+  ],
+  "42,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "42,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "42,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "42,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "42,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:grass_block"
+  ],
+  "42,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "42,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:dirt",
+   "64:dirt",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "43,-108": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-107": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-106": [
+   "60:coal_ore",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "43,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "43,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "43,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "43,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "43,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "43,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "43,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "43,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:dirt",
+   "68:grass_block"
+  ],
+  "44,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "44,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "44,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "44,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "44,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "44,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "44,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "70:oak_leaves"
+  ],
+  "44,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "68:leaf_litter",
+   "69:oak_leaves",
+   "70:oak_leaves"
+  ],
+  "44,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "44,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "44,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "44,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "44,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "44,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone"
+  ],
+  "44,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "44,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:stone",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "45,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "45,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "45,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "45,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "68:leaf_litter",
+   "69:oak_leaves",
+   "70:oak_leaves",
+   "71:oak_leaves",
+   "72:oak_leaves"
+  ],
+  "45,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "69:oak_leaves",
+   "70:oak_leaves"
+  ],
+  "45,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "45,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "45,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "45,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "72:oak_leaves"
+  ],
+  "46,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "72:oak_leaves",
+   "73:oak_leaves"
+  ],
+  "46,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "46,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "70:oak_leaves",
+   "71:oak_leaves",
+   "72:oak_leaves"
+  ],
+  "46,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:dirt",
+   "68:oak_log",
+   "69:oak_log",
+   "70:oak_log",
+   "71:oak_log",
+   "72:oak_leaves"
+  ],
+  "46,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "69:oak_leaves",
+   "70:oak_leaves",
+   "71:oak_leaves",
+   "72:oak_leaves"
+  ],
+  "46,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "46,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "46,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "46,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "46,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "72:oak_leaves"
+  ],
+  "47,-108": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "71:oak_log",
+   "72:oak_log",
+   "73:oak_leaves"
+  ],
+  "47,-107": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block",
+   "72:oak_leaves",
+   "73:oak_leaves"
+  ],
+  "47,-106": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "47,-105": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "47,-104": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "47,-103": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:grass_block"
+  ],
+  "47,-102": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "70:oak_leaves"
+  ],
+  "47,-101": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "69:oak_leaves",
+   "70:oak_leaves",
+   "71:oak_leaves",
+   "72:oak_leaves"
+  ],
+  "47,-100": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "69:oak_leaves",
+   "70:oak_leaves"
+  ],
+  "47,-99": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block"
+  ],
+  "47,-98": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "47,-97": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "47,-96": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone"
+  ],
+  "47,-95": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "47,-94": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:stone",
+   "64:stone",
+   "65:grass_block"
+  ],
+  "47,-93": [
+   "60:stone",
+   "61:stone",
+   "62:stone",
+   "63:coal_ore",
+   "64:coal_ore",
+   "65:dirt",
+   "66:dirt",
+   "67:grass_block",
+   "72:oak_leaves"
+  ]
+ },
+ "site": {
+  "chest": "air",
+  "below": "grass_block",
+  "sign": "air",
+  "signBelow": "grass_block",
+  "table": "air"
+ },
+ "pos": {
+  "x": 38.69862814908475,
+  "y": 66,
+  "z": -100.76600302922881
+ }
+}

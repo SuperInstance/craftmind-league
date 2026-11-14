@@ -1,0 +1,10 @@
+{
+ "ground": {
+  "W": "grass_block@y67",
+  "E": "birch_leaves@y70",
+  "N": "oak_planks@y67",
+  "S": "oak_leaves@y70"
+ },
+ "ring": "2,2,3,2,3,1,3,2",
+ "note": "ground/ring of the direct-drive state file as overwritten by day 11's close (pos (63.3,64,-90.4), ts 2026-11-10T01:07:00Z) -- perception of a DIFFERENT place than day 10's roam; the wrong-place-perception fixture for arm P5."
+}

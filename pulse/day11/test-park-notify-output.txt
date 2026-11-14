@@ -1,0 +1,12 @@
+park-notify result: {"ts":"2026-11-10T00:08:45.293Z","id":"stub-floor-park-1","ok":true,"recorded":true}
+ping-after-park result: {"ts":"2026-11-10T00:08:45.692Z","id":"stub-floor-ping-1","ok":true,"spawned":false,"fixture":true,"pos":null}
+park-notify log rows: [{"ts":"2026-11-10T00:08:45.291Z","id":"stub-floor-park-1","reason":"MAX_DEATHS","trigger":null}]
+op process alive after park-notify: true
+op console contained PARK-NOTIFY alert: true
+PASS test-park-notify
+--- op console ---
+OP_FIXTURE=1: command loop live, NO bot created (no game login)
+OP day-11 process up; req=/home/caseydigennaro/craftmind-league/floor/run/day11/park-fixture/op-req.jsonl res=/home/caseydigennaro/craftmind-league/floor/run/day11/park-fixture/op-res.jsonl parklog=/home/caseydigennaro/craftmind-league/floor/run/day11/park-fixture/park-notify.jsonl
+PARK-NOTIFY ** PARK ** id=stub-floor-park-1 reason=MAX_DEATHS (recorded to /home/caseydigennaro/craftmind-league/floor/run/day11/park-fixture/park-notify.jsonl; no world effect)
+RES {"id":"stub-floor-park-1","ok":true,"recorded":true}
+RES {"id":"stub-floor-ping-1","ok":true,"spawned":false,"fixture":true,"pos":null}

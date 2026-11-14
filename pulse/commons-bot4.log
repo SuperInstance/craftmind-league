@@ -1,0 +1,8 @@
+STEP landing {"pos":{"x":34.32,"y":65,"z":-92.31},"health":20,"food":20,"inv":{}}
+STEP style-flip {"to":"walk","pos":{"x":36.04,"y":64,"z":-95.69}}
+STEP style-flip {"to":"sprint","pos":{"x":36.04,"y":64,"z":-95.69}}
+STEP style-flip {"to":"sprintjump","pos":{"x":36.04,"y":64,"z":-95.69}}
+STEP style-flip {"to":"walk","pos":{"x":36.04,"y":64,"z":-95.69}}
+STEP fell-stand {"col":"38,-103","stand":"39.5,-102.5","ok":false,"pos":{"x":36.04,"y":64,"z":-95.69}}
+STEP style-flip {"to":"walk","pos":{"x":36.04,"y":64,"z":-95.69}}
+STEP style-flip {"to":"sprint","pos":{"x":36.04,"y":64,"z":-95.69}}

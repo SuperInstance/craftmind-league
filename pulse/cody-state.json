@@ -1,0 +1,38 @@
+{
+ "ts": "2026-11-09T06:15:16.786Z",
+ "pos": {
+  "x": 77.3,
+  "y": 64,
+  "z": -98.3
+ },
+ "health": 9.133333206176758,
+ "food": 4,
+ "onGround": false,
+ "inventory": {
+  "oak_log": 6,
+  "oak_sapling": 2
+ },
+ "held": null,
+ "timeOfDay": 1404,
+ "isDay": true,
+ "spawnPoint": {
+  "x": 32,
+  "y": 70,
+  "z": -96
+ },
+ "stage": "S1",
+ "behaviour": "framework",
+ "runner": {
+  "status": "no-active-skills",
+  "skill": null,
+  "lastResult": null
+ },
+ "deaths": 116,
+ "anchor": {
+  "x": 64,
+  "y": 67,
+  "z": -93
+ },
+ "intent": "Heading to the homestead",
+ "project": "relocate"
+}

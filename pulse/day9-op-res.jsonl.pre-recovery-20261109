@@ -1,0 +1,9 @@
+{"ts":"2026-11-09T19:04:20.174Z","id":"selftest-ef41ca74","ok":true,"gave":"/give Cody minecraft:cooked_porkchop 1","srv":["No player was found"]}
+{"ts":"2026-11-09T19:07:36.210Z","id":"feed-6de5d5e2","ok":true,"gave":"/give Cody minecraft:cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody"]}
+{"ts":"2026-11-09T19:07:51.417Z","id":"reloc-f9af98b0","ok":true,"chat":"/tp Cody 60.5 67 -92.5","srv":["Teleported Cody to 60.500000, 67.000000, -92.500000"]}
+{"ts":"2026-11-09T19:23:20.871Z","id":"selftest-ef41ca74","ok":false,"error":"op not spawned yet (spawned=false)"}
+{"ts":"2026-11-09T19:23:20.871Z","id":"feed-6de5d5e2","ok":false,"error":"op not spawned yet (spawned=false)"}
+{"ts":"2026-11-09T19:23:20.871Z","id":"reloc-f9af98b0","ok":false,"error":"op not spawned yet (spawned=false)"}
+{"ts":"2026-11-09T19:23:20.872Z","id":"feed2-d4be3a4b","ok":false,"error":"op not spawned yet (spawned=false)"}
+{"ts":"2026-11-09T19:23:42.976Z","id":"feed3-4bf18aee","ok":true,"gave":"/give Cody minecraft:cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody"]}
+{"ts":"2026-11-09T19:24:14.486Z","id":"quit-fb626314","ok":true,"bye":true}

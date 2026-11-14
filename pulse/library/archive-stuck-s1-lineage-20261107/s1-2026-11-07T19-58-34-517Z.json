@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-58-34-517Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T19:58:34.578Z",
+ "parent": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-57-49-496Z.js",
+ "rationale": "The previous script failed because it didn't properly handle the crafting table placement and wooden pickaxe crafting sequence. The evidence shows that while logs were gathered and planks crafted, the crafting table wasn't placed properly and the pickaxe wasn't crafted. This revision ensures proper sequence: gather logs → craft planks → craft sticks → place crafting table → craft pickaxe using the table. It also handles the spawn protection constraint by moving to a safe location outside the protected zone.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T19:58:34.504+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 22.244,
+  "prompt_tokens": 4887,
+  "completion_tokens": 1167,
+  "total_tokens": 6054
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

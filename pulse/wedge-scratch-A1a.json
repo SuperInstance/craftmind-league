@@ -1,0 +1,417 @@
+{
+ "mode": "wedge-scratch",
+ "username": "WedgeScratchH",
+ "phase": "A1a",
+ "port": 25608,
+ "ts": "2026-11-08T22:50:03.746Z",
+ "events": [],
+ "legs": [
+  {
+   "tag": "open-39,-104",
+   "targetCell": [
+    39,
+    -104
+   ],
+   "targetFeetY": 73,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 28.687,
+    "y": 70,
+    "z": -96.307
+   },
+   "end": {
+    "x": 35.673,
+    "y": 69.249,
+    "z": -103.731
+   },
+   "dispH": 10.194,
+   "forcedMoves": 428,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 51.494,
+    "pos": {
+     "x": 32.5,
+     "y": 26,
+     "z": -131.5
+    }
+   }
+  },
+  {
+   "tag": "open-36,-104",
+   "targetCell": [
+    36,
+    -104
+   ],
+   "targetFeetY": 70,
+   "ok": true,
+   "err": null,
+   "start": {
+    "x": 35.673,
+    "y": 69.249,
+    "z": -103.731
+   },
+   "end": {
+    "x": 35.673,
+    "y": 69.249,
+    "z": -103.731
+   },
+   "dispH": 0,
+   "forcedMoves": 0,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 51.494,
+    "pos": {
+     "x": 32.5,
+     "y": 26,
+     "z": -131.5
+    }
+   }
+  },
+  {
+   "tag": "open-33,-104",
+   "targetCell": [
+    33,
+    -104
+   ],
+   "targetFeetY": 75,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 35.673,
+    "y": 69.249,
+    "z": -103.731
+   },
+   "end": {
+    "x": 31.573,
+    "y": 69.024,
+    "z": -103.93
+   },
+   "dispH": 4.105,
+   "forcedMoves": 297,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 51.108,
+    "pos": {
+     "x": 32.5,
+     "y": 26,
+     "z": -131.5
+    }
+   }
+  },
+  {
+   "tag": "open-31,-104",
+   "targetCell": [
+    31,
+    -104
+   ],
+   "targetFeetY": 77,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 31.573,
+    "y": 69.024,
+    "z": -103.93
+   },
+   "end": {
+    "x": 32.643,
+    "y": 68,
+    "z": -102.003
+   },
+   "dispH": 2.204,
+   "forcedMoves": 164,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 51.324,
+    "pos": {
+     "x": 32.5,
+     "y": 26,
+     "z": -131.5
+    }
+   }
+  },
+  {
+   "tag": "open-chainhead",
+   "targetCell": [
+    31,
+    -101
+   ],
+   "targetFeetY": 66,
+   "ok": true,
+   "via": "helm-fallback",
+   "err": null,
+   "start": {
+    "x": 32.643,
+    "y": 68,
+    "z": -102.003
+   },
+   "end": {
+    "x": 32.4,
+    "y": 67,
+    "z": -101.309
+   },
+   "dispH": 0.735,
+   "forcedMoves": 213,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 50.917,
+    "pos": {
+     "x": 32.5,
+     "y": 26,
+     "z": -131.5
+    }
+   }
+  },
+  {
+   "tag": "W-32,-99",
+   "targetCell": [
+    32,
+    -99
+   ],
+   "targetFeetY": 70,
+   "ok": true,
+   "via": "helm-fallback",
+   "err": null,
+   "start": {
+    "x": 32.4,
+    "y": 67,
+    "z": -101.309
+   },
+   "end": {
+    "x": 32.41,
+    "y": 69.177,
+    "z": -99.311
+   },
+   "dispH": 1.998,
+   "forcedMoves": 212,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 53.855,
+    "pos": {
+     "x": 32.5,
+     "y": 26,
+     "z": -131.5
+    }
+   }
+  },
+  {
+   "tag": "W-34,-98",
+   "targetCell": [
+    34,
+    -98
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 32.41,
+    "y": 69.177,
+    "z": -99.311
+   },
+   "end": {
+    "x": 32.704,
+    "y": 68.166,
+    "z": -101.302
+   },
+   "dispH": 2.013,
+   "forcedMoves": 477,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 52.466,
+    "pos": {
+     "x": 31.5,
+     "y": 26,
+     "z": -132.5
+    }
+   }
+  },
+  {
+   "tag": "W-37,-98",
+   "targetCell": [
+    37,
+    -98
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 32.704,
+    "y": 68.166,
+    "z": -101.302
+   },
+   "end": {
+    "x": 32.696,
+    "y": 67,
+    "z": -101.695
+   },
+   "dispH": 0.393,
+   "forcedMoves": 547,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 51.297,
+    "pos": {
+     "x": 31.5,
+     "y": 26,
+     "z": -132.5
+    }
+   }
+  },
+  {
+   "tag": "approach-41,-85",
+   "targetCell": [
+    41,
+    -85
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 32.696,
+    "y": 67,
+    "z": -101.695
+   },
+   "end": {
+    "x": 32.69,
+    "y": 67,
+    "z": -101.6
+   },
+   "dispH": 0.095,
+   "forcedMoves": 523,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 55.971,
+    "pos": {
+     "x": 4.5,
+     "y": 29,
+     "z": -131.5
+    }
+   }
+  }
+ ],
+ "rests": [
+  {
+   "n": 40,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "first": {
+    "x": 28.687,
+    "y": 70,
+    "z": -96.307
+   },
+   "last": {
+    "x": 28.687,
+    "y": 70,
+    "z": -96.307
+   },
+   "tag": "pristine-at-spawn",
+   "at": {
+    "x": 28.687,
+    "y": 70,
+    "z": -96.307
+   },
+   "cell": [
+    28,
+    -97
+   ],
+   "hp": 20,
+   "hostiles48": []
+  },
+  {
+   "n": 20,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 0.95,
+   "forcedMoves": 0,
+   "first": {
+    "x": 32.69,
+    "y": 67,
+    "z": -101.6
+   },
+   "last": {
+    "x": 32.69,
+    "y": 67,
+    "z": -101.6
+   },
+   "tag": "scratch-end",
+   "at": {
+    "x": 32.69,
+    "y": 67,
+    "z": -101.6
+   },
+   "cell": [
+    32,
+    -102
+   ],
+   "hp": 20,
+   "hostiles48": []
+  }
+ ],
+ "attempts": [],
+ "deaths": [],
+ "spawn": {
+  "pos": {
+   "x": 28.687,
+   "y": 70,
+   "z": -96.307
+  },
+  "uuid": null,
+  "onGround": false
+ },
+ "settled": {
+  "pos": {
+   "x": 28.687,
+   "y": 70,
+   "z": -96.307
+  },
+  "health": 20,
+  "food": 20
+ },
+ "final": {
+  "pos": {
+   "x": 32.69,
+   "y": 67,
+   "z": -101.6
+  },
+  "health": 20,
+  "food": 20,
+  "inventory": [],
+  "deaths": 0,
+  "aborted": false,
+  "abortReason": null,
+  "sessionBroken": null,
+  "totalForcedMoves": 2861,
+  "digStep": {
+   "enabled": false,
+   "uses": 0,
+   "log": [],
+   "evals": []
+  }
+ }
+}

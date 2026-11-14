@@ -1,0 +1,83 @@
+{
+ "ts": "2026-11-08T05:09:44.519Z",
+ "test": "the-cure-discriminator-20261107",
+ "samples": [
+  {
+   "tag": "t+4s",
+   "pos": {
+    "x": 31.5,
+    "y": 70,
+    "z": -99.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+8s",
+   "pos": {
+    "x": 31.5,
+    "y": 70,
+    "z": -99.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+12s",
+   "pos": {
+    "x": 31.5,
+    "y": 70,
+    "z": -99.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+16s",
+   "pos": {
+    "x": 31.5,
+    "y": 70,
+    "z": -99.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+20s",
+   "pos": {
+    "x": 31.5,
+    "y": 70,
+    "z": -99.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  }
+ ],
+ "spawn": {
+  "tag": "spawn",
+  "pos": {
+   "x": 31.5,
+   "y": 70,
+   "z": -99.5
+  },
+  "health": null,
+  "food": null,
+  "onGround": false
+ },
+ "final": {
+  "tag": "final",
+  "pos": {
+   "x": 31.5,
+   "y": 70,
+   "z": -99.5
+  },
+  "health": 20,
+  "food": 20,
+  "onGround": true
+ }
+}

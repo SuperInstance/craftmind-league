@@ -1,0 +1,11 @@
+POST /v1/chat/completions HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer league-cody
+Host: 127.0.0.1:8791
+Connection: keep-alive
+Transfer-Encoding: chunked
+
+ac
+{"model":"confluence-presence-brain","messages":[{"role":"system","content":"You are Cody, a friendly AI player in a Minecraft world."}],"max_tokens":200,"temperature":0.8}
+0
+

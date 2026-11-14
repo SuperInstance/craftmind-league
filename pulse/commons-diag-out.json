@@ -1,0 +1,419 @@
+{
+ "pos": {
+  "x": 40.7,
+  "y": 66,
+  "z": -99.5
+ },
+ "onGround": true,
+ "heldItem": null,
+ "equipment": [],
+ "near": {
+  "32,67,-103": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 9.43
+  },
+  "32,74,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 12.33
+  },
+  "32,74,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 12.08
+  },
+  "32,67,-101": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.88
+  },
+  "32,67,-100": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.77
+  },
+  "32,67,-99": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 8.77
+  },
+  "32,68,-99": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 8.94
+  },
+  "32,69,-99": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 9.22
+  },
+  "33,67,-103": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 8.52
+  },
+  "33,68,-103": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.69
+  },
+  "33,73,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 10.98
+  },
+  "33,74,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 11.64
+  },
+  "33,67,-102": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.16
+  },
+  "33,72,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 10.08
+  },
+  "33,73,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 10.7
+  },
+  "33,74,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 11.38
+  },
+  "33,67,-101": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 7.91
+  },
+  "33,69,-101": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.4
+  },
+  "33,72,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.88
+  },
+  "33,73,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 10.51
+  },
+  "33,74,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 11.2
+  },
+  "33,67,-100": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.78
+  },
+  "33,68,-100": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.97
+  },
+  "33,69,-100": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.28
+  },
+  "33,71,-100": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.19
+  },
+  "33,72,-100": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.77
+  },
+  "33,67,-99": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.78
+  },
+  "33,68,-99": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.97
+  },
+  "33,69,-99": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.28
+  },
+  "33,71,-99": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.19
+  },
+  "33,72,-99": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.77
+  },
+  "34,67,-103": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.62
+  },
+  "34,68,-103": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.82
+  },
+  "34,69,-103": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 8.13
+  },
+  "34,67,-102": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.22
+  },
+  "34,68,-102": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.42
+  },
+  "34,69,-102": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 7.75
+  },
+  "34,71,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 8.72
+  },
+  "34,72,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.33
+  },
+  "34,73,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 10.01
+  },
+  "34,74,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 10.73
+  },
+  "34,67,-101": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 6.94
+  },
+  "34,68,-101": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.15
+  },
+  "34,69,-101": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 7.49
+  },
+  "34,70,-101": {
+   "name": "oak_log",
+   "canDig": false,
+   "dist": 7.95
+  },
+  "34,71,-101": {
+   "name": "oak_log",
+   "canDig": false,
+   "dist": 8.49
+  },
+  "34,72,-101": {
+   "name": "oak_log",
+   "canDig": false,
+   "dist": 9.12
+  },
+  "34,73,-101": {
+   "name": "oak_log",
+   "canDig": false,
+   "dist": 9.8
+  },
+  "34,74,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 10.54
+  },
+  "34,68,-100": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 7.01
+  },
+  "34,72,-100": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.01
+  },
+  "34,73,-100": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.7
+  },
+  "34,74,-100": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 10.45
+  },
+  "35,67,-103": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 6.76
+  },
+  "35,68,-103": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 6.98
+  },
+  "35,69,-103": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 7.33
+  },
+  "35,67,-102": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 6.3
+  },
+  "35,72,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 8.64
+  },
+  "35,73,-102": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.37
+  },
+  "35,72,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 8.41
+  },
+  "35,73,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.15
+  },
+  "35,74,-101": {
+   "name": "oak_leaves",
+   "canDig": false,
+   "dist": 9.94
+  },
+  "36,67,-103": {
+   "name": "dirt",
+   "canDig": false,
+   "dist": 5.94
+  },
+  "36,68,-103": {
+   "name": "grass_block",
+   "canDig": false,
+   "dist": 6.19
+  },
+  "36,72,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 8.39
+  },
+  "36,72,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 8.02
+  },
+  "37,67,-103": {
+   "name": "grass_block",
+   "canDig": true,
+   "dist": 5.19
+  },
+  "37,72,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 7.87
+  },
+  "37,73,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 8.66
+  },
+  "37,74,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 9.48
+  },
+  "38,67,-103": {
+   "name": "dirt",
+   "canDig": true,
+   "dist": 4.53
+  },
+  "38,68,-103": {
+   "name": "grass_block",
+   "canDig": true,
+   "dist": 4.85
+  },
+  "38,71,-103": {
+   "name": "birch_log",
+   "canDig": false,
+   "dist": 6.67
+  },
+  "38,72,-103": {
+   "name": "birch_log",
+   "canDig": false,
+   "dist": 7.45
+  },
+  "38,73,-103": {
+   "name": "birch_log",
+   "canDig": false,
+   "dist": 8.28
+  },
+  "38,74,-103": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 9.14
+  },
+  "38,72,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 7.04
+  },
+  "38,73,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 7.91
+  },
+  "38,74,-102": {
+   "name": "birch_leaves",
+   "canDig": false,
+   "dist": 8.81
+  }
+ },
+ "lowTrunk": {
+  "name": "oak_log",
+  "canDig": false,
+  "dist": 7.95,
+  "digTime": 3000
+ },
+ "testDig": {
+  "ok": true,
+  "ms": 3823,
+  "after": "air"
+ },
+ "invAfter": []
+}

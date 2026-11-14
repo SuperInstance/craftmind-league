@@ -1,0 +1,22 @@
+PASS  guard span present in driver source
+PASS  span carries the pad ground truth (66/67)
+PASS  A goto to feet 63 (the day-15 bowl entry) refused
+PASS  A refusal trace-rowed with kind/reason/target
+PASS  A goto to feet 65 (== pad-2) refused
+PASS  A goto to feet 66 (pad-1) permitted
+PASS  A goto at pad level permitted
+PASS  A goto ABOVE pad (the bowl exit direction) permitted
+PASS  B dig with top 64 (== pad top-2) refused
+PASS  B refusal trace-rowed
+PASS  B dig with top 65 (pad top-1) permitted
+PASS  B deep dig (top 61) refused
+PASS  C live held-read (prims.inv) disarms: goto 63 permitted
+PASS  C woodChain state disarms: dig top 64 permitted
+PASS  C a stone pickaxe also disarms (held read)
+PASS  D goto below bound outside district permitted (guard is home-only)
+PASS  D from the bowl itself, the exit goto (up, feet 67) permitted
+PASS  E goto branch consults the guard before the pit-guard/walker
+PASS  E dig branch consults the guard before the dig-guard
+PASS  E wood-chain held-state read is wired in the main loop
+
+BELOW-GRADE-DAY16 FIXTURE: 20 PASS / 0 FAIL

@@ -1,0 +1,68 @@
+[
+ {
+  "name": "the pen",
+  "note": "The fenced pen west of home. You killed a pig at its fence line and ate; you dug its gate at (64, 67, -101) for a way out and put a gate back; you stood inside it and knew it. Gate on the east side, facing home.",
+  "seeded": "day2-trace c40-c64",
+  "visits": 17,
+  "x": 62,
+  "y": 67,
+  "z": -100,
+  "lastSeen": "2026-11-09T09:20:04.265Z"
+ },
+ {
+  "name": "your crafting table at the anchor",
+  "note": "Your table stands on the home shoulder by the anchor (64, 67, -93). You placed it on day 1 and worked at it on day 2.",
+  "seeded": "day2-trace c107-108",
+  "visits": 229,
+  "x": 64,
+  "y": 67,
+  "z": -94,
+  "lastSeen": "2026-11-09T09:20:42.756Z"
+ },
+ {
+  "name": "the wheat patch",
+  "note": "A little wheat patch on farmland east of home, by a water trench. You stood at its edge on day 2 and saw the farmland; the crop was too young to judge then.",
+  "seeded": "day2-trace c96",
+  "visits": 2,
+  "x": 66,
+  "y": 67,
+  "z": -96,
+  "lastSeen": "2026-11-09T09:19:20.946Z"
+ },
+ {
+  "name": "the dip",
+  "note": "The low bowl south-east of home. Broken, steppy ground; you have been stuck in it more than once and the walker lies about arriving there. Cross it only with a plan, or not at all.",
+  "seeded": "day2-trace passim",
+  "visits": 40,
+  "x": 74,
+  "y": 64,
+  "z": -100
+ },
+ {
+  "name": "the stone pit mouth",
+  "note": "A stone pit mouth in the home pad, a few blocks deep. You have named it twice; it is yours to fill, carefully.",
+  "seeded": "day2-trace c95,c145",
+  "visits": 2,
+  "x": 65,
+  "y": 67,
+  "z": -93
+ },
+ {
+  "name": "a gate in a fence line",
+  "x": 65,
+  "y": 67,
+  "z": -100,
+  "note": "You found this yourself.",
+  "visits": 7,
+  "lastSeen": "2026-11-09T09:19:20.946Z"
+ },
+ {
+  "name": "your crafting table",
+  "x": 77,
+  "y": 64,
+  "z": -98,
+  "note": "You found this yourself.",
+  "visits": 82,
+  "lastSeen": "2026-11-09T09:57:40.565Z"
+ }
+]

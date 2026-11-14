@@ -1,0 +1,11133 @@
+{
+ "ts": "2026-11-08T08:24:50.461Z",
+ "box": {
+  "X0": 56,
+  "X1": 84,
+  "Z0": -112,
+  "Z1": -84
+ },
+ "unloaded": 0,
+ "cells": {
+  "56,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "56,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "56,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "56,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "56,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "56,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "56,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "56,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "56,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "56,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-93": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-92": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-91": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "56,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "57,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "57,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "57,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "57,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "57,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "57,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "57,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    75,
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "57,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "57,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "57,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-93": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-92": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-91": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "57,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "58,-111": {
+   "top": 67,
+   "name": "dirt",
+   "litterY": null,
+   "logs": [
+    72,
+    71,
+    70,
+    69,
+    68
+   ],
+   "leaves": [
+    73
+   ],
+   "loaded": true
+  },
+  "58,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "58,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "58,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "58,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "58,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [
+    70
+   ],
+   "leaves": [
+    75,
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "58,-105": {
+   "top": 66,
+   "name": "dirt",
+   "litterY": null,
+   "logs": [
+    72,
+    71,
+    70,
+    69,
+    68,
+    67
+   ],
+   "leaves": [
+    75,
+    74,
+    73
+   ],
+   "loaded": true
+  },
+  "58,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    75,
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "58,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "58,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-92": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-91": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "58,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "58,-89": {
+   "top": 68,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "58,-88": {
+   "top": 68,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "58,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "58,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "59,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "59,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "59,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "59,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-107": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-106": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "59,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    75,
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "59,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-91": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "59,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "59,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "59,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-107": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "60,-106": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "60,-105": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "60,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "60,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "60,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "60,-91": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72
+   ],
+   "loaded": true
+  },
+  "60,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    73,
+    72
+   ],
+   "leaves": [
+    74
+   ],
+   "loaded": true
+  },
+  "60,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "60,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "60,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-107": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-106": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-105": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "61,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "61,-91": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "61,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    74,
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "61,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "61,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "61,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "61,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "61,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "61,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-107": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-106": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "62,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "62,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "62,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "62,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "62,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    72,
+    71,
+    70
+   ],
+   "leaves": [
+    73
+   ],
+   "loaded": true
+  },
+  "62,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "62,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "62,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-107": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-106": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-90": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "63,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "63,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "63,-87": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "63,-86": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "63,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "63,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-107": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-106": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "64,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "64,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "64,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "64,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-89": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-88": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "64,-87": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "64,-86": {
+   "top": 64,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "64,-85": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "64,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-110": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-109": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-108": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "65,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "65,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "65,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "65,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "65,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-88": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-87": {
+   "top": 64,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-86": {
+   "top": 64,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-85": {
+   "top": 64,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "65,-84": {
+   "top": 64,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-112": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-111": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "66,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "66,-97": {
+   "top": 66,
+   "name": "dirt",
+   "litterY": null,
+   "logs": [
+    71,
+    70,
+    69,
+    68,
+    67
+   ],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "66,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "66,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "66,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "66,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "66,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-88": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "66,-87": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "66,-86": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "66,-85": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "66,-84": {
+   "top": 64,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-112": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-111": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "67,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "67,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "67,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "67,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "67,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "67,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "67,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "67,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "67,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "67,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "67,-88": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "67,-87": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "67,-86": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "67,-85": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "67,-84": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "68,-112": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-111": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "68,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "68,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "68,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "68,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "68,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "68,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "68,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "68,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "68,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "68,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "68,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "68,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    71
+   ],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "68,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-88": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "68,-87": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "68,-86": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    72,
+    71
+   ],
+   "leaves": [
+    73
+   ],
+   "loaded": true
+  },
+  "68,-85": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "68,-84": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "69,-112": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-111": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "69,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "69,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "69,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "69,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "69,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-100": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "69,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "69,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "69,-89": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "69,-88": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "69,-87": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "69,-86": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "69,-85": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "69,-84": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "70,-112": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-111": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "70,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71
+   ],
+   "loaded": true
+  },
+  "70,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    72
+   ],
+   "leaves": [
+    73
+   ],
+   "loaded": true
+  },
+  "70,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "70,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "70,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "70,-103": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "70,-102": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-101": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-100": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "70,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "70,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "70,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-89": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-88": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-87": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-86": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "70,-85": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "70,-84": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "71,-112": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "71,-111": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "71,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "71,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "71,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "71,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "71,-104": {
+   "top": 61,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "71,-103": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "71,-102": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-101": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-100": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "71,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "71,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-93": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-89": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-88": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-87": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-86": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-85": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "71,-84": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "72,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "72,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "72,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "72,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "72,-105": {
+   "top": 61,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "72,-104": {
+   "top": 61,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-103": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-102": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-101": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-100": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "72,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "72,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "72,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    67
+   ],
+   "loaded": true
+  },
+  "72,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "72,-92": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "72,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-88": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-87": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-86": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-85": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "72,-84": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "73,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-103": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-102": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-101": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-100": {
+   "top": 62,
+   "name": "andesite",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-99": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "73,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    69,
+    68
+   ],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "73,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "73,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "73,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "73,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "73,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-87": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-86": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-85": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "73,-84": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "74,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-103": {
+   "top": 62,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-102": {
+   "top": 62,
+   "name": "andesite",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-101": {
+   "top": 61,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-100": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-99": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "74,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "74,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "74,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "74,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "74,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "74,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-87": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-86": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-85": {
+   "top": 63,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "74,-84": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "75,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "75,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "75,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "75,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "75,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "75,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-104": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-103": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-102": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-101": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-100": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-99": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-98": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "75,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "75,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "75,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    67
+   ],
+   "loaded": true
+  },
+  "75,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "75,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-91": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "75,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "75,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "76,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "76,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "76,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "76,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "76,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "76,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-103": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-102": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-101": {
+   "top": 62,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-100": {
+   "top": 62,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-99": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-98": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-88": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "76,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "76,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "76,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "77,-112": {
+   "top": 61,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "77,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "77,-109": {
+   "top": 65,
+   "name": "dirt",
+   "litterY": null,
+   "logs": [
+    71,
+    70,
+    69,
+    68,
+    67,
+    66
+   ],
+   "leaves": [
+    72
+   ],
+   "loaded": true
+  },
+  "77,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "77,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "77,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-103": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-102": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-101": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-100": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-99": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-98": {
+   "top": 64,
+   "name": "crafting_table",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "77,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "77,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "77,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "leaves": [
+    73
+   ],
+   "loaded": true
+  },
+  "78,-112": {
+   "top": 61,
+   "name": "stone",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "78,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "78,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "78,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "78,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "78,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-103": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-102": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-101": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-100": {
+   "top": 63,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-99": {
+   "top": 64,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "78,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "78,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "78,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "78,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "78,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "78,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "78,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "78,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "79,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "79,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "79,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "79,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    67
+   ],
+   "loaded": true
+  },
+  "79,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "79,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "79,-103": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-102": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-101": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-100": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "79,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "79,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "79,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "80,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "80,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "80,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "80,-103": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "80,-102": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-101": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-100": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "80,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "80,-96": {
+   "top": 65,
+   "name": "dirt",
+   "litterY": null,
+   "logs": [
+    72,
+    71,
+    70,
+    69,
+    68,
+    67,
+    66
+   ],
+   "leaves": [
+    73
+   ],
+   "loaded": true
+  },
+  "80,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "80,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "80,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "80,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "81,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "81,-104": {
+   "top": 65,
+   "name": "dirt",
+   "litterY": null,
+   "logs": [
+    69,
+    68,
+    67,
+    66
+   ],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "81,-103": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "81,-102": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "81,-101": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-100": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-99": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-98": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "81,-97": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "81,-96": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    73,
+    72,
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "81,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "81,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "81,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "81,-84": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-107": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-106": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "82,-105": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "82,-104": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    70,
+    69,
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "82,-103": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "82,-102": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "82,-101": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "82,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "82,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "82,-95": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "82,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    71,
+    70
+   ],
+   "loaded": true
+  },
+  "82,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "82,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "82,-89": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "82,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "82,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "82,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "82,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-112": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    78,
+    77,
+    76
+   ],
+   "loaded": true
+  },
+  "83,-111": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    78,
+    77,
+    76
+   ],
+   "loaded": true
+  },
+  "83,-110": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    78,
+    77,
+    76
+   ],
+   "loaded": true
+  },
+  "83,-109": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-108": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "83,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "83,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "83,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    68,
+    67
+   ],
+   "loaded": true
+  },
+  "83,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70
+   ],
+   "loaded": true
+  },
+  "83,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "83,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "83,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "83,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "83,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-94": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "83,-90": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "83,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "83,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "83,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "83,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-85": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "83,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-112": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    78,
+    77,
+    76
+   ],
+   "loaded": true
+  },
+  "84,-111": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    79,
+    78,
+    77,
+    76,
+    75
+   ],
+   "loaded": true
+  },
+  "84,-110": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    78,
+    77,
+    76
+   ],
+   "loaded": true
+  },
+  "84,-109": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    78,
+    77,
+    76
+   ],
+   "loaded": true
+  },
+  "84,-108": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-107": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-106": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-105": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-104": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-103": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-102": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "84,-101": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "84,-100": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    72,
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "84,-99": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "84,-98": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    70,
+    69
+   ],
+   "loaded": true
+  },
+  "84,-97": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-96": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69
+   ],
+   "loaded": true
+  },
+  "84,-95": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-94": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-93": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-92": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": 66,
+   "logs": [],
+   "leaves": [
+    68
+   ],
+   "loaded": true
+  },
+  "84,-91": {
+   "top": 65,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-90": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-89": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [
+    70
+   ],
+   "leaves": [
+    71
+   ],
+   "loaded": true
+  },
+  "84,-88": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    71,
+    70,
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-87": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": 67,
+   "logs": [],
+   "leaves": [
+    69,
+    68
+   ],
+   "loaded": true
+  },
+  "84,-86": {
+   "top": 66,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-85": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": 68,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  },
+  "84,-84": {
+   "top": 67,
+   "name": "grass_block",
+   "litterY": null,
+   "logs": [],
+   "leaves": [],
+   "loaded": true
+  }
+ },
+ "entities": [
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": -21.9,
+   "y": 64,
+   "z": -128.6
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 38.8,
+   "y": 71,
+   "z": -144.5
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 28.8,
+   "y": 71,
+   "z": -145.2
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": 55.1,
+   "y": 68,
+   "z": -144.1
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 26.6,
+   "y": 71,
+   "z": -144
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 29.5,
+   "y": 73,
+   "z": -156.3
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 28.4,
+   "y": 73,
+   "z": -156.3
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": 6.8,
+   "y": 68,
+   "z": -155.5
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 38.8,
+   "y": 72,
+   "z": -153.3
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64,
+   "y": 10.6,
+   "z": -88
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": 104.5,
+   "y": 71,
+   "z": -121.9
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 81.2,
+   "y": 71,
+   "z": -150.2
+  },
+  {
+   "name": "cow",
+   "type": "animal",
+   "x": 111.8,
+   "y": 70,
+   "z": -126.1
+  },
+  {
+   "name": "cow",
+   "type": "animal",
+   "x": 105.3,
+   "y": 70,
+   "z": -129.4
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": 108.6,
+   "y": 69,
+   "z": -146
+  },
+  {
+   "name": "cow",
+   "type": "animal",
+   "x": 112.8,
+   "y": 69,
+   "z": -137.4
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 66.6,
+   "y": 73,
+   "z": -175.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -15.8,
+   "z": -93.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -1.9,
+   "z": -82.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -22.2,
+   "z": -88.8
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -64,
+   "y": -3,
+   "z": -83.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -3,
+   "z": -82.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -2.8,
+   "z": -84
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -23,
+   "z": -88.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -19,
+   "z": -94.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -22.4,
+   "z": -91.6
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -23,
+   "z": -89
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -23,
+   "z": -88.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.7,
+   "z": -83.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.3,
+   "z": -83.4
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -4,
+   "z": -84.1
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64,
+   "y": 10.2,
+   "z": -90.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.2,
+   "z": -82.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.2,
+   "z": -82.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.2,
+   "z": -83.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -22.4,
+   "z": -89.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.1,
+   "z": -95.9
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -23,
+   "z": -89.6
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -23,
+   "z": -91.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.9,
+   "z": -83.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.8,
+   "z": -94.4
+  },
+  {
+   "name": "zombie_villager",
+   "type": "hostile",
+   "x": -64,
+   "y": -23,
+   "z": -88.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.1,
+   "z": -82.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -22,
+   "z": -90.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.7,
+   "z": -84.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -22.2,
+   "z": -90.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -21.6,
+   "z": -88.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.9,
+   "z": -95.3
+  },
+  {
+   "name": "item",
+   "type": "other",
+   "x": -64,
+   "y": 63.2,
+   "z": -93.6
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -4,
+   "z": -84.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -2.4,
+   "z": -83.7
+  },
+  {
+   "name": "item",
+   "type": "other",
+   "x": -64,
+   "y": 63.2,
+   "z": -93.4
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64,
+   "y": 10.7,
+   "z": -86
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -3,
+   "z": -85.2
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64,
+   "y": 8.7,
+   "z": -90.8
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": -64.1,
+   "y": 63,
+   "z": -94.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": 19,
+   "z": -71.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": 19.1,
+   "z": -70.9
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": 3.4,
+   "z": -68.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": 4,
+   "z": -68.7
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -64,
+   "y": 59.4,
+   "z": -74
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -64.1,
+   "y": 60.1,
+   "z": -73.6
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": 19.3,
+   "z": -71.2
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": -64.2,
+   "y": 63,
+   "z": -97.1
+  },
+  {
+   "name": "chicken",
+   "type": "animal",
+   "x": -64.9,
+   "y": 63,
+   "z": -97.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -10.8,
+   "z": -111.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.7,
+   "z": -108.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.4,
+   "z": -110.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.9,
+   "z": -106.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.3,
+   "z": -109.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.4,
+   "z": -105.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -18.7,
+   "z": -96.3
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -17,
+   "z": -111.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -19,
+   "z": -105.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.9,
+   "z": -109.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.9,
+   "z": -107.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -16.5,
+   "z": -104.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -15.4,
+   "z": -110.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15,
+   "z": -109.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -12.6,
+   "z": -110.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -18.4,
+   "z": -97.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -19,
+   "z": -105.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -19,
+   "z": -98.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.1,
+   "z": -111.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.9,
+   "z": -99.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -13.9,
+   "z": -108.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17,
+   "z": -109.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -14.6,
+   "z": -106.1
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -3,
+   "z": -96
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.9,
+   "z": -107.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -12.4,
+   "z": -111.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -18.8,
+   "z": -103.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -13.4,
+   "z": -111.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.6,
+   "z": -96.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.3,
+   "z": -108.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -16.8,
+   "z": -99.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -12.7,
+   "z": -111.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.8,
+   "z": -106.5
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -3,
+   "z": -96
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -17,
+   "z": -111.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.6,
+   "z": -110.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.4,
+   "z": -108.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -18.5,
+   "z": -98.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -19.1,
+   "z": -102.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.8,
+   "z": -96.1
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -64,
+   "y": -2.9,
+   "z": -96.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -18.2,
+   "z": -99
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.9,
+   "z": -106.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.1,
+   "z": -105.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -18.4,
+   "z": -100.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -18.1,
+   "z": -98.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.1,
+   "z": -111.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.1,
+   "z": -104.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.3,
+   "z": -100.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.6,
+   "z": -108.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.8,
+   "z": -110
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.1,
+   "z": -109
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14,
+   "z": -111.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13,
+   "z": -110.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14,
+   "z": -111.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.1,
+   "z": -105.7
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -20,
+   "z": -103.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -19,
+   "z": -105.6
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -17,
+   "z": -109.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.9,
+   "z": -97
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.2,
+   "z": -108.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -17.7,
+   "z": -109.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -19,
+   "z": -97.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.8,
+   "z": -97
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.8,
+   "z": -106.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.5,
+   "z": -110.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -14.4,
+   "z": -111.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.4,
+   "z": -100.3
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64.1,
+   "y": 8.2,
+   "z": -97.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.6,
+   "z": -109.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15,
+   "z": -105
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.2,
+   "z": -98.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14,
+   "z": -110
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 52.8,
+   "y": 74,
+   "z": -176.7
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 63.5,
+   "y": 73,
+   "z": -180.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -16,
+   "z": -116.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.3,
+   "z": -113.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.1,
+   "z": -123.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.3,
+   "z": -123.3
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -119.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.6,
+   "z": -115.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -13.6,
+   "z": -113.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -12.4,
+   "z": -118.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15,
+   "z": -123
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14,
+   "z": -118.6
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -120.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.1,
+   "z": -112.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -13.1,
+   "z": -120.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15,
+   "z": -117.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17,
+   "z": -112.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.8,
+   "z": -117.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14.3,
+   "z": -112.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.5,
+   "z": -117.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -11.8,
+   "z": -113
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.7,
+   "z": -123.4
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -117.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.2,
+   "z": -112.9
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -118.2
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -113.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.8,
+   "z": -120.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.9,
+   "z": -118.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.8,
+   "z": -124.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.3,
+   "z": -115.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.6,
+   "z": -117.1
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -122.1
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -117.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.9,
+   "z": -121.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -12.6,
+   "z": -118.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -13.5,
+   "z": -126.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.4,
+   "z": -114
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.2,
+   "z": -121.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12,
+   "z": -119.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -12.4,
+   "z": -114.9
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -15,
+   "z": -115.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.7,
+   "z": -126.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.5,
+   "z": -118.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.5,
+   "z": -119.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -13,
+   "z": -120.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.5,
+   "z": -117.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.9,
+   "z": -126.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -13.6,
+   "z": -113.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -12.9,
+   "z": -115.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.5,
+   "z": -116.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.4,
+   "z": -116.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.1,
+   "z": -119.5
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -119.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.1,
+   "z": -125
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -120.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.9,
+   "z": -112.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.5,
+   "z": -119
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.6,
+   "z": -114.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.9,
+   "z": -120.6
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -121.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.9,
+   "z": -118.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.9,
+   "z": -114
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.8,
+   "z": -114.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -11,
+   "z": -121.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.5,
+   "z": -112.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.5,
+   "z": -116.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -16,
+   "z": -126
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.4,
+   "z": -123.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.2,
+   "z": -116.8
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -121.4
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -120.7
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -15.6,
+   "z": -116.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.7,
+   "z": -120.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16,
+   "z": -123.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.5,
+   "z": -120.6
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -119.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16,
+   "z": -113.4
+  },
+  {
+   "name": "drowned",
+   "type": "hostile",
+   "x": -64,
+   "y": 48.1,
+   "z": -127.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.2,
+   "z": -119.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.4,
+   "z": -116.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.5,
+   "z": -127.9
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -64,
+   "y": -16,
+   "z": -112.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.6,
+   "z": -123.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -13.1,
+   "z": -117
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -11.9,
+   "z": -119.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.3,
+   "z": -116.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15,
+   "z": -124.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17.6,
+   "z": -124.3
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 85.2,
+   "y": 71,
+   "z": -161.8
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 70.3,
+   "y": 72,
+   "z": -176.1
+  },
+  {
+   "name": "pig",
+   "type": "animal",
+   "x": 69.2,
+   "y": 73,
+   "z": -176.1
+  },
+  {
+   "name": "cow",
+   "type": "animal",
+   "x": 113.7,
+   "y": 70,
+   "z": -131.7
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -64,
+   "y": 54,
+   "z": -130.7
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -64,
+   "y": 49.9,
+   "z": -129.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.6,
+   "z": -128.8
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": 41.7,
+   "y": 71.1,
+   "z": -87.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -18.3,
+   "z": -97.9
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": -64.1,
+   "y": 64,
+   "z": -116.1
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -64.1,
+   "y": 50.8,
+   "z": -124.6
+  },
+  {
+   "name": "player",
+   "type": "player",
+   "x": 44.7,
+   "y": 68,
+   "z": -99.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.9,
+   "z": -96
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.5,
+   "z": -83.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -19,
+   "z": -99.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.2,
+   "z": -108.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -16.7,
+   "z": -106.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": 4.2,
+   "z": -68.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.6,
+   "z": -126.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.1,
+   "z": -94.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.3,
+   "z": -119.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.5,
+   "z": -118.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.7,
+   "z": -113.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.3,
+   "z": -98.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -18,
+   "z": -129.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.7,
+   "z": -83.2
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64,
+   "y": 15.9,
+   "z": -131.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -11.6,
+   "z": -120.6
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -114.4
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -113.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16,
+   "z": -122.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -64,
+   "y": -19,
+   "z": -94.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.1,
+   "z": -106.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -18.6,
+   "z": -127.7
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64,
+   "y": -19,
+   "z": -94.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14.2,
+   "z": -116.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.1,
+   "z": -106.6
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": 7.3,
+   "y": 8,
+   "z": -159.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -18.9,
+   "z": -95.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -13.2,
+   "z": -111.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14,
+   "z": -127.7
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -19,
+   "z": -95.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16,
+   "z": -118.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.1,
+   "z": -117.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.3,
+   "y": -12.3,
+   "z": -114.6
+  },
+  {
+   "name": "player",
+   "type": "player",
+   "x": 39.7,
+   "y": 69,
+   "z": -87.5
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": 62.8,
+   "y": -21,
+   "z": -170.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.2,
+   "z": -106.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.1,
+   "z": -106.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.9,
+   "z": -105.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.4,
+   "z": -97.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -2.3,
+   "z": -83.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.5,
+   "z": -105.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -13.8,
+   "z": -112
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15,
+   "z": -111.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.8,
+   "z": -114.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13,
+   "z": -111.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.2,
+   "z": -108.8
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -20,
+   "z": -104.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.1,
+   "z": -112.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -18.5,
+   "z": -96.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16,
+   "z": -108.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.4,
+   "z": -113.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.2,
+   "z": -110.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -16.4,
+   "z": -108.3
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64.1,
+   "y": 13,
+   "z": -117.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16,
+   "z": -107.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -15.5,
+   "z": -96.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -2.9,
+   "z": -95.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.5,
+   "z": -107.3
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -64,
+   "y": -23,
+   "z": -90.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -64.1,
+   "y": -16,
+   "z": -116.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14.7,
+   "z": -112.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16,
+   "z": -108.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.7,
+   "z": -118.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -16.9,
+   "z": -99.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15,
+   "z": -121.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14,
+   "z": -113.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17,
+   "z": -110.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14,
+   "z": -119.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -14.1,
+   "z": -120
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16.3,
+   "z": -109.5
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -64.1,
+   "y": 7,
+   "z": -97.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.7,
+   "z": -100
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.2,
+   "z": -112.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -17,
+   "z": -112.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -14.8,
+   "z": -108
+  },
+  {
+   "name": "drowned",
+   "type": "hostile",
+   "x": -64,
+   "y": 47.7,
+   "z": -125.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -13.6,
+   "z": -114.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -16,
+   "z": -122.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -18.8,
+   "z": -95.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -22.7,
+   "z": -88.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64,
+   "y": -15.5,
+   "z": -111.5
+  },
+  {
+   "name": "wandering_trader",
+   "type": "passive",
+   "x": 77.4,
+   "y": 64,
+   "z": -99.4
+  },
+  {
+   "name": "trader_llama",
+   "type": "animal",
+   "x": 7.5,
+   "y": 64,
+   "z": -79.5
+  },
+  {
+   "name": "trader_llama",
+   "type": "animal",
+   "x": 29.8,
+   "y": 71,
+   "z": -133.1
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -12.9,
+   "z": -118.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.1,
+   "y": -14.1,
+   "z": -116.3
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -51.7,
+   "y": -20,
+   "z": -111.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -64.2,
+   "y": -15.1,
+   "z": -106.8
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -61.2,
+   "y": -16,
+   "z": -112.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -57.5,
+   "y": -15,
+   "z": -114.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -56.5,
+   "y": -16,
+   "z": -118.5
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -49.9,
+   "y": 62.3,
+   "z": -148.6
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": -48.3,
+   "y": -15.9,
+   "z": -116.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -49.1,
+   "y": -21,
+   "z": -144.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -48.8,
+   "y": -21,
+   "z": -143.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -51.2,
+   "y": -16.1,
+   "z": -111.3
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -48.6,
+   "y": 48,
+   "z": -145.4
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": -13.5,
+   "y": -11,
+   "z": -146.4
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -49.4,
+   "y": 61.9,
+   "z": -144.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -47.5,
+   "y": -10,
+   "z": -121.9
+  },
+  {
+   "name": "drowned",
+   "type": "hostile",
+   "x": -48.1,
+   "y": 50,
+   "z": -153.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -47.7,
+   "y": -23,
+   "z": -73.8
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -48.2,
+   "y": -10,
+   "z": -118.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 3.5,
+   "y": 46.2,
+   "z": -192
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 3.4,
+   "y": 46.7,
+   "z": -192.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 14.3,
+   "y": -19.1,
+   "z": -192.2
+  },
+  {
+   "name": "drowned",
+   "type": "hostile",
+   "x": -48.1,
+   "y": 46,
+   "z": -128.4
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -47.7,
+   "y": -26,
+   "z": -85.2
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -49.6,
+   "y": 50.2,
+   "z": -147.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 6.7,
+   "y": 46.3,
+   "z": -192.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -45.3,
+   "y": -26,
+   "z": -85.6
+  },
+  {
+   "name": "player",
+   "type": "player",
+   "x": 40.7,
+   "y": 66,
+   "z": -99.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -50.9,
+   "y": -19,
+   "z": -111.3
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -47.6,
+   "y": -14.9,
+   "z": -56.8
+  },
+  {
+   "name": "player",
+   "type": "player",
+   "x": 42.7,
+   "y": 64,
+   "z": -55.5
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -49.3,
+   "y": 52.8,
+   "z": -156.4
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -48.6,
+   "y": 57.2,
+   "z": -155.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 4.7,
+   "y": 46.3,
+   "z": -192.2
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -45.8,
+   "y": -18,
+   "z": -116.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 5.9,
+   "y": 46.1,
+   "z": -192
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 7.4,
+   "y": -5,
+   "z": -192
+  },
+  {
+   "name": "item",
+   "type": "other",
+   "x": 43.6,
+   "y": 67,
+   "z": -62.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -47.3,
+   "y": -16.9,
+   "z": -115.6
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 6.5,
+   "y": -6,
+   "z": -192
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": -3.3,
+   "y": -11,
+   "z": -89.7
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 9.4,
+   "y": 56.9,
+   "z": -26.4
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 15.5,
+   "y": -16,
+   "z": -41.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -17.8,
+   "y": -5,
+   "z": -160.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 62.3,
+   "y": -20,
+   "z": -171.2
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -25.5,
+   "y": -14,
+   "z": -156.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 4,
+   "y": -7,
+   "z": -192
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 3.6,
+   "y": 46.7,
+   "z": -192
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 71,
+   "y": -18,
+   "z": -59.7
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 20.6,
+   "y": 62.5,
+   "z": -24.4
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 54.1,
+   "y": 8,
+   "z": -164.7
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 4.5,
+   "y": 45,
+   "z": -187.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 9.6,
+   "y": -9,
+   "z": -20.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 57.5,
+   "y": -23,
+   "z": -175.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -19.5,
+   "y": -7,
+   "z": -146.5
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -49.6,
+   "y": 53.4,
+   "z": -140.5
+  },
+  {
+   "name": "item",
+   "type": "other",
+   "x": 44.6,
+   "y": 63,
+   "z": -40.9
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -29.5,
+   "y": 20,
+   "z": -142.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 53.8,
+   "y": 24,
+   "z": -141.8
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": 14.3,
+   "y": 9.6,
+   "z": -16.3
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 78.5,
+   "y": -24,
+   "z": -152.7
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 23.3,
+   "y": -30,
+   "z": -176.9
+  },
+  {
+   "name": "item",
+   "type": "other",
+   "x": 44.9,
+   "y": 62.5,
+   "z": -38.9
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 33.5,
+   "y": 0,
+   "z": -104.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -29.5,
+   "y": -6,
+   "z": -134.5
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 56.2,
+   "y": 8,
+   "z": -164.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 55.5,
+   "y": 24,
+   "z": -146.5
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 20.3,
+   "y": 62.6,
+   "z": -23.6
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 19.5,
+   "y": 62.5,
+   "z": -23.3
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 9.6,
+   "y": 56.9,
+   "z": -25.2
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 35.2,
+   "y": -27,
+   "z": -169.8
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -9.5,
+   "y": 0,
+   "z": -161.7
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": -5.2,
+   "y": 60,
+   "z": -19.6
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -18.5,
+   "y": -31,
+   "z": -81.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 35.5,
+   "y": -18,
+   "z": -15.8
+  },
+  {
+   "name": "witch",
+   "type": "hostile",
+   "x": 31.5,
+   "y": -21,
+   "z": -13.5
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": -6.4,
+   "y": 59.4,
+   "z": -19.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 100.2,
+   "y": -23.9,
+   "z": -146.6
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": 5.4,
+   "y": 2,
+   "z": -153.6
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 10.8,
+   "y": -10,
+   "z": -19.5
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": 43.1,
+   "y": 28,
+   "z": -36.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 20,
+   "y": 0.2,
+   "z": -159.3
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 7.5,
+   "y": 61,
+   "z": -64.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -37.9,
+   "y": -20.2,
+   "z": -156.9
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -24.9,
+   "y": -6,
+   "z": -142.7
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 20.5,
+   "y": 56.7,
+   "z": -24.7
+  },
+  {
+   "name": "witch",
+   "type": "hostile",
+   "x": 52.5,
+   "y": -24,
+   "z": -11.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 12.5,
+   "y": -16,
+   "z": -23.3
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 20.9,
+   "y": 62.6,
+   "z": -19.1
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 90.5,
+   "y": -28,
+   "z": -143.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 87.5,
+   "y": -28,
+   "z": -141.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 73.2,
+   "y": -23.9,
+   "z": -157.7
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 32.6,
+   "y": 7.6,
+   "z": -170.5
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": -8.5,
+   "y": 17,
+   "z": -152.2
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 52.5,
+   "y": -24,
+   "z": -180.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 29.5,
+   "y": 27,
+   "z": -137.2
+  },
+  {
+   "name": "item",
+   "type": "other",
+   "x": 45.9,
+   "y": 64,
+   "z": -56.2
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 42.5,
+   "y": -32,
+   "z": -154.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -19.7,
+   "y": -7,
+   "z": -138.8
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": -11.5,
+   "y": -12,
+   "z": -148.5
+  },
+  {
+   "name": "drowned",
+   "type": "hostile",
+   "x": -11.7,
+   "y": 3,
+   "z": -77.9
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 29.2,
+   "y": 7,
+   "z": -106.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 46.5,
+   "y": 7,
+   "z": -167.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 12.8,
+   "y": -19,
+   "z": -189.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 11.5,
+   "y": 2.1,
+   "z": -139.8
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 17,
+   "y": -16.1,
+   "z": -10
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 19.2,
+   "y": 56.1,
+   "z": -31.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 79.5,
+   "y": -21,
+   "z": -65.2
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 54.5,
+   "y": -24,
+   "z": -15.5
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 15.2,
+   "y": -4,
+   "z": -112.8
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 35.5,
+   "y": 0,
+   "z": -103.5
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 7.9,
+   "y": 62,
+   "z": -64.1
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 60.5,
+   "y": 21,
+   "z": -151.5
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -35.5,
+   "y": 17,
+   "z": -155.6
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 61.9,
+   "y": -21,
+   "z": -170.3
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -10.5,
+   "y": -1,
+   "z": -164.3
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 50.2,
+   "y": 14,
+   "z": -175.3
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 46.7,
+   "y": 14,
+   "z": -173.4
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 56.2,
+   "y": -23.8,
+   "z": -176.4
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 29.7,
+   "y": 7,
+   "z": -173.8
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 29.5,
+   "y": 7,
+   "z": -175.5
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": -10.5,
+   "y": 60.6,
+   "z": -56.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 25.4,
+   "y": -30.9,
+   "z": -175.7
+  },
+  {
+   "name": "enderman",
+   "type": "hostile",
+   "x": 64.6,
+   "y": -21,
+   "z": -172.7
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 62.5,
+   "y": -22,
+   "z": -172.5
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 61.5,
+   "y": -22,
+   "z": -175.5
+  },
+  {
+   "name": "salmon",
+   "type": "water_creature",
+   "x": 20.7,
+   "y": 55,
+   "z": -32.2
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 16.7,
+   "y": 13,
+   "z": -96.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 52.4,
+   "y": -24,
+   "z": -183.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 23.9,
+   "y": -30,
+   "z": -176.3
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": -11.9,
+   "y": 60.7,
+   "z": -33.9
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": 11.5,
+   "y": -10,
+   "z": -14.5
+  },
+  {
+   "name": "squid",
+   "type": "passive",
+   "x": 26.3,
+   "y": 62.2,
+   "z": -22.4
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 65.5,
+   "y": 4,
+   "z": -15.5
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": 40.5,
+   "y": -26,
+   "z": -183.5
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 2.5,
+   "y": 45,
+   "z": -189.2
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": 41.2,
+   "y": 8.4,
+   "z": -173.8
+  },
+  {
+   "name": "spider",
+   "type": "hostile",
+   "x": 66.5,
+   "y": -16,
+   "z": -47.5
+  },
+  {
+   "name": "bat",
+   "type": "ambient",
+   "x": -11.4,
+   "y": 16.4,
+   "z": -161.2
+  },
+  {
+   "name": "zombie",
+   "type": "hostile",
+   "x": 35.5,
+   "y": 7,
+   "z": -165.5
+  },
+  {
+   "name": "creeper",
+   "type": "hostile",
+   "x": 9.5,
+   "y": 3,
+   "z": -106.5
+  },
+  {
+   "name": "glow_squid",
+   "type": "passive",
+   "x": -45.7,
+   "y": 2.8,
+   "z": -92.4
+  },
+  {
+   "name": "skeleton",
+   "type": "hostile",
+   "x": -43.5,
+   "y": -19,
+   "z": -127.5
+  }
+ ]
+}

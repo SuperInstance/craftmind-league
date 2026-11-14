@@ -1,0 +1,30 @@
+{
+  "citizen": "Cody",
+  "constitution": "floor.v0",
+  "day_window": [
+    "2026-11-09T00:00:00Z",
+    "2026-11-12T00:00:00Z"
+  ],
+  "daylight": "free",
+  "driver_id": "cody-driver",
+  "feed": {
+    "count": 8,
+    "item": "cooked_porkchop",
+    "op": {
+      "item": "cooked_porkchop",
+      "count": 32
+    }
+  },
+  "max_deaths": 3,
+  "park_bay": null,
+  "sensor": {
+    "trace_path": "/home/caseydigennaro/craftmind-league/pulse/day11/fixture-run/C-1794268730356/trace.jsonl"
+  },
+  "timers": {
+    "canary_s": 1,
+    "daylight_check_s": 240,
+    "heartbeat_lost_s": 4,
+    "lease_ttl_s": 3,
+    "poll_s": 1
+  }
+}

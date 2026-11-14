@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T20-36-17-608Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T20:36:17.680Z",
+ "parent": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T20-35-28-269Z.js",
+ "rationale": "The previous script had several issues: it failed to properly escape the trapped hollow, didn't handle the crafting table placement correctly (trying to place before crafting), and had incomplete logic flow. The new version ensures Cody escapes the hollow first, properly gathers logs, crafts planks, places the crafting table, and then crafts the pickaxe. It also adds better error handling and progress tracking.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T20:36:17.594+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 17.116,
+  "prompt_tokens": 5602,
+  "completion_tokens": 845,
+  "total_tokens": 6447
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

@@ -1,0 +1,220 @@
+[DIGTEST] DigTst2111468 spawn 27.68,68.00,-103.31
+[DIGTEST] stage leg 24 -103 {"ok":true,"via":"pathfinder"} at 24.66,68.00,-103.51
+[DIGTEST] stage leg 26.5 -103.3 {"ok":true,"via":"pathfinder"} at 26.50,68.00,-103.50
+[DIGTEST] STALL (unarmed walkTo): {"ok":false,"error":"walkTo timeout (30000ms) to 38,68,-103.3; at (27.68368507969229, 68, -103.49026051089469)"} ms 30066 base 27.68,68.00,-103.49 onGround false
+[DIGTEST] WALL x=27: [y67 grass_block] [y68 air] [y69 air] [y70 air] [y71 air] 
+[DIGTEST] WALL x=28: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 air] [y71 air] 
+[DIGTEST] WALL x=29: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 leaf_litter] [y71 air] 
+[DIGTEST] WALL x=30: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 leaf_litter] [y71 air] 
+[DIGTEST] WALL x=31: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 air] [y71 air] 
+[DIGTEST] WALL x=32: [y67 grass_block] [y68 air] [y69 air] [y70 air] [y71 air] 
+[DIGTEST] WALL x=33: [y67 grass_block] [y68 air] [y69 air] [y70 air] [y71 air] 
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.67,68.00,-103.30 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] TRACE 27.68,68.00,-103.32 onGround false
+[DIGTEST] ARMED gotoNear: {"ok":false,"error":"walkTo timeout (62784ms) to 38.68368507969229,68,-103.49026051089469; at (27.7, 68, -103.31913695951248)"} ms 70127 end 27.70,68.00,-103.32 dxFromBase 0.02
+[DIGTEST] DIGSTEP-STATS {
+ "enabled": true,
+ "uses": 1,
+ "log": [
+  {
+   "ts": "2026-11-07T09:12:15.512Z",
+   "at": {
+    "x": 28,
+    "y": 69,
+    "z": -104
+   },
+   "block": "grass_block",
+   "reason": "plus2-top-block"
+  }
+ ],
+ "evals": [
+  {
+   "ts": "2026-11-07T09:12:11.008Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 69,
+   "step": 2,
+   "above": "air",
+   "action": "dug:grass_block:plus2-top-block"
+  },
+  {
+   "ts": "2026-11-07T09:12:15.512Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:19.619Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:23.720Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:27.826Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:31.929Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:36.032Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:40.136Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:44.240Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:48.694Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:52.799Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:12:56.902Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:13:01.009Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  },
+  {
+   "ts": "2026-11-07T09:13:05.110Z",
+   "front": {
+    "x": 28,
+    "z": -104
+   },
+   "top": 68,
+   "step": 1,
+   "above": "air",
+   "action": "none"
+  }
+ ]
+}
+[DIGTEST] DONE

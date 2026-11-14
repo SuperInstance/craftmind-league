@@ -1,0 +1,6 @@
+{"ts":"2026-11-09T19:39:08.088Z","id":"recovery-gamemode-4","ok":true,"chat":"/gamemode spectator MagnusandMouse","srv":[]}
+{"ts":"2026-11-09T19:39:14.090Z","id":"recovery-time-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-09T19:40:09.699Z","id":"recovery-data-1","ok":true,"chat":"/data get entity MagnusandMouse playerGameType","srv":["MagnusandMouse has the following entity data: 3"]}
+{"ts":"2026-11-09T19:42:24.938Z","id":"recovery-time-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-09T19:42:36.944Z","id":"recovery-time-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+{"ts":"2026-11-09T19:43:10.048Z","id":"recovery-op-quit-2","ok":true,"bye":true}

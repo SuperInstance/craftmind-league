@@ -1,0 +1,14 @@
+[DIGTEST] DigTst2111468 spawn 23.50,69.00,-102.50
+[DIGTEST] stage leg 24 -103 {"ok":true} at 23.50,69.00,-102.50
+[DIGTEST] stage leg 26.5 -103.3 {"ok":true,"via":"pathfinder"} at 26.50,68.00,-103.50
+[DIGTEST] STALL (unarmed walkTo): {"ok":false,"error":"walkTo timeout (30000ms) to 38,68,-103.3; at (27.68369974157798, 68, -103.48645935881399)"} ms 30120 base 27.68,68.00,-103.49 onGround false
+[DIGTEST] WALL x=27: [y67 grass_block] [y68 air] [y69 air] [y70 air] [y71 air] 
+[DIGTEST] WALL x=28: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 air] [y71 air] 
+[DIGTEST] WALL x=29: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 leaf_litter] [y71 air] 
+[DIGTEST] WALL x=30: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 leaf_litter] [y71 air] 
+[DIGTEST] WALL x=31: [y67 dirt] [y68 dirt] [y69 grass_block] [y70 air] [y71 air] 
+[DIGTEST] WALL x=32: [y67 grass_block] [y68 air] [y69 air] [y70 air] [y71 air] 
+[DIGTEST] WALL x=33: [y67 grass_block] [y68 air] [y69 air] [y70 air] [y71 air] 
+[DIGTEST] ARMED gotoNear: {"ok":false,"error":"walkTo timeout (62796ms) to 38.68369974157798,68,-103.48645935881399; at (27.67747768724426, 68, -103.31497945877591)"} ms 70112 end 27.68,68.00,-103.31 dxFromBase -0.01
+[DIGTEST] DIGSTEP-STATS {"enabled":true,"uses":1,"log":[{"ts":"2026-11-07T09:05:35.745Z","at":{"x":28,"y":69,"z":-104},"block":"grass_block","reason":"plus2-top-block"}]}
+[DIGTEST] DONE

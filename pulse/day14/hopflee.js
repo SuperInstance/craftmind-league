@@ -1,0 +1,137 @@
+'use strict';
+/**
+ * hopflee.js — HOP-CHAINING FLEE (day-4 repair (2); seeded substrate,
+ * same standing as prims.js).
+ *
+ * WHY: day 3 (2026-11-09) a fed Cody sat ~60 cycles in the dip pocket
+ * (75.3, 64, -98.5). The floor's flee targeted HOME through the same
+ * long-leg walker that cannot leave that pocket — every long goto
+ * timed out at the same spot — and the district's day-neutral spiders
+ * plus the roaming bow skeleton killed him four times in 66 seconds.
+ * The day's own evidence: the ONLY gotos that ever left the pocket
+ * were 2-block hops (goto (77,64,-98), cycles 153/158/207/215/221/233).
+ * Short hops are the locomotion this district's relief respects.
+ *
+ * WHAT: hopFlee walks a body toward a target in chained hops of
+ * ~hopLen blocks (default 2). Each hop aims at the target but SCORES
+ * candidate directions by (distance-to-target after the hop) minus a
+ * bonus for RISING ground, because the traps in this district are low
+ * pockets and home is a shoulder. A hop direction that buys no
+ * displacement is banned for the next two choices (the pocket's other
+ * lesson: repeating the identical failed leg is the grind). The flee
+ * stops when isClear() says the danger is gone, when the body is
+ * within musterRange of the target, or when the time budget ends —
+ * the caller decides what happens then (the driver's floor burrows).
+ *
+ * This module is shared by pulse/direct-drive.js (the floor) and
+ * pulse/test-flee-day4.js (the pocket proof) so the tested code is
+ * the shipped code.
+ *
+ * DAY-14 COPY (pulse/day14/hopflee.js; SAFETY-READING-PATH-REPAIR,
+ * pulse/SAFETY-READING-PATH-REPAIR-20261109.md): a copy of the lib
+ * module with exactly two deltas — (1) the prims require is the
+ * absolute lib path (this copy lives outside lib/; the prims module
+ * driven is the same shipped one); (2) an optional hop-boundary
+ * safety hook, opts.safetyCheck(nextHop): at EVERY hop boundary,
+ * before the next hop is chosen or issued, the hook is awaited; a
+ * truthy return (a stop verdict from the shared safety snapshot,
+ * pulse/day14/safety-check.js) aborts the flee mid-flight and NO
+ * further hop is issued. Day 13's incident H1 is why: the floor
+ * parked 1.3 s after the third death and the driver never heard it,
+ * because nothing inside the flee read the park or the death count.
+ * Absent the opt, behaviour is exactly the day-4 module's.
+ */
+const prims = require('/home/caseydigennaro/craftmind-league/pulse/lib/prims.js');
+
+/** Feet-level y a body would stand at in column (x, z), or null. */
+function feetYAt(bot, x, z) {
+  const top = prims.groundY(bot, Math.floor(x), Math.floor(z));
+  return top == null ? null : top + 1;
+}
+
+async function hopFlee(bot, opts) {
+  const target = opts.target;
+  const isClear = opts.isClear || (() => false);
+  const maxMs = opts.maxMs || 75000;
+  const hopLen = opts.hopLen || 2;
+  const musterRange = opts.musterRange != null ? opts.musterRange : 3.5;
+  const log = opts.log || (() => {});
+  const t0 = Date.now();
+  const banned = new Map(); // angleBucket -> hopsRemaining
+  let hops = 0;
+  const start = bot.entity ? bot.entity.position.clone() : null;
+
+  const distToTarget = () => {
+    const p = bot.entity.position;
+    return Math.hypot(p.x - target.x, p.z - target.z);
+  };
+
+  while (Date.now() - t0 < maxMs) {
+    if (!bot.entity || bot.health <= 0) return { ok: false, why: 'body gone', hops };
+    // DAY-14 SAFETY HOOK: the hop boundary. Checked before the
+    // clear/muster exits — a stop outranks a clear, because the
+    // stop is the supervisor's word (a park) or the run's own
+    // death limit, and neither may be traded for a finished flee.
+    if (opts.safetyCheck) {
+      const s = await opts.safetyCheck(hops + 1);
+      if (s) return { ok: false, why: 'safety-abort', aborted: true, trigger: s.trigger || null, gateReason: s.gateReason || null, deaths: s.deaths != null ? s.deaths : null, hop: hops + 1, hops, dist: +distToTarget().toFixed(1) };
+    }
+    if (isClear()) return { ok: true, via: 'clear', hops, dist: +distToTarget().toFixed(1) };
+    if (distToTarget() <= musterRange) return { ok: true, via: 'mustered at target', hops, dist: +distToTarget().toFixed(1) };
+
+    const p = bot.entity.position;
+    const baseAng = Math.atan2(target.z - p.z, target.x - p.x);
+    const spreads = [0, 0.6, -0.6, 1.2, -1.2, 2.2, -2.2, Math.PI];
+    let best = null;
+    for (const off of spreads) {
+      const ang = baseAng + off;
+      const bucket = Math.round(((ang % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI) / (Math.PI / 6));
+      if ((banned.get(bucket) || 0) > 0) continue;
+      const hx = p.x + Math.cos(ang) * hopLen;
+      const hz = p.z + Math.sin(ang) * hopLen;
+      const fy = feetYAt(bot, hx, hz);
+      if (fy == null) continue;
+      const step = fy - Math.floor(p.y);
+      const dAfter = Math.hypot(hx - target.x, hz - target.z);
+      // Score: lower is better. Day-4 pocket test v1 (19 hops, FAIL)
+      // showed distance alone drags the flee DOWN into the bowl low
+      // west cells: a 2-block hop toward home buys ~2 of distance,
+      // outbidding the old 1.5-max rise bonus, while the real exits
+      // (north lip, east shoulder) first move AWAY or UP. v2: rising
+      // ground is worth 2 blocks of distance per block climbed, and
+      // DESCENT is penalised harder than distance gained — fleeing
+      // downhill into a pocket is the trap this module exists for.
+      // A +2-or-more step remains a wall: heavily penalised, not
+      // forbidden (it may be the only way out).
+      let score = dAfter - 2.0 * Math.max(0, Math.min(3, fy - p.y));
+      if (fy < p.y) score += 4.0 * (p.y - fy);
+      if (step >= 2) score += 6;
+      if (!best || score < best.score) best = { ang, bucket, hx, hz, fy, score };
+    }
+    if (!best) { // every direction banned or unknown: clear bans and wait a beat
+      banned.clear();
+      await prims.sleep(600);
+      continue;
+    }
+    const before = bot.entity.position.clone();
+    hops++;
+    let r = { ok: false };
+    try { r = await prims.gotoNear(bot, best.hx, best.fy, best.hz, 0.9, 8000); } catch (e) { r = { ok: false, error: e.message }; }
+    const after = bot.entity ? bot.entity.position : before;
+    const moved = Math.hypot(after.x - before.x, after.z - before.z);
+    log(`hop ${hops}: -> (${best.hx.toFixed(1)},${best.fy},${best.hz.toFixed(1)}) ok=${r.ok} moved=${moved.toFixed(2)} pos=(${after.x.toFixed(1)},${after.y.toFixed(1)},${after.z.toFixed(1)})`);
+    for (const [k, v] of banned) { if (v <= 1) banned.delete(k); else banned.set(k, v - 1); }
+    if (moved < 0.3) banned.set(best.bucket, 2);
+    await prims.sleep(250);
+  }
+  const end = bot.entity ? bot.entity.position : null;
+  return {
+    ok: isClear() || (end && Math.hypot(end.x - target.x, end.z - target.z) <= musterRange),
+    via: 'budget exhausted', hops,
+    dist: end ? +Math.hypot(end.x - target.x, end.z - target.z).toFixed(1) : null,
+    start: start ? { x: +start.x.toFixed(1), y: +start.y.toFixed(1), z: +start.z.toFixed(1) } : null,
+    end: end ? { x: +end.x.toFixed(1), y: +end.y.toFixed(1), z: +end.z.toFixed(1) } : null,
+  };
+}
+
+module.exports = { hopFlee, feetYAt };

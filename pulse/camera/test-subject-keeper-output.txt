@@ -1,0 +1,48 @@
+P0 INTEGRITY (deliverable vs pinned original cameraman)
+  [ok] audit baseline is the live cameraman.py (md5 27aaa066)
+  [ok] every shared function outside the named differing set is byte-identical (53 shared functions; differing: Director.__init__, Director.fallback_step, Director.flythrough, Director.run_event, World.__init__, _los_columns, main)
+  [ok] added functions are exactly the keeper set (World.dd_snapshot, _mirror_age_s, keeper_step, subject_keeper)
+  [ok] no function removed
+  [ok] every shared module constant identical (35 constants)
+  [ok] added constants are only the SUBJECT_* set
+  [ok] no constant removed
+  [ok] imports: original set kept, only 'calendar' added
+  [ok] daylight / STOP / focus-guard / tails byte-identical: Director._attempt_daylight, Director.daylight, Director.check_stop, Director.dwell, send_command, mc_window_active, thor_poll, log_tail
+P1 DAY-10 REPLAY: publications=308 displacement=573.9 blocks statuses={'reframed': 71, 'tracked': 237}
+  tracking mismatches=0/308, reframes=71, aim error max=0.0000 mean=0.0000 blocks
+  [ok] P1 DAY-10 REPLAY tracking exact
+  [ok] P1 DAY-10 REPLAY no reframe ever aimed at a stale position
+  [ok] P1 DAY-10 REPLAY keeper reframed (71 times)
+P2 DAY-11 REPLAY: publications=36 displacement=34.9 blocks statuses={'reframed': 6, 'tracked': 30}
+  tracking mismatches=0/36, reframes=6, aim error max=0.0000 mean=0.0000 blocks
+  [ok] P2 DAY-11 REPLAY tracking exact
+  [ok] P2 DAY-11 REPLAY no reframe ever aimed at a stale position
+  [ok] P2 DAY-11 REPLAY keeper reframed (6 times)
+P3 SYNTHETIC CONTRAST (108-block roam with work pauses)
+  path length 108 blocks over 121 samples (2 s ticks)
+  KEEPER:        in-frame 120/120 sampled (1 unframed at start), max err 6.0, mean err 0.90, reframes=19
+  ORIGINAL-A (fallback dwell 10.5 s): in-frame 106/121, max err 25.5, mean err 2.00
+  ORIGINAL-B (event cadence 20 s)  : in-frame 104/121, max err 30.0, mean err 3.22
+  WHILE MOVING (the discriminating samples): keeper in-frame 18/18; ORIGINAL-A 7/18; ORIGINAL-B 5/18
+  NOTE the keeper's bound, stated plainly: sampled before each step, its worst-case error while the subject moves is ONE keeper cycle of travel (2 s x speed) -- at the fixture's 3 blocks/s that is exactly the 6.0-block frame radius (max err above). At sprint speed the same bound would exceed the radius between cycles; at the citizens' recorded pace (day-10: 573.9 blocks over 303 driver cycles, legs walked at ~1-3 blocks per cycle of ~17 s) it is far inside. The original arms have no such bound: their error grows for the whole dwell (max 25.5 / 30.0 above).
+  [ok] keeper keeps the walking subject in-frame (>=90% of samples)
+  [ok] while the subject is actually moving, the keeper never loses him and both original arms do
+  [ok] both original-cadence arms lose the subject more often
+P4 STALENESS (publications freeze 120 s mid-walk)
+  stale probes past the 45 s bound: 37 (all stale: True); SUBJECT-HOLD lines=1, SUBJECT-RESUME lines=1
+  reframes during the 120 s freeze=0; target held at last fresh position=True; resume reframe aim error=0.0000
+  [ok] stale at every probe past the bound
+  [ok] SUBJECT-HOLD logged exactly once per episode
+  [ok] zero reframes issued during the freeze
+  [ok] framing target never left the last fresh position
+  [ok] on resume: one SUBJECT-RESUME and a reframe aimed at the true current position
+P4B BUSY (shot running: reframes defer, tracking does not)
+  40 publications under a running shot: tracking mismatches=0, reframes while busy=0; first publication after the shot ends: reframes=1
+  [ok] busy: tracking exact, zero reframes issued
+  [ok] busy released: the deferred reframe fires on the next publication
+P5 OCCLUSION HONESTY (day-10 pubs x wrong-place perception): statuses={'occluded': 308}
+  tracking mismatches=0/308, reframes=0, aim error max=0.0000
+  [ok] tracking stays exact even when occluded
+  [ok] no frame issued on a stale aim
+  (occluded = every LOS station rejected by the fed perception; the keeper holds rather than framing blind -- the count above is the blindness price of wrong-place perception, and the reason Gate B must verify the live mirror is the citizen's OWN current perception, which in production it is by construction: the driver publishes it from his own position every cycle.)
+VERDICT: PASS test-subject-keeper (0 failed assertion(s))

@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-59-37-425Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T19:59:37.484Z",
+ "parent": null,
+ "rationale": "The previous attempt failed because Cody gathered planks but didn't craft a crafting table before attempting to make a pickaxe. The fix ensures proper recipe sequencing: first gather logs, craft planks, then craft the crafting table (placed), then use it to craft the pickaxe. The script now properly checks for each step's completion and progresses only when conditions are met.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T19:59:37.418+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 15.573,
+  "prompt_tokens": 4264,
+  "completion_tokens": 795,
+  "total_tokens": 5059
+ },
+ "shape": "SHAPE-OK s1-gather-tools"
+}

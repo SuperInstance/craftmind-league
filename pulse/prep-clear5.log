@@ -1,0 +1,19 @@
+2026-11-08T07:32:00.309Z spawned at (35.5, 73, -88.5)
+2026-11-08T07:32:10.324Z settled at (35.5, 73, -88.5) hp 20 food 20
+2026-11-08T07:32:10.325Z SETTLE-DUMP pos (35.5, 73, -88.5) feet=air head=air below=oak_leaves | feetLvl N=oak_leaves S=air E=air W=air
+2026-11-08T07:32:15.494Z stuck #1 en route to (36,-101) botAt (35.51492478960347, 73, -88.67773446558084) d=11.9 sidestep left
+2026-11-08T07:32:15.495Z STUCK-DUMP pos (35.51492478960347, 73, -88.67773446558084) feet=air head=air below=oak_leaves | feetLvl N=oak_leaves S=air E=air W=air
+2026-11-08T07:32:22.277Z stuck #2 en route to (36,-101) botAt (35.498142890780386, 73, -88.6975931632192) d=11.8 sidestep right
+2026-11-08T07:32:29.062Z stuck #3 en route to (36,-101) botAt (35.498142890780386, 73, -88.6975931632192) d=11.8 sidestep left
+2026-11-08T07:32:35.845Z stuck #4 en route to (36,-101) botAt (35.498142890780386, 73, -88.6975931632192) d=11.8 sidestep right
+2026-11-08T07:32:42.629Z stuck #5 en route to (36,-101) botAt (35.498142890780386, 73, -88.6975931632192) d=11.8 sidestep left
+2026-11-08T07:32:49.417Z stuck #6 en route to (36,-101) botAt (35.498142890780386, 73, -88.6975931632192) d=11.8 sidestep right
+2026-11-08T07:32:51.037Z giving up leg to (36,-101)
+2026-11-08T07:32:51.038Z stage (36,-101) ok=false botAt (35.498142890780386, 73, -88.6975931632192) hp 20
+2026-11-08T07:32:56.200Z stuck #1 en route to (46,-100) botAt (35.498142890780386, 73, -88.6975931632192) d=15.4 sidestep left
+2026-11-08T07:32:56.201Z STUCK-DUMP pos (35.498142890780386, 73, -88.6975931632192) feet=air head=air below=oak_leaves | feetLvl N=oak_leaves S=air E=air W=air
+2026-11-08T07:33:02.985Z stuck #2 en route to (46,-100) botAt (35.498142890780386, 73, -88.6975931632192) d=15.4 sidestep right
+2026-11-08T07:33:09.769Z stuck #3 en route to (46,-100) botAt (35.877655853104514, 73, -88.69534696279777) d=15.2 sidestep left
+2026-11-08T07:33:16.551Z stuck #4 en route to (46,-100) botAt (35.877655853104514, 73, -88.69534696279777) d=15.2 sidestep right
+2026-11-08T07:33:23.332Z stuck #5 en route to (46,-100) botAt (36.270640440834406, 73, -88.6975931632192) d=14.9 sidestep left
+2026-11-08T07:33:30.116Z stuck #6 en route to (46,-100) botAt (36.270640440834406, 73, -88.6975931632192) d=14.9 sidestep right

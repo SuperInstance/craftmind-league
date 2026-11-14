@@ -1,0 +1,91 @@
+{
+ "user": "TraverseG110535",
+ "ts": "2026-11-07T11:05:39.898Z",
+ "helm": "v3.5 (arbiter)",
+ "legMs": 75000,
+ "nav": [
+  {
+   "staged": "operator teleport (declared trial apparatus)",
+   "waitedMs": 720030,
+   "at": {
+    "x": 42.5,
+    "y": 69,
+    "z": -100.5
+   }
+  },
+  {
+   "hop": [
+    40,
+    -93
+   ],
+   "ty": 69,
+   "ok": true,
+   "via": "pathfinder",
+   "error": null,
+   "from": {
+    "x": 42.5,
+    "y": 69,
+    "z": -100.5
+   },
+   "to": {
+    "x": 41.45,
+    "y": 68,
+    "z": -94.55
+   }
+  },
+  {
+   "hop": [
+    45,
+    -89
+   ],
+   "ty": 69,
+   "ok": true,
+   "via": "pathfinder",
+   "error": null,
+   "from": {
+    "x": 41.45,
+    "y": 68,
+    "z": -94.55
+   },
+   "to": {
+    "x": 45.49,
+    "y": 68,
+    "z": -90.69
+   }
+  },
+  {
+   "hop": [
+    49.5,
+    -83.5
+   ],
+   "ty": 66,
+   "ok": false,
+   "via": null,
+   "error": "walkTo timeout (80784ms) to 49.5,66,-83.5; at (45.496321628119226, 68.41999998688698, -90.31168818612501)",
+   "from": {
+    "x": 45.49,
+    "y": 68,
+    "z": -90.62
+   },
+   "to": {
+    "x": 45.5,
+    "y": 68.42,
+    "z": -90.31
+   }
+  }
+ ],
+ "deaths": 0,
+ "health": null,
+ "spawn": {
+  "pos": {
+   "x": 42.5,
+   "y": 69,
+   "z": -100.5
+  },
+  "onGround": true,
+  "below": "grass_block",
+  "health": 20
+ },
+ "navOk": false,
+ "verdict": "NAV-FAIL — probe could not reach the route start; traverse NOT run"
+}

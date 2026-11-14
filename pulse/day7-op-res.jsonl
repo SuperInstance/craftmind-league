@@ -1,0 +1,3 @@
+{"ts":"2026-11-09T16:35:42.551Z","id":"selftest1","ok":true,"gave":"/give Gallery cooked_porkchop 1","srv":["Gave 1 [Cooked Porkchop] to Gallery"]}
+{"ts":"2026-11-09T16:36:42.159Z","id":"feed-cody-1","ok":true,"gave":"/give Cody cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody"]}
+{"ts":"2026-11-09T16:38:49.690Z","id":"quit1","ok":true,"bye":true}

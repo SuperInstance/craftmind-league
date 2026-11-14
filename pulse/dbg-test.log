@@ -1,0 +1,31 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+stance: 77.5 66.0 -96.5
+findBlocks(matching fn): 45 (80,66,-96) (80,67,-96) (80,68,-96) (80,69,-96) (80,70,-96)
+log ids: 49,51,50,53,55
+findBlocks(matching ids): 45 (80,66,-96) (80,67,-96) (80,68,-96) (80,69,-96) (80,70,-96) (80,71,-96) (80,72,-96) (81,66,-104)
+blockAt(80,66,-96): birch_log | boundingBox: block
+blockAt(80,65,-96): dirt | boundingBox: block
+prims.findBlocks birch_log: [{"x":77,"y":66,"z":-109},{"x":77,"y":67,"z":-109},{"x":77,"y":68,"z":-109},{"x":77,"y":69,"z":-109}]
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

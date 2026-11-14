@@ -1,0 +1,47 @@
+{
+ "ts": "2026-11-09T06:15:11.938Z",
+ "intent": "Heading to the homestead",
+ "project": "relocate",
+ "step": "travel",
+ "homestead": {
+  "x": 64,
+  "y": 67,
+  "z": -93
+ },
+ "milestones": {
+  "relocate": "2026-11-08T05:40:31.998Z",
+  "pickaxe": "2026-11-08T05:43:28.093Z",
+  "pad": "2026-11-08T05:43:52.758Z"
+ },
+ "interrupts": 1,
+ "flees": 1,
+ "pos": {
+  "x": 77.3,
+  "y": 64,
+  "z": -98.3
+ },
+ "health": 9.133333206176758,
+ "food": 4,
+ "inventory": {
+  "oak_log": 6,
+  "oak_sapling": 2
+ },
+ "actor": {
+  "enabled": false,
+  "beats": 0,
+  "failures": 0,
+  "lastBeatAt": null,
+  "lastLine": null,
+  "beatsByKind": {
+   "tick": 0,
+   "declare": 0,
+   "react": 0
+  },
+  "declaresLastHour": 0,
+  "reactsLastHour": 0,
+  "lastRank": null,
+  "consultsFiled": 1,
+  "answersConsumed": 0,
+  "libraryFacts": []
+ }
+}

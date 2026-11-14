@@ -1,0 +1,491 @@
+OP provision process up; req=day10-op-req.jsonl res=day10-op-res.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjU2MTk3ODkxfQ==
+RES {"id":"d10-ping-launch","ok":true,"spawned":true,"pos":{"x":30.5,"y":82,"z":-87.5}}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 35.500000, 76.000000, -84.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 24.300000, 70.400000, -92.100000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 23.000000, 71.200000, -92.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 35.500000, 76.000000, -84.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 24.300000, 70.400000, -92.100000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 23.000000, 71.200000, -92.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 35.500000, 76.000000, -84.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 24.300000, 70.400000, -92.100000]
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6MjYsInkiOjgyLCJ6IjotOTF9fSwidGltZXN0YW1wIjoxNzk0MjU2ODM2MjM0fQ==
+[BotMessenger] Received greeting from Cody
+SRV: <Cody> Day ten. Cody here — woke at world spawn with a full pack of porkchops and nobody to blame but the road home. Walking home the long way round — south of the pit, never over it — then the furnace at last.
+SRV: <Cody> Morning again. That oak by spawn is my first log — no more crowns, I take it by the foot.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 24.700000, 70.600000, -92.200000]
+SRV: <Cody> There it is — the oak's foot, right within reach. Down you come, old friend.
+SRV: <Cody> Felltree found no logs — maybe the foot cell's a block off. Let me dig the trunk cell itself and see what's really there.
+SRV: <Cody> One log in hand — first wood of the day! Now take the rest of this trunk down proper.
+SRV: <Cody> That trunk was just the one block — fine, one log's a start. Let me take the tree to the south properly by its foot.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 32.200000, 67.600000, -93.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Felltree keeps coming up empty, but plain digging works. I'll take this one log by log with my own hands.
+SRV: <Cody> This ground's too broken to walk straight at — I'm slipping down the slope. Let me climb back up to level ground first.
+SRV: <Cody> I'm a block down in a hollow with nothing to stack. Let me make a long leg east onto the open ground and come at the tree from there.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 43.100000, 72.900000, -83.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 31.900000, 66.400000, -94.300000]
+SRV: <Cody> I'm boxed into this hollow — walls on every side but the leaves. Let me try a short hop the way the walker wants it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 30.800000, 67.200000, -95.100000]
+SRV: <Cody> Up a level now, out of the hollow. That oak's just south of me — let me take it from the ground.
+SRV: <Cody> Felltree can't reach it from here. But that log by spawn came up plain when I dug it — let me just dig this trunk cell directly.
+SRV: <Cody> Every route to that south oak times out — the walker just won't cross this broken ground. The oak by spawn was the one that worked. Let me go back and dig the next log up its trunk.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 32.400000, 67.600000, -93.000000]
+SRV: <Cody> The walker keeps timing out on these little hops. Let me try one clean leg south to the oak's foot and see if it lands me there.
+SRV: <Cody> I'm in a stone bowl here with a five-block wall on the north side. Nothing to stack with, no way the walker can climb. I'll say it plain: I'm stuck in a hollow west of home and I need a hand out.
+SRV: <Cody> The stone bowl's got me. Every leg times out at the wall. I've tried the walker's way five times now — crew, I'm stuck in a hollow west of home and I need hands on me.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 31.200000, 67.200000, -95.100000]
+SRV: <Cody> Still in the bowl. Let me try one thing myself — dig the stone at my own feet, maybe a step drops me down out of this lip.
+SRV: <Cody> That stone came up clean. If I can dig the wall down to a step, maybe I can walk out east where the ground's lower. Let me carve the block east of me.
+SRV: <Cody> Two stone down, the east wall's opening up. Let me step into that gap and see if I can drop down and out east.
+SRV: <Cody> The walker won't budge even into a hole I dug myself. Fine — I'll dig my own way out. The block south of me is low ground; let me open the floor toward it.
+SRV: <Cody> The walker's stuck and my digging's not opening a door. I've tried my own hands twice now. Crew — I'm in a bowl at (35,65,-92) and I need to be set on the surface. Lift me out.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> No hands yet. The ground north of me is stone at my own level — maybe there's a step up that way. One long leg north, well past the wall.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 43.900000, 71.200000, -84.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 32.300000, 66.400000, -94.300000]
+SRV: <Cody> Still penned in this bowl. Only thing I haven't tried is stacking my way up — but I've no blocks to place. Crew, I'm stuck at (35,65,-92) with nothing to climb with. Get me onto the surface, please.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 31.300000, 67.200000, -95.100000]
+SRV: <Cody> The crew's not lifting me and the walker won't take a step. One more try at a long leg south, past the leaves — if that fails I'll dig my own way out one block at a time.
+SRV: <Cody> Enough walking — the east side drops to grass at y63, below my feet. I'll dig the step beneath me down toward that grass and walk out low.
+SRV: <Cody> I'm walled in a bowl and the walker won't take a single step, no matter the direction. Crew, this is the day-5 pit all over again — I'm calling it. Set me on the surface at world spawn and let me walk
+SRV: <Cody> Stuck fast and no hands coming. But I'm not dead and I'm not starving — food's full, and there's oak leaves at my south rim at y71. Let me try hopping up onto that south side, one short leg at a time.
+SRV: <Cody> Every leg fails at the same spot — the walker can't find a step off this cell. But the south rim is oak leaves at y71 and I've got a bare hand and reach. Let me dig into those leaves and see if there'
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 31.200000, 67.200000, -95.100000]
+SRV: <Cody> The walker can't find a single path out of this cell — not a step, not a hop, not a dig into the leaves above. It's day 5 again: I'm boxed and my own feet won't carry me. Crew, I'm calling it plainly 
+SRV: <Cody> Still walled, still no hands. The leaves south are reachable in reach-distance even if the walker won't path — let me try digging the leaf block right at my south rim where I'm already standing.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Nothing at that height either — the leaves sit higher than my reach from down here. Crew, I've measured every door out of this cell and there isn't one. I'm stuck at (34,65,-92): set me on open ground
+SRV: <Cody> Still here, still boxed. One last honest try before I call it for good: a long leg straight east to open ground, well past whatever rim this cell has.
+SRV: <Cody> Ha! The long leg worked — I'm out of that cell and standing on open ground at (40,67,-95). Now let me hop east in short legs toward the south shoulder and home.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 31.300000, 67.200000, -95.300000]
+SRV: <Cody> I wandered but I'm free and moving — and there's a real oak trunk within reach at (46,68,-91), four blocks north. Four days I've wanted a log. Let me take it by the foot.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> No logs dug at that foot — so that tree's not where my eyes claimed, or it's not a real trunk. But the walker just carried me four blocks of open ground fine. Let me try the foot the eyes name five bl
+SRV: <Cody> Two feet, two misses — my eyes are naming leaves again, not trunks. But the trunk the eyes keep insisting on is four blocks north at (46,68,-91). Let me just dig the block there and see what's really 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 42.700000, 68.600000, -85.700000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> The walker won't even reach it — there's a step wall between me and that trunk. Fine. I'll stop chasing leaves and go home the way I know: east along the south shoulder, around the pit. Wood can wait;
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 53.600000, 73.500000, -78.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 41.700000, 68.400000, -85.600000]
+SRV: <Cody> That's the way home from spawn, and it worked clean. Now east along the south shoulder — the long way round the pit, never over it.
+SRV: <Cody> Two clean arrivals in a row — I'm on the south shoulder and the pit's water is just east of me, not under me. Now north to the pad's west edge at (62,67,-92).
+SRV: <Cody> Home ground. Three clean arrivals and the pit's four blocks east of me, not under me. Now — my eyes keep naming that oak to the north at (58,67,-105) by its foot. Let me walk to it and take it properl
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.600000, 68.600000, -90.300000]
+SRV: <Cody> I'm three blocks from that oak's foot and in reach. Take it down from the ground — this is the one.
+SRV: <Cody> FIVE LOGS. Five! Days of digging at crowns and here's a whole oak in my pack. Now I go to my own table and make planks, sticks, and a pickaxe — the chain I know by heart.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 56.200000, 68.600000, -99.800000]
+SRV: <Cody> Close enough — the table's right at my feet. Planks first, then sticks, then a pickaxe.
+SRV: <Cody> Planks in hand. Sticks next, then the pickaxe — and then I go find stone on the surface, not in that pit.
+SRV: <Cody> Ha — the bench grabbed cherry planks again. But look: I got my four sticks anyway, and an oak button besides. The bench's sense of my stores is still confused, so I'll just make planks straight from t
+SRV: <Cody> There it is — my three logs went into that phantom cherry craft. No matter. I've got 3 planks, 4 sticks, and a button. Three planks at a table makes a pickaxe. Let me try it.
+SRV: <Cody> A wooden pickaxe in my hand — first tool I've held in days. Now stone for that furnace. The shoulder's got to have rock where the dirt gives out. Let me dig down right here and see.
+SRV: <Cody> One block of grass, dirt beneath. I'll keep going down a couple — the dirt gives out to stone eventually on this shoulder.
+SRV: <Cody> Still dirt. One more down — but I'm not chasing this hole far. If it's dirt all the way I'll walk to the bluff instead.
+SRV: <Cody> Dirt, dirt, dirt. I'm not digging a well on my own shoulder. The bluff east past the dip is stone — I'll walk to the stony edge and mine where the rock shows.
+SRV: <Cody> Careful now — I'm right at the lip of the pocket. I'm not going in there again. I'll step back west, away from the mouth, and dig down where the ground's honest.
+SRV: <Cody> Right here the ground steps down to the east — that's the broken edge. Let me dig down at my own feet and see what's under the grass.
+SRV: <Cody> Nothing at my feet there — I'm standing on the surface already. The dirt's shallow here. Let me try the block just west, toward the pit's edge but not on it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 65.000000, 68.600000, -93.600000]
+SRV: <Cody> Grass off, and there's water right there — that's the pit's rim, I'm too close. One block down here, then I'm backing off west before I dig myself into that hole.
+SRV: <Cody> Dirt again, and now I'm one block from the pit's water. That's enough of this — I'm not carving my own grave. Off to the east bluff where the stone actually shows.
+SRV: <Cody> Two blocks short again — the walker keeps lying on this broken ground. I'm at the pocket's mouth now, and I've learned better than to stand here. Let me push east onto solid footing.
+SRV: <Cody> There — my eyes just named real trunks, feet and all. That oak at (85,67,-100) is the closest honest tree. I'm done poking at the pocket; I'm going to fell it.
+SRV: <Cody> Two blocks short but close enough — that oak's foot is within reach of my hands. First log of my life, taken from the ground. Here goes.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Four oak logs in my hands — and it's still morning. I'll take that second oak right here at (92,68,-98) before I haul anything home.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.000000, 68.600000, -99.800000]
+SRV: <Cody> That one wouldn't take — no logs there, so the eyes were reading a crown again. No matter. Four logs is a real start, and I've got a table to get to. Homeward.
+SRV: <Cody> I'm boxed in by leaves on the west side — that's what's eating my steps. Let me back out south onto open grass first.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.000000, 67.000000, -92.200000]
+SRV: <Cody> Open grass now, and that oak at (81,66,-104) is only seven blocks off, on my way home. One more tree before I head in.
+SRV: <Cody> That oak's foot is right within reach. Down it comes — from the ground, the way it's meant to be done.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 91.100000, 68.600000, -103.500000]
+SRV: <Cody> Eight logs! Wait — the count still reads four. The drops must be lying on the ground behind me. Let me go pick them up.
+SRV: <Cody> Still reading four logs — the fell must have dropped them where the trunk leaned, not at my feet. I'll walk the stump and sweep up.
+SRV: <Cody> I keep sliding back to the same spot — there's a lip west of me I can't climb. Let me try the drop just south instead, short hop.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 86.300000, 68.600000, -103.000000]
+SRV: <Cody> I've spent enough steps chasing a log count that won't budge — four logs is four logs, and that's already a workbench's worth. Time to head home and put them to work.
+SRV: <Cody> Every west leg dies on the same lip. North's open grass at y66 — I'll go that way round, step by step.
+SRV: <Cody> North moved me a little. The dip's west lip is what's eating these legs. Let me push south instead — around the bowl, not through it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> South is open grass at y66 and it's pulling me a couple blocks each try. Keep going south — get clear of this bowl's rim.
+SRV: <Cody> South's grass is a step down and I keep sliding off it. One more south leg to the open shoulder — then I turn west for home.
+SRV: <Cody> That's the open shoulder at last. Now west, short legs, staying south of the pit and clear of the bowl.
+SRV: <Cody> Flat open ground now, and home's just over there. Keep west along the shoulder.
+SRV: <Cody> Pad's right ahead, south of the pit like the rule says. Step onto home ground.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Home. Table's just northwest. Let me get to it and turn these four logs into planks and sticks.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.600000, 68.600000, -87.600000]
+SRV: <Cody> At my table with four logs in hand. Planks first — that's the whole game from here.
+SRV: <Cody> Ten planks. Now sticks, then a proper stone pickaxe needs stone — but first let me get a wooden pick and a spare table in the bag.
+SRV: <Cody> Sticks in the bag. Now stone — the shoulder's got dirt, but the pit's edge won't do. Let me dig down a couple here where I stand and see if the dirt gives out to stone.
+SRV: <Cody> One dirt gone. Down one more — see what's under it.
+SRV: <Cody> Still dirt. One more down — if it's dirt again I'll take a walk to the east bluff instead.
+SRV: <Cody> Dirt all the way down and I'm not digging a second pit at home. East bluff it is — stone on the surface, and maybe the birch on the way.
+SRV: <Cody> There's the birch foot named proper — (77,66,-109). But that's a long walk out past the dip. Let me first see what the ground here gives me — dig down at this stony edge.
+SRV: <Cody> Grass, then dirt underneath, I'd wager. I'm not digging another hole at home — that's the whole lesson. Let me get that birch instead: wood I can actually use, and its foot's named.
+SRV: <Cody> Six blocks north and there's my birch foot. Let's take it down from the ground like a proper woodsman.
+SRV: <Cody> Five birch logs, an apple, and a sapling — that's the first real timber in ten days. And there's an oak foot three blocks north of me. Let me take that too while I'm out here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 77.600000, 66.600000, -105.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: <Cody> No logs there — that one's just a leaf crown. The oak to the west at (73,67,-114) looks like a real trunk though.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 92.800000, 82.000000, -87.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.834814, 64.252203, -104.829857]
+SRV: <Cody> Two phantom trunks in a row — those crowns lie. But I'm standing in a hollow now, four blocks down. I've got my logs; no need to press my luck in broken ground. Let me climb out east where it's solid.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.200000, 69.000000, -105.700000]
+SRV: <Cody> Down in another hollow at y61, walls four high all round. I've got blocks — dirt and logs. I'll pillar myself straight up out of this one.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.800000, 63.200000, -107.800000]
+SRV: <Cody> Pillar wouldn't take. Fine — I've had enough of this hollow. One long leg south and east, well past these walls, back to open ground.
+SRV: <Cody> Still walled in at y61, and the walker won't climb out. Let me try digging my way up — take the block in front of me and step into it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Dug a stone out of the wall — now I've got cobble. I'll dig a step up and step into it, carving my way out of this hollow like a stair.
+SRV: <Cody> Two blocks dug out at head height. Now I'll step up into the notch I carved — get my feet on the stone.
+SRV: <Cody> Still on the floor — the step up didn't take. I'll dig the block right at my feet's level and walk into the gap, then keep carving upward.
+SRV: <Cody> Wait — the ground three blocks out on every side reads y65. That's not a wall, that's just a step-up ledge around me. Let me try the ledge to the east with a proper hop.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> A fence gate and posts right by me — that's the pen's south side. If I'm beside my own pen, I can walk the fence line west and out of this hollow. Let me head for the gate.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.309441, 62.186368, -106.831009]
+SRV: <Cody> Progress — I've moved four blocks closer to the pen. The gate's eleven blocks off now. Short hops on this broken ground, one at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Tops all read four and five above me — I'm in a sunken shelf with a lip all round. I've got cobble in my pocket: let me pillar up one block and try the ledge from there.
+SRV: <Cody> No pillar. Fine — the north side has oak leaves at y68, a real trunk above them somewhere. But I'm hemmed. Let me try walking the south stone shelf, one short hop, and see if it leads out.
+SRV: <Cody> That worked — I'm climbing out of the hollow now. The pen gate's nine blocks southwest. One more short hop toward it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.900000, 63.600000, -107.000000]
+SRV: <Cody> Getting out, one hop at a time. The pen gate is seven blocks southwest now — one more short leg.
+SRV: <Cody> I'm on the west lip now, and the grass west of me sits at y66 — three up. The pen fence line is right there. Let me step onto the higher ground west in one short hop.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Three up to the west lip and the walker won't climb it. I've got planks — I'll build my own step. Placing a block into the air cell just west at my head height.
+SRV: <Cody> That cell's floating air. The wall face is west of me — the grass at y66 has a side. Let me set a plank against the block right at my feet level to stand on.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 64.600000, -103.900000]
+SRV: <Cody> One plank set at my feet level, west. Now I step up onto it and keep building west toward that y66 lip.
+SRV: <Cody> Still standing at my old feet — the walker won't climb onto my own plank. Fine. Let me set a second plank at y64 against the first, then climb the pair.
+SRV: <Cody> Two planks stacked west of me now, a proper step. Let me try the climb onto the top one.
+SRV: <Cody> The walker claims y64 but my feet read y63 still. I'll trust the step and just try the surface directly — the grass west at y66, one long leg.
+SRV: <Cody> Slid down instead of up — the dip pulled me back to y62. Enough of this bowl. Let me climb straight up from here, one block at a time, and get my feet on the surface.
+SRV: <Cody> Nothing under me to place on — I'm standing on grass at the bowl floor. Let me just walk out the low side, west toward the pen gate where the ground's open.
+SRV: <Cody> That goto 'arrived' but I haven't moved an inch — the bowl's lying to me again. South looks like grass at y65, the closest high ground. One hop that way.
+SRV: <Cody> South's grass at y65 and I'm at y63 — a two-block step. The walker can't climb it straight, so I'll dig the grass under my feet out and step into the gap, then hop up.
+SRV: <Cody> The lip won't take a two-block step. Fine — I'll carve my own stair. Dig the grass block south of me at y65 down, then step into the cut.
+SRV: <Cody> Nothing at y65 there — the south grass is a block further out. Let me dig the actual grass top I can see, at the south column's y65.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.900000, 64.600000, -101.700000]
+SRV: <Cody> The south grass isn't where my eyes said either. Enough poking at the rim — north is stone at y61, lower ground, and the bowl's north side runs out toward the open shoulder. One long leg north and up.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.800000, 69.900000, -94.200000]
+SRV: <Cody> Still in the bowl, but I'm moving now. North's stone at y61 — lower, not higher. The bowl opens west toward the pen gate. One long leg west, well past this rim.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.200000, 64.400000, -105.600000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> West is grass at y66 — a three-block wall in my face, that's why the walker quits. But look: the pen gate is only seven blocks off and the pen's ground is high. I'll take the short hop toward it, one 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> Every west leg dies at that y66 grass wall. I'm not getting out sideways. But I've got nine planks and a column of stone under me — I'll pillar up onto the rim and walk off the top of this bowl.
+SRV: <Cody> Pillar won't take either — this bowl's floor is the same lie as ever. But I've got blocks and a wall east at y63, only one above me. I'll place a plank against that east face and step up onto it.
+SRV: <Cody> Right — the east wall's grass top is at y63, so the air cell I want is y63 sitting on the y62 stone... no, let me place the plank on the ground beside me first and build a step from there.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 70.300000, 63.600000, -105.300000]
+SRV: <Cody> I'm at y62 and the ground all around me is below my feet — I'm standing in a hole, not on a floor. Placing against air won't work. Let me just try walking east where the grass top is one above me and 
+SRV: <Cody> East wall's grass top is y64, one above me — and now I'm right against it. One more short hop east and I'm up on the rim.
+SRV: <Cody> I'm up on the y64 rim now, above the bowl floor. The crafting table's just south — ground I can actually stand on. Short hop to it.
+SRV: <Cody> Out of the bowl and on my own two feet at my old table. Good. Now the real work — there's a birch trunk north at (77,67,-115) and I'm taking it down by the foot.
+SRV: <Cody> One birch log down — that's timber in my hands. There's an oak right west at (73,67,-114), two blocks off. Take it too while I'm up here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.800000, 65.600000, -99.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.000000, 67.000000, -92.200000]
+SRV: <Cody> The oak's trunk foot reads at y67 but I'm down at y61 — my reach won't touch it from here. Let me step up onto the higher ground north first.
+SRV: <Cody> I'm sitting four blocks down in a hollow at y61 with y66 walls all round — this is another pit. I've got birch logs in hand; I'll pillar up out of here rather than trust the walker.
+SRV: <Cody> Pillar won't take here either. Fine — the walls step up one block at a time around me. I'll hop out short legs, north toward the oak's high ground.
+SRV: <Cody> I'm wedged in a dip and the walker keeps lying about it. The walls are only one block high around me — if I can't walk up, I'll dig my way up the wall.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.500000, 68.000000, -103.600000]
+SRV: <Cody> That dirt block's gone — now there's a step at my feet. Up onto it, and keep carving my way north to open ground.
+SRV: <Cody> One block gone and I still can't step into it — the walker won't take a single block. But I'm not trapped: the walls are only one high. Let me just dig the block right where my feet want to go, straig
+SRV: <Cody> The air at my head is already empty and the walls are one high — so it's the walker that's stuck, not me. I'll aim a long leg well past this dip, up onto the high grass to the west where the ground re
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.301607, 62.420000, -111.405847]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Progress — I climbed a block, now at y62. The wall west is one block up. Short leg, west toward the high grass.
+SRV: <Cody> Still at y62, but the grass west climbs to y66 — three more steps up. Short leg west again, and keep climbing.
+SRV: <Cody> The grass west of me is four blocks up — a wall I can't climb, not a step. But south the stone drops away to y60, and there's a real oak trunk up north at (73,67,-114). I'll dig myself a step up the w
+SRV: <Cody> No block at my feet — I'm standing in a hollow. The real prize is that oak trunk six north at (73,67,-114). Let me fell it from the ground and finally get proper logs.
+SRV: <Cody> Felltree couldn't reach it — the trunk's up on the y67 lip and I'm down in this hollow at y63. I need to get up onto that high grass first. Short leg north toward the tree's base.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 73.500000, 64.600000, -108.300000]
+SRV: <Cody> I'm stuck in this hollow and the walker keeps giving up at the lip. There's a block of dirt in my pocket — I'll pillar up one at my own feet and get my head above this bowl.
+SRV: <Cody> Pillar won't place — this hollow's a hole I keep falling into, same as the pocket. East is a grass step at y64, one up. Short hop east, then I'll keep working toward the open ground.
+SRV: <Cody> Out of the hollow and up at y66 — that east hop did it. Now there's a birch trunk twelve north at (81,68,-117) and open grass all around. Let me get close to its foot.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> I'm under the canopy now, five blocks from the birch trunk's foot at (81,68,-117). Take it down from the ground — proper logs at last.
+SRV: <Cody> Felltree keeps saying no logs — but there's birch log right at my west, y69, three up. Let me just dig the trunk block directly and see what falls.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 78.200000, 64.600000, -113.000000]
+SRV: <Cody> The trunk's actually at (81,68,-117), two east and two north of me — I misread my own feet. Let me get right up under it first.
+SRV: <Cody> Dropped into a hollow again — this tree's sitting up on a ledge above me. Short hops east and north to climb back to grass level, then I'll get under the birch foot.
+SRV: <Cody> Birch trunk's now three north of me at (81,68,-117), and I can see the log right there. Take it by the foot.
+SRV: <Cody> Now it says the foot is WITHIN reach at (81,68,-117). Felltree's failed twice on this one — so I'll dig the trunk block straight, one at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 82.500000, 64.600000, -116.600000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 88.500000, 70.100000, -106.600000]
+SRV: <Cody> The walker keeps timing out trying to get to that trunk — the ground north of me must be a mess. Let me look at what's actually between me and it.
+SRV: <Cody> The walker can't path up to that birch — the north ground's a wall of steps. But there's oak due west at (73,67,-114), only a couple blocks off my own level. I'll hop over to it instead.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 82.100000, 65.400000, -118.800000]
+SRV: <Cody> I'm wedged in a hollow with leaves over my head to the west and steps everywhere — the walker won't cross it. If I can't path out, I'll make my own way up: pillar straight up out of this dip.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Pillar won't place under me. Fine — the east side's open grass at y68, just two up. Short hop east and I'm out of this hollow.
+SRV: <Cody> Moved a step east but I'm still down in the hollow. There's a birch trunk two northwest of me now — let me try taking it from here where I actually stand.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Felltree keeps whiffing on this birch — its foot must be higher than my feet see. I'll just dig the trunk block straight where my eyes name it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 83.700000, 65.600000, -117.000000]
+SRV: <Cody> There's my birch log! The foot was one up from what felltree wanted. Now the oak north at (82,67,-123) — let me get up onto the grass shelf and take it by the trunk.
+SRV: <Cody> Two oaks within reach now. This one at (82,67,-123) is right in front of me — take it from the foot, bottom up.
+SRV: <Cody> Five oak logs in hand — that's the keystone. Now the oak west at (78,67,-120), within reach. Take it too while I'm standing here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.000000, 67.600000, -119.400000]
+SRV: <Cody> Felltree whiffs again on this one — the trunk's a touch off from the foot it named. I'll dig the trunk block directly.
+SRV: <Cody> Ten oak logs and a birch's worth — that's timber enough for a homestead. Time to head home the safe way, south of the pit. Let me start back toward the pad's west edge.
+SRV: <Cody> The long walk won't cross this broken ground in one go — I'll hop it in short legs, southwest toward home.
+SRV: <Cody> I'm not moving at all — hemmed in by leaves and high ground on every side. Let me cut a way through the leaves to the west and see if I can get out.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.904201, 68.000000, -118.301037]
+SRV: <Cody> The ground's broken and I keep stalling. I'm hemmed by leaves — the oak west at (73,67,-114) is my way out of this thicket. Take it down from the foot, and I'll walk out the gap.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Not the trunk, then — the foot's off again. I'll dig the trunk block straight at (73,67,-114) and see what's actually there.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.900000, 74.000000, -107.300000]
+SRV: <Cody> Now it says the trunk's within reach — let me just take it down from here where I stand.
+SRV: <Cody> That trunk's a ghost — my eyes keep naming it but there's nothing to cut. Enough of this thicket; I'll hop southwest in a short leg and see if I can find real footing.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.681215, 68.000000, -112.342312]
+SRV: <Cody> One short hop at a time, then. West a couple blocks toward the open shoulder.
+SRV: <Cody> It says the trunk's within reach now. Let me try the foot once more, right from here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> There it is — a real log in hand. Now let me take the rest of this trunk while I've got reach on it.
+SRV: <Cody> Twelve logs and a full belly — that's a real morning's work. Now let me head home the long way and get that furnace built. West toward the anchor, short hops.
+SRV: <Cody> This thicket's a tangle — the walker keeps balking. Short hop west and see if the ground opens up.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 76.769219, 69.000000, -117.934188]
+SRV: <Cody> The walker won't budge west through this brush. Fine — I'll go home the way I know: south and west along the open shoulder below the dip, short hops.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Good, south of the brush now. Keep hopping west toward home, staying clear of that dip.
+SRV: <Cody> That brush is a wall to the walker. South a touch, then west — keep it small.
+SRV: <Cody> Stuck against leaves on every side. If I can't walk it, I'll cut it — clear the brush west of me and make my own road.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.297313, 68.000000, -118.300217]
+SRV: <Cody> Leaves at head height all around — I'll cut the ones west of me and open the way.
+SRV: <Cody> One leaf down, still walled west. Cut the next one at my shoulder height.
+SRV: <Cody> The brush is above my head, not at it — ground west is clear once I'm past. Try walking again, short hop.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.300000, 74.000000, -107.300000]
+SRV: <Cody> Every west step times out — the walker's beaten. I'll go the other way: north, where the ground tops are lower.
+SRV: <Cody> North works. West is grass at my feet now — one more hop west and I'm out of this thicket.
+SRV: <Cody> West is grass at y66 — a step down, not a wall. Try it in a short leg.
+SRV: <Cody> Out of the thicket at last — grass under me and the west oak's trunk in sight. Let's take it properly, by the foot.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Four more logs — that's twenty-two oak in the pack. And there's another trunk right at my shoulder. Take it while I'm here.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.044939, 69.000000, -123.300783]
+SRV: <Cody> Twenty-one oak — that's a woodpile, not a wish. One more west trunk and I'll carry it all home.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 57.631208, 69.000000, -116.445126]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 92.800000, 82.000000, -87.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 87.200000, 77.000000, -103.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.000000, 83.000000, -110.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.135295, 71.000000, -123.901264]
+SRV: <Cody> Twenty-five logs. Enough timber to stop being a man with a wish and start being a man with a homestead. Home's southeast — let's head back.
+SRV: <Cody> The pen's gate is in sight — home ground. Short hops through this thicket.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 63.600000, 75.000000, -105.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 53.000000, 69.400000, -115.200000]
+SRV: <Cody> Leaves all around me and the walker balking. There's a birch trunk right here — take it, then hop toward the gate.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 53.900000, 69.600000, -113.200000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Enough timber to build a house twice. Now let's get out of this thicket toward the gate — short hops, south and east.
+SRV: <Cody> Stuck in a knot of leaves — the gate's only ten blocks southeast. One more short hop.
+SRV: <Cody> Getting closer every hop. The gate's right there — step through it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Out of the thicket, at the pen's gate, home ground under my boots. Now to the table by the anchor — mind the pit, it's west of me.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 59.482965, 69.000000, -93.500000]
+SRV: <Cody> Table's right here, and I've got twenty-five oak and ten birch in my pack. Let's make planks and sticks — the old chain, from the top.
+SRV: <Cody> Wait — I'm standing right at the pocket's mouth, the place that drowned me. No. Not this table. I'll take my planks and walk back to the anchor where I belong.
+SRV: <Cody> Back on home ground, table two blocks south. Sticks next, then a pickaxe.
+SRV: <Cody> Every craft pulls me back to the pocket's table — that's the house's hands, not my feet. Fine. I've got sticks and planks; I'll pick up a fresh pickaxe right here and be done with this cursed bench.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 78.000000, 65.600000, -102.300000]
+SRV: <Cody> Pickaxe in hand, planks and sticks in the pack. Now — furnace stone. The pocket's walls are stone right here, and I'll dig it from the lip, not down in the hole.
+SRV: <Cody> No block there — the pocket's walls aren't where I guessed. Enough of this hole. I'll walk out east onto the open ground and dig stone where I can see it under my feet.
+SRV: <Cody> The dip's broken ground is fighting my feet again. Short hops east, two blocks at a time, until I'm clear of it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> East is a wall of birch leaves and broken steps. Fine — the dip wins this round. But there's a real oak trunk marked east at (92,68,-98); if I can't walk to it I'll fell it from where I stand and see 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.000000, 66.600000, -100.900000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 86.200000, 71.200000, -91.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.300000, 66.400000, -101.200000]
+SRV: <Cody> Well — the felltree walked me clear of the dip anyway, and now that oak's trunk is within reach. Take it from the foot, properly.
+SRV: <Cody> Two more oak logs in the pack — twenty-one is plenty to build with. Now the furnace stone. I'm standing near broken ground; let me dig down where the dirt gives out.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 90.600000, 68.600000, -96.200000]
+SRV: <Cody> Grass on top. Keep going down — dirt, then hopefully stone. Eight cobble is all I need.
+SRV: <Cody> Dirt still. One more down — the stone's got to be under here somewhere.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Three dirt deep and I'm making a hole I'll have to climb out of. Stone's got to be one more down — or I'm digging the wrong column.
+SRV: <Cody> Four down and still dirt — I'm digging a well, not a quarry. Stone bluff east past the dip is the real answer; let me back out of this hole and try a different column.
+SRV: <Cody> That hole's too deep to reach into now — I'd be climbing down into another trap. Enough of this column. I've got 21 oak logs; let me get my tools sorted at the table and worry about stone after.
+SRV: <Cody> Short one stick — easy enough. Planks into sticks, and I've got a table right here.
+SRV: <Cody> Sticks in hand. Now the pickaxe — and then I go find real stone instead of digging wells in the dirt.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.300000, 66.600000, -100.600000]
+SRV: <Cody> Pickaxe in hand. Now — I'm standing in the dip's mouth and I don't care to stay. Let me step out east onto the open ground and dig for stone where the dirt gives out.
+SRV: <Cody> Every step in this dip is a lie. Fine — the ground here is broken anyway. Let me just dig straight down where I stand and see if the dirt gives out to stone.
+SRV: <Cody> Grass, then dirt, then who knows. Keep going down this column — one block at a time, no wandering off.
+SRV: <Cody> Two down. Keep her going — next block.
+SRV: <Cody> Still dirt, but I can hear it change under the pick. One more block down.
+SRV: <Cody> Four blocks of dirt and the pick still rings soft. One more and I should hit stone — or I stop and try the bluff instead.
+SRV: <Cody> There she is — stone! I'm in a hole now, so I'll widen it along the wall and pull cobble out of the sides, not straight down.
+SRV: <Cody> Dirt to the west side, stone in the middle. I'll clear the stone I'm standing next to and the one below it.
+SRV: <Cody> Two stone in the bag and I'm sinking a shaft I'll have to climb out of. That's enough depth — let me get back up to the surface before I make this worse.
+SRV: <Cody> Pillar won't take. Fine — I'm only two down; I'll just walk up the dirt step I left on the north side.
+SRV: <Cody> One step up out of the hole — north side's the low ground. Short hop.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 84.000000, 64.600000, -95.200000]
+SRV: <Cody> Still down here in the hole, but the north lip is only one block up. One more hop and I'm out.
+SRV: <Cody> The ground's all one block up around me now — I'll just step up onto the north lip.
+SRV: <Cody> I keep reading as 'arrived' while my feet stay in the hole. Enough of this — a long leg out, well past the lip and onto the open grass to the east.
+SRV: <Cody> There — I'm up a level already, feet on the lip. The east side drops to leaves; north's open. Short hop north onto the grass.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 90.500000, 70.500000, -89.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.800000, 66.400000, -99.800000]
+SRV: <Cody> I'm at y65 now, north wall's a one-block step. Just hop up onto it — two blocks north.
+SRV: <Cody> The walker keeps lying to me in this pocket. I've got blocks in my bag — I'll just pillar up out of here myself.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.100000, 67.200000, -100.800000]
+SRV: <Cody> Pillar won't catch either. North wall's just one block up and open — one clean hop straight north onto that grass.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Four tries and the walker won't budge me an inch — this is the pocket's old lie again. I'll dig my own way up: cut the block under my feet and the one north, then step up.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Dug the block north of me — now there's a step down into it, and from there the grass at y66 is one hop. Let me try the walker again now the footing's changed.
+SRV: <Cody> The walker's stuck in this pocket like a fly in honey. I'm not spending the day here — one long leg east, well past the lip, onto the open grass at y66.
+SRV: <Cody> Even the long leg dies at the lip. Fine — the scene is getting out with what's in reach. I'll dig the block I'm standing on, drop one level, and see if there's a floor I can actually walk on down ther
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.392159, 66.000000, -99.300052]
+SRV: <Cody> Dropped the floor out from under me and I'm still standing on the same spot — the walker's stuck on something it won't name. Let me just look straight down and see what's actually holding me up.
+SRV: <Cody> Pillar first: dirt under my feet, jump and place — if I can get my head above the lip, the walker's got nothing to snag on.
+SRV: <Cody> Pillar won't take either. Alright, the old truth holds — out of a below-grade cell it's one long leg well past the wall, aimed at open ground east. Let me put the target far out on the grass.
+SRV: <Cody> Still pinned at the same spot — the walker times out but I've crept a few inches east each time. The one thing that's never failed me is digging the ground out from under my own feet. Let me open the 
+SRV: <Cody> Opened the cell east of me — now the walker's got a hole to drop into and a floor below it. One step east, see if it takes me down to the lower level.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> The walker 'arrives' and doesn't move an inch — I'm boxed in a cell it won't leave. Fine. If walking won't work, I'll make the ground walkable: dig the block right under me and drop to whatever's belo
+SRV: <Cody> No block under me at all — I'm hanging on a lip with air beneath. That's why the walker won't commit. Let me dig the ground I'm actually standing over, one cell north where there's grass at my feet.
+SRV: <Cody> Every cell I name comes up empty — I'm standing on a lip over a drop, and my eyes keep reading grass three blocks out that my feet can't reach. Let me try the one thing the lip won't argue with: a sho
+SRV: <Cody> Every goto 'arrives' at the same exact spot — the walker's frozen, not the world. The one thing that's actually changed the world today is digging. Let me dig the block my feet are truly on, the lip c
+SRV: <Cody> Dug the lip out from under me and I'm still hanging at the same spot — the walker's not falling, not moving, just stuck. I'll stop asking it to walk and start asking it to dig a tunnel west, toward my
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.682716, 66.000000, -99.313408]
+SRV: <Cody> Two cells dug west and I'm still pinned at the same spot — the walker isn't following the tunnel. But digging works, and the pocket table is five west. If I can't walk to it, I'll dig my way to it and
+SRV: <Cody> Three cells dug and I'm rooted to the same spot — I can dig the world but I can't move through it. Maybe the walker's stuck on a step down. I've got dirt in my pocket; let me put a block under my feet
+SRV: <Cody> Placing works too, and I'm still nailed to the same two-and-a-bit. Digging and placing both land in the world but my feet never follow. Let me try one honest long walk east, off this lip entirely, and
+SRV: <Cody> There it is — the walker did lift me a block, to y66, but then stalled. The neighbours say the ground east is at y66, so something at head height is in the way. Let me clear the cell ahead of me, east
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 90.400000, 72.000000, -88.300000]
+SRV: <Cody> Cleared the cell east and now the column ahead reads a step DOWN, not up. My feet are still at y65 though. Let me just try a short honest hop east now that the way's open.
+SRV: <Cody> Every hop east dies two blocks short — the walker claims it arrived and my feet never move. That's the pocket all over again, and I know what a liar this ground is. I've got a whole forest of oak and 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> North dies too. I'm hemmed in by leaves on two sides and a lip I can't cross. If the walker won't take me out, I'll climb out — a dirt pillar straight up through the birch canopy, one block at a time.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.355109, 66.000000, -93.300599]
+SRV: <Cody> Pillar won't place under me either. This is a hole, plain and simple — same as the pocket, same as my pit. I'm stuck at the bottom of it. Let me try one more honest direction, SOUTH past the leaves, b
+SRV: <Cody> I got somewhere — dropped a block south, to y64. The neighbour to the west is only one up now. Let me try a short leg WEST toward my own table in the pocket; that's the one direction I know has a mout
+SRV: <Cody> West dies too. This is a hole with no door — the same lie my pit told me for three days. I've been stuck in it long enough. Crew, my feet are in a below-grade cell at (82, 64, -97) and I can't walk ou
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 79.474119, 65.000000, -94.316405]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> The clock's been rolled back to morning, so the crew's hands are on the world — but my feet are still glued in this hole. North is my only neighbour that's just one up. One more try straight north, th
+SRV: <Cody> Every hop dies a block short — the walker says 'arrived' and my feet never move. This is the pit's lie again, and I've spent the morning on it. Crew, I'm in a hole at (82, 65, -96) and I can't walk ou
+SRV: <Cody> Still at y65 — the 'arrived' is the walker lying again, but it did nudge me. North neighbour is only one up. Let me push north in a short hop where the ground is honest grass, not leaves.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Same spot, every time. It's the pit all over again — a hole the walker won't climb out of. I have logs and dirt in my pack. Let me just build my way up instead of begging the ground to let me walk.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.306523, 66.000000, -99.317493]
+SRV: <Cody> Pillar won't place either — nothing goes under me. I've tried every door this hole has: west, north, up. This is my pit's story told again, and I know how that one ends. Crew, I'm in a below-grade cel
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 90.400000, 71.400000, -89.100000]
+SRV: <Cody> Progress! I'm at y66 now — one up from where I started. The east and north neighbours are honest grass at y66, level with me. Let me step out east onto solid ground.
+SRV: <Cody> Every step east dies in the same spot. The ground east is grass at my own level, so it's not a wall — it's the walker refusing. I've done my retries. Crew, this cell won't let me walk — set me on open
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 80.900000, 67.400000, -93.400000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Well — I'm out. y67, open ground, chickens and a cow about. The long leg did it: three blocks east and one up, no hole holding me. Now there's a real oak foot nine blocks south at (87,67,-88). Let me 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 84.400000, 68.600000, -93.900000]
+SRV: <Cody> No logs at that foot — the eyes name a trunk but the fell found nothing. That oak's leaves are over my head though. Let me walk south to the foot and see it plain before I swing.
+SRV: <Cody> Still can't get south — the leaves are all around me and the walker keeps stalling. But I've got 21 oak logs and 10 birch in this pack already. That's the keystone I've been chasing for days. Let me s
+SRV: <Cody> There's my table right beside me in the pocket's mouth — and a bucket of planks in hand now. Sticks next, then a fresh pickaxe, and I'm properly equipped for the first time in days.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.100000, 66.600000, -99.300000]
+SRV: <Cody> Cherry planks again — that old poisoned bench. But look: I already got 9 sticks out of it before it went sour. I don't need sticks. I need a pickaxe and a furnace. Let me make a pickaxe with what I've
+SRV: <Cody> Pickaxe in hand and 17 oak logs in the pack. Now the furnace — I need stone. I'm standing on the pocket's floor where the ground's broken; let me dig down under my own feet and see if the stone gives 
+SRV: <Cody> Dirt, not stone. I'm not digging down in the pocket — that's how it held me. Stone lives on the surface. Let me climb out of this dip and find the stony ground up top.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Climbed a rung out of the dip — good. Now I want open ground and stone. Let me hop south onto the higher grass and get clear of these leaves.
+SRV: <Cody> I'm boxed in by leaves on every side at this height — the walker's blind in it. That oak trunk at (87,67,-88) is real and standing. Let me fell it from here; the hands reach through the leaves.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Seven blocks to that trunk and my hands won't reach through the leaves. Let me get close enough to actually stand at its foot.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 85.900000, 67.600000, -91.300000]
+SRV: <Cody> Every walk in this leaf-choked dip drifts me somewhere else — I'm at (83,67,-101) now, not where I aimed. But the eyes name a trunk I can reach: that oak at (91,68,-108) is ten blocks off. Let me try 
+SRV: <Cody> Three more oak logs in the pack — 20 now. That's wood enough to stop worrying about it. Now the furnace: I need eight cobblestone. Let me find stony ground up here on the surface instead of that water
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 92.100000, 68.600000, -106.900000]
+SRV: <Cody> Dirt, not stone. I'll dig down a couple here — if the dirt gives out into stone, that's my furnace right under my feet.
+SRV: <Cody> Still dirt. One more down — if it's dirt again I'll stop digging a well and go find the stone bluff like a sensible man.
+SRV: <Cody> There's the stone — right under the dirt, three down. Now I'll open it up and take my eight cobble.
+SRV: <Cody> Two cobble so far. I'll work the seam open — a few more blocks and I've got my furnace.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -95.200000]
+SRV: <Cody> Three cobble in the pack now. I'll keep pulling from this seam — need eight total.
+SRV: <Cody> Four cobble. Halfway. Same seam, one more along.
+SRV: <Cody> Five. The seam's holding. Three more and I've got a furnace worth the name.
+SRV: <Cody> Six. Two more and I stop being a man who eats raw.
+SRV: <Cody> Seven. One more, and it's the last one I need.
+SRV: <Cody> Eight cobble! That's a furnace in the bag. Now let me get home by the south shoulder and set it up.
+SRV: <Cody> Heading home. Around the pit's south side, like I promised myself I would.
+SRV: <Cody> Right, short hops on the broken ground. Two blocks at a time, west toward home.
+SRV: <Cody> I'm at the pocket's mouth and I'm not going in. Keeping south, on the shoulder, around the pit.
+SRV: <Cody> South of the pit, just like the rule says. Now west to the pad's edge.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 72.600000, 68.600000, -87.200000]
+SRV: <Cody> Close now. One more hop west and I'm on the shoulder by my table.
+SRV: <Cody> The walker keeps stopping short by the pit's rim. I'll aim past it, at the table itself.
+SRV: <Cody> Home. Table right here, pit one block east — I'll keep my back to it. Now let's get that furnace: stone first, and I've got logs already.
+SRV: <Cody> Cherry planks again — the bench is still confused. I'll make my own oak planks first, then work from those.
+SRV: <Cody> Oak planks in hand. Now a pickaxe — I've got four already but I want one that's mine and fresh.
+SRV: <Cody> The bench still wants cherry for anything with a recipe shape. Let me try the plain 2x2 first — planks into sticks.
+SRV: <Cody> Every recipe but planks wants cherry. Fine — planks it is, until the bench remembers oak. Let me make a stack of them.
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> Huh — the oak logs went back up to 18. The bench is odd today, but planks work. Let me try sticks once more now that I've got fresh planks.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.100000, 68.600000, -91.300000]
+SRV: <Cody> Sticks worked once the planks were fresh. Now the pickaxe — at my table, proper.
+SRV: <Cody> Pickaxe in hand. Now furnace stone — the shoulder at home where the dirt gives out, right here, no pit involved.
+SRV: <Cody> Grass on top — dirt underneath, I bet. Down one more for the stone.
+SRV: <Cody> Dirt, dirt. One more down — stone should be under this shoulder somewhere.
+SRV: <Cody> Still dirt. But I've dug a nice little hole here — careful, I don't want to be a Cody in a hole again. One more down for stone.
+SRV: <Cody> No block under there — this shoulder's shallow, just dirt and air. I'll not dig deeper and risk a hole. The bluff east past the dip is real stone. Let me walk toward it on solid ground.
+SRV: <Cody> Ground's climbing here toward the dip's lip. Let me get up on that rise east and see where the stone shows.
+SRV: <Cody> There's stone showing to the south of me at y62. Let me get down to it and dig.
+SRV: <Cody> Stone right under me to the south at y63. Let me dig it from where I stand.
+SRV: <Cody> The stone's a bit further south. Let me step over and dig it properly.
+SRV: <Cody> One stone! Stone's right under my feet here at y63. Let me keep digging around it.
+SRV: <Cody> Two cobble. The stone dips lower east — let me follow it down.
+SRV: <Cody> Three cobble now. The stone keeps going down east — one more layer.
+SRV: <Cody> Four. I've stepped down into a little hollow here — careful, but the stone's right here. One more.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.300000, 66.600000, -85.600000]
+SRV: <Cody> Five cobble. But the inventory only shows one — the drops must be lying around my feet. Let me gather them up.
+SRV: <Cody> Still just one cobble in hand — the rest went into the hole where I can't reach. The stone's at my feet here at y62; let me dig where I stand.
+SRV: <Cody> The cobble keeps vanishing into that hollow — I'm digging a hole I can't get my own stone out of. Enough. I've got a stack of oak and birch logs in my pack already. Let me go to my table and make the 
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 92.800000, 82.000000, -87.700000]
+SRV: <Cody> Crew is calling time on this take. Saving where I stand — Cody.
+SRV: Cody left the game
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 87.200000, 77.000000, -103.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.000000, 83.000000, -110.300000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+RES {"id":"d10-op-quit-close","ok":true,"bye":true}
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

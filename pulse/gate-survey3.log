@@ -1,0 +1,9 @@
+[SURVEY3] SurveyK121942 spawn 34.50,67.00,-98.50
+[SURVEY3] stage leg 36 -100 {"ok":true,"via":"pathfinder"} at 34.87,67.00,-98.68
+[SURVEY3] stage leg 40 -94 {"ok":false,"error":"walkTo timeout (50388ms) to 40,68,-94; at (38.68856858972503, 66.03104150205048, -93.68244537810223)"} at 38.69,66.03,-93.68
+[SURVEY3] STAGING-DIGS uses 1 log [{"ts":"2026-11-07T09:15:30.764Z","at":{"x":39,"y":67,"z":-94},"block":"grass_block","reason":"plus2-top-block"}]
+[SURVEY3] AT-START 38.69,66.00,-93.68 onGround true
+[SURVEY3] REHEARSAL gotoNear east {"ok":false,"error":"walkTo timeout (82790ms) to 68.5,66,-83.5; at (37.67670861796787, 65, -95.70689101929689)"} ms 90021 mid 37.68,65.00,-95.71 dispXZ 2.26 climbY -1.00
+[SURVEY3] ARMED gotoNear east {"ok":false,"error":"walkTo timeout (82781ms) to 68.5,66,-83.5; at (37.69876695071463, 65, -95.71964485622675)"} ms 90378 mid 37.70,65.00,-95.72 dispXZ 2.26
+[SURVEY3] ARMED-TRAVERSE-DIGS uses-delta 0 log []
+[SURVEY3] DONE

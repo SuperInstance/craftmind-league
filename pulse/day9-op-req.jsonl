@@ -1,0 +1,4 @@
+{"cmd": "chat", "text": "/gamemode spectator MagnusandMouse", "id": "recovery-gamemode-2"}
+{"cmd": "ping", "id": "recovery-ping-1"}
+{"cmd": "chat", "text": "/gamemode spectator Gallery", "id": "recovery-gamemode-3"}
+{"cmd": "quit", "id": "recovery-op-quit-1"}

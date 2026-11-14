@@ -1,0 +1,10 @@
+1116a1117,1118
+>         if os.environ.get('CAM_DAY_REFRESH_OFF') == '1':
+>             return  # DAY-12 CHANGEOVER: /time set owned by the floor; cameraman asserts nothing
+1400c1402,1405
+<         self._attempt_daylight("start")
+---
+>         if os.environ.get('CAM_DAY_REFRESH_OFF') == '1':
+>             log('DAY-12 CHANGEOVER ACTIVE: cameraman /time set refresh OFF (env CAM_DAY_REFRESH_OFF=1); daylight is asserted by the floor')
+>         else:
+>             self._attempt_daylight("start")

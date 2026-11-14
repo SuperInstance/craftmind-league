@@ -1,0 +1,6 @@
+PASS A lease granted -> cycles flow — exit=0; cycle rows=5, all ok=true; evidence=/home/caseydigennaro/craftmind-league/pulse/day11/fixture-run/A-1794271499926
+PASS B park mid-run -> stops within one cycle — exit=0; executed=6/60; rejection=cycle 7 reason=lease-revoked; ok-after-park(+1 cycle)=0; lease parked=true revoked=true; evidence=/home/caseydigennaro/craftmind-league/pulse/day11/fixture-run/B-1794271501374
+PASS C lease expired -> driver refuses to start — exit=3; refusal=START-REFUSED reason=lease-expired; cycle rows=0; evidence=/home/caseydigennaro/craftmind-league/pulse/day11/fixture-run/C-1794271503571
+PASS D no lease -> driver refuses to start — exit=3; refusal=START-REFUSED reason=lease-absent; evidence=/home/caseydigennaro/craftmind-league/pulse/day11/fixture-run/D-1794271507419
+
+GATE-WIRING FIXTURE: 4/4 PASS

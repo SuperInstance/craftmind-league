@@ -1,0 +1,13 @@
+{
+ "lease_id": "lease-fixture",
+ "driver": "cody-driver",
+ "citizen": "Cody",
+ "issued_ms": 1794296505468,
+ "expires_ms": 1794296566468,
+ "revoked": false,
+ "parked": false,
+ "park_seq": null,
+ "park_ts_ms": null,
+ "contract_sha": "fixture",
+ "state": "live"
+}

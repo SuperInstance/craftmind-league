@@ -1,0 +1,86 @@
+{
+ "ts": "2026-11-09T14:42:09.339Z",
+ "cycle": 451,
+ "say": "Hop to (64,65,-92).",
+ "result": {
+  "ok": true,
+  "detail": "arrived — you stand at (64.3,63,-91.7), 0.3 blocks from (64,65,-92) (verified from your position)"
+ },
+ "pos": {
+  "x": 64.3,
+  "y": 63,
+  "z": -91.7
+ },
+ "hp": 0.3333320617675781,
+ "food": 0,
+ "inv": {
+  "leaf_litter": 1,
+  "wheat": 1,
+  "wheat_seeds": 3,
+  "dirt": 1
+ },
+ "distHome": 1.3,
+ "ground": {
+  "W": "grass_block@y66",
+  "E": "grass_block@y64",
+  "N": "oak_leaves@y69",
+  "S": "grass_block@y67"
+ },
+ "ring": "3,3,3,3,4,2,-2,3",
+ "entities": [
+  "chicken@11",
+  "chicken@8",
+  "chicken@9"
+ ],
+ "timeOfDay": 5261,
+ "held": "dirt",
+ "structures": [
+  {
+   "label": "crafting table",
+   "dist": 1.822914436437798,
+   "dir": "N",
+   "pos": {
+    "x": 64,
+    "y": 67,
+    "z": -94
+   }
+  },
+  {
+   "label": "water",
+   "dist": 2.1728201571652175,
+   "dir": "NE",
+   "pos": {
+    "x": 65,
+    "y": 65,
+    "z": -94
+   }
+  },
+  {
+   "label": "fence gate",
+   "dist": 7.903499228269106,
+   "dir": "N",
+   "pos": {
+    "x": 65,
+    "y": 67,
+    "z": -100
+   }
+  },
+  {
+   "label": "fence",
+   "count": 10,
+   "note": "fence posts around you"
+  },
+  {
+   "label": "wheat patch",
+   "farm": 4,
+   "crops": {
+    "total": 0,
+    "ripe": 0
+   },
+   "plants": [],
+   "plantsTotal": 0
+  }
+ ],
+ "trees": [],
+ "structuresText": "Structures in sight: a crafting table N of you, 2 blocks (at 64,67,-94); a water NE of you, 2 blocks (at 65,65,-94); a fence gate N of you, 8 blocks (at 65,67,-100); 10 fence posts within sight; a wheat patch (4 farmland). Trees near you: none with a trunk you can reach from the ground within sight — the canopy overhead here is crowns without trunks beneath (do not dig upward at leaves). Standing timber you know of: the east-oak country past the dip — a birch stands at (80,66,-96), an oak at (86,67,-94); west, an oak stands at (58,67,-105). Walk to one and your eyes will name its foot."
+}

@@ -1,0 +1,1223 @@
+'use strict';
+/**
+ * character-plugin.js — CODY AS A CHARACTER (the Character Build,
+ * declared in pulse/ledger.jsonl: character-build-20261107).
+ *
+ * Casey, 2026-11-07 17:52 AKST: stop prioritising the exam and the
+ * infrastructure; make ONE character who acts like a real character —
+ * creative, building a little town, "that Steve cursor of Minecraft
+ * kind of guy" — rebuilt not as a mod but as a character who is simply
+ * in the world like any other player. The success image is what Casey
+ * sees on the Orin screen: a character visibly living a Minecraft day.
+ *
+ * ARCHITECTURE
+ *   Body: the resident (resident-cody.js) + framework bot. This plugin
+ *   only drives joystick-class primitives (pulse/lib/prims.js:
+ *   gotoNear / walkTo, digBlock / digColumn, craftByName, placeOnTop /
+ *   placeAgainst, depositInChest) plus raw entity scan / attack / eat.
+ *   The wander watchdog in the resident is untouched and steps aside
+ *   while this loop is alive (global.__codyCharacterActive).
+ *
+ *   Mind: a local, deterministic goal stack. Projects are worked
+ *   in order; every project is an "ensure" predicate over LIVE world
+ *   state (inventory + block scans), so a project is complete only
+ *   while its evidence holds NOW. Death, theft of circumstance, or a
+ *   process restart simply re-opens whatever stopped being true, and
+ *   the loop picks it up again. Persistence of intent across
+ *   interruptions is the character trait being built.
+ *
+ *   Voice (First Casting, 2026-11-07): an optional System-2 actor
+ *   (pulse/actor-client.js — a resident Qwen3-0.6B on :8311, reached
+ *   through the governor as league-cody-actor) flavours the
+ *   narration from live state and may re-rank the open projects
+ *   within bounds; it also files GLM library consults on the loop's
+ *   stuck / project-complete hooks. Reflexes NEVER block on it:
+ *   any actor failure degrades to the template lines and the fixed
+ *   project order below. Gated on CODY_ACTOR=1 or pulse/actor-on.flag.
+ *
+ *   Survival is a body behaviour, not a project: a 700 ms monitor
+ *   scans for hostiles; imminent contact cancels the current work and
+ *   flees (pattern modelled on the Trial 8 survival candidate), then
+ *   the interrupted project RESUMES. Eating/foraging is a standing
+ *   need the main loop services ahead of project work when food runs
+ *   low.
+ *
+ *   Legibility: Cody narrates himself in world chat from goal-stack
+ *   state (short template lines tied to the actual intent, throttled),
+ *   and publishes {intent, project, step} to global.__codyCharacter
+ *   (read into pulse/cody-state.json by pulse-plugin's state feed) and
+ *   to pulse/character-state.json (full detail + milestones).
+ *
+ * CONSTRAINTS (declared): the building is done by Cody's body, block
+ * by block. No world-editing, no /give, no teleports (his own two feet
+ * + respawns only). The dig-step allowance stays OFF — prims.setDigStep
+ * is never called. No other citizen is touched.
+ */
+const fs = require('fs');
+const path = require('path');
+
+const PULSE = '/home/caseydigennaro/craftmind-league/pulse';
+const prims = require(path.join(PULSE, 'lib', 'prims.js'));
+const { Vec3 } = prims;
+
+// System-2 actor (First Casting): optional module; any load failure
+// leaves the loop exactly as it was (template narration, fixed order).
+let actor = null;
+try { actor = require(path.join(PULSE, 'actor-client.js')); } catch (e) { /* actor absent: degrade */ }
+
+const CHAR_STATE_PATH = path.join(PULSE, 'character-state.json');
+const LEDGER_PATH = path.join(PULSE, 'ledger.jsonl');
+
+// ── the homestead (anchor restaged 2026-11-07; see ledger) ──────────
+const HOME = { x: 64, y: 67, z: -93 };                 // anchor / pad centre
+const PAD = { x0: 62, x1: 66, z0: -95, z1: -91, top: 66 };
+const TABLE_POS = new Vec3(63, 67, -94);               // table block cell
+const FURNACE_POS = new Vec3(64, 67, -94);             // furnace block cell
+const CHEST_POS = new Vec3(65, 67, -94);               // chest block cell
+const TORCH_REF = new Vec3(64, 68, -95);               // wall block; torch goes on its +z face
+const DOOR_FLOOR = new Vec3(62, 66, -93);              // door occupies (62,67..68,-93)
+const QUARRY = [                                       // staircase trench east of the pad
+  { x: 68, z: -93, top: 65 }, { x: 69, z: -93, top: 64 }, { x: 70, z: -93, top: 63 },
+];
+const PEN_CELLS = [];                                  // fenced pen west of the pad
+for (const [x, z] of [[57, -94], [58, -94], [59, -94], [60, -94], [57, -91], [58, -91], [59, -91], [60, -91], [57, -93], [57, -92], [60, -93]]) PEN_CELLS.push({ x, z });
+const WAYPOINTS = [{ x: 46, z: -96 }, { x: 54, z: -94 }, { x: 59, z: -93 }];
+// Relocation routes (v1.2, SURVEY-DERIVED - pulse/cell-survey.json).
+// His home cell (39,-101) top 66 is walled EAST by a continuous +2
+// ridge at x40 (tops 68, z-88..-108) - that wall, not the freeze, is
+// what zeroed every probe arm. The ridge is crossable where a 67-top
+// cell touches it: north at (39,-102)->(40,-102), south at
+// (39,-94)->(40,-94) (the x39 column is a clean <=+1 staircase both
+// ways). Chains of short hops over surveyed cells; legs skip ahead on
+// failure. Beyond x49 the ground is unsurveyed shoulder rolling down
+// toward the pad (prep-scan tops 63-66 at x58+).
+// Waypoint y = FEET level from the survey (top+1). v1.2 shipped all
+// hops at HOME.y=67; on the ridge (tops 68, feet 69) the goal point
+// sat INSIDE the solid column and no driver could ever 'arrive' -
+// the pathfinder hunted forever and the helm ground at the face.
+// Per-cell y fixes that whole class.
+const ROUTES = [
+  [ // N: ridge-top row
+    { x: 39, z: -102, y: 68 }, { x: 41, z: -102, y: 69 }, { x: 44, z: -102, y: 68 }, { x: 47, z: -101, y: 68 },
+    { x: 52, z: -100, y: 67 }, { x: 57, z: -98, y: 67 }, { x: 61, z: -96, y: 67 },
+  ],
+  [ // S: the z-94 row
+    { x: 39, z: -98, y: 67 }, { x: 39, z: -95, y: 67 }, { x: 39, z: -94, y: 68 }, { x: 41, z: -94, y: 69 },
+    { x: 44, z: -94, y: 69 }, { x: 47, z: -95, y: 68 }, { x: 52, z: -96, y: 67 }, { x: 57, z: -96, y: 67 },
+  ],
+  [ // W: west approach (v1.3, SHOULDER-SURVEY 2026-11-08 -
+    // pulse/shoulder-survey.json, BFS-verified: every consecutive pair
+    // joins by <=+1 steps with >=3 headroom, no trunk cells). The v1.2
+    // chains start at his OLD home cell (39,-101); since the cure he
+    // spawns at (29.5,75,-101.5), ~10 blocks WEST of the chain start,
+    // across a canopy band (x32-34 at z-100..-102 carry leaves at
+    // ground+2 = head height) that stalls the pathfinder and grinds
+    // the helm - the relocate wedge of 2026-11-08. This chain starts
+    // at the spawn shelf, threads the z-98 gap row, crosses at the
+    // surveyed x39 south column, and runs the z-94/z-93 rows (tops
+    // 65-68, all standable) straight onto the pad. Dense hops (~3
+    // cells) so a single gotoNear covers each leg inside one timeout.
+    { x: 31, z: -101, y: 70 }, { x: 32, z: -99, y: 70 }, { x: 34, z: -98, y: 67 }, { x: 37, z: -98, y: 66 },
+    { x: 39, z: -97, y: 67 }, { x: 39, z: -94, y: 68 }, { x: 42, z: -94, y: 69 }, { x: 45, z: -94, y: 68 },
+    { x: 48, z: -94, y: 68 }, { x: 51, z: -94, y: 68 }, { x: 53, z: -93, y: 68 }, { x: 56, z: -93, y: 68 },
+    { x: 59, z: -93, y: 67 }, { x: 62, z: -93, y: 67 }, { x: 64, z: -93, y: 67 },
+  ],
+];
+const ROUTE_NAMES = ['the ridge top', 'the south row', 'the west approach'];
+
+const HOSTILES = new Set(['zombie', 'skeleton', 'creeper', 'spider', 'cave_spider', 'enderman',
+  'witch', 'drowned', 'husk', 'stray', 'zombie_villager', 'pillager', 'vindicator', 'phantom', 'slime', 'magma_cube']);
+const PASSIVES = new Set(['pig', 'cow', 'sheep', 'chicken', 'rabbit', 'mooshroom']);
+const EDIBLES = ['cooked_porkchop', 'cooked_beef', 'cooked_mutton', 'cooked_chicken', 'cooked_cod',
+  'cooked_salmon', 'bread', 'apple', 'baked_potato', 'carrot', 'porkchop', 'beef', 'mutton',
+  'chicken', 'melon_slice', 'potato', 'rotten_flesh'];
+const LOG_RE = /_log$/;
+const PLANK_RE = /_planks$/;
+
+// ── runtime ──────────────────────────────────────────────────────────
+const rt = {
+  wired: new WeakSet(),
+  gen: 0,
+  danger: null,          // {name, dist, x,y,z, at}
+  lastChatAt: 0,
+  lastChatText: '',
+  S: null,               // persisted character state (milestones etc.)
+  knownDone: new Set(),
+  bootAt: null,
+  interrupts: 0,
+  flees: 0,
+  diedRecently: false,   // set by the death hook; cleared on all-clear
+  burrowed: false,       // inside a sealed shelter burrow right now
+};
+
+function log(...a) { console.log('[CHARACTER]', ...a); }
+function nowIso() { return new Date().toISOString(); }
+
+function loadS() {
+  let s = {};
+  try { s = JSON.parse(fs.readFileSync(CHAR_STATE_PATH, 'utf8')); } catch {}
+  return {
+    milestones: s.milestones || {},
+    doorAttempts: s.doorAttempts || 0,
+    relocateFails: s.relocateFails || 0,
+    deathsSeen: s.deathsSeen || 0,
+    startedAt: s.startedAt || nowIso(),
+  };
+}
+function writeCharState(bot, extra) {
+  const p = bot && bot.entity ? bot.entity.position : null;
+  const out = Object.assign({
+    ts: nowIso(),
+    intent: (global.__codyCharacter || {}).intent || null,
+    project: (global.__codyCharacter || {}).project || null,
+    step: (global.__codyCharacter || {}).step || null,
+    homestead: HOME,
+    milestones: rt.S ? rt.S.milestones : {},
+    interrupts: rt.interrupts,
+    flees: rt.flees,
+    pos: p ? { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) } : null,
+    health: bot ? bot.health : null,
+    food: bot ? bot.food : null,
+    inventory: bot ? prims.inv(bot) : {},
+    actor: actor ? actor.stats() : null,
+  }, extra || {});
+  try {
+    const tmp = CHAR_STATE_PATH + '.tmp';
+    fs.writeFileSync(tmp, JSON.stringify(out, null, 1));
+    fs.renameSync(tmp, CHAR_STATE_PATH);
+  } catch (e) { log('char state write failed:', e.message); }
+}
+function ledger(entry) {
+  try { fs.appendFileSync(LEDGER_PATH, JSON.stringify(entry) + '\n'); } catch (e) { log('ledger append failed:', e.message); }
+}
+function setIntent(intent, project, step) {
+  global.__codyCharacter = { intent, project: project || null, step: step || null, ts: nowIso() };
+}
+function say(bot, msg, urgent, fromActor) {
+  const now = Date.now();
+  const gap = urgent ? 4000 : 15000;
+  // The actor's freshest line displaces a template line (never an
+  // urgent one, never its own). No fresh line -> template as before.
+  if (!fromActor && !urgent && actor) {
+    const l = actor.takeLine();
+    if (l && l !== msg) msg = l;
+  }
+  if (msg === rt.lastChatText && now - rt.lastChatAt < 120000) return;
+  if (now - rt.lastChatAt < gap) return;
+  rt.lastChatAt = now; rt.lastChatText = msg;
+  prims.say(bot, msg);
+}
+
+// ── world reading ────────────────────────────────────────────────────
+// Column profile: highest solid (boundingBox 'block', leaves excluded)
+// plus any leaf_litter cap above it. Mirrors the prep-survey convention.
+function columnTop(bot, x, z) {
+  if (!bot.entity) return null;
+  const yTop = Math.min(250, Math.floor(bot.entity.position.y) + 24);
+  const yBot = Math.floor(bot.entity.position.y) - 32;
+  let top = null, name = null, litterY = null;
+  for (let y = yTop; y > yBot; y--) {
+    const b = bot.blockAt(new Vec3(x, y, z));
+    if (!b) continue;
+    if (b.name === 'leaf_litter' && litterY === null && top === null) litterY = y;
+    if (b.boundingBox === 'block' && !/_leaves$/.test(b.name)) { top = y; name = b.name; break; }
+  }
+  if (top === null) return null;
+  return { top, name, litterY };
+}
+function spawnPoint(bot) {
+  return bot.spawnPoint ? { x: bot.spawnPoint.x, z: bot.spawnPoint.z } : { x: 32, z: -96 };
+}
+function chebToSpawn(bot) {
+  const s = spawnPoint(bot); const p = bot.entity.position;
+  return Math.max(Math.abs(p.x - s.x), Math.abs(p.z - s.z));
+}
+function distHome(bot) {
+  const p = bot.entity.position;
+  return Math.hypot(p.x - HOME.x, p.z - HOME.z);
+}
+function nearestHostile(bot, maxDist) {
+  if (!bot.entity) return null;
+  let best = null;
+  for (const e of Object.values(bot.entities || {})) {
+    if (!e || !e.position || !HOSTILES.has(e.name)) continue;
+    const d = e.position.distanceTo(bot.entity.position);
+    if (d <= maxDist && (!best || d < best.dist)) best = { name: e.name, dist: d, pos: e.position };
+  }
+  return best;
+}
+function nearestPassive(bot, maxDist) {
+  if (!bot.entity) return null;
+  let best = null;
+  for (const e of Object.values(bot.entities || {})) {
+    if (!e || !e.position || !PASSIVES.has(e.name)) continue;
+    const d = e.position.distanceTo(bot.entity.position);
+    if (d <= maxDist && (!best || d < best.dist)) best = { entity: e, name: e.name, dist: d };
+  }
+  return best;
+}
+
+// ── survival monitor (body behaviour) ────────────────────────────────
+function startMonitor(bot, gen) {
+  let lastHealth = 20;
+  const iv = setInterval(() => {
+    if (gen !== rt.gen || !bot.entity) return;
+    try {
+      const h = nearestHostile(bot, 16);
+      rt.danger = h ? { name: h.name, dist: +h.dist.toFixed(1), at: Date.now() } : null;
+      const hp = bot.health;
+      const hurt = hp < lastHealth - 0.5;
+      lastHealth = hp;
+      if ((h && h.dist <= 8.5) || (hurt && h && h.dist <= 14)) {
+        // Imminent contact: cancel whatever the body is doing NOW.
+        // The work loop sees rt.danger at its next guard() and flees.
+        try { bot.pathfinder.setGoal(null); } catch {}
+        try { bot.stopDigging(); } catch {}
+        try { bot.clearControlStates(); } catch {}
+      }
+    } catch {}
+  }, 700);
+  return iv;
+}
+class Interrupt extends Error {}
+function guard() {
+  if (rt.danger && rt.danger.dist <= 12) throw new Interrupt('danger:' + rt.danger.name);
+}
+async function flee(bot) {
+  rt.interrupts++; rt.flees++;
+  if (actor) actor.noteEvent('flee');
+  const d = rt.danger;
+  const name = d ? d.name : 'something';
+  setIntent('Fleeing ' + name, 'survival', 'flee');
+  say(bot, name === 'creeper' ? 'Creeper — back, back, back!' : (name.charAt(0).toUpperCase() + name.slice(1)) + ' — moving!', true);
+  log('FLEE from', name, 'dist', d && d.dist);
+  for (let i = 0; i < 3; i++) {
+    // Run for home ground: known, high, and his.
+    const g = await prims.gotoNear(bot, HOME.x, HOME.y, HOME.z, 3.0, 9000);
+    await prims.sleep(1500);
+    const h = nearestHostile(bot, 13);
+    if (!h) break;
+    if (g.ok && distHome(bot) <= 4) { await prims.sleep(3000); if (!nearestHostile(bot, 13)) break; }
+  }
+  await prims.sleep(2000);
+  const still = nearestHostile(bot, 16);
+  log('flee done; danger now', JSON.stringify(still));
+  return !still;
+}
+
+// -- shelter: the burrow reflex (2026-11-07 night; see ledger
+// shelter-reflex-20261107). When running does not clear danger, a
+// character DIGS IN where he stands: step to a diggable cell outside
+// spawn protection, sink two blocks, seal the roof, and wait out the
+// all-clear. A burrow is survival, never project progress.
+function chebToSpawnXY(x, z) {
+  return Math.max(Math.abs(x - 32), Math.abs(z + 96));
+}
+function isAirName(n) { return !n || n === 'air' || n === 'cave_air' || n === 'void_air'; }
+function sealMaterial(bot) {
+  const prefs = ['oak_planks', 'birch_planks', 'spruce_planks', 'cobblestone', 'dirt', 'oak_log', 'birch_log'];
+  const inv = prims.inv(bot);
+  for (const n of prefs) if (inv[n] > 0) return n;
+  const any = Object.keys(inv).find((n) => /planks|cobble|dirt|log|stone/.test(n) && inv[n] > 0);
+  return any || null;
+}
+async function shelter(bot) {
+  setIntent('Digging in — sheltering', 'survival', 'shelter');
+  say(bot, 'Too hot out here. Digging in till it clears.');
+  log('SHELTER: burrow reflex engaged at', JSON.stringify(bot.entity.position));
+  try {
+    const p = bot.entity.position;
+    const fx = Math.floor(p.x), fz = Math.floor(p.z);
+    // Site choice: outward rings from where he stands; prefer a cell
+    // OUTSIDE spawn protection (digs inside it are server-cancelled),
+    // with diggable ground and air at feet/head.
+    let site = null;
+    const offs = [[0,0],[2,0],[-2,0],[0,2],[0,-2],[4,0],[-4,0],[0,4],[0,-4],[6,0],[-6,0],[0,6],[0,-6],[3,3],[-3,3],[3,-3],[-3,-3],[8,0],[0,8],[-8,0],[0,-8]];
+    for (const [dx, dz] of offs) {
+      const cx = fx + dx, cz = fz + dz;
+      const top = columnTop(bot, cx, cz);
+      if (!top || isAirName(top.name)) continue;
+      if (!/dirt|grass|stone|sand|gravel|planks|log/.test(top.name)) continue;
+      const outside = chebToSpawnXY(cx, cz) > 17;
+      if (!site || (outside && !site.outside)) site = { x: cx, z: cz, topY: top.top, outside };
+      if (outside) break;
+    }
+    if (!site) { log('SHELTER: no diggable site found — degrading to hold'); return await shelterHold(bot, false); }
+    if (site.x !== fx || site.z !== fz) {
+      const g = await prims.gotoNear(bot, site.x + 0.5, site.topY + 1, site.z + 0.5, 1.2, 12000);
+      if (!g.ok) log('SHELTER: could not reach site', site.x, site.z, '— digging where he stands');
+    }
+    // Dig target = the surveyed column top under his feet (his own y
+    // is unreliable mid-fall/mid-slide). Verified by the world itself
+    // afterwards (phantom-dig detection: the block must CHANGE).
+    await prims.sleep(600);
+    const bp = bot.entity.position;
+    const bx = Math.floor(bp.x), bz = Math.floor(bp.z);
+    const ct = columnTop(bot, bx, bz);
+    if (!ct || isAirName(ct.name)) { log('SHELTER: no column top to dig — degraded hold'); return await shelterHold(bot, false); }
+    const r1 = await prims.digBlock(bot, new Vec3(bx, ct.top, bz), 12000);
+    const afterB = bot.blockAt(new Vec3(bx, ct.top, bz));
+    if (!r1.ok || (afterB && afterB.name === ct.name)) {
+      log('SHELTER: dig refused/phantom at', bx, ct.top, bz, '(protection?) — degraded hold');
+      return await shelterHold(bot, false);
+    }
+    // He drops into the first hole; dig the second level from inside:
+    // again by survey — the new column top under his feet.
+    await prims.sleep(900);
+    const p2 = bot.entity.position;
+    const ct2 = columnTop(bot, Math.floor(p2.x), Math.floor(p2.z));
+    if (ct2) await prims.digBlock(bot, new Vec3(Math.floor(p2.x), ct2.top, Math.floor(p2.z)), 12000);
+    await prims.sleep(900);
+    // Seal the roof two above the floor he stands on.
+    const p3 = bot.entity.position;
+    const sealY = Math.floor(p3.y) + 2;
+    const mat = sealMaterial(bot);
+    const ceilB = bot.blockAt(new Vec3(Math.floor(p3.x), sealY, Math.floor(p3.z)));
+    if (mat && ceilB && isAirName(ceilB.name)) {
+      const belowRef = new Vec3(Math.floor(p3.x), sealY - 1, Math.floor(p3.z));
+      if (bot.blockAt(belowRef) && isAirName(bot.blockAt(belowRef).name)) {
+        try { bot.setControlState('jump', true); await prims.sleep(350); bot.setControlState('jump', false); } catch {}
+      }
+      const rp = await prims.placeOnTop(bot, mat, belowRef);
+      log('SHELTER: roof seal', JSON.stringify(rp));
+    } else {
+      log('SHELTER: no seal possible (mat', mat, ') — hole only');
+    }
+    rt.burrowed = true;
+    await prims.collectDrops(bot, 3, 3000).catch(() => {});
+    log('SHELTER: burrowed at', JSON.stringify(bot.entity.position));
+    return await shelterHold(bot, true);
+  } catch (e) {
+    log('SHELTER error:', e && e.message);
+    return await shelterHold(bot, rt.burrowed);
+  }
+}
+async function shelterHold(bot, sealed) {
+  // Hold until 60 continuous seconds with no hostile within 16, cap
+  // 10 min. Eat for regen while waiting. Returns true if he held.
+  let clearSince = null;
+  const t0 = Date.now();
+  while (Date.now() - t0 < 600000 && bot.entity && bot.health > 0) {
+    const h = nearestHostile(bot, 16);
+    if (!h) { if (!clearSince) clearSince = Date.now(); if (Date.now() - clearSince >= 60000) break; }
+    else clearSince = null;
+    if (bot.food <= 17) { try { await eatToFull(bot, 19); } catch {} }
+    writeCharState(bot);
+    await prims.sleep(5000);
+  }
+  log('SHELTER: hold over; danger now', JSON.stringify(nearestHostile(bot, 16)), 'sealed was', sealed);
+  rt.diedRecently = false;
+  return true;
+}
+
+// ── eating & foraging ────────────────────────────────────────────────
+async function eatOne(bot) {
+  const items = bot.inventory.items();
+  const food = EDIBLES.map((n) => items.find((i) => i.name === n)).find(Boolean);
+  if (!food) return false;
+  try {
+    await bot.equip(food, 'hand');
+    await Promise.race([bot.consume(), prims.sleep(6000)]);
+    return true;
+  } catch { return false; }
+}
+async function eatToFull(bot, target) {
+  let ate = false;
+  for (let i = 0; i < 4 && bot.food < target; i++) { if (await eatOne(bot)) ate = true; else break; }
+  if (ate) { setIntent('Eating', 'survival', 'eat'); say(bot, "Quick bite — building's hungry work."); }
+  return ate;
+}
+async function hunt(bot, maxDist = 26) {
+  const prey = nearestPassive(bot, maxDist);
+  if (!prey) return false;
+  setIntent('Hunting ' + prey.name, 'survival', 'forage');
+  say(bot, "Food's low — and there's a " + prey.name + ' over there. Sorry, friend.');
+  log('hunt', prey.name, 'at dist', prey.dist.toFixed(1));
+  const e = prey.entity;
+  const t0 = Date.now();
+  while (Date.now() - t0 < 30000 && e && e.isValid && e.position) {
+    guard();
+    const d = e.position.distanceTo(bot.entity.position);
+    if (d > 2.1) { await prims.gotoNear(bot, e.position.x, e.position.y, e.position.z, 1.4, 5000); }
+    else {
+      try { await bot.lookAt(e.position.offset(0, 0.6, 0), true); } catch {}
+      try { bot.attack(e); } catch {}
+      await prims.sleep(550);
+    }
+  }
+  await prims.collectDrops(bot, 7, 6000);
+  return true;
+}
+
+// Health-critical food override (2026-11-08 food run): the ordinary
+// eat/forage thresholds (eat <=14, hunt <=8) are project-era settings;
+// at hp 1.33 they leave a hurt citizen unable to reach the >=18 food
+// regen threshold. When health is critical and the bar is below regen,
+// food acquisition outranks every project: eat what he carries, hunt
+// the nearest passive at wider radius, or work the canopy for apples;
+// then hold and eat until health recovers. The interrupted project is
+// an ensure-predicate, so it resumes by itself afterwards.
+async function nearestCriticalPrey(bot) {
+  rt.forageBlocked = (rt.forageBlocked || []).filter((b) => Date.now() - b.at < 600000);
+  let best = null;
+  for (const e of Object.values(bot.entities || {})) {
+    if (!e || !e.position || !PASSIVES.has(e.name)) continue;
+    const dh = Math.hypot(e.position.x - HOME.x, e.position.z - HOME.z);
+    if (dh > 32) continue;
+    if (rt.forageBlocked.some((b) => Math.hypot(e.position.x - b.x, e.position.z - b.z) < 6)) continue;
+    const d = e.position.distanceTo(bot.entity.position);
+    if (!best || d < best.dist) best = { entity: e, name: e.name, dist: d, pos: e.position };
+  }
+  return best;
+}
+
+async function criticalForage(bot) {
+  if (!(bot.health < 4 && bot.food < 18)) return false;
+  setIntent('Finding food - health critical', 'survival', 'critical-forage');
+  say(bot, 'I am hurt and hungry. Food first, building second.', true);
+  log('CRITICAL FORAGE v2: hp', bot.health, 'food', bot.food, 'inv', JSON.stringify(prims.inv(bot)));
+  await eatToFull(bot, 19);
+  // Work from home ground: the v1 run ranged 45 blocks south-east and
+  // wedged on a step face under an unreachable chicken. Food work is
+  // local now - prey must live within 32 of the anchor, failed prey are
+  // remembered and skipped, and the canopy at home is the fallback.
+  if (distHome(bot) > 6) {
+    const g = await prims.gotoNear(bot, HOME.x, HOME.y, HOME.z, 2.5, 30000);
+    log('CRITICAL FORAGE v2: return-home ->', JSON.stringify(g).slice(0, 120));
+  }
+  for (let attempt = 0; attempt < 4 && bot.food < 18; attempt++) {
+    guard();
+    const foodBefore = bot.food;
+    const prey = await nearestCriticalPrey(bot);
+    if (prey) {
+      log('CRITICAL FORAGE v2: prey', prey.name, 'dist', prey.dist.toFixed(1));
+      // Close on the chosen prey first so hunt() picks it too.
+      try { await prims.gotoNear(bot, prey.pos.x, prey.pos.y, prey.pos.z, 6, 12000); } catch {}
+      let acted = false;
+      try { acted = await hunt(bot, 30); } catch (e) { if (e instanceof Interrupt) throw e; log('CRITICAL FORAGE v2: hunt failed', e.message); }
+      await prims.collectDrops(bot, 8, 5000).catch(() => {});
+      await eatToFull(bot, 19);
+      if (bot.food <= foodBefore && !EDIBLES.some((n) => prims.hasItem(bot, n))) {
+        rt.forageBlocked.push({ x: prey.pos.x, z: prey.pos.z, at: Date.now() });
+        log('CRITICAL FORAGE v2: prey yielded nothing; blocked', prey.name, 'at', Math.round(prey.pos.x), Math.round(prey.pos.z));
+      }
+      if (acted) continue;
+    }
+    log('CRITICAL FORAGE v2: canopy fallback (apples) near home');
+    if (distHome(bot) > 10) { try { await prims.gotoNear(bot, HOME.x, HOME.y, HOME.z, 2.5, 20000); } catch {} }
+    try { await fellTree(bot); } catch (e) { if (e instanceof Interrupt) throw e; log('CRITICAL FORAGE v2: fellTree failed', e.message); }
+    await prims.collectDrops(bot, 8, 5000).catch(() => {});
+    await eatToFull(bot, 19);
+  }
+  if (bot.food >= 18) {
+    setIntent('Recovering - food first', 'survival', 'recover');
+    const t0 = Date.now();
+    while (bot.health > 0 && bot.health < 10 && Date.now() - t0 < 600000) {
+      if (rt.danger && rt.danger.dist <= 12) throw new Interrupt('danger:' + rt.danger.name);
+      if (bot.food <= 17) { await eatToFull(bot, 19); if (bot.food < 18) break; }
+      writeCharState(bot);
+      await prims.sleep(5000);
+    }
+    log('CRITICAL FORAGE v2: recovery hold ended hp', bot.health, 'food', bot.food);
+    return true;
+  }
+  log('CRITICAL FORAGE v2: still no food; hp', bot.health, 'food', bot.food, 'inv', JSON.stringify(prims.inv(bot)));
+  return false;
+}
+
+// ── wood & crafting helpers ──────────────────────────────────────────
+function logCount(bot) {
+  const inv = prims.inv(bot);
+  return Object.keys(inv).filter((n) => LOG_RE.test(n)).reduce((a, n) => a + inv[n], 0);
+}
+function plankCount(bot) {
+  const inv = prims.inv(bot);
+  return Object.keys(inv).filter((n) => PLANK_RE.test(n)).reduce((a, n) => a + inv[n], 0);
+}
+function dominantPlank(bot) {
+  const inv = prims.inv(bot);
+  let best = null, bn = 0;
+  for (const n of Object.keys(inv)) if (PLANK_RE.test(n) && inv[n] > bn) { best = n; bn = inv[n]; }
+  return { name: best, count: bn };
+}
+async function fellTree(bot) {
+  const names = Object.keys(prims.mcData(bot).blocksByName).filter((n) => LOG_RE.test(n));
+  const found = prims.findBlocks(bot, names, 44, 8);
+  if (!found.length) { log('fellTree: no tree within 44'); return false; }
+  // Prefer the column whose base is closest to ground level near us.
+  const target = found[0];
+  setIntent('Felling a tree', currentProjectId, 'gather-wood');
+  say(bot, 'Timber! Gathering wood.');
+  log('felling column at', target.x, target.y, target.z);
+  const before = logCount(bot);
+  const r = await prims.digColumn(bot, target, 8);
+  log('digColumn ->', JSON.stringify(r));
+  // Canopy: knock a few leaves loose for apples/saplings, then sweep drops.
+  try {
+    const leaves = prims.findBlocks(bot, ['oak_leaves', 'birch_leaves', 'spruce_leaves'], 7, 10);
+    for (const lp of leaves.slice(0, 8)) { guard(); await prims.digBlock(bot, lp, 8000); }
+  } catch (e) { if (e instanceof Interrupt) throw e; }
+  await prims.collectDrops(bot, 8, 7000);
+  return logCount(bot) > before || r.ok;
+}
+// Convert logs until the dominant single plank type reaches `need`
+// (recipes for table/door/chest/pickaxe are single-type). Returns the
+// dominant plank name or null.
+async function ensurePlankType(bot, need) {
+  for (let i = 0; i < 10; i++) {
+    guard();
+    const dom = dominantPlank(bot);
+    if (dom.name && dom.count >= need) return dom.name;
+    // Convert a log of the dominant species, else any log.
+    const inv = prims.inv(bot);
+    const species = dom.name ? dom.name.replace('_planks', '') : null;
+    const logName = (species && inv[species + '_log'] > 0) ? species + '_log'
+      : Object.keys(inv).find((n) => LOG_RE.test(n) && inv[n] > 0);
+    if (!logName) return dom.name; // out of logs; caller gathers more
+    const plankName = logName.replace('_log', '_planks');
+    const r = await prims.craftByName(bot, plankName, 1);
+    if (!r.ok) { log('plank craft failed:', r.error); return dom.name; }
+  }
+  const dom = dominantPlank(bot);
+  return dom.name;
+}
+async function ensureLogs(bot, n) {
+  let tries = 0;
+  while (logCount(bot) < n && tries < 5) {
+    guard();
+    const ok = await fellTree(bot);
+    if (!ok) { await prims.sleep(3000); }
+    tries++;
+  }
+  return logCount(bot) >= n;
+}
+
+// ── projects ─────────────────────────────────────────────────────────
+let currentProjectId = null;
+
+const PROJECTS = [
+  {
+    id: 'relocate', title: 'Moving to my homestead',
+    done(bot) { return distHome(bot) <= 4.5 && chebToSpawn(bot) > 18; },
+    async work(bot) {
+      setIntent('Heading to the homestead', 'relocate', 'travel');
+      if (rt.S.relocateFails === 0) say(bot, "Heading east to the high ground past the oaks. That's home now.");
+      // Opportunistic hunt: a hungry traveller eats on the way.
+      if (bot.food <= 9 && nearestPassive(bot, 20)) { await hunt(bot); await eatToFull(bot, 16); return; }
+      const p = bot.entity.position;
+      const dNow = distHome(bot);
+      if (rt.routeIdx == null) { rt.routeIdx = 2; rt.routeFails = 0; rt.legSkip = {}; }
+      const route = ROUTES[rt.routeIdx];
+      // pick the nearest chain waypoint that still makes progress
+      // toward home and is not in a recent-failure skip window
+      let target = null; let bestD = 1e9;
+      for (let i = 0; i < route.length; i++) {
+        const w = route[i];
+        const dw = Math.hypot(w.x - HOME.x, w.z - HOME.z);
+        if (dw > dNow - 0.5) continue;
+        if (rt.legSkip[rt.routeIdx + ':' + i] && Date.now() - rt.legSkip[rt.routeIdx + ':' + i] < 90000) continue;
+        const db = Math.hypot(w.x - p.x, w.z - p.z);
+        // v1.3.1: a hop he is already standing on (inside the gotoNear
+        // instant-ok radius, range 1.6 + 0.6) is CONSUMED, not a
+        // target. The dense W chain put consecutive hops ~3 cells
+        // apart, so their arrival radii overlap: at (49.5,68,-94.5)
+        // the nearest progress hop (51,-94) sat 1.56 away and every
+        // iteration instant-ok'd on it forever - a selection deadlock
+        // the sparse v1.2 chains could never produce. The final hop
+        // (dw ~ 0, the anchor itself) is exempt.
+        if (db <= 2.2 && dw > 1.0) continue;
+        if (db < bestD) { bestD = db; target = { w, i }; }
+      }
+      if (!target) { // every remaining hop recently failed: walk home direct
+        const g = await prims.gotoNear(bot, HOME.x, HOME.y, HOME.z, 2.5, 30000);
+        if (!g.ok) {
+          rt.routeFails++;
+          if (rt.routeFails >= 2) {
+            rt.routeIdx = (rt.routeIdx + 1) % ROUTES.length;
+            rt.routeFails = 0; rt.legSkip = {};
+            say(bot, 'That way is blocked. Trying ' + ROUTE_NAMES[rt.routeIdx] + '.');
+            log('relocate route switch ->', rt.routeIdx);
+          }
+        }
+        return;
+      }
+      const g = await prims.gotoNear(bot, target.w.x, target.w.y, target.w.z, 1.6, 25000);
+      if (g.ok) { rt.routeFails = 0; }
+      else {
+        rt.legSkip[rt.routeIdx + ':' + target.i] = Date.now();
+        rt.routeFails++;
+        log('relocate hop failed', target.w.x, target.w.z, 'route', rt.routeIdx, 'idx', target.i, 'routeFails', rt.routeFails, JSON.stringify(g).slice(0, 140));
+        if (rt.routeFails === 2) say(bot, 'Steep bit here. Working around it.');
+        if (rt.routeFails >= 4) {
+          rt.routeIdx = (rt.routeIdx + 1) % ROUTES.length;
+          rt.routeFails = 0; rt.legSkip = {};
+          say(bot, 'That way is blocked. Trying ' + ROUTE_NAMES[rt.routeIdx] + '.');
+          log('relocate route switch ->', rt.routeIdx);
+        }
+        await prims.sleep(2000);
+      }
+      if (this.done(bot)) say(bot, 'This is the spot — flat top, oaks close, high ground. Home.');
+    },
+  },
+  {
+    id: 'pickaxe', title: 'A wooden pickaxe',
+    done(bot) { return prims.hasItem(bot, 'wooden_pickaxe'); },
+    async work(bot) {
+      setIntent('Making a wooden pickaxe', 'pickaxe', 'tools');
+      const tablePlaced = (() => { const b = bot.blockAt(TABLE_POS); return b && b.name === 'crafting_table'; })();
+      if (!tablePlaced && !prims.hasItem(bot, 'crafting_table')) {
+        if (logCount(bot) < 3 && plankCount(bot) < 9) { say(bot, 'First things first: a wooden pickaxe. Need wood.'); await ensureLogs(bot, 3); return; }
+        const t = await ensurePlankType(bot, 4);
+        if (!t || (dominantPlank(bot).count < 4)) { await ensureLogs(bot, 3); return; }
+        const r = await prims.craftByName(bot, 'crafting_table', 1);
+        log('craft table ->', JSON.stringify(r));
+        return;
+      }
+      if (!tablePlaced) {
+        const g = await prims.gotoNear(bot, TABLE_POS.x, TABLE_POS.y, TABLE_POS.z, 2.6, 30000);
+        if (!g.ok) return;
+        const r = await prims.placeOnTop(bot, 'crafting_table', new Vec3(TABLE_POS.x, TABLE_POS.y - 1, TABLE_POS.z));
+        log('place table ->', JSON.stringify(r));
+        return;
+      }
+      if (!prims.hasItem(bot, 'stick', 2)) {
+        const t = await ensurePlankType(bot, 2);
+        if (!t) { await ensureLogs(bot, 2); return; }
+        const r = await prims.craftByName(bot, 'stick', 1);
+        log('craft sticks ->', JSON.stringify(r));
+        return;
+      }
+      const t = await ensurePlankType(bot, 3);
+      if (!t || dominantPlank(bot).count < 3) { await ensureLogs(bot, 2); return; }
+      const g = await prims.gotoNear(bot, TABLE_POS.x, TABLE_POS.y, TABLE_POS.z, 2.6, 30000);
+      if (!g.ok) return;
+      const r = await prims.craftByName(bot, 'wooden_pickaxe', 1, TABLE_POS);
+      log('craft pickaxe ->', JSON.stringify(r));
+      if (r.ok || prims.hasItem(bot, 'wooden_pickaxe')) say(bot, 'Wooden pickaxe, done. Now I can actually work.');
+    },
+  },
+  {
+    id: 'pad', title: 'Levelling the building pad',
+    done(bot) { return padScan(bot).every((c) => c.ok); },
+    async work(bot) {
+      setIntent('Levelling the building pad', 'pad', 'flatten');
+      say(bot, 'Flattening my building pad. A level floor, then walls.');
+      const cells = padScan(bot);
+      const bad = cells.find((c) => !c.ok);
+      if (!bad) return;
+      const g = await prims.gotoNear(bot, bad.x, PAD.top + 1, bad.z, 2.2, 30000);
+      if (!g.ok) return;
+      if (bad.litterY !== null && bad.litterY === bad.top + 1) {
+        const r = await prims.digBlock(bot, new Vec3(bad.x, bad.litterY, bad.z), 12000);
+        log('pad litter dig', bad.x, bad.z, JSON.stringify(r));
+        return;
+      }
+      if (bad.top > PAD.top) {
+        const r = await prims.digBlock(bot, new Vec3(bad.x, bad.top, bad.z), 15000);
+        log('pad level-down', bad.x, bad.z, JSON.stringify(r));
+        return;
+      }
+      if (bad.top < PAD.top) {
+        if (!prims.hasItem(bot, 'dirt')) {
+          // Scratch dirt from the quarry's first cell.
+          const q = QUARRY[0];
+          const c = columnTop(bot, q.x, q.z);
+          if (c) await prims.digBlock(bot, new Vec3(q.x, c.top, q.z), 15000);
+          return;
+        }
+        const r = await prims.placeOnTop(bot, 'dirt', new Vec3(bad.x, bad.top, bad.z));
+        log('pad fill', bad.x, bad.z, JSON.stringify(r));
+      }
+    },
+  },
+];
+
+function padScan(bot) {
+  const out = [];
+  for (let x = PAD.x0; x <= PAD.x1; x++) for (let z = PAD.z0; z <= PAD.z1; z++) {
+    const c = columnTop(bot, x, z);
+    if (!c) { out.push({ x, z, ok: false, top: null, litterY: null }); continue; }
+    out.push({ x, z, top: c.top, litterY: c.litterY, ok: c.top === PAD.top && c.litterY === null });
+  }
+  return out;
+}
+
+// ── hut geometry ─────────────────────────────────────────────────────
+function wallCells(level) { // level 67 or 68; door gap at (62,-93)
+  const cells = [];
+  for (let x = PAD.x0; x <= PAD.x1; x++) { cells.push({ x, z: PAD.z0 }); cells.push({ x, z: PAD.z1 }); }
+  for (let z = PAD.z0 + 1; z <= PAD.z1 - 1; z++) { cells.push({ x: PAD.x0, z }); cells.push({ x: PAD.x1, z }); }
+  return cells.filter((c) => !(c.x === 62 && c.z === -93)).map((c) => ({ x: c.x, y: level, z: c.z }));
+}
+function blockNameAt(bot, x, y, z) {
+  const b = bot.blockAt(new Vec3(x, y, z));
+  return b ? b.name : null;
+}
+function isPlankAt(bot, x, y, z) { const n = blockNameAt(bot, x, y, z); return !!n && PLANK_RE.test(n); }
+function hutScan(bot) {
+  const walls67 = wallCells(67).every((c) => isPlankAt(bot, c.x, c.y, c.z));
+  const walls68 = wallCells(68).every((c) => isPlankAt(bot, c.x, c.y, c.z));
+  let roof = true;
+  for (let x = PAD.x0; x <= PAD.x1; x++) for (let z = PAD.z0; z <= PAD.z1; z++) {
+    const n = blockNameAt(bot, x, 69, z);
+    if (!n || n === 'air') roof = false;
+  }
+  const door = blockNameAt(bot, 62, 67, -93) === 'oak_door' || blockNameAt(bot, 62, 67, -93) === 'birch_door';
+  const torchN = blockNameAt(bot, 64, 68, -94);
+  const torch = torchN === 'wall_torch' || torchN === 'torch';
+  return { walls67, walls68, roof, door, torch, complete: walls67 && walls68 && roof && torch };
+}
+async function ensureBuildPlanks(bot, n) {
+  if (plankCount(bot) >= n) return true;
+  const needLogs = Math.ceil((n - plankCount(bot)) / 4) + 1;
+  if (logCount(bot) < needLogs) { await ensureLogs(bot, needLogs); }
+  for (let i = 0; i < 8 && plankCount(bot) < n; i++) {
+    guard();
+    const inv = prims.inv(bot);
+    const logName = Object.keys(inv).find((nm) => LOG_RE.test(nm) && inv[nm] > 0);
+    if (!logName) break;
+    await prims.craftByName(bot, logName.replace('_log', '_planks'), 1);
+  }
+  return plankCount(bot) >= n;
+}
+async function smeltCharcoal(bot) {
+  const g = await prims.gotoNear(bot, FURNACE_POS.x, FURNACE_POS.y, FURNACE_POS.z, 2.6, 30000);
+  if (!g.ok) return false;
+  const fb = bot.blockAt(FURNACE_POS);
+  if (!fb || fb.name !== 'furnace') return false;
+  const data = prims.mcData(bot);
+  const inv = prims.inv(bot);
+  const logName = Object.keys(inv).find((n) => LOG_RE.test(n) && inv[n] > 0);
+  const plankName = Object.keys(inv).find((n) => PLANK_RE.test(n) && inv[n] > 0);
+  if (!logName || !plankName) return false;
+  let furnace;
+  try {
+    furnace = await bot.openFurnace(fb);
+    await furnace.putInput(data.itemsByName[logName].id, null, 1);
+    await furnace.putFuel(data.itemsByName[plankName].id, null, 1);
+    const t0 = Date.now();
+    let got = false;
+    while (Date.now() - t0 < 40000) {
+      guard();
+      const out = furnace.outputItem();
+      if (out && out.name === 'charcoal') { await furnace.takeOutput(); got = true; break; }
+      await prims.sleep(1000);
+    }
+    try { furnace.close(); } catch {}
+    log('smelt charcoal ->', got);
+    return got;
+  } catch (e) {
+    try { if (furnace) furnace.close(); } catch {}
+    log('smelt failed:', e.message);
+    return false;
+  }
+}
+
+PROJECTS.push(
+  {
+    id: 'hut', title: 'A starter hut',
+    done(bot) { return hutScan(bot).complete; },
+    async work(bot) {
+      const scan = hutScan(bot);
+      // 1) Walls, course by course
+      for (const level of [67, 68]) {
+        const missing = wallCells(level).filter((c) => !isPlankAt(bot, c.x, c.y, c.z));
+        if (missing.length) {
+          setIntent(level === 67 ? 'Raising the hut walls' : 'Second course of the walls', 'hut', 'walls-' + level);
+          if (level === 67) say(bot, 'Raising the hut — walls first.');
+          if (!(await ensureBuildPlanks(bot, 6))) return;
+          const c = missing[0];
+          const plank = dominantPlank(bot).name;
+          const g = await prims.gotoNear(bot, c.x, level, c.z, 2.6, 30000);
+          if (!g.ok) return;
+          const r = await prims.placeOnTop(bot, plank, new Vec3(c.x, level - 1, c.z));
+          log('wall place', c.x, level, c.z, JSON.stringify(r));
+          return;
+        }
+      }
+      // 2) Roof
+      const roofMissing = [];
+      for (let x = PAD.x0; x <= PAD.x1; x++) for (let z = PAD.z0; z <= PAD.z1; z++) {
+        const n = blockNameAt(bot, x, 69, z);
+        if (!n || n === 'air') roofMissing.push({ x, z });
+      }
+      if (roofMissing.length) {
+        setIntent('Placing the roof', 'hut', 'roof');
+        say(bot, 'Walls up. Roof next, before anything with teeth visits.');
+        if (!(await ensureBuildPlanks(bot, 6))) return;
+        const plank = dominantPlank(bot).name;
+        // Perimeter cells sit on the y68 wall; interior cells lean on an
+        // already-placed roof neighbour to the north.
+        const c = roofMissing.find((m) => m.x === PAD.x0 || m.x === PAD.x1 || m.z === PAD.z0 || m.z === PAD.z1) || roofMissing[0];
+        const g = await prims.gotoNear(bot, c.x, 69, c.z, 2.8, 30000);
+        if (!g.ok) return;
+        let r;
+        if (c.x === PAD.x0 || c.x === PAD.x1 || c.z === PAD.z0 || c.z === PAD.z1) {
+          r = await prims.placeOnTop(bot, plank, new Vec3(c.x, 68, c.z));
+        } else {
+          r = await prims.placeAgainst(bot, plank, new Vec3(c.x, 69, c.z - 1), new Vec3(0, 0, 1));
+          if (!r.ok) r = await prims.placeAgainst(bot, plank, new Vec3(c.x - 1, 69, c.z), new Vec3(1, 0, 0));
+        }
+        log('roof place', c.x, c.z, JSON.stringify(r));
+        return;
+      }
+      // 3) Door (two honest attempts per boot, then the opening stands)
+      if (!scan.door && rt.S.doorAttempts < 2) {
+        setIntent('Hanging the door', 'hut', 'door');
+        if (!prims.hasItem(bot, 'oak_door') && !prims.hasItem(bot, 'birch_door')) {
+          const t = await ensurePlankType(bot, 6);
+          if (t && dominantPlank(bot).count >= 6) {
+            const g = await prims.gotoNear(bot, TABLE_POS.x, TABLE_POS.y, TABLE_POS.z, 2.6, 30000);
+            if (!g.ok) return;
+            const r = await prims.craftByName(bot, t.replace('_planks', '_door'), 1, TABLE_POS);
+            log('craft door ->', JSON.stringify(r));
+          } else { await ensureLogs(bot, 2); }
+          return;
+        }
+        const doorItem = prims.hasItem(bot, 'oak_door') ? 'oak_door' : 'birch_door';
+        const g = await prims.gotoNear(bot, DOOR_FLOOR.x, DOOR_FLOOR.y, DOOR_FLOOR.z, 2.4, 30000);
+        if (!g.ok) return;
+        rt.S.doorAttempts++;
+        try {
+          const item = bot.inventory.items().find((i) => i.name === doorItem);
+          await bot.equip(item, 'hand');
+          await bot.placeBlock(bot.blockAt(DOOR_FLOOR), new Vec3(0, 1, 0));
+          log('door placed, verify:', blockNameAt(bot, 62, 67, -93));
+        } catch (e) { log('door place failed:', e.message); }
+        return;
+      }
+      // 4) Torch: supply chain (quarry -> furnace -> charcoal -> torch),
+      // then onto the wall.
+      if (!scan.torch) {
+        if (prims.hasItem(bot, 'torch')) {
+          setIntent('Putting up a torch', 'hut', 'torch');
+          const g = await prims.gotoNear(bot, TORCH_REF.x, TORCH_REF.y, TORCH_REF.z, 2.8, 30000);
+          if (!g.ok) return;
+          const r = await prims.placeAgainst(bot, 'torch', TORCH_REF, new Vec3(0, 0, 1));
+          log('torch place ->', JSON.stringify(r), 'now', blockNameAt(bot, 64, 68, -94));
+          if (r.ok) say(bot, "Torch up. Light in the house — much better.");
+          return;
+        }
+        if (!prims.hasItem(bot, 'charcoal') && !prims.hasItem(bot, 'coal')) {
+          const furnacePlaced = blockNameAt(bot, FURNACE_POS.x, FURNACE_POS.y, FURNACE_POS.z) === 'furnace';
+          if (!furnacePlaced) {
+            if (!prims.hasItem(bot, 'furnace')) {
+              if ((prims.countItem(bot, 'cobblestone') || 0) < 8) {
+                setIntent('Quarrying stone', 'hut', 'quarry');
+                say(bot, 'Need stone for a furnace — digging a little quarry by the pad.');
+                for (const q of QUARRY) {
+                  const c = columnTop(bot, q.x, q.z);
+                  if (c && c.top > q.top) { await prims.digBlock(bot, new Vec3(q.x, c.top, q.z), 20000); return; }
+                }
+                const faces = [[71, 64, -93], [71, 63, -93], [71, 62, -93], [70, 62, -93], [69, 62, -93]];
+                for (const [fx, fy, fz] of faces) {
+                  const n = blockNameAt(bot, fx, fy, fz);
+                  if (n && (n === 'stone' || /_ore$/.test(n))) { await prims.digBlock(bot, new Vec3(fx, fy, fz), 20000); return; }
+                }
+                log('quarry: no diggable face found');
+                return;
+              }
+              const g = await prims.gotoNear(bot, TABLE_POS.x, TABLE_POS.y, TABLE_POS.z, 2.6, 30000);
+              if (!g.ok) return;
+              const r = await prims.craftByName(bot, 'furnace', 1, TABLE_POS);
+              log('craft furnace ->', JSON.stringify(r));
+              return;
+            }
+            const g = await prims.gotoNear(bot, FURNACE_POS.x, FURNACE_POS.y, FURNACE_POS.z, 2.6, 30000);
+            if (!g.ok) return;
+            const r = await prims.placeOnTop(bot, 'furnace', new Vec3(FURNACE_POS.x, FURNACE_POS.y - 1, FURNACE_POS.z));
+            log('place furnace ->', JSON.stringify(r));
+            return;
+          }
+          if (logCount(bot) < 1 || plankCount(bot) < 1) { await ensureLogs(bot, 2); return; }
+          await smeltCharcoal(bot);
+          return;
+        }
+        if (!prims.hasItem(bot, 'stick', 1)) {
+          const t = await ensurePlankType(bot, 2);
+          if (t) await prims.craftByName(bot, 'stick', 1);
+          return;
+        }
+        const r = await prims.craftByName(bot, 'torch', 1);
+        log('craft torch ->', JSON.stringify(r));
+        return;
+      }
+      log('hut work: no sub-step fired; scan', JSON.stringify(scan));
+    },
+  },
+  {
+    id: 'chest', title: 'A chest and stored surplus',
+    done(bot) {
+      const n = blockNameAt(bot, CHEST_POS.x, CHEST_POS.y, CHEST_POS.z);
+      if (n !== 'chest') return false;
+      return rt.S.milestones.chest === true; // contents verified in work()
+    },
+    async work(bot) {
+      setIntent('Setting up storage', 'chest', 'store');
+      const placed = blockNameAt(bot, CHEST_POS.x, CHEST_POS.y, CHEST_POS.z) === 'chest';
+      if (!placed) {
+        if (!prims.hasItem(bot, 'chest')) {
+          const t = await ensurePlankType(bot, 8);
+          if (!t || dominantPlank(bot).count < 8) { await ensureLogs(bot, 3); return; }
+          const g = await prims.gotoNear(bot, TABLE_POS.x, TABLE_POS.y, TABLE_POS.z, 2.6, 30000);
+          if (!g.ok) return;
+          const r = await prims.craftByName(bot, 'chest', 1, TABLE_POS);
+          log('craft chest ->', JSON.stringify(r));
+          return;
+        }
+        const g = await prims.gotoNear(bot, CHEST_POS.x, CHEST_POS.y, CHEST_POS.z, 2.6, 30000);
+        if (!g.ok) return;
+        const r = await prims.placeOnTop(bot, 'chest', new Vec3(CHEST_POS.x, CHEST_POS.y - 1, CHEST_POS.z));
+        log('place chest ->', JSON.stringify(r));
+        return;
+      }
+      // Deposit surplus; keep tools, food, sticks and the working plank stack.
+      const keep = ['wooden_pickaxe', 'stone_pickaxe', 'wooden_axe', 'stone_axe', 'stick', 'torch', 'oak_door', 'birch_door'];
+      const dom = dominantPlank(bot);
+      if (dom.name) keep.push(dom.name);
+      for (const e of EDIBLES) keep.push(e);
+      const g = await prims.gotoNear(bot, CHEST_POS.x, CHEST_POS.y, CHEST_POS.z, 2.6, 30000);
+      if (!g.ok) return;
+      const before = await prims.openChestContents(bot, CHEST_POS);
+      const dep = await prims.depositInChest(bot, CHEST_POS, keep);
+      const after = await prims.openChestContents(bot, CHEST_POS);
+      log('deposit ->', JSON.stringify(dep).slice(0, 200), 'chest total now', after.ok ? after.total : '?');
+      if (after.ok && after.total >= 3) {
+        rt.S.milestones.chest = true;
+        say(bot, "Chest's in and the surplus is stored. Tools stay on me.");
+      }
+    },
+  },
+  {
+    id: 'pen', title: 'A fenced pen',
+    done(bot) {
+      let n = 0;
+      for (const c of PEN_CELLS) {
+        const top = columnTop(bot, c.x, c.z);
+        if (!top) continue;
+        const nm = blockNameAt(bot, c.x, top.top + 1, c.z);
+        if (nm && /_fence$/.test(nm)) n++;
+      }
+      return n >= 10;
+    },
+    async work(bot) {
+      setIntent('Fencing a pen', 'pen', 'fence');
+      say(bot, 'Fencing a little pen by the house.');
+      if (!prims.hasItem(bot, 'oak_fence') && !prims.hasItem(bot, 'birch_fence')) {
+        const t = await ensurePlankType(bot, 4);
+        if (!t) { await ensureLogs(bot, 2); return; }
+        if (!prims.hasItem(bot, 'stick', 2)) { await prims.craftByName(bot, 'stick', 1); return; }
+        if (dominantPlank(bot).count < 4) { await ensureLogs(bot, 2); return; }
+        const g = await prims.gotoNear(bot, TABLE_POS.x, TABLE_POS.y, TABLE_POS.z, 2.6, 30000);
+        if (!g.ok) return;
+        const fenceName = t.replace('_planks', '_fence');
+        const r = await prims.craftByName(bot, fenceName, 1, TABLE_POS);
+        log('craft fence ->', JSON.stringify(r));
+        return;
+      }
+      const fenceItem = prims.hasItem(bot, 'oak_fence') ? 'oak_fence' : 'birch_fence';
+      for (const c of PEN_CELLS) {
+        const top = columnTop(bot, c.x, c.z);
+        if (!top) continue;
+        const nm = blockNameAt(bot, c.x, top.top + 1, c.z);
+        if (nm && /_fence$/.test(nm)) continue;
+        const g = await prims.gotoNear(bot, c.x, top.top + 1, c.z, 2.4, 30000);
+        if (!g.ok) return;
+        const r = await prims.placeOnTop(bot, fenceItem, new Vec3(c.x, top.top, c.z));
+        log('fence place', c.x, c.z, JSON.stringify(r));
+        return;
+      }
+    },
+  },
+);
+
+// ── the day loop ─────────────────────────────────────────────────────
+const PROJECT_LINES = {
+  relocate: 'Moving to my homestead',
+  pickaxe: 'First tool: a wooden pickaxe',
+  pad: 'Levelling the building pad',
+  hut: 'Building the starter hut',
+  chest: 'Setting up storage',
+  pen: 'Fencing the pen',
+};
+async function idleAtHome(bot) {
+  setIntent('Living at the homestead', 'homestead', 'idle');
+  const a = (Math.random() * Math.PI * 2);
+  const r = 2 + Math.random() * 2;
+  await prims.gotoNear(bot, HOME.x + Math.cos(a) * r, HOME.y, HOME.z + Math.sin(a) * r, 1.2, 20000);
+  await prims.sleep(20000 + Math.random() * 20000);
+}
+async function dayLoop(bot, gen) {
+  rt.S = loadS();
+  rt.bootAt = Date.now();
+  say(bot, "Morning. Right — new plan. I'm building a home out east, and I'm going to live in it.");
+  log('day loop started; milestones so far', JSON.stringify(rt.S.milestones));
+  let diedLastCheck = false;
+  while (gen === rt.gen && bot.entity) {
+    try {
+      if (global.__pulseRunnerActive) { await prims.sleep(5000); continue; } // a trial owns the body
+      if (bot.health <= 0) { await prims.sleep(3000); continue; }
+      // Respawn detection: popped back at spawn with empty hands.
+      const atSpawn = chebToSpawn(bot) <= 3;
+      if (atSpawn && !diedLastCheck && rt.bootAt && Date.now() - rt.bootAt > 60000) {
+        say(bot, "I'm back. Heading home to pick up where I left off.", true);
+      }
+      diedLastCheck = atSpawn;
+      // Danger first. If running does not clear it — or he has just
+      // died into danger (respawn lands in the same saturation) — he
+      // DIGS IN (shelter reflex, 2026-11-07): survival outranks every
+      // project, and home means nothing while the road kills him.
+      if (rt.danger && rt.danger.dist <= 12) {
+        const cleared = await flee(bot);
+        if (!cleared && !hutScan(bot).complete) { await shelter(bot); }
+        else if (rt.diedRecently && bot.health < 20 && nearestHostile(bot, 20)) { await shelter(bot); }
+        writeCharState(bot); continue;
+      }
+      // Food: eat what he carries (target 19 when hurt - regen needs
+      // a near-full bar); forage when it's urgent. Health-critical
+      // hunger outranks project work entirely (food run, 2026-11-08).
+      if (bot.health < 4 && bot.food < 18) {
+        const fed = await criticalForage(bot);
+        writeCharState(bot);
+        if (!fed) await prims.sleep(5000);
+        continue;
+      }
+      if (bot.food <= 14 || (bot.health < 20 && bot.food <= 17)) { await eatToFull(bot, 19); }
+      if (bot.food <= 8 && !prims.inv(bot).hasOwnProperty) { /* noop guard */ }
+      if (bot.food <= 8) {
+        const hasFood = EDIBLES.some((n) => prims.hasItem(bot, n));
+        if (!hasFood) {
+          try { await hunt(bot); } catch (e) { if (e instanceof Interrupt) { await flee(bot); continue; } throw e; }
+          await eatToFull(bot, 16);
+        }
+      }
+      // Pick the project to work: canonically the first whose
+      // evidence does not hold yet. The actor may re-rank the open
+      // list within bounds (relocate, while open, is never re-ranked
+      // away; done projects are never picked); template order is
+      // the fallback whenever the actor is off or silent.
+      const openList = [];
+      for (const p of PROJECTS) {
+        let d = false;
+        try { d = p.done(bot); } catch (e) { d = false; }
+        if (d && !rt.knownDone.has(p.id)) {
+          rt.knownDone.add(p.id);
+          if (!rt.S.milestones[p.id]) {
+            rt.S.milestones[p.id] = nowIso();
+            ledger({ ts: nowIso(), kind: 'character-milestone', id: 'character-' + p.id + '-done', what: 'Character project completed (live world-evidence predicate first held): ' + p.id + ' — ' + p.title, class: 'character' });
+            log('PROJECT COMPLETE:', p.id);
+            if (actor) { try { actor.fileProjectComplete(p.id, p.title, buildActorContext(bot)); } catch {} }
+          }
+        }
+        if (!d) openList.push(p);
+      }
+      writeCharState(bot);
+      if (!openList.length) { await idleAtHome(bot); continue; }
+      let proj = openList[0];
+      if (actor && proj.id !== 'relocate') {
+        const rank = actor.getRank();
+        if (rank) for (const id of rank) { const cand = openList.find((p) => p.id === id); if (cand) { proj = cand; break; } }
+      }
+      // Stuck detection (the actor's library-consult hook): the same
+      // project selected for 10+ minutes inside a 3-block box with
+      // no milestone -> file one consult per stuck episode.
+      if (bot.entity) {
+        const pp = bot.entity.position;
+        if (!rt.stuckTrack || rt.stuckTrack.project !== proj.id) {
+          rt.stuckTrack = { project: proj.id, since: Date.now(), x: pp.x, z: pp.z, filed: false };
+        } else {
+          const st = rt.stuckTrack;
+          if (Math.hypot(pp.x - st.x, pp.z - st.z) > 3) { st.x = pp.x; st.z = pp.z; st.since = Date.now(); st.filed = false; }
+          else if (!st.filed && Date.now() - st.since > 600000) {
+            st.filed = true;
+            log('STUCK on', proj.id, 'for 10+ min in a 3-block box — filing library consult');
+            if (actor) { try { actor.fileStuck(proj.id, proj.title, buildActorContext(bot)); } catch {} }
+          }
+        }
+      }
+      currentProjectId = proj.id;
+      setIntent(PROJECT_LINES[proj.id] || proj.title, proj.id, 'work');
+      try {
+        await proj.work(bot);
+      } catch (e) {
+        if (e instanceof Interrupt) { await flee(bot); }
+        else { log('project', proj.id, 'work error:', e.message); await prims.sleep(3000); }
+      }
+      writeCharState(bot);
+      await prims.sleep(1200);
+    } catch (e) {
+      log('day loop iteration error:', e && e.message);
+      await prims.sleep(4000);
+    }
+  }
+  log('day loop exiting (gen', gen, ')');
+}
+
+// ── actor context (what the System-2 actor sees each beat) ──────────
+function buildActorContext(bot) {
+  const cc = global.__codyCharacter || {};
+  const p = bot && bot.entity ? bot.entity.position : { x: 0, y: 0, z: 0 };
+  const open = [];
+  for (const pr of PROJECTS) {
+    let d = false;
+    try { d = pr.done(bot); } catch (e) { d = false; }
+    if (!d) open.push({ id: pr.id, title: pr.title });
+  }
+  return {
+    intent: cc.intent || null,
+    project: cc.project || currentProjectId,
+    step: cc.step || null,
+    pos: { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) },
+    health: bot ? bot.health : null,
+    food: bot ? bot.food : null,
+    inventory: bot ? prims.inv(bot) : {},
+    openProjects: open,
+    milestones: rt.S ? Object.keys(rt.S.milestones) : [],
+  };
+}
+
+// ── wiring (framework plugin idiom, same shape as pulse-plugin) ─────
+function wire(bot) {
+  if (!bot || rt.wired.has(bot)) return;
+  rt.wired.add(bot);
+  rt.gen++;
+  const gen = rt.gen;
+  global.__codyCharacterActive = true;
+  setIntent('Waking up', 'boot', 'spawn');
+  bot.on('death', () => {
+    rt.diedRecently = true; rt.burrowed = false;
+    if (rt.S) { rt.S.deathsSeen++; }
+    if (actor) actor.noteEvent('death');
+    log('death noticed by character loop');
+  });
+  const start = () => {
+    if (gen !== rt.gen || !bot.entity) return;
+    startMonitor(bot, gen);
+    if (actor) {
+      try {
+        actor.start(bot, {
+          sayDirect: (line) => say(bot, line, false, true),
+          lastChatAt: () => rt.lastChatAt,
+          context: () => buildActorContext(bot),
+          ledger,
+        });
+      } catch (e) { log('actor start failed:', e.message); }
+    }
+    setInterval(() => { if (gen === rt.gen) writeCharState(bot); }, 15000);
+    setTimeout(() => { dayLoop(bot, gen).catch((e) => log('day loop crashed:', e.message)); }, 6000);
+    log('character loop armed (gen', gen, ')');
+  };
+  if (bot.entity) start();
+  bot.once('spawn', start);
+}
+
+module.exports = {
+  name: 'character',
+  version: '1.0.0',
+  description: 'Cody as a character: goal-directed day loop (homestead build), survival behaviour, self-narration',
+  init(ctx) {
+    const b = (ctx && ctx.bot) || (ctx && ctx.entity !== undefined ? ctx : null);
+    if (b) wire(b);
+  },
+  wire,
+};

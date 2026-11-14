@@ -1,0 +1,42 @@
+PASS  wiring: driver requires day17 gate-client
+PASS  wiring: driver requires day17 safety-check
+PASS  wiring: driver requires day17 hopflee
+PASS  wiring: safety.init at driver boot
+PASS  wiring: snapshot read at >= 4 sites (start, cycle head, pre-exec, reflex span)
+PASS  wiring: floor flee passes the safety hook
+PASS  wiring: floorEscape branches on fr.aborted (no burrow after an abort)
+PASS  wiring: burrow checks at dig-in
+PASS  wiring: burrow checks at seal
+PASS  wiring: burrow checks in the hold loop
+PASS  wiring: main loop breaks on reflexAbort inside the cycle
+PASS  wiring: close-exit skipped when safetyStopped
+PASS  wiring: close exit passes the safety hook
+PASS  wiring: hopflee carries the safety hook
+PASS  wiring: safety-check reads the gate + the trace counter
+PASS  span: REFLEX-SAFETY span present in driver source
+PASS  (a) flee aborted on the park
+PASS  (a) abort names hop 4 — the first boundary after the park
+PASS  (a) trigger is park, gate reason lease-revoked (the floor's own words)
+PASS  (a) ZERO hop commands issued after the park (3 issued, none at hop >= 4)
+PASS  (a) exactly one reflex-abort trace row, naming trigger + hop stage
+PASS  (a) the trace death count is untouched (0)
+PASS  (b) flee aborted on the count crossing
+PASS  (b) abort at hop 3 — the first boundary after the crossing
+PASS  (b) trigger is death-count (lease live throughout)
+PASS  (b) ZERO hop commands issued after the crossing (2 issued)
+PASS  (b) reflex-abort row names trigger + count
+PASS  (c) clean flee completes by its own exit (clear)
+PASS  (c) all 5 hops issued, none suppressed
+PASS  (c) no abort latched, no reflex-abort row
+PASS  (c) snapshot agrees: no stop on a live lease with 0 deaths
+PASS  (d) replay: flee aborted
+PASS  (d) replay: abort at hop 4 — the first hop after the park
+PASS  (d) replay: trigger is park, with the count at 3 in the verdict
+PASS  (d) replay: DEATHS STOP AT 3 (the recorded day reached 9)
+PASS  (d) replay: no hop commands after the abort (3 issued)
+PASS  (d) replay: mapped abort instant 06:09:27.750Z sits after the park (06:09:24.272Z) and before death 4 (06:09:33.218Z), margin 5.468 s
+PASS  (d) replay: the reflex-abort row names hop 4 + trigger park
+PASS  (e) snapshot cost bounded: median 2.62 ms, max 5.28 ms over the real day-13 trace (50 reads)
+PASS  (e) snapshot over the real trace counts its 9 deaths
+---
+SAFETY-REFLEX FIXTURE: 40 PASS / 0 FAIL

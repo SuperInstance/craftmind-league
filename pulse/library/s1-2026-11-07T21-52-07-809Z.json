@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T21-52-07-809Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T21:52:07.880Z",
+ "parent": null,
+ "rationale": "Cody is currently at (26.6, 72.9, -93.6) near his anchor (24, 67, -111), which is within spawn protection radius (17 blocks from spawn at 32,70,-96). The skill must first exit the protected area, then gather logs, craft planks, make a crafting table, and finally craft a wooden pickaxe. The run structure follows the required order: check done condition, survival scan, spawn protection exit, hollow exit if needed, inventory check and crafting chain, then gather if needed. The skill returns done only when wooden_pickaxe is in inventory.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T21:52:07.794+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 30.213,
+  "prompt_tokens": 8309,
+  "completion_tokens": 1584,
+  "total_tokens": 9893
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

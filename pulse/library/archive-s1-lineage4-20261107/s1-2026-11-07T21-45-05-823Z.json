@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T21-45-05-823Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T21:45:05.893Z",
+ "parent": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T21-12-40-847Z.js",
+ "rationale": "The previous script had several issues: it didn't properly handle the spawn protection zone exit, didn't implement proper survival mechanics, and had incomplete crafting logic. The new version addresses these by ensuring Cody exits the protected zone safely, implements survival checks with fleeing behavior, and properly interleaves gathering and crafting in a single run loop. It also correctly handles the terrain routing through the hollow and ensures inventory state is checked properly at each step.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T21:45:05.808+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 36.355,
+  "prompt_tokens": 7279,
+  "completion_tokens": 1639,
+  "total_tokens": 8918
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

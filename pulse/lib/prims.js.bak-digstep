@@ -1,0 +1,379 @@
+'use strict';
+/**
+ * prims.js — SEEDED PRIMITIVES for the Pulse.  ★ DECLARED SEEDED CODE ★
+ *
+ * Hand-written substrate (the mineflayer layer of the stack): small,
+ * timeout-guarded, never-throwing helpers that smith-authored skills
+ * compose. These are NOT smith products — they are the workbench the
+ * smith writes on top of, declared loudly in pulse/README.md.
+ *
+ * Contract: every async function resolves a result object and never
+ * throws:  { ok: true, ... } | { ok: false, error: '...' }
+ * Lines beginning with `// prim:` are extracted verbatim into the
+ * smith's API surface by smith.js — keep them accurate.
+ */
+const path = require('path');
+const CM = '/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules';
+const { goals, Movements } = require(path.join(CM, 'mineflayer-pathfinder'));
+const { Vec3 } = require(path.join(CM, 'vec3'));
+
+const _mc = {};
+function mcData(bot) {
+  if (!_mc[bot.version]) _mc[bot.version] = require(path.join(CM, 'minecraft-data'))(bot.version);
+  return _mc[bot.version];
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// prim: sleep(ms) -> Promise that resolves after ms
+// prim: inv(bot) -> { itemName: count } — inventory snapshot
+function inv(bot) {
+  const out = {};
+  for (const it of bot.inventory.items()) out[it.name] = (out[it.name] || 0) + it.count;
+  return out;
+}
+
+// prim: countItem(bot, name) -> number of `name` in inventory (0 if none)
+function countItem(bot, name) {
+  return inv(bot)[name] || 0;
+}
+
+// prim: hasItem(bot, name, n=1) -> boolean
+function hasItem(bot, name, n = 1) {
+  return (inv(bot)[name] || 0) >= n;
+}
+
+// prim: walkTo(bot, x, y, z, range=1.5, timeoutMs=45000) -> {ok} — MANUAL HELM v3: steer by control states; set-and-hold facing (re-face ~2 s), jump bursts on stall, and a lateral step-search (sidestep probes, alternating sides) when jumps stop restoring progress — stepped terraces often stair only a block or two to the side. Robust where the pathfinder stalls (see gotoNear note).
+async function walkTo(bot, x, y, z, range = 1.5, timeoutMs = 45000) {
+  if (!bot.entity) return { ok: false, error: 'no entity' };
+  const target = new Vec3(x, y, z);
+  const t0 = Date.now();
+  let lastProgressAt = Date.now();
+  let best = bot.entity.position.distanceTo(target);
+  let lastFaceAt = 0;
+  let side = 1;
+  let probes = 0;
+  try {
+    while (Date.now() - t0 < timeoutMs) {
+      if (!bot.entity) return { ok: false, error: 'entity gone' };
+      const pos = bot.entity.position;
+      const d = pos.distanceTo(target);
+      if (d <= range + 0.4) return { ok: true };
+      if (d < best - 0.05) { best = d; lastProgressAt = Date.now(); }
+      if (Date.now() - lastFaceAt > 2000) {
+        lastFaceAt = Date.now();
+        try { await bot.lookAt(new Vec3(x, pos.y + 1.62, z), true); } catch {}
+        bot.setControlState('forward', true);
+        bot.setControlState('sprint', d > 6);
+      }
+      const stuckFor = Date.now() - lastProgressAt;
+      if (stuckFor > 6000 && probes < 8) {
+        // Lateral step-search: jumps have not restored progress, so the
+        // step on this line is likely +2 (unclimbable). Probe sideways
+        // for a staircase, then re-face the target.
+        probes++;
+        const dx = x - pos.x, dz = z - pos.z;
+        const len = Math.hypot(dx, dz) || 1;
+        const px = (-dz / len) * side, pz = (dx / len) * side;
+        side = -side;
+        try { await bot.lookAt(new Vec3(pos.x + px * 4, pos.y + 1.62, pos.z + pz * 4), true); } catch {}
+        bot.setControlState('forward', true);
+        bot.setControlState('sprint', false);
+        await sleep(1100);
+        bot.setControlState('forward', false);
+        lastProgressAt = Date.now();
+        lastFaceAt = 0;
+        continue;
+      }
+      if (stuckFor > 1500) {
+        bot.setControlState('jump', true);
+        await sleep(350);
+        bot.setControlState('jump', false);
+        lastProgressAt = Date.now(); // do not spam jumps
+        lastFaceAt = 0; // re-face after a jump
+      }
+      await sleep(200);
+    }
+    return { ok: false, error: 'walkTo timeout (' + timeoutMs + 'ms) to ' + x + ',' + y + ',' + z + '; at ' + bot.entity.position };
+  } finally {
+    try { bot.clearControlStates(); } catch {}
+  }
+}
+
+// Walk-only travel movements (Lineage B's measured fix, 2026-11-06):
+// the stock pathfinder times out on even ~9-block hops in wooded/slope
+// terrain around spawn with digging enabled. Travel never digs.
+function travelMovements(bot) {
+  if (bot.__pulseTravelMv) return bot.__pulseTravelMv;
+  const mv = new Movements(bot, mcData(bot));
+  mv.canDig = false;
+  mv.allow1by1towers = false;
+  bot.__pulseTravelMv = mv;
+  return mv;
+}
+
+// prim: gotoNear(bot, x, y, z, range=1.5, timeoutMs=45000) -> {ok} — go to within `range` of a point. Tries the pathfinder (walk-only movements; goal pre-cleared via setGoal(null) — pathfinder.stop() poisons the next goto, Lineage B) under a STALL WATCHDOG: if the distance-to-target does not improve for ~7 s, the pathfinder is abandoned and walkTo's manual helm (jump + lateral step-search) takes the remainder. (Gate evidence 2026-11-06: the old design committed to the pathfinder after >=1 block of early progress and burned a 75 s timeout parked against a +2 terrace step; the staircase one block to the side was never tried.)
+async function gotoNear(bot, x, y, z, range = 1.5, timeoutMs = 45000) {
+  if (!bot.entity) return { ok: false, error: 'no entity' };
+  const target = new Vec3(x, y, z);
+  const startDist = bot.entity.position.distanceTo(target);
+  if (startDist <= range + 0.6) return { ok: true };
+  const t0 = Date.now();
+  let pfLive = false;
+  try {
+    bot.pathfinder.setMovements(travelMovements(bot));
+    bot.pathfinder.setGoal(null); // pre-clear: consume any pending stop state
+    bot.pathfinder.setGoal(new goals.GoalNear(x, y, z, range));
+    pfLive = true;
+  } catch (e) { pfLive = false; }
+  if (pfLive) {
+    let best = startDist;
+    let lastImprove = Date.now();
+    while (Date.now() - t0 < timeoutMs) {
+      if (!bot.entity) return { ok: false, error: 'entity gone' };
+      const d = bot.entity.position.distanceTo(target);
+      if (d <= range + 0.6) {
+        try { bot.pathfinder.setGoal(null); } catch {}
+        return { ok: true, via: 'pathfinder' };
+      }
+      if (d < best - 0.05) { best = d; lastImprove = Date.now(); }
+      if (Date.now() - lastImprove > 7000) break; // stall watchdog
+      await sleep(400);
+    }
+    try { bot.pathfinder.setGoal(null); } catch {}
+    try { bot.clearControlStates(); } catch {}
+    const remain = Math.max(5000, timeoutMs - (Date.now() - t0));
+    const w = await walkTo(bot, x, y, z, range, remain);
+    return w.ok ? { ok: true, via: 'helm-fallback' } : w;
+  }
+  return walkTo(bot, x, y, z, range, timeoutMs);
+}
+
+// prim: findBlocks(bot, names[], maxDistance=32, count=8) -> [Vec3] — positions of the nearest blocks whose name is in `names`
+function findBlocks(bot, names, maxDistance = 32, count = 8) {
+  const data = mcData(bot);
+  const ids = names.map((n) => data.blocksByName[n]?.id).filter((v) => v !== undefined);
+  if (!ids.length) return [];
+  return bot.findBlocks({ matching: ids, maxDistance, count }) || [];
+}
+
+// prim: digBlock(bot, pos, timeoutMs=25000) -> {ok, block} — walk into reach if needed, equip a sensible tool, face and dig the block at pos (a Vec3)
+async function digBlock(bot, pos, timeoutMs = 25000) {
+  const block = bot.blockAt(pos);
+  if (!block || block.name === 'air') return { ok: false, error: 'no block at ' + pos };
+  if (bot.entity.position.distanceTo(pos) > 4.2) {
+    const g = await gotoNear(bot, pos.x, pos.y, pos.z, 2.5, timeoutMs);
+    if (!g.ok) return g;
+  }
+  const fresh = bot.blockAt(pos);
+  if (!fresh || fresh.name === 'air') return { ok: false, error: 'block vanished at ' + pos };
+  // Naive tool choice: pickaxe for stone-like, axe for wood-like.
+  try {
+    const invNames = Object.keys(inv(bot));
+    const want = /stone|cobble|ore|rock|deepslate|granite|diorite|andesite/.test(fresh.name)
+      ? ['iron_pickaxe', 'stone_pickaxe', 'wooden_pickaxe', 'golden_pickaxe']
+      : /log|wood|planks/.test(fresh.name)
+        ? ['iron_axe', 'stone_axe', 'wooden_axe']
+        : [];
+    const toolName = want.find((n) => invNames.includes(n));
+    if (toolName) {
+      const tool = bot.inventory.items().find((i) => i.name === toolName);
+      if (tool) await bot.equip(tool, 'hand');
+    }
+  } catch {}
+  try {
+    await bot.lookAt(pos.offset(0.5, 0.5, 0.5), true);
+  } catch {}
+  // MEASURED (probe2, 2026-11-06): the callback form bot.dig(block, cb)
+  // never fires on this mineflayer/Paper stack, and the default 'raycast'
+  // direction hangs in common geometries (feet-level trunk log). The
+  // promise form bot.dig(block, 'ignore') completes in exactly
+  // bot.digTime(); reach is already enforced above (gotoNear / <=4.2).
+  const budget = Math.max(timeoutMs, (bot.digTime ? bot.digTime(fresh) : 3000) + 12000);
+  try {
+    await Promise.race([
+      bot.dig(fresh, 'ignore'),
+      sleep(budget).then(() => { throw new Error('dig timeout on ' + fresh.name); }),
+    ]);
+    return { ok: true, block: fresh.name };
+  } catch (e) {
+    try { bot.stopDigging(); } catch {}
+    return { ok: false, error: String((e && e.message) || e) };
+  }
+}
+
+// prim: digColumn(bot, pos, maxLogs=8) -> {ok, dug} — harvest the log column containing pos BOTTOM-UP: scans down to the lowest log, digs upward one at a time (digBlock enforces reach), collecting drops as it goes. Canopy-chasing yields 0 (measured, Lineage B); the bottom of the trunk is the yield path.
+async function digColumn(bot, pos, maxLogs = 8) {
+  let base = new Vec3(pos.x, pos.y, pos.z);
+  for (let i = 0; i < 24; i++) {
+    const below = bot.blockAt(new Vec3(base.x, base.y - 1, base.z));
+    if (below && /_log$/.test(below.name)) base = base.offset(0, -1, 0);
+    else break;
+  }
+  let dug = 0;
+  for (let i = 0; i < maxLogs; i++) {
+    const p = new Vec3(base.x, base.y + i, base.z);
+    const blk = bot.blockAt(p);
+    if (!blk || blk.name === 'air' || !/_log$/.test(blk.name)) break;
+    const r = await digBlock(bot, p);
+    if (!r.ok) break;
+    dug++;
+    if (dug % 2 === 0) await collectDrops(bot, 7, 4000);
+  }
+  if (dug > 0) await collectDrops(bot, 7, 6000);
+  return { ok: dug > 0, dug };
+}
+
+// prim: collectDrops(bot, radius=7, timeoutMs=12000) -> {ok, visited} — walk over dropped item entities nearby so they are picked up
+async function collectDrops(bot, radius = 7, timeoutMs = 12000) {
+  const t0 = Date.now();
+  let visited = 0;
+  let seen = 0;
+  while (Date.now() - t0 < timeoutMs) {
+    const drops = Object.values(bot.entities || {}).filter(
+      (e) => e && (e.name === 'item' || e.kind === 'Drops') && e.position && bot.entity && e.position.distanceTo(bot.entity.position) <= radius
+    );
+    seen = Math.max(seen, drops.length);
+    if (!drops.length) {
+      if (visited > 0) break;
+      await sleep(400); // drops take a moment to spawn as entities — keep waiting
+      continue;
+    }
+    const d = drops[0];
+    const g = await gotoNear(bot, d.position.x, d.position.y, d.position.z, 0.9, 6000);
+    if (g.ok) visited++;
+    await sleep(250);
+  }
+  return { ok: true, visited, seen };
+}
+
+// prim: craftByName(bot, itemName, count=1, tablePos=null) -> {ok} — craft an item; pass the Vec3 of a placed crafting table for 3x3 recipes, null for the 2x2 grid
+async function craftByName(bot, itemName, count = 1, tablePos = null) {
+  const data = mcData(bot);
+  const item = data.itemsByName[itemName];
+  if (!item) return { ok: false, error: 'unknown item ' + itemName };
+  let table = null;
+  if (tablePos) {
+    table = bot.blockAt(tablePos);
+    if (!table || table.name !== 'crafting_table') return { ok: false, error: 'no crafting_table at ' + tablePos };
+    if (bot.entity.position.distanceTo(tablePos) > 3.5) {
+      const g = await gotoNear(bot, tablePos.x, tablePos.y, tablePos.z, 2.5, 30000);
+      if (!g.ok) return g;
+    }
+  }
+  const recipes = bot.recipesFor(item.id, null, 1, table);
+  if (!recipes || !recipes.length) return { ok: false, error: 'no craftable recipe for ' + itemName + (table ? ' at table' : ' in 2x2 grid') };
+  try {
+    await bot.craft(recipes[0], count, table);
+    return { ok: true, item: itemName, count };
+  } catch (e) {
+    return { ok: false, error: 'craft ' + itemName + ': ' + e.message };
+  }
+}
+
+// prim: placeOnTop(bot, itemName, refPos) -> {ok} — place the named block item on TOP of the block at refPos (a Vec3); walks into reach first
+async function placeOnTop(bot, itemName, refPos) {
+  const item = bot.inventory.items().find((i) => i.name === itemName);
+  if (!item) return { ok: false, error: 'no ' + itemName + ' in inventory' };
+  const ref = bot.blockAt(refPos);
+  if (!ref || ref.name === 'air') return { ok: false, error: 'no reference block at ' + refPos };
+  if (bot.entity.position.distanceTo(refPos) > 4.2) {
+    const g = await gotoNear(bot, refPos.x, refPos.y, refPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  try {
+    await bot.equip(item, 'hand');
+    await bot.placeBlock(bot.blockAt(refPos), new Vec3(0, 1, 0));
+    return { ok: true, placed: itemName, at: { x: refPos.x, y: refPos.y + 1, z: refPos.z } };
+  } catch (e) {
+    return { ok: false, error: 'place ' + itemName + ': ' + e.message };
+  }
+}
+
+// prim: placeAgainst(bot, itemName, refPos, face) -> {ok} — place the named block against the block at refPos; face is a Vec3 direction like (1,0,0) east, (0,0,1) south, (0,-1,0) below
+async function placeAgainst(bot, itemName, refPos, face) {
+  const item = bot.inventory.items().find((i) => i.name === itemName);
+  if (!item) return { ok: false, error: 'no ' + itemName + ' in inventory' };
+  const ref = bot.blockAt(refPos);
+  if (!ref || ref.name === 'air') return { ok: false, error: 'no reference block at ' + refPos };
+  if (bot.entity.position.distanceTo(refPos) > 4.2) {
+    const g = await gotoNear(bot, refPos.x, refPos.y, refPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  try {
+    await bot.equip(item, 'hand');
+    await bot.placeBlock(bot.blockAt(refPos), face);
+    return { ok: true, placed: itemName, at: { x: refPos.x + face.x, y: refPos.y + face.y, z: refPos.z + face.z } };
+  } catch (e) {
+    return { ok: false, error: 'place ' + itemName + ': ' + e.message };
+  }
+}
+
+// prim: openChestContents(bot, chestPos) -> {ok, contents:{name:count}, total} — open the chest at chestPos, read what is inside, close it
+async function openChestContents(bot, chestPos) {
+  const block = bot.blockAt(chestPos);
+  if (!block || !/chest/.test(block.name)) return { ok: false, error: 'no chest at ' + chestPos };
+  if (bot.entity.position.distanceTo(chestPos) > 3.5) {
+    const g = await gotoNear(bot, chestPos.x, chestPos.y, chestPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  let win;
+  try {
+    win = await bot.openChest(bot.blockAt(chestPos));
+    const contents = {};
+    let total = 0;
+    for (const it of win.containerItems()) { contents[it.name] = (contents[it.name] || 0) + it.count; total += it.count; }
+    win.close();
+    return { ok: true, contents, total };
+  } catch (e) {
+    try { if (win) win.close(); } catch {}
+    return { ok: false, error: 'openChest: ' + e.message };
+  }
+}
+
+// prim: depositInChest(bot, chestPos, exceptNames=[]) -> {ok, deposited:{name:count}} — move every inventory item NOT in exceptNames into the chest at chestPos
+async function depositInChest(bot, chestPos, exceptNames = []) {
+  const block = bot.blockAt(chestPos);
+  if (!block || !/chest/.test(block.name)) return { ok: false, error: 'no chest at ' + chestPos };
+  if (bot.entity.position.distanceTo(chestPos) > 3.5) {
+    const g = await gotoNear(bot, chestPos.x, chestPos.y, chestPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  let win;
+  const deposited = {};
+  try {
+    win = await bot.openChest(bot.blockAt(chestPos));
+    for (const it of [...bot.inventory.items()]) {
+      if (exceptNames.includes(it.name)) continue;
+      await win.deposit(it.type, it.metadata, it.count);
+      deposited[it.name] = (deposited[it.name] || 0) + it.count;
+    }
+    win.close();
+    return { ok: true, deposited };
+  } catch (e) {
+    try { if (win) win.close(); } catch {}
+    return { ok: false, error: 'deposit: ' + e.message, deposited };
+  }
+}
+
+// prim: say(bot, msg) -> send a short chat message (keep it rare: at most ~2 per skill run)
+function say(bot, msg) {
+  try { bot.chat(String(msg).slice(0, 200)); return { ok: true }; } catch (e) { return { ok: false, error: e.message }; }
+}
+
+// prim: groundY(bot, x, z) -> y of the top solid block in column x,z near the bot (null if none found)
+function groundY(bot, x, z) {
+  const startY = Math.min(250, Math.floor(bot.entity.position.y) + 24);
+  for (let y = startY; y > bot.entity.position.y - 40; y--) {
+    const b = bot.blockAt(new Vec3(x, y, z));
+    if (b && b.boundingBox === 'block') return y;
+  }
+  return null;
+}
+
+module.exports = {
+  sleep, inv, countItem, hasItem, gotoNear, walkTo, findBlocks, digBlock, digColumn,
+  collectDrops, craftByName, placeOnTop, placeAgainst,
+  openChestContents, depositInChest, say, groundY,
+  Vec3, goals, mcData,
+};

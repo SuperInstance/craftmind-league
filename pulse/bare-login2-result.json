@@ -1,0 +1,83 @@
+{
+ "ts": "2026-11-08T04:50:28.160Z",
+ "test": "bare-login-retest-20261107",
+ "samples": [
+  {
+   "tag": "t+4s",
+   "pos": {
+    "x": 25.693,
+    "y": 78,
+    "z": -91.774
+   },
+   "health": 12.83,
+   "food": 13,
+   "onGround": true
+  },
+  {
+   "tag": "t+8s",
+   "pos": {
+    "x": 25.693,
+    "y": 78,
+    "z": -91.774
+   },
+   "health": 12.83,
+   "food": 13,
+   "onGround": true
+  },
+  {
+   "tag": "t+12s",
+   "pos": {
+    "x": 25.693,
+    "y": 78,
+    "z": -91.774
+   },
+   "health": 12.83,
+   "food": 13,
+   "onGround": true
+  },
+  {
+   "tag": "t+16s",
+   "pos": {
+    "x": 25.693,
+    "y": 78,
+    "z": -91.774
+   },
+   "health": 12.83,
+   "food": 13,
+   "onGround": true
+  },
+  {
+   "tag": "t+20s",
+   "pos": {
+    "x": 25.693,
+    "y": 78,
+    "z": -91.774
+   },
+   "health": 12.83,
+   "food": 13,
+   "onGround": true
+  }
+ ],
+ "spawn": {
+  "tag": "spawn",
+  "pos": {
+   "x": 25.693,
+   "y": 78,
+   "z": -91.774
+  },
+  "health": null,
+  "food": null,
+  "onGround": false
+ },
+ "final": {
+  "tag": "final",
+  "pos": {
+   "x": 25.693,
+   "y": 78,
+   "z": -91.774
+  },
+  "health": 12.83,
+  "food": 13,
+  "onGround": true
+ }
+}

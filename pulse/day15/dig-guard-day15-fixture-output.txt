@@ -1,0 +1,30 @@
+PASS  guard span present in driver source
+PASS  span carries the day-14 revision (fall check + home box)
+PASS  A arm: first stone dig permitted
+PASS  A arm: entry = stance feet level (64)
+PASS  A arm: row dig-guard-arm/stone-phase-entry filed
+PASS  A arm: cap = entry-2 (62)
+PASS  A at-cap: dig with top == cap (62) permitted
+PASS  A below-cap: dig with top 61 < cap 62 refused
+PASS  A below-cap: detail names entry + cap
+PASS  A below-cap: row dig-guard filed (target, entry, cap, count)
+PASS  A lateral: dig at the capped level (top 62) permitted
+PASS  A armed: dirt dig below cap also refused
+PASS  B R1: count-closed away from home does NOT disarm
+PASS  B R1: defer row filed once (count-closed-away-from-home)
+PASS  B R1: second consideration files no second defer row
+PASS  B R1: the cap still binds after the deferral (top 61 refused)
+PASS  B R1: count-closed at home ground disarms
+PASS  B R1: disarm row reason count-closed-at-home
+PASS  B R1: after the home disarm the old cap no longer binds
+PASS  C R2: a plain dirt dig at the rim does not arm
+PASS  C R2: a drop > 2 arms the guard at the landing level
+PASS  C R2: arm row reason fall, fellFrom carried
+PASS  C R2: the landing dig itself (top 59, cap 57) is permitted — notch work stays legal
+PASS  C R2: deepening below the landing cap (top 56 < 57) is refused
+PASS  C R2: a drop of exactly 2 does NOT arm
+PASS  C R2: stepwise descent never arms
+PASS  D wiring: dig branch calls digGuardDig before prims.digBlock
+PASS  D wiring: refusal returns before execution
+
+DIG-GUARD-DAY15 FIXTURE: 28 PASS / 0 FAIL

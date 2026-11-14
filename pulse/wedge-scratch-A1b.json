@@ -1,0 +1,39 @@
+{
+ "mode": "wedge-scratch",
+ "username": "WedgeScratchD",
+ "phase": "A1b",
+ "port": 25604,
+ "ts": "2026-11-08T22:51:26.032Z",
+ "events": [
+  {
+   "ev": "error",
+   "msg": "connect ECONNREFUSED 127.0.0.1:25604"
+  },
+  {
+   "ev": "end",
+   "msg": "socketClosed"
+  },
+  {
+   "ev": "global-timeout"
+  }
+ ],
+ "legs": [],
+ "rests": [],
+ "attempts": [],
+ "deaths": [],
+ "final": {
+  "pos": null,
+  "inventory": [],
+  "deaths": 0,
+  "aborted": true,
+  "abortReason": "session-break",
+  "sessionBroken": "error: connect ECONNREFUSED 127.0.0.1:25604",
+  "totalForcedMoves": 0,
+  "digStep": {
+   "enabled": false,
+   "uses": 0,
+   "log": [],
+   "evals": []
+  }
+ }
+}

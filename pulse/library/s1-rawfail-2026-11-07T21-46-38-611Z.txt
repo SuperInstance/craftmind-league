@@ -1,0 +1,160 @@
+RATIONALE: The current script has several issues: it doesn't properly handle the respawn situation (Cody respawns at world spawn, not anchor), it has a flawed hostile detection/flee mechanism, and it doesn't implement the proper gathering/crafting chain. I'm rewriting to follow the proven patterns: exit hollow safely, gather logs outside spawn protection, implement survival with proper fleeing, and build the tool chain step-by-step with proper inventory checks.
+
+```js
+module.exports = {
+  meta: { name: 'S1-gather-tools', stage: 'S1', summary: 'Exit hollow, gather logs, craft crafting table and wooden pickaxe' },
+  run: async (ctx) => {
+    const { bot, prims } = ctx;
+    const { x, y, z } = bot.entity.position;
+    
+    // Check if we already have the goal items
+    if (prims.countItem(bot, 'crafting_table') >= 1 || prims.countItem(bot, 'wooden_pickaxe') >= 1) {
+      return { done: true };
+    }
+    
+    // Check for hostile mobs and flee if needed
+    const entities = bot.entities;
+    let nearestHostile = null;
+    let minDistance = 100;
+    
+    for (const entity of Object.values(entities)) {
+      if (entity.name === 'zombie' || entity.name === 'skeleton' || entity.name === 'creeper') {
+        const distance = Math.sqrt(Math.pow(entity.position.x - x, 2) + Math.pow(entity.position.z - z, 2));
+        if (distance < minDistance) {
+          minDistance = distance;
+          nearestHostile = entity;
+        }
+      }
+    }
+    
+    if (nearestHostile && minDistance < 14) {
+      // Flee uphill into open sun
+      const fleeDirX = x - nearestHostile.position.x;
+      const fleeDirZ = z - nearestHostile.position.z;
+      const fleeX = x + fleeDirX * 2; // Move 2x the distance away
+      const fleeZ = z + fleeDirZ * 2;
+      const fleeY = prims.groundY(bot, fleeX, fleeZ) + 5; // Move up to a high ground
+      
+      // Wait for a safe distance from hostile
+      const result = await prims.walkTo(bot, fleeX, fleeY, fleeZ, 2, 30000);
+      if (!result.ok) {
+        return { done: false };
+      }
+      
+      // Wait a bit to make sure we're safe
+      await prims.sleep(2000);
+      
+      // Rescan for hostiles
+      let safe = true;
+      for (const entity of Object.values(entities)) {
+        if (entity.name === 'zombie' || entity.name === 'skeleton' || entity.name === 'creeper') {
+          const distance = Math.sqrt(Math.pow(entity.position.x - fleeX, 2) + Math.pow(entity.position.z - fleeZ, 2));
+          if (distance < 14) {
+            safe = false;
+            break;
+          }
+        }
+      }
+      
+      if (!safe) {
+        return { done: false };
+      }
+      
+      return { done: false };
+    }
+    
+    // If inside the spawn protection zone, move outside first
+    const spawnX = 32;
+    const spawnZ = -96;
+    const distanceFromSpawn = Math.sqrt(Math.pow(x - spawnX, 2) + Math.pow(z - spawnZ, 2));
+    
+    if (distanceFromSpawn <= 16) {
+      // Move to a safe spot outside spawn protection
+      const safeX = 50;
+      const safeZ = -100;
+      const result = await prims.walkTo(bot, safeX, y, safeZ, 2, 30000);
+      if (!result.ok) {
+        return { done: false };
+      }
+      return { done: false };
+    }
+    
+    // Check if we're in the hollow area that's unreachable from inside
+    if (x >= 69 && x <= 75 && z >= -89 && z <= -84 && y <= 65) {
+      // Exit the hollow by going west then north
+      if (x > 68.5) {
+        // First leg: go west to (68, 65, -88)
+        const result = await prims.walkTo(bot, 68, y, -88, 2, 30000);
+        if (!result.ok) {
+          return { done: false };
+        }
+        return { done: false };
+      } else if (z > -90) {
+        // Second leg: go north to (68, 67, -90)
+        const result = await prims.walkTo(bot, 68, y, -90, 2, 30000);
+        if (!result.ok) {
+          return { done: false };
+        }
+        return { done: false };
+      }
+    }
+    
+    // Gather logs if we don't have enough
+    const logCount = prims.countItem(bot, 'oak_log') + prims.countItem(bot, 'birch_log');
+    if (logCount < 3) {
+      const logs = await prims.findBlocks(bot, ['oak_log', 'birch_log'], 32, 1);
+      if (logs.length > 0) {
+        const logPos = logs[0];
+        const result = await prims.digBlock(bot, logPos, 25000);
+        if (!result.ok) {
+          // Try another log if this one fails
+          return { done: false };
+        }
+        // Collect the dropped items
+        await prims.collectDrops(bot, 7, 12000);
+        return { done: false };
+      }
+      // If no logs found, try to find a different area
+      const result = await prims.walkTo(bot, 70, y, -85, 2, 30000);
+      if (!result.ok) {
+        return { done: false };
+      }
+      return { done: false };
+    }
+    
+    // Craft planks from logs
+    const planksCount = prims.countItem(bot, 'oak_planks') + prims.countItem(bot, 'birch_planks');
+    if (planksCount < 4) {
+      const logCount = prims.countItem(bot, 'oak_log') + prims.countItem(bot, 'birch_log');
+      if (logCount >= 1) {
+        const result = await prims.craftByName(bot, 'oak_planks', 1, null);
+        if (!result.ok) {
+          // Try with birch logs if oak failed
+          await prims.craftByName(bot, 'birch_planks', 1, null);
+        }
+        return { done: false };
+      }
+    }
+    
+    // Craft sticks from planks
+    const sticksCount = prims.countItem(bot, 'stick');
+    if (sticksCount < 2) {
+      const planksCount = prims.countItem(bot, 'oak_planks') + prims.countItem(bot, 'birch_planks');
+      if (planksCount >= 2) {
+        await prims.craftByName(bot, 'stick', 4, null);
+        return { done: false };
+      }
+    }
+    
+    // Craft crafting table if we don't have one
+    if (prims.countItem(bot, 'crafting_table') < 1) {
+      const planksCount = prims.countItem(bot, 'oak_planks') + prims.countItem(bot, 'birch_planks');
+      if (planksCount >= 4) {
+        await prims.craftByName(bot, 'crafting_table', 1, null);
+        return { done: false };
+      }
+    }
+    
+    // Place crafting table
+    if (prims.countItem(bot, 'crafting_table') >= 1) {
+      const tablePos = bot.entity.position.offset(1, 0

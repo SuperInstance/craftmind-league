@@ -1,0 +1,4 @@
+{"ts":"2026-11-09T19:33:19.410Z","id":"recovery-gamemode-2","ok":true,"chat":"/gamemode spectator MagnusandMouse","srv":["No player was found"]}
+{"ts":"2026-11-09T19:33:34.914Z","id":"recovery-ping-1","ok":true,"spawned":true,"pos":{"x":30.5,"y":82,"z":-87.5}}
+{"ts":"2026-11-09T19:33:47.819Z","id":"recovery-gamemode-3","ok":true,"chat":"/gamemode spectator Gallery","srv":["Set own game mode to Spectator Mode"]}
+{"ts":"2026-11-09T19:34:11.719Z","id":"recovery-op-quit-1","ok":true,"bye":true}

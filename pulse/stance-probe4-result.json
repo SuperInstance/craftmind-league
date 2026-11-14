@@ -1,0 +1,108 @@
+{
+ "mode": "genuine-fresh-daylight",
+ "username": "StanceProbe4",
+ "ts": "2026-11-08T08:57:32.188Z",
+ "events": [
+  {
+   "ev": "DEATH",
+   "at": "2026-11-08T08:57:50.529Z"
+  },
+  {
+   "ev": "DEATH",
+   "at": "2026-11-08T08:58:01.970Z"
+  },
+  {
+   "ev": "DEATH",
+   "at": "2026-11-08T08:58:16.625Z"
+  },
+  {
+   "ev": "DEATH",
+   "at": "2026-11-08T08:58:26.972Z"
+  }
+ ],
+ "legs": [
+  {
+   "tag": "travel-pad",
+   "targetCell": [
+    64,
+    -93
+   ],
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 35.5,
+    "y": 64,
+    "z": -95.5
+   },
+   "end": {
+    "x": 31.685,
+    "y": 67,
+    "z": -102.26
+   },
+   "dispH": 7.762,
+   "forcedMoves": 774,
+   "hostile": {
+    "name": "zombie",
+    "dist": 0.762
+   },
+   "hp": 5.333333969116211
+  }
+ ],
+ "rests": [
+  {
+   "n": 40,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "tag": "freshgen-at-spawn",
+   "at": {
+    "x": 35.5,
+    "y": 64,
+    "z": -95.5
+   },
+   "cell": [
+    35,
+    -96
+   ]
+  }
+ ],
+ "attempts": [],
+ "spawn": {
+  "pos": {
+   "x": 35.5,
+   "y": 64,
+   "z": -95.5
+  },
+  "uuid": "b9311581-04a6-3631-ba94-052e9de59f64"
+ },
+ "settled": {
+  "pos": {
+   "x": 35.5,
+   "y": 64,
+   "z": -95.5
+  },
+  "health": 20,
+  "food": 20
+ },
+ "final": {
+  "pos": {
+   "x": 31.685,
+   "y": 67,
+   "z": -102.26
+  },
+  "health": 5.333333969116211,
+  "food": 20,
+  "aborted": true,
+  "abortReason": "death",
+  "totalForcedMoves": 774
+ }
+}

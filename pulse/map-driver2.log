@@ -1,0 +1,313 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+CensusProbe holding at 23.5 68.0 -94.5
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6NjIsInkiOjY3LCJ6IjotMTAwfX0sInRpbWVzdGFtcCI6MTc5NDIyODI1NTMyM30=
+[BotMessenger] Received greeting from Gallery
+SRV: Made MapProbe2 a server operator
+SRV: MapProbe2 joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <MapProbe2> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIE1hcFByb2JlMi4iLCJwb3NpdGlvbiI6eyJ4IjozMywieSI6NjcsInoiOi05Nn19LCJ0aW1lc3RhbXAiOjE3OTQyMjgyNjMzMjJ9
+[BotMessenger] Received greeting from MapProbe2
+[BotMessenger] Received greeting from MapProbe2
+=== CODY DATA (server /data get entity Cody) ===
+No entity was found
+=== NOPLATES (server /team list noplates) ===
+Team [noplates] has 3 member(s): Cody, Geist, Vega
+=== TREE TABLE v2 (log columns near home; base = lowest log seen) ===
+col (68,-91) birch_log logs y71..71 base=(68,71,-91) distFromPit 3.8
+col (66,-97) oak_log logs y71..71 base=(66,71,-97) distFromPit 4.2
+col (60,-90) oak_log logs y72..73 base=(60,72,-90) distFromPit 5.7
+col (62,-87) oak_log logs y70..72 base=(62,70,-87) distFromPit 6.6
+col (68,-86) birch_log logs y71..72 base=(68,71,-86) distFromPit 7.7
+col (61,-80) oak_log logs y71..72 base=(61,71,-80) distFromPit 13.6
+col (69,-80) oak_log logs y72..72 base=(69,72,-80) distFromPit 13.7
+col (58,-105) oak_log logs y67..72 base=(58,67,-105) distFromPit 13.8
+col (51,-97) oak_log logs y72..72 base=(51,72,-97) distFromPit 14.4
+col (58,-106) oak_log logs y70..70 base=(58,70,-106) distFromPit 14.7
+col (70,-107) birch_log logs y72..72 base=(70,72,-107) distFromPit 14.9
+col (77,-84) oak_log logs y69..72 base=(77,69,-84) distFromPit 15.2
+col (80,-96) birch_log logs y66..72 base=(80,66,-96) distFromPit 15.5
+col (52,-105) birch_log logs y67..73 base=(52,67,-105) distFromPit 17.5
+col (54,-79) oak_log logs y72..72 base=(54,72,-79) distFromPit 17.7
+col (76,-79) oak_log logs y70..72 base=(76,70,-79) distFromPit 17.9
+col (64,-75) birch_log logs y70..73 base=(64,70,-75) distFromPit 18.0
+col (71,-76) birch_log logs y67..73 base=(71,67,-76) distFromPit 18.1
+col (55,-109) oak_log logs y68..73 base=(55,68,-109) distFromPit 18.8
+col (46,-91) oak_log logs y68..73 base=(46,68,-91) distFromPit 18.9
+col (58,-111) birch_log logs y68..72 base=(58,68,-111) distFromPit 19.2
+col (81,-104) oak_log logs y66..69 base=(81,66,-104) distFromPit 19.6
+col (84,-89) oak_log logs y70..70 base=(84,70,-89) distFromPit 19.6
+col (77,-109) birch_log logs y66..71 base=(77,66,-109) distFromPit 20.1
+col (46,-101) oak_log logs y68..71 base=(46,68,-101) distFromPit 20.4
+col (80,-79) birch_log logs y68..74 base=(80,68,-79) distFromPit 20.7
+col (66,-72) birch_log logs y70..71 base=(66,70,-72) distFromPit 21.1
+col (86,-94) oak_log logs y67..70 base=(86,67,-94) distFromPit 21.2
+col (85,-100) oak_log logs y67..71 base=(85,67,-100) distFromPit 21.4
+col (47,-80) oak_log logs y71..71 base=(47,71,-80) distFromPit 22.1
+col (79,-76) oak_log logs y70..71 base=(79,70,-76) distFromPit 22.2
+col (73,-114) oak_log logs y67..70 base=(73,67,-114) distFromPit 22.5
+col (50,-110) oak_log logs y68..72 base=(50,68,-110) distFromPit 22.5
+col (87,-88) oak_log logs y67..71 base=(87,67,-88) distFromPit 22.8
+col (65,-116) oak_log logs y68..72 base=(65,68,-116) distFromPit 23.0
+col (47,-108) oak_log logs y71..72 base=(47,71,-108) distFromPit 23.3
+col (46,-79) oak_log logs y71..71 base=(46,71,-79) distFromPit 23.5
+col (45,-79) oak_log logs y70..74 base=(45,70,-79) distFromPit 24.3
+col (57,-116) oak_log logs y68..73 base=(57,68,-116) distFromPit 24.3
+col (44,-80) oak_log logs y72..72 base=(44,72,-80) distFromPit 24.5
+tree columns total: 126
+=== COLUMN STACKS near pit/home (x 58..72, z -99..-88): full stack per column ===
+(58,-99): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-99): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-99): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(61,-99): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(62,-99): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(63,-99): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(64,-99): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(65,-99): oak_leaves@70, oak_leaves@69, oak_fence@67, grass@66, dirt@65, dirt@64, stone@63
+(66,-99): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, stone@63, stone@62
+(67,-99): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, stone@63, stone@62
+(68,-99): oak_leaves@69, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(69,-99): grass@65, dirt@64, dirt@63, dirt@62, stone@61, stone@60, stone@59
+(70,-99): grass@65, dirt@64, dirt@63, andesite@62, stone@61, stone@60, stone@59
+(71,-99): grass@65, dirt@64, dirt@63, dirt@62, stone@61, stone@60, dirt@59
+(72,-99): grass@65, grass@63, andesite@62, stone@61, stone@60, stone@59, stone@58
+(58,-98): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-98): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-98): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(61,-98): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(62,-98): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(63,-98): oak_fence@67, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(64,-98): oak_leaves@70, oak_leaves@69, oak_fence@67, grass@66, dirt@65, dirt@64, stone@63
+(65,-98): oak_leaves@71, oak_leaves@70, oak_leaves@69, oak_fence@67, grass@66, dirt@65, dirt@64
+(66,-98): oak_leaves@72, oak_leaves@71, oak_leaves@70, grass@66, dirt@65, dirt@64, stone@63
+(67,-98): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, stone@63, stone@62
+(68,-98): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, stone@63, stone@62
+(69,-98): grass@66, dirt@65, dirt@64, dirt@63, stone@62, stone@61, stone@60
+(70,-98): grass@65, dirt@64, dirt@63, andesite@62, stone@61, stone@60, dirt@59
+(71,-98): grass@65, dirt@64, dirt@63, dirt@62, stone@61, dirt@60, dirt@59
+(72,-98): grass@65, dirt@64, dirt@63, dirt@62, stone@61, stone@60, dirt@59
+(58,-97): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-97): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-97): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(61,-97): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(62,-97): grass@67, dirt@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(63,-97): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(64,-97): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, coal_ore@63, coal_ore@62
+(65,-97): oak_leaves@72, oak_leaves@71, oak_leaves@70, oak_leaves@69, farmland@66, dirt@65, dirt@64
+(66,-97): oak_leaves@72, oak_log@71, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(67,-97): oak_leaves@72, oak_leaves@71, oak_leaves@69, farmland@66, dirt@65, dirt@64, stone@63
+(68,-97): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, stone@63, stone@62
+(69,-97): grass@66, dirt@65, dirt@64, dirt@63, stone@62, stone@61, stone@60
+(70,-97): grass@65, dirt@64, dirt@63, dirt@62, stone@61, dirt@60, dirt@59
+(71,-97): grass@65, dirt@64, dirt@63, dirt@62, stone@61, dirt@60, dirt@59
+(72,-97): grass@65, dirt@64, dirt@63, dirt@62, stone@61, stone@60, dirt@59
+(58,-96): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-96): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-96): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(61,-96): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(62,-96): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(63,-96): grass@66, dirt@65, dirt@64, coal_ore@63, coal_ore@62, stone@61, stone@60
+(64,-96): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, coal_ore@63, coal_ore@62
+(65,-96): oak_leaves@71, oak_leaves@70, oak_leaves@69, dirt@65, coal_ore@63, coal_ore@62, coal_ore@61
+(66,-96): oak_leaves@72, oak_leaves@71, oak_leaves@69, dirt@65, dirt@64, stone@63, stone@62
+(67,-96): oak_leaves@69, farmland@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(68,-96): oak_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(69,-96): grass@66, dirt@65, dirt@64, andesite@63, stone@62, stone@61, stone@60
+(70,-96): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, dirt@59
+(71,-96): grass@65, dirt@64, dirt@63, dirt@62, stone@61, stone@60, dirt@59
+(72,-96): grass@65, dirt@64, dirt@63, dirt@62, stone@61, stone@60, dirt@59
+(58,-95): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-95): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-95): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(61,-95): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(62,-95): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(63,-95): grass@66, dirt@65, dirt@64, stone@63, coal_ore@62, stone@61, stone@60
+(64,-95): oak_leaves@70, oak_leaves@69, grass@66, dirt@65, dirt@64, coal_ore@63, coal_ore@62
+(65,-95): oak_leaves@70, oak_leaves@69, dirt@65, coal_ore@63, coal_ore@62, stone@61, stone@60
+(66,-95): oak_leaves@69, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(67,-95): farmland@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(68,-95): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(69,-95): grass@66, dirt@65, dirt@64, andesite@63, stone@62, stone@61, stone@60
+(70,-95): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, dirt@59
+(71,-95): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, stone@59
+(72,-95): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, stone@59
+(58,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(61,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(62,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(63,-94): oak_planks@67, dirt@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(64,-94): crafting_table@67, dirt@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(65,-94): dirt@64, dirt@63, dirt@62, stone@61, stone@60, stone@59, stone@58
+(66,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(67,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(68,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(69,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(70,-94): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(71,-94): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, stone@59
+(72,-94): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, stone@59
+(58,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(59,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(60,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(61,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(62,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(63,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(64,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(65,-93): grass@65, stone@62, stone@61, stone@60, stone@59, stone@58
+(66,-93): grass@65, stone@62, stone@61, stone@60, stone@59, dirt@58
+(67,-93): birch_leaves@70, grass@66, dirt@65, dirt@64, dirt@63, stone@62, stone@61
+(68,-93): birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(69,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(70,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(71,-93): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(72,-93): grass@65, dirt@64, dirt@63, stone@62, stone@61, stone@60, stone@59
+(58,-92): grass@67, dirt@66, dirt@65, stone@64, stone@63, stone@62, stone@61
+(59,-92): oak_leaves@72, oak_leaves@71, grass@66, dirt@65, stone@64, stone@63, stone@62
+(60,-92): oak_leaves@72, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(61,-92): oak_leaves@72, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(62,-92): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(63,-92): grass@66, dirt@65, dirt@64, stone@62, stone@61, stone@60, stone@59
+(64,-92): grass@66, dirt@65, dirt@64, dirt@63, stone@62, stone@61, stone@60
+(65,-92): grass@65, dirt@64, stone@62, stone@61, stone@60, stone@59, stone@58
+(66,-92): birch_leaves@70, grass@64, dirt@63, stone@61, stone@60, stone@59, stone@58
+(67,-92): birch_leaves@71, birch_leaves@70, grass@64, stone@63, stone@62, stone@61, stone@60
+(68,-92): birch_leaves@72, birch_leaves@71, birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63
+(69,-92): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(70,-92): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(71,-92): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(72,-92): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(58,-91): oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65, stone@64, stone@63
+(59,-91): oak_leaves@73, oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65, stone@64
+(60,-91): oak_leaves@74, oak_leaves@73, oak_leaves@72, grass@67, dirt@66, dirt@65, stone@64
+(61,-91): oak_leaves@72, grass@67, dirt@66, dirt@65, stone@64, stone@63, stone@62
+(62,-91): oak_leaves@72, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(63,-91): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(64,-91): grass@67, dirt@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(65,-91): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(66,-91): birch_leaves@70, grass@65, stone@62, stone@61, stone@60, stone@59, stone@58
+(67,-91): birch_leaves@71, birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62
+(68,-91): birch_log@71, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(69,-91): birch_leaves@72, birch_leaves@71, birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63
+(70,-91): birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(71,-91): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(72,-91): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(58,-90): oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65, stone@64, stone@63
+(59,-90): oak_leaves@74, oak_leaves@73, oak_leaves@72, grass@67, dirt@66, dirt@65, stone@64
+(60,-90): oak_leaves@74, oak_log@73, oak_log@72, grass@67, dirt@66, dirt@65, stone@64
+(61,-90): oak_leaves@74, oak_leaves@73, oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65
+(62,-90): oak_leaves@72, grass@67, dirt@66, dirt@65, stone@64, stone@63, stone@62
+(63,-90): grass@67, dirt@66, dirt@65, stone@64, stone@63, stone@62, stone@61
+(64,-90): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(65,-90): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(66,-90): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(67,-90): birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(68,-90): birch_leaves@72, birch_leaves@71, birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63
+(69,-90): birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(70,-90): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(71,-90): grass@66, dirt@65, stone@63, stone@62, stone@61, stone@60, stone@59
+(72,-90): grass@66, dirt@65, dirt@64, iron_ore@63, iron_ore@62, stone@61, stone@60
+(58,-89): oak_leaves@72, oak_leaves@71, grass@68, dirt@67, dirt@66, dirt@65, stone@64
+(59,-89): oak_leaves@73, oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65, stone@64
+(60,-89): oak_leaves@74, oak_leaves@73, oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65
+(61,-89): oak_leaves@73, oak_leaves@72, oak_leaves@71, oak_leaves@70, grass@67, dirt@66, dirt@65
+(62,-89): oak_leaves@72, grass@67, dirt@66, dirt@65, stone@64, stone@63, stone@62
+(63,-89): oak_leaves@71, oak_leaves@70, grass@67, dirt@66, dirt@65, stone@64, stone@63
+(64,-89): grass@67, dirt@66, dirt@65, stone@64, stone@63, stone@62, stone@61
+(65,-89): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(66,-89): grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(67,-89): birch_leaves@70, grass@66, dirt@65, dirt@64, stone@63, stone@62, stone@61
+(68,-89): grass@65, dirt@64, stone@63, stone@62, stone@61, stone@60, stone@59
+(69,-89): grass@64, stone@63, stone@62, stone@61, stone@60, stone@59, stone@58
+(70,-89): stone@63, stone@62, stone@61, stone@60, stone@59, stone@58
+(71,-89): stone@62, stone@61, stone@60, stone@59, stone@58
+(72,-89): grass@65, dirt@64, stone@63, stone@62, stone@61, stone@60, stone@59
+(58,-88): oak_leaves@72, grass@68, dirt@67, dirt@66, dirt@65, stone@64, stone@63
+(59,-88): oak_leaves@72, oak_leaves@71, grass@67, dirt@66, dirt@65, stone@64, stone@63
+(60,-88): oak_leaves@72, oak_leaves@71, oak_leaves@70, grass@67, dirt@66, dirt@65, stone@64
+(61,-88): oak_leaves@72, oak_leaves@71, oak_leaves@70, grass@67, dirt@66, dirt@65, stone@64
+(62,-88): oak_leaves@73, oak_leaves@72, oak_leaves@71, oak_leaves@70, grass@67, dirt@66, dirt@65
+(63,-88): oak_leaves@72, oak_leaves@71, oak_leaves@70, grass@67, dirt@66, dirt@65, stone@64
+(64,-88): grass@67, dirt@66, dirt@65, stone@64, copper_ore@63, copper_ore@62, stone@61
+(65,-88): grass@65, stone@64, stone@63, stone@62, stone@61, stone@60, stone@59
+(66,-88): grass@65, dirt@64, stone@63, stone@62, stone@61, stone@60, stone@59
+(67,-88): birch_leaves@71, grass@65, dirt@64, stone@63, stone@62, stone@61, stone@60
+(68,-88): grass@65, dirt@64, stone@63, stone@62, stone@61, stone@60, stone@59
+(69,-88): birch_leaves@71, stone@62, stone@61, stone@60, stone@59, stone@58
+(70,-88): stone@62, stone@61, stone@60, stone@59, stone@58
+(71,-88): oak_planks@65, dirt@64, stone@63, stone@61, stone@60, stone@59, stone@58
+(72,-88): stone@63, stone@62, stone@61, stone@60, stone@59, stone@58
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+SRV: MapProbe2 left the game
+[MAP PROBE v2 exited 0]
+SRV: Made MapProbe2 no longer a server operator
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+[OP BOT exited 0]
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+map-driver2 done

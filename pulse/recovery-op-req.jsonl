@@ -1,0 +1,6 @@
+{"cmd": "chat", "text": "/gamemode spectator MagnusandMouse", "id": "recovery-gamemode-4"}
+{"cmd": "chat", "text": "/time set 1000", "id": "recovery-time-1"}
+{"cmd": "chat", "text": "/data get entity MagnusandMouse playerGameType", "id": "recovery-data-1"}
+{"cmd": "chat", "text": "/time set 1000", "id": "recovery-time-2"}
+{"cmd": "chat", "text": "/time set 1000", "id": "recovery-time-3"}
+{"cmd": "quit", "id": "recovery-op-quit-2"}

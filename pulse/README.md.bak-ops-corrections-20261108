@@ -1,0 +1,1293 @@
+# THE PULSE — a smith above Cody, on a tick
+
+*Owner-commissioned. The idea, in the owner's shape: Mineflayer is the
+body, Baritone-class pathfinding is the muscle, and above them a
+higher mind — Voyager-pattern — that does not play directly. It ticks
+(the pulse), reads what the world did to its pupil, and writes better
+scripts for the lower level. Scripts earn their place by surviving
+the world, judged by referees (evidence), never by their author.*
+
+## The machine
+
+```
+                 ┌──────────────────────────────────────────────┐
+   every ~10 min │  SMITH (smith.js)                             │
+   + on FAIL ───►│  reads state+evidence+ledger+logs, calls the  │
+                 │  presence brain THROUGH THE GOVERNOR          │
+                 │  (identity league-pulse-smith) for ONE        │
+                 │  artefact: a skill script or a revision       │
+                 └──────────────┬───────────────────────────────┘
+                                ▼ candidate (library/, header sidecar)
+                 ┌──────────────────────────────────────────────┐
+                 │  TRIAL GATE (trial.js)                        │
+                 │  fresh Cody relaunch on [promoted…, candidate]│
+                 │  bounded window; verdict ONLY from evidence:  │
+                 │  state-feed inventories, block scans, deaths, │
+                 │  the Orin server log → ledger.jsonl           │
+                 └──────┬───────────────────────┬───────────────┘
+                   PASS ▼                       ▼ FAIL
+             promoted (active.json)     stays in library, marked;
+                                        the smith reads it next tick
+                                ▼
+   CODY (resident-cody.js + pulse-plugin.js) runs the promoted set
+   on loop in the world: state feed every 10 s, evidence scan every
+   30 s, deaths appended to deaths.jsonl, project narration injected
+   into his brain via the framework's prompt-fragment path.
+```
+
+## Pieces
+
+- `pulse-plugin.js` — plugin passed to `createBot` via
+  `options.plugins` (the framework's own idiom; **no framework source
+  was modified**). State feed, skill runner, evidence scan
+  (flood-fill shelter judge), narration fragment, death log.
+- `lib/prims.js` — **SEEDED PRIMITIVES, hand-written by the scaffold
+  author and declared as such.** Timeout-guarded mineflayer helpers
+  (goto, dig, craft, place, chest I/O) that smith scripts compose.
+  They are the workbench, not the work. Everything the curriculum is
+  *judged* on is written by the smith.
+- `smith.js` — the tick. Its prompt's API surface is extracted from
+  the real source at runtime (`src/actions/index.js` descriptions,
+  `// prim:` lines, `node_modules/mineflayer/docs/api.md` sections) —
+  never from an operator's memory. Candidates are `node --check`ed
+  and shape-tested in a child process before storage.
+- `trial.js` — the gate. `run --stage Sx --candidate <file>` and
+  `night` (the S5 watch). Kills and relaunches Cody; NEVER restarts
+  the Minecraft server (server restarts kill Cody's reconnect — hard
+  lesson from the headed-world session).
+- `curriculum.json` — the settle-in exam: S1 gather+tools → S2 stone
+  → S3 shelter → S4 furnish → S5 one full night inside, zero deaths.
+  Each stage names the evidence its verdict is computed from.
+- `resident-cody.js` patch (in `bots/runs/cody/`, `.orig` kept):
+  two touches — pass the pulse plugin to `createBot`, and the wander
+  loop steps aside while the skill runner is active
+  (`global.__pulseRunnerActive`).
+
+## Trust discipline (non-negotiable)
+
+- A candidate never silently becomes Cody. Promotion happens only in
+  `trial.js`, only on PASS, and the verdict cites its evidence.
+- Rollback = relaunch Cody on the previous active set. Always cheap,
+  always available.
+- Mind-spend flows only through the governor and is receipted in
+  `ledger/mind-calls.jsonl` under `league-cody` / `league-pulse-smith`.
+- If the brain's scripts prove too weak after several ticks, that is
+  a finding to report with the failed artefacts — not a licence to
+  hand-write curriculum scripts. (Seeded primitives above are the one
+  declared exception.)
+
+## Build/run log
+
+- **2026-11-06 (Phase 1 build)** — scaffold written; governor gains
+  the `pulse-smith` identity (config budgets are hourly: 60 calls/hr,
+  900 mind-s/hr — the tick discipline of one call per ~10 min keeps
+  the smith far under the brief's ~300 calls/day intent); resident
+  patched; first state feed, first tick, first trial follow below.
+
+## Build log — 2026-11-06 (substrate night)
+
+- Trial 1 (S1, candidate s1-2026-11-07T04-37-56-639Z): verdict FAIL, evidence in
+  ledger.jsonl (maxInventory {} over 60 polls; 1 death, skeleton). Two substrate
+  defects were found underneath that verdict and fixed in the seeded prims:
+  (1) bot.dig(block, cb) callback form never fires on this mineflayer/Paper
+  stack and the default raycast direction hangs — digBlock now uses the promise
+  form bot.dig(block, "ignore") with self-enforced reach (probe2: completes in
+  exactly digTime). (2) Pathfinder travel now uses walk-only Movements
+  (canDig=false, allow1by1towers=false) with a setGoal(null) pre-clear
+  (Lineage B findings); new prim digColumn harvests trunks bottom-up.
+- WALL (open): Cody's entity is pinned server-side at (46.648, 65, -83.305).
+  Bisected 2026-11-06 ~05:25 UTC: a BARE mineflayer bot logged in as Cody
+  (no framework, no pulse) moved 0.04 blocks in 3 s of held forward, vs 9.19
+  blocks for a fresh username on the identical test. Framework, worker mode,
+  helms and pathfinder configs are all exonerated; the pin lives in Cody's
+  server-side player state (suspect: stale RootVehicle/ride state in his
+  playerdata). Repair = inspect/clear his playerdata on the Orin
+  (world/playerdata/5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67.dat) — outside this
+  lane's scope; awaiting the owner. Until repaired, no trial can produce
+  world evidence and the smith loop is paused. Cody remains online as a
+  social resident (chat/greetings unaffected).
+
+## Build log — 2026-11-06 (continuation: LOCOMOTION GATE 0)
+
+- **Gate 0 (before any Trial 2): FAIL — class: infrastructure (body
+  state), not agent.** Route: Cody's clearing (49.3,66,-83.5) east
+  ~20 blocks to (69,67,-83) across a stepped terrace (ground 65 -> 67;
+  at z=-83 the step is +2 in one column, at z=-84 it stairs +1/+1),
+  driven through the trial stack itself (gate-walk-skill.js via the
+  runner, worker mode). First runs: gotoNear timed out at 75 s having
+  covered 2.38 blocks; Cody parked at (51.68,66.42,-83.6), observed
+  perfectly still, onGround, for 12 s by a second bot.
+- **Prims repaired (substrate, declared):** gotoNear no longer commits
+  to the pathfinder after early progress — a stall watchdog (no
+  distance improvement for ~7 s) abandons it to the manual helm;
+  walkTo is now helm v3 (jump bursts plus a lateral step-search when
+  jumps stop restoring progress). Backups: lib/prims.js.bak-gate.
+  Known helm limit: sidestep probes do not jump, so a probe can itself
+  face-plant on a +1 row; the pathfinder remains the primary driver.
+- **The fault is Cody's entity state, proven by elimination:**
+  (1) a bare bot (GateBare, same libraries, no framework) crossed the
+  whole gate route in ~35 s (gotoNear ok via pathfinder) and hopped
+  the terrace at full speed with raw forward+jump; (2) GateBare placed
+  in Cody's exact pit (51.685,65,-81.319) drove east +7.169 blocks in
+  4 s on the exact controls Cody fails; (3) a bare bot *as Cody* (no
+  framework) moved 0.000 blocks in 60 s of gotoNear and 0.000 in raw
+  forward+jump, across three fresh logins (one login gained 0.015
+  before the server snapped him back); (4) Cody's live attributes are
+  clean (movement_speed 0.1, no modifiers, no effects, no vehicle),
+  but his saved playerdata carries the signature: OnGround=0 and
+  Motion=[0,-0.0784,0] — the first tick of a fall, frozen — at an
+  exact-integer position; his client correspondingly reports
+  onGround=false with zero velocity while standing on grass.
+  Intermittency noted: isolated impulses sometimes land (one session
+  jumped +1.25 and walked +2.3 blocks south, which deposited him in
+  the pit he now occupies) — most sessions are dead. This also
+  corrects the earlier "server pin / he's free" pair of theories:
+  packet-correction streams and face-plants were symptoms chased in
+  circles; the controlled same-spot/different-body and
+  same-body/different-client probes are what settled it.
+- **Consequence:** Trial 2 is HELD until the body passes this gate.
+  The one reset observed to restore his locomotion tonight was a
+  death + respawn (after his Trial 1 death he travelled ~28 blocks).
+  Plan: vanilla resident through the night (he has died to night mobs
+  twice tonight), then re-run the gate on the respawned body from the
+  spawn plateau before any trial. If respawn does not cure him, the
+  remaining fix is playerdata surgery on the Orin — outside this
+  lane's scope; it becomes an owner-level wall.
+- State feed now also records onGround (pulse-plugin.js), so this
+  body state is visible in cody-state.json from the next relaunch on.
+
+## Build log — 2026-11-06 (continuation: gate retests, verdict)
+
+- **The cameraman pins the world's daylight** (its log: "DAYLIGHT
+  /time set 1000 (refresh)" every ~10 min) — so no night, no mobs, and
+  no S5 can ever occur while it runs. The STOP file was used (in this
+  lane's scope) to let one real night happen for the reset below; the
+  cameraman exited cleanly on it, and the STOP file was removed again
+  afterwards (the cameraman process itself belongs to the parent lane
+  and needs a relaunch from there if the show is wanted back).
+- **Death + respawn reset: transient only.** With the clock freed,
+  Cody died 9 times in the night (zombies, one skeleton; deaths 2 ->
+  11), respawning and travelling tens of blocks between deaths under
+  social-mode chaos. But the trial stack still could not move him:
+  - gate-walk-2 (adaptive): grounded start (39.68,67,-99.31), west
+    line chosen (profile maxStep 2, hasClimb): 4.47 blocks in ~88 s,
+    stalled exactly at the profile's +2 step (x=35.3); return helm leg
+    ok over the covered ground.
+  - gate-walk-3 (the corridor a bare bot crossed in ~35 s): grounded
+    start (38.5,67.42,-95.31): **0.2 blocks in 90 s** (pathfinder,
+    watchdog, then 82.9 s of helm). Login y was again the tell-tale
+    exact +0.42 hover.
+- **GATE 0 VERDICT: FAIL. Class: infrastructure (body state).**
+  Three routes, three sessions (pre-respawn, post-9-deaths), repaired
+  prims, controls proven good on a control body at the same spots —
+  the trial stack cannot walk Cody 20 blocks. Trial 2 is therefore
+  NOT run, and Phases 3-4 do not start: running trials on this body
+  would manufacture evidence about a corpse, not about the smith.
+- **What would unblock (owner-level, outside this lane's scope):**
+  reset Cody's playerdata on the Orin
+  (world/players/data/5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67.dat) so he
+  logs in as a fresh entity, or an op teleport + data reset. Every
+  in-scope lever has been pulled: framework removed (bare client),
+  attributes/effects/vehicle verified clean, prims repaired, body
+  reset by death (x9). The disease re-forms around his saved state.
+- Resident wander: NOT patched. Its one clean observation tonight
+  (a single wander target in >=5 min, no motion) is fully explained
+  by the dead body upstream of it. A latent defect is recorded for
+  after the body repair: startWander only re-targets when
+  bot.pathfinder.goal is empty, so one wedged goal silences the
+  wander forever; the minimal fix is a 90 s no-progress watchdog in
+  the wander tick that clears the goal (setGoal(null) +
+  clearControlStates). Unapplied because it cannot be verified on
+  this body, and unverified patches are tonight's whole lesson.
+- Left as found: Cody online as the vanilla resident (social mode),
+  STOP file removed, prims repairs live (backups in lib/), gate
+  skills + probes kept in pulse/ as evidence.
+
+## Gate 0 remedy (2026-11-07, after the A/B verdict)
+
+**Gate 0 reclassed: infrastructure (trial stack × route), not body
+state.** The A/B battery (artefacts in `~/craftmind-league/repair-cody/`)
+killed the per-entity theory: a guaranteed-fresh entity reproduced
+Cody's freeze exactly from terrain alone — 0.000 displacements, ~20/s
+correction streams, the identical frozen-fall playerdata signature
+(Motion [0,−0.0784,0], OnGround 0 — which is just what this server
+saves for any bot that logs out mid-correction-stream) — while Cody
+himself drove +12.257 blocks raw from his canopy cell on 1 correction
+packet. Freeze cells are **+2 steps topped with leaf litter**:
+unclimbable by walking, by jump, and by the walk-only trial
+pathfinder, for ANY body. **Cody's playerdata was never touched; no
+reset was performed or warranted** — the reset plan recorded earlier
+is superseded.
+
+**Remedy (a) — route.** Block-scan survey on foot (probe
+SurveyG112690, `gate-survey.js`): the gate route is now the **z=−84
+line, x49 → x69**. Ground tops x49..69:
+65,65,64,65,66,66,67,67,67,67,67,67,67,67,67,67,66,64,64,64,65 —
+max up-step **+1** (three +1 climbs: the gate keeps its distance and
+stepped character), no +2 wall. Leaf litter sits on the flat plateau
+columns (x54,55,56,58,61,63) where it is traversable. Start x=49 keeps
+the whole route outside the spawn-protection square under either
+spawn centre (Cody's (32,−96) or world spawn ~(26,−92)).
+
+**Remedy (b) — helm dig-step, declared.** `lib/prims.js` now carries
+an opt-in dig-step (`setDigStep(on)` / `digStepStats()`, in the
+extracted API surface the smith sees): when the helm is stalled ~6 s
+it may dig ONE block — a +2's top block, or the leaf litter capping a
++1 — from a soft whitelist (grass/dirt/coarse/rooted/leaf litter/
+stone/gravel/sand/mud), guarded against digging under a solid block
+above, evaluating every front row the 0.6-wide body touches. Default
+OFF; a skill must arm it, and every use is counted in that skill's
+result so a gate never silently becomes a digging test. Two helm
+repairs rode along: **v3.1** added the backoff+settle stall-breaker
+(back 650 ms + 500 ms settle on a ≥10 s stall; Lineage C's measured
+fix), and **v3.2** fixed the stall accounting — in v3/v3.1 the
+jump-burst and lateral-probe branches reset the progress clock,
+capping `stuckFor` at ~1.9 s, so the lateral step-search was **dead
+code that could never fire in a face-plant**; v3.2 moves the progress
+clock only on real distance improvement.
+
+**Phantom digs (substrate finding).** Spawn protection cancels
+`bot.dig` server-side while the promise resolves — and mineflayer's
+local world model drops the block for the rest of the session, so the
+step looks open until the next login (proven at (28,69,−104) across
+three dig tests). A post-dig re-read catches only some cancellations.
+Consequences: dig counts in evidence are *attempts*; locomotion is
+judged by server-reported displacement only. Net confirmed terrain
+modification from all remedy testing: **zero** (every test dig was
+protection-cancelled).
+
+**Gate re-run: NOT RUN — staging blocked (infrastructure: terrain
+trap × spawn protection).** The gate skill `gate-walk-4-skill.js` is
+written (surveyed route, dig-step armed and declared, legs mirroring
+gate-walk v1) and Cody was to be staged to its start (49.5, 67, −83.5)
+by bare login. The staging campaign failed on the pit, not the route:
+from the pit lip, grounded at (36.69, 64, −95.62), a PF+helm leg to
+the start ran 112.8 s for **0.06 blocks net** (dig-step: 45
+evaluations, 0 diggable steps in facing); an earlier waypoint leg
+spent 67.8 s and ended downhill. An independent probe staged *into
+Cody's exact pit cell* (38.688, 66.03, −93.682) and its armed exit
+failed too. The vanilla resident, relaunched in the pit, idles (its
+LLM link is erroring — SSL EPROTO in the resident log) and answers
+chat socially only ("Hmm?") — chat direction is not a movement
+channel. The geometry is the indictment: every crossing from the pit
+low ground to the z=−93 shelf is a +2 step, and every one of those
+steps lies **inside the spawn-protection square**, where the server
+cancels the digs that could open a ramp — while the gate route's
+start at x49 is outside it. The pit is a trap for walk-only bodies
+that our own protection geometry keeps shut.
+
+**Unblock (owner-level, outside lane scope):** op-teleport Cody to
+(49.5, 67, −83.5), or set spawn-protection=0. The moment Cody stands
+at the start, the gate runs via `codyctl.py start
+/home/caseydigennaro/craftmind-league/pulse/gate-walk-4-skill.js S1`.
+**Trial 2 was NOT run**: starting it from the pit would repeat Gate
+0's original sin — measuring the trap, not the citizen. Cody ends the
+night as vanilla resident (pid 2250777), parked at the pit lip
+(36.7, 64, −95.4), deaths 20, playerdata untouched.
+
+## Build log - 2026-11-07 (operator staging, gate re-run, resident link)
+
+- **Staging (declared, trial apparatus):** the remedy's owner-level
+  unblock was executed - Cody was teleported by op command to the
+  surveyed gate start. Method: the cameraman's own channel - the opped
+  Prism client (MagnusandMouse) on the Orin, driven by focus-guarded
+  xdotool keystrokes (slash / type / Return), the same mechanism the
+  cameraman uses for /time set. Server proof: "[09:40:37]
+  MagnusandMouse issued server command: /tp Cody 49.5 67 -83.5 ->
+  Teleported Cody to 49.500000, 67.000000, -83.500000". Position only:
+  inventory, health and playerdata otherwise untouched; no server
+  restart; no other citizen moved. Full record: ledger.jsonl kind
+  "staging".
+- **Staging incident (operator error, recorded plainly):** the first
+  typing burst raced the cameraman's own shot typing - one of its
+  commands was garbled by an interleaved slash (09:34:15, a camera
+  move, no citizen affected) - and the operator's un-slash'd letters
+  then reached the game with chat closed, where 'p' opened the Social
+  Interactions GUI. That GUI silently absorbed ALL client typing (the
+  operator's and the cameraman's) from ~09:34:16 to ~09:38, when a
+  desktop screenshot identified it and one Escape closed it. Cost:
+  the cameraman's daylight hold was suspended for one refresh cycle,
+  night fell, and Cody died 3x to night mobs (deaths 20 -> 23) before
+  respawning near spawn (Geist also died in that window - cross-lane
+  cost, recorded). The operator re-issued /time set 1000 at 09:39:33
+  to restore the hold, and the successful teleport used post-shot
+  timing read off the server log. Lesson for any future client
+  driving: screenshot before the first burst, type only in the
+  cameraman's post-shot dwell, and never send bare letters - a wedged
+  GUI fails silently for every typist sharing the client.
+- **GATE 0 RE-RUN (gate-walk-4, from the staged start): FAIL - class:
+  infrastructure (trial stack x navigation).** Start (49.31, 66,
+  -83.38). Leg 1 (gotoNear, the trial stack): timeout at 82 s, 6.42
+  blocks of XZ displacement, ending at (53.7, 66, -78.7) - the
+  pathfinder left the surveyed z=-84 corridor by ~5 blocks and wedged
+  on unsurveyed ground at x~53.7. Leg 2 (walkTo, helm only, return):
+  ok, ending (49.9, 66, -81.85). Dig-step: 1 use, declared - a
+  grass_block at (54, 67, -80), off-corridor; that cell is outside
+  spawn protection, so the dig may have taken effect (the remedy
+  era's first possible real terrain change, inside the gate's
+  declared allowance). Deaths during the skill window: 0. The body
+  moved freely from the first seconds (+4.4 blocks in ~20 s, climbed
+  to y67) and the helm-only return succeeded - the 2026-11-06
+  body-state theory stays dead. What failed is route-keeping:
+  gotoNear commits to an off-corridor pathfinder line and its stall
+  recovery never re-acquires the corridor. **Trial 2 NOT run** (gate
+  rule). Unblock direction is a stack fix: waypointed legs along the
+  surveyed line, or the pathfinder constrained to the corridor.
+  Post-run note: a night-spawned spider killed Cody twice after the
+  skill completed (09:43:30, 09:44:15; deaths 23 -> 25) during the
+  runner's between-loops gap; not part of the gate measurement. The
+  worker resident was then stopped and the vanilla resident restored
+  (social mode).
+- **Resident LLM link (side diagnosis):** the EPROTO root cause is
+  found and repaired. bots/craftmind/src/brain.js built every request
+  with https.request while the league config points it at the
+  plain-HTTP governor - TLS spoke to a plain-HTTP server, hence
+  "wrong version number" on every call for the resident's whole life
+  (the governor ledger holds exactly one successful cody call, a
+  2026-11-05 smoke test). Fix (league tree, backup
+  brain.js.bak-eproto-20261107): the transport is now chosen from the
+  URL scheme; node --check clean. Verified: post-repair calls reach
+  the governor and are receipted under agent "cody". BUT the link is
+  not yet healthy: every LLMClient-originated call (the resident's,
+  and an isolated replication using the league's own client + config
+  with a one-line prompt) is forwarded by the governor and then never
+  answered inside the governor's 300 s upstream cap - six attempts,
+  six 502s at exactly ~300 s - while other clients (Vega, Geist, the
+  smith; an anonymous curl) completed on the same brain in 0.13-16 s
+  in the same minutes. The hang therefore sits in the LLMClient
+  request shape x governor forwarding x brain leg, and closing it
+  needs a brain-side look (llama-server :8310 logs / slot state -
+  the owner's resident service) plus one bisecting test (curl with
+  the exact LLMClient body under the cody identity). Not run yet
+  because the diagnosis itself exhausted Cody's hourly mind budget:
+  the six 300 s charges total ~1800 mind-seconds against his 300/hr
+  budget, so he 429s until the rolling window frees (~10:54-11:00
+  UTC). Until then the resident answers chat with its "..." fallback.
+
+## Build log - 2026-11-07 (resident mind-link, fault 2: CLOSED)
+
+- **The differing variable: `Transfer-Encoding: chunked` — the
+  absence of `Content-Length`.** Wire capture (echo listener,
+  `pulse/bisect/cap-client.raw` vs `cap-fetch.raw`): the league
+  `LLMClient` (raw Node `http.request`, body via `req.write`) sends
+  its POST with `Transfer-Encoding: chunked` and no Content-Length.
+  Every working client (Vega, Geist, the smith — all Node `fetch`;
+  curl) sends a `Content-Length`. Cody's resident is the only
+  chunked client in the league.
+- **Mechanism (two governor defects compounding):**
+  `proxy/governor.py` read the request body only when a
+  Content-Length header was present, so a chunked body was silently
+  dropped (`body = b""` — hence `model: null` on all six 502
+  receipts). Its header-copy loop then forwarded the client's
+  `Transfer-Encoding: chunked` upstream (not in the skip list)
+  together with `Content-Length: 0` and no body at all, so
+  llama-server waited for chunk frames that could never arrive
+  until the governor's 300 s upstream cap fired. Six attempts, six
+  502s at 300.0 s, ~1800 mind-seconds charged to Cody.
+- **Bisect table** (governor replays, throwaway identities, brain
+  untouched):
+  | rung | shape | identity | result |
+  |---|---|---|---|
+  | A | Content-Length (curl control) | bisect-a | 200 in 0.181 s, receipted |
+  | B | chunked (curl, LLMClient shape) | bisect-b | no response in 25 s (hang reproduced; its 502 receipt was lost when the old governor process was stopped for the fix — the hang lived in that process) |
+  | C | chunked, after the governor fix | bisect-c | 200 in 0.195 s, receipted, model + tokens parsed |
+- **Fixes (both ours, backups kept):**
+  1. `proxy/governor.py` (backup `governor.py.bak-chunked-20261107`):
+     `_forward` now de-chunks a chunked request body
+     (`_read_chunked`) instead of dropping it, and
+     `transfer-encoding` is stripped from the headers forwarded
+     upstream; the true Content-Length of the de-chunked body is
+     set as before. `py_compile` clean. The governor was restarted
+     to load the fix (pid 2141516 -> 2294325). **Recorded side
+     effect:** the restart clears the governor's in-memory rolling
+     budget windows for every agent (the ledger receipts persist);
+     Cody's 1800 mind-second lockout cleared with them. That was
+     not the purpose of the restart — the fix cannot load without
+     one — but it is the fact, so it is written here.
+  2. `bots/craftmind/src/brain.js` (backup
+     `brain.js.bak-chunked-20261107`): `LLMClient._callAPI` now
+     sends `Content-Length: Buffer.byteLength(body)`, so the
+     resident speaks fixed-length to any proxy, not only to a
+     de-chunking one. `node --check` clean. The resident was
+     relaunched via `codyctl.py` (pid 2273124 -> 2295830) to load
+     it; clean boot, greeting posted, deaths unchanged.
+- **Verification (the success bar, both halves):**
+  - Resident-originated calls complete and are receipted under
+    agent `cody`: his own health probe at 10:05:39 UTC — 200,
+    1.306 mind-s, 463/53 tokens — the first completion minutes
+    after the governor restart, on the still-chunked in-memory
+    client (the governor fix alone carried it). Rung C above
+    proves the same for any future chunked client.
+  - Chat probe (`pulse/bisect/chat-probe.js`, visitor
+    LinkProbe892456, 10:07 UTC): asked Cody what he could see;
+    he answered in ~2 s with real mind output — "Hey Link! Yeah,
+    the repair went pretty well - my neural interface is back in
+    working order. I'm stan…" (chat rendering truncates; the
+    governor receipt for the answer shows the full 85 completion
+    tokens, 200, 1.836 mind-s). Not the "..." fallback. The mind
+    link is healthy end to end.
+- **Budget note:** the bisect itself spent nothing of Cody's —
+  all hanging replays ran under throwaway `bisect-*` identities
+  (default budget) and completed runs were sub-second. Cody's one
+  post-fix completion before the probe was his own health probe.
+- **Trial state:** unaffected. No trial ran; Cody's position,
+  inventory and deaths (27) are as the gate re-run left them;
+  the relaunch was social mode (no skills), as he was left.
+
+
+## Build log - 2026-11-07 (gate-walk-5: waypointed corridor legs)
+
+- **Staging (declared, trial apparatus):** Cody teleported again to
+  the surveyed start (49.5, 67, -83.5) via the cameraman channel
+  (server proof 10:09:56, exact command string). The staging-incident
+  lesson was applied: fresh daylight refresh confirmed first
+  (10:06:05; feed timeOfDay 1266 pre-stage, 5880 post-stage, day
+  throughout, zero deaths), a screenshot verified a clean client
+  before any typing, a rehearsal probe (slash, screenshot, nothing
+  typed) verified chat opens, and the fire burst was launched inside
+  the cameraman's held CLOSE-shot dwell (its log silent >2 min)
+  instead of against its cadence. One rehearsal cost, recorded
+  plainly: a cameraman Geist CLOSE command interleaved into the
+  probe's open chat and was submitted as one invalid combined
+  command — one shot garbled, no citizen moved or affected. The fire
+  burst itself was clean on the first attempt.
+- **GATE 0 RE-RUN 3 (gate-walk-5): FAIL — class: infrastructure
+  (trial stack x terrain).** The skill walked the route as four
+  waypointed helm legs pinned to the corridor (53.5/58.5/63.5/69.5
+  at z=-83.5, |z+83.5| <= 2 checked per leg; prims.walkTo only, no
+  pathfinder; dig-step armed and declared). **The navigation fix
+  worked:** no off-corridor line was committed to, attempt 1's worst
+  drift was 1.67 (inside the corridor), and the failure was
+  contained at the leg that failed, with per-leg numbers — the
+  gate-walk-4 failure mode did not recur. What failed instead is
+  step-climbing, at the same cell that killed gate-walk-4: leg E1,
+  (49.32,66,-83.4) -> waypoint (53.5,67,-83.5). Attempt 1 (25 s):
+  progress +2.33 (4.18 -> 1.85 blocks from the waypoint), ending
+  (52.7,66,-81.83); mid-attempt the feed showed him at (52.4,67,
+  -83.4) — up the first step, on the line, at the waypoint's own
+  height — before a helm lateral probe walked him off the step
+  northward. The one declared dig-step retry (25 s) regressed:
+  -1.29 blocks, ending (51.25,65,-81.31), corridor breach (drift
+  2.19). Dig-step uses: **0** — by its declared design it digs only
+  +2 tops or litter-capped +1s, and these steps are clean +1s, never
+  dug. Elapsed 50.5 s; deaths during the skill window: 0; deaths
+  for the whole job: 0 (27 -> 27).
+- **The wall, precisely:** the x52->54 step pair (raw scan tops
+  x51=65, x52=66, x53=66, x54=67 — two +1 climbs within three
+  columns). A clean +1 is climbable by a running jump, but this
+  helm jumps only *after* stalling — from zero momentum, against
+  the face — and its escalation cycle (jump bursts, lateral
+  probes, backoff+settle) oscillates against close-spaced steps
+  instead of chaining them.
+- **Correction to the remedy record:** the route was scan-verified
+  only. gate-survey.js's physical traverse never ran (its to-start
+  leg failed with the probe stuck at (33.69,70,-88.18); its RAW
+  east "traverse" displaced 0.01 blocks). No body has ever crossed
+  this line end-to-end, and gate-walk-4's pathfinder left the
+  corridor at exactly x~53.7 — plausibly routing *around* this
+  step pair, not wandering. Route-keeping was the symptom; the
+  step pair is the wall.
+- **Consequence:** Trial 2 NOT run (gate rule). Cody restored to
+  the vanilla resident at the gate's end position (51.4, 65,
+  -81.3), deaths 27. Unblock directions recorded in the ledger
+  (momentum step-up in the helm; extending the declared dig-step
+  to clean +1s — a smith/owner decision, since it changes what
+  the gate measures; or a route with isolated climbs,
+  physically traverse-verified before gating). Snapshot of the
+  full gate result: `gate5-result-snapshot.json`.
+
+## Build log - 2026-11-07 (helm v3.3 momentum step-up; traverse-verify; gate re-run 4 STOOD DOWN)
+
+- **Helm v3.3 (lib/prims.js; backup lib/prims.js.bak-helm33).** The
+  two fixes the gate-walk-5 verdict prescribed, both inside the
+  helm's declared surface; dig-step semantics UNCHANGED (clean +1s
+  are still never dug — extending it remains a smith/owner
+  decision). (1) MOMENTUM STEP-UP: while the body is still moving
+  (inside the stall window) and grounded, the helm now reads the
+  columns in its front row (new helper columnTopAt/frontStepUp —
+  the row the 0.6-wide body actually touches, worst step across it,
+  head-clearance checked so a +1 with a solid at +2 reads as wall,
+  not step); a clean +1 is jumped WITH the run — forward held
+  through a 380 ms pulse — so close-spaced +1s chain instead of each
+  becoming a zero-momentum face-plant. The stall jump remains the
+  standstill fallback. (2) PROBE GUARD: a probe must never spend a
+  gained step. Grounded peak feet level is tracked per walk; while
+  the body stands on a step gained within the last 20 s of the walk
+  (>= +0.9 over the walk's start), no probe fires at all; otherwise
+  a probe may only step onto same-level shelf — both cells it would
+  cross must top exactly at the body's feet level, never up, never
+  down. If neither side qualifies the probe is skipped and the
+  backoff/dig-step escalations get their turn.
+- **Traverse-verify (the route body-checked before any gate).** A
+  fresh probe (traverse-verify.js; gate-walk-5's legs, corridor and
+  dig-step declaration, plus a 400 ms position trace) was staged at
+  the route start (49.5, 67, -83.5) by the declared operator
+  teleport and ran leg E1 twice. VERDICT: FAIL — class
+  infrastructure (trial stack x terrain). The body walked the line
+  at full speed (z locked at -83.5, zero drift) for 2.2 blocks and
+  wedged at the route's FIRST +1 — the x52 face (scan tops on the
+  line: x49=65, x50=65, x51=65, x52=66, x53=66, x54=67; the body's
+  feet held 66 across x49-51, confirming the scan). In the wedge
+  the body sat in the frozen-fall correction-stream signature
+  (onGround false, exact-integer y, zero net motion) for the full
+  25 s of both attempts: the stall jumps fired and were ignored by
+  the stream, the momentum step-up and the guarded probe never
+  became eligible (both are onGround-gated), dig-step never fired
+  (0 uses), and a single late backoff walked the body ~2.4 blocks
+  backward off the face at the end of attempt 2. Net E1 progress:
+  attempt 1 +2.20 then frozen; attempt 2 -2.38 (the backoff).
+  Deaths 0. Full record: traverse-result-g131742.json.
+  Route status: NOT body-verified — the x52 face stops a body
+  before the x52->54 pair the last gate died on is even reached.
+  Cody's gate-walk-5 run gained this same step mid-attempt, so the
+  wedge's grip is a draw, not a constant: the correction stream
+  releases on its own schedule, and every recovery the helm owns
+  is either gated on the ground contact the stream withholds or
+  too slow (backoff threshold 10 s, cadence 7 s) inside a 25 s leg.
+- **Gate re-run 4: STOOD DOWN** (the brief's rule: no gating on an
+  unverified route). Trial 2 not run. Cody was never staged or
+  touched this job: vanilla resident throughout, deaths 27 -> 27.
+- **The narrowed wall, for the next decision:** the binding
+  constraint is the frozen-fall wedge at a clean +1 face, not
+  step-chaining. Candidate directions (operator records, smith/
+  owner decides): (a) a release-first helm protocol for the wedge
+  signature — sustained onGround-false + zero motion at a detected
+  face triggers early, repeated release attempts (backoff cadence
+  in seconds, not tens of seconds, alternating with jump-holds so
+  the first grounded tick the stream grants is spent climbing);
+  (b) leg windows long enough for the stream's release schedule
+  (the 25 s leg is shorter than the wedge's observed grip);
+  (c) the standing owner option — extend the declared dig-step to
+  clean +1s (changes what the gate measures).
+- **Staging incident (operator-caused, recorded):** during the
+  probe's staging, an operator Escape sent while a cameraman
+  keystroke interleave had already closed the rehearsal chat
+  opened the client's Game Menu; the menu sat open through one
+  fire (no command landed — proven by its screenshot), the
+  cameraman's 10:36 daylight refresh and an operator /time set
+  1000 both landed in the recovery window (feed-confirmed: time
+  reset to ~1000, isDay), one Escape restored the clean game view,
+  and the probe teleport then executed with full server-log
+  confirmation. A ~7-minute Oracle tunnel outage (slots 2224/2225
+  refusing) also interrupted the job mid-flight; both Jetsons'
+  autossh restored it unaided. Citizens harmed: none. Cody deaths
+  27 -> 27; probe deaths 0.
+
+- **Helm v3.4 - the WEDGE-RELEASE PROTOCOL (declared).** Candidate
+  direction (a) from the traverse-verify record, implemented in
+  lib/prims.js walkTo (backup lib/prims.js.bak-wedge34). The
+  release is keyed on DISPLACEMENT, never on onGround - the stream
+  withholds ground contact, but it cannot fake motion. Trigger:
+  forward intent held + net displacement < 0.3 blocks over a 3 s
+  sampler window (suppressed only while the declared dig-step owns
+  the stall, a dig inside the last 5 s). Cycle, release-first:
+  drop every drive state, backward pulse 0.5 s (forward pressure
+  is what the stream holds against; releasing lets it settle and
+  the body regain ground truth), 250 ms no-input settle, re-face,
+  then a forward+jump HOLD of 1.0 s - jump held through the drive
+  so the first grounded tick the stream grants is spent climbing.
+  Escalation: 3 cycles, then one long backoff (1.5 s) and a final
+  cycle; then the protocol is spent for the walk and the v3.3
+  fallbacks continue. Every firing is logged (trigger window
+  displacement, stuckFor, position/onGround before and after,
+  cycle displacement) into the walk result and the new declared
+  prim wedgeStats(). Dig-step semantics unchanged - clean +1s are
+  still never dug; extending the allowance to them remains the
+  owner's decision. Gate legs are 75 s from gate-walk-6 on: the
+  stream's release schedule must fit inside the leg.
+- **Traverse-verify-2 (helm v3.4, 75 s legs).** Fresh probe
+  TraverseG120241, staged at (49.5, 67, -83.5) by the declared
+  operator teleport (full incident discipline: daylight confirmed
+  first, clean-view screenshot before typing, rehearsal probe
+  verified and closed with no menu, fire inside the cameraman's
+  held-shot dwell, server-log confirmation 10:47:21Z, post-fire
+  screenshot clean; deaths 0). VERDICT: FAIL - class
+  infrastructure (trial stack x terrain) - but the failure moved.
+  Full record: traverse-result-TraverseG120241.json.
+  - Leg E1: PASS on attempt 1 in 8.0 s. The body froze at
+    traverse-1's exact cell (51.69, 66, -83.5); wedge-release
+    cycle 1 fired on a window displacement of exactly 0
+    (stuckFor 5456 ms, onGround false) and ONE cycle freed it and
+    climbed both +1s of the step pair (after: (52.69, 67.02),
+    cycle displacement 1.428). The frozen-fall wedge the
+    protocol was designed against is released by it.
+  - Leg E2: the NEW wall - the x54 column (both touched rows top
+    at 67; leaf litter capped the -84 row at y68). The body
+    face-planted at (53.69, 67, -83.5) for two full 75 s
+    attempts (net +1.00, then -0.01). The declared dig-step
+    fired once, lawfully (leaf_litter at (54, 68, -84),
+    litter-on-plus1); the cap was removed and the face still
+    held. Two measured mechanisms: (1) the wedge trigger was
+    MASKED BY FRIENDLY FIRE - after two early cycles per attempt
+    (each a 0.75 bounce at the face), the v3.3 backoff+settle's
+    limit oscillation (~2.7-block excursions west and run-ups
+    back, ~7-10 s period) kept 3 s net displacement >= 0.3, so
+    the displacement trigger went silent for the remaining
+    ~65 s of both attempts; the stream did not fake the signal,
+    our own recovery did. (2) The jump-hold's apex lands ~1.5
+    blocks west of this face (trace apex (52.19, 68.17)); at the
+    face the body is back at feet 67. E1's winning cycle had a
+    1.7-block flat run-up; the x54 face offers a hard stand with
+    a step down behind it, and the geometry mistimes.
+  - Deaths: probe 0; Cody 27 -> 27, never staged or touched.
+    Corridor never breached (z locked at -83.5 throughout).
+- **Gate re-run 5: STOOD DOWN** (no gating on an unverified
+  route). Trial 2 not run. The narrowed wall, for the next
+  decision: not the frozen stream any more - a face-plant limit
+  cycle at a clean +1 where the helm's recoveries mask each
+  other. Candidate directions (operator records, smith/owner
+  decides): (a) a progress-keyed wedge trigger (no best-distance
+  improvement >= 0.5 blocks over a longer window - hair
+  improvements on each run-up currently reset the stall clocks)
+  with one recovery owning the stall at a time; (b) jump-hold
+  timing keyed to the detected face distance for short-approach
+  steps; (c) the standing owner option - extend the declared
+  dig-step to clean +1s (changes what the gate measures).
+- **Helm v3.5 — the STALL ARBITER, a PROGRESS-KEYED trigger, and
+  FACE-KEYED jump timing (declared).** Candidate directions (a)+(b)
+  from the traverse-verify-2 record, implemented in lib/prims.js
+  walkTo (backup lib/prims.js.bak-helm35). (A) The four episodic
+  recoveries (wedge-release, dig-step, guarded probe, backoff+settle)
+  are granted a stall ONE AT A TIME by an arbiter and the owner holds
+  it until it resolves (progress) or exhausts (its full cycle
+  budget); a suppressed recovery may not move the body at all, so
+  the v3.4 duel is impossible by construction. Priority wedge ->
+  dig -> probe -> backoff, with a fairness rule against immediate
+  re-grants. Jump pulses are classified drive, not recovery, and
+  run only in unowned time or the owner's drive window. Grants and
+  releases are returned on the walk result and kept in the new
+  declared prim arbiterStats(). (B) The stall statistic is now
+  distance-to-target: no improvement of >= 0.2 blocks over a 3 s
+  window while forward intent is held — oscillation nets ~zero
+  progress and can no longer mask the trigger; wedge records carry
+  windowProg in place of windowDisp. (C) The wedge cycle's
+  forward+jump phase polls a new front-row column scan
+  (frontFaceDist) and starts its jump when the face is ~0.8–1.0
+  blocks ahead, logging the face distance at every jump start;
+  with no face in scan range it keeps the v3.4 hold timing.
+  Dig-step semantics unchanged — clean +1s are still never dug.
+- **Staging incident (operator-caused, recorded):** the first
+  traverse-verify-3 probe (TraverseG110535) was never staged. A
+  hung launch channel consumed most of its 720 s stage-wait; the
+  cameraman — filming an active citizen conversation, sending
+  every ~50–90 s — sent a shot command into the open rehearsal
+  chat (server log shows the doubled slash, `//execute ...`), its
+  Return closed the chat, the operator's closing Escape opened
+  the Game Menu, and the teleport fire was absorbed by the menu
+  (no server line; fire screenshot shows the menu). One Escape
+  restored the clean view. The collision also ate the cameraman's
+  11:16:32Z daylight refresh: the world reached timeOfDay 15027
+  (~2 minutes of mob-spawn night) before the operator restored
+  daylight with a manual /time set 1000 (server-confirmed
+  11:18:21Z); the cameraman's own refresh landed again at
+  11:26:34Z. The probe's wait expired; its self-powered commute
+  went 2/3 hops and wedged on the third — NAV-FAIL, traverse not
+  run (traverse-result-TraverseG110535.json). Citizens harmed:
+  none. Cody deaths 27 -> 27; Cody health dipped 20 -> 17 inside
+  the incident window with no death and no observed cause,
+  recorded as observed. Cameraman never stopped. The second
+  probe (TraverseG112033) was then staged on the proven-clean
+  channel without a fresh rehearsal (see the ledger staging
+  entry) and its teleport landed first try, server-confirmed
+  11:30:48Z.
+- **Traverse-verify-3 (helm v3.5, 75 s legs).** Fresh probe
+  TraverseG112033, staged at (49.5, 67, -83.5) by the declared
+  operator teleport. VERDICT: FAIL — class infrastructure (trial
+  stack x terrain) — and the failure moved again. Full record:
+  traverse-result-TraverseG112033.json.
+  - Leg E1: PASS on attempt 1 — but note the closing height: the
+    body was still airborne at (53.31, 68.17) off the momentum
+    step-up when the leg closed, and E2's walk began inside
+    that arc.
+  - Leg E2: the wall is the same x54 face, engaged one level
+    higher. The body froze MID-AIR at (53.69, 68.02–68.25),
+    onGround false — feet ~1.25 above the x53 plateau's standing
+    level, held at the litter-capped top of the step. All three
+    v3.5 mechanisms fired as designed: the progress trigger
+    granted the wedge at stuckFor 3151 ms (windowProg 0.02 — no
+    masking); every jump was face-keyed (faceDistAtJump
+    0.82–0.99); the arbiter held single ownership throughout.
+    What failed is the recovery at that altitude: cycles 1–3
+    only bobbed vertically (dispCycle 0.23 each — this draw, the
+    stream did not release for the short cycles), and the long
+    backoff then let the body fall and slide 4.4 blocks west to
+    (49.31, 66), surrendering both climbed steps. The final
+    cycle's run-up was the run's best locomotion (dispCycle
+    4.003, back to (52.91, 67.75)) but ended 0.75 blocks short
+    of the progress anchor, so the wedge was judged exhausted
+    at its moment of success. Attempt 2 repeated the shape.
+    After exhaustion, dig and backoff alternated under the
+    fairness rule (the guarded probe starved — dig's ripeness
+    is permanently true in a hard stall) with dig uses 0: the
+    body was never at the face under dig ownership, so the
+    litter cap was never dug.
+  - Deaths: probe 0; Cody 27 -> 27, never staged or touched.
+    Corridor never breached (z locked at -83.5 throughout).
+- **Gate re-run 6: STOOD DOWN** (no gating on an unverified
+  route). Trial 2 not run. The narrowed wall, for the next
+  decision: not masking, not ownership, not jump timing — a
+  freeze that engages in mid-air at the top of a close-spaced
+  step chain, where the release cycles bob, the long backoff
+  spends the body's bought height, and exhaustion is judged
+  against an anchor the recovery almost re-buys. Candidate
+  directions (operator records, smith/owner decides): (a) a
+  release that does not surrender position at a high freeze —
+  shorten or drop the long backoff when onGround has been
+  false throughout, and/or judge the wedge against the best
+  distance reached during its own sequence; (b) a settle beat
+  at leg boundaries, so a leg never starts inside the previous
+  leg's jump arc; (c) cap consecutive dig grants when nothing
+  diggable is ahead, so the guarded probe is not starved;
+  (d) the standing owner option — extend the declared dig-step
+  to clean +1s (changes what the gate measures).
+
+
+## Build log - 2026-11-07 (helm v3.6: hold-and-tap, best-in-sequence, dig-grant cap, settle beat; traverse-verify-4; gate re-run 6)
+
+- **Helm v3.6 (declared).** lib/prims.js walkTo (backup
+  lib/prims.js.bak-helm36), answering traverse-verify-3's measured
+  anatomy one mechanism per fix. The declaration continues the
+  helm's own lettering from v3.5's (A)/(B)/(C):
+  - **(D) Position-preserving release at high freezes.** A stall
+    detected with the body holding >= +0.9 of gained altitude
+    over the walk's standing level (the first feet level the body
+    stands on this walk) runs HOLD-AND-TAP: no backward pulse,
+    an extended hold (1.2 s) instead of the 1.5 s long backoff
+    at the escalation, and up to 3 short forward taps (~350 ms,
+    face-keyed) instead of the 1.0 s drive. Verify-3's long
+    backoff let the body fall and slide 4.4 blocks west,
+    surrendering both climbed steps; at altitude, backward
+    motion spends bought height. Ground-level stalls keep the
+    v3.5 cycle untouched. Every grant/cycle logs altDelta;
+    cycles and the escalation log releaseMode
+    ('backoff' | 'hold-tap'); hold-tap cycles log taps.
+  - **(E) Exhaustion judged on best-in-sequence.** The wedge is
+    spent only if no cycle of its episode improved the episode's
+    best cycle-end progress (distance minimum or altitude
+    maximum) and the final cycle made no net progress against
+    its own start; a working final cycle earns ONE extension
+    cycle. Verify-3's wedge was declared exhausted at the end of
+    its best run-up (4.003 blocks re-bought, 0.75 short of the
+    pre-backoff anchor) — at its moment of success.
+  - **(F) Dig-grant cap.** At most one dig grant per stall
+    episode unless a dig actually executed under dig's last
+    ownership (digStepStats uses incremented since that grant).
+    Verify-3: dig's permanently-true ripeness alternated with
+    the backoff for ~45-57 s after wedge exhaustion and starved
+    the guarded probe, with digUses 0.
+  - **Settle beat (harness-side).** traverse-verify-4.js and
+    gate-walk-8-skill.js settle the body (grounded, |velocity|
+    ~ 0, sustained ~1 s; 8 s timeout records a non-settle) after
+    staging, before every leg, before every retry, and before
+    the end read. Verify-3's E2 began inside E1's closing jump
+    arc — E1 had closed airborne at (53.31, 68.17) — and the
+    freeze engaged at the arc's altitude.
+  - Dig-step semantics unchanged (clean +1s never dug; the
+    owner option to extend the allowance is again not taken).
+
+### Traverse-verify-4 outcome (2026-11-07, probe TraverseG120035, helm v3.6)
+
+**FAIL - route NOT body-verified (fourth traverse failure). Gate re-run 6
+STOOD DOWN per the verified-route rule; Trial 2 not run.**
+
+- Staging: landed on the re-fire (server log 12:04:51Z) after a recorded
+  collision - the rehearsal chat caught the cameraman's 12:03:42Z shot
+  command (submitted as the invalid `//tp ...`, one shot garbled, no
+  citizen moved), the operator's closing Escape opened the Game Menu and
+  absorbed the first fire; one Escape restored the screenshot-verified
+  clean view and the re-fire landed first try. Full record in the ledger
+  entry `traverse-verify-4-staging`. Deaths: none.
+- E1 PASS attempt 1 (5.5 s), end (53.31, 68.17) - the airborne close of
+  verifies 2/3 - but the settle beat grounded the body at (53.59, 67)
+  and **E2 opened from a grounded start for the first time**. Settles:
+  stage / E1:pre / E2:pre / E2:retry / end ALL true.
+- E2 FAIL 2/2 attempts (75 s each): attempt 1 progress +0.10, timeout at
+  the face cell (53.69, 67, -83.5); attempt 2 progress -2.85, ended
+  (50.85, 66). Corridor never breached (z locked at -83.5, drift 0.00).
+  digUses 0. Deaths 0; Cody untouched (27 -> 27).
+- **The wall, narrowed:** the freeze RE-FORMED from a grounded start -
+  the arc-inheritance mechanism of verify-3 is excluded. Attempt 1's
+  trace holds the body at y=68.25 (the litter-cap height) for ~3.2 s in
+  the frozen-fall signature with x pinned at 53.69 for the full 75 s;
+  x never crossed 54.0 in either attempt under any recovery the helm
+  owns. Four helm generations have now pinned at this cell; Cody crossed
+  the x52 step in gate-walk-5, so the pin is specific to the x53.69
+  stand / x54 face pair.
+- Fix-by-fix: (C) settle beat worked exactly as designed. (D) hold-and-
+  tap engaged as designed (cycle 2 both attempts: releaseMode hold-tap,
+  altDelta 1.25, 3 taps; escalation was hold-extended, not the long
+  backoff; no slide during wedge ownership) but produced zero forward
+  progress - at faceDist ~0.00-0.01 the taps are vertical hops with no
+  run-up to buy. (E) best-in-sequence bookkeeping live; no extension
+  cycle was owed - the final cycle improved nothing (disp 0), and no
+  cycle made horizontal progress at all (distance best 4.91 all
+  episode; the only "improvement" logged was cycle 1's jump-arc
+  altitude, which the altitude term of best-progress credits trivially
+  at any face). (F) dig-grant cap held - dig granted exactly once per
+  attempt (5.2 s, digUses 0) - but the starvation moved: the plain
+  backoff re-granted 4-5x per attempt at ~4.25 s each, and in attempt 2
+  its backward pulses walked the body west and down off the x52 step.
+  The guarded probe was granted once all run (attempt 2 tail) and
+  released in 0 ms: no-shelf.
+- Standing directions (ledger `route-z84-traverse-verify-4`): cap
+  consecutive backoff grants as dig was capped; hold-and-tap's
+  clearance tension is unresolved at faceDist ~0; the owner option
+  (extend the declared dig-step to clean +1s) is now the only untested
+  lever that acts on the step itself - still not taken; or a different
+  route on different face cells, physically traverse-verified before
+  gating.
+
+
+## Build log - 2026-11-07 (route survey for re-run 7; traverse-verify-5; gate re-run 7 stood down — gate line parked)
+
+- **Route survey (declared before any traverse).** Probe SurveyG121447
+  sat at spawn and read column profiles over x 44..78, z -96..-72
+  (gate-survey4.js; survey4-result-SurveyG121447.json). Selection
+  criteria, stated in ledger `route-survey-gate-rerun-7` BEFORE the
+  traverse: no nulls, no trunk obstructions, max up-step <= 1 in both
+  directions, +1 faces isolated (>= 4 columns apart), >= 2 flat
+  run-up columns before every face, no litter cap on any face
+  column. Of 25 straight rows scored, exactly ONE qualifies
+  (z=-94, rejected on soft evidence: 12 of 22 walked cells carry
+  on-surface litter; it runs on the freeze-pit latitude). The
+  incumbent z=-84 span fails the criteria on three counts (isolation
+  east: faces 52, 54, 68; maxUp west 2; westbound run-up at x63) —
+  the survey restates the traverse record in scan form. 166 bent
+  paths qualify; the chosen line is the bent path at the gate
+  latitude: east on row z=-85 x49->x54, shift north at column x54
+  (crossing z=-84 ON the plateau top, flat 67), east on row z=-83
+  x55->x69. Profile eastbound: flat 67 for 17 columns, one -1 step
+  at x65, flat 66 to (69,-83). Climbs: zero eastbound; exactly one
+  westbound — face (64,-83), isolated, 4 flat run-up columns, no
+  litter cap. 7 on-surface litter cells, all on flat columns.
+- **Traverse-verify-5 (helm v3.6, settle beats, probe TraverseG121739).**
+  Staging was collision-free for the first time in three attempts:
+  no rehearsal chat was opened; the client was screenshot-verified
+  clean, the cameraman confirmed on cadence, and the single fire
+  landed inside its held-shot dwell (server log 12:18:06Z; ledger
+  `traverse-verify-5-staging`). VERDICT: **FAIL — route NOT
+  body-verified. Gate re-run 7 STOOD DOWN; Trial 2 not run.**
+  Evidence: traverse-result-TraverseG121739.json.
+  - E1 PASS attempt 1 (1.0 s), no wedge, no digs.
+  - E2 (the 2-block shift leg) FAIL 2/2 attempts: progress -0.19 /
+    +0.22 across 150 s. All settles true; corridor never breached;
+    digUses 0; deaths 0; Cody untouched (27 -> 27).
+  - **The wall, new again:** flat ground, at the route's corner.
+    E1's arrival tolerance (walkTo range 1.2) ended the leg 0.94
+    short of the corner waypoint, so E2 opened at x~53.65 — off the
+    shift column — and its diagonal drive pressed the body's east
+    face into the leaf-litter pile capping cell (54,-85). The trace
+    pins the body within 0.1 x / 0.28 z for both full attempts,
+    y bobbing on wedge jumps (5 cycles each, extension cycle
+    granted both times — fix (E) firing): the frozen correction
+    signature on a litter-capped FLAT cell at the body's front
+    corner. Dig-step never fired: the allowance digs litter capping
+    a +1 or a block out of a +2 — litter capping flat ground at a
+    corner is outside its declared classification.
+- **Gate line PARKED (hard stop on this attempt, per the lane's
+  ruling).** No third route, no further helm iteration tonight.
+  Five traverses have now failed on four distinct measured
+  mechanisms, each answered in the helm or the route except the
+  litter-corner case. Its honest fixes sit outside the in-lane
+  space: extend the declared dig-step (to litter on flat ground,
+  or to clean +1s — changes what the gate measures; the OWNER's
+  decision, again not taken), or a smith-owned route/harness
+  redesign (corner waypoints with tight arrival tolerance; column
+  alignment walked, not assumed). Recorded for the owner in ledger
+  `route-bent-traverse-verify-5`.
+
+
+## Build log - 2026-11-07 (Gate 0 RE-SCOPED: locomotion via the framework's own navigation; Trial 2)
+
+- **The re-scope (ledger `gate-0-rescope-fw-nav`, recorded BEFORE
+  anything ran).** Gate 0 existed to prove the trial stack: smith
+  authors -> runner drives the body -> gate judges from world
+  evidence. Five traverses turned it into a referendum on the
+  hand-rolled helm (`walkTo`) - the weakest walker in the league -
+  while the stack itself never failed. Per Casey's direction
+  (stop asking exam-philosophy questions; get the citizens moving),
+  locomotion is now proven through the resident Craftmind
+  framework's own navigation: `mineflayer-pathfinder` with the
+  framework's `Movements` (bot.js: sprint + parkour on, library
+  defaults otherwise), driven by `setGoal(GoalNear)` - the exact
+  calls resident-cody.js's wander makes daily. Cody currently
+  stands ~28 blocks from his anchor, having commuted there
+  unassisted; the gate will now measure THAT stack, over a surveyed
+  course in his home terrain (>= 20 blocks, >= 3 waypoints, >= 1
+  clean +1 step, displacement-judged from the state feed; no helm,
+  no teleports, no opped client). The helm stays in the toolbox as
+  the smith's fine-control prim inside curriculum scripts; it is no
+  longer the gate's subject. The dig-step allowance is NOT extended.
+
+- **Framework-navigation locomotion proof: FAIL (two attempts,
+  confound excluded).** Attempt 1: leg 1 passed at sprint (5.05
+  blocks, 1.2 s); leg 2 froze for the full 120 s from an unsettled
+  sprint-arrival start. Attempt 2 (settle beat pre-declared in
+  ledger `fw-nav-proof-attempt-1-and-retry-declaration`): course
+  settle verified grounded and still at (50.68, 65, -82.49), and
+  leg 2 STILL made 0.00 blocks in 120.3 s under a live
+  GoalNear(WP2) - body pinned, onGround false in every state-feed
+  sample: the frozen correction signature, now reproduced under
+  the framework pathfinder at the +1 face of column x51. The wall
+  is not the walker; it is this build's client/server physics
+  disagreement at step faces, and it binds every mineflayer driver
+  measured (helm x5 traverses, framework x2 attempts). Long-course
+  unassisted navigation stands unproven; short framework hops are
+  proven (leg 1; the daily wander; Cody's own commute here).
+- **Trial 2 proceeds on a recorded basis** (ledger
+  `fw-nav-proof-verdict`): the proof measured a pure-framework
+  commute; the trial's movement is prims-based short hops to dig
+  reach with helm-fallback gotoNear, and Casey's flagship
+  direction makes S1 the milestone under unchanged world-evidence
+  judging.
+
+- **Trial 2 (S1): FAIL by the last step.** World evidence: Cody
+  travelled to a tree under the candidate's digBlock/gotoNear,
+  harvested, collected, and crafted - max inventory oak_planks 5,
+  stick 8 (plus oak_button 3, apple, sapling); zero deaths; final
+  position (71.8, 66, -88.7) after working toward a second tree.
+  The ledger's detail.craftingTable=true traces to a PRE-EXISTING
+  table in the anchor-centred evidence scan, not the candidate
+  (see ledger `trial-2-reading`): the script never crafts the
+  crafting_table item and addresses the pickaxe craft to the
+  block at feet+1. The wall is now exactly: craft the table item,
+  place it at a known position, craft the pickaxe there; plank
+  budget >=9 (>=3 logs). Everything upstream of the table is
+  proven working in the world.
+
+- **Smith lineage reset (S1).** Five consecutive S1 candidates
+  omitted the same step (crafting the crafting_table item) -
+  a revision-lineage template lock that prompt-level recipe
+  facts did not break. The operator archived the stuck lineage
+  (pulse/library/archive-stuck-s1-lineage-20261107/, preserved)
+  so the smith's next tick takes its fresh-write branch: no
+  parent source, full prims surface, both trials' evidence, and
+  the recipe facts. No script content was operator-authored or
+  edited; see ledger `s1-lineage-reset-20261107`.
+
+- **Trial 3 (S1): FAIL, zero progress - gather regressed.** The
+  fresh-write candidate had the best craft chain yet (table item
+  crafted in sequence) but gathered with digColumn, whose
+  1-block-arrival gotoNear pinned Cody in a hollow at
+  (72.2, 64, -87.7) for the full window: no log collected.
+  Accidental A/B against Trial 2: digBlock gather works,
+  digColumn gather does not start. Deaths 0. See ledger
+  `trial-3-reading` for the precisely-posed revision problem.
+
+- **Trial 4 (S1): FAIL - and a correction.** Trial 4's candidate
+  (digBlock gather; craft chain traced convergent against the
+  prim sources) pinned at the same hollow cell (72.1, 64, -87.7)
+  with zero logs. The Trial-3 reading's digBlock-vs-digColumn
+  A/B was CONFOUNDED by starting position and is corrected in
+  ledger `trial-4-reading-and-trial-3-correction`: the hollow at
+  x70-74, z-85..-88 is ringed by +2/+3 rims; the east oak is
+  unreachable from inside under either gather prim; the only
+  <=+1 exit is the west ramp to the z=-90 shelf. Surveyed facts
+  added to the smith prompt (facts patch #3). Deaths 0.
+
+- **Smith lineage reset #2 (S1).** The post-reset revisions
+  improved the craft chain (table item, adjacent placement,
+  self-crafted sticks) but ignored the surveyed hollow facts -
+  no escape route. Archived (archive-s1-lineage2-20261107/) for
+  a fresh write carrying all three fact patches and four
+  trials of evidence. Ledger `s1-lineage-reset-2-20261107`.
+
+- **Trial 5 (S1): FAIL - escape aimed right, routed wrong.** The
+  candidate detected the hollow and targeted the exit cell, but
+  as one diagonal walkTo: the helm pinned at the +2 north rim
+  for 15 minutes (~1 block gained). The exit must be walked as
+  two legs (west along the floor, then north) - recorded as
+  facts patch #4. Deaths 0. Ledger `trial-5-reading`.
+
+- **Smith lineage reset #3 (S1).** Fresh write #2's escape was
+  one diagonal leg (pinned, Trial 5) and its flow starved the
+  craft steps; the revision kept both flaws. Archived
+  (archive-s1-lineage3-20261107/) for a fresh write against all
+  four fact patches and five trials of evidence. Ledger
+  `s1-lineage-reset-3-20261107`.
+
+- **Trial 6 (S1): FAIL - partial firsts, then the pure wall.**
+  The two-leg escape's first leg executed; Cody harvested the
+  3 birch logs within reach of the west-edge stand (the only
+  inventory gain in Trials 3-6), then froze for ~12 minutes at
+  (69.4, 64, -86.7) against the upper trunk's stand cells: the
+  stationary-start step-face freeze, the same signature as the
+  proof and Trials 3/4. Deaths 0. **Trial 7 is staged on a
+  world-state trigger** (Cody out of the hollow, tree in reach)
+  with the convergent Trial-4 candidate; see ledger
+  `trial-6-reading-and-trial-7-staging`. S1 attempts: 6, passes: 0.
+
+- **Trial-ground prep DECLARED (2026-11-07, ledger
+  trial-ground-prep-20261107) — operator floor work, declared
+  before execution.** Trials 3-6 measured the work geography, not
+  Cody or any candidate, as the enemy: leaf litter caps the step
+  faces and route cells of the hollow, the west-ramp exit, the
+  z=-90 shelf, and the stand cells serving the east oak and the
+  west-edge birch stand. Prep scope: before-scan of the work box
+  (x58..84, z-100..-74, stationary-probe survey); clear LEAF
+  LITTER ONLY from the hollow floor, the west-ramp route cells,
+  the shelf row, the stand cells adjacent to the oak/birch
+  trunks, and the route cells between stands and oak clusters;
+  after-scan by the same method, before/after geometry recorded.
+  Limits: litter only - never solid terrain, never a tree, never
+  the anchor; the dig-step allowance stays OFF; the exam is
+  untouched; no curriculum script is operator-authored or edited.
+  Aim: routes whose worst step is a genuine clean +1, so Trial 7
+  (the staged convergent candidate, world-state trigger) judges
+  the candidate on the fairest ground S1 can be judged on. A
+  freeze on prepped ground will be reported as exactly that -
+  decisive evidence for the parked owner lever.
+
+- **Trial 7 (S1): FAIL - class WORLD; the constraint changed.**
+  The staged trigger fired on the watcher (21:17:31Z): the
+  resident had extracted Cody unaided to (68.4, 65, -84.3) on the
+  z=-84 shoulder, oak 8.6 blocks east. The convergent Trial-4
+  candidate relaunched there, climbed to the 66-tops, and ran two
+  skill iterations with NO step-face freeze - then a Zombie killed
+  Cody at the work shoulder (21:21:25Z). He respawned empty at
+  spawn and the candidate marched him east; the corridor mob
+  population (Zombie/Creeper/Skeleton accumulated through days of
+  daylight-hold night leaks, sheltering in shade) killed him 6
+  more times in 3.5 min. Operator aborted at ~6.3/15 min (7 deaths,
+  all mob kills, operator-caused 0) and relaunched the vanilla
+  resident - which was also killed within a minute at
+  (37.7, 65, -96.7). The home range is currently lethal to any
+  unarmed moving body; S1 attempts: 7, passes: 0. Full evidence in
+  ledger trial entry 21:25:00Z + trial-7-reading.
+
+- **Trial-ground prep: attempted, NOT completed (ledger
+  trial-ground-prep-outcome-20261107).** Before-scan (729 cells):
+  the hollow and escape route are litter-free with genuine clean
+  +1 geometry - the Trials 3-6 hollow pins were the step-face
+  freeze on CLEAN steps, not litter. Litter caps (294 cells, all
+  caps) concentrate on the shelf, the oak-approach climb (77,-88),
+  and the tree aprons; 49 target cells mapped. Three probe
+  versions failed three ways (unloaded-gate logic error; phantom
+  digs from a canopy - rescan proved 294 -> 294; a first-hop
+  pathfinder hang from a stationary start 3 blocks out). The
+  floor binds the floor crew with the same freeze that binds the
+  citizens. Prep remains owed and mapped, for a working floor
+  route; the dig-step allowance stays OFF and the exam untouched.
+
+
+## Build log - 2026-11-07 (death circuit-breaker; smith furnishing campaign; Trial 8 — survival-first S1)
+
+- **Death circuit-breaker (new standing floor rule, ledger
+  `death-circuit-breaker-20261107`, declared BEFORE Trial 8 ran).**
+  Any trial aborts AUTOMATICALLY at 3 deaths in the run and is
+  judged on the evidence gathered up to the abort. Implemented in
+  the gate itself: trial.js gained `--max-deaths N` (default 0 =
+  off); the poll loop counts pulse/deaths.jsonl from the trial's
+  baseline offset every poll and stamps the entry
+  abortedByCircuitBreaker + abortReason when it fires (backup
+  trial.js.bak-breaker-20261107). Trial 7's 7-deaths-in-3.5-minutes
+  grind is the failure this rule exists to prevent; an operator
+  watching is no longer the mechanism.
+- **Smith furnishing campaign (facts patches #5-#9 — the
+  established operator lever; no curriculum script was written or
+  edited by the operator).** Furnished to smith.js's prompt, each
+  with backup + ledger declaration: Trial 7's full death map and
+  the saturation mechanism (days of hold-leak spawns sheltering in
+  shade; hold since tightened to 300 s, accumulation stopped,
+  standing population remains); Cody's stable high-tops perch
+  (death-free since 21:26Z) WITH its measured caveat (~6 blocks
+  from spawn, INSIDE the protection circle — the visible logs
+  cannot be dug); the survival requirement (scan, directed flee
+  uphill into open sun, break line of sight, wait/re-scan,
+  creepers at distance, bank progress in small loops — one death
+  forfeits the whole material chain); the new breaker rule; and a
+  correction to hard rule 7 (respawn is world spawn (32,70,-96),
+  not the anchor). Four candidates were statically traced and NOT
+  trialled, each trace furnished as the next patch: 823Z (no
+  plank-producing step; random-offset flee), 694Z (done returned
+  on the table ITEM, ending the skill before placement; gather
+  checked before craft, starving the chain; placeOnTop given an
+  air cell as reference; oak-only), 045Z (branch order again;
+  pickaxe gated on holding the table item, which placement
+  consumes), 531Z (bot.entities.filter on the id-keyed entities
+  OBJECT — run() throws on its first scan; no protection exit;
+  the table gate a third time). Plus lineage resets #4 and #5,
+  one machinery repair (smith call max_tokens 1750 -> 3200 after a
+  fuller survival rewrite truncated mid-fence at exactly the old
+  cap), and patch #9 stating the composite S1 RUN STRUCTURE as
+  measured fact, because the revisions were rotating defects —
+  fixing the last-named one and breaking a previously-right one.
+- **Trial 8 (S1): FAIL — class INFRASTRUCTURE; survival leg never
+  contacted; circuit-breaker honoured at zero deaths.** Candidate
+  s1-2026-11-07T21-52-07-809Z.js (fresh write after reset #5)
+  traced clean of every fatal class on the record. Launched
+  21:52:39Z from his living position (26.5, 73, -93.3) — no
+  staging, no teleports, no opped client; cameraman untouched.
+  World evidence, 60 polls: run 1 carried him ~12 blocks east and
+  down to (38.3, 65, -94.7); he then pinned at (38.6-38.7, 66,
+  -93.3) for the remaining ~14 minutes — 16 completed runs, each
+  re-issuing the identical protection-exit walkTo toward
+  (50, y, -96) and burning its timeout at the same corridor-row
+  face, no variation on failure. Final spawn distance ~7.2
+  blocks: **he never left the protection circle**, so the gather
+  step only ever faced protected (phantom) ground, maxInventory
+  was EMPTY at every poll, and the craft chain — statically sound
+  for the first time in the survival era — was never reached in
+  the world: unmeasured, neither proven nor falsified. Verdict
+  detail craftingTable=true is the known anchor-scan artefact
+  (pre-existing table at (11,68,-85)); no table was ever in
+  inventory. Deaths 0 (37 -> 37); breaker armed at 3, never
+  fired; no hostile contact at the pin cell and no flee event
+  (one hp dip to 19.8 in minute one, consistent with fall damage
+  on the descent). The survival design remains untested by
+  contact. S1 attempts: 8, passes: 0. Full reading in ledger
+  `trial-8-reading`.
+- **Where this leaves S1.** Trials 7 and 8 are mirror images:
+  staged beyond the circle (Trial 7), the candidate moved freely
+  and the world's mobs decided; started from the perch inside the
+  circle (Trial 8), geometry decided before mobs could. The
+  client/server step-face wall has now bound the helm (5
+  traverses), the framework pathfinder (2 proof attempts), the
+  floor-prep probes (3 versions) and this exit leg. Cody's two
+  proven ways east are starting already out (Trial 7's trigger)
+  and the vanilla resident's own wander — the movement that put
+  him on the perch unaided. The next furnishing (recorded in the
+  reading, not yet applied): stage Trial 9 on a world-state
+  trigger beyond the circle, and require an exit-failure
+  variation (gotoNear fallback / a different row) instead of
+  identical retries. Cody stands relaunched vanilla at
+  (38.7, 66, -93.6), hp 20, wandering again.
+
+
+## Build log - 2026-11-07 (resident wander watchdog: the Trial 9 blocker repaired at the substrate)
+
+- **Directed**: Casey's one-player ruling - one character, Cody,
+  camera on him, get him WORKING; the philosophy can wait. Trial 9's
+  reading named this repair as its furnishing (a): the latent wander
+  defect recorded 2026-11-06, confirmed live as Trial 9's blocker.
+- **The defect (measured, Trial 9 watch)**: `startWander` in
+  `bots/runs/cody/resident-cody.js` draws a new target only when
+  `bot.pathfinder.goal` is empty. A wedged goal is never abandoned,
+  so one bad target silences roaming indefinitely: 642 polls /
+  1 h 47 min, x span 1.0 block, z span 1.6, one wander target per
+  phase, zero re-targets, the Trial 9 trigger never fired.
+- **The repair** (ledger `wander-watchdog-repair-declaration-20261107`,
+  declared before the change; backup
+  `resident-cody.js.bak-wanderwatchdog-20261107`; `node --check`
+  clean): a no-progress watchdog inside the existing wander tick.
+  Window 60 s, progress threshold 1 block of net displacement,
+  back-off 15 s after abandoning a wedged goal (setGoal(null) +
+  clearControlStates). Consecutive wedges escalate: draw radius
+  widens x1.6 per wedge from the original 10, capped at 32, and
+  redraws avoid the wedged target's direction octant. A completed
+  goal resets everything to the resident's original behaviour;
+  a slow-but-moving goal rolls its window and is never abandoned.
+  Anchor, GoalNear strolls and the 30-55 s cadence are unchanged -
+  the wander is still the resident's own behaviour, just unwedgable.
+- **Scope honesty**: body machinery, not curriculum. No smith
+  candidate, no prims, no trial-stack file touched; Trial 9's
+  candidate stays byte-unchanged and is re-armed only if roaming
+  verifies, under its original declaration.
+- Verification + re-arm outcome appended below as the watches land.
+
+- **Verification (same night, appended)**: one vanilla relaunch;
+  45-min state-feed watch (roam-watch.jsonl, 177 polls). The
+  watchdog works exactly as built: first goal abandoned at 0.01
+  blocks in 85 s and re-targeted (the event Trial 9 never saw in
+  1 h 47 min); six abandon-and-retarget cycles in-window, twelve
+  by close of writing, radii escalating to the 32 cap, all octants
+  probed; zero goals arrived. Travel: 40.4 blocks cumulative
+  denoised; two real excursions SW down-slope (6.52 and 7.69
+  blocks) into the low cell near (38,-102), each followed by a
+  return to the pin. Max net displacement from the pin 7.69
+  blocks; max Chebyshev from spawn 7.6 - **no exit from the
+  protection square**. Deaths 37 -> 37, hp 20 throughout.
+- **Verdict (ledger `wander-watchdog-verification-20261107`)**:
+  machinery verified, roaming NOT verified to the standard Trial
+  9's trigger presumes (Chebyshev > 18), so **Trial 9 was not
+  re-armed** - re-arming against this distribution would repeat
+  its non-event. The constraint is now isolated to locomotion out
+  of this cell complex: the stationary-start face on the climbs
+  and the SW sag on the returns. The candidate is byte-unchanged
+  (md5 66d13213564f1bd616b2b6e5e26698c5). Cody runs the repaired
+  resident still - unwedgable, probing exits at radius 32, at
+  (38.6, 67, -101.4) at last poll.
+
+## Build log — 2026-11-07 (continuation: THE CHARACTER BUILD)
+
+Owner direction (Casey, 17:52 AKST): stop prioritising the exam and the
+infrastructure; make ONE character who acts like a real character — a
+Steve-class player who lives a Minecraft day and builds a little
+homestead. Depth over breadth; Cody is the flagship; camera on him.
+
+- **Built: `pulse/character-plugin.js`** (framework-plugin shape, loaded
+  by the resident in character mode: `CODY_CHARACTER=1 python3
+  codyctl.py start`). A goal-directed day loop, zero LLM calls:
+  - Goal stack, worked in order: RELOCATE (anchor restaged to the
+    surveyed east shoulder, below) → wooden PICKAXE → homestead PAD
+    (clear + flatten 5×5 at tops 66) → starter HUT (floor/walls/roof/
+    door/torch; furnace + charcoal sub-chain via bot.openFurnace) →
+    CHEST + stored surplus → fenced PEN. Watchtower queued next.
+  - Every project is an ensure-style predicate over LIVE world state
+    (inventory contents, block scans, the pulse evidence scan): a
+    project is done only while the evidence holds now; death or decay
+    re-opens it. Each work() call performs ONE unit, then re-checks.
+  - Survival leg: 700 ms hostile monitor (imminent ≤8.5 blocks or fresh
+    damage → cancel path/dig/controls; work-loop guard at ≤12 → flee to
+    HOME, up to 3 legs), then the interrupted project RESUMES —
+    persistence of intent is the trait being built. Eat at food ≤14;
+    urgent forage-hunt at ≤8 (manual attack loop; no pvp plugin).
+  - Legibility: chat narration generated from goal-stack state
+    (throttled 15 s / urgent 4 s, dedupe 120 s); `intent` + `project`
+    published additively into cody-state.json (pulse-plugin) and the
+    digest extra. Milestones stamped to character-state.json + this
+    ledger (kind character-milestone) the first time a done-predicate
+    holds.
+  - Declared edits (backups `.bak-character-20261107` on all four):
+    resident-cody.js (character mode + skip list + wander also gated
+    on the character flag; home defaults to anchor.json),
+    pulse-plugin.js (additive intent/project), digest.js (pass-through),
+    anchor.json. **Anchor restaged (64, 67, −93)** — declared in the
+    ledger (`anchor-restage-character-20261107`); old anchor
+    (24, 67, −111) preserved in that entry. Dig-step stays OFF
+    (`prims.setDigStep` never called); no world edits, no /give, no
+    teleports; his own two feet + respawns only.
+- **Terrain truth (new survey, `pulse/cell-survey.json`):** his home
+  cell (39,−101) top 66 is walled EAST by a continuous +2 ridge at x40
+  (tops 68 the whole surveyed strip) — a genuine wall, not the freeze.
+  Crossable where 67-tops touch it: north (39,−102)→(40,−102), south
+  (39,−94)→(40,−94); the x38 column is the walkable western ramp his
+  wander provably used. Relocate v1.2/v1.2.1 routes are surveyed hop
+  chains with per-cell feet-y (v1.2 shipped all goals at y67 — on the
+  ridge that point is INSIDE the solid column; fixed).
+- **The body blocked him anyway — Gate-0 disease, re-proven tonight.**
+  Six declared probes (ledger `character-locomotion-probe*-20261107`,
+  results `pulse/char-probe*-result.json`): gotoNear hybrid,
+  travel-movements pathfinder, parkour movements, helm alone, raw
+  sprint+jump → 0.00–0.15 blocks from his cell. Probe 5 isolated it:
+  chunks load (213 columns/15 s; client world matches the survey),
+  the pathfinder computes a SUCCESSFUL path again and again, the body
+  is grounded — and produces zero motion, zero jitter. Probe 6: a bare
+  bot (CharBare, same libraries) walked the identical goal in <5 s.
+  The recovered Gate-0 record (above, 2026-11-06) had already proven
+  the same elimination from the other side (bare bot AS CODY: 0.000;
+  fresh username at his pit: +7.169 in 4 s) — the defect follows his
+  server-side player state. CONFIRMED CURRENT by direct read of his
+  playerdata on the Orin tonight: `Motion=[0,-0.0784000015258789,0]`,
+  the frozen first-fall tick, byte-identical to the 2026-11-06
+  signature, Pos y exactly 65.0. Intermittency stands as recorded:
+  some sessions land impulses (Trial 2's chain, Trial 7's free
+  movement were real); most are dead. This session is a dead one.
+- **Unblock (owner decision, NOT actioned by this lane):** reset
+  Cody's playerdata `world/players/data/5b8c9ad2-….dat` on the Orin
+  while he is offline (back it up first). Fresh entity at world spawn;
+  inventory already empty, XP already 0; stats/advancements are
+  sibling files and survive. The loop, anchor and records are
+  untouched, and relocate from the spawn plateau is shorter than from
+  his current cell. Classified owner-level by the Gate-0 lane; the
+  character brief's no-world-editing rule keeps it there. Death +
+  respawn is a transient cure only (re-freezes around the saved
+  state) — though note his post-death windows are historically his
+  mobile ones, and he is at food 1–2 with no passive mobs in scan
+  range, so a starvation respawn may open such a window unaided.
+- **Milestones at handoff: none yet** (relocate incomplete; no
+  SCOREBOARD entry — the pickaxe was never crafted, and no credit is
+  claimed). Deaths 37, zero operator-caused. The loop is LIVE in
+  character mode and keeps working the goal stack; if the resident's
+  connection ends, relaunch with `CODY_CHARACTER=1 python3 codyctl.py
+  start` from `pulse/`.

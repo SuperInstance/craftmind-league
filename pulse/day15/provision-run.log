@@ -1,0 +1,45 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+PROV {"ts":"2026-11-10T07:38:22.265Z","kind":"health-drop","hp":16.666667938232422,"food":20}
+PROV {"ts":"2026-11-10T07:38:22.266Z","kind":"spawned","pos":{"x":28.799582983788852,"y":67,"z":-104.1035502706622},"hp":16.666667938232422,"food":20,"inventory":{}}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+PROV {"ts":"2026-11-10T07:38:22.611Z","kind":"health-drop","hp":16.83333396911621,"food":20}
+PROV {"ts":"2026-11-10T07:38:22.715Z","kind":"health-drop","hp":13.833333969116211,"food":20}
+PROV {"ts":"2026-11-10T07:38:23.122Z","kind":"health-drop","hp":14.000000953674316,"food":20}
+PROV {"ts":"2026-11-10T07:38:23.615Z","kind":"health-drop","hp":14.166667938232422,"food":20}
+PROV {"ts":"2026-11-10T07:38:23.720Z","kind":"health-drop","hp":11.166667938232422,"food":20}
+PROV {"ts":"2026-11-10T07:38:24.121Z","kind":"health-drop","hp":11.333334922790527,"food":20}
+PROV {"ts":"2026-11-10T07:38:24.172Z","kind":"health-drop","hp":11.333334922790527,"food":20}
+PROV {"ts":"2026-11-10T07:38:24.725Z","kind":"health-drop","hp":8.333334922790527,"food":20}
+PROV {"ts":"2026-11-10T07:38:25.710Z","kind":"health-drop","hp":5.333334922790527,"food":20}
+PROV {"ts":"2026-11-10T07:38:26.713Z","kind":"health-drop","hp":2.3333349227905273,"food":20}
+PROV {"ts":"2026-11-10T07:38:27.720Z","kind":"health-drop","hp":0,"food":20}
+PROV {"ts":"2026-11-10T07:38:27.720Z","kind":"DEATH-DURING-PROVISIONING","deaths":1}
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+PROV {"ts":"2026-11-10T07:39:04.280Z","kind":"provisioned","inventory":{"cooked_porkchop":32},"hp":20,"food":20,"after_s":42}
+PROV {"ts":"2026-11-10T07:39:04.280Z","kind":"quitting","ok":true,"deaths":1,"hurt":12,"inventory":{"cooked_porkchop":32}}
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

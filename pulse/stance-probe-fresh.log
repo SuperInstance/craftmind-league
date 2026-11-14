@@ -1,0 +1,5 @@
+[SP] spawn fresh {"pos":{"x":38.5,"y":67,"z":-85.5},"uuid":"be8ff269-53b9-3754-bd24-15528abfa665"}
+[SP] settled {"pos":{"x":38.5,"y":67,"z":-85.5},"health":20,"food":20}
+[SP] leg travel-pad {"tag":"travel-pad","targetCell":[64,-93],"ok":false,"err":null,"start":{"x":38.5,"y":67,"z":-85.5},"end":{"x":41.201,"y":67,"z":-84.309},"dispH":2.952,"forcedMoves":1000}
+[SP] leg chain-oak {"tag":"chain-oak","targetCell":[66,-97],"ok":false,"err":null,"start":{"x":41.201,"y":67,"z":-84.309},"end":{"x":46.418,"y":66,"z":-86.693},"dispH":5.736,"forcedMoves":462}
+[SP] leg chain-rimW {"tag":"chain-rimW","targetCell":[66,-102],"ok":false,"err":null,"start":{"x":46.418,"y":66,"z":-86.693},"end":{"x":47.908,"y":67,"z":-86.694},"dispH":1.49,"forcedMoves":452}

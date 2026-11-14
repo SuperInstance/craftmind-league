@@ -1,0 +1,4 @@
+[TRIAL] trial-S1-2026-11-07T04-38-15-034Z starting; window 15 min; candidate library/s1-2026-11-07T04-37-56-639Z.js
+[TRIAL] Cody up for trial: pos {"x":24.7,"y":67,"z":-109.3} stage S1
+[TRIAL] trial-S1-2026-11-07T04-38-15-034Z verdict FAIL {"craftingTable":false,"woodenPickaxe":false}
+[TRIAL] Cody relaunched on active set: state feed live

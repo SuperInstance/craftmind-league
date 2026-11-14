@@ -1,0 +1,7 @@
+OP provision process up; req=day9-op-req.jsonl res=day9-op-res.jsonl
+RES {"id":"selftest-ef41ca74","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"feed-6de5d5e2","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"reloc-f9af98b0","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"feed2-d4be3a4b","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"feed3-4bf18aee","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"quit-fb626314","ok":true,"bye":true}

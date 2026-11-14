@@ -1,0 +1,13 @@
+[DIGTEST] DigTest123343 spawn 39.50,73.00,-103.50
+[DIGTEST] wall base at 56.91,67.50,-103.50 onGround false
+[DIGTEST] WALL x=56: [y66 grass_block] [y67 leaf_litter] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] WALL x=57: [y66 grass_block] [y67 leaf_litter] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] WALL x=58: [y66 grass_block] [y67 leaf_litter] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] WALL x=59: [y66 grass_block] [y67 leaf_litter] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] WALL x=60: [y66 grass_block] [y67 leaf_litter] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] WALL x=61: [y66 grass_block] [y67 air] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] WALL x=62: [y66 grass_block] [y67 air] [y68 air] [y69 air] [y70 air] 
+[DIGTEST] CONTROL unarmed gotoNear: {"ok":true,"via":"pathfinder"} ms 1606 at 65.94,67.00,-103.50 stats {"enabled":false,"uses":0,"log":[]}
+[DIGTEST] ARMED gotoNear: {"ok":true} ms 0 end 66.27,67.00,-103.50 dxFromBase 9.36
+[DIGTEST] DIGSTEP-STATS {"enabled":true,"uses":0,"log":[]}
+[DIGTEST] DONE

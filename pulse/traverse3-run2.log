@@ -1,0 +1,8 @@
+[TRAV] spawn {"pos":{"x":22.5,"y":73,"z":-93.5},"onGround":true,"below":"oak_leaves","health":20}
+[TRAV] STAGE-WAIT — holding at spawn for operator teleport to the route start
+[TRAV] stage-wait done, navOk true at {"x":49.5,"y":66,"z":-83.5}
+[TRAV] navOk true at {"x":49.5,"y":66,"z":-83.5}
+[TRAV] leg E1 ok=true attempts=1 end={"x":53.31,"y":68.17,"z":-83.5} digUses=0
+[TRAV] leg E2 ok=false attempts=2 end={"x":49.63,"y":66,"z":-83.5} digUses=0
+[TRAV] traverse pass false homeDist 0.13 digUses 0 deaths 0
+[TRAV] DONE

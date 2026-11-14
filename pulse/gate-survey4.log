@@ -1,0 +1,220 @@
+[SURVEY4] SurveyG121447 spawn 24.50,68.00,-86.50 health undefined
+[SURVEY4] settled 24.50,68.00,-86.50 onGround true health 20
+[SURVEY4] ROW z=-96 tops(x44..78): 66,66,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,65,65,65,65,65,65,65,65,65 | litter: 48,49,51,53,56,57,59,64,65,66,67,70,71,72,77,78 | trunks: 55(oak_log@70),73(oak_log@69)
+[SURVEY4] ROW z=-95 tops(x44..78): 66,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,65,65,65,65,65,65,65,65,65 | litter: 47,49,50,51,53,54,55,56,57,63,64,65,66,67,68,71,73,74,78 | trunks: none
+[SURVEY4] ROW z=-94 tops(x44..78): 68,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,66,65,65,65,65,65,65,65,65 | litter: 47,49,53,55,56,57,58,59,61,62,65,68,69,70,72,73,74,75 | trunks: none
+[SURVEY4] ROW z=-93 tops(x44..78): 68,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66,66,66,65,65,65,65,65,65,65 | litter: 45,46,47,48,49,53,55,56,57,58,62,64,65,66,67,68,69,70,71,72,73,74,75,77,78 | trunks: none
+[SURVEY4] ROW z=-92 tops(x44..78): 68,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66,66,65,65,65,65,65,65 | litter: 44,45,46,47,48,49,52,53,54,55,56,59,61,63,65,67,68,69,70,72,73,74,75,76,77 | trunks: none
+[SURVEY4] ROW z=-91 tops(x44..78): 68,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66,66,66,65,65,65 | litter: 44,48,49,50,51,52,53,54,55,56,59,60,61,64,65,66 | trunks: 46(oak_log@73),68(birch_log@71),73(oak_log@70)
+[SURVEY4] ROW z=-90 tops(x44..78): 68,68,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,65,65,65,65 | litter: 44,45,48,49,51,56,58,61,62,63,65,66,74,75,76 | trunks: 50(oak_log@71),55(oak_log@71),60(oak_log@73)
+[SURVEY4] ROW z=-89 tops(x44..78): 68,68,67,67,67,67,67,67,67,67,67,67,67,67,68,67,67,67,67,67,67,66,66,66,66,64,63,64,65,66,66,66,65,65,65 | litter: 50,53,54,55,56,57,59,61,62,63,64 | trunks: none
+[SURVEY4] ROW z=-88 tops(x44..78): 67,67,67,67,67,67,67,67,67,67,67,67,67,67,68,67,67,67,67,67,67,65,65,65,65,64,63,63,63,66,66,66,65,66,66 | litter: 50,51,52,53,54,55,56,57,60,61,62,63,64,77 | trunks: none
+[SURVEY4] ROW z=-87 tops(x44..78): 66,65,65,65,66,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,65,64,64,64,64,63,63,63,63,64,64,66,66,66,66 | litter: 52,53,54,55,57,58,61,63 | trunks: 62(oak_log@72)
+[SURVEY4] ROW z=-86 tops(x44..78): 65,65,64,65,65,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,64,64,63,64,64,64,64,63,63,63,64,66,66,66,66 | litter: 53,55,56,57,58,63,77,78 | trunks: 54(oak_log@71),68(birch_log@72)
+[SURVEY4] ROW z=-85 tops(x44..78): 65,65,64,64,65,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,65,64,63,63,64,64,64,63,63,63,63,66,66,66,66 | litter: 54,55,56,57,58,60,61,62,77 | trunks: none
+[SURVEY4] ROW z=-84 tops(x44..78): 65,65,64,65,66,65,65,65,66,66,67,67,67,67,67,67,67,67,67,67,66,64,64,64,65,65,64,64,63,63,64,66,66,66,66 | litter: 55,56,58,78 | trunks: 77(oak_log@72)
+[SURVEY4] ROW z=-83 tops(x44..78): 67,66,65,66,65,65,64,65,65,66,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,64,63,64,64,66,66,66,66 | litter: 55,56,57,59,60,62,77,78 | trunks: none
+[SURVEY4] ROW z=-82 tops(x44..78): 67,67,67,67,65,65,64,64,65,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,66,66 | litter: 58,59,60,61,62,66,68,76,77,78 | trunks: none
+[SURVEY4] ROW z=-81 tops(x44..78): 67,67,67,67,66,65,65,65,65,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,66,66,66,66,67,67 | litter: 44,45,55,57,59,61,62,63,65,68,76,78 | trunks: none
+[SURVEY4] ROW z=-80 tops(x44..78): 67,67,67,67,66,65,65,65,65,66,66,67,67,67,67,67,67,67,67,67,67,68,66,66,66,66,66,66,67,67,67,67,67,67,67 | litter: 45,55,56,59,60,63,68,70,71,72,74,76,77,78 | trunks: 44(oak_log@72),47(oak_log@71),61(oak_log@72),69(oak_log@72)
+[SURVEY4] ROW z=-79 tops(x44..78): 67,67,67,67,67,65,64,64,64,65,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,66,66,67,67,67,67,67,67,67 | litter: 44,55,56,58,59,60,61,66,67,68,69,70,71,72,74,75,77 | trunks: 45(oak_log@74),46(oak_log@71),54(oak_log@72),76(oak_log@72)
+[SURVEY4] ROW z=-78 tops(x44..78): 67,67,67,67,67,65,65,64,64,66,67,67,67,67,67,67,67,67,67,67,67,67,66,66,67,66,66,66,67,67,67,67,67,67,67 | litter: 45,56,59,60,61,63,65,69,70,71,72,74,75,77,78 | trunks: none
+[SURVEY4] ROW z=-77 tops(x44..78): 67,67,67,67,67,66,65,65,65,67,67,67,67,67,67,67,67,67,67,67,67,66,66,66,66,67,66,66,67,67,67,67,67,67,67 | litter: 44,45,46,47,56,65,70,71,72,75,77,78 | trunks: none
+[SURVEY4] ROW z=-76 tops(x44..78): 67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,66,64,66,66,66,66,66,67,67,67,67,67,67,67 | litter: 59,62,63,68,69,70,72,73,77 | trunks: 71(birch_log@73)
+[SURVEY4] ROW z=-75 tops(x44..78): 67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,64,64,64,64,66,66,66,66,67,67,67,67,67,67,67 | litter: 44,46,58,62,69,71,72,73 | trunks: 64(birch_log@73)
+[SURVEY4] ROW z=-74 tops(x44..78): 67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,64,65,64,64,65,65,66,67,66,67,67,67,67,67,67 | litter: 44,50,72,77,78 | trunks: none
+[SURVEY4] ROW z=-73 tops(x44..78): 66,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,65,64,64,63,64,66,66,66,66,66,66,67,67,67,67,67 | litter: 45,46,48,50,60,61,77 | trunks: none
+[SURVEY4] ROW z=-72 tops(x44..78): 67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,66,64,64,64,66,66,66,66,66,66,66,66,67,67,67,67 | litter: 44,45,46,48,49,56,61,75 | trunks: 66(birch_log@71)
+[SURVEY4] STRAIGHT z=-96 ok=false maxUpE=0 maxUpW=1 climbsE=[] climbsW=["50,-96"] nulls=0 trunks=["55,-96(oak_log@70 over 66)"] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=[] litterCols=10 shelfBad=0
+[SURVEY4] STRAIGHT z=-95 ok=false maxUpE=0 maxUpW=1 climbsE=[] climbsW=["51,-95"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["51,-95"] litterCols=14 shelfBad=0
+[SURVEY4] STRAIGHT z=-94 ok=true maxUpE=0 maxUpW=1 climbsE=[] climbsW=["51,-94"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=[] litterCols=12 shelfBad=0
+[SURVEY4] STRAIGHT z=-93 ok=false maxUpE=0 maxUpW=1 climbsE=[] climbsW=["57,-93"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["57,-93"] litterCols=13 shelfBad=0
+[SURVEY4] STRAIGHT z=-92 ok=false maxUpE=0 maxUpW=1 climbsE=[] climbsW=["59,-92"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["59,-92"] litterCols=13 shelfBad=0
+[SURVEY4] STRAIGHT z=-91 ok=false maxUpE=0 maxUpW=1 climbsE=[] climbsW=["61,-91"] nulls=0 trunks=["68,-91(birch_log@71 over 66)"] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["61,-91"] litterCols=14 shelfBad=0
+[SURVEY4] STRAIGHT z=-90 ok=false maxUpE=0 maxUpW=1 climbsE=[] climbsW=["63,-90"] nulls=0 trunks=["50,-90(oak_log@71 over 67)","55,-90(oak_log@71 over 67)","60,-90(oak_log@73 over 67)"] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["63,-90"] litterCols=9 shelfBad=0
+[SURVEY4] STRAIGHT z=-89 ok=false maxUpE=1 maxUpW=2 climbsE=["58,-89"] climbsW=["64,-89","58,-89"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["64,-89"] litterCols=11 shelfBad=2
+[SURVEY4] STRAIGHT z=-88 ok=false maxUpE=1 maxUpW=2 climbsE=["58,-88"] climbsW=["68,-88","58,-88"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=["68,-88"] litterBadE=[] litterBadW=[] litterCols=13 shelfBad=2
+[SURVEY4] STRAIGHT z=-87 ok=false maxUpE=0 maxUpW=2 climbsE=[] climbsW=["68,-87","64,-87"] nulls=0 trunks=["62,-87(oak_log@72 over 67)"] isoE=true isoW=true runupBadE=[] runupBadW=["68,-87"] litterBadE=[] litterBadW=[] litterCols=8 shelfBad=0
+[SURVEY4] STRAIGHT z=-86 ok=false maxUpE=1 maxUpW=3 climbsE=["67,-86"] climbsW=["65,-86"] nulls=0 trunks=["54,-86(oak_log@71 over 67)","68,-86(birch_log@72 over 64)"] isoE=true isoW=true runupBadE=["67,-86"] runupBadW=["65,-86"] litterBadE=[] litterBadW=[] litterCols=6 shelfBad=0
+[SURVEY4] STRAIGHT z=-85 ok=false maxUpE=1 maxUpW=2 climbsE=["68,-85"] climbsW=["65,-85","64,-85"] nulls=0 trunks=[] isoE=true isoW=false runupBadE=[] runupBadW=["64,-85"] litterBadE=[] litterBadW=[] litterCols=8 shelfBad=0
+[SURVEY4] STRAIGHT z=-84 ok=false maxUpE=1 maxUpW=2 climbsE=["52,-84","54,-84","68,-84"] climbsW=["63,-84"] nulls=0 trunks=[] isoE=false isoW=true runupBadE=[] runupBadW=["63,-84"] litterBadE=[] litterBadW=[] litterCols=3 shelfBad=0
+[SURVEY4] STRAIGHT z=-83 ok=false maxUpE=1 maxUpW=1 climbsE=["51,-83","53,-83","54,-83"] climbsW=["64,-83","49,-83"] nulls=0 trunks=[] isoE=false isoW=true runupBadE=["51,-83","54,-83"] runupBadW=["49,-83"] litterBadE=[] litterBadW=[] litterCols=6 shelfBad=0
+[SURVEY4] STRAIGHT z=-82 ok=false maxUpE=2 maxUpW=1 climbsE=["52,-82"] climbsW=["66,-82","49,-82"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["66,-82"] litterCols=7 shelfBad=0
+[SURVEY4] STRAIGHT z=-81 ok=false maxUpE=2 maxUpW=1 climbsE=[] climbsW=["66,-81"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=[] litterCols=8 shelfBad=0
+[SURVEY4] STRAIGHT z=-80 ok=false maxUpE=1 maxUpW=2 climbsE=["53,-80","55,-80","65,-80"] climbsW=[] nulls=0 trunks=["61,-80(oak_log@72 over 67)","69,-80(oak_log@72 over 66)"] isoE=false isoW=true runupBadE=[] runupBadW=[] litterBadE=["55,-80"] litterBadW=[] litterCols=6 shelfBad=1
+[SURVEY4] STRAIGHT z=-79 ok=false maxUpE=2 maxUpW=1 climbsE=["53,-79"] climbsW=["65,-79","49,-79"] nulls=0 trunks=["54,-79(oak_log@72 over 67)"] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=[] litterCols=10 shelfBad=0
+[SURVEY4] STRAIGHT z=-78 ok=false maxUpE=2 maxUpW=1 climbsE=["54,-78","68,-78"] climbsW=["68,-78","65,-78","50,-78"] nulls=0 trunks=[] isoE=true isoW=false runupBadE=["54,-78"] runupBadW=["68,-78"] litterBadE=[] litterBadW=["65,-78"] litterCols=7 shelfBad=2
+[SURVEY4] STRAIGHT z=-77 ok=false maxUpE=2 maxUpW=1 climbsE=["69,-77"] climbsW=["64,-77","49,-77"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=[] litterCols=2 shelfBad=0
+[SURVEY4] STRAIGHT z=-76 ok=false maxUpE=2 maxUpW=2 climbsE=[] climbsW=["63,-76"] nulls=0 trunks=[] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=["63,-76"] litterCols=5 shelfBad=0
+[SURVEY4] STRAIGHT z=-75 ok=false maxUpE=2 maxUpW=3 climbsE=[] climbsW=[] nulls=0 trunks=["64,-75(birch_log@73 over 64)"] isoE=true isoW=true runupBadE=[] runupBadW=[] litterBadE=[] litterBadW=[] litterCols=3 shelfBad=0
+[SURVEY4] STRAIGHT z=-74 ok=false maxUpE=1 maxUpW=2 climbsE=["65,-74","68,-74"] climbsW=["65,-74","62,-74"] nulls=0 trunks=[] isoE=false isoW=false runupBadE=["65,-74"] runupBadW=["62,-74"] litterBadE=[] litterBadW=[] litterCols=1 shelfBad=2
+[SURVEY4] STRAIGHT z=-73 ok=false maxUpE=2 maxUpW=2 climbsE=["67,-73"] climbsW=["65,-73","63,-73"] nulls=0 trunks=[] isoE=true isoW=false runupBadE=["67,-73"] runupBadW=["65,-73"] litterBadE=[] litterBadW=[] litterCols=3 shelfBad=0
+[SURVEY4] STRAIGHT z=-72 ok=false maxUpE=2 maxUpW=2 climbsE=[] climbsW=["62,-72"] nulls=0 trunks=["66,-72(birch_log@71 over 64)"] isoE=true isoW=true runupBadE=[] runupBadW=["62,-72"] litterBadE=[] litterBadW=[] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-96 zB=-95 xs=54 climbsE=[] climbsW=["50,-96"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-96 zB=-94 xs=54 climbsE=[] climbsW=["50,-96"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=56 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=57 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=58 climbsE=[] climbsW=["51,-94"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=59 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=60 climbsE=[] climbsW=["51,-94"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=61 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=62 climbsE=[] climbsW=["51,-94"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=63 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-96 xs=64 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=54 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=55 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=56 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=57 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=58 climbsE=[] climbsW=["51,-94"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=59 climbsE=[] climbsW=["51,-94"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=60 climbsE=[] climbsW=["51,-94"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=61 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=62 climbsE=[] climbsW=["51,-94"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=63 climbsE=[] climbsW=["51,-94"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-95 xs=64 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=58 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=59 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=60 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=61 climbsE=[] climbsW=["51,-94"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=62 climbsE=[] climbsW=["51,-94"] litterCols=16 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=63 climbsE=[] climbsW=["51,-94"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-93 xs=64 climbsE=[] climbsW=["51,-94"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-92 xs=60 climbsE=[] climbsW=["51,-94"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-92 xs=61 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-92 xs=62 climbsE=[] climbsW=["51,-94"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-92 xs=63 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-92 xs=64 climbsE=[] climbsW=["51,-94"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-94 zB=-90 xs=64 climbsE=[] climbsW=["51,-94"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-93 zB=-95 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-93 zB=-94 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-92 zB=-96 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-92 zB=-95 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-92 zB=-95 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-92 zB=-94 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-92 zB=-94 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-92 zB=-93 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-91 zB=-96 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-91 zB=-95 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=17 shelfBad=0
+[SURVEY4] BENT ok zA=-91 zB=-95 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=16 shelfBad=0
+[SURVEY4] BENT ok zA=-91 zB=-94 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=17 shelfBad=0
+[SURVEY4] BENT ok zA=-91 zB=-94 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=16 shelfBad=0
+[SURVEY4] BENT ok zA=-91 zB=-93 xs=58 climbsE=[] climbsW=["58,-92"] litterCols=16 shelfBad=0
+[SURVEY4] BENT ok zA=-89 zB=-94 xs=54 climbsE=[] climbsW=["54,-93"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=55 climbsE=[] climbsW=["64,-83"] litterCols=16 shelfBad=0
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=56 climbsE=[] climbsW=["64,-83"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=57 climbsE=[] climbsW=["64,-83"] litterCols=15 shelfBad=0
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=58 climbsE=["58,-88"] climbsW=["64,-83","58,-88"] litterCols=15 shelfBad=2
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=59 climbsE=["58,-88"] climbsW=["64,-83","58,-88"] litterCols=11 shelfBad=2
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=60 climbsE=["58,-88"] climbsW=["64,-83","58,-88"] litterCols=12 shelfBad=2
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=61 climbsE=["58,-88"] climbsW=["64,-83","58,-88"] litterCols=13 shelfBad=2
+[SURVEY4] BENT ok zA=-88 zB=-83 xs=63 climbsE=["58,-88"] climbsW=["64,-83","58,-88"] litterCols=14 shelfBad=2
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=55 climbsE=[] climbsW=["64,-83"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=56 climbsE=[] climbsW=["64,-83"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=57 climbsE=[] climbsW=["64,-83"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=58 climbsE=[] climbsW=["64,-83"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=59 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=60 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-87 zB=-83 xs=61 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=54 climbsE=[] climbsW=["64,-83"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=55 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=56 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=57 climbsE=[] climbsW=["64,-83"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=58 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=59 climbsE=[] climbsW=["64,-83"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=60 climbsE=[] climbsW=["64,-83"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=61 climbsE=[] climbsW=["64,-83"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=62 climbsE=[] climbsW=["64,-83"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-83 xs=63 climbsE=[] climbsW=["64,-83"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=54 climbsE=[] climbsW=["66,-81"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=55 climbsE=[] climbsW=["66,-81"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=56 climbsE=[] climbsW=["66,-81"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=57 climbsE=[] climbsW=["66,-81"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=58 climbsE=[] climbsW=["66,-81"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=59 climbsE=[] climbsW=["66,-81"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=60 climbsE=[] climbsW=["66,-81"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=61 climbsE=[] climbsW=["66,-81"] litterCols=13 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=62 climbsE=[] climbsW=["66,-81"] litterCols=14 shelfBad=0
+[SURVEY4] BENT ok zA=-85 zB=-81 xs=63 climbsE=[] climbsW=["66,-81"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=55 climbsE=[] climbsW=["66,-81"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=56 climbsE=[] climbsW=["66,-81"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=57 climbsE=[] climbsW=["66,-81"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=58 climbsE=[] climbsW=["66,-81"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=59 climbsE=[] climbsW=["66,-81"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=60 climbsE=[] climbsW=["66,-81"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=62 climbsE=[] climbsW=["66,-81"] litterCols=6 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-81 xs=63 climbsE=[] climbsW=["66,-81"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=55 climbsE=[] climbsW=["65,-79"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=56 climbsE=[] climbsW=["65,-79"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=57 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=58 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=59 climbsE=[] climbsW=["65,-79"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=60 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=61 climbsE=[] climbsW=["65,-79"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=62 climbsE=[] climbsW=["65,-79"] litterCols=6 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-79 xs=63 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=54 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=55 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=56 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=57 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=1 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=58 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=1 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=59 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=60 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=61 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=62 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-76 zB=-77 xs=63 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=55 climbsE=[] climbsW=["65,-79"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=56 climbsE=[] climbsW=["65,-79"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=57 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=58 climbsE=[] climbsW=["65,-79"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=59 climbsE=[] climbsW=["65,-79"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=60 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=61 climbsE=[] climbsW=["65,-79"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=62 climbsE=[] climbsW=["65,-79"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-79 xs=63 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=54 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=55 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=56 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=57 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=1 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=58 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=59 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=60 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=61 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=62 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-75 zB=-77 xs=63 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=55 climbsE=[] climbsW=["65,-79"] litterCols=11 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=56 climbsE=[] climbsW=["65,-79"] litterCols=12 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=57 climbsE=[] climbsW=["65,-79"] litterCols=9 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=58 climbsE=[] climbsW=["65,-79"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=59 climbsE=[] climbsW=["65,-79"] litterCols=10 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=60 climbsE=[] climbsW=["65,-79"] litterCols=8 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=61 climbsE=[] climbsW=["65,-79"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-79 xs=62 climbsE=[] climbsW=["65,-79"] litterCols=7 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=54 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=55 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=56 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=57 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=58 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=59 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=60 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=61 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-74 zB=-77 xs=62 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=54 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=55 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=56 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=57 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=2 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=58 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=59 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=60 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=61 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-73 zB=-77 xs=62 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=6 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=54 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=55 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=56 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=57 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=3 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=58 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=59 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=60 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=4 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=61 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=5 shelfBad=0
+[SURVEY4] BENT ok zA=-72 zB=-77 xs=62 climbsE=["69,-77"] climbsW=["64,-77"] litterCols=6 shelfBad=0
+[SURVEY4] bent qualifying: 166 straight qualifying: 1
+[SURVEY4] DONE -> /home/caseydigennaro/craftmind-league/pulse/survey4-result-SurveyG121447.json

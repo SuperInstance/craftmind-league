@@ -1,0 +1,3 @@
+{"ts":"2026-11-10T06:53:08.633Z","kind":"spawned","pos":{"x":36.5,"y":73,"z":-86.5},"hp":20,"food":20,"inventory":{}}
+{"ts":"2026-11-10T06:53:40.639Z","kind":"provisioned","inventory":{"cooked_porkchop":32},"hp":20,"food":20,"after_s":32}
+{"ts":"2026-11-10T06:53:40.639Z","kind":"quitting","ok":true,"deaths":0,"hurt":0,"inventory":{"cooked_porkchop":32}}

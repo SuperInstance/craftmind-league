@@ -1,0 +1,7 @@
+[SP5] spawn {"pos":{"x":33.5,"y":66,"z":-93.5},"uuid":"68d85881-9fb6-3693-8023-ad0aa4ff7095"}
+[SP5] rest freshgen-at-spawn {"n":40,"posRange":{"x":0,"y":0,"z":0},"meanVel":{"x":0,"y":-0.078,"z":0},"onGroundFrac":1,"forcedMoves":0,"tag":"freshgen-at-spawn","at":{"x":33.5,"y":66,"z":-93.5},"cell":[33,-94]}
+[SP5] afterTeleport {"pos":{"x":33.5,"y":66,"z":-93.5},"health":20,"food":20}
+[SP5] leg travel-pad {"tag":"travel-pad","targetCell":[64,-93],"ok":false,"err":null,"start":{"x":33.5,"y":66,"z":-93.5},"end":{"x":37.696,"y":64.42,"z":-94.349},"dispH":4.281,"forcedMoves":887,"hostile":{"name":"spider","dist":6.044},"hp":20}
+[SP5] leg chain-oak {"tag":"chain-oak","targetCell":[66,-97],"ok":false,"err":null,"start":{"x":37.696,"y":64.42,"z":-94.349},"end":{"x":38.676,"y":65,"z":-94.47},"dispH":0.987,"forcedMoves":438,"hostile":{"name":"spider","dist":6.484},"hp":20}
+[SP5] leg chain-rimW {"tag":"chain-rimW","targetCell":[66,-102],"ok":false,"err":null,"start":{"x":38.676,"y":65,"z":-94.47},"end":{"x":38.685,"y":65,"z":-94.485},"dispH":0.017,"forcedMoves":427,"hostile":{"name":"spider","dist":6.498},"hp":20}
+[SP5] leg chain-68 {"tag":"chain-68","targetCell":[68,-102],"ok":false,"err":null,"start":{"x":38.685,"y":65,"z":-94.485},"end":{"x":38.682,"y":65,"z":-94.49},"dispH":0.006,"forcedMoves":429,"hostile":{"name":"spider","dist":6.498},"hp":20}

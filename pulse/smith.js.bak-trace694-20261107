@@ -1,0 +1,308 @@
+'use strict';
+/**
+ * smith.js — the Pulse's smith: a Voyager-pattern script author on a tick.
+ *
+ * One tick:
+ *   1. Read the world as evidence: cody-state.json, evidence.json,
+ *      curriculum.json, the pulse ledger (past trials + verdicts),
+ *      and the tail of Cody's resident log.
+ *   2. Ask the presence brain — THROUGH THE GOVERNOR, identity
+ *      league-pulse-smith — for exactly ONE artefact: a new skill
+ *      module or a revision of the current stage's script. The API
+ *      surface in the prompt is extracted from the framework's real
+ *      source (actions/index.js, prims.js, mineflayer's api.md),
+ *      never from the smith-operator's memory.
+ *   3. Extract the code, syntax-check it (node --check) and shape-test
+ *      it (child-process require: meta.stage matches, run is a
+ *      function). Failures are stored as evidence, not hidden.
+ *   4. Store the candidate in pulse/library/ with a header sidecar
+ *      (stage, tick, parent, the smith's own rationale). A candidate
+ *      becomes Cody ONLY through trial.js's evidence gate.
+ *
+ * Usage:
+ *   node smith.js tick [--stage S1]   — one tick now
+ *   node smith.js loop                — tick every 10 min; a FAIL
+ *                                       verdict in the ledger triggers
+ *                                       an early tick
+ */
+const fs = require('fs');
+const path = require('path');
+const { execFileSync } = require('child_process');
+
+const PULSE = '/home/caseydigennaro/craftmind-league/pulse';
+const LEAGUE = '/home/caseydigennaro/craftmind-league';
+const CM_SRC = path.join(LEAGUE, 'bots/craftmind/src');
+const CM_MOD = path.join(LEAGUE, 'bots/craftmind/node_modules');
+const GOVERNOR = 'http://127.0.0.1:8642/v1/chat/completions';
+const IDENTITY = 'league-pulse-smith';
+const MODEL = 'confluence-presence-brain';
+
+const readJson = (p, d) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return d; } };
+const tail = (p, n) => { try { return fs.readFileSync(p, 'utf8').split('\n').slice(-n).join('\n'); } catch { return ''; } };
+
+// ── API surface extraction (from real source) ────────────────────────
+function extractActions() {
+  const src = fs.readFileSync(path.join(CM_SRC, 'actions', 'index.js'), 'utf8');
+  const out = [];
+  const re = /^\s{2}(\w+): \{\n\s+description: '([^']+)'/gm;
+  let m;
+  while ((m = re.exec(src))) out.push(`- ${m[1]}: ${m[2]}`);
+  return out.join('\n');
+}
+
+function extractPrims() {
+  const src = fs.readFileSync(path.join(PULSE, 'lib', 'prims.js'), 'utf8');
+  return src.split('\n').filter((l) => l.startsWith('// prim:')).map((l) => '- ' + l.replace('// prim: ', '')).join('\n');
+}
+
+function extractMineflayer() {
+  const apiPath = path.join(CM_MOD, 'mineflayer', 'docs', 'api.md');
+  if (!fs.existsSync(apiPath)) return '(mineflayer api.md not found on this bench)';
+  const md = fs.readFileSync(apiPath, 'utf8');
+  const wants = ['bot.dig(', 'bot.craft(', 'bot.placeBlock(', 'bot.equip(', 'bot.findBlocks(', 'bot.blockAt(', 'bot.inventory', 'bot.openChest(', 'bot.pathfinder', 'bot.time', 'bot.entities', 'bot.recipesFor('];
+  const lines = md.split('\n');
+  const picked = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith('### ') && wants.some((w) => lines[i].includes(w))) {
+      picked.push(lines.slice(i, i + 5).join('\n'));
+    }
+  }
+  return picked.join('\n\n').slice(0, 1600);
+}
+
+function apiSurface(withActions = true) {
+  const parts = [
+    '## SEEDED PRIMITIVES — ctx.prims (compose these first)',
+    extractPrims(),
+    '',
+  ];
+  if (withActions) {
+    parts.push('## FRAMEWORK ACTION NAMES (same operations exist inside the framework; your ctx.bot covers them via mineflayer)', extractActions(), '');
+  }
+  parts.push(
+    '## MINEFLAYER ESSENTIALS — from node_modules/mineflayer/docs/api.md',
+    extractMineflayer(),
+    '',
+    '## YOUR ctx OBJECT',
+    '- ctx.bot: mineflayer bot (bot.entity.position, bot.health, bot.food, bot.inventory.items(), bot.blockAt(vec3), bot.findBlocks({matching, maxDistance, count}), bot.chat(msg), bot.time.timeOfDay 0..24000).',
+    '- ctx.prims: the primitives above. ctx.Vec3: new ctx.Vec3(x,y,z), .offset(x,y,z). ctx.anchor: {x,y,z} home anchor. ctx.stage: stage id. ctx.log(...): pulse log.'
+  );
+  return parts.join('\n');
+}
+
+// ── prompt ───────────────────────────────────────────────────────────
+function buildPrompt(stage, parentSource) {
+  const state = readJson(path.join(PULSE, 'cody-state.json'), {});
+  const evidence = readJson(path.join(PULSE, 'evidence.json'), {});
+  const ledger = tail(path.join(PULSE, 'ledger.jsonl'), 8);
+  const failures = ledger.split('\n').filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } })
+    .filter((e) => e && e.stage === stage.id && e.kind === 'trial');
+  const residentLog = tail(path.join(LEAGUE, 'logs', 'resident-cody.log'), 40)
+    .split('\n').filter((l) => /PULSE|RESIDENT|error|Error|died|death/i.test(l)).slice(-18).join('\n');
+
+  const system = [
+    'You are the SMITH in a Voyager-pattern agent system. A Minecraft bot named Cody (a mineflayer client running the CraftMind framework) lives in a survival world and climbs a staged curriculum: settle in. You do not control Cody directly. You write ONE JavaScript skill module; a runner inside Cody executes it repeatedly; a separate gate process judges success ONLY from world evidence (inventory snapshots, block scans, server logs) — never from what your script claims.',
+    '',
+    'OUTPUT CONTRACT — reply with exactly this shape and nothing else:',
+    'RATIONALE: <1-3 sentences: what you changed and why, given the evidence>',
+    '```js',
+    'module.exports = {',
+    "  meta: { name: '<stage>-<short-name>', stage: '" + stage.id + "', summary: '<one line>' },",
+    '  run: async (ctx) => { /* your code */ return { done: true }; }',
+    '};',
+    '```',
+    '',
+    'HARD RULES:',
+    '1. Every skill is an IDEMPOTENT ENSURE: first check whether the stage goal already holds (inventory / world state) and return { done: true } immediately if it does. The runner loops your skill forever; partial progress must never be redone destructively.',
+    '2. NO require() / import — everything you need is on ctx (see the API surface). CommonJS module.exports only.',
+    '3. Use ctx.prims for movement, digging, crafting, placing — they are timeout-guarded and never throw. Check every result: if (r.ok) ... else log and adapt (e.g. move elsewhere, try another tree). Raw bot calls may throw: wrap risky ones in try/catch.',
+    '4. Keep one run() under ~8 minutes of game time. Prefer several small loops with progress checks over one giant sequence.',
+    '5. At most 2 ctx.prims.say() calls per run, and only for real milestones.',
+    '6. Item and block names are minecraft-data names: oak_log, oak_planks, stick, crafting_table, wooden_pickaxe, cobblestone, stone_pickaxe, chest, torch, coal, oak_door. Trees near the anchor are oak/birch (any *_log works for planks of that type — match the wood type you cut when crafting planks: oak_log -> oak_planks).',
+    '7. Deaths happen (hostile mobs): if Cody dies he respawns at world spawn (32,70,-96) and LOSES his carried inventory where he died. Your skill must cope: re-check state from scratch each run and re-gather what is missing.',
+    '',
+    apiSurface(!parentSource),
+  ].join('\n');
+
+  const user = [
+    `## STAGE ${stage.id} — ${stage.title}`,
+    stage.goal,
+    `Evidence the gate will use: ${stage.evidence}`,
+    '',
+    '## ENVIRONMENT FACTS (server rules — plan around them)',
+    `- World spawn point: ${state.spawnPoint ? JSON.stringify(state.spawnPoint) : 'near the anchor'}. The server runs spawn-protection=16: within 16 blocks (x/z plane) of the world spawn, a non-op player CANNOT break or place blocks — digs silently revert and placements fail. Cody is NOT op. His home anchor is ${state.anchor ? JSON.stringify(state.anchor) : 'unknown'}, close to spawn, so the nearest trees and the anchor clearing are likely INSIDE the protected circle.`,
+    '- Therefore: travel OUTSIDE the protected circle (x/z distance from spawn > 17) to gather and to build. The shelter must still be within ~24 blocks of the anchor — pick a site on the far side of the anchor from spawn so both constraints hold.',
+    '- When a dig or place keeps failing at one spot, MOVE — do not retry the same block.',
+    '',
+    '- RECIPE FACTS (Minecraft rules - the trial evidence shows these being missed): a crafting_table is an ITEM: it must be CRAFTED from 4 planks (craftByName) into the inventory BEFORE it can be placed; placeOnTop/placeAgainst fail with "no crafting_table in inventory" until then. placeOnTop(bot, item, refPos) places the item ON TOP of the block at refPos - the placed block lands at refPos + (0,1,0); pass a ground block BESIDE Cody, and the table position for later crafting is that landing cell, not the ground under his feet. A wooden_pickaxe is a 3x3 recipe: craft it with craftByName(bot, "wooden_pickaxe", 1, tablePos) where tablePos is the position of the PLACED table block. The full S1 chain needs at least 9 planks = 3 logs: 4 for the table, 2 per stick batch (sticks come in batches of 4), 3 for the pickaxe head - do not convert all planks to sticks before the table exists.',
+    '- GATHER FACT (measured on this world, Trial 2 vs Trial 3): gathering with digBlock - which walks into dig reach and digs the block from where Cody stands - collected a full trunk of logs; gathering with digColumn collected ZERO logs in a whole 15-minute trial, because digColumn demands arrival within 1 block of the trunk base and the body pinned on the approach terrain. Gather with digBlock on the nearest *_log block from findBlocks, one block per call, and let the run loop repeat; do NOT use digColumn for open-ground gathering.',
+    '- PLACEMENT GEOMETRY (measured): bot.entity.position is Cody FEET - the air cell he stands in. The solid ground block under him is feet + (0,-1,0). A reference position of feet + (0,1,0) is air and placeOnTop fails on it. To place a crafting table on the ground BESIDE him: refPos = feet + (1,-1,0) (the ground block one step east; any horizontal neighbour works); the table then lands at feet + (1,0,0); craft the pickaxe with tablePos = feet + (1,0,0), the placed table cell itself.',
+    '- TERRAIN FACT (gate-survey4 heightmap, measured; two trials pinned on it): the hollow around x70-74, z-85..-88 has ground tops of 63 and is ringed east, south and north by +2/+3 rims (e.g. (73,-88) top 66 against (72,-88) top 63). No movement available to these scripts climbs more than +1 and locomotion cannot dig, so the oak at (77,-84) is UNREACHABLE from inside the hollow - Trials 3 and 4 both pinned at (72,64,-88) with zero logs. The walkable route out of the hollow runs WEST: (69,-88) top 64, (68,-88) top 65, then NORTH to the row z=-90 shelf (tops 66), EAST along the shelf to about x76, then SOUTH to the oak at (77,-84) over steps of at most +1. The plateau woods west of x60 (rows z=-82..-84, tops 65-67) are the other proven gathering ground - Trial 2 gathered a full material chain there. If Cody starts inside the hollow (x 69-75, z -84..-89, feet y <= 65), he is in the trap: route out first, gather second.',
+    '- ROUTING FACT (measured, Trial 5): a single walkTo from inside the hollow to the shelf cell (68,-90) FAILS - the helm steers a straight line, the diagonal presses the +2 north rim, and the body pinned at (72,64,-88) for a full trial. The exit must be walked as TWO walkTo legs in order: leg 1 WEST along the hollow floor to (68, 65, -88) - cells (71,-88) 63, (70,-88) 63, (69,-88) 64, (68,-88) 65, never more than +1; leg 2 NORTH to (68, 67, -90) - cells (68,-89) 66, (68,-90) 66. Issue the second walkTo only after the first returns (or after Cody x <= 68.5). The same applies anywhere in this terrain: shape routes as waypoint legs over <=+1 cells instead of one straight line at a diagonal target.',
+    '- FLOW FACT (measured across Trials 2-5): a run() that returns immediately after a single dig never reaches its crafting steps while any log block remains within findBlocks range - the woods always have another log within 32. Working scripts INTERLEAVE in one run: gather while materials are short, then fall through to the crafting steps in the SAME run (the Trial 2 structure; it produced planks 5 / sticks 8 in one window).',
+    '- SURVIVAL FACTS (measured, Trial 7, 2026-11-07 - the binding constraint is now MOBS, not terrain): Trial 7 ran on fair ground; the candidate moved and climbed freely with no freeze, and the world killed it anyway. Death map, all in daylight, all mob kills: 21:21:25Z Zombie at the work shoulder (68.5,66,-87.7); then, after respawn at world spawn, on the march back east: 21:22:15Z Creeper (27.8,69,-90.6), 21:22:51Z Zombie (25.7,67,-106.7), 21:23:27Z Skeleton (37.3,66,-100.1), 21:23:55Z Skeleton (44.7,70,-87.9), 21:24:18Z Zombie (51.4,67,-95.7), 21:24:51Z a seventh death - 7 deaths in 3.5 minutes, each respawn life gaining only 7-14 blocks. The unarmed vanilla resident was killed too, a minute after relaunch (21:26:17Z at (37.7,65,-96.7)). Cody went 29 -> 37 deaths across the run; operator-caused deaths: zero.',
+    '- WHY THE HOME RANGE IS SATURATED: days of daylight-hold night-window leaks spawned mobs faster than they despawned; they shelter from daylight in shade - under canopy, in the hollow, against shaded faces - and survive there indefinitely. The hold has since been tightened (300 s refresh), so accumulation has stopped, but the standing population remains. Zombies and skeletons burn in OPEN daylight but not in shade; creepers never burn and explode at close range. The floor of the corridor between world spawn and the east woods is the saturated zone, and shaded pockets anywhere are ambush ground.',
+    '- CODY NOW (state feed ~21:40Z): Cody sits settled and stable on the high tops at about (26.6, 73, -93.3), near his anchor, vanilla resident running, and the high ground there has been death-free since 21:26Z. But the perch is only ~6 blocks from world spawn (32,70,-96) - INSIDE the protection circle - so the logs visible around it (e.g. (28,73,-96)) cannot be dug. Diggable wood starts outside the circle (more than 17 blocks x/z from spawn); the proven work ground is east along the tops (the plateau woods west of x60 and the z=-84 shoulder, where Trials 2 and 7 gathered). Plan the whole job from the high ground: leave the circle along the tops, work in open sun, never drop into the hollow or onto the corridor floor.',
+    '- SURVIVAL IS PART OF THE SKILL NOW: every earlier candidate had no survival behaviour and Trial 7 was decided by exactly that. Any candidate WITHOUT a survival answer will be ground down by respawns, and ONE death forfeits the whole material chain (carried inventory drops where he dies). Build the answer into the run loop itself, not as an afterthought: (i) SCAN every few seconds - ctx.bot.entities holds every loaded entity with .name and .position; hostile names are zombie, skeleton, creeper (spiders are docile in daylight; those three are not). (ii) On a hostile within ~10 blocks, or bot.health dropping: STOP work and move - flee UPHILL into open sun (walkTo / gotoNear to a top at least ~14 blocks from the hostile), break line of sight, and WAIT there re-scanning until no hostile is within ~14 blocks for several seconds before resuming. (iii) Creepers: keep ~16 blocks of distance and prefer ground a creeper cannot climb to (+2 or more above its ground). (iv) Work in open sun on the tops; do not work in shade, under canopy, or in the hollow. (v) Bank progress in small loops - gather a little, craft what can already be crafted - so a forced retreat never strands the whole chain on one exposed trip.',
+    '- RESPAWN FACT (corrects hard rule 7): on death Cody respawns at WORLD SPAWN (32,70,-96), NOT at his anchor (24,67,-111) - about 16 blocks away, inside the protection circle, at the west end of the saturated corridor, empty-handed. A death restarts him at the most dangerous address in the home range; the first job after any respawn is to get back UP onto the high tops, not to march the corridor floor east at ground level.',
+    '- DEATH BUDGET (new standing gate rule, 2026-11-07): trials now run under a hard death circuit-breaker - the gate ABORTS the trial automatically at its 3rd death in the run and judges the evidence gathered up to that point. Trial 7 (7 deaths in one run) is the grind this rule exists to prevent. Two deaths early means one life left: a candidate that spends lives on respawn marches will be aborted before it can finish. Survive first; the exam is second.',
+    '- CHAIN COMPLETENESS FACT (static trace of candidate s1-2026-11-07T21-45-05-823Z.js against the prim sources - the same check Trial 4 recorded): that candidate COUNTS oak_planks/birch_planks but contains no craft step that PRODUCES planks, so its table/pickaxe branch could never fire and it would gather logs forever. Counting an item never creates it. The S1 chain must contain an explicit producing step for EVERY link, in order: *_log -> *_planks (craftByName(bot, \'oak_planks\') or birch_planks, 2x2 grid, null table), planks -> stick, 4 planks -> crafting_table, place the table, then 3 planks + 2 sticks -> wooden_pickaxe at the placed table position. Before treating a candidate as finished, trace it: every item it counts or consumes must have a producing step earlier in the same run structure.',
+    '- SURVIVAL PLACEMENT FACT (measured from Trial 7 death mechanics): flee to a KNOWN cell, never a random offset - a random flee can run toward the hostile, off the tops, or into the hollow. Compute the flee direction AWAY from the hostile (Cody position minus hostile position), extend it at least ~14 blocks, and land on the highest ground in that direction (prims.groundY). Then WAIT there and re-scan: resume work only when a fresh scan shows no hostile within ~14 blocks. And re-scan BETWEEN work steps, not only at run start - the first Trial 7 kill landed mid-task at the work shoulder while the candidate was busy working, blind.',
+    '',
+    '## CODY RIGHT NOW (state feed)',
+    JSON.stringify(state).slice(0, 1500),
+    '',
+    '## WORLD EVIDENCE SCAN (latest)',
+    JSON.stringify(evidence).slice(0, 1100),
+    '',
+    '## PAST TRIALS FOR THIS STAGE (newest last)',
+    failures.length ? failures.map((f) => `- ${f.ts} candidate ${path.basename(f.candidate || '?')} verdict ${f.verdict} evidence: ${JSON.stringify(f.evidence).slice(0, 500)}`).join('\n') : '(none yet)',
+    '',
+    '## RECENT RESIDENT LOG LINES',
+    residentLog || '(none)',
+    parentSource ? '\n## CURRENT SCRIPT FOR THIS STAGE (revise it — keep what worked, fix what the evidence shows)\n```js\n' + parentSource.slice(0, 2600) + '\n```' : '',
+    '',
+    failures.length
+      ? 'Write a REVISION of the current script that fixes what the trial evidence shows. Do not start over unless the evidence says the whole approach failed.'
+      : 'Write the first skill for this stage.',
+  ].join('\n');
+
+  return { system, user };
+}
+
+// ── governor call ────────────────────────────────────────────────────
+async function callSmith(system, user) {
+  const res = await fetch(GOVERNOR, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + IDENTITY },
+    body: JSON.stringify({
+      model: MODEL,
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+      temperature: 0.35,
+      max_tokens: 3200,
+    }),
+    signal: AbortSignal.timeout(240000),
+  });
+  if (!res.ok) throw new Error('governor HTTP ' + res.status + ': ' + (await res.text()).slice(0, 300));
+  const data = await res.json();
+  return data.choices && data.choices[0] && data.choices[0].message ? data.choices[0].message.content : '';
+}
+
+function governorReceipt() {
+  const lines = tail(path.join(LEAGUE, 'ledger', 'mind-calls.jsonl'), 30).split('\n').filter(Boolean);
+  for (let i = lines.length - 1; i >= 0; i--) {
+    try { const j = JSON.parse(lines[i]); if (j.agent === 'pulse-smith') return j; } catch {}
+  }
+  return null;
+}
+
+// ── extraction + validation ──────────────────────────────────────────
+function extract(reply) {
+  const rat = reply.match(/RATIONALE:\s*(.+)/);
+  const fence = reply.match(/```(?:js|javascript)\n([\s\S]*?)```/);
+  return { rationale: rat ? rat[1].trim() : '', code: fence ? fence[1] : null };
+}
+
+function validate(code, stageId, tmpFile) {
+  fs.writeFileSync(tmpFile, code);
+  execFileSync(process.execPath, ['--check', tmpFile], { timeout: 15000 });
+  const shapeSrc = `
+    const m = require(${JSON.stringify(tmpFile)});
+    if (!m || typeof m !== 'object') throw new Error('module did not export an object');
+    if (!m.meta || m.meta.stage !== ${JSON.stringify(stageId)}) throw new Error('meta.stage mismatch: ' + (m.meta && m.meta.stage));
+    if (typeof m.run !== 'function') throw new Error('run is not a function');
+    console.log('SHAPE-OK ' + (m.meta.name || '?'));
+  `;
+  const out = execFileSync(process.execPath, ['-e', shapeSrc], { timeout: 15000 }).toString();
+  return out.trim();
+}
+
+// ── one tick ─────────────────────────────────────────────────────────
+async function tick(stageOverride) {
+  const curr = readJson(path.join(PULSE, 'curriculum.json'), { stages: [] });
+  const active = readJson(path.join(PULSE, 'active.json'), { stages: {} });
+  const stage = stageOverride
+    ? curr.stages.find((s) => s.id === stageOverride)
+    : curr.stages.find((s) => s.status !== 'passed');
+  if (!stage) { console.log('SMITH: curriculum complete — no stage to write for'); return null; }
+
+  // Parent: last candidate or the promoted skill for this stage.
+  const libDir = path.join(PULSE, 'library');
+  fs.mkdirSync(libDir, { recursive: true });
+  const siblings = fs.readdirSync(libDir).filter((f) => f.startsWith(stage.id.toLowerCase() + '-') && f.endsWith('.js')).sort();
+  const promoted = active.stages && active.stages[stage.id] && active.stages[stage.id].skill;
+  const parentPath = promoted || (siblings.length ? path.join(libDir, siblings[siblings.length - 1]) : null);
+  const parentSource = parentPath && fs.existsSync(parentPath) ? fs.readFileSync(parentPath, 'utf8') : null;
+
+  const { system, user } = buildPrompt(stage, parentSource);
+  console.log(`SMITH TICK stage=${stage.id} parent=${parentPath ? path.basename(parentPath) : '(none)'} promptChars=${system.length + user.length}`);
+  const reply = await callSmith(system, user);
+  const receipt = governorReceipt();
+  console.log('SMITH governor receipt:', JSON.stringify(receipt));
+
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const { rationale, code } = extract(reply);
+  if (!code) {
+    const rawPath = path.join(libDir, `${stage.id.toLowerCase()}-rawfail-${stamp}.txt`);
+    fs.writeFileSync(rawPath, reply);
+    console.log('SMITH EXTRACTION FAILED — raw reply stored at', rawPath);
+    fs.appendFileSync(path.join(PULSE, 'library', 'ticks.jsonl'), JSON.stringify({ ts: new Date().toISOString(), stage: stage.id, ok: false, error: 'no code fence in reply', rawPath, receipt }) + '\n');
+    return { ok: false, error: 'extraction', rawPath };
+  }
+
+  const file = path.join(libDir, `${stage.id.toLowerCase()}-${stamp}.js`);
+  try {
+    const shape = validate(code, stage.id, file + '.tmp.js');
+    fs.writeFileSync(file, code);
+    fs.unlinkSync(file + '.tmp.js');
+    const header = {
+      file, stage: stage.id, tick: new Date().toISOString(), parent: parentPath,
+      rationale, model: MODEL, identity: IDENTITY, governorReceipt: receipt, shape,
+    };
+    fs.writeFileSync(file.replace(/\.js$/, '.json'), JSON.stringify(header, null, 1));
+    fs.appendFileSync(path.join(PULSE, 'library', 'ticks.jsonl'), JSON.stringify({ ts: header.tick, stage: stage.id, ok: true, file, rationale }) + '\n');
+    console.log('SMITH CANDIDATE:', file);
+    console.log('SMITH RATIONALE:', rationale);
+    return { ok: true, file, rationale, receipt };
+  } catch (e) {
+    fs.writeFileSync(file.replace(/\.js$/, '.invalid.js'), code);
+    console.log('SMITH VALIDATION FAILED:', e.message);
+    fs.appendFileSync(path.join(PULSE, 'library', 'ticks.jsonl'), JSON.stringify({ ts: new Date().toISOString(), stage: stage.id, ok: false, error: 'validation: ' + e.message, receipt }) + '\n');
+    return { ok: false, error: 'validation: ' + e.message };
+  }
+}
+
+// ── main ─────────────────────────────────────────────────────────────
+(async () => {
+  const cmd = process.argv[2] || 'tick';
+  const stageIdx = process.argv.indexOf('--stage');
+  const stage = stageIdx >= 0 ? process.argv[stageIdx + 1] : null;
+  if (cmd === 'tick') {
+    const r = await tick(stage);
+    process.exit(r && r.ok ? 0 : 1);
+  } else if (cmd === 'loop') {
+    console.log('SMITH loop: tick every 10 min + on FAIL verdicts');
+    let lastLedgerSize = 0;
+    const ledgerPath = path.join(PULSE, 'ledger.jsonl');
+    setInterval(async () => {
+      try {
+        const st = fs.existsSync(ledgerPath) ? fs.statSync(ledgerPath).size : 0;
+        if (st !== lastLedgerSize) {
+          const fresh = tail(ledgerPath, 3);
+          lastLedgerSize = st;
+          if (/\"verdict\": \"FAIL\"/.test(fresh) || /\"verdict\":\"FAIL\"/.test(fresh)) {
+            console.log('SMITH loop: FAIL verdict seen — early tick');
+            await tick(null);
+          }
+        }
+      } catch (e) { console.log('SMITH loop watch error:', e.message); }
+    }, 30000);
+    for (;;) { await tick(null); await new Promise((r) => setTimeout(r, 10 * 60 * 1000)); }
+  } else {
+    console.error('usage: node smith.js tick [--stage S1] | loop');
+    process.exit(2);
+  }
+})().catch((e) => { console.error('SMITH FATAL:', e.message); process.exit(1); });

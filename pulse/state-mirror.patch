@@ -1,0 +1,27 @@
+--- direct-drive-day3.js	2026-11-08 23:40:39.250331514 -0900
++++ /tmp/dd-patch-test.js	2026-11-09 01:12:02.124325670 -0900
+@@ -636,6 +636,7 @@
+ function noteBeat(text) { beats.push(text); if (beats.length > 10) beats.shift(); }
+ 
+ // ── main ─────────────────────────────────────────────────────────────
++let lastSay = '', lastResult = null;  // state-mirror (cameraman v3 feed): latest narration + command result, mirrored into the state file each cycle
+ async function main() {
+   const bot = createBot({
+     host: process.env.MC_HOST || '192.168.0.50', port: 25565, username: 'Cody', version: '26.1',
+@@ -721,7 +722,7 @@
+     s.structuresText = structuresText(structs);
+     notePlaceVisits(bot, structs);
+     climbTable = knownTable(bot);
+-    try { fs.writeFileSync(STATE_PATH, JSON.stringify({ ts: nowIso(), cycle, ...s }, null, 1)); } catch {}
++    try { fs.writeFileSync(STATE_PATH, JSON.stringify({ ts: nowIso(), cycle, say: lastSay, result: lastResult, ...s }, null, 1)); } catch {}
+     const userMsg = `LAST EVENT: ${lastEvent}\n\n${stateText(s)}${placesText(bot) ? `\n\n${placesText(bot)}` : ''}${beats.length ? `\n\nScene so far (recent beats): ${beats.slice(-4).join(' | ')}` : ''}\n\nYour move — ONE JSON object: {"say": "...", "cmd": "..."}`;
+     history.push({ role: 'user', content: userMsg });
+     while (history.length > 12) history.shift();
+@@ -749,6 +750,7 @@
+     if (say) { try { bot.chat(say.slice(0, 200)); } catch {} }
+     log(`cycle ${cycle} [${r.route}] say="${say}" cmd="${cmd}"`);
+     const res = await execCmd(bot, cmd);
++    lastSay = say; lastResult = res;  // state-mirror: publish this cycle's narration + result for the cameraman's anticipation/stall grammar
+     lastEvent = `Your command "${cmd}" ${res.ok ? 'worked' : 'did not work'}: ${res.detail}.`;
+     noteBeat(`${cmd} -> ${res.detail}`.slice(0, 140));
+     trace({ kind: 'cycle', cycle, route: r.route, usage: r.usage, say, cmd, result: res, pos: perceive(bot).pos, hp: bot.health, food: bot.food });

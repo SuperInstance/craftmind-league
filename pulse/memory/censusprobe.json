@@ -1,0 +1,42 @@
+{
+  "players": {
+    "mapprobe": {
+      "firstMet": "2026-11-09T12:40:52.907Z",
+      "lastSeen": "2026-11-09T12:40:52.982Z",
+      "interactions": 2
+    },
+    "gallery": {
+      "firstMet": "2026-11-09T12:44:15.251Z",
+      "lastSeen": "2026-11-09T13:30:19.946Z",
+      "interactions": 16
+    },
+    "mapprobe2": {
+      "firstMet": "2026-11-09T12:44:23.246Z",
+      "lastSeen": "2026-11-09T12:44:23.327Z",
+      "interactions": 2
+    },
+    "mapprobe3": {
+      "firstMet": "2026-11-09T12:48:12.413Z",
+      "lastSeen": "2026-11-09T12:48:12.490Z",
+      "interactions": 2
+    },
+    "felltest": {
+      "firstMet": "2026-11-09T12:54:24.846Z",
+      "lastSeen": "2026-11-09T13:07:41.037Z",
+      "interactions": 8
+    },
+    "cody": {
+      "firstMet": "2026-11-09T13:14:52.401Z",
+      "lastSeen": "2026-11-09T13:30:46.230Z",
+      "interactions": 42
+    }
+  },
+  "places": {},
+  "builds": {},
+  "resources": {},
+  "deaths": 0,
+  "deathCauses": [],
+  "meta": {},
+  "lastSession": "2026-11-09T13:30:54.712Z",
+  "scriptHistory": []
+}

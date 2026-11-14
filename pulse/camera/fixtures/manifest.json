@@ -1,0 +1,27 @@
+{
+ "extracted": "2026-11-09 (subject-keeper build lane)",
+ "sources": {
+  "day10 trace": {
+   "thor_path": "~/craftmind-league/pulse/direct-drive-trace-day10-20261109.jsonl",
+   "sha256": "ad76342777133fa2a51dec3446a12a3f060fab4614e655b8f33eb0fcd225caad",
+   "pubs_extracted": 308,
+   "rows_without_pos": 313
+  },
+  "day11 trace": {
+   "thor_path": "~/craftmind-league/pulse/direct-drive-trace-day11-20261110.jsonl",
+   "sha256": "2da6f375981da003c92e97b4645f3bf0db9e9bf0ee66dfe93c7c77263642c6a6",
+   "pubs_extracted": 36,
+   "rows_without_pos": 38
+  },
+  "state file (day-11 close)": {
+   "thor_path": "~/craftmind-league/pulse/direct-drive-state.json",
+   "sha256": "6d3ef239a56845fc88d0179fc5cbae4564a7611d0430beac4ca3b3d57c08388a"
+  },
+  "original cameraman": {
+   "orin_path": "~/cameraman/cameraman.py",
+   "md5": "27aaa066d5549c7390a0ffc4c39a3d93",
+   "sha256": "7d0d2884edd318e91ce549689fb69c96ea422715928f5a5a991c542c7807baa0"
+  }
+ },
+ "note": "All proof inputs are pinned copies in this directory. No arm of test-subject-keeper.py reads a live file: the rig lane's 2026-11-09 dry test read the live direct-drive-state.json and is not reproducible for exactly that reason (see the filing)."
+}

@@ -1,0 +1,115 @@
+OP provision process up; req=day9-op-req.jsonl res=day9-op-res.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjUwODQ3NTc0fQ==
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.300000, 65.200000, -89.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.300000, 65.200000, -89.700000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.300000, 65.200000, -89.700000]
+OP chat: /give Cody minecraft:cooked_porkchop 1
+SRV: No player was found
+RES {"id":"selftest-ef41ca74","ok":true,"gave":"/give Cody minecraft:cooked_porkchop 1","srv":["No player was found"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.300000, 65.200000, -89.700000]
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NjQsInkiOjYzLCJ6IjotOTJ9fSwidGltZXN0YW1wIjoxNzk0MjUxMDY5MDI4fQ==
+[BotMessenger] Received greeting from Cody
+SRV: <Cody> Day nine. Cody here — crew fed me in the pit and set me down on the pad myself this morning. The surface is mine from the first step: a tree by its foot, then the furnace at last.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.800000, 64.600000, -90.400000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.300289, 65.000000, -97.547255]
+OP chat: /give Cody minecraft:cooked_porkchop 32
+SRV: Gave 32 [Cooked Porkchop] to Cody
+RES {"id":"feed-6de5d5e2","ok":true,"gave":"/give Cody minecraft:cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody"]}
+OP chat: /tp Cody 60.5 67 -92.5
+SRV: Teleported Cody to 60.500000, 67.000000, -92.500000
+RES {"id":"reloc-f9af98b0","ok":true,"chat":"/tp Cody 60.5 67 -92.5","srv":["Teleported Cody to 60.500000, 67.000000, -92.500000"]}
+SRV: <Cody> Morning, surface. First step of the day goes east to the birch by the dip — that's a real foot with a real trunk over it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 61.800000, 64.600000, -90.400000]
+SRV: <Cody> Close enough — there's an oak foot at (86,67,-94), eight blocks east. I'll fell that one from the ground.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 86.800000, 73.000000, -87.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.600000, 67.400000, -97.100000]
+SRV: <Cody> Three logs! Five days I've been waiting for wood, and there it is. One more oak south of me while I'm out here — no such thing as too much timber.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 81.200000, 67.600000, -96.900000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: <Cody> That one's a phantom — no trunk where my feet landed. Three logs is a fine morning's work anyway. Let me get back home and turn one into a pickaxe.
+kicked: [object Object]
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer/lib/plugins/boss_bar.js:58
+  Object.defineProperty(bot, 'bossBars', {
+         ^
+
+TypeError: Cannot redefine property: bossBars
+    at Function.defineProperty (<anonymous>)
+    at inject (/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer/lib/plugins/boss_bar.js:58:10)
+    at /home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer/lib/plugin_loader.js:41:7
+    at Array.forEach (<anonymous>)
+    at injectPlugins (/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer/lib/plugin_loader.js:40:16)
+    at EventEmitter.onInjectAllowed (/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer/lib/plugin_loader.js:12:5)
+    at EventEmitter.emit (node:events:531:35)
+    at Timeout._onTimeout (/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer/lib/loader.js:134:26)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+
+Node.js v22.23.4
+OP provision process up; req=day9-op-req.jsonl res=day9-op-res.jsonl
+RES {"id":"selftest-ef41ca74","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"feed-6de5d5e2","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"reloc-f9af98b0","ok":false,"error":"op not spawned yet (spawned=false)"}
+RES {"id":"feed2-d4be3a4b","ok":false,"error":"op not spawned yet (spawned=false)"}
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjUyMjAwOTA2fQ==
+SRV: Cody was slain by Zombie
+OP chat: /give Cody minecraft:cooked_porkchop 32
+SRV: Gave 32 [Cooked Porkchop] to Cody
+RES {"id":"feed3-4bf18aee","ok":true,"gave":"/give Cody minecraft:cooked_porkchop 32","srv":["Gave 32 [Cooked Porkchop] to Cody"]}
+SRV: Cody left the game
+RES {"id":"quit-fb626314","ok":true,"bye":true}
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

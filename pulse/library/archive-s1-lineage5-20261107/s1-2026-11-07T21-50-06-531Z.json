@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T21-50-06-531Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T21:50:06.601Z",
+ "parent": null,
+ "rationale": "Cody is currently at (26.5, 72.9, -93.5) inside spawn protection circle and needs to exit the hollow area to gather materials. The skill first checks if the stage goal is already met (wooden_pickaxe in inventory), then handles survival by scanning for hostiles and fleeing if needed. It then exits the hollow area by walking in two legs (west then north), gathers logs from the nearby area, crafts planks, then a crafting table, then sticks, and finally a wooden pickaxe. The skill is structured to interleave gathering and crafting in the same run loop to avoid the flow bug where gathering would prevent crafting from ever running.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T21:50:06.516+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 34.327,
+  "prompt_tokens": 7686,
+  "completion_tokens": 1637,
+  "total_tokens": 9323
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

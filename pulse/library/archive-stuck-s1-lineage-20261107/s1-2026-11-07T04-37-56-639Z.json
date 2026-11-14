@@ -1,0 +1,20 @@
+{
+ "file": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T04-37-56-639Z.js",
+ "stage": "S1",
+ "tick": "2026-11-07T04:37:56.706Z",
+ "parent": null,
+ "rationale": "The skill first checks if the goal state (crafting table and wooden pickaxe) is already met. It then searches for oak logs, mines them, crafts planks and sticks, places a crafting table, and finally crafts a wooden pickaxe. The skill handles the progression step-by-step with proper inventory checks and state validation.",
+ "model": "confluence-presence-brain",
+ "identity": "league-pulse-smith",
+ "governorReceipt": {
+  "ts": "2026-11-07T04:37:56.628+00:00",
+  "agent": "pulse-smith",
+  "model": "confluence-presence-brain",
+  "status": 200,
+  "mind_seconds": 16.134,
+  "prompt_tokens": 2279,
+  "completion_tokens": 870,
+  "total_tokens": 3149
+ },
+ "shape": "SHAPE-OK S1-gather-tools"
+}

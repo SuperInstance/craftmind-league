@@ -1,0 +1,1030 @@
+{
+ "census": "spawn-country surface-hostile census",
+ "method": "NO-BODY read-only parse of the Orin server saved entity store (world/dimensions/minecraft/overworld/entities/*.mca x4, md5-verified copies) - no login, no bot, no op command, no world edit. Layering per the mob-map method against merged league column surveys (1791 columns). Saved-position snapshot: mobs in chunks unloaded since the autosave keep their last saved position.",
+ "source_md5": {
+  "r.0.0.mca": "7de398229a6e5b6ce4a87d96406cbd2c",
+  "r.0.-1.mca": "b02fbf7b297f74a6805aa74c576ec852",
+  "r.-1.0.mca": "2120bfc62e7ff4b0878aaacc6091e243",
+  "r.-1.-1.mca": "18a731efb2c2318f3b5884435f007844",
+  "snapshot_note": "Orin entity store as last written 09:21-09:23Z 2026-11-08; copied + md5-verified 09:24Z"
+ },
+ "surveys_merged": {
+  "cell-survey.json": "merged 414 cells (ts 2026-11-08T03:19:40.169Z)",
+  "shoulder-survey.json": "merged 817 cells (ts 2026-11-08T05:30:12.149Z)",
+  "prep-scan-before.json": "merged 729 cells (ts 2026-11-07T21:16:35.840Z)",
+  "prep-scan-night-before.json": "merged 729 cells (ts 2026-11-08T07:21:40.823Z)",
+  "prep-scan-night-after.json": "merged 729 cells (ts 2026-11-08T08:41:10.930Z)",
+  "prep-scan-after.json": "merged 729 cells (ts 2026-11-07T21:32:42.238Z)",
+  "escape-survey.json": "merged 841 cells (ts 2026-11-08T08:24:50.461Z)"
+ },
+ "survey_columns": 1791,
+ "totals": {
+  "all_entities": 1031,
+  "hostiles_all": 253,
+  "hostiles_by_type": {
+   "skeleton": 68,
+   "enderman": 36,
+   "zombie": 62,
+   "creeper": 53,
+   "spider": 23,
+   "drowned": 8,
+   "zombie_villager": 1,
+   "zombified_piglin": 1,
+   "slime": 1
+  },
+  "hostiles_by_layer": {
+   "underground?(outside-survey)": 214,
+   "surface-assumed(outside-survey)": 35,
+   "deep-underground": 2,
+   "airborne-above-surface": 1,
+   "surface": 1
+  },
+  "working_geography_hostiles_all_layers": 29,
+  "working_geography_surface_band": 5,
+  "wg_by_containment": {
+   "walking-surface-assumed": 3,
+   "airborne": 1,
+   "walking-surface-canopy": 1
+  },
+  "wg_by_type": {
+   "spider": 4,
+   "skeleton": 1
+  },
+  "wg_by_daylight": {
+   "daylight-permanent (neutral by day unless provoked)": 4,
+   "burns at dawn (exposed)": 1
+  }
+ },
+ "working_geography_bbox": {
+  "x": [
+   -20,
+   92
+  ],
+  "z": [
+   -128,
+   -40
+  ]
+ },
+ "anchors": {
+  "spawn": [
+   32,
+   -96
+  ],
+  "cody_homestead": [
+   64,
+   -93
+  ],
+  "vega_anchor": [
+   63,
+   -72
+  ],
+  "geist_anchor": [
+   7,
+   -85
+  ],
+  "vega_parked": [
+   55,
+   -55
+  ],
+  "geist_stand": [
+   51,
+   -90
+  ]
+ },
+ "working_geography_surface_hostiles": [
+  {
+   "type": "spider",
+   "x": 33.7,
+   "y": 68.1,
+   "z": -91.7,
+   "cell": [
+    33,
+    -92
+   ],
+   "hp": 16.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "columnTop": 69,
+   "layer": "surface",
+   "neighbourRelief": 0,
+   "containment": "walking-surface-canopy",
+   "daylightClass": "daylight-permanent (neutral by day unless provoked)",
+   "zones": [
+    "spawn_protection_square",
+    "spawn_plateau_apron_cheb24",
+    "corridor_spawn_homestead",
+    "geist_e_se_rows"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 4,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 4
+   }
+  },
+  {
+   "type": "spider",
+   "x": 41.7,
+   "y": 71.1,
+   "z": -87.8,
+   "cell": [
+    41,
+    -88
+   ],
+   "hp": 0.40013694763183594,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "columnTop": 68,
+   "layer": "airborne-above-surface",
+   "containment": "airborne",
+   "daylightClass": "daylight-permanent (neutral by day unless provoked)",
+   "zones": [
+    "spawn_protection_square",
+    "spawn_plateau_apron_cheb24",
+    "corridor_spawn_homestead",
+    "geist_e_se_rows"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 9,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 9
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": 20.5,
+   "y": 67.0,
+   "z": -81.2,
+   "cell": [
+    20,
+    -82
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "surface-assumed(outside-survey)",
+   "containment": "walking-surface-assumed",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "spawn_protection_square",
+    "spawn_plateau_apron_cheb24",
+    "geist_e_se_rows",
+    "geist_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 14,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 13
+   }
+  },
+  {
+   "type": "spider",
+   "x": 10.7,
+   "y": 68.1,
+   "z": -97.7,
+   "cell": [
+    10,
+    -98
+   ],
+   "hp": 16.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "surface-assumed(outside-survey)",
+   "containment": "walking-surface-assumed",
+   "daylightClass": "daylight-permanent (neutral by day unless provoked)",
+   "zones": [
+    "spawn_plateau_apron_cheb24",
+    "geist_e_se_rows",
+    "geist_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 22,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 13
+   }
+  },
+  {
+   "type": "spider",
+   "x": 44.5,
+   "y": 68.0,
+   "z": -71.9,
+   "cell": [
+    44,
+    -72
+   ],
+   "hp": 16.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "surface-assumed(outside-survey)",
+   "containment": "walking-surface-assumed",
+   "daylightClass": "daylight-permanent (neutral by day unless provoked)",
+   "zones": [
+    "spawn_plateau_apron_cheb24"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 24,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 17
+   }
+  }
+ ],
+ "working_geography_below_surface_hostiles": [
+  {
+   "type": "skeleton",
+   "x": 29.4,
+   "y": 6.0,
+   "z": -86.7,
+   "cell": [
+    29,
+    -87
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "spawn_protection_square",
+    "spawn_plateau_apron_cheb24",
+    "geist_e_se_rows"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 9,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 9
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 35.2,
+   "y": 7.0,
+   "z": -105.5,
+   "cell": [
+    35,
+    -106
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "columnTop": 66,
+   "layer": "deep-underground",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "spawn_protection_square",
+    "spawn_plateau_apron_cheb24"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 10,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 10
+   }
+  },
+  {
+   "type": "zombie",
+   "x": 14.8,
+   "y": -4.0,
+   "z": -111.8,
+   "cell": [
+    14,
+    -112
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "baby": 0,
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "spawn_plateau_apron_cheb24"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 18,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 18
+   }
+  },
+  {
+   "type": "zombie",
+   "x": 12.2,
+   "y": -11.0,
+   "z": -115.5,
+   "cell": [
+    12,
+    -116
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "baby": 0,
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "spawn_plateau_apron_cheb24"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 20,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 20
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 20.5,
+   "y": 3.0,
+   "z": -116.8,
+   "cell": [
+    20,
+    -117
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "spawn_plateau_apron_cheb24"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 21,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 21
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": 53.5,
+   "y": -1.0,
+   "z": -99.5,
+   "cell": [
+    53,
+    -100
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "columnTop": 66,
+   "layer": "deep-underground",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "spawn_plateau_apron_cheb24",
+    "corridor_spawn_homestead",
+    "homestead_apron_cheb16",
+    "geist_e_se_rows"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 21,
+   "nearestAnchor": {
+    "name": "geist_stand",
+    "cheb": 10
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 15.8,
+   "y": -21.0,
+   "z": -68.5,
+   "cell": [
+    15,
+    -69
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "geist_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 27,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 16
+   }
+  },
+  {
+   "type": "zombie",
+   "x": 19.5,
+   "y": 1.0,
+   "z": -122.5,
+   "cell": [
+    19,
+    -123
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "baby": 0,
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 27,
+   "nearestAnchor": {
+    "name": "spawn",
+    "cheb": 27
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": 50.5,
+   "y": -4.0,
+   "z": -64.5,
+   "cell": [
+    50,
+    -65
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "vega_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 31,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 10
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 63.5,
+   "y": -16.0,
+   "z": -62.8,
+   "cell": [
+    63,
+    -63
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "vega_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 33,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 8
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 69.5,
+   "y": -18.0,
+   "z": -62.5,
+   "cell": [
+    69,
+    -63
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "vega_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 37,
+   "nearestAnchor": {
+    "name": "vega_anchor",
+    "cheb": 9
+   }
+  },
+  {
+   "type": "drowned",
+   "x": -6.5,
+   "y": 4.0,
+   "z": -82.5,
+   "cell": [
+    -7,
+    -83
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "geist_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 39,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 14
+   }
+  },
+  {
+   "type": "spider",
+   "x": 65.5,
+   "y": -16.0,
+   "z": -56.5,
+   "cell": [
+    65,
+    -57
+   ],
+   "hp": 16.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (neutral by day unless provoked)",
+   "zones": [
+    "vega_ground",
+    "vega_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 39,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 10
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 71.5,
+   "y": -17.0,
+   "z": -55.5,
+   "cell": [
+    71,
+    -56
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "vega_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 40,
+   "nearestAnchor": {
+    "name": "vega_anchor",
+    "cheb": 16
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": -7.8,
+   "y": -2.0,
+   "z": -78.5,
+   "cell": [
+    -8,
+    -79
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [
+    "geist_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 40,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 15
+   }
+  },
+  {
+   "type": "creeper",
+   "x": -14.8,
+   "y": -10.0,
+   "z": -98.5,
+   "cell": [
+    -15,
+    -99
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 47,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 22
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 79.5,
+   "y": -15.0,
+   "z": -66.5,
+   "cell": [
+    79,
+    -67
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [
+    "vega_anchor_apron_cheb16"
+   ],
+   "inWorkingGeography": true,
+   "chebSpawn": 47,
+   "nearestAnchor": {
+    "name": "vega_anchor",
+    "cheb": 16
+   }
+  },
+  {
+   "type": "zombie",
+   "x": 80.5,
+   "y": -24.0,
+   "z": -62.8,
+   "cell": [
+    80,
+    -63
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "baby": 0,
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 48,
+   "nearestAnchor": {
+    "name": "vega_anchor",
+    "cheb": 17
+   }
+  },
+  {
+   "type": "creeper",
+   "x": 72.5,
+   "y": -18.0,
+   "z": -46.5,
+   "cell": [
+    72,
+    -47
+   ],
+   "hp": 20.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent (creepers never burn)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 49,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 17
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": 81.5,
+   "y": -17.0,
+   "z": -45.5,
+   "cell": [
+    81,
+    -46
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 50,
+   "nearestAnchor": {
+    "name": "vega_anchor",
+    "cheb": 26
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": 80.5,
+   "y": -18.0,
+   "z": -44.5,
+   "cell": [
+    80,
+    -45
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 51,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 25
+   }
+  },
+  {
+   "type": "slime",
+   "x": 4.5,
+   "y": -9.0,
+   "z": -41.3,
+   "cell": [
+    4,
+    -42
+   ],
+   "hp": 4.0,
+   "burnInDay": null,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "daylight-permanent",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 54,
+   "nearestAnchor": {
+    "name": "geist_anchor",
+    "cheb": 43
+   }
+  },
+  {
+   "type": "skeleton",
+   "x": 65.5,
+   "y": -16.0,
+   "z": -40.5,
+   "cell": [
+    65,
+    -41
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {
+    "mainhand": "bow"
+   },
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 55,
+   "nearestAnchor": {
+    "name": "vega_parked",
+    "cheb": 14
+   }
+  },
+  {
+   "type": "zombie",
+   "x": 92.5,
+   "y": -24.0,
+   "z": -53.5,
+   "cell": [
+    92,
+    -54
+   ],
+   "hp": 20.0,
+   "burnInDay": 1,
+   "spawnReason": "NATURAL",
+   "persist": 0,
+   "equipment": {},
+   "baby": 0,
+   "layer": "underground?(outside-survey)",
+   "containment": "underground",
+   "daylightClass": "burns at dawn (exposed)",
+   "zones": [],
+   "inWorkingGeography": true,
+   "chebSpawn": 60,
+   "nearestAnchor": {
+    "name": "vega_anchor",
+    "cheb": 29
+   }
+  }
+ ],
+ "generated": "2026-11-08T09:24Z (entity store as last written 09:21-09:23Z)",
+ "headline": [
+  "Working-geography saved surface band is FIVE hostiles: 4 day-neutral spiders + 1 unhelmeted bow skeleton (20.5, 67, -81.2). No zombies, no creepers, no helmeted anything, nothing pit-contained.",
+  "Every named daylight-permanent threat from the 07:20Z mob map is absent from the saved store except the canopy spider, which persists verbatim at (41.7, 71.1, -87.8).",
+  "Tonight's killer geography is currently empty in the saved store: pond cell, spawn plateau, Geist saved cell, homestead pad, Cody stance and Vega parked position all have a day-neutral spider as nearest surface hostile (cheb 4-29).",
+  "The one live ranged threat in the working geography is new since the mob map: bow skeleton at (20.5, 67, -81.2), unhelmeted, ShouldBurnInDay 1, outside survey span (cover unknown).",
+  "Sweep decision (ledger spawn-country-sweep-design-20261108): HONEST DEFERRAL - sunlight under the guarded hold plus despawn churn already did the sweep; containment has no targets; a combat body would be spent against day-neutral spiders. Converted to a standing warning + kill/verify list in OPERATIONS.md and a census gate before any fresh-body experiment."
+ ],
+ "mob_map_named_threat_recheck": [
+  {
+   "threat": "golden-helmet skeleton",
+   "mob_map_pos": [
+    0.5,
+    67,
+    -93.5
+   ],
+   "status_0924Z": "ABSENT - no hostile within cheb 3 at any layer"
+  },
+  {
+   "threat": "creeper, Geist west line",
+   "mob_map_pos": [
+    20.5,
+    69,
+    -93.8
+   ],
+   "status_0924Z": "ABSENT"
+  },
+  {
+   "threat": "creeper, NE homestead rim",
+   "mob_map_pos": [
+    70.2,
+    67,
+    -80.5
+   ],
+   "status_0924Z": "ABSENT"
+  },
+  {
+   "threat": "creeper, SE homestead rim",
+   "mob_map_pos": [
+    69.6,
+    67,
+    -107.5
+   ],
+   "status_0924Z": "ABSENT"
+  },
+  {
+   "threat": "pocket skeleton",
+   "mob_map_pos": [
+    36.6,
+    64.9,
+    -92.9
+   ],
+   "status_0924Z": "ABSENT - a spider now stands at (33.7, 68.1, -91.7) nearby"
+  },
+  {
+   "threat": "plateau zombie",
+   "mob_map_pos": [
+    32.5,
+    67,
+    -88.2
+   ],
+   "status_0924Z": "ABSENT"
+  },
+  {
+   "threat": "apron-edge zombie",
+   "mob_map_pos": [
+    63.2,
+    68,
+    -88.8
+   ],
+   "status_0924Z": "ABSENT"
+  },
+  {
+   "threat": "canopy spider",
+   "mob_map_pos": [
+    41.7,
+    71.1,
+    -87.8
+   ],
+   "status_0924Z": "PRESENT verbatim (airborne, day-neutral)"
+  }
+ ],
+ "nearest_surface_hostile_to_critical_points": {
+  "world_spawn (32,-96)": {
+   "hostile": "spider (33.7, 68.1, -91.7)",
+   "cheb": 4
+  },
+  "geist_saved_cell (34.5,-98.5)": {
+   "hostile": "spider (33.7, 68.1, -91.7)",
+   "cheb": 7
+  },
+  "pond_cell_geist_death (22.5,-100.5)": {
+   "hostile": "spider (33.7, 68.1, -91.7)",
+   "cheb": 11
+  },
+  "vega_parked (55.7,-55.5)": {
+   "hostile": "spider (44.5, 68.0, -71.9)",
+   "cheb": 16
+  },
+  "commons_chest_site (63,-82)": {
+   "hostile": "spider (44.5, 68.0, -71.9)",
+   "cheb": 19
+  },
+  "homestead_pad (64,-93)": {
+   "hostile": "spider (44.5, 68.0, -71.9)",
+   "cheb": 21
+  },
+  "cody_stance (72,-101)": {
+   "hostile": "spider (44.5, 68.0, -71.9)",
+   "cheb": 29
+  }
+ },
+ "comparison_to_mob_map_0720Z": {
+  "all_entities": {
+   "0720Z": 1261,
+   "0924Z": 1031
+  },
+  "hostiles": {
+   "0720Z": 294,
+   "0924Z": 253
+  },
+  "note": "Same instrument, same store, two hours apart. The thinning is concentrated in the surface band and is consistent with burn cycles under the restored hold, gradual despawn in repeatedly loaded chunks, and tonight's kills - stated as inference; the census measures the saved population, not the mechanism."
+ }
+}

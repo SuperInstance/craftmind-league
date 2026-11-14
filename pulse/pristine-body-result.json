@@ -1,0 +1,2477 @@
+{
+ "mode": "pristine-single-session",
+ "username": "PristineProbe",
+ "localPort": 47018,
+ "ts": "2026-11-08T21:06:03.162Z",
+ "events": [],
+ "legs": [
+  {
+   "tag": "open-39,-104",
+   "targetCell": [
+    39,
+    -104
+   ],
+   "targetFeetY": 73,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 39.5,
+    "y": 74,
+    "z": -89.5
+   },
+   "end": {
+    "x": 36.411,
+    "y": 74,
+    "z": -89.69
+   },
+   "dispH": 3.095,
+   "forcedMoves": 490,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 68.53,
+    "pos": {
+     "x": 85.5,
+     "y": 27,
+     "z": -98.5
+    }
+   }
+  },
+  {
+   "tag": "open-36,-104",
+   "targetCell": [
+    36,
+    -104
+   ],
+   "targetFeetY": 70,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.411,
+    "y": 74,
+    "z": -89.69
+   },
+   "end": {
+    "x": 36.295,
+    "y": 73,
+    "z": -88.677
+   },
+   "dispH": 1.02,
+   "forcedMoves": 436,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 60.589,
+    "pos": {
+     "x": 22.517,
+     "y": 14,
+     "z": -89.176
+    }
+   }
+  },
+  {
+   "tag": "open-33,-104",
+   "targetCell": [
+    33,
+    -104
+   ],
+   "targetFeetY": 75,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.295,
+    "y": 73,
+    "z": -88.677
+   },
+   "end": {
+    "x": 35.971,
+    "y": 68.42,
+    "z": -83.698
+   },
+   "dispH": 4.99,
+   "forcedMoves": 390,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 56.325,
+    "pos": {
+     "x": 22.517,
+     "y": 14,
+     "z": -89.176
+    }
+   }
+  },
+  {
+   "tag": "open-31,-104",
+   "targetCell": [
+    31,
+    -104
+   ],
+   "targetFeetY": 77,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 35.971,
+    "y": 68.42,
+    "z": -83.698
+   },
+   "end": {
+    "x": 34.857,
+    "y": 69,
+    "z": -88.649
+   },
+   "dispH": 5.075,
+   "forcedMoves": 366,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 56.35,
+    "pos": {
+     "x": 22.644,
+     "y": 14,
+     "z": -89.7
+    }
+   }
+  },
+  {
+   "tag": "open-chainhead",
+   "targetCell": [
+    31,
+    -101
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 34.857,
+    "y": 69,
+    "z": -88.649
+   },
+   "end": {
+    "x": 36.313,
+    "y": 66.42,
+    "z": -82.679
+   },
+   "dispH": 6.145,
+   "forcedMoves": 428,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 54.499,
+    "pos": {
+     "x": 22.892,
+     "y": 14,
+     "z": -89.169
+    }
+   }
+  },
+  {
+   "tag": "W-32,-99",
+   "targetCell": [
+    32,
+    -99
+   ],
+   "targetFeetY": 70,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.313,
+    "y": 66.42,
+    "z": -82.679
+   },
+   "end": {
+    "x": 36.382,
+    "y": 66.42,
+    "z": -82.7
+   },
+   "dispH": 0.072,
+   "forcedMoves": 460,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 53.751,
+    "pos": {
+     "x": 22.493,
+     "y": 15,
+     "z": -89.928
+    }
+   }
+  },
+  {
+   "tag": "W-34,-98",
+   "targetCell": [
+    34,
+    -98
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.382,
+    "y": 66.42,
+    "z": -82.7
+   },
+   "end": {
+    "x": 36.3,
+    "y": 67,
+    "z": -83.199
+   },
+   "dispH": 0.506,
+   "forcedMoves": 461,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 54.283,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "W-37,-98",
+   "targetCell": [
+    37,
+    -98
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.3,
+    "y": 67,
+    "z": -83.199
+   },
+   "end": {
+    "x": 36.431,
+    "y": 67,
+    "z": -84.683
+   },
+   "dispH": 1.49,
+   "forcedMoves": 460,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 54.103,
+    "pos": {
+     "x": 22.493,
+     "y": 15,
+     "z": -90.052
+    }
+   }
+  },
+  {
+   "tag": "W-39,-97",
+   "targetCell": [
+    39,
+    -97
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.431,
+    "y": 67,
+    "z": -84.683
+   },
+   "end": {
+    "x": 36.448,
+    "y": 67,
+    "z": -84.685
+   },
+   "dispH": 0.017,
+   "forcedMoves": 514,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 54.107,
+    "pos": {
+     "x": 22.493,
+     "y": 15,
+     "z": -90.052
+    }
+   }
+  },
+  {
+   "tag": "W-39,-94",
+   "targetCell": [
+    39,
+    -94
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.448,
+    "y": 67,
+    "z": -84.685
+   },
+   "end": {
+    "x": 36.453,
+    "y": 67.42,
+    "z": -84.699
+   },
+   "dispH": 0.015,
+   "forcedMoves": 457,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 55.257,
+    "pos": {
+     "x": 9.5,
+     "y": 28,
+     "z": -112.5
+    }
+   }
+  },
+  {
+   "tag": "W-42,-94",
+   "targetCell": [
+    42,
+    -94
+   ],
+   "targetFeetY": 69,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.453,
+    "y": 67.42,
+    "z": -84.699
+   },
+   "end": {
+    "x": 36.446,
+    "y": 68.001,
+    "z": -84.689
+   },
+   "dispH": 0.012,
+   "forcedMoves": 510,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.054,
+    "pos": {
+     "x": 22.666,
+     "y": 15,
+     "z": -90.336
+    }
+   }
+  },
+  {
+   "tag": "W-45,-94",
+   "targetCell": [
+    45,
+    -94
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.446,
+    "y": 68.001,
+    "z": -84.689
+   },
+   "end": {
+    "x": 36.403,
+    "y": 67,
+    "z": -84.647
+   },
+   "dispH": 0.06,
+   "forcedMoves": 491,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 54.136,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.405
+    }
+   }
+  },
+  {
+   "tag": "W-48,-94",
+   "targetCell": [
+    48,
+    -94
+   ],
+   "targetFeetY": 65,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.403,
+    "y": 67,
+    "z": -84.647
+   },
+   "end": {
+    "x": 36.309,
+    "y": 67,
+    "z": -84.591
+   },
+   "dispH": 0.109,
+   "forcedMoves": 482,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 54.08,
+    "pos": {
+     "x": 22.495,
+     "y": 15,
+     "z": -90.052
+    }
+   }
+  },
+  {
+   "tag": "W-51,-94",
+   "targetCell": [
+    51,
+    -94
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 36.309,
+    "y": 67,
+    "z": -84.591
+   },
+   "end": {
+    "x": 41.485,
+    "y": 67,
+    "z": -84.306
+   },
+   "dispH": 5.184,
+   "forcedMoves": 440,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.628,
+    "pos": {
+     "x": 22.666,
+     "y": 15,
+     "z": -90.336
+    }
+   }
+  },
+  {
+   "tag": "W-53,-93",
+   "targetCell": [
+    53,
+    -93
+   ],
+   "targetFeetY": 68,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.485,
+    "y": 67,
+    "z": -84.306
+   },
+   "end": {
+    "x": 41.636,
+    "y": 67,
+    "z": -84.308
+   },
+   "dispH": 0.151,
+   "forcedMoves": 523,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.699,
+    "pos": {
+     "x": 22.603,
+     "y": 15,
+     "z": -90.321
+    }
+   }
+  },
+  {
+   "tag": "W-56,-93",
+   "targetCell": [
+    56,
+    -93
+   ],
+   "targetFeetY": 68,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.636,
+    "y": 67,
+    "z": -84.308
+   },
+   "end": {
+    "x": 41.651,
+    "y": 67,
+    "z": -84.302
+   },
+   "dispH": 0.016,
+   "forcedMoves": 538,
+   "hp": 20,
+   "hostile": {
+    "name": "skeleton",
+    "dist": 57.399,
+    "pos": {
+     "x": 17.5,
+     "y": 22,
+     "z": -110.5
+    }
+   }
+  },
+  {
+   "tag": "W-59,-93",
+   "targetCell": [
+    59,
+    -93
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.651,
+    "y": 67,
+    "z": -84.302
+   },
+   "end": {
+    "x": 41.687,
+    "y": 67,
+    "z": -84.312
+   },
+   "dispH": 0.037,
+   "forcedMoves": 536,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.735,
+    "pos": {
+     "x": 22.555,
+     "y": 15,
+     "z": -90.343
+    }
+   }
+  },
+  {
+   "tag": "W-62,-93",
+   "targetCell": [
+    62,
+    -93
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.687,
+    "y": 67,
+    "z": -84.312
+   },
+   "end": {
+    "x": 41.692,
+    "y": 67,
+    "z": -84.314
+   },
+   "dispH": 0.005,
+   "forcedMoves": 530,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 59.185,
+    "pos": {
+     "x": 17.523,
+     "y": 14,
+     "z": -94.789
+    }
+   }
+  },
+  {
+   "tag": "W-64,-93",
+   "targetCell": [
+    64,
+    -93
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.692,
+    "y": 67,
+    "z": -84.314
+   },
+   "end": {
+    "x": 41.679,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0.014,
+   "forcedMoves": 535,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.762,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "pad",
+   "targetCell": [
+    64,
+    -93
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.679,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.32
+   },
+   "dispH": 0.024,
+   "forcedMoves": 529,
+   "hp": 20,
+   "hostile": {
+    "name": "creeper",
+    "dist": 59.187,
+    "pos": {
+     "x": 17.523,
+     "y": 14,
+     "z": -94.789
+    }
+   }
+  },
+  {
+   "tag": "trav-oak",
+   "targetCell": [
+    66,
+    -97
+   ],
+   "targetFeetY": 73,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.685,
+    "y": 67,
+    "z": -84.311
+   },
+   "end": {
+    "x": 41.69,
+    "y": 67,
+    "z": -84.314
+   },
+   "dispH": 0.006,
+   "forcedMoves": 540,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 55.823,
+    "pos": {
+     "x": 22.417,
+     "y": 15,
+     "z": -90.7
+    }
+   }
+  },
+  {
+   "tag": "trav-rim",
+   "targetCell": [
+    66,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.69,
+    "y": 67,
+    "z": -84.314
+   },
+   "end": {
+    "x": 41.695,
+    "y": 67,
+    "z": -84.317
+   },
+   "dispH": 0.006,
+   "forcedMoves": 532,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.766,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "trav-67",
+   "targetCell": [
+    67,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.695,
+    "y": 67,
+    "z": -84.317
+   },
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.335
+   },
+   "dispH": 0.019,
+   "forcedMoves": 535,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.766,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "trav-68",
+   "targetCell": [
+    68,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.335
+   },
+   "end": {
+    "x": 41.683,
+    "y": 67,
+    "z": -84.31
+   },
+   "dispH": 0.03,
+   "forcedMoves": 542,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.763,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "trav-69",
+   "targetCell": [
+    69,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.683,
+    "y": 67,
+    "z": -84.31
+   },
+   "end": {
+    "x": 41.683,
+    "y": 67,
+    "z": -84.31
+   },
+   "dispH": 0,
+   "forcedMoves": 538,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.763,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "trav-69n",
+   "targetCell": [
+    69,
+    -101
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.683,
+    "y": 67,
+    "z": -84.31
+   },
+   "end": {
+    "x": 41.683,
+    "y": 67,
+    "z": -84.31
+   },
+   "dispH": 0,
+   "forcedMoves": 545,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.763,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "trav-70n",
+   "targetCell": [
+    70,
+    -101
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.683,
+    "y": 67,
+    "z": -84.31
+   },
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.325
+   },
+   "dispH": 0.023,
+   "forcedMoves": 530,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.767,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "trav-71n",
+   "targetCell": [
+    71,
+    -101
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.325
+   },
+   "end": {
+    "x": 41.693,
+    "y": 67,
+    "z": -84.316
+   },
+   "dispH": 0.011,
+   "forcedMoves": 538,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.766,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.403
+    }
+   }
+  },
+  {
+   "tag": "trav-71",
+   "targetCell": [
+    71,
+    -102
+   ],
+   "targetFeetY": 65,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.693,
+    "y": 67,
+    "z": -84.316
+   },
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "dispH": 0.006,
+   "forcedMoves": 534,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 62.668,
+    "pos": {
+     "x": 24.496,
+     "y": 7.42,
+     "z": -93.35
+    }
+   }
+  },
+  {
+   "tag": "trav-stance",
+   "targetCell": [
+    72,
+    -102
+   ],
+   "targetFeetY": 64,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "end": {
+    "x": 41.681,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0.02,
+   "forcedMoves": 544,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.763,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.407
+    }
+   }
+  },
+  {
+   "tag": "park-71n",
+   "targetCell": [
+    71,
+    -101
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "end": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0.019,
+   "forcedMoves": 523,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.762,
+    "pos": {
+     "x": 22.49,
+     "y": 15,
+     "z": -90.399
+    }
+   }
+  },
+  {
+   "tag": "park-70n",
+   "targetCell": [
+    70,
+    -101
+   ],
+   "targetFeetY": 66,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0,
+   "forcedMoves": 538,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 59.597,
+    "pos": {
+     "x": 24.7,
+     "y": 10,
+     "z": -88.101
+    }
+   }
+  },
+  {
+   "tag": "park-69n",
+   "targetCell": [
+    69,
+    -101
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0,
+   "forcedMoves": 535,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.762,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.399
+    }
+   }
+  },
+  {
+   "tag": "park-69",
+   "targetCell": [
+    69,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0,
+   "forcedMoves": 529,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.762,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "park-68",
+   "targetCell": [
+    68,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.322
+   },
+   "dispH": 0.022,
+   "forcedMoves": 538,
+   "hp": 20,
+   "hostile": {
+    "name": "zombie",
+    "dist": 56.632,
+    "pos": {
+     "x": 22.245,
+     "y": 14,
+     "z": -88.756
+    }
+   }
+  },
+  {
+   "tag": "park-67",
+   "targetCell": [
+    67,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.322
+   },
+   "end": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0.022,
+   "forcedMoves": 532,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.701,
+    "pos": {
+     "x": 22.634,
+     "y": 15,
+     "z": -90.294
+    }
+   }
+  },
+  {
+   "tag": "park-rim",
+   "targetCell": [
+    66,
+    -102
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "dispH": 0,
+   "forcedMoves": 544,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.701,
+    "pos": {
+     "x": 22.634,
+     "y": 15,
+     "z": -90.294
+    }
+   }
+  },
+  {
+   "tag": "park-oak",
+   "targetCell": [
+    66,
+    -97
+   ],
+   "targetFeetY": 73,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.682,
+    "y": 67,
+    "z": -84.309
+   },
+   "end": {
+    "x": 41.687,
+    "y": 67,
+    "z": -84.311
+   },
+   "dispH": 0.005,
+   "forcedMoves": 535,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.764,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  },
+  {
+   "tag": "park-pad",
+   "targetCell": [
+    64,
+    -93
+   ],
+   "targetFeetY": 67,
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 41.687,
+    "y": 67,
+    "z": -84.311
+   },
+   "end": {
+    "x": 41.692,
+    "y": 67,
+    "z": -84.313
+   },
+   "dispH": 0.005,
+   "forcedMoves": 539,
+   "hp": 20,
+   "hostile": {
+    "name": "enderman",
+    "dist": 55.765,
+    "pos": {
+     "x": 22.491,
+     "y": 15,
+     "z": -90.404
+    }
+   }
+  }
+ ],
+ "rests": [
+  {
+   "n": 40,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "first": {
+    "x": 39.5,
+    "y": 74,
+    "z": -89.5
+   },
+   "last": {
+    "x": 39.5,
+    "y": 74,
+    "z": -89.5
+   },
+   "tag": "pristine-at-spawn",
+   "at": {
+    "x": 39.5,
+    "y": 74,
+    "z": -89.5
+   },
+   "cell": [
+    39,
+    -90
+   ],
+   "hp": 20,
+   "hostiles48": []
+  },
+  {
+   "n": 30,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.075,
+    "z": 0
+   },
+   "onGroundFrac": 0.967,
+   "forcedMoves": 1,
+   "first": {
+    "x": 41.685,
+    "y": 67,
+    "z": -84.311
+   },
+   "last": {
+    "x": 41.685,
+    "y": 67,
+    "z": -84.311
+   },
+   "tag": "pristine-at-pad",
+   "at": {
+    "x": 41.685,
+    "y": 67,
+    "z": -84.311
+   },
+   "cell": [
+    41,
+    -85
+   ],
+   "hp": 20,
+   "hostiles48": []
+  },
+  {
+   "n": 40,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 0.975,
+   "forcedMoves": 0,
+   "first": {
+    "x": 41.681,
+    "y": 67,
+    "z": -84.309
+   },
+   "last": {
+    "x": 41.681,
+    "y": 67,
+    "z": -84.309
+   },
+   "tag": "pristine-at-stance",
+   "at": {
+    "x": 41.681,
+    "y": 67,
+    "z": -84.309
+   },
+   "cell": [
+    41,
+    -85
+   ],
+   "hp": 20,
+   "hostiles48": []
+  },
+  {
+   "n": 30,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "first": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "last": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "tag": "pristine-after-diagnostics",
+   "at": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "cell": [
+    41,
+    -85
+   ],
+   "hp": 20,
+   "hostiles48": []
+  },
+  {
+   "n": 30,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 0.967,
+   "forcedMoves": 0,
+   "first": {
+    "x": 41.692,
+    "y": 67,
+    "z": -84.313
+   },
+   "last": {
+    "x": 41.692,
+    "y": 67,
+    "z": -84.313
+   },
+   "tag": "pristine-parked",
+   "at": {
+    "x": 41.692,
+    "y": 67,
+    "z": -84.313
+   },
+   "cell": [
+    41,
+    -85
+   ],
+   "hp": 20,
+   "hostiles48": []
+  }
+ ],
+ "attempts": [
+  {
+   "tag": "P0-enter-pair-72-101",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -101
+   ],
+   "targetFeetY": 63,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.681,
+    "y": 67,
+    "z": -84.309
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.33
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0.028,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 72.5,63,-100.5; at (41.7, 67, -84.32986099754353)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:21:41.415Z",
+       "windowProg": 0,
+       "stuckForMs": 3153,
+       "before": {
+        "x": 41.68,
+        "y": 67,
+        "z": -84.31
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0.022,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:21:41.414Z",
+       "dist": 35.04,
+       "stuckForMs": 3152,
+       "anchorD": 35.04,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 238,
+   "window": {
+    "n": 126,
+    "posRange": {
+     "x": 0.036,
+     "y": 0,
+     "z": 0.026
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.006,
+     "z": 0
+    },
+    "onGroundFrac": 0.032,
+    "forcedMoves": 238,
+    "first": {
+     "x": 41.681,
+     "y": 67,
+     "z": -84.309
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P1-raw-W-flat",
+   "method": "rawDrive-fwd+jump",
+   "targetCell": [
+    73,
+    -101
+   ],
+   "seconds": 4,
+   "facing": {
+    "yaw": -1.101,
+    "pitch": -0.118
+   },
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "forcedMoves": 76,
+   "window": {
+    "n": 43,
+    "posRange": {
+     "x": 0.001,
+     "y": 0,
+     "z": 0.009
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.007,
+     "z": 0
+    },
+    "onGroundFrac": 0.07,
+    "forcedMoves": 76,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P2-goto-W-flat",
+   "method": "gotoNear",
+   "targetCell": [
+    73,
+    -101
+   ],
+   "targetFeetY": 63,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 73.5,63,-100.5; at (41.69879005988826, 67, -84.31802790368504)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:21:59.538Z",
+       "windowProg": 0,
+       "stuckForMs": 3158,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.04,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:21:59.538Z",
+       "dist": 35.91,
+       "stuckForMs": 3158,
+       "anchorD": 35.91,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 235,
+   "window": {
+    "n": 126,
+    "posRange": {
+     "x": 0.036,
+     "y": 0,
+     "z": 0.03
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.028,
+     "z": -0.002
+    },
+    "onGroundFrac": 0.016,
+    "forcedMoves": 235,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P2b-return-72-101",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -101
+   ],
+   "targetFeetY": 63,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 72.5,63,-100.5; at (41.69879005988826, 67, -84.31802790368504)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:22:12.827Z",
+       "windowProg": 0,
+       "stuckForMs": 3152,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:22:12.826Z",
+       "dist": 35.02,
+       "stuckForMs": 3151,
+       "anchorD": 35.02,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 238,
+   "window": {
+    "n": 126,
+    "posRange": {
+     "x": 0.019,
+     "y": 0,
+     "z": 0.021
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.026,
+     "z": -0.002
+    },
+    "onGroundFrac": 0.032,
+    "forcedMoves": 238,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P3prep-to-71-102",
+   "method": "gotoNear",
+   "targetCell": [
+    71,
+    -102
+   ],
+   "targetFeetY": 65,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.331
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0.013,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 71.5,65,-101.5; at (41.7, 67, -84.33075081653908)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:22:26.121Z",
+       "windowProg": 0.007,
+       "stuckForMs": 3152,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.33
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0.01,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:22:26.121Z",
+       "dist": 34.45,
+       "stuckForMs": 3152,
+       "anchorD": 34.46,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 235,
+   "window": {
+    "n": 127,
+    "posRange": {
+     "x": 0.035,
+     "y": 0,
+     "z": 0.055
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.027,
+     "z": -0.002
+    },
+    "onGroundFrac": 0.039,
+    "forcedMoves": 235,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P3-raw-N-plus1",
+   "method": "rawDrive-fwd+jump",
+   "targetCell": [
+    71,
+    -101
+   ],
+   "seconds": 4,
+   "facing": {
+    "yaw": -1.074,
+    "pitch": -0.037
+   },
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.7,
+    "y": 67,
+    "z": -84.327
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0.009,
+   "dispY": 0,
+   "forcedMoves": 75,
+   "window": {
+    "n": 42,
+    "posRange": {
+     "x": 0.001,
+     "y": 0,
+     "z": 0.027
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.03,
+     "z": -0.003
+    },
+    "onGroundFrac": 0.143,
+    "forcedMoves": 75,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.7,
+     "y": 67,
+     "z": -84.327
+    }
+   }
+  },
+  {
+   "tag": "P4-goto-N-plus1",
+   "method": "gotoNear",
+   "targetCell": [
+    71,
+    -101
+   ],
+   "targetFeetY": 66,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 71.5,66,-100.5; at (41.69879005988826, 67, -84.31802790368504)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:22:44.443Z",
+       "windowProg": 0.007,
+       "stuckForMs": 2133,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.33
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0.01,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:22:44.443Z",
+       "dist": 33.92,
+       "stuckForMs": 2133,
+       "anchorD": 33.93,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 227,
+   "window": {
+    "n": 123,
+    "posRange": {
+     "x": 0.018,
+     "y": 0.42,
+     "z": 0.082
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.013,
+     "z": -0.001
+    },
+    "onGroundFrac": 0.041,
+    "forcedMoves": 227,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P5a-goto-stance-cell",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -102
+   ],
+   "targetFeetY": 64,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 72.5,64,-101.5; at (41.69879005988826, 67, -84.31802790368504)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:22:57.192Z",
+       "windowProg": 0,
+       "stuckForMs": 3158,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:22:57.192Z",
+       "dist": 35.4,
+       "stuckForMs": 3158,
+       "anchorD": 35.4,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 239,
+   "window": {
+    "n": 127,
+    "posRange": {
+     "x": 0.018,
+     "y": 0,
+     "z": 0.022
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.007,
+     "z": 0
+    },
+    "onGroundFrac": 0.024,
+    "forcedMoves": 239,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P5b-goto-N-control",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -101
+   ],
+   "targetFeetY": 63,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 72.5,63,-100.5; at (41.69879005988826, 67, -84.31802790368504)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:23:10.465Z",
+       "windowProg": 0,
+       "stuckForMs": 3153,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:23:10.465Z",
+       "dist": 35.02,
+       "stuckForMs": 3153,
+       "anchorD": 35.02,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 233,
+   "window": {
+    "n": 126,
+    "posRange": {
+     "x": 0.066,
+     "y": 0,
+     "z": 0.053
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.014,
+     "z": -0.001
+    },
+    "onGroundFrac": 0.048,
+    "forcedMoves": 233,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  },
+  {
+   "tag": "P5c-goto-chain-cell",
+   "method": "gotoNear",
+   "targetCell": [
+    71,
+    -102
+   ],
+   "targetFeetY": 65,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "startCell": [
+    41,
+    -85
+   ],
+   "end": {
+    "x": 41.699,
+    "y": 67,
+    "z": -84.318
+   },
+   "endCell": [
+    41,
+    -85
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 71.5,65,-101.5; at (41.69879005988826, 67, -84.31802790368504)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T21:23:23.747Z",
+       "windowProg": 0,
+       "stuckForMs": 3154,
+       "before": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.02,
+       "jumpKeyed": true,
+       "after": {
+        "x": 41.7,
+        "y": 67,
+        "z": -84.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T21:23:23.746Z",
+       "dist": 34.46,
+       "stuckForMs": 3153,
+       "anchorD": 34.46,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 224,
+   "window": {
+    "n": 127,
+    "posRange": {
+     "x": 0.018,
+     "y": 0,
+     "z": 0.047
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.011,
+     "z": -0.001
+    },
+    "onGroundFrac": 0.039,
+    "forcedMoves": 224,
+    "first": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    },
+    "last": {
+     "x": 41.699,
+     "y": 67,
+     "z": -84.318
+    }
+   }
+  }
+ ],
+ "deaths": [],
+ "spawn": {
+  "pos": {
+   "x": 39.5,
+   "y": 74,
+   "z": -89.5
+  },
+  "uuid": null,
+  "onGround": false
+ },
+ "settled": {
+  "pos": {
+   "x": 39.5,
+   "y": 74,
+   "z": -89.5
+  },
+  "health": 20,
+  "food": 20
+ },
+ "opening": {
+  "settledCell": [
+   39,
+   -90
+  ],
+  "mode": "east-scatter-z104-row",
+  "row": [
+   [
+    39,
+    -104
+   ],
+   [
+    36,
+    -104
+   ],
+   [
+    33,
+    -104
+   ],
+   [
+    31,
+    -104
+   ]
+  ]
+ },
+ "final": {
+  "pos": {
+   "x": 41.692,
+   "y": 67,
+   "z": -84.313
+  },
+  "health": 20,
+  "food": 20,
+  "inventory": [],
+  "deaths": 0,
+  "aborted": false,
+  "abortReason": null,
+  "sessionBroken": null,
+  "totalForcedMoves": 21791,
+  "digStep": {
+   "enabled": false,
+   "uses": 0,
+   "log": [],
+   "evals": []
+  }
+ }
+}

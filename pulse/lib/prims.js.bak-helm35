@@ -1,0 +1,763 @@
+'use strict';
+/**
+ * prims.js — SEEDED PRIMITIVES for the Pulse.  ★ DECLARED SEEDED CODE ★
+ *
+ * Hand-written substrate (the mineflayer layer of the stack): small,
+ * timeout-guarded, never-throwing helpers that smith-authored skills
+ * compose. These are NOT smith products — they are the workbench the
+ * smith writes on top of, declared loudly in pulse/README.md.
+ *
+ * Contract: every async function resolves a result object and never
+ * throws:  { ok: true, ... } | { ok: false, error: '...' }
+ * Lines beginning with `// prim:` are extracted verbatim into the
+ * smith's API surface by smith.js — keep them accurate.
+ */
+const path = require('path');
+const CM = '/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules';
+const { goals, Movements } = require(path.join(CM, 'mineflayer-pathfinder'));
+const { Vec3 } = require(path.join(CM, 'vec3'));
+
+const _mc = {};
+function mcData(bot) {
+  if (!_mc[bot.version]) _mc[bot.version] = require(path.join(CM, 'minecraft-data'))(bot.version);
+  return _mc[bot.version];
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// prim: sleep(ms) -> Promise that resolves after ms
+// prim: inv(bot) -> { itemName: count } — inventory snapshot
+function inv(bot) {
+  const out = {};
+  for (const it of bot.inventory.items()) out[it.name] = (out[it.name] || 0) + it.count;
+  return out;
+}
+
+// prim: countItem(bot, name) -> number of `name` in inventory (0 if none)
+function countItem(bot, name) {
+  return inv(bot)[name] || 0;
+}
+
+// prim: hasItem(bot, name, n=1) -> boolean
+function hasItem(bot, name, n = 1) {
+  return (inv(bot)[name] || 0) >= n;
+}
+
+// ── dig-step allowance (DECLARED, gate-scoped; added 2026-11-07) ─────
+// Default OFF. Gate 0's wall was terrain, not body: a +2 step — and a
+// +1 step capped with leaf_litter (this Paper build collides with
+// litter at fractional pile heights even though prismarine-data calls
+// it collision-free) — is unclimbable by walking, by jump, and by the
+// walk-only pathfinder, for ANY body (proven by fresh-entity control).
+// When a gate skill enables this (setDigStep(true)), walkTo's helm may
+// dig ONE block out of such a step: the top block of a +2, or the
+// litter capping a +1. Digging a step is a locomotion primitive the
+// seeded set already declares (digBlock); the walk-only travel config
+// was a choice, not a law. Every use is counted and logged here, and
+// the gate skill reads digStepStats() into its result, so gate
+// evidence always shows the count — the gate never silently becomes
+// a digging test. Trials run with the default (off) unless a skill
+// explicitly enables it in its own source.
+const _digStep = { enabled: false, uses: 0, log: [], evals: [] };
+
+// prim: setDigStep(on) -> boolean — DECLARED gate allowance: arm/disarm the helm's dig-step in walkTo (dig one block out of an unclimbable +2 step, or the leaf_litter capping a +1). Default off.
+function setDigStep(on) {
+  _digStep.enabled = !!on;
+  return _digStep.enabled;
+}
+
+// prim: digStepStats() -> {enabled, uses, log:[{ts, at, block, reason}], evals:[...]} — every dig-step the helm has taken in this process, plus its recent step evaluations (front cell, measured step, decision); gate evidence reads this verbatim
+function digStepStats() {
+  return { enabled: _digStep.enabled, uses: _digStep.uses, log: _digStep.log.slice(), evals: _digStep.evals.slice() };
+}
+
+const DIGGABLE_STEP = /^(grass_block|dirt|coarse_dirt|rooted_dirt|leaf_litter|stone|gravel|sand|mud)$/;
+
+// Evaluate ONE front cell (fx, fz) and dig its step if it qualifies.
+// Returns true only if a block was actually dug.
+async function digStepCell(bot, fx, fz, myTop) {
+  const pos = bot.entity.position;
+  let fb = null;
+  for (let y = Math.min(250, myTop + 6); y > myTop - 6; y--) {
+    const b = bot.blockAt(new Vec3(fx, y, fz));
+    if (b && b.boundingBox === 'block' && !/_leaves$/.test(b.name)) { fb = y; break; }
+  }
+  if (fb === null) return false;
+  const step = (fb + 1) - myTop;
+  const above = bot.blockAt(new Vec3(fx, fb + 1, fz));
+  const ev = { ts: new Date().toISOString(), front: { x: fx, z: fz }, top: fb, step, above: above ? above.name : null, action: 'none' };
+  let digPos = null, reason = null;
+  if (step === 2 && !(above && above.boundingBox === 'block' && above.name !== 'leaf_litter')) {
+    digPos = new Vec3(fx, fb, fz); reason = 'plus2-top-block';
+  } else if (step === 1 && above && above.name === 'leaf_litter') {
+    digPos = new Vec3(fx, fb + 1, fz); reason = 'litter-on-plus1';
+  }
+  if (digPos) {
+    const blk = bot.blockAt(digPos);
+    if (blk && DIGGABLE_STEP.test(blk.name) && pos.distanceTo(digPos) <= 4.5) {
+      try { await bot.lookAt(digPos.offset(0.5, 0.5, 0.5), true); } catch {}
+      try {
+        await Promise.race([
+          bot.dig(blk, 'ignore'),
+          sleep((bot.digTime ? bot.digTime(blk) : 3000) + 8000).then(() => { throw new Error('dig-step timeout'); }),
+        ]);
+        // VERIFY the dig took effect: bot.dig's promise resolves even
+        // when the server cancels the break. Measured limit of this
+        // check (dig tests, 2026-11-07): when spawn protection cancels
+        // a dig, mineflayer's local world model can keep the block
+        // removed for the REST OF THE SESSION while the server never
+        // changed it — the block is simply back at the next login. So
+        // this re-read catches only some cancellations; gate evidence
+        // therefore judges locomotion by server-reported displacement,
+        // never by dig counts. A dig this check catches as cancelled
+        // is recorded in evals but is NOT a use.
+        await sleep(400);
+        const after = bot.blockAt(digPos);
+        if (after && after.name === blk.name) {
+          ev.action = 'dig-cancelled';
+          _digStep.evals.push(ev); if (_digStep.evals.length > 50) _digStep.evals.shift();
+          return false;
+        }
+        _digStep.uses++;
+        _digStep.log.push({ ts: new Date().toISOString(), at: { x: digPos.x, y: digPos.y, z: digPos.z }, block: blk.name, reason });
+        ev.action = 'dug:' + blk.name + ':' + reason;
+        _digStep.evals.push(ev); if (_digStep.evals.length > 50) _digStep.evals.shift();
+        return true;
+      } catch (e) {
+        try { bot.stopDigging(); } catch {}
+        ev.action = 'dig-failed';
+      }
+    } else {
+      ev.action = 'not-diggable';
+    }
+  }
+  _digStep.evals.push(ev); if (_digStep.evals.length > 50) _digStep.evals.shift();
+  return false;
+}
+
+// Attempt dig-steps toward `target`. The body is 0.6 wide: when it
+// straddles a row boundary it collides with the step in BOTH rows
+// (measured 2026-11-07: a single-row dig opened the row the body
+// barely touched and the intact row still held it). Every front cell
+// the body touches is evaluated; each dug block is its own counted
+// use. Conservative by construction: only a +2 step (dig its top
+// block -> +1) or a +1 step capped with leaf_litter (dig the litter);
+// walls (a solid block above a +2 = step >= 3) and clean +1s are
+// never dug.
+async function digStepToward(bot, target) {
+  const pos = bot.entity.position;
+  const myTop = Math.round(pos.y);
+  const dx = target.x - pos.x, dz = target.z - pos.z;
+  if (Math.abs(dx) < 0.3 && Math.abs(dz) < 0.3) return false;
+  const alongX = Math.abs(dx) >= Math.abs(dz);
+  const sgn = alongX ? Math.sign(dx) : Math.sign(dz);
+  const rows = new Set();
+  if (alongX) { rows.add(Math.floor(pos.z - 0.31)); rows.add(Math.floor(pos.z + 0.31)); }
+  else { rows.add(Math.floor(pos.x - 0.31)); rows.add(Math.floor(pos.x + 0.31)); }
+  let dugAny = false;
+  for (const r of rows) {
+    const fx = alongX ? Math.floor(pos.x) + sgn : r;
+    const fz = alongX ? r : Math.floor(pos.z) + sgn;
+    if (await digStepCell(bot, fx, fz, myTop)) dugAny = true;
+  }
+  return dugAny;
+}
+
+// ── helm v3.3 helpers (declared 2026-11-07) ─────────────────────────
+// columnTopAt: ground top (highest solid block, *_leaves excluded) of
+// column (fx, fz), scanned around yHint. Same convention as
+// digStepCell's scan; null when nothing solid is in range.
+function columnTopAt(bot, fx, fz, yHint) {
+  for (let y = Math.min(250, yHint + 6); y > yHint - 6; y--) {
+    const b = bot.blockAt(new Vec3(fx, y, fz));
+    if (b && b.boundingBox === 'block' && !/_leaves$/.test(b.name)) return y;
+  }
+  return null;
+}
+
+// frontStepUp: the step height (front ground top + 1, minus current
+// feet level) of the WORST front cell the 0.6-wide body touches, in
+// the facing direction toward target. Returns 1 only for a clean,
+// head-clear +1 in every touched row (a litter cap reads as the
+// ground under it — litter is not a 'block' bounding box — and a
+// solid at head height over the step makes it a wall, not a step).
+function frontStepUp(bot, target) {
+  const pos = bot.entity.position;
+  const dx = target.x - pos.x, dz = target.z - pos.z;
+  if (Math.abs(dx) < 0.3 && Math.abs(dz) < 0.3) return 0;
+  const alongX = Math.abs(dx) >= Math.abs(dz);
+  const sgn = alongX ? Math.sign(dx) : Math.sign(dz);
+  const feetY = Math.round(pos.y);
+  const rows = new Set();
+  if (alongX) { rows.add(Math.floor(pos.z - 0.31)); rows.add(Math.floor(pos.z + 0.31)); }
+  else { rows.add(Math.floor(pos.x - 0.31)); rows.add(Math.floor(pos.x + 0.31)); }
+  let worst = null;
+  for (const r of rows) {
+    const fx = alongX ? Math.floor(pos.x) + sgn : r;
+    const fz = alongX ? r : Math.floor(pos.z) + sgn;
+    const fb = columnTopAt(bot, fx, fz, feetY);
+    if (fb === null) continue;
+    const s = (fb + 1) - feetY;
+    if (s === 1) {
+      const head = bot.blockAt(new Vec3(fx, fb + 2, fz));
+      if (head && head.boundingBox === 'block') return 0; // wall, not a step
+    }
+    if (worst === null || s > worst) worst = s;
+  }
+  return worst === null ? 0 : worst;
+}
+
+// ── helm v3.4 wedge-release record (declared 2026-11-07) ───────────
+// The most recent walkTo's wedge-release firings, kept at module
+// level so gate evidence can read the protocol's record even when a
+// caller does not thread walkTo's return value through.
+const _helm = { lastWedge: { cycles: 0, log: [] } };
+
+// prim: wedgeStats() -> {cycles, log:[{kind, n?, at, windowDisp?, before, after, dispCycle?, onGroundBefore, onGroundAfter}]} — the WEDGE-RELEASE record of the most recent walkTo: every release cycle the helm fired (or the long backoff / exhaustion marker), with the trigger window's displacement and the body's position before/after the cycle; gate evidence reads this verbatim
+function wedgeStats() {
+  return { cycles: _helm.lastWedge.cycles, log: _helm.lastWedge.log.slice() };
+}
+
+// prim: walkTo(bot, x, y, z, range=1.5, timeoutMs=45000) -> {ok, wedge?} — MANUAL HELM v3.4: steer by control states; set-and-hold facing (re-face ~2 s), MOMENTUM STEP-UP (while still moving, a detected clean +1 in the front row is jumped with forward held, so close-spaced +1s chain instead of face-planting), the WEDGE-RELEASE PROTOCOL as the FIRST recovery (see wedgeStats: displacement-keyed, never onGround-gated — forward intent held + net displacement < 0.3 blocks over a 3 s window triggers a release-first cycle: backward pulse 0.5 s, settle, then a forward+jump HOLD 1.0 s; up to 3 cycles, then one 1.5 s long backoff and a final cycle; suppressed only while the declared dig-step owns the stall), jump bursts on stall, a GUARDED lateral step-search (sidestep probes: never fires while the body stands on a step gained within the last 20 s of this walk, and probes only onto same-level shelf — never up, never down), and a backoff+settle when the body is face-planted. Robust where the pathfinder stalls (see gotoNear note). Last resort, ONLY when the declared dig-step allowance is armed (setDigStep): dig one block out of an unclimbable step (see digStepToward); every use is counted in digStepStats().
+async function walkTo(bot, x, y, z, range = 1.5, timeoutMs = 45000) {
+  if (!bot.entity) return { ok: false, error: 'no entity' };
+  const target = new Vec3(x, y, z);
+  const t0 = Date.now();
+  const fmtP = (p) => ({ x: +p.x.toFixed(2), y: +p.y.toFixed(2), z: +p.z.toFixed(2) });
+  // STALL ACCOUNTING (helm v3.2 repair, declared 2026-11-07):
+  // lastProgressAt moves ONLY on real distance improvement. Until
+  // tonight the jump-burst and probe branches reset it as a throttle,
+  // which silently capped stuckFor at ~1.9 s and made every escalation
+  // keyed above that (lateral probes >6 s, everything downstream)
+  // DEAD CODE — dig tests measured a helm that could only ever push
+  // and jump in place. Escalations are now throttled by their own
+  // lastXxxAt clocks; if an escalation works, `best` improves and the
+  // stall clock resets honestly.
+  let lastProgressAt = Date.now();
+  let best = bot.entity.position.distanceTo(target);
+  let bestAt = Date.now();
+  let lastJumpAt = 0;
+  let lastProbeAt = 0;
+  let lastDigAt = 0;
+  let lastBackoffAt = 0;
+  let backoffs = 0;
+  let lastFaceAt = 0;
+  let side = 1;
+  let probes = 0;
+  // Helm v3.3 state: momentum step-up clock, plus peak-height
+  // bookkeeping for the probe guard.
+  let lastStepUpAt = 0;
+  let startFeetY = null;
+  let peakFeetY = null;
+  let peakGainedAt = 0;
+  // Helm v3.4 state: WEDGE-RELEASE protocol. intentAt tracks the
+  // drive's forward intent (refreshed every time the facing block
+  // asserts forward); the sampler window (wedgeWinPos/wedgeWinStart)
+  // measures NET displacement over 3 s — the one signal the
+  // correction stream cannot fake.
+  let intentAt = 0;
+  let wedgeWinPos = null;
+  let wedgeWinStart = 0;
+  let wedgeCycles = 0;
+  let wedgeLongDone = false;
+  let wedgeExhausted = false;
+  const wedgeLog = [];
+  try {
+    while (Date.now() - t0 < timeoutMs) {
+      if (!bot.entity) return { ok: false, error: 'entity gone' };
+      const pos = bot.entity.position;
+      const d = pos.distanceTo(target);
+      if (d <= range + 0.4) return { ok: true, wedge: { cycles: wedgeCycles, log: wedgeLog } };
+      if (d < best - 0.05) { best = d; lastProgressAt = Date.now(); bestAt = Date.now(); }
+      // Probe-guard bookkeeping (v3.3): remember the highest GROUNDED
+      // feet level this walk has bought, and when it was bought. A jump
+      // apex must not count — only levels the body has stood on.
+      if (startFeetY === null) { startFeetY = pos.y; peakFeetY = pos.y; peakGainedAt = t0; }
+      if (bot.entity.onGround && pos.y > peakFeetY + 0.05) { peakFeetY = pos.y; peakGainedAt = Date.now(); }
+      if (Date.now() - lastFaceAt > 2000) {
+        lastFaceAt = Date.now();
+        try { await bot.lookAt(new Vec3(x, pos.y + 1.62, z), true); } catch {}
+        bot.setControlState('forward', true);
+        bot.setControlState('sprint', d > 6);
+        intentAt = Date.now();
+      }
+      const stuckFor = Date.now() - lastProgressAt;
+      // WEDGE-RELEASE SAMPLER (helm v3.4, declared 2026-11-07): the
+      // traverse-verification wedge (2026-11-07, traverse-result-
+      // g131742) froze a fresh body at the route's first clean +1 for
+      // two full 25 s legs in the frozen-fall correction-stream
+      // signature — onGround false, exact-integer y, ZERO net motion —
+      // while every v3.3 recovery was either onGround-GATED (momentum
+      // step-up, guarded probe: never eligible while the stream
+      // withholds ground contact) or too slow (backoff needs a 10 s
+      // stall inside a 25 s leg). The stream is a terrain symptom of
+      // this build, not a body state (standing lesson), so the
+      // release is designed against the stream and keyed on the one
+      // signal it cannot fake: DISPLACEMENT. Forward intent held and
+      // net displacement < 0.3 blocks over a 3 s window = wedged,
+      // whatever onGround claims. The only suppression is the
+      // declared dig-step's ownership of a stall (a dig inside the
+      // last 5 s): digging a step is slow by design and must not be
+      // mistaken for a wedge. The cycle is RELEASE-FIRST: drop every
+      // drive state, pulse backward 0.5 s (forward pressure is what
+      // the stream holds against; releasing lets it settle and the
+      // body regain ground truth), settle briefly, then a
+      // forward+jump HOLD for 1.0 s — jump held THROUGH the drive,
+      // so the body meets the face already rising with run-up behind
+      // it, spending the first grounded tick the stream grants on
+      // climbing. Escalation: 3 cycles, then ONE long backoff
+      // (1.5 s) and a final cycle; after that the protocol is spent
+      // for this walk and the v3.3 fallbacks (stall jumps, guarded
+      // probes, backoff+settle, dig-step) continue alone. Every
+      // firing is logged with its trigger displacement and the
+      // body's position before/after — the gate evidence shows the
+      // protocol working or failing, never just its conclusion.
+      if (wedgeWinPos === null) { wedgeWinPos = pos.clone(); wedgeWinStart = Date.now(); }
+      else if (Date.now() - wedgeWinStart >= 3000) {
+        const winDisp = pos.distanceTo(wedgeWinPos);
+        const digBusy = _digStep.enabled && (Date.now() - lastDigAt) < 5000;
+        const intended = (Date.now() - intentAt) <= 3500;
+        if (winDisp < 0.3 && intended && !digBusy && wedgeCycles < 4) {
+          if (wedgeCycles === 3 && !wedgeLongDone) {
+            wedgeLongDone = true;
+            const lb = { kind: 'long-backoff', at: new Date().toISOString(), before: fmtP(pos), windowDisp: +winDisp.toFixed(3) };
+            bot.setControlState('forward', false);
+            bot.setControlState('sprint', false);
+            bot.setControlState('jump', false);
+            bot.setControlState('back', true);
+            await sleep(1500);
+            bot.setControlState('back', false);
+            await sleep(500); // settle
+            lb.after = fmtP(bot.entity.position);
+            wedgeLog.push(lb);
+            lastFaceAt = 0;
+          }
+          wedgeCycles++;
+          const cyc = {
+            kind: wedgeCycles >= 4 ? 'final-cycle' : 'cycle', n: wedgeCycles,
+            at: new Date().toISOString(), windowDisp: +winDisp.toFixed(3), stuckForMs: stuckFor,
+            before: fmtP(pos), onGroundBefore: !!bot.entity.onGround,
+          };
+          bot.setControlState('forward', false);
+          bot.setControlState('sprint', false);
+          bot.setControlState('jump', false);
+          bot.setControlState('back', true);
+          await sleep(500);
+          bot.setControlState('back', false);
+          await sleep(250); // settle, no input at all
+          try { await bot.lookAt(new Vec3(x, bot.entity.position.y + 1.62, z), true); } catch {}
+          bot.setControlState('forward', true);
+          bot.setControlState('jump', true);
+          intentAt = Date.now();
+          await sleep(1000);
+          bot.setControlState('jump', false);
+          cyc.after = fmtP(bot.entity.position);
+          cyc.onGroundAfter = !!bot.entity.onGround;
+          cyc.dispCycle = +Math.hypot(cyc.after.x - cyc.before.x, cyc.after.y - cyc.before.y, cyc.after.z - cyc.before.z).toFixed(3);
+          wedgeLog.push(cyc);
+          lastFaceAt = 0;
+          wedgeWinPos = bot.entity.position.clone();
+          wedgeWinStart = Date.now();
+          continue;
+        }
+        if (winDisp < 0.3 && intended && !digBusy && wedgeCycles >= 4 && !wedgeExhausted) {
+          wedgeExhausted = true;
+          wedgeLog.push({ kind: 'exhausted', at: new Date().toISOString(), windowDisp: +winDisp.toFixed(3), note: 'wedge-release spent for this walk (3 cycles + long backoff + final cycle); v3.3 fallbacks continue' });
+        }
+        wedgeWinPos = pos.clone();
+        wedgeWinStart = Date.now();
+      }
+      // MOMENTUM STEP-UP (helm v3.3, declared 2026-11-07): gate-walk-5
+      // died on two clean +1s within three columns — the old helm met
+      // every face at zero momentum because it jumped only AFTER
+      // stalling. While the body is still moving (progress inside the
+      // stall window) and grounded, a detected clean +1 in the front
+      // row is jumped WITH the run: forward stays held through the
+      // pulse, the landing keeps its speed, and the next +1 is met the
+      // same way — steps chain. The stall jump below remains the
+      // zero-momentum fallback for faces met at a standstill.
+      if (stuckFor <= 1500 && bot.entity.onGround && Date.now() - lastStepUpAt > 300) {
+        let step = 0;
+        try { step = frontStepUp(bot, target); } catch {}
+        if (step === 1) {
+          lastStepUpAt = Date.now();
+          bot.setControlState('jump', true);
+          await sleep(380);
+          bot.setControlState('jump', false);
+          lastFaceAt = 0; // re-face after the step-up
+          continue;
+        }
+      }
+      if (stuckFor > 1500 && Date.now() - lastJumpAt > 1500) {
+        lastJumpAt = Date.now();
+        bot.setControlState('jump', true);
+        await sleep(350);
+        bot.setControlState('jump', false);
+        lastFaceAt = 0; // re-face after a jump
+      }
+      if (stuckFor > 6000 && probes < 8 && Date.now() - lastProbeAt > 6000) {
+        // Lateral step-search: jumps have not restored progress, so the
+        // step on this line is likely +2 (unclimbable). Probe sideways
+        // for a staircase, then re-face the target.
+        //
+        // PROBE GUARD (helm v3.3, declared 2026-11-07) — a probe must
+        // never spend a gained step. gate-walk-5 leg E1: the body
+        // gained the first +1 (52.4, 67, on the line), stalled against
+        // the second, and the probe walked it north OFF the step it
+        // had just bought. Two rules now gate every probe:
+        //  (1) FRESH-GAIN SUPPRESSION: while the body stands at a feet
+        //      level this walkTo gained (>= +0.9 over its start)
+        //      within the last 20 s, no probe fires at all.
+        //  (2) SHELF RULE: a probe may only move onto same-level
+        //      ground — the shelf the body already stands on — never
+        //      up (that is the jump's job), never down (that spends
+        //      height). Both cells the probe would cross are checked.
+        // If no side qualifies, the probe is skipped this cycle and
+        // the backoff / dig-step escalations get their turn instead.
+        lastProbeAt = Date.now();
+        const feetY = Math.round(pos.y);
+        const atFreshGain = bot.entity.onGround && peakFeetY !== null &&
+          pos.y >= peakFeetY - 0.05 && peakFeetY >= (startFeetY || 0) + 0.9 &&
+          (Date.now() - peakGainedAt) < 20000;
+        let probed = false;
+        if (!atFreshGain && bot.entity.onGround) {
+          const dx = x - pos.x, dz = z - pos.z;
+          const len = Math.hypot(dx, dz) || 1;
+          const ux = -dz / len, uz = dx / len; // unit lateral vector
+          for (const s of [side, -side]) {
+            const t1 = columnTopAt(bot, Math.floor(pos.x + ux * s * 1.0), Math.floor(pos.z + uz * s * 1.0), feetY);
+            const t2 = columnTopAt(bot, Math.floor(pos.x + ux * s * 2.0), Math.floor(pos.z + uz * s * 2.0), feetY);
+            if (t1 !== null && t2 !== null && (t1 + 1) === feetY && (t2 + 1) === feetY) {
+              side = -s;
+              probes++;
+              try { await bot.lookAt(new Vec3(pos.x + ux * s * 4, pos.y + 1.62, pos.z + uz * s * 4), true); } catch {}
+              bot.setControlState('forward', true);
+              bot.setControlState('sprint', false);
+              await sleep(1100);
+              bot.setControlState('forward', false);
+              lastFaceAt = 0;
+              probed = true;
+              break;
+            }
+          }
+        }
+        if (probed) continue;
+        // No lawful probe this cycle — fall through to backoff/dig.
+      }
+      if (stuckFor > 10000 && Date.now() - lastBackoffAt > 7000) {
+        // Backoff + settle (Lineage C's measured stall-breaker,
+        // adopted): a body face-planted on a step sits in the server's
+        // correction stream — onGround false, exact-integer y, zero
+        // net motion under EVERY forward driver. Forward pressure is
+        // what holds it there. Back off the face, let onGround
+        // re-establish, then the loop's ordinary forward+jump becomes
+        // a run-up, which takes steps in-place bursts cannot.
+        lastBackoffAt = Date.now();
+        backoffs++;
+        bot.setControlState('forward', false);
+        bot.setControlState('sprint', false);
+        bot.setControlState('jump', false);
+        bot.setControlState('back', true);
+        await sleep(650);
+        bot.setControlState('back', false);
+        await sleep(500); // settle
+        lastFaceAt = 0;
+        continue;
+      }
+      // Dig-step (declared allowance, only when armed): `best` has not
+      // improved for ~6 s despite jumps and lateral probes, so the step
+      // on this line is unclimbable (+2, or litter-capped +1). Dig one
+      // block out of it; the use is counted in digStepStats().
+      if (_digStep.enabled && Date.now() - bestAt > 6000 && Date.now() - lastDigAt > 4000) {
+        lastDigAt = Date.now();
+        let dug = false;
+        try { dug = await digStepToward(bot, target); } catch {}
+        if (dug) { lastFaceAt = 0; continue; }
+      }
+      await sleep(200);
+    }
+    return { ok: false, error: 'walkTo timeout (' + timeoutMs + 'ms) to ' + x + ',' + y + ',' + z + '; at ' + bot.entity.position, wedge: { cycles: wedgeCycles, log: wedgeLog } };
+  } finally {
+    _helm.lastWedge = { cycles: wedgeCycles, log: wedgeLog.slice() };
+    try { bot.clearControlStates(); } catch {}
+  }
+}
+
+// Walk-only travel movements (Lineage B's measured fix, 2026-11-06):
+// the stock pathfinder times out on even ~9-block hops in wooded/slope
+// terrain around spawn with digging enabled. Travel never digs.
+function travelMovements(bot) {
+  if (bot.__pulseTravelMv) return bot.__pulseTravelMv;
+  const mv = new Movements(bot, mcData(bot));
+  mv.canDig = false;
+  mv.allow1by1towers = false;
+  bot.__pulseTravelMv = mv;
+  return mv;
+}
+
+// prim: gotoNear(bot, x, y, z, range=1.5, timeoutMs=45000) -> {ok} — go to within `range` of a point. Tries the pathfinder (walk-only movements; goal pre-cleared via setGoal(null) — pathfinder.stop() poisons the next goto, Lineage B) under a STALL WATCHDOG: if the distance-to-target does not improve for ~7 s, the pathfinder is abandoned and walkTo's manual helm (jump + lateral step-search) takes the remainder. (Gate evidence 2026-11-06: the old design committed to the pathfinder after >=1 block of early progress and burned a 75 s timeout parked against a +2 terrace step; the staircase one block to the side was never tried.)
+async function gotoNear(bot, x, y, z, range = 1.5, timeoutMs = 45000) {
+  if (!bot.entity) return { ok: false, error: 'no entity' };
+  const target = new Vec3(x, y, z);
+  const startDist = bot.entity.position.distanceTo(target);
+  if (startDist <= range + 0.6) return { ok: true };
+  const t0 = Date.now();
+  let pfLive = false;
+  try {
+    bot.pathfinder.setMovements(travelMovements(bot));
+    bot.pathfinder.setGoal(null); // pre-clear: consume any pending stop state
+    bot.pathfinder.setGoal(new goals.GoalNear(x, y, z, range));
+    pfLive = true;
+  } catch (e) { pfLive = false; }
+  if (pfLive) {
+    let best = startDist;
+    let lastImprove = Date.now();
+    while (Date.now() - t0 < timeoutMs) {
+      if (!bot.entity) return { ok: false, error: 'entity gone' };
+      const d = bot.entity.position.distanceTo(target);
+      if (d <= range + 0.6) {
+        try { bot.pathfinder.setGoal(null); } catch {}
+        return { ok: true, via: 'pathfinder' };
+      }
+      if (d < best - 0.05) { best = d; lastImprove = Date.now(); }
+      if (Date.now() - lastImprove > 7000) break; // stall watchdog
+      await sleep(400);
+    }
+    try { bot.pathfinder.setGoal(null); } catch {}
+    try { bot.clearControlStates(); } catch {}
+    const remain = Math.max(5000, timeoutMs - (Date.now() - t0));
+    const w = await walkTo(bot, x, y, z, range, remain);
+    return w.ok ? { ok: true, via: 'helm-fallback' } : w;
+  }
+  return walkTo(bot, x, y, z, range, timeoutMs);
+}
+
+// prim: findBlocks(bot, names[], maxDistance=32, count=8) -> [Vec3] — positions of the nearest blocks whose name is in `names`
+function findBlocks(bot, names, maxDistance = 32, count = 8) {
+  const data = mcData(bot);
+  const ids = names.map((n) => data.blocksByName[n]?.id).filter((v) => v !== undefined);
+  if (!ids.length) return [];
+  return bot.findBlocks({ matching: ids, maxDistance, count }) || [];
+}
+
+// prim: digBlock(bot, pos, timeoutMs=25000) -> {ok, block} — walk into reach if needed, equip a sensible tool, face and dig the block at pos (a Vec3)
+async function digBlock(bot, pos, timeoutMs = 25000) {
+  const block = bot.blockAt(pos);
+  if (!block || block.name === 'air') return { ok: false, error: 'no block at ' + pos };
+  if (bot.entity.position.distanceTo(pos) > 4.2) {
+    const g = await gotoNear(bot, pos.x, pos.y, pos.z, 2.5, timeoutMs);
+    if (!g.ok) return g;
+  }
+  const fresh = bot.blockAt(pos);
+  if (!fresh || fresh.name === 'air') return { ok: false, error: 'block vanished at ' + pos };
+  // Naive tool choice: pickaxe for stone-like, axe for wood-like.
+  try {
+    const invNames = Object.keys(inv(bot));
+    const want = /stone|cobble|ore|rock|deepslate|granite|diorite|andesite/.test(fresh.name)
+      ? ['iron_pickaxe', 'stone_pickaxe', 'wooden_pickaxe', 'golden_pickaxe']
+      : /log|wood|planks/.test(fresh.name)
+        ? ['iron_axe', 'stone_axe', 'wooden_axe']
+        : [];
+    const toolName = want.find((n) => invNames.includes(n));
+    if (toolName) {
+      const tool = bot.inventory.items().find((i) => i.name === toolName);
+      if (tool) await bot.equip(tool, 'hand');
+    }
+  } catch {}
+  try {
+    await bot.lookAt(pos.offset(0.5, 0.5, 0.5), true);
+  } catch {}
+  // MEASURED (probe2, 2026-11-06): the callback form bot.dig(block, cb)
+  // never fires on this mineflayer/Paper stack, and the default 'raycast'
+  // direction hangs in common geometries (feet-level trunk log). The
+  // promise form bot.dig(block, 'ignore') completes in exactly
+  // bot.digTime(); reach is already enforced above (gotoNear / <=4.2).
+  const budget = Math.max(timeoutMs, (bot.digTime ? bot.digTime(fresh) : 3000) + 12000);
+  try {
+    await Promise.race([
+      bot.dig(fresh, 'ignore'),
+      sleep(budget).then(() => { throw new Error('dig timeout on ' + fresh.name); }),
+    ]);
+    return { ok: true, block: fresh.name };
+  } catch (e) {
+    try { bot.stopDigging(); } catch {}
+    return { ok: false, error: String((e && e.message) || e) };
+  }
+}
+
+// prim: digColumn(bot, pos, maxLogs=8) -> {ok, dug} — harvest the log column containing pos BOTTOM-UP: scans down to the lowest log, digs upward one at a time (digBlock enforces reach), collecting drops as it goes. Canopy-chasing yields 0 (measured, Lineage B); the bottom of the trunk is the yield path.
+async function digColumn(bot, pos, maxLogs = 8) {
+  let base = new Vec3(pos.x, pos.y, pos.z);
+  for (let i = 0; i < 24; i++) {
+    const below = bot.blockAt(new Vec3(base.x, base.y - 1, base.z));
+    if (below && /_log$/.test(below.name)) base = base.offset(0, -1, 0);
+    else break;
+  }
+  let dug = 0;
+  for (let i = 0; i < maxLogs; i++) {
+    const p = new Vec3(base.x, base.y + i, base.z);
+    const blk = bot.blockAt(p);
+    if (!blk || blk.name === 'air' || !/_log$/.test(blk.name)) break;
+    const r = await digBlock(bot, p);
+    if (!r.ok) break;
+    dug++;
+    if (dug % 2 === 0) await collectDrops(bot, 7, 4000);
+  }
+  if (dug > 0) await collectDrops(bot, 7, 6000);
+  return { ok: dug > 0, dug };
+}
+
+// prim: collectDrops(bot, radius=7, timeoutMs=12000) -> {ok, visited} — walk over dropped item entities nearby so they are picked up
+async function collectDrops(bot, radius = 7, timeoutMs = 12000) {
+  const t0 = Date.now();
+  let visited = 0;
+  let seen = 0;
+  while (Date.now() - t0 < timeoutMs) {
+    const drops = Object.values(bot.entities || {}).filter(
+      (e) => e && (e.name === 'item' || e.kind === 'Drops') && e.position && bot.entity && e.position.distanceTo(bot.entity.position) <= radius
+    );
+    seen = Math.max(seen, drops.length);
+    if (!drops.length) {
+      if (visited > 0) break;
+      await sleep(400); // drops take a moment to spawn as entities — keep waiting
+      continue;
+    }
+    const d = drops[0];
+    const g = await gotoNear(bot, d.position.x, d.position.y, d.position.z, 0.9, 6000);
+    if (g.ok) visited++;
+    await sleep(250);
+  }
+  return { ok: true, visited, seen };
+}
+
+// prim: craftByName(bot, itemName, count=1, tablePos=null) -> {ok} — craft an item; pass the Vec3 of a placed crafting table for 3x3 recipes, null for the 2x2 grid
+async function craftByName(bot, itemName, count = 1, tablePos = null) {
+  const data = mcData(bot);
+  const item = data.itemsByName[itemName];
+  if (!item) return { ok: false, error: 'unknown item ' + itemName };
+  let table = null;
+  if (tablePos) {
+    table = bot.blockAt(tablePos);
+    if (!table || table.name !== 'crafting_table') return { ok: false, error: 'no crafting_table at ' + tablePos };
+    if (bot.entity.position.distanceTo(tablePos) > 3.5) {
+      const g = await gotoNear(bot, tablePos.x, tablePos.y, tablePos.z, 2.5, 30000);
+      if (!g.ok) return g;
+    }
+  }
+  const recipes = bot.recipesFor(item.id, null, 1, table);
+  if (!recipes || !recipes.length) return { ok: false, error: 'no craftable recipe for ' + itemName + (table ? ' at table' : ' in 2x2 grid') };
+  try {
+    await bot.craft(recipes[0], count, table);
+    return { ok: true, item: itemName, count };
+  } catch (e) {
+    return { ok: false, error: 'craft ' + itemName + ': ' + e.message };
+  }
+}
+
+// prim: placeOnTop(bot, itemName, refPos) -> {ok} — place the named block item on TOP of the block at refPos (a Vec3); walks into reach first
+async function placeOnTop(bot, itemName, refPos) {
+  const item = bot.inventory.items().find((i) => i.name === itemName);
+  if (!item) return { ok: false, error: 'no ' + itemName + ' in inventory' };
+  const ref = bot.blockAt(refPos);
+  if (!ref || ref.name === 'air') return { ok: false, error: 'no reference block at ' + refPos };
+  if (bot.entity.position.distanceTo(refPos) > 4.2) {
+    const g = await gotoNear(bot, refPos.x, refPos.y, refPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  try {
+    await bot.equip(item, 'hand');
+    await bot.placeBlock(bot.blockAt(refPos), new Vec3(0, 1, 0));
+    return { ok: true, placed: itemName, at: { x: refPos.x, y: refPos.y + 1, z: refPos.z } };
+  } catch (e) {
+    return { ok: false, error: 'place ' + itemName + ': ' + e.message };
+  }
+}
+
+// prim: placeAgainst(bot, itemName, refPos, face) -> {ok} — place the named block against the block at refPos; face is a Vec3 direction like (1,0,0) east, (0,0,1) south, (0,-1,0) below
+async function placeAgainst(bot, itemName, refPos, face) {
+  const item = bot.inventory.items().find((i) => i.name === itemName);
+  if (!item) return { ok: false, error: 'no ' + itemName + ' in inventory' };
+  const ref = bot.blockAt(refPos);
+  if (!ref || ref.name === 'air') return { ok: false, error: 'no reference block at ' + refPos };
+  if (bot.entity.position.distanceTo(refPos) > 4.2) {
+    const g = await gotoNear(bot, refPos.x, refPos.y, refPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  try {
+    await bot.equip(item, 'hand');
+    await bot.placeBlock(bot.blockAt(refPos), face);
+    return { ok: true, placed: itemName, at: { x: refPos.x + face.x, y: refPos.y + face.y, z: refPos.z + face.z } };
+  } catch (e) {
+    return { ok: false, error: 'place ' + itemName + ': ' + e.message };
+  }
+}
+
+// prim: openChestContents(bot, chestPos) -> {ok, contents:{name:count}, total} — open the chest at chestPos, read what is inside, close it
+async function openChestContents(bot, chestPos) {
+  const block = bot.blockAt(chestPos);
+  if (!block || !/chest/.test(block.name)) return { ok: false, error: 'no chest at ' + chestPos };
+  if (bot.entity.position.distanceTo(chestPos) > 3.5) {
+    const g = await gotoNear(bot, chestPos.x, chestPos.y, chestPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  let win;
+  try {
+    win = await bot.openChest(bot.blockAt(chestPos));
+    const contents = {};
+    let total = 0;
+    for (const it of win.containerItems()) { contents[it.name] = (contents[it.name] || 0) + it.count; total += it.count; }
+    win.close();
+    return { ok: true, contents, total };
+  } catch (e) {
+    try { if (win) win.close(); } catch {}
+    return { ok: false, error: 'openChest: ' + e.message };
+  }
+}
+
+// prim: depositInChest(bot, chestPos, exceptNames=[]) -> {ok, deposited:{name:count}} — move every inventory item NOT in exceptNames into the chest at chestPos
+async function depositInChest(bot, chestPos, exceptNames = []) {
+  const block = bot.blockAt(chestPos);
+  if (!block || !/chest/.test(block.name)) return { ok: false, error: 'no chest at ' + chestPos };
+  if (bot.entity.position.distanceTo(chestPos) > 3.5) {
+    const g = await gotoNear(bot, chestPos.x, chestPos.y, chestPos.z, 2.5, 30000);
+    if (!g.ok) return g;
+  }
+  let win;
+  const deposited = {};
+  try {
+    win = await bot.openChest(bot.blockAt(chestPos));
+    for (const it of [...bot.inventory.items()]) {
+      if (exceptNames.includes(it.name)) continue;
+      await win.deposit(it.type, it.metadata, it.count);
+      deposited[it.name] = (deposited[it.name] || 0) + it.count;
+    }
+    win.close();
+    return { ok: true, deposited };
+  } catch (e) {
+    try { if (win) win.close(); } catch {}
+    return { ok: false, error: 'deposit: ' + e.message, deposited };
+  }
+}
+
+// prim: say(bot, msg) -> send a short chat message (keep it rare: at most ~2 per skill run)
+function say(bot, msg) {
+  try { bot.chat(String(msg).slice(0, 200)); return { ok: true }; } catch (e) { return { ok: false, error: e.message }; }
+}
+
+// prim: groundY(bot, x, z) -> y of the top solid block in column x,z near the bot (null if none found)
+function groundY(bot, x, z) {
+  const startY = Math.min(250, Math.floor(bot.entity.position.y) + 24);
+  for (let y = startY; y > bot.entity.position.y - 40; y--) {
+    const b = bot.blockAt(new Vec3(x, y, z));
+    if (b && b.boundingBox === 'block') return y;
+  }
+  return null;
+}
+
+module.exports = {
+  sleep, inv, countItem, hasItem, gotoNear, walkTo, findBlocks, digBlock, digColumn,
+  collectDrops, craftByName, placeOnTop, placeAgainst,
+  openChestContents, depositInChest, say, groundY,
+  setDigStep, digStepStats, wedgeStats,
+  Vec3, goals, mcData,
+};

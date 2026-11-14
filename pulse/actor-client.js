@@ -1,0 +1,522 @@
+'use strict';
+/**
+ * actor-client.js — CODY'S SYSTEM-2 ACTOR (First Casting, step 3;
+ * design of record: rolling-perception-work/casting/
+ * CASTING-CENSUS-AND-DESIGN-2026-11-07.md; declared in
+ * pulse/ledger.jsonl: casting-fire-20261107).
+ *
+ * A small resident model (Qwen3-0.6B on :8311) reached ONLY through
+ * the league governor (identity league-cody-actor, upstream override
+ * to :8311) supplies what the character loop's reflexes cannot:
+ *   - narration lines written from live loop state (the loop's
+ *     template lines remain the fallback on ANY actor failure —
+ *     silence degrades, never blocks), and
+ *   - a bounded re-ranking of the open project list (relocate, while
+ *     open, is never re-ranked away; done projects are never picked;
+ *     the loop applies the ranking, the actor never drives).
+ * On a slow tick (~75 s) plus event beats (milestone, flee, death;
+ * min spacing 30 s) it also works the System-3 seam: it FILES
+ * consults to the GLM book (commons/consults/glm.jsonl) on the loop's
+ * stuck / project-complete hooks (cap 2 per rolling hour) and
+ * CONSUMES answers when they land (one narration quote + a recorded
+ * fact; a suggestion is never evidence — only the world confirms).
+ *
+ * Enable gate: CODY_ACTOR=1 in the process env, OR the file
+ * pulse/actor-on.flag exists (checked every beat). The flag-file path
+ * exists so the flip needs no process restart while another lane owns
+ * Cody's restarts. Kill: remove the flag / relaunch without the env.
+ *
+ * Voice+Tastes layer (2026-11-08; claim cody-voice-tastes-claim-20261108):
+ * three beat kinds now share this client — the original TICK narration
+ * (LINE + RANK), DECLARE beats (intent-before-act: the loop offers a
+ * plan line when a leg or project step begins, capped 24/hr, min
+ * spacing 60 s, same key not re-declared within 10 min) and REACT
+ * beats (milestone / wedge / flee / death / damage / shelter /
+ * evening / forage, capped 30/hr, min spacing 45 s). Every prompt
+ * carries his tastes (pulse/tastes.js -> cody-tastes.json) and a
+ * CALLBACK digest of his own evidenced history read from the triples
+ * library, so lines can reference his past in his vocabulary without
+ * inventing facts. Declare/react model failures degrade to grounded
+ * template lines with the same grammar, never to silence-by-accident
+ * and never to invented events (the loop only offers beats for events
+ * it actually detected).
+ */
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+
+const PULSE = '/home/caseydigennaro/craftmind-league/pulse';
+const FLAG_PATH = path.join(PULSE, 'actor-on.flag');
+const BOOK_PATH = '/home/caseydigennaro/craftmind-league/commons/consults/glm.jsonl';
+const SEEN_PATH = path.join(PULSE, 'actor-consults-seen.json');
+const GOVERNOR_URL = 'http://127.0.0.1:8642/v1/chat/completions';
+const GOVERNOR_KEY = 'league-cody-actor';
+const MODEL = 'qwen3-0.6b-actor';
+const CITIZEN = 'cody';
+const PROJECT_IDS = ['relocate', 'pickaxe', 'pad', 'hut', 'chest', 'pen'];
+const BEAT_MS = 75000;
+const BEAT_MIN_SPACING_MS = 30000;
+const HTTP_TIMEOUT_MS = 25000;
+const CONSULT_CAP_PER_HOUR = 2;
+
+// Voice+Tastes layer: the shared taste profile reader. Any load
+// failure leaves the actor exactly as it was (no tastes in prompt).
+let tastes = null;
+try { tastes = require(path.join(PULSE, 'tastes.js')); } catch (e) { /* tastes absent: degrade */ }
+const TRIPLES_PATH = '/home/caseydigennaro/craftmind-league/commons/triples/triples.jsonl';
+const DECLARE_MIN_SPACING_MS = 60000;
+const DECLARE_CAP_PER_HOUR = 24;
+const DECLARE_KEY_MEMORY_MS = 600000;
+const REACT_MIN_SPACING_MS = 45000;
+const REACT_CAP_PER_HOUR = 30;
+
+const rt = {
+  started: false,
+  beating: false,
+  beats: 0,
+  failures: 0,
+  lastBeatAt: 0,
+  lastOkAt: 0,
+  pendingLine: null,      // { text, at }
+  pendingFromLibrary: false,
+  lastRank: null,         // [ids]
+  lastLineSpoken: '',
+  eventDue: false,
+  consultsFiled: 0,
+  answersConsumed: 0,
+  libraryFacts: [],       // last 5 {ts, question, excerpt}
+  seenAnswers: new Set(),
+  hooks: null,            // { sayDirect(line), context(), ledger(entry) }
+  bot: null,
+  declareTrack: { lastAt: 0, times: [], keys: {} },
+  reactTrack: { lastAt: 0, times: [] },
+  beatsByKind: { tick: 0, declare: 0, react: 0 },
+  memCache: { at: 0, text: '' },
+};
+
+function nowIso() { return new Date().toISOString(); }
+function log(...a) { console.log('[ACTOR]', ...a); }
+
+function enabled() {
+  if (process.env.CODY_ACTOR === '1') return true;
+  try { return fs.existsSync(FLAG_PATH); } catch { return false; }
+}
+
+// ── governor call (Content-Length set explicitly — this league has
+//    the scars from chunked bodies through the governor) ────────────
+function chatComplete(messages, maxTokens) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      model: MODEL,
+      messages,
+      temperature: 0.7,
+      max_tokens: maxTokens || 110,
+      // Measured on this box (2026-11-07): Qwen3's default thinking
+      // mode spends the whole 110-token budget in reasoning_content
+      // and returns empty content. The actor needs the answer, not
+      // the deliberation — thinking OFF is part of the casting.
+      chat_template_kwargs: { enable_thinking: false },
+    });
+    const req = http.request(GOVERNOR_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        'Authorization': 'Bearer ' + GOVERNOR_KEY,
+      },
+      timeout: HTTP_TIMEOUT_MS,
+    }, (res) => {
+      let data = '';
+      res.on('data', (c) => { data += c; });
+      res.on('end', () => {
+        if (res.statusCode !== 200) return reject(new Error('governor ' + res.statusCode + ': ' + data.slice(0, 160)));
+        try {
+          const j = JSON.parse(data);
+          const text = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+          if (!text) return reject(new Error('empty completion'));
+          resolve(text);
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on('timeout', () => { req.destroy(new Error('actor call timeout')); });
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
+}
+
+// ── consult book ─────────────────────────────────────────────────────
+function readBook() {
+  try {
+    return fs.readFileSync(BOOK_PATH, 'utf8').split('\n').filter(Boolean)
+      .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+  } catch { return []; }
+}
+function appendBook(rec) {
+  try { fs.appendFileSync(BOOK_PATH, JSON.stringify(rec) + '\n'); return true; } catch (e) { log('book append failed:', e.message); return false; }
+}
+function loadSeen() {
+  try { rt.seenAnswers = new Set(JSON.parse(fs.readFileSync(SEEN_PATH, 'utf8'))); } catch { rt.seenAnswers = new Set(); }
+}
+function saveSeen() {
+  try { fs.writeFileSync(SEEN_PATH, JSON.stringify([...rt.seenAnswers])); } catch {}
+}
+function contextDigest(ctx) {
+  if (!ctx) return 'state unknown';
+  const inv = Object.entries(ctx.inventory || {}).map(([k, v]) => v + ' ' + k).join(', ') || 'empty hands';
+  return ('at (' + ctx.pos.x + ', ' + ctx.pos.y + ', ' + ctx.pos.z + ')' + (ctx.place ? ' — ' + ctx.place : '') + ', health ' + ctx.health +
+    ', food ' + ctx.food + ', intent: ' + ctx.intent + ' (project ' + ctx.project + ', step ' + ctx.step +
+    '), carrying: ' + inv + ', completed so far: ' + ((ctx.milestones || []).join(', ') || 'nothing yet') +
+    ', homestead anchor at (64, 67, -93), world spawn at (32, 70, -96), spawn-protection radius 16 (digs inside it are silently cancelled)');
+}
+function fileConsult(kind, question, ctx, opts) {
+  const test = !!(opts && opts.test);
+  if (!test) {
+    const hourAgo = Date.now() - 3600000;
+    const recent = readBook().filter((r) => r.citizen === CITIZEN && r.kind === 'consult' && !r.test && new Date(r.ts).getTime() > hourAgo).length;
+    if (recent >= CONSULT_CAP_PER_HOUR) { log('consult cap reached; not filing', kind); return null; }
+  }
+  const id = CITIZEN + '-' + Date.now().toString(36) + '-' + Math.floor(Math.random() * 1296).toString(36);
+  const rec = {
+    id, type: 'consult', citizen: CITIZEN, community: 'glm', ts: nowIso(), kind,
+    question, context_digest: contextDigest(ctx), status: 'open',
+    filedBy: test ? 'operator-test' : 'cody-character-loop', test,
+  };
+  if (!appendBook(rec)) return null;
+  rt.consultsFiled++;
+  log('consult filed', id, kind, test ? '(test)' : '');
+  if (rt.hooks && rt.hooks.ledger) rt.hooks.ledger({ ts: nowIso(), kind: 'actor-consult-filed', id: 'actor-consult-' + id, what: 'Actor filed a GLM consult (' + kind + (test ? ', operator test' : '') + '): ' + question.slice(0, 300), class: 'character' });
+  return id;
+}
+function pollAnswers() {
+  const book = readBook();
+  const fresh = [];
+  for (const r of book) {
+    if (r.type !== 'answer' || r.citizen !== CITIZEN || rt.seenAnswers.has(r.id)) continue;
+    rt.seenAnswers.add(r.id);
+    fresh.push(r);
+  }
+  if (fresh.length) saveSeen();
+  return fresh;
+}
+function firstSentence(text) {
+  const t = String(text || '').replace(/\s+/g, ' ').trim();
+  const m = t.match(/^[^.!?]{10,180}[.!?]/);
+  return (m ? m[0] : t.slice(0, 180)).trim();
+}
+function consumeAnswers() {
+  const fresh = pollAnswers();
+  for (const r of fresh) {
+    rt.answersConsumed++;
+    if (r.status === 'answered' && r.answer) {
+      const excerpt = firstSentence(r.answer);
+      rt.libraryFacts.push({ ts: r.ts, question: String(r.question || '').slice(0, 140), excerpt });
+      if (rt.libraryFacts.length > 5) rt.libraryFacts.shift();
+      rt.pendingLine = { text: ('The library says: ' + excerpt).slice(0, 170), at: Date.now() };
+      setSpoken(rt.pendingLine.text);
+      rt.pendingFromLibrary = true;
+      log('consult answer consumed', r.id, '->', rt.pendingLine.text.slice(0, 90));
+      if (rt.hooks && rt.hooks.ledger) rt.hooks.ledger({ ts: nowIso(), kind: 'actor-consult-answer', id: 'actor-answer-' + r.id, what: 'GLM consult answer consumed by the actor (narration quote queued; fact recorded; suggestion only — world evidence still decides): ' + String(r.answer).slice(0, 400), class: 'character' });
+    } else {
+      log('consult closed unanswered', r.id, '(silence is a legal answer)');
+      if (rt.hooks && rt.hooks.ledger) rt.hooks.ledger({ ts: nowIso(), kind: 'actor-consult-unanswered', id: 'actor-unanswered-' + r.id, what: 'GLM consult ' + r.id + ' closed unanswered after driver attempts; the actor notes it and moves on.', class: 'character' });
+    }
+  }
+  return fresh.length;
+}
+
+// ── callbacks: his evidenced history + tastes, for every prompt ────
+function setSpoken(line) { if (line) rt.lastLineSpoken = line; }
+function hourCount(times) {
+  const cut = Date.now() - 3600000;
+  while (times.length && times[0] < cut) times.shift();
+  return times.length;
+}
+// His own triples (provenance citizen Cody), newest last, compressed
+// to one line each. Read from the library file; cached 60 s. This is
+// the callback material: the dip failure, the S1 pass, the burrow —
+// facts he may reference, never a licence to invent new ones.
+function loadMemoryDigest() {
+  if (Date.now() - rt.memCache.at < 60000) return rt.memCache.text;
+  let text = '';
+  try {
+    const rows = fs.readFileSync(TRIPLES_PATH, 'utf8').split('\n').filter(Boolean)
+      .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean)
+      .filter((r) => r.provenance && /cody/i.test(String(r.provenance.citizen || '')));
+    text = rows.slice(-6).map((r) => {
+      const kind = (r.situation && r.situation.kind) || 'event';
+      const status = (r.outcome && r.outcome.status) || 'recorded';
+      const verdict = String((r.outcome && r.outcome.verdict) || '').replace(/\s+/g, ' ').slice(0, 120);
+      return '- ' + kind + ' (' + status + '): ' + verdict;
+    }).join('\n');
+  } catch { text = ''; }
+  rt.memCache = { at: Date.now(), text };
+  return text;
+}
+
+// ── the beat ─────────────────────────────────────────────────────────
+function buildPrompt(ctx, kind, extra) {
+  kind = kind || 'tick';
+  extra = extra || {};
+  const open = (ctx.openProjects || []).map((p) => p.id).join(', ') || 'none';
+  const sys = 'You are Cody, a Minecraft player building a small homestead. You talk like a player: first person, plain, brief, a little dry humour. You never mention AI, models, prompts, or being a character in a system. You only claim what your situation says is true — work listed as not yet done is NOT done.';
+  let user = 'Your situation: ' + contextDigest(ctx) + '\n';
+  user += 'Open projects (NOT yet done): ' + open + '.\n';
+  const tasteBlock = tastes ? tastes.promptSummary() : '';
+  if (tasteBlock) user += tasteBlock + '\n';
+  const hist = loadMemoryDigest();
+  if (hist) user += 'Your history (true, from your own record — refer to it naturally if it fits; never invent beyond it):\n' + hist + '\n';
+  if (rt.libraryFacts.length) user += 'Library answers you have noted: ' + rt.libraryFacts.slice(-2).map((f) => f.excerpt).join(' | ') + '\n';
+  if (kind === 'declare') {
+    user += 'You are ABOUT to: ' + extra.action + '. You have not started yet.\n' +
+      'Reply with EXACTLY one line and nothing else:\n' +
+      'LINE: <one short sentence, at most 16 words, stating the plan like a player announcing what he is trying next>';
+  } else if (kind === 'react') {
+    user += 'This JUST happened: ' + extra.detail + '.\n' +
+      'Tone: ' + (extra.tone || 'plain') + '.\n' +
+      'Reply with EXACTLY one line and nothing else:\n' +
+      'LINE: <one short sentence, at most 16 words, reacting as a player would>';
+  } else {
+    user += 'You are currently working on: ' + (ctx.project || 'none') + '.\n' +
+      'Reply with EXACTLY two lines and nothing else:\n' +
+      'LINE: <one short sentence, at most 18 words, saying what you are doing or thinking right now>\n' +
+      'RANK: <the open project ids in the order you would tackle them, comma-separated>';
+  }
+  return [{ role: 'system', content: sys }, { role: 'user', content: user }];
+}
+function parseBeat(text, kind) {
+  const lm = text.match(/LINE:\s*(.+)/i);
+  const rm = text.match(/RANK:\s*(.+)/i);
+  let line = null, rank = null;
+  if (lm) {
+    line = lm[1].trim().replace(/^["']|["']$/g, '').replace(/\s+/g, ' ');
+    if (line.length > 170) line = line.slice(0, 170);
+    if (line.length < 3 || /http|www\./i.test(line)) line = null;
+  }
+  // Voice+Tastes fix (shadow-proven, 2026-11-08): on the single-line
+  // prompts (declare/react) the 0.6B model answers with a bare
+  // sentence and no LINE: prefix — the tick prompt's LINE+RANK pair
+  // is what anchors the prefix there. Accept a bare single line for
+  // the single-line kinds, under the same sanity checks.
+  if (!line && kind && kind !== 'tick') {
+    const raw = String(text || '').trim();
+    const bare = raw.replace(/\s+/g, ' ').replace(/^["']|["']$/g, '');
+    if (bare && !/\n/.test(raw) && bare.length >= 3 && bare.length <= 170 &&
+        !/http|www\./i.test(bare) && !/^(LINE|RANK)\s*:/i.test(bare)) line = bare;
+  }
+  // Persona guard: he speaks first person. A line that addresses
+  // him in the second person ("Your homestead is…") is the model
+  // slipping out of character — reject it; declare/react callers
+  // degrade to their grounded templates instead.
+  if (line && /^(you|your)\b/i.test(line)) line = null;
+  if (rm) {
+    rank = rm[1].toLowerCase().split(/[,\s]+/).map((s) => s.trim()).filter((s) => PROJECT_IDS.includes(s));
+    rank = [...new Set(rank)];
+    if (!rank.length) rank = null;
+  }
+  return { line, rank };
+}
+async function runBeat(kind, extra) {
+  extra = extra || {};
+  if (rt.beating || !rt.hooks || !rt.bot || !rt.bot.entity) return false;
+  const now = Date.now();
+  // Caps per kind (the governor budget is cody-actor 240 calls /
+  // 600 mind-s per rolling hour — tick + declare + react worst case
+  // stays well inside it; see the build ledger entry for the maths).
+  if (kind === 'tick') {
+    if (now - rt.lastBeatAt < BEAT_MIN_SPACING_MS && extra.reason === 'tick') return false;
+  } else if (kind === 'declare') {
+    if (now - rt.declareTrack.lastAt < DECLARE_MIN_SPACING_MS) return false;
+    if (hourCount(rt.declareTrack.times) >= DECLARE_CAP_PER_HOUR) return false;
+    const k = extra.key || extra.action || '';
+    if (k && rt.declareTrack.keys[k] && now - rt.declareTrack.keys[k] < DECLARE_KEY_MEMORY_MS) return false;
+  } else if (kind === 'react') {
+    if (now - rt.reactTrack.lastAt < REACT_MIN_SPACING_MS) return false;
+    if (hourCount(rt.reactTrack.times) >= REACT_CAP_PER_HOUR) return false;
+  }
+  rt.beating = true;
+  try {
+    if (kind === 'tick') consumeAnswers();
+    const ctx = rt.hooks.context();
+    let line = null, rank = null;
+    // Evening gate (2026-11-08, claim cody-evening-gate-claim-20261108;
+    // ACTIONS item 21): the evening REACT class is TEMPLATE-ONLY. Its
+    // measured defect: model lines overclaim day-end completions in
+    // ~1/3 of shadow samples ("a completed homestead and a new hut" —
+    // no hut exists). The evening template is the caller's own grounded
+    // closing line composed from actual state (maybePutter), so for
+    // this class the model call is skipped entirely and the template
+    // IS the line. No template -> no line (silence degrades, never
+    // blocks) — never an ungrounded completion claim. All other beat
+    // kinds and react classes keep the model path below unchanged.
+    const eveningGated = kind === 'react' && extra.eventKind === 'evening';
+    try {
+      if (eveningGated) {
+        line = extra.template || extra.fallback || null;
+        log('beat (react/evening) template-only gate:', line || '(no template supplied — no line)');
+      } else {
+      const text = await chatComplete(buildPrompt(ctx, kind, extra), 110);
+      const parsed = parseBeat(text, kind);
+      line = parsed.line; rank = parsed.rank;
+      }
+      if (!line && !eveningGated) {
+        log('beat ok but no usable LINE (' + kind + '); raw:', text.slice(0, 120).replace(/\n/g, ' / '));
+        if (kind !== 'tick') {
+          line = extra.fallback || extra.template || null;
+          if (line) log('beat (' + kind + ') using template fallback line:', line);
+        }
+      }
+    } catch (e) {
+      rt.failures++;
+      log('beat failed (' + kind + '):', e.message, '— degrading to template grammar');
+      line = extra.fallback || extra.template || null;
+      if (line) log('beat (' + kind + ') using template fallback line:', line);
+    }
+    rt.lastBeatAt = Date.now();
+    if (!line) return false;
+    rt.beats++;
+    rt.beatsByKind[kind] = (rt.beatsByKind[kind] || 0) + 1;
+    rt.lastOkAt = Date.now();
+    if (kind === 'declare') {
+      rt.declareTrack.lastAt = Date.now();
+      rt.declareTrack.times.push(Date.now());
+      const k = extra.key || extra.action || '';
+      if (k) rt.declareTrack.keys[k] = Date.now();
+    }
+    if (kind === 'react') { rt.reactTrack.lastAt = Date.now(); rt.reactTrack.times.push(Date.now()); }
+    if (rank) rt.lastRank = rank;
+    setSpoken(line);
+    rt.pendingLine = { text: line, at: Date.now() };
+    rt.pendingFromLibrary = false;
+    log('beat ok (' + kind + '):', line, rank ? '| rank: ' + rank.join('>') : '');
+    if (rt.hooks.sayDirect && Date.now() - (rt.hooks.lastChatAt ? rt.hooks.lastChatAt() : 0) > 30000) {
+      rt.hooks.sayDirect(line);
+      rt.pendingLine = null;
+    }
+    return true;
+  } finally {
+    rt.beating = false;
+  }
+}
+function beat(reason) { return runBeat('tick', { reason }); }
+
+// ── declare + react: the voice grammar's other two beat kinds ──────
+// DECLARE: intent-before-act. The loop offers a beat when a leg or
+// project step begins; the line states the plan BEFORE movement.
+// opts.fallback is the call site's own template line, used verbatim
+// if the model call fails (same grammar, no invented content).
+function declareBeat(key, actionText, opts) {
+  if (!enabled()) return false;
+  opts = opts || {};
+  return runBeat('declare', { key, action: actionText, fallback: opts.fallback || null });
+}
+// REACT: a grounded reaction to an event the loop actually detected.
+// Templates keep the grammar when the model is down; the evening
+// template is the caller's own composed line (detail passed through).
+const REACT_TONES = {
+  milestone: 'quiet satisfaction, no bragging',
+  wedge: 'dry frustration, and resolve to find another way',
+  flee: 'breathless relief at getting clear',
+  death: 'wry and unbowed — you are back and resuming',
+  damage: 'a wince, and a warning to yourself',
+  shelter: 'relief at being safe, patience to wait it out',
+  evening: 'end-of-day contentment, summing up the day in one line',
+  forage: 'focused — food before everything else',
+};
+const REACT_TEMPLATES = {
+  milestone: (d) => 'Done — ' + d + '.',
+  wedge: () => "That way's not having it. Rethink.",
+  flee: () => 'Too close. Clear for now.',
+  death: () => 'Back again. Picking up where I left off.',
+  damage: () => 'Took a hit. Careful now.',
+  shelter: () => 'Dug in. Waiting it out.',
+  evening: (d) => d,
+  forage: () => 'Food first. Everything else waits.',
+};
+function reactBeat(kind, detail, opts) {
+  if (!enabled()) return false;
+  opts = opts || {};
+  const tmpl = REACT_TEMPLATES[kind] ? REACT_TEMPLATES[kind](detail || '') : null;
+  return runBeat('react', {
+    eventKind: kind, detail: detail || '',
+    tone: REACT_TONES[kind] || 'plain',
+    template: opts.template || tmpl, fallback: opts.fallback || null,
+  });
+}
+
+// ── public surface used by character-plugin.js ───────────────────────
+function start(bot, hooks) {
+  if (rt.started) return;
+  rt.started = true;
+  rt.bot = bot;
+  rt.hooks = hooks;
+  loadSeen();
+  const iv = setInterval(() => {
+    if (!enabled()) return;
+    if (rt.eventDue) { rt.eventDue = false; beat('event'); }
+    else beat('tick');
+  }, BEAT_MS);
+  if (iv.unref) iv.unref();
+  // First beat shortly after arming (still gated), so the flip is
+  // visible in the feed within a minute, not a full tick later.
+  setTimeout(() => { if (enabled()) beat('arm'); }, 20000);
+  log('actor client armed (gate:', process.env.CODY_ACTOR === '1' ? 'env' : 'flag-file', ')');
+}
+function noteEvent(kind) { if (enabled()) rt.eventDue = true; log('actor event noted:', kind); }
+function takeLine() {
+  if (!rt.pendingLine) return null;
+  if (Date.now() - rt.pendingLine.at > 120000) { rt.pendingLine = null; return null; }
+  const t = rt.pendingLine.text;
+  rt.pendingLine = null;
+  return t;
+}
+function getRank() { return rt.lastRank; }
+function fileStuck(projectId, title, ctx) {
+  return fileConsult('stuck',
+    'I am Cody, a Minecraft citizen building a homestead. I have been stuck on the project "' + title + '" for over ten minutes with no measurable progress. What should I try differently? Practical steps only, at most 200 words.',
+    ctx);
+}
+function fileProjectComplete(projectId, title, ctx) {
+  return fileConsult('project-complete',
+    'I am Cody, a Minecraft citizen building a homestead. I just finished the project "' + title + '". What should I build, improve, or name next for my settlement? At most 200 words, practical and specific.',
+    ctx);
+}
+function stats() {
+  return {
+    enabled: enabled(),
+    beats: rt.beats,
+    failures: rt.failures,
+    lastBeatAt: rt.lastBeatAt ? new Date(rt.lastBeatAt).toISOString() : null,
+    // Was: pendingLine only — consumed within seconds, so the state
+    // file read null almost always (the actor.lastLine defect).
+    // lastLineSpoken is set when a line is PRODUCED for speech
+    // (beat / declare / react / library quote) and survives delivery.
+    lastLine: rt.lastLineSpoken || (rt.pendingLine ? rt.pendingLine.text : null),
+    beatsByKind: rt.beatsByKind,
+    declaresLastHour: rt.declareTrack.times.filter((t) => Date.now() - t < 3600000).length,
+    reactsLastHour: rt.reactTrack.times.filter((t) => Date.now() - t < 3600000).length,
+    lastRank: rt.lastRank,
+    consultsFiled: rt.consultsFiled,
+    answersConsumed: rt.answersConsumed,
+    libraryFacts: rt.libraryFacts,
+  };
+}
+
+module.exports = {
+  start, enabled, takeLine, getRank, noteEvent, fileStuck, fileProjectComplete, stats,
+  declareBeat, reactBeat,
+  _fileConsult: fileConsult, _contextDigest: contextDigest,
+  // Offline shadow-harness surface (pulse/voice-tastes-shadow.js):
+  // wires hooks + a fake bot without arming intervals, and exposes
+  // the beat machinery so scripted states can be driven end-to-end.
+  _test: {
+    // loadSeen() matters: without it the shadow process starts with
+    // an empty seen-set and pollAnswers would re-write the seen file
+    // holding only the ids it consumed (first shadow run did exactly
+    // that to 4 historical ids — bounded and ledgered, see
+    // cody-voice-tastes-build-20261108; the ids it wrote were true
+    // consumed answers, but the file must accumulate, not restart).
+    setup(hooks, bot) { rt.hooks = hooks; rt.bot = bot; rt.started = true; loadSeen(); },
+    runBeat, loadMemoryDigest, setSpoken,
+  },
+};

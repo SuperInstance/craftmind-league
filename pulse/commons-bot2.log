@@ -1,0 +1,4 @@
+STEP landing {"pos":{"x":38.7,"y":66,"z":-100.77},"health":20,"food":20}
+STEP at-oak {"pos":{"x":37.31,"y":66,"z":-99.16}}
+STEP after-oak {"pos":{"x":37.31,"y":66,"z":-99.16},"logs":0,"inv":{}}
+STEP after-oak2 {"pos":{"x":40.7,"y":66,"z":-99.5},"logs":0,"inv":{}}

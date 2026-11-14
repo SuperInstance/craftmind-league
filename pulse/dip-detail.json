@@ -1,0 +1,2243 @@
+{
+ "ts": "2026-11-08T08:33:29.607Z",
+ "cody": null,
+ "cols": {
+  "69,-104": [
+   {
+    "y": 67,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 66,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 65,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "69,-103": [
+   {
+    "y": 66,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 65,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "69,-102": [
+   {
+    "y": 67,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 66,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 65,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "69,-101": [
+   {
+    "y": 67,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 66,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 65,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "69,-100": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "69,-99": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "69,-98": [
+   {
+    "y": 66,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 65,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "dirt",
+    "bb": "block"
+   }
+  ],
+  "70,-104": [
+   {
+    "y": 70,
+    "name": "birch_leaves",
+    "bb": "block"
+   },
+   {
+    "y": 67,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 66,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 65,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "70,-103": [
+   {
+    "y": 70,
+    "name": "birch_leaves",
+    "bb": "block"
+   },
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "70,-102": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "70,-101": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "70,-100": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "70,-99": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "dirt",
+    "bb": "block"
+   }
+  ],
+  "70,-98": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "dirt",
+    "bb": "block"
+   }
+  ],
+  "71,-104": [
+   {
+    "y": 71,
+    "name": "birch_leaves",
+    "bb": "block"
+   },
+   {
+    "y": 70,
+    "name": "birch_leaves",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "71,-103": [
+   {
+    "y": 71,
+    "name": "birch_leaves",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "71,-102": [
+   {
+    "y": 64,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "71,-101": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "71,-100": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "71,-99": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "dirt",
+    "bb": "block"
+   }
+  ],
+  "71,-98": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "dirt",
+    "bb": "block"
+   }
+  ],
+  "72,-104": [
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "72,-103": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "72,-102": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "72,-101": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "72,-100": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "72,-99": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "72,-98": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "dirt",
+    "bb": "block"
+   }
+  ],
+  "73,-104": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "73,-103": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "73,-102": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "73,-101": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "73,-100": [
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "73,-99": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "copper_ore",
+    "bb": "block"
+   }
+  ],
+  "73,-98": [
+   {
+    "y": 66,
+    "name": "leaf_litter",
+    "bb": "empty"
+   },
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-104": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-103": [
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-102": [
+   {
+    "y": 62,
+    "name": "andesite",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-101": [
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-100": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-99": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "74,-98": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-104": [
+   {
+    "y": 64,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-103": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "copper_ore",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-102": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-101": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-100": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-99": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "75,-98": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "76,-104": [
+   {
+    "y": 65,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 64,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "76,-103": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "76,-102": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "76,-101": [
+   {
+    "y": 62,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "stone",
+    "bb": "block"
+   }
+  ],
+  "76,-100": [
+   {
+    "y": 62,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "coal_ore",
+    "bb": "block"
+   }
+  ],
+  "76,-99": [
+   {
+    "y": 63,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 56,
+    "name": "coal_ore",
+    "bb": "block"
+   }
+  ],
+  "76,-98": [
+   {
+    "y": 64,
+    "name": "grass_block",
+    "bb": "block"
+   },
+   {
+    "y": 63,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 62,
+    "name": "dirt",
+    "bb": "block"
+   },
+   {
+    "y": 61,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 60,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 59,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 58,
+    "name": "stone",
+    "bb": "block"
+   },
+   {
+    "y": 57,
+    "name": "stone",
+    "bb": "block"
+   }
+  ]
+ }
+}

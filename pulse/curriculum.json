@@ -1,0 +1,100 @@
+{
+ "name": "settle-in",
+ "quest": "Settle in: tools, stone, a shelter of your own, stores, and one full night survived inside it.",
+ "stages": [
+  {
+   "attempts": [
+    {
+     "ts": "2026-11-07T04:53:28.047Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T04-37-56-639Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T04-38-15-034Z"
+    },
+    {
+     "ts": "2026-11-07T19:54:20.760Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-38-27-380Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T19-39-07-608Z"
+    },
+    {
+     "ts": "2026-11-07T20:15:23.467Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T19-59-37-425Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T20-00-10-299Z"
+    },
+    {
+     "ts": "2026-11-07T20:33:35.712Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T20-17-39-045Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T20-18-22-537Z"
+    },
+    {
+     "ts": "2026-11-07T20:52:03.975Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T20-36-17-608Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T20-36-50-803Z"
+    },
+    {
+     "ts": "2026-11-07T21:11:18.775Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T20-55-43-922Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T20-56-05-720Z"
+    },
+    {
+     "ts": "2026-11-07T21:25:00Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/archive-s1-lineage2-20261107/s1-2026-11-07T20-17-39-045Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T21-18-42-494Z"
+    },
+    {
+     "ts": "2026-11-07T22:07:52.171Z",
+     "candidate": "/home/caseydigennaro/craftmind-league/pulse/library/s1-2026-11-07T21-52-07-809Z.js",
+     "verdict": "FAIL",
+     "trialId": "trial-S1-2026-11-07T21-52-39-085Z"
+    }
+   ],
+   "evidence": "state feed max-seen inventory across the trial window (crafting_table>=1 or a placed table in evidence.tables; wooden_pickaxe>=1)",
+   "goal": "Find trees, dig logs, and work up to your first tools. End state: a crafting table (carried in inventory or placed in the world) AND a wooden pickaxe in your inventory. Recipe chain: logs -> planks (2x2 grid) -> sticks; 4 planks -> crafting table (2x2 grid); place the table, stand next to it, then 3 planks + 2 sticks -> wooden pickaxe (needs the table).",
+   "id": "S1",
+   "status": "pending",
+   "title": "Gather + tools",
+   "windowMin": 15
+  },
+  {
+   "attempts": [],
+   "evidence": "state feed max-seen inventory (stone_pickaxe>=1 and cobblestone>=1 at some poll)",
+   "goal": "Use the wooden pickaxe to mine stone underground or from exposed rock: collect cobblestone, then craft a stone pickaxe at the crafting table (3 cobblestone + 2 sticks). End state: stone pickaxe in inventory and cobblestone seen in inventory during the window (proof of mining).",
+   "id": "S2",
+   "status": "pending",
+   "title": "Stone",
+   "windowMin": 15
+  },
+  {
+   "attempts": [],
+   "evidence": "evidence.json shelter.found == true with hasDoor and hasTorchInside at some poll during the window",
+   "goal": "Build a small enclosed, roofed shelter within ~24 blocks of your home anchor: walls with no gaps, a roof, a door (any wooden door) in a doorway, and a torch inside (torch needs 1 stick + 1 coal or charcoal; coal ore is common in exposed stone and shallow digging). Interior roughly 3x3 to 5x5, two blocks high plus roof. Use planks or cobblestone for walls. End state is judged by the pulse evidence scan's flood-fill shelter analysis, not by your say-so.",
+   "id": "S3",
+   "status": "pending",
+   "title": "Shelter",
+   "windowMin": 30
+  },
+  {
+   "attempts": [],
+   "evidence": "evidence.json: a chest within the shelter area whose opened contents total >= 8 items at some poll during the window",
+   "goal": "Craft a chest (8 planks at the crafting table), place it INSIDE the shelter, and deposit at least 8 surplus items into it (keep your tools: pickaxes, axes, the crafting table if carried). End state judged by opening the chest and counting its contents.",
+   "id": "S4",
+   "status": "pending",
+   "title": "Furnish",
+   "windowMin": 20
+  },
+  {
+   "attempts": [],
+   "evidence": "no death records (pulse deaths.jsonl + Orin server log) with time-of-day in [13000,23000] during the watched night, and state feed positions during the night stay within the shelter radius of the shelter centre",
+   "goal": "When dusk approaches (time of day ~12000), go inside your shelter, close in / stay in, and remain inside until dawn. Survive the whole night (time 13000-23000) with zero deaths, positioned within the shelter at night mid-point. Eat if you have food; do not wander out.",
+   "id": "S5",
+   "status": "pending",
+   "title": "The night",
+   "windowMin": 25
+  }
+ ]
+}

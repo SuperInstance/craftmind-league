@@ -1,0 +1,85 @@
+{
+ "ts": "2026-11-13T13:36:55.749Z",
+ "cycle": 153,
+ "say": "Still stuck at 63 — the long leg didn't take either, and a zombie's two blocks off. The walls around me top at 66, three levels up, and the walker can't climb that. There's water right at my feet. Let me at least get out of the wet cell — try the south grass at 66, one long leg past it.",
+ "result": {
+  "ok": false,
+  "detail": "NOT arrived at (66,66,-84) — you actually stand at (66.7,63.1,-91.3), still 7.8 blocks short and 2.9 blocks below the target's level; the walker gave up (walkTo timeout (22798ms) to 66,66,-84; at (66.69972723055807, 63.12, -91.30211630310427)). On broken ground, hop in short legs of 2-3 blocks, or climb."
+ },
+ "pos": {
+  "x": 66.7,
+  "y": 63.1,
+  "z": -91.3
+ },
+ "hp": 20,
+ "food": 20,
+ "inv": {
+  "cooked_porkchop": 27
+ },
+ "distHome": 3.2,
+ "ground": {
+  "W": "grass_block@y66",
+  "E": "grass_block@y66",
+  "N": "oak_leaves@y69",
+  "S": "grass_block@y66"
+ },
+ "ring": "-1,0,0,2,1,3,1,3",
+ "entities": [
+  "chicken@10",
+  "chicken@12",
+  "chicken@9",
+  "pig@1",
+  "zombie@2"
+ ],
+ "timeOfDay": 3496,
+ "held": "cooked_porkchop",
+ "structures": [
+  {
+   "label": "water",
+   "dist": 0.2811564050906837,
+   "dir": "right here",
+   "pos": {
+    "x": 66,
+    "y": 63,
+    "z": -92
+   }
+  },
+  {
+   "label": "crafting table",
+   "dist": 3.109580781060159,
+   "dir": "NW",
+   "pos": {
+    "x": 64,
+    "y": 67,
+    "z": -94
+   }
+  },
+  {
+   "label": "fence gate",
+   "dist": 8.285206245807725,
+   "dir": "N",
+   "pos": {
+    "x": 65,
+    "y": 67,
+    "z": -100
+   }
+  },
+  {
+   "label": "fence",
+   "count": 10,
+   "note": "fence posts around you"
+  },
+  {
+   "label": "wheat patch",
+   "farm": 4,
+   "crops": {
+    "total": 0,
+    "ripe": 0
+   },
+   "plants": [],
+   "plantsTotal": 0
+  }
+ ],
+ "trees": [],
+ "structuresText": "Structures in sight: a water right here of you, 0 blocks (at 66,63,-92); a crafting table NW of you, 3 blocks (at 64,67,-94); a fence gate N of you, 8 blocks (at 65,67,-100); 10 fence posts within sight; a wheat patch (4 farmland). Trees near you: none with a trunk you can reach from the ground within sight — the canopy overhead here is crowns without trunks beneath (do not dig upward at leaves). Standing timber you know of: the east-oak country past the dip — a birch stands at (80,66,-96), an oak at (86,67,-94); west, an oak stands at (58,67,-105). Walk to one and your eyes will name its foot."
+}

@@ -1,0 +1,8 @@
+{"ts_ms":1794271501809,"phase":"start","ok":true}
+{"ts_ms":1794271502060,"phase":"cycle","cycle":1,"ok":true,"reason":null}
+{"ts_ms":1794271502310,"phase":"cycle","cycle":2,"ok":true,"reason":null}
+{"ts_ms":1794271502561,"phase":"cycle","cycle":3,"ok":true,"reason":null}
+{"ts_ms":1794271502811,"phase":"cycle","cycle":4,"ok":true,"reason":null}
+{"ts_ms":1794271503062,"phase":"cycle","cycle":5,"ok":true,"reason":null}
+{"ts_ms":1794271503313,"phase":"cycle","cycle":6,"ok":true,"reason":null}
+{"ts_ms":1794271503563,"phase":"cycle","cycle":7,"ok":false,"reason":"lease-revoked"}

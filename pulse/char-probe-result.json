@@ -1,0 +1,94 @@
+{
+ "ts": "2026-11-08T03:14:34.308Z",
+ "arms": [
+  {
+   "arm": "P0-idle",
+   "start": {
+    "x": 39.53,
+    "y": 67.42,
+    "z": -100.68
+   },
+   "end": {
+    "x": 39.53,
+    "y": 67,
+    "z": -100.68
+   },
+   "disp": 0
+  },
+  {
+   "arm": "P1-travelMovements-east6",
+   "start": {
+    "x": 39.53,
+    "y": 67,
+    "z": -100.68
+   },
+   "end": {
+    "x": 39.53,
+    "y": 67,
+    "z": -100.68
+   },
+   "disp": 0,
+   "arrived": false
+  },
+  {
+   "arm": "P2-defaultMovements-parkour-east6",
+   "start": {
+    "x": 39.53,
+    "y": 67,
+    "z": -100.68
+   },
+   "end": {
+    "x": 39.53,
+    "y": 67,
+    "z": -100.68
+   },
+   "disp": 0,
+   "arrived": false
+  },
+  {
+   "arm": "P3-helm-east6",
+   "start": {
+    "x": 39.53,
+    "y": 67,
+    "z": -100.68
+   },
+   "end": {
+    "x": 39.68,
+    "y": 67,
+    "z": -100.68
+   },
+   "disp": 0.15,
+   "walkToOk": false
+  },
+  {
+   "arm": "P4-sprintjump-east8s",
+   "start": {
+    "x": 39.68,
+    "y": 67,
+    "z": -100.68
+   },
+   "end": {
+    "x": 39.68,
+    "y": 67,
+    "z": -100.68
+   },
+   "disp": 0
+  },
+  {
+   "arm": "P5-parkour-diagNE",
+   "start": {
+    "x": 39.68,
+    "y": 67,
+    "z": -100.68
+   },
+   "end": {
+    "x": 39.7,
+    "y": 67,
+    "z": -100.69
+   },
+   "disp": 0.02,
+   "arrived": false
+  }
+ ],
+ "done": true
+}

@@ -1,0 +1,25 @@
+[DIRECTOR] Director102224 spawn 29.50,77.00,-105.50
+[DIRECTOR] 3s CHAT Cody: Director102224: Welcome to Sitka Cove! Walk to the dock and talk to Gustav.
+[DIRECTOR] leg 36 -93.5 {"ok":false,"error":"walkTo timeout (33368ms) to 36,69,-93.5; at (35.3, 65, -96.41850086527036)"} at 35.30,65.00,-96.42
+[DIRECTOR] in position at 35.30,65.00,-96.42 — issuing chat commands
+[DIRECTOR] 49s SENT: Cody, follow me | probe at 35.30,65.00,-96.42
+[DIRECTOR] 49s CHAT Director102224: Cody, follow me
+[DIRECTOR] 74s probe still at 35.31,65.00,-96.40
+[DIRECTOR] 74s SENT: follow me | probe at 35.31,65.00,-96.40
+[DIRECTOR] 74s CHAT Director102224: follow me
+[DIRECTOR] 99s probe still at 35.31,65.00,-96.40
+[DIRECTOR] 99s SENT: Cody, come here | probe at 35.31,65.00,-96.40
+[DIRECTOR] 99s CHAT Director102224: Cody, come here
+[DIRECTOR] 99s CHAT Cody: Hmm?
+[DIRECTOR] 124s probe still at 35.31,65.00,-96.40
+[DIRECTOR] 124s SENT: come here Cody | probe at 35.31,65.00,-96.40
+[DIRECTOR] 124s CHAT Director102224: come here Cody
+[DIRECTOR] 124s CHAT Cody: Hmm?
+[DIRECTOR] 136s CHAT Vega: Cody, I'm heading to gather oak logs at 69,67,-80. Can you confirm the path is clear?
+[DIRECTOR] 136s CHAT Cody: Hmm?
+[DIRECTOR] 149s probe still at 35.31,65.00,-96.40
+[DIRECTOR] 149s SENT: Cody follow me please, this way | probe at 35.31,65.00,-96.40
+[DIRECTOR] 149s CHAT Director102224: Cody follow me please, this way
+[DIRECTOR] 149s CHAT Cody: Hey Director102224!
+[DIRECTOR] 174s probe still at 35.31,65.00,-96.40
+[DIRECTOR] DONE

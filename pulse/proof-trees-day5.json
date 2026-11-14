@@ -1,0 +1,2832 @@
+{
+ "columns": [
+  {
+   "x": 22,
+   "z": -130,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 71,
+   "max": 74,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 53,
+   "z": -130,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 68,
+   "z": -130,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log"
+   },
+   "min": 67,
+   "max": 70,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 96,
+   "z": -130,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 56,
+   "z": -129,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 26,
+   "z": -128,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 71,
+   "max": 75,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 32,
+   "z": -128,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 71,
+   "max": 75,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 86,
+   "z": -128,
+   "name": "birch_log",
+   "cells": {
+    "68": "dirt",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log",
+    "75": "birch_log"
+   },
+   "min": 69,
+   "max": 75,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 80,
+   "z": -127,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_leaves",
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 83,
+   "z": -127,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 94,
+   "z": -127,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log"
+   },
+   "min": 71,
+   "max": 76,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 107,
+   "z": -127,
+   "name": "oak_log",
+   "cells": {
+    "79": "oak_log"
+   },
+   "min": 79,
+   "max": 79,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 23,
+   "z": -126,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 70,
+   "max": 73,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 77,
+   "z": -126,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 68,
+   "max": 71,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 81,
+   "z": -126,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_leaves",
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 83,
+   "z": -126,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_leaves",
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 108,
+   "z": -126,
+   "name": "oak_log",
+   "cells": {
+    "78": "oak_log"
+   },
+   "min": 78,
+   "max": 78,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 110,
+   "z": -126,
+   "name": "oak_log",
+   "cells": {
+    "79": "oak_log"
+   },
+   "min": 79,
+   "max": 79,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 81,
+   "z": -125,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_leaves",
+    "73": "oak_leaves",
+    "74": "oak_log"
+   },
+   "min": 71,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 83,
+   "z": -125,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 107,
+   "z": -125,
+   "name": "oak_log",
+   "cells": {
+    "77": "oak_leaves",
+    "78": "oak_log"
+   },
+   "min": 78,
+   "max": 78,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 108,
+   "z": -125,
+   "name": "oak_log",
+   "cells": {
+    "77": "oak_leaves",
+    "78": "oak_log"
+   },
+   "min": 78,
+   "max": 78,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 110,
+   "z": -125,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_log",
+    "79": "oak_log"
+   },
+   "min": 76,
+   "max": 79,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 43,
+   "z": -124,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 69,
+   "max": 73,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 82,
+   "z": -124,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_leaves",
+    "74": "oak_log"
+   },
+   "min": 71,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 83,
+   "z": -124,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 107,
+   "z": -124,
+   "name": "oak_log",
+   "cells": {
+    "79": "oak_leaves",
+    "80": "oak_log"
+   },
+   "min": 80,
+   "max": 80,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 108,
+   "z": -124,
+   "name": "oak_log",
+   "cells": {
+    "77": "oak_leaves",
+    "78": "oak_log",
+    "79": "oak_leaves",
+    "80": "oak_log"
+   },
+   "min": 78,
+   "max": 80,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 109,
+   "z": -124,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log",
+    "78": "oak_log",
+    "79": "oak_log",
+    "80": "oak_log"
+   },
+   "min": 71,
+   "max": 80,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 26,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 70,
+   "max": 74,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 32,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 82,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log"
+   },
+   "min": 67,
+   "max": 77,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 87,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 98,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 106,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 71,
+   "max": 75,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 107,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_leaves",
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 108,
+   "z": -123,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 32,
+   "z": -122,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 49,
+   "z": -122,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 69,
+   "max": 73,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 81,
+   "z": -122,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 83,
+   "z": -122,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 94,
+   "z": -122,
+   "name": "birch_log",
+   "cells": {
+    "69": "dirt",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log",
+    "75": "birch_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 33,
+   "z": -121,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 80,
+   "z": -121,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 84,
+   "z": -121,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 91,
+   "z": -121,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 71,
+   "max": 74,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 103,
+   "z": -121,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 71,
+   "max": 75,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 33,
+   "z": -120,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 52,
+   "z": -120,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 60,
+   "z": -120,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 78,
+   "z": -120,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 67,
+   "max": 72,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 85,
+   "z": -120,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 98,
+   "z": -120,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log"
+   },
+   "min": 71,
+   "max": 76,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 29,
+   "z": -119,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 30,
+   "z": -119,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 31,
+   "z": -119,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 32,
+   "z": -119,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 33,
+   "z": -119,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log"
+   },
+   "min": 69,
+   "max": 77,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 42,
+   "z": -119,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 69,
+   "max": 74,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 34,
+   "z": -118,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_leaves",
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 35,
+   "z": -118,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 36,
+   "z": -117,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 81,
+   "z": -117,
+   "name": "birch_log",
+   "cells": {
+    "67": "dirt",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log"
+   },
+   "min": 68,
+   "max": 74,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 108,
+   "z": -117,
+   "name": "oak_log",
+   "cells": {
+    "71": "dirt",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log"
+   },
+   "min": 72,
+   "max": 76,
+   "foot": 72,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 57,
+   "z": -116,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 65,
+   "z": -116,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 68,
+   "max": 72,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 90,
+   "z": -116,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log"
+   },
+   "min": 71,
+   "max": 76,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 33,
+   "z": -115,
+   "name": "birch_log",
+   "cells": {
+    "69": "dirt",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log"
+   },
+   "min": 70,
+   "max": 74,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 43,
+   "z": -115,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 69,
+   "max": 74,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 77,
+   "z": -115,
+   "name": "birch_log",
+   "cells": {
+    "66": "dirt",
+    "67": "birch_log",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log"
+   },
+   "min": 67,
+   "max": 71,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 29,
+   "z": -114,
+   "name": "birch_log",
+   "cells": {
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log"
+   },
+   "min": 71,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 73,
+   "z": -114,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log"
+   },
+   "min": 67,
+   "max": 70,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 95,
+   "z": -112,
+   "name": "birch_log",
+   "cells": {
+    "70": "dirt",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log",
+    "75": "birch_log"
+   },
+   "min": 71,
+   "max": 75,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 102,
+   "z": -112,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 45,
+   "z": -111,
+   "name": "birch_log",
+   "cells": {
+    "68": "dirt",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log",
+    "75": "birch_log"
+   },
+   "min": 69,
+   "max": 75,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 58,
+   "z": -111,
+   "name": "birch_log",
+   "cells": {
+    "67": "dirt",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log"
+   },
+   "min": 68,
+   "max": 72,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 101,
+   "z": -111,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log"
+   },
+   "min": 71,
+   "max": 77,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 22,
+   "z": -110,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 73,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 37,
+   "z": -110,
+   "name": "birch_log",
+   "cells": {
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 70,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 50,
+   "z": -110,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 68,
+   "max": 72,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 55,
+   "z": -109,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 77,
+   "z": -109,
+   "name": "birch_log",
+   "cells": {
+    "65": "dirt",
+    "66": "birch_log",
+    "67": "birch_log",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log"
+   },
+   "min": 66,
+   "max": 71,
+   "foot": 66,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 47,
+   "z": -108,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 71,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 91,
+   "z": -108,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 68,
+   "max": 71,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 105,
+   "z": -108,
+   "name": "oak_log",
+   "cells": {
+    "71": "dirt",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log"
+   },
+   "min": 72,
+   "max": 77,
+   "foot": 72,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 29,
+   "z": -107,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 70,
+   "z": -107,
+   "name": "birch_log",
+   "cells": {
+    "72": "birch_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 99,
+   "z": -107,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 71,
+   "max": 75,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 58,
+   "z": -106,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log"
+   },
+   "min": 70,
+   "max": 70,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 21,
+   "z": -105,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 52,
+   "z": -105,
+   "name": "birch_log",
+   "cells": {
+    "66": "dirt",
+    "67": "birch_log",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 67,
+   "max": 73,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 58,
+   "z": -105,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 67,
+   "max": 72,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 103,
+   "z": -105,
+   "name": "oak_log",
+   "cells": {
+    "70": "dirt",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log"
+   },
+   "min": 71,
+   "max": 76,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 109,
+   "z": -105,
+   "name": "oak_log",
+   "cells": {
+    "71": "dirt",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log"
+   },
+   "min": 72,
+   "max": 76,
+   "foot": 72,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 31,
+   "z": -104,
+   "name": "birch_log",
+   "cells": {
+    "74": "birch_log",
+    "75": "birch_log"
+   },
+   "min": 74,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 81,
+   "z": -104,
+   "name": "oak_log",
+   "cells": {
+    "65": "dirt",
+    "66": "oak_log",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log"
+   },
+   "min": 66,
+   "max": 69,
+   "foot": 66,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 38,
+   "z": -103,
+   "name": "birch_log",
+   "cells": {
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 71,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 34,
+   "z": -101,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 70,
+   "max": 73,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 46,
+   "z": -101,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 68,
+   "max": 71,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 85,
+   "z": -100,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 67,
+   "max": 71,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 98,
+   "z": -100,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 70,
+   "max": 74,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 92,
+   "z": -98,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 68,
+   "max": 71,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 51,
+   "z": -97,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 66,
+   "z": -97,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log"
+   },
+   "min": 71,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 28,
+   "z": -96,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 71,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 80,
+   "z": -96,
+   "name": "birch_log",
+   "cells": {
+    "65": "dirt",
+    "66": "birch_log",
+    "67": "birch_log",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log"
+   },
+   "min": 66,
+   "max": 72,
+   "foot": 66,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 86,
+   "z": -94,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log"
+   },
+   "min": 67,
+   "max": 70,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 20,
+   "z": -93,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 71,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 94,
+   "z": -93,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log",
+    "78": "oak_log"
+   },
+   "min": 68,
+   "max": 78,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 95,
+   "z": -93,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 74,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 96,
+   "z": -93,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 97,
+   "z": -93,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 109,
+   "z": -93,
+   "name": "oak_log",
+   "cells": {
+    "71": "dirt",
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": 72,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 94,
+   "z": -92,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log",
+    "73": "oak_leaves",
+    "74": "oak_log",
+    "75": "oak_leaves",
+    "76": "oak_leaves",
+    "77": "oak_log"
+   },
+   "min": 72,
+   "max": 77,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 96,
+   "z": -92,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 97,
+   "z": -92,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_leaves",
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 24,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_leaves",
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 25,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 35,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 70,
+   "max": 73,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 46,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 68,
+   "z": -91,
+   "name": "birch_log",
+   "cells": {
+    "71": "birch_log"
+   },
+   "min": 71,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 93,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log",
+    "73": "oak_leaves",
+    "74": "oak_log"
+   },
+   "min": 72,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 94,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log",
+    "73": "oak_leaves",
+    "74": "oak_leaves",
+    "75": "oak_leaves",
+    "76": "oak_leaves",
+    "77": "oak_log"
+   },
+   "min": 72,
+   "max": 77,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 102,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 109,
+   "z": -91,
+   "name": "oak_log",
+   "cells": {
+    "71": "dirt",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log"
+   },
+   "min": 72,
+   "max": 77,
+   "foot": 72,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 26,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 27,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log",
+    "78": "oak_log"
+   },
+   "min": 73,
+   "max": 78,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 28,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 29,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "74": "oak_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 30,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 31,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "75": "oak_log"
+   },
+   "min": 75,
+   "max": 75,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 60,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 72,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 94,
+   "z": -90,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 28,
+   "z": -89,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 29,
+   "z": -89,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_log"
+   },
+   "min": 76,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 84,
+   "z": -89,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log"
+   },
+   "min": 70,
+   "max": 70,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 94,
+   "z": -89,
+   "name": "oak_log",
+   "cells": {
+    "73": "oak_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 20,
+   "z": -88,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 69,
+   "max": 73,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 30,
+   "z": -88,
+   "name": "oak_log",
+   "cells": {
+    "76": "oak_leaves",
+    "77": "oak_log"
+   },
+   "min": 77,
+   "max": 77,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 40,
+   "z": -88,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 69,
+   "max": 74,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 87,
+   "z": -88,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 67,
+   "max": 71,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 62,
+   "z": -87,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 70,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 100,
+   "z": -87,
+   "name": "birch_log",
+   "cells": {
+    "69": "dirt",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log",
+    "75": "birch_log"
+   },
+   "min": 70,
+   "max": 75,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 22,
+   "z": -86,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 68,
+   "max": 71,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 68,
+   "z": -86,
+   "name": "birch_log",
+   "cells": {
+    "71": "birch_log",
+    "72": "birch_log"
+   },
+   "min": 71,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 29,
+   "z": -85,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 71,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 34,
+   "z": -85,
+   "name": "oak_log",
+   "cells": {
+    "68": "dirt",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 69,
+   "max": 73,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 77,
+   "z": -84,
+   "name": "oak_log",
+   "cells": {
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 69,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 109,
+   "z": -84,
+   "name": "oak_log",
+   "cells": {
+    "71": "dirt",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log",
+    "75": "oak_log",
+    "76": "oak_log",
+    "77": "oak_log"
+   },
+   "min": 72,
+   "max": 77,
+   "foot": 72,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 35,
+   "z": -81,
+   "name": "birch_log",
+   "cells": {
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 71,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 41,
+   "z": -81,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 92,
+   "z": -81,
+   "name": "oak_log",
+   "cells": {
+    "69": "dirt",
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log"
+   },
+   "min": 70,
+   "max": 73,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 22,
+   "z": -80,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 67,
+   "max": 71,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 44,
+   "z": -80,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 47,
+   "z": -80,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log"
+   },
+   "min": 71,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 61,
+   "z": -80,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 71,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 69,
+   "z": -80,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 45,
+   "z": -79,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log",
+    "73": "oak_log",
+    "74": "oak_log"
+   },
+   "min": 70,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 46,
+   "z": -79,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log"
+   },
+   "min": 71,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 54,
+   "z": -79,
+   "name": "oak_log",
+   "cells": {
+    "72": "oak_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 76,
+   "z": -79,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 70,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 80,
+   "z": -79,
+   "name": "birch_log",
+   "cells": {
+    "67": "dirt",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log"
+   },
+   "min": 68,
+   "max": 74,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 40,
+   "z": -76,
+   "name": "oak_log",
+   "cells": {
+    "67": "dirt",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 68,
+   "max": 71,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 71,
+   "z": -76,
+   "name": "birch_log",
+   "cells": {
+    "66": "dirt",
+    "67": "birch_log",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 67,
+   "max": 73,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 79,
+   "z": -76,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log",
+    "71": "oak_log"
+   },
+   "min": 70,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 64,
+   "z": -75,
+   "name": "birch_log",
+   "cells": {
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 70,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 86,
+   "z": -74,
+   "name": "acacia_log",
+   "cells": {
+    "73": "acacia_log",
+    "74": "acacia_log"
+   },
+   "min": 73,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 86,
+   "z": -73,
+   "name": "acacia_log",
+   "cells": {
+    "71": "acacia_leaves",
+    "72": "acacia_log"
+   },
+   "min": 72,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 23,
+   "z": -72,
+   "name": "oak_log",
+   "cells": {
+    "66": "oak_log",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log"
+   },
+   "min": 66,
+   "max": 69,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 66,
+   "z": -72,
+   "name": "birch_log",
+   "cells": {
+    "70": "birch_log",
+    "71": "birch_log"
+   },
+   "min": 70,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 84,
+   "z": -72,
+   "name": "acacia_log",
+   "cells": {
+    "71": "acacia_log"
+   },
+   "min": 71,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 85,
+   "z": -72,
+   "name": "acacia_log",
+   "cells": {
+    "70": "acacia_log"
+   },
+   "min": 70,
+   "max": 70,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 86,
+   "z": -72,
+   "name": "acacia_log",
+   "cells": {
+    "68": "dirt",
+    "69": "acacia_log",
+    "70": "acacia_log",
+    "71": "acacia_log"
+   },
+   "min": 69,
+   "max": 71,
+   "foot": 69,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 46,
+   "z": -71,
+   "name": "birch_log",
+   "cells": {
+    "67": "dirt",
+    "68": "birch_log",
+    "69": "birch_log",
+    "70": "birch_log",
+    "71": "birch_log",
+    "72": "birch_log",
+    "73": "birch_log"
+   },
+   "min": 68,
+   "max": 73,
+   "foot": 68,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 98,
+   "z": -71,
+   "name": "acacia_log",
+   "cells": {
+    "74": "acacia_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 36,
+   "z": -70,
+   "name": "birch_log",
+   "cells": {
+    "63": "dirt",
+    "64": "birch_log",
+    "65": "birch_log",
+    "66": "birch_log",
+    "67": "birch_log",
+    "68": "birch_log"
+   },
+   "min": 64,
+   "max": 68,
+   "foot": 64,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 98,
+   "z": -70,
+   "name": "acacia_log",
+   "cells": {
+    "73": "acacia_log"
+   },
+   "min": 73,
+   "max": 73,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 98,
+   "z": -69,
+   "name": "acacia_log",
+   "cells": {
+    "70": "dirt",
+    "71": "acacia_log",
+    "72": "acacia_log",
+    "73": "acacia_log"
+   },
+   "min": 71,
+   "max": 73,
+   "foot": 71,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 41,
+   "z": -68,
+   "name": "oak_log",
+   "cells": {
+    "66": "dirt",
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log",
+    "70": "oak_log"
+   },
+   "min": 67,
+   "max": 70,
+   "foot": 67,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 53,
+   "z": -68,
+   "name": "birch_log",
+   "cells": {
+    "72": "birch_log",
+    "73": "birch_log",
+    "74": "birch_log"
+   },
+   "min": 72,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 98,
+   "z": -68,
+   "name": "acacia_log",
+   "cells": {
+    "74": "acacia_log"
+   },
+   "min": 74,
+   "max": 74,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 77,
+   "z": -67,
+   "name": "oak_log",
+   "cells": {
+    "71": "oak_log"
+   },
+   "min": 71,
+   "max": 71,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 98,
+   "z": -67,
+   "name": "acacia_log",
+   "cells": {
+    "75": "acacia_log",
+    "76": "acacia_log"
+   },
+   "min": 75,
+   "max": 76,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 37,
+   "z": -65,
+   "name": "birch_log",
+   "cells": {
+    "63": "dirt",
+    "64": "birch_log",
+    "65": "birch_log",
+    "66": "birch_log",
+    "67": "birch_log",
+    "68": "birch_log"
+   },
+   "min": 64,
+   "max": 68,
+   "foot": 64,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 44,
+   "z": -62,
+   "name": "oak_log",
+   "cells": {
+    "70": "oak_log",
+    "71": "oak_log",
+    "72": "oak_log"
+   },
+   "min": 70,
+   "max": 72,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 40,
+   "z": -59,
+   "name": "oak_log",
+   "cells": {
+    "68": "oak_log"
+   },
+   "min": 68,
+   "max": 68,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 36,
+   "z": -58,
+   "name": "oak_log",
+   "cells": {
+    "67": "oak_log",
+    "68": "oak_log",
+    "69": "oak_log"
+   },
+   "min": 67,
+   "max": 69,
+   "foot": null,
+   "belowFoot": null
+  },
+  {
+   "x": 101,
+   "z": -55,
+   "name": "acacia_log",
+   "cells": {
+    "69": "dirt",
+    "70": "acacia_log",
+    "71": "acacia_log",
+    "72": "acacia_log",
+    "73": "acacia_log",
+    "74": "acacia_log",
+    "75": "acacia_log",
+    "76": "acacia_log"
+   },
+   "min": 70,
+   "max": 76,
+   "foot": 70,
+   "belowFoot": "dirt"
+  },
+  {
+   "x": 102,
+   "z": -55,
+   "name": "acacia_log",
+   "cells": {
+    "76": "acacia_leaves",
+    "77": "acacia_log",
+    "78": "acacia_log"
+   },
+   "min": 77,
+   "max": 78,
+   "foot": null,
+   "belowFoot": null
+  }
+ ]
+}

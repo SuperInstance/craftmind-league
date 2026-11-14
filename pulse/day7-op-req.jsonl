@@ -1,0 +1,3 @@
+{"id":"selftest1","cmd":"give","target":"Gallery","item":"cooked_porkchop","count":1}
+{"id":"feed-cody-1","cmd":"give","target":"Cody","item":"cooked_porkchop","count":32}
+{"id":"quit1","cmd":"quit"}

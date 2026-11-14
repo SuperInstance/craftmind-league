@@ -1,0 +1,164 @@
+{
+ "ts": "2026-11-08T03:39:16.712Z",
+ "startPos": {
+  "x": 38.67,
+  "y": 65,
+  "z": -94.69
+ },
+ "chunkLoads": 213,
+ "timeline": [
+  {
+   "tag": "t0",
+   "pos": {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   "onGround": false,
+   "chunkLoads": 0,
+   "rampTop_38_65_m96": "UNLOADED",
+   "homeTop_39_66_m101": "UNLOADED",
+   "ridgeTop_40_68_m102": "UNLOADED",
+   "air_39_67_m101": "UNLOADED"
+  },
+  {
+   "tag": "t+15",
+   "pos": {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   "onGround": true,
+   "chunkLoads": 213,
+   "rampTop_38_65_m96": "stone",
+   "homeTop_39_66_m101": "grass_block",
+   "ridgeTop_40_68_m102": "grass_block",
+   "air_39_67_m101": "air"
+  },
+  {
+   "tag": "t+30",
+   "pos": {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   "onGround": true,
+   "chunkLoads": 213,
+   "rampTop_38_65_m96": "stone",
+   "homeTop_39_66_m101": "grass_block",
+   "ridgeTop_40_68_m102": "grass_block",
+   "air_39_67_m101": "air"
+  },
+  {
+   "tag": "t+45",
+   "pos": {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   "onGround": true,
+   "chunkLoads": 213,
+   "rampTop_38_65_m96": "stone",
+   "homeTop_39_66_m101": "grass_block",
+   "ridgeTop_40_68_m102": "grass_block",
+   "air_39_67_m101": "air"
+  },
+  {
+   "tag": "t+60",
+   "pos": {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   "onGround": true,
+   "chunkLoads": 213,
+   "rampTop_38_65_m96": "stone",
+   "homeTop_39_66_m101": "grass_block",
+   "ridgeTop_40_68_m102": "grass_block",
+   "air_39_67_m101": "air"
+  }
+ ],
+ "updates": [
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  },
+  {
+   "status": "success",
+   "pathLen": 4
+  }
+ ],
+ "goalArm": {
+  "samples": [
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   },
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.7
+   },
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.7
+   },
+   {
+    "x": 38.67,
+    "y": 65,
+    "z": -94.69
+   }
+  ],
+  "endPos": {
+   "x": 38.67,
+   "y": 65,
+   "z": -94.69
+  }
+ },
+ "done": true
+}

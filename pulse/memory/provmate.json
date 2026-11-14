@@ -1,0 +1,22 @@
+{
+  "players": {
+    "provtarget": {
+      "firstMet": "2026-11-09T16:10:03.871Z",
+      "lastSeen": "2026-11-09T16:29:09.622Z",
+      "interactions": 7
+    },
+    "gallery": {
+      "firstMet": "2026-11-09T16:11:05.157Z",
+      "lastSeen": "2026-11-09T16:29:11.006Z",
+      "interactions": 8
+    }
+  },
+  "places": {},
+  "builds": {},
+  "resources": {},
+  "deaths": 0,
+  "deathCauses": [],
+  "meta": {},
+  "lastSession": "2026-11-09T16:31:27.045Z",
+  "scriptHistory": []
+}

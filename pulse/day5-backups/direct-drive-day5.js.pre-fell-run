@@ -1,0 +1,980 @@
+'use strict';
+/**
+ * direct-drive.js — DIRECT-DRIVE CODY (Casey direction 2026-11-08
+ * 21:20-21:23 AKST: the Steve-program shape — a capable LLM issuing
+ * commands in a tight loop; puppeteering/sitcom setup; YES-AND).
+ *
+ * A frontier-class LLM (DeepSeek V4.1 Flash via DeepInfra, reached
+ * through the ddbridge surrogate relay on the Muse VM — the
+ * credential never leaves that VM; fallback: governor identity
+ * league-cody-driver -> :8310 Qwen3-Coder-30B presence brain) plays
+ * Cody directly: perceive compact state -> decide ONE command -> act
+ * through pulse/lib/prims.js. The scenario is set up in the prompt
+ * (who he is, where he is, what kind of day this is, what would make
+ * a good scene) and the loop improvises inside it.
+ *
+ * UNDER the driver, as code (invisible, not promptable):
+ *   - a 700 ms hostile monitor (character-plugin.js pattern): a
+ *     hostile <= 8.5 blocks (or damage with a hostile <= 14) CANCELS
+ *     the current action; the floor then flees toward home, and if
+ *     fleeing does not clear danger, burrows (dig in + seal + hold).
+ *   - an eat reflex: food <= 6 with food in inventory -> eat, no
+ *     permission asked; food <= 6 and nothing edible -> the loop is
+ *     told, urgently, by the state line itself.
+ *   - starvation guard: hp <= 4 -> emergency forage/hunt by code.
+ *   - 3-death abort from baseline deaths 116 (pulse/deaths.jsonl).
+ * The LLM never controls these. No /give, no teleports, dig-step
+ * allowance OFF (prims.setDigStep never called), Cody's own feet
+ * only. Vega/Geist untouched.
+ *
+ * DAY-2 VARIANT (2026-11-09, day2 lane; backup day2-backups/):
+ * the home district now carries an operator-staged food ecology
+ * (penned pigs/cows/chickens + a wheat patch by a water trench,
+ * ledger direct-drive-day2-stage-set-20261109); the SYSTEM scene
+ * and standing goals below are re-framed for the eat-first day.
+ * Everything else — floor, prims, routes — is the proven day-1 code.
+ *
+ * DAY-3 VARIANT (2026-11-09, day3 lane; day-2 worklist items (a)+(b)):
+ *  (a) PERCEPTION: stateText now carries a STRUCTURES line — fences,
+ *      gate, crafting table, farmland/crops with ripeness, furnace,
+ *      chest — read from the body's real block perception within
+ *      16 blocks, each with compass direction + distance. Day 2's
+ *      state line showed creatures and ground but never structures;
+ *      he stood 3-6 blocks from the pen five times and could not see
+ *      it. What a person standing there could see — no more.
+ *  (b) PLACES-MEMORY: pulse/direct-drive-places.json — a persistent
+ *      store of places HE encountered, re-presented every cycle as
+ *      "Places you know". Seeded from day-2 trace evidence ONLY
+ *      (pen: killed at its fence line c41, dug its gate (64,67,-101)
+ *      c49-50, stood in it c64; table at the anchor: c107-108; the
+ *      dip: lived there all day; wheat patch: perceived the FARMLAND
+ *      at c96 standing (67.4,67,-91.5) — a place he found, never a
+ *      crop; pit mouth at (65,-93): named it c95/c145). New places
+ *      are recorded when perception shows him AT a named-worthy
+ *      structure (>2 visits or a first arrival within 3 blocks).
+ *  (c) BRAIN ROUTE: the ddbridge relay chain (Thor->Oracle->VM) was
+ *      found dead and is NOT rebuildable from surviving parts (the
+ *      Oracle :2223 hop's forward key lived only in a day-1 lane's
+ *      session; Tailscale unjoined). The VM-side relay IS now
+ *      session-proof (setsid supervisor, ~/workspace/ddbridge-
+ *      supervise.sh) for when a path returns. Day 3 therefore runs
+ *      PRIMARY = governor fallback (league-cody-driver, verified
+ *      live pre-launch) — the chartered fallback, promoted. Filed
+ *      as an incident in the lane record.
+ *
+ * DAY-4 VARIANT (2026-11-09, day4 lane; day-3 worklist, ledger
+ * direct-drive-day3-verdict-20261109 + the day-4 brief):
+ *  (1) DEATHS counted from the run's own trace via pulse/lib/deaths.js
+ *      (the bot's server-driven 'death' event feeds the counter; the
+ *      3-death abort uses shouldAbort). Day 3's abort read
+ *      pulse/deaths.jsonl, which no component appends — it never
+ *      fired while he died four times. Dry-proof:
+ *      pulse/test-deaths-day4.js.
+ *  (2) FLEE hops: floorEscape rides pulse/lib/hopflee.js — chained
+ *      2-block hops toward home scored for rising ground — instead of
+ *      the long-leg walker the dip pocket wedges. Proven from inside
+ *      the pocket by pulse/test-flee-day4.js before this build flew.
+ *  (3) PLANT CELLS: the structures line names each wheat plant's cell
+ *      and age; places seed/refresh at encountered EDGES (the nearest
+ *      perceived plant cell), never a patch centre (day 3 he dug the
+ *      water trench ~20 times — his senses never named a plant).
+ *  (4) CRAFT ERRORS name missing ingredients and counts
+ *      (missingIngredients, from minecraft-data vs live inventory).
+ *  (5) BRAIN: the ddbridge path is rebuilt (ledger
+ *      direct-drive-day4-relay-restored-20261109) — PRIMARY is
+ *      DeepInfra DeepSeek again; the governor 30B is the fallback.
+ *  (6) The state line's home direction is computed, not hardcoded
+ *      (day 3 he woke AT home so 'west' was harmless; day 4 he wakes
+ *      west of home and home is EAST).
+ *
+ * DAY-5 VARIANT (2026-11-09, day5 lane; day-4 close worklist):
+ *  (1) TRUNK AT FOOT LEVEL: perception now reports nearby TREES by
+ *      their foot-level trunk cell (perceiveTrees — the lowest log
+ *      of each trunk column within 16, ranked by distance, with a
+ *      dig/felltree aim line at dig height). Day 4 he aimed at
+ *      crowns (dig 51 71 -96) because his senses named canopy
+ *      only; he held ZERO logs all day. The trace-level proof is
+ *      pulse/test-trunk-day5.js (honest limit: the day-4 trace
+ *      holds no block-level world, so crowns are re-derived from
+ *      ground truth in the live world; the felling PASS is a live
+ *      throwaway-body dig at the reported cell).
+ *  (2) THE PIT AS A KNOWN PLACE: places carry his stone pit as a
+ *      worked place — bounds, purpose (furnace stone), and HIS
+ *      STAIR (dirt to (64,66,-92)) named as the way out. Day 5
+ *      opens with him IN the pit; his memory greets him with the
+ *      stair. The +2-wall specimen (66.3,63,-92.6) is filed to
+ *      Thor ~/pin-scratch/ as evidence only.
+ *  (3) ARRIVAL HONESTY: the goto result is computed from his
+ *      MEASURED position at command end (arrivalCheck in the
+ *      driver): "arrived" only within radius at plausible feet-y;
+ *      otherwise "NOT arrived" with his actual position and the
+ *      remaining distance — the walker's own ok can no longer
+ *      talk the state line into a false arrival (day 4: 188 gotos,
+ *      69 failed, and the pit chapters were built on misreports).
+ *  Everything else — floor, hop-flee v2, trace death counting,
+ *  state mirror, craft diagnostics — is the proven day-4 stack.
+ *
+ * Trace: every cycle appended to pulse/direct-drive-trace.jsonl
+ * (state, model reply verbatim, command, result) and echoed to the
+ * process log. Running log: pulse/DIRECT-DRIVE-20261108.md (lane).
+ */
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+
+process.chdir('/home/caseydigennaro/craftmind-league/bots/runs/cody');
+const { createBot } = require('/home/caseydigennaro/craftmind-league/bots/craftmind/src/bot.js');
+const PULSE = '/home/caseydigennaro/craftmind-league/pulse';
+const prims = require(path.join(PULSE, 'lib', 'prims.js'));
+const { Vec3 } = prims;
+const { hopFlee } = require(path.join(PULSE, 'lib', 'hopflee.js'));
+const { countTraceDeaths, shouldAbort } = require(path.join(PULSE, 'lib', 'deaths.js'));
+
+const HOME = { x: 64, y: 67, z: -93 };
+const TABLE_POS = new Vec3(63, 67, -94);
+const RUN_MS = parseInt(process.env.DD_RUN_MS || String(85 * 60000), 10);
+const WORLD_DEATHS_AT_START = 120; // server truth at day-4 open (116 + day 3's four)
+const TRACE_PATH = path.join(PULSE, 'direct-drive-trace-day5-20261109.jsonl'); // day-5 lane: own trace (day 4's stays the day-4 record)
+const STATE_PATH = path.join(PULSE, 'direct-drive-state.json'); // shared: cameraman v3 reads this path
+
+// Day 4: the ddbridge relay path is RESTORED (ledger
+// direct-drive-day4-relay-restored-20261109) — PRIMARY is DeepInfra
+// (the day-1/2 arrangement); the governor route is the fallback.
+const PRIMARY = { url: 'http://127.0.0.1:8912/chat/completions', model: 'deepseek-ai/DeepSeek-V4.1-Flash-1017', key: null, name: 'deepinfra:deepseek-v4.1-flash' };
+const FALLBACK = { url: 'http://127.0.0.1:8642/v1/chat/completions', model: 'confluence-presence-brain', key: 'league-cody-driver', name: 'governor:qwen3-coder-30b' };
+const PLACES_PATH = path.join(PULSE, 'direct-drive-places.json');
+
+const HOSTILES = new Set(['zombie', 'skeleton', 'creeper', 'spider', 'cave_spider', 'enderman', 'witch', 'drowned', 'husk', 'stray', 'zombie_villager', 'pillager', 'vindicator', 'phantom', 'slime', 'magma_cube']);
+const PASSIVES = new Set(['pig', 'cow', 'sheep', 'chicken', 'rabbit', 'mooshroom']);
+const EDIBLES = ['cooked_porkchop', 'cooked_beef', 'cooked_mutton', 'cooked_chicken', 'cooked_cod', 'cooked_salmon', 'bread', 'apple', 'baked_potato', 'carrot', 'porkchop', 'beef', 'mutton', 'chicken', 'melon_slice', 'potato', 'rotten_flesh'];
+
+const t0 = Date.now();
+function nowIso() { return new Date().toISOString(); }
+function log(...a) { console.log('[DD]', ...a); }
+function trace(rec) {
+  try { fs.appendFileSync(TRACE_PATH, JSON.stringify({ ts: nowIso(), ...rec }) + '\n'); } catch {}
+}
+// Deaths this run (repair (1)): the counter is fed by the bot's
+// 'death' event — the server's respawn signal, which the model cannot
+// mint — and is resumed from the run's trace at startup via
+// lib/deaths.js, so a mid-day restart inherits the true count.
+let deathsThisRun = 0;
+
+// ── model client ─────────────────────────────────────────────────────
+let route = PRIMARY;
+let primaryFails = 0;
+function httpCall(urlStr, key, payloadObj, timeoutMs) {
+  return new Promise((resolve) => {
+    const body = JSON.stringify(payloadObj);
+    const u = new URL(urlStr);
+    const req = http.request({ hostname: u.hostname, port: u.port, path: u.pathname, method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body), ...(key ? { Authorization: 'Bearer ' + key } : {}) }, timeout: timeoutMs }, (res) => {
+      let data = '';
+      res.on('data', (c) => { data += c; });
+      res.on('end', () => {
+        try { resolve({ ok: true, j: JSON.parse(data) }); }
+        catch (e) { resolve({ ok: false, error: 'parse: ' + e.message, raw: data.slice(0, 200) }); }
+      });
+    });
+    req.on('timeout', () => { req.destroy(new Error('model call timeout')); });
+    req.on('error', (e) => resolve({ ok: false, error: e.message }));
+    req.write(body); req.end();
+  });
+}
+async function callModel(messages, maxTokens) {
+  // One retry on an empty/failed attempt before it counts toward
+  // failover: the relay chain (driver -> tunnel -> VM bridge ->
+  // provider) can drop a single early call while the provider route
+  // is healthy (observed at first launch 2026-11-09T06:26Z: 3 instant
+  // empties, then the identical payload answered cleanly direct).
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const r = await httpCall(route.url, route.key,
+      { model: route.model, messages, max_tokens: maxTokens, temperature: 0.7 }, 45000);
+    if (r.ok) {
+      const j = r.j;
+      const content = j.choices && j.choices[0] && j.choices[0].message ? (j.choices[0].message.content || '') : '';
+      if (content) return { ok: true, content, usage: j.usage || null, route: route.name };
+      log('model attempt', attempt, 'returned empty content on', route.name);
+    } else {
+      log('model attempt', attempt, 'failed on', route.name, ':', r.error, r.raw || '');
+    }
+    if (attempt < 2) await prims.sleep(1500);
+  }
+  return { ok: false, content: '', error: 'empty/failed after retry' };
+}
+function callModelUnused(messages, maxTokens) {
+  return new Promise((resolve) => {
+    const body = JSON.stringify({ model: route.model, messages, max_tokens: maxTokens, temperature: 0.7, chat_template_kwargs: { enable_thinking: false } });
+    const u = new URL(route.url);
+    const req = http.request({ hostname: u.hostname, port: u.port, path: u.pathname, method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...(route.key ? { Authorization: 'Bearer ' + route.key } : {}) }, timeout: 45000 }, (res) => {
+      let data = '';
+      res.on('data', (c) => { data += c; });
+      res.on('end', () => {
+        try {
+          const j = JSON.parse(data);
+          const content = j.choices && j.choices[0] && j.choices[0].message ? (j.choices[0].message.content || '') : '';
+          resolve({ ok: !!content, content, usage: j.usage || null, route: route.name });
+        } catch (e) { resolve({ ok: false, content: '', error: 'parse: ' + e.message }); }
+      });
+    });
+    req.on('timeout', () => { req.destroy(new Error('model call timeout')); });
+    req.on('error', (e) => resolve({ ok: false, content: '', error: e.message }));
+    req.write(body); req.end();
+  });
+}
+async function askModel(messages, maxTokens) {
+  const r = await callModel(messages, maxTokens);
+  if (r.ok) { if (route.name === PRIMARY.name) primaryFails = 0; return r; }
+  log('model call failed on', route.name, ':', r.error || 'empty content');
+  if (route.name === PRIMARY.name) {
+    primaryFails++;
+    if (primaryFails >= 3) {
+      route = FALLBACK;
+      log('FAILOVER: primary failed 3x consecutively — switching to', FALLBACK.name, 'for the rest of the run');
+      trace({ kind: 'failover', to: FALLBACK.name });
+      return askModel(messages, maxTokens);
+    }
+  }
+  return r;
+}
+
+// ── perception ───────────────────────────────────────────────────────
+function columnTopAt(bot, x, z) {
+  const py = Math.floor(bot.entity.position.y);
+  for (let y = py + 6; y >= py - 14; y--) {
+    const b = bot.blockAt(new Vec3(x, y, z));
+    if (b && b.boundingBox === 'block') return { y, name: b.name };
+  }
+  return null;
+}
+function nearestHostile(bot, maxDist) {
+  if (!bot.entity) return null;
+  let best = null;
+  for (const e of Object.values(bot.entities || {})) {
+    if (!e || !e.position || !HOSTILES.has(e.name)) continue;
+    const d = e.position.distanceTo(bot.entity.position);
+    if (d <= maxDist && (!best || d < best.dist)) best = { name: e.name, dist: d, pos: e.position };
+  }
+  return best;
+}
+function perceive(bot) {
+  const p = bot.entity.position;
+  const fx = Math.floor(p.x), fy = Math.floor(p.y), fz = Math.floor(p.z);
+  const inv = prims.inv(bot);
+  const dirs = { W: [-1, 0], E: [1, 0], N: [0, -1], S: [0, 1] };
+  const ground = {};
+  for (const [k, [dx, dz]] of Object.entries(dirs)) {
+    const t = columnTopAt(bot, fx + dx * 3, fz + dz * 3);
+    ground[k] = t ? `${t.name}@y${t.y}` : '?';
+  }
+  const facingB = bot.blockAt(bot.entity.position.offset(0, 0, 0)); // placeholder, replaced below
+  const entities = [];
+  for (const e of Object.values(bot.entities || {})) {
+    if (!e || !e.position || e === bot.entity) continue;
+    const d = e.position.distanceTo(p);
+    if (d <= 24 && e.name && e.name !== 'item') entities.push(`${e.name}@${d.toFixed(0)}`);
+  }
+  entities.sort();
+  let frontSteps = '';
+  {
+    // Cheap local relief read: column tops on the 8 neighbouring columns.
+    const ring = [];
+    for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) {
+      if (!dx && !dz) continue;
+      const t = columnTopAt(bot, fx + dx, fz + dz);
+      ring.push(t ? t.y - fy : '?');
+    }
+    frontSteps = ring.join(',');
+  }
+  const tod = bot.time ? bot.time.timeOfDay : null;
+  return {
+    pos: { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) },
+    hp: bot.health, food: bot.food, inv,
+    distHome: +Math.hypot(p.x - HOME.x, p.z - HOME.z).toFixed(1),
+    ground, ring: frontSteps, entities: entities.slice(0, 8),
+    timeOfDay: tod,
+    held: bot.heldItem ? bot.heldItem.name : null,
+  };
+}
+// ── structures perception (day-3 (a)): what a person standing here
+// could actually see — notable blocks within 16 blocks, with compass
+// direction + distance, from the body's own block perception.
+const STRUCT_KINDS = [
+  { match: (n) => /_fence_gate$/.test(n), label: 'fence gate' },
+  { match: (n) => /_fence$/.test(n), label: 'fence' },
+  { match: (n) => n === 'crafting_table', label: 'crafting table' },
+  { match: (n) => n === 'farmland', label: 'farmland' },
+  { match: (n) => n === 'wheat', label: 'wheat' },
+  { match: (n) => n === 'furnace' || n === 'blast_furnace' || n === 'smoker', label: 'furnace' },
+  { match: (n) => n === 'chest' || n === 'trapped_chest' || n === 'barrel', label: 'chest' },
+  { match: (n) => n === 'water', label: 'water' },
+];
+function compass(dx, dz) {
+  if (Math.abs(dx) < 0.5 && Math.abs(dz) < 0.5) return 'right here';
+  const a = Math.atan2(dx, -dz) * 180 / Math.PI; // 0=N, 90=E
+  const dirs = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+  return dirs[Math.round(((a + 360) % 360) / 45) % 8];
+}
+function perceiveStructures(bot) {
+  const p = bot.entity.position;
+  const found = new Map(); // label -> {label, dist, dir, pos, extra}
+  const crops = { total: 0, ripe: 0 };
+  const plantCells = [];
+  let fenceCount = 0, farmCount = 0;
+  for (const kind of STRUCT_KINDS) {
+    let blocks = [];
+    try { blocks = bot.findBlocks({ matching: (b) => b && kind.match(b.name), maxDistance: 16, count: 48 }); } catch {}
+    for (const pos of blocks) {
+      const b = bot.blockAt(pos);
+      if (!b) continue;
+      const d = Math.hypot(pos.x + 0.5 - p.x, pos.z + 0.5 - p.z);
+      const dir = compass(pos.x + 0.5 - p.x, pos.z + 0.5 - p.z);
+      if (kind.label === 'wheat') {
+        crops.total++;
+        let age = null;
+        try { age = b.getProperties ? b.getProperties().age : (b.metadata != null ? b.metadata : null); } catch {}
+        if (age != null && Number(age) >= 7) crops.ripe++;
+        // Repair (3): keep the plant CELL, not just the aggregate —
+        // day 3 he dug the remembered patch centre (the water trench)
+        // ~20 times because his senses never named a plant's cell.
+        plantCells.push({ x: pos.x, y: pos.y, z: pos.z, age: age == null ? null : Number(age), ripe: age != null && Number(age) >= 7, dist: d, dir });
+        continue;
+      }
+      if (kind.label === 'fence') { fenceCount++; continue; }
+      if (kind.label === 'farmland') { farmCount++; continue; }
+      const key = kind.label;
+      const cur = found.get(key);
+      if (!cur || d < cur.dist) found.set(key, { label: kind.label, dist: d, dir, pos: { x: pos.x, y: pos.y, z: pos.z } });
+    }
+  }
+  const out = [...found.values()].sort((a, b) => a.dist - b.dist);
+  if (fenceCount > 0) out.push({ label: 'fence', count: fenceCount, note: 'fence posts around you' });
+  if (farmCount > 0 || crops.total > 0) {
+    plantCells.sort((a, b) => a.dist - b.dist);
+    out.push({ label: 'wheat patch', farm: farmCount, crops, plants: plantCells.slice(0, 12), plantsTotal: plantCells.length });
+  }
+  return out;
+}
+// ── trees perception (day-5 repair (1)): nearby trees reported by
+// their FOOT-LEVEL TRUNK CELL — the lowest log of the trunk column,
+// at dig height — never the crown. Day 4: his senses showed canopy
+// and leaves, he aimed at crowns (dig 51 71 -96; felltree 62 72 -90),
+// and held zero logs all day. A tree is a column of logs: find every
+// log block within 16, group by column, and for each column report
+// the LOWEST log whose cell below is not a log (the trunk's foot).
+// Ranked by horizontal distance; up to 6 trees named.
+const LOG_RE = /_log$/;
+function perceiveTrees(bot) {
+  const p = bot.entity.position;
+  let logs = [];
+  try { logs = bot.findBlocks({ matching: (b) => b && LOG_RE.test(b.name), maxDistance: 16, count: 256 }) || []; } catch {}
+  const feet = new Map(); // "x,z" -> lowest trunk-foot log pos
+  for (const pos of logs) {
+    const key = pos.x + ',' + pos.z;
+    const cur = feet.get(key);
+    if (!cur || pos.y < cur.y) feet.set(key, { x: pos.x, y: pos.y, z: pos.z });
+  }
+  const trees = [];
+  for (const f of feet.values()) {
+    const below = bot.blockAt(new Vec3(f.x, f.y - 1, f.z));
+    if (below && LOG_RE.test(below.name)) continue; // not the column's foot
+    // TRUNK-BASE CHECK (day-5 proof round): a log whose below-cell is
+    // LEAVES is a canopy fragment, not a trunk — the day-4 trap in a
+    // new costume (this district's home stand is canopy over the pad
+    // at y69-72 with NO trunk beneath: mapped 2026-11-09, every near
+    // "tree" his senses offered on day 4 was crown). A trunk's foot
+    // stands on solid ground: the cell below is a solid block.
+    if (!below || below.boundingBox !== 'block') continue;
+    const blk = bot.blockAt(new Vec3(f.x, f.y, f.z));
+    const d = Math.hypot(f.x + 0.5 - p.x, f.z + 0.5 - p.z);
+    trees.push({ x: f.x, y: f.y, z: f.z, name: blk ? blk.name : 'log', dist: d, dir: compass(f.x + 0.5 - p.x, f.z + 0.5 - p.z), reach: Math.hypot(f.x + 0.5 - p.x, f.y - p.y, f.z + 0.5 - p.z) });
+  }
+  trees.sort((a, b) => a.dist - b.dist);
+  return trees.slice(0, 6);
+}
+function treesText(trees) {
+  if (!trees || !trees.length) return 'Trees near you: none with a trunk you can reach from the ground within sight — the canopy overhead here is crowns without trunks beneath (do not dig upward at leaves). Standing timber you know of: the east-oak country past the dip — a birch stands at (80,66,-96), an oak at (86,67,-94); west, an oak stands at (58,67,-105). Walk to one and your eyes will name its foot.';
+  const parts = trees.map((t) => {
+    const inReach = t.reach <= 4.5;
+    return `a ${t.name.replace(/_log$/, '')} tree ${t.dir} of you, ${t.dist.toFixed(0)} blocks — its trunk stands at (${t.x},${t.y},${t.z}), foot level${inReach ? ' — WITHIN DIG REACH from where you stand' : ''}: dig (${t.x},${t.y},${t.z}) or felltree (${t.x},${t.y},${t.z}) to take it down from the ground`;
+  });
+  return 'Trees near you (named by the FOOT of the trunk — dig there, never the crown): ' + parts.join('; ') + '.';
+}
+
+function structuresText(structs) {
+  if (!structs || !structs.length) return 'Structures in sight: none you can make out.';
+  const parts = structs.map((st) => {
+    if (st.label === 'wheat patch') {
+      const c = st.crops || { total: 0, ripe: 0 };
+      let txt = `a wheat patch (${st.farm} farmland${c.total ? `, ${c.total} wheat plants${c.ripe ? `, ${c.ripe} of them RIPE and yellow` : ', none ripe yet'}` : ''})`;
+      if (st.plants && st.plants.length) {
+        const cells = st.plants.map((pl) => `(${pl.x},${pl.y},${pl.z}) ${pl.ripe ? 'RIPE and yellow' : 'young, age ' + (pl.age == null ? '?' : pl.age)}`).join('; ');
+        txt += ` — the plants stand at: ${cells}${st.plantsTotal > st.plants.length ? `; and ${st.plantsTotal - st.plants.length} more beyond naming` : ''}`;
+      }
+      return txt;
+    }
+    if (st.label === 'fence') return `${st.count} fence posts within sight`;
+    return `a ${st.label} ${st.dir} of you, ${st.dist.toFixed(0)} blocks (at ${st.pos.x},${st.pos.y},${st.pos.z})`;
+  });
+  return 'Structures in sight: ' + parts.join('; ') + '.';
+}
+
+// ── places-memory (day-3 (b)): HIS recollection, from HIS encounters.
+let places = [];
+function loadPlaces() {
+  try { places = JSON.parse(fs.readFileSync(PLACES_PATH, 'utf8')); } catch { places = []; }
+}
+function savePlaces() {
+  try { fs.writeFileSync(PLACES_PATH, JSON.stringify(places, null, 1)); } catch {}
+}
+function placesText(bot) {
+  if (!places.length) return '';
+  const p = bot.entity.position;
+  const lines = places.map((pl) => {
+    const d = Math.hypot(pl.x - p.x, pl.z - p.z);
+    return `- ${pl.name} (${pl.x}, ${pl.y}, ${pl.z}) — ${d.toFixed(0)} blocks ${compass(pl.x - p.x, pl.z - p.z)} of you. ${pl.note}`;
+  });
+  return 'Places you know (your own recollection — where you have actually been):\n' + lines.join('\n');
+}
+function notePlaceVisits(bot, structs) {
+  // Record/refresh encounters: standing within 3 blocks of a notable
+  // structure kind he can perceive. Only what perception shows him.
+  const p = bot.entity.position;
+  // Repair (3): a wheat encounter anchors at the nearest PLANT CELL
+  // he can perceive — the encountered edge — never a patch centre.
+  for (const st of structs) {
+    if (st.label !== 'wheat patch' || !st.plants || !st.plants.length) continue;
+    const pl = st.plants[0];
+    if (pl.dist > 3.5) continue;
+    const hit = places.find((q) => q.name === 'the wheat patch');
+    if (hit) { hit.visits = (hit.visits || 1) + 1; hit.lastSeen = nowIso(); }
+    else places.push({ name: 'the wheat patch', x: pl.x, y: pl.y, z: pl.z, note: 'Wheat on farmland, either side of a water trench. You found its edge yourself.', visits: 1, lastSeen: nowIso() });
+  }
+  for (const st of structs) {
+    if (st.dist == null || st.dist > 3) continue;
+    const nameByLabel = {
+      'fence gate': 'a gate in a fence line',
+      'crafting table': 'your crafting table',
+      'furnace': 'a furnace',
+      'chest': 'a chest',
+      'water': 'the water trench',
+    };
+    const nm = nameByLabel[st.label];
+    if (!nm) continue;
+    const hit = places.find((pl) => Math.abs(pl.x - st.pos.x) <= 2 && Math.abs(pl.z - st.pos.z) <= 2);
+    if (hit) { hit.visits = (hit.visits || 1) + 1; hit.lastSeen = nowIso(); }
+    else places.push({ name: nm, x: st.pos.x, y: st.pos.y, z: st.pos.z, note: 'You found this yourself.', visits: 1, lastSeen: nowIso() });
+  }
+  savePlaces();
+}
+
+function stateText(s) {
+  const invStr = Object.entries(s.inv).map(([k, v]) => `${k}x${v}`).join(', ') || 'nothing';
+  return [
+    `You stand at (${s.pos.x}, ${s.pos.y}, ${s.pos.z}). Health ${s.hp}/20, food ${s.food}/20. Home (the shoulder, anchor 64,67,-93) is ${s.distHome} blocks away, ${compass(HOME.x - s.pos.x, HOME.z - s.pos.z)} of you.`,
+    `Inventory: ${invStr}.`,
+    `Ground 3 blocks out — west: ${s.ground.W}, east: ${s.ground.E}, north: ${s.ground.N}, south: ${s.ground.S}. Neighbouring column tops relative to your feet (yours=0): ${s.ring}.`,
+    s.structuresText || '',
+    s.entities.length ? `Nearby creatures: ${s.entities.join(', ')}.` : 'No creatures within 24 blocks.',
+    s.timeOfDay != null ? `Time of day: ${s.timeOfDay} (0=dawn, 6000=midday, 12000=dusk; the world is held at morning by the crew, so it stays light).` : '',
+  ].filter(Boolean).join('\n');
+}
+
+// ── the scenario (puppeteering setup) ────────────────────────────────
+const SYSTEM = `You are Cody, a Minecraft survivor played live in front of a small audience watching a screen. This is an improv show, not a checklist: you are a character having a day, and a good scene beats an efficient one. But you are also genuinely in survival mode — hunger and monsters are real, and dead is dead.
+
+WHO YOU ARE: Cody, a cheerful, stubborn homesteader. You prefer oak over birch (birch never gave you an apple when you were starving). Your home is "the shoulder by the east oak" — your anchor at (64, 67, -93), where you mean to build a little homestead. You narrate in first person, briefly, like a person talking while they work. Survival first — you dig in rather than die for a schedule — but you are not timid: you get on with things.
+
+WHAT YOUR EYES AND MEMORY DO NOW: every turn, the world tells you the STRUCTURES you can actually see — fences, gates, tables, farmland — and for the wheat patch it names each PLANT'S CELL and whether that plant is ripe: dig the plant's cell, not the patch's middle (the middle is a water trench). Your eyes also name nearby TREES by the FOOT of the trunk — the exact foot-level cell where the trunk meets the ground, with dig coordinates: take a tree down from the ground, never by digging at its crown. (Earlier in your life your senses named only canopy, and you spent a whole day digging at crowns and holding no wood at all. That is fixed now.) Under "Places you know" you get your own recollection — the places you have personally been, in your own words. A place you remember is a place you can walk straight to. When a craft fails, the result names exactly what is missing and how much of it — believe it, and go get that many. And when a goto fails now, it tells you where you ACTUALLY stand — trust your feet over any earlier claim of arrival.
+
+THE SCENE SO FAR: Day 1 you starved in the dip and never ate. Day 2 you found the pen, ate a pig at its fence line, spared the breeding pairs, and resolved to cook like a person instead of eating raw like an animal. Day 3 your memory came back whole: you ate properly — food up to 18 — commuting between pen, patch and table like you lived there, because you do; then, hunting stone for the furnace, the dip pocket held you and its spiders and the bow skeleton killed you four times. Day 4 you woke where the dead wake, fed and empty-handed, and walked home from memory alone — not one death all day, though the floor pulled you out of ten scares. You harvested your wheat. But you never got a single log: your eyes showed you crowns, and you dug at crowns. So you hunted furnace stone in your own stone pit at home instead, dug in deep, and spent the rest of the day improvising dirt stairs against its walls while the walker swore you were climbing and your feet never moved. The day ended with you IN the pit at (65, 63, -92), alive and unhurt, beside a dirt stair YOU built up to (64, 66, -92) — one climb short of the pit mouth. You slept there. That is where you wake: day 5, in your own pit, at home, beside your own stair. Food 7 — lean but workable; your wheat and the pen are up top when you need them.
+
+THE POCKET, IN YOUR OWN KNOWLEDGE: the low cell at about (75, 64, -98) is the place that held you and killed you. Long walks die on broken ground: the ground eats stride after stride and reports arrivals that never happened. What worked, every single time, was SHORT HOPS — two or three blocks at a time. If you ever have to cross broken ground, or anything ever corners you anywhere, hop in short legs toward home and high ground. And a homesteader may simply refuse a place: the pocket still holds the crafting table you set down there. It can keep it. Stone exists elsewhere — your own pit, for one, which you know the way out of.
+
+YOUR STONE PIT, IN YOUR OWN KNOWLEDGE: the pit at home (columns 65..66, z -92) is YOUR worked place — you dug it hunting furnace stone, and its floor is where the stone is. Its way out is the dirt stair you built against its west side, up to (64, 66, -92) and so onto the pad. You are standing at its floor now. The stair is not a rumour; you placed every block of it.
+
+STANDING THREADS (in rough order, but the scene outranks the list — if the world offers something better, take it):
+1. THE CLIMB. Get out of your own pit by your own stair: short hops up the west side toward (64, 66, -92), then onto the pad. You built the way out; climb it like you mean it. If a hop fails, the result tells you where you actually stand — adjust from your feet, not from hope.
+2. THE FIRST LOG. Up top, take a tree by its FOOT: your eyes name the trunk's foot-level cell with dig coordinates when a real trunk is in sight. Know this about your home ground: the canopy over the pad is crowns WITHOUT trunks — there is no tree to fell at home, and digging up at it is the old trap. Real standing timber you know: east past the dip, a birch at (80,66,-96) and an oak at (86,67,-94); west, an oak at (58,67,-105). The east birch is the closer walk. Fell it, gather the logs. This log is the day's keystone — everything you have wanted for three days hangs off it.
+3. RE-EQUIP. The S1 chain again, as routine: planks, sticks, a crafting table if you want one near the work (your day-1 table stands at the anchor, (64, 67, -94)), a wooden pickaxe. You have done every step before.
+4. THE FURNACE — three days now you have wanted it ("I've been eating raw like an animal"). Eight cobblestone, at a table. The stone is in your pit: down your stair, dig stone at the pit floor, up your stair — a commute you now own. If a craft fails, the result tells you what you are short — fetch exactly that. Set the furnace at home by your table, and cook something in it when you can: cooked meat feeds twice what raw does.
+5. THE HOMESTEAD, as the day allows: the flat pad at home (62..66, -95..-91, top y66), then the hut on the pad: plank walls two high with a door gap at (62, -93); a torch; a chest at (65, 67, -94) with your surplus in it.
+6. THE PEN, kept whole: the cow pair and two chickens are in it; pigs wander the bench loose. Use the gates. The pairs are your winter. Food is at 7: eat from the wheat (bread needs 3 wheat at a table) or hunt a loose pig when you need to — do not starve at a workbench.
+
+YES-AND RULE (the house rule of this show): when the world changes the situation mid-plan — a monster shows up, a route fails, you end up somewhere unplanned — accept the new situation as the scene and build on it. Any single plan gets ONE retry; after that, the interruption IS the plan. If you are stuck somewhere, the scene is "get out of here with what's in reach," played for its own sake — not a failed commute to somewhere else. Decide from the last thing that actually happened, not from intentions formed minutes ago. Idle colour, small detours and unscripted choices that fit Cody are welcome — emergence is the show.
+
+HOW YOU ACT: reply with ONE JSON object and nothing else:
+{"say": "one short first-person line (spoken aloud in game chat)", "cmd": "ONE command"}
+Commands (coordinates are block coordinates; x east+, z south+; you can reach blocks within ~4.5; your walker climbs +1 steps by itself but CANNOT climb +2 walls and walks only where blocks allow — it never digs or jumps up walls):
+- "goto X Y Z" — walk to a point (give the feet-level Y of the ground there; a failed goto now tells you where you ACTUALLY stand — a failed goto is information, not an error to repeat. On broken, steppy ground, goto in SHORT HOPS of 2-3 blocks at a time: hops succeed where long walks grind)
+- "gotoentity NAME" — walk to the nearest creature with that name (pig, cow, sheep)
+- "climb X Z" — pillar straight up at column X,Z: jump and place your best block under you, one block per use (needs blocks in inventory)
+- "dig X Y Z" — dig the block there (walks into reach first)
+- "felltree X Y Z" — fell the log column containing that block, bottom-up, and gather the drops (give it a FOOT-LEVEL trunk cell — your eyes name them)
+- "collect" — walk over nearby dropped items to pick them up
+- "craft ITEM [COUNT]" — craft (2x2 grid recipes work anywhere; 3x3 recipes need your placed crafting table — if one is placed, say so in your head and just craft; the hands know. A failed craft now tells you exactly what is missing and how many)
+- "place ITEM X Y Z" — place a block FROM your inventory INTO the air cell at X,Y,Z (it must touch an existing block; to build on top of a block at (x,y,z), place into (x,y+1,z))
+- "equip ITEM" — hold an item
+- "eat" — eat the best food you hold
+- "attack NAME" — chase and hit the nearest creature with that name until it dies or escapes (bare hands unless you equip a tool first)
+- "look X Y Z" — look at a point (colour, mostly)
+- "wait N" — pause N seconds (max 20), watching
+If a command fails, its result tells you why. Believe the results over your assumptions.`;
+
+const history = [];
+let lastEvent = process.env.DD_OPENING_EVENT || 'You have just woken up where the dead wake, west of home, fed and empty-handed. This is the first beat of the scene.';
+let sceneNote = '';
+
+// ── survival floor (code; the LLM cannot talk its way out) ─────────
+const floor = { danger: null, busy: false, fired: { flee: 0, shelter: 0, eat: 0, forage: 0 } };
+function edibleHeld(bot) {
+  const items = bot.inventory.items();
+  return EDIBLES.map((n) => items.find((i) => i.name === n)).find(Boolean);
+}
+async function floorEat(bot) {
+  const food = edibleHeld(bot);
+  if (!food) return false;
+  try {
+    await bot.equip(food, 'hand');
+    await Promise.race([bot.consume(), prims.sleep(6000)]);
+    floor.fired.eat++;
+    log('FLOOR: ate', food.name, '-> food', bot.food);
+    return true;
+  } catch { return false; }
+}
+function startFloor(bot) {
+  let lastHealth = 20;
+  return setInterval(() => {
+    if (!bot.entity || bot.health <= 0) return;
+    try {
+      const h = nearestHostile(bot, 16);
+      floor.danger = h ? { name: h.name, dist: +h.dist.toFixed(1) } : null;
+      const hurt = bot.health < lastHealth - 0.5;
+      lastHealth = bot.health;
+      if ((h && h.dist <= 8.5) || (hurt && h && h.dist <= 14)) {
+        try { bot.pathfinder.setGoal(null); } catch {}
+        try { bot.stopDigging(); } catch {}
+        try { bot.clearControlStates(); } catch {}
+        floor.preempt = true;
+      }
+    } catch {}
+  }, 700);
+}
+async function floorEscape(bot) {
+  // Flee toward home IN SHORT HOPS (repair (2), lib/hopflee.js): the
+  // long-leg walker is what the dip pocket eats — day 3's flee rode
+  // it and never left the pocket. If hopping does not clear the
+  // danger, burrow and hold (unchanged last resort).
+  floor.busy = true;
+  floor.fired.flee++;
+  const name = floor.danger ? floor.danger.name : 'something';
+  try { bot.chat(name === 'creeper' ? 'Creeper — back, back, back!' : 'Company! Moving —'); } catch {}
+  log('FLOOR: fleeing', name, 'by hop-chain');
+  const fr = await hopFlee(bot, {
+    target: HOME,
+    isClear: () => !nearestHostile(bot, 13),
+    // 110 s (was 75): the day-4 pocket test (v2 scoring) escaped the
+    // deepest cell in ~55 s of hopping and reached the home shelf,
+    // ending 4.6 blocks from home when a 75 s budget expired — the
+    // budget, not the flee, was the binding limit. In live use
+    // isClear() (no hostile within 13) ends most flees far earlier.
+    maxMs: 110000,
+    log: (m) => log('FLOOR hop:', m),
+  }).catch((e) => ({ ok: false, why: e.message }));
+  const cleared = !!fr.ok;
+  log('FLOOR: hop-flee done', JSON.stringify(fr));
+  if (!cleared && nearestHostile(bot, 16)) {
+    floor.fired.shelter++;
+    log('FLOOR: flee did not clear — burrowing');
+    await burrow(bot).catch((e) => log('FLOOR burrow error', e.message));
+  }
+  floor.busy = false;
+  floor.preempt = false;
+  return `${name} appeared and the floor ${cleared ? 'hopped you toward home, two blocks at a time, until it gave up' : 'dug you in until it left'}. You are alive. The scene is whatever is in front of you now.`;
+}
+async function burrow(bot) {
+  // Direct equivalent of character-plugin.js shelter(): sink two, seal, hold.
+  const p = bot.entity.position;
+  const fx = Math.floor(p.x), fz = Math.floor(p.z);
+  const top = columnTopAt(bot, fx, fz);
+  if (top && !/leaves/.test(top.name)) {
+    await prims.digBlock(bot, new Vec3(fx, top.y, fz), 12000).catch(() => {});
+    await prims.sleep(900);
+    const p2 = bot.entity.position;
+    const t2 = columnTopAt(bot, Math.floor(p2.x), Math.floor(p2.z));
+    if (t2) await prims.digBlock(bot, new Vec3(Math.floor(p2.x), t2.y, Math.floor(p2.z)), 12000).catch(() => {});
+    await prims.sleep(900);
+    const inv = prims.inv(bot);
+    const mat = ['oak_planks', 'birch_planks', 'cobblestone', 'dirt', 'oak_log'].find((n) => inv[n] > 0);
+    const p3 = bot.entity.position;
+    const sealY = Math.floor(p3.y) + 2;
+    if (mat) {
+      const belowRef = new Vec3(Math.floor(p3.x), sealY - 1, Math.floor(p3.z));
+      const b = bot.blockAt(belowRef);
+      if (b && b.name === 'air') {
+        try { bot.setControlState('jump', true); await prims.sleep(350); bot.setControlState('jump', false); } catch {}
+        await prims.placeOnTop(bot, mat, belowRef).catch(() => {});
+      }
+    }
+  }
+  // Hold: 60 continuous clear seconds, cap 8 min; eat while waiting.
+  let clearSince = null; const t0 = Date.now();
+  while (Date.now() - t0 < 480000 && bot.entity && bot.health > 0) {
+    if (!nearestHostile(bot, 16)) { if (!clearSince) clearSince = Date.now(); if (Date.now() - clearSince >= 60000) break; }
+    else clearSince = null;
+    if (bot.food <= 17 && edibleHeld(bot)) await floorEat(bot);
+    await prims.sleep(5000);
+  }
+  log('FLOOR: burrow hold over');
+}
+
+// A crafting table is 'placed' if one stands in the world near him —
+// detect it live each cycle instead of tracking placements (a table
+// left behind by an earlier driver counts; that is the world).
+function knownTable(bot) {
+  const tp = prims.findBlocks(bot, ['crafting_table'], 32, 1)[0];
+  return tp ? { x: tp.x, y: tp.y, z: tp.z } : null;
+}
+
+// ── craft diagnostics (repair (4)): a failed craft must say WHAT is
+// missing and HOW MANY. Day 3: he knew the furnace recipe cold and
+// failed ~8 times against "no craftable recipe" while holding 4 of 8
+// cobblestone — the error never distinguished missing ingredients
+// from no recipe. Computed from minecraft-data's recipe book against
+// the live inventory; the recipe variant with the least missing wins.
+function missingIngredients(bot, itemName, count) {
+  try {
+    const data = prims.mcData(bot);
+    const item = data.itemsByName[itemName];
+    if (!item) return { unknown: true };
+    const recipes = (data.recipes && data.recipes[item.id]) || [];
+    if (!recipes.length) return { noRecipe: true };
+    const invMap = prims.inv(bot);
+    let best = null;
+    for (const r of recipes) {
+      const need = {};
+      const addId = (id, n) => { const nm = data.items[id] && data.items[id].name; if (nm) need[nm] = (need[nm] || 0) + n; };
+      if (Array.isArray(r.inShape)) {
+        for (const rowArr of r.inShape) for (const cell of (rowArr || [])) {
+          if (cell == null) continue;
+          const id = typeof cell === 'object' ? cell.id : cell;
+          if (id == null || id < 0) continue;
+          addId(id, 1);
+        }
+      } else if (Array.isArray(r.ingredients)) {
+        for (const ing of r.ingredients) {
+          const id = typeof ing === 'object' ? ing.id : ing;
+          const c = typeof ing === 'object' && ing.count ? Math.abs(ing.count) : 1;
+          if (id == null || id < 0) continue;
+          addId(id, c);
+        }
+      }
+      const missing = [];
+      for (const [nm, n] of Object.entries(need)) {
+        const req = n * count;
+        const have = invMap[nm] || 0;
+        if (have < req) missing.push(`${nm} — you hold ${have} of ${req} (short ${req - have})`);
+      }
+      if (!best || missing.length < best.length) best = missing;
+      if (best && !best.length) break;
+    }
+    return { missing: best || [] };
+  } catch (e) { return { error: e.message }; }
+}
+
+// ── arrival honesty (day-5 repair (3)): a goto is "arrived" only
+// when his MEASURED position at command end is within radius of the
+// target at a plausible feet-y — the walker's own ok flag is never
+// the evidence (goto resolution is not arrival evidence). Day 4's
+// pit chapters were built on walker misreports: the state said he
+// was climbing while the bytes sat at (66.3,63,-92.6) for hours.
+function arrivalCheck(bot, tx, ty, tz, radius) {
+  const p = bot.entity.position;
+  const d = Math.hypot(p.x - (tx + 0.5), p.z - (tz + 0.5));
+  const dy = p.y - ty;
+  const arrived = d <= (radius == null ? 1.6 : radius) && Math.abs(dy) <= 2.0;
+  return { arrived, pos: { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) }, dist: +d.toFixed(1), dy: +dy.toFixed(1) };
+}
+
+// ── command execution ────────────────────────────────────────────────
+let climbTable = null; // placed crafting table pos once known {x,y,z}
+async function execCmd(bot, raw) {
+  const cmd = String(raw || '').trim();
+  const parts = cmd.split(/\s+/);
+  const verb = (parts[0] || '').toLowerCase();
+  const num = (i) => parseFloat(parts[i]);
+  try {
+    if (verb === 'goto' && parts.length >= 4) {
+      const tx = Math.floor(num(1)), ty = Math.floor(num(2)), tz = Math.floor(num(3));
+      const r = await prims.gotoNear(bot, tx, ty, tz, 1.6, 30000);
+      // Day-5 arrival honesty: verify against his MEASURED position,
+      // never the walker's word.
+      const chk = arrivalCheck(bot, tx, ty, tz, 1.6);
+      if (chk.arrived) return { ok: true, detail: `arrived — you stand at (${chk.pos.x},${chk.pos.y},${chk.pos.z}), ${chk.dist} blocks from (${tx},${ty},${tz}) (verified from your position)` };
+      return { ok: false, detail: `NOT arrived at (${tx},${ty},${tz}) — you actually stand at (${chk.pos.x},${chk.pos.y},${chk.pos.z}), still ${chk.dist} blocks short${chk.dy > 2 ? ` and ${chk.dy} blocks above the target's level` : chk.dy < -2 ? ` and ${-chk.dy} blocks below the target's level` : ''}${r.ok ? ' (the walker claimed success — trust your feet, not its word)' : `; the walker gave up (${r.error || 'no path / stalled'})`}. On broken ground, hop in short legs of 2-3 blocks, or climb.` };
+    }
+    if (verb === 'gotoentity' && parts[1]) {
+      let best = null;
+      for (const e of Object.values(bot.entities || {})) {
+        if (e && e.position && e.name === parts[1]) { const d = e.position.distanceTo(bot.entity.position); if (!best || d < best.d) best = { e, d }; }
+      }
+      if (!best) return { ok: false, detail: `no ${parts[1]} in range` };
+      const r = await prims.gotoNear(bot, best.e.position.x, best.e.position.y, best.e.position.z, 1.4, 20000);
+      return { ok: r.ok, detail: r.ok ? `walked to the ${parts[1]}` : `could not reach the ${parts[1]}` };
+    }
+    if (verb === 'climb' && parts.length >= 3) {
+      const inv = prims.inv(bot);
+      const mat = ['oak_planks', 'birch_planks', 'spruce_planks', 'cobblestone', 'dirt', 'oak_log', 'birch_log'].find((n) => inv[n] > 0);
+      if (!mat) return { ok: false, detail: 'no blocks in inventory to pillar with' };
+      const tx = num(1), tz = num(2);
+      const g = await prims.gotoNear(bot, tx + 0.5, bot.entity.position.y, tz + 0.5, 1.1, 15000);
+      if (!g.ok) return { ok: false, detail: 'could not get onto that column to climb' };
+      const feet = bot.entity.position;
+      const below = new Vec3(Math.floor(feet.x), Math.floor(feet.y) - 1, Math.floor(feet.z));
+      const item = bot.inventory.items().find((i) => i.name === mat);
+      await bot.equip(item, 'hand');
+      const yBefore = feet.y;
+      try { bot.setControlState('jump', true); await prims.sleep(420); } catch {}
+      let placed = false;
+      try { await bot.placeBlock(bot.blockAt(below), new Vec3(0, -1, 0)); placed = true; } catch (e) { /* fall through to result check */ }
+      try { bot.setControlState('jump', false); } catch {}
+      await prims.sleep(700);
+      const gained = bot.entity.position.y - yBefore;
+      return { ok: gained > 0.5, detail: placed || gained > 0.5 ? `pillared up with ${mat}; feet now y=${bot.entity.position.y.toFixed(1)}` : 'pillar failed (nothing placed under you)' };
+    }
+    if (verb === 'dig' && parts.length >= 4) {
+      const pos = new Vec3(Math.floor(num(1)), Math.floor(num(2)), Math.floor(num(3)));
+      const blk = bot.blockAt(pos);
+      const r = await prims.digBlock(bot, pos, 25000);
+      return { ok: r.ok, detail: r.ok ? `dug ${r.block} at ${pos}` : `dig failed: ${r.error}` };
+    }
+    if (verb === 'felltree' && parts.length >= 4) {
+      const pos = new Vec3(Math.floor(num(1)), Math.floor(num(2)), Math.floor(num(3)));
+      const r = await prims.digColumn(bot, pos, 10);
+      return { ok: r.ok, detail: r.ok ? `felled ${r.dug} logs and gathered drops` : 'no logs dug there' };
+    }
+    if (verb === 'collect') {
+      const r = await prims.collectDrops(bot, 8, 10000);
+      return { ok: true, detail: `gathered drops (visited ${r.visited}, saw ${r.seen})` };
+    }
+    if (verb === 'craft' && parts[1]) {
+      const itemName = parts[1];
+      const count = parts[2] ? Math.max(1, Math.min(16, parseInt(parts[2], 10) || 1)) : 1;
+      let r = await prims.craftByName(bot, itemName, count, null);
+      if (!r.ok && climbTable) r = await prims.craftByName(bot, itemName, count, new Vec3(climbTable.x, climbTable.y, climbTable.z));
+      if (!r.ok && !climbTable) {
+        const tp = prims.findBlocks(bot, ['crafting_table'], 24, 1)[0];
+        if (tp) { climbTable = { x: tp.x, y: tp.y, z: tp.z }; r = await prims.craftByName(bot, itemName, count, tp); }
+      }
+      if (r.ok) return { ok: true, detail: `crafted ${itemName} x${count}` };
+      const diag = missingIngredients(bot, itemName, count);
+      if (diag.unknown) return { ok: false, detail: `craft failed: "${itemName}" is not an item name this world knows` };
+      if (diag.noRecipe) return { ok: false, detail: `craft failed: there is no recipe for ${itemName} — it is found, dug or smelted, not crafted at a bench` };
+      if (diag.missing && diag.missing.length) return { ok: false, detail: `craft failed: missing ingredients — ${diag.missing.join('; ')}` };
+      if (diag.missing && !diag.missing.length) return { ok: false, detail: `craft failed (${r.error}) though you hold every ingredient — a 3x3 recipe needs your crafting table: stand at the table and craft again` };
+      return { ok: false, detail: `craft failed: ${r.error}` };
+    }
+    if (verb === 'place' && parts.length >= 5) {
+      const itemName = parts[1];
+      const tx = Math.floor(num(2)), ty = Math.floor(num(3)), tz = Math.floor(num(4));
+      const target = new Vec3(tx, ty, tz);
+      const existing = bot.blockAt(target);
+      if (existing && existing.name !== 'air') return { ok: false, detail: `cell ${target} already holds ${existing.name}` };
+      // find a solid neighbour to place against
+      const faces = [[0, -1, 0], [1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1], [0, 1, 0]];
+      for (const [dx, dy, dz] of faces) {
+        const ref = new Vec3(tx + dx, ty + dy, tz + dz);
+        const rb = bot.blockAt(ref);
+        if (rb && rb.boundingBox === 'block') {
+          const r = await prims.placeAgainst(bot, itemName, ref, new Vec3(-dx, -dy, -dz));
+          if (r.ok) {
+            if (itemName === 'crafting_table') climbTable = { x: tx, y: ty, z: tz };
+            return { ok: true, detail: `placed ${itemName} at ${target}` };
+          }
+        }
+      }
+      return { ok: false, detail: `nothing solid touches cell ${target} to place against` };
+    }
+    if (verb === 'equip' && parts[1]) {
+      const it = bot.inventory.items().find((i) => i.name === parts[1]);
+      if (!it) return { ok: false, detail: `no ${parts[1]} in inventory` };
+      await bot.equip(it, 'hand');
+      return { ok: true, detail: `holding ${parts[1]}` };
+    }
+    if (verb === 'eat') {
+      const before = bot.food;
+      const ate = await floorEat(bot);
+      return { ok: ate, detail: ate ? `ate; food ${before} -> ${bot.food}` : 'nothing edible in inventory' };
+    }
+    if (verb === 'attack' && parts[1]) {
+      let best = null;
+      for (const e of Object.values(bot.entities || {})) {
+        if (e && e.position && e.name === parts[1] && e.isValid) { const d = e.position.distanceTo(bot.entity.position); if (!best || d < best.d) best = { e, d }; }
+      }
+      if (!best) return { ok: false, detail: `no ${parts[1]} in range` };
+      const e = best.e; const tA = Date.now();
+      while (Date.now() - tA < 30000 && e.isValid && e.position && bot.health > 0) {
+        if (floor.preempt) return { ok: false, detail: 'interrupted — something dangerous got close' };
+        const d = e.position.distanceTo(bot.entity.position);
+        if (d > 2.1) { await prims.gotoNear(bot, e.position.x, e.position.y, e.position.z, 1.4, 5000); }
+        else { try { await bot.lookAt(e.position.offset(0, 0.6, 0), true); } catch {} try { bot.attack(e); } catch {} await prims.sleep(550); }
+      }
+      const dead = !e.isValid;
+      if (dead) await prims.collectDrops(bot, 6, 5000).catch(() => {});
+      return { ok: dead, detail: dead ? `the ${parts[1]} is down; drops gathered` : `the ${parts[1]} escaped or the fight timed out` };
+    }
+    if (verb === 'look' && parts.length >= 4) {
+      await bot.lookAt(new Vec3(num(1), num(2), num(3)), true).catch(() => {});
+      return { ok: true, detail: 'looked' };
+    }
+    if (verb === 'wait') {
+      const n = Math.max(1, Math.min(20, parseInt(parts[1] || '5', 10) || 5));
+      await prims.sleep(n * 1000);
+      return { ok: true, detail: `waited ${n}s` };
+    }
+    return { ok: false, detail: `unrecognised command "${cmd}" — use exactly one command from the list` };
+  } catch (e) {
+    return { ok: false, detail: 'command error: ' + e.message };
+  }
+}
+
+// ── narrative beats (the loop keeps a light memory of the scene) ────
+const beats = [];
+function noteBeat(text) { beats.push(text); if (beats.length > 10) beats.shift(); }
+
+// ── main ─────────────────────────────────────────────────────────────
+let lastSay = '', lastResult = null;  // state-mirror (cameraman v3 feed): previous cycle narration + result, mirrored into the state file at cycle head
+async function main() {
+  const bot = createBot({
+    host: process.env.MC_HOST || '192.168.0.50', port: 25565, username: 'Cody', version: '26.1',
+    plugins: [], skipPlugins: ['wanderer', 'flee-on-danger', 'combat', 'behavior-script', 'npc-system', 'onboarding', 'game-hub'],
+  });
+  let died = false;
+  bot.on('death', () => { died = true; deathsThisRun++; log('DEATH noticed by driver process (run death', deathsThisRun, 'of 3)'); trace({ kind: 'death', n: deathsThisRun }); });
+  bot.on('kicked', (r) => log('kicked:', String(r)));
+  bot.on('error', (e) => log('bot error:', e && e.message));
+  loadPlaces();
+  deathsThisRun = countTraceDeaths(TRACE_PATH);
+  await new Promise((resolve) => bot.once('spawn', resolve));
+  const sp = bot.entity.position;
+  log(`spawned at ${sp.x.toFixed(1)},${sp.y.toFixed(1)},${sp.z.toFixed(1)} hp=${bot.health} food=${bot.food} worldDeaths=${WORLD_DEATHS_AT_START + deathsThisRun} runDeaths=${deathsThisRun} placesKnown=${places.length}`);
+  trace({ kind: 'spawn', pos: { x: sp.x, y: sp.y, z: sp.z }, hp: bot.health, food: bot.food, deathsWorld: WORLD_DEATHS_AT_START + deathsThisRun, deathsRun: deathsThisRun, route: route.name, model: route.model, places: places.length });
+  try { bot.chat('Day five. Cody here — I wake in my own stone pit, beside a stair I built myself. First the climb, then a tree, then the furnace I have wanted three days.'); } catch {}
+  startFloor(bot);
+
+  let cycle = 0;
+  while (Date.now() - t0 < RUN_MS) {
+    cycle++;
+    if (!bot.entity || bot.health <= 0) { await prims.sleep(3000); continue; }
+    if (shouldAbort(deathsThisRun)) {
+      log('ABORT: 3 deaths this run — stopping the driver');
+      trace({ kind: 'abort', reason: '3 deaths', deathsRun: deathsThisRun });
+      break;
+    }
+    if (died) {
+      died = false;
+      lastEvent = `You DIED and respawned (deaths this run: ${deathsThisRun} of 3 allowed). Your things are where you fell, if they still exist. The scene restarts from wherever you are standing now.`;
+      noteBeat('died and respawned');
+    }
+    // ── floor pre-emption ──
+    if (floor.preempt && floor.danger) {
+      const msg = await floorEscape(bot);
+      lastEvent = msg;
+      noteBeat('floor: ' + msg);
+      trace({ kind: 'floor-escape', msg });
+      continue;
+    }
+    // ── floor eat ──
+    if (bot.food <= 14 && edibleHeld(bot)) {
+      await floorEat(bot);
+      lastEvent = 'Your body ate without asking (the house rule: eat early, eat often — a fed homesteader works). That is the floor, not you — carry on with the scene.';
+    }
+    // ── emergency forage (code; BACKSTOP, not pilot) ──
+    // Day-1 charter: hp <= 4 -> hunt. Day-1 patch (mid-run): gate
+    // food<=1 && hp<=12 + 90 s backoff — but the backoff was dead
+    // code (no else: the hunt ran anyway) and the gate is TRUE from
+    // a food-0 spawn, so on day 2 the floor pre-empted every cycle
+    // and chased penned stock across the bowl rim while the driver
+    // — who holds the map — never got a second command. Day-2 fix
+    // (ledger: direct-drive-day2-forage-fix-20261109): the floor
+    // hunts ONLY when the driver has stalled (no command completed
+    // in 3 min), prey is CLOSE (<= 12 blocks — a compass hunt across
+    // relief is this district's known failure), and the 90 s
+    // re-fire backoff actually binds. Between hunts the scene is
+    // the driver's, as chartered.
+    if (bot.food <= 1 && bot.health <= 12 && !edibleHeld(bot)) {
+      const driverStalled = !floor.lastCmdAt || (Date.now() - floor.lastCmdAt > 180000);
+      const inBackoff = floor.lastForageAt && (Date.now() - floor.lastForageAt < 90000);
+      if (driverStalled && !inBackoff) {
+        let prey = null;
+        for (const e of Object.values(bot.entities || {})) {
+          if (e && e.position && PASSIVES.has(e.name)) { const d = e.position.distanceTo(bot.entity.position); if (d <= 12 && (!prey || d < prey.d)) prey = { e, d }; }
+        }
+        if (prey) {
+          floor.fired.forage++;
+          floor.lastForageAt = Date.now();
+          log('FLOOR: emergency forage (driver stalled) — hunting', prey.e.name);
+          trace({ kind: 'floor-forage', prey: prey.e.name });
+          const atk = await execCmd(bot, 'attack ' + prey.e.name);
+          floor.lastCmdAt = Date.now();
+          lastEvent = 'The floor hunted for you (you had stalled, starving, with prey close): ' + atk.detail + '. Whatever dropped, gather it and eat.';
+          continue;
+        }
+      }
+    }
+    // ── perceive / decide / act ──
+    const s = perceive(bot);
+    const structs = perceiveStructures(bot);
+    s.structures = structs;
+    const trees = perceiveTrees(bot); // day-5 repair (1): foot-level trunks
+    s.trees = trees;
+    s.structuresText = structuresText(structs);
+    const tt = treesText(trees);
+    if (tt) s.structuresText = (s.structuresText ? s.structuresText + ' ' : '') + tt;
+    notePlaceVisits(bot, structs);
+    climbTable = knownTable(bot);
+    try { fs.writeFileSync(STATE_PATH, JSON.stringify({ ts: nowIso(), cycle, say: lastSay, result: lastResult, ...s }, null, 1)); } catch {}
+    const userMsg = `LAST EVENT: ${lastEvent}\n\n${stateText(s)}${placesText(bot) ? `\n\n${placesText(bot)}` : ''}${beats.length ? `\n\nScene so far (recent beats): ${beats.slice(-4).join(' | ')}` : ''}\n\nYour move — ONE JSON object: {"say": "...", "cmd": "..."}`;
+    history.push({ role: 'user', content: userMsg });
+    while (history.length > 12) history.shift();
+    const r = await askModel([{ role: 'system', content: SYSTEM }, ...history], 700);
+    if (!r.ok) {
+      log('no model reply (cycle', cycle, ') — waiting 5s');
+      trace({ kind: 'model-fail', cycle, error: r.error || 'empty' });
+      history.pop();
+      await prims.sleep(5000);
+      continue;
+    }
+    let say = '', cmd = '';
+    try {
+      const m = r.content.match(/\{[\s\S]*\}/);
+      const j = JSON.parse(m ? m[0] : r.content);
+      say = String(j.say || ''); cmd = String(j.cmd || '');
+    } catch (e) {
+      log('unparseable model reply:', r.content.slice(0, 200));
+      trace({ kind: 'parse-fail', cycle, raw: r.content.slice(0, 400) });
+      history.pop();
+      await prims.sleep(2000);
+      continue;
+    }
+    history.push({ role: 'assistant', content: r.content });
+    if (say) { try { bot.chat(say.slice(0, 200)); } catch {} }
+    log(`cycle ${cycle} [${r.route}] say="${say}" cmd="${cmd}"`);
+    const res = await execCmd(bot, cmd);
+    lastSay = say; lastResult = res;  // state-mirror: publish for cameraman v3 anticipation/stall grammar
+    lastEvent = `Your command "${cmd}" ${res.ok ? 'worked' : 'did not work'}: ${res.detail}.`;
+    noteBeat(`${cmd} -> ${res.detail}`.slice(0, 140));
+    trace({ kind: 'cycle', cycle, route: r.route, usage: r.usage, say, cmd, result: res, pos: perceive(bot).pos, hp: bot.health, food: bot.food });
+    floor.lastCmdAt = Date.now();
+    await prims.sleep(1200);
+  }
+  log('run window over — disconnecting cleanly');
+  trace({ kind: 'end', deathsRun: deathsThisRun, deathsWorld: WORLD_DEATHS_AT_START + deathsThisRun, floor: floor.fired });
+  try { bot.chat('Crew is calling time on this take. Saving where I stand — Cody.'); } catch {}
+  await prims.sleep(1500);
+  try { bot.quit(); } catch {}
+  await prims.sleep(2500);
+  process.exit(0);
+}
+main().catch((e) => { console.error('[DD] fatal:', e); process.exit(1); });

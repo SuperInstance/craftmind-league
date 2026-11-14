@@ -1,0 +1,31 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+FellTest stance: 77.5 66.0 -96.5 hp 20 food 20
+sense poll 0: blockAt(80,66,-96) = birch_log | offers: 6
+perceiveTrees offers: [{"at":[80,66,-96],"name":"birch_log","reach":3.2},{"at":[81,66,-104],"name":"oak_log","reach":8.1},{"at":[85,67,-100],"name":"oak_log","reach":8.6},{"at":[86,67,-94],"name":"oak_log","reach":9.5},{"at":[77,66,-109],"name":"birch_log","reach":12},{"at":[87,67,-88],"name":"oak_log","reach":13.5}]
+inventory before: {}
+digColumn: {"ok":true,"dug":5} | inventory after: {"birch_log":5}
+FELL: PASS — birch_log x5 in inventory from reported foot (80,66,-96)
+ARRIVAL: goto (64,66,-92) walker says ok=true via=helm-fallback err=- | arrivalCheck: arrived=true pos=(65.8,66.5,-92.1) dist=1.4 dy=0.5
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

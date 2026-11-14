@@ -1,0 +1,1178 @@
+{
+ "mode": "cody",
+ "username": "Cody",
+ "ts": "2026-11-08T08:43:48.232Z",
+ "events": [
+  {
+   "ev": "chainwalk-stall",
+   "atCell": [
+    69,
+    -102
+   ]
+  }
+ ],
+ "legs": [],
+ "rests": [
+  {
+   "n": 50,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "first": {
+    "x": 72.305,
+    "y": 64,
+    "z": -101.271
+   },
+   "last": {
+    "x": 72.305,
+    "y": 64,
+    "z": -101.271
+   },
+   "tag": "cody-at-spawn-stance",
+   "at": {
+    "x": 72.305,
+    "y": 64,
+    "z": -101.271
+   },
+   "cell": [
+    72,
+    -102
+   ]
+  },
+  {
+   "n": 20,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "first": {
+    "x": 71.584,
+    "y": 63,
+    "z": -102.304
+   },
+   "last": {
+    "x": 71.584,
+    "y": 63,
+    "z": -102.304
+   },
+   "tag": "cody-end",
+   "at": {
+    "x": 71.584,
+    "y": 63,
+    "z": -102.304
+   },
+   "cell": [
+    71,
+    -103
+   ]
+  }
+ ],
+ "attempts": [
+  {
+   "tag": "C-C1-goto-W+1-escape",
+   "method": "gotoNear",
+   "targetCell": [
+    71,
+    -102
+   ],
+   "targetFeetY": 65,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 72.305,
+    "y": 64,
+    "z": -101.271
+   },
+   "startCell": [
+    72,
+    -102
+   ],
+   "end": {
+    "x": 73.302,
+    "y": 63.797,
+    "z": -100.987
+   },
+   "endCell": [
+    73,
+    -101
+   ],
+   "dispH": 1.037,
+   "dispY": -0.203,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 71.5,65,-101.5; at (73.30241180352805, 63.796735600668704, -100.98669561305303)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T08:44:07.474Z",
+       "windowProg": 0,
+       "stuckForMs": 3153,
+       "before": {
+        "x": 72.31,
+        "y": 64,
+        "z": -101.27
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.93,
+       "jumpKeyed": true,
+       "after": {
+        "x": 73.32,
+        "y": 63.8,
+        "z": -100.98
+       },
+       "onGroundAfter": false,
+       "dispCycle": 1.07,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:44:07.474Z",
+       "dist": 1.3,
+       "stuckForMs": 3152,
+       "anchorD": 1.3,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 218,
+   "window": {
+    "n": 127,
+    "posRange": {
+     "x": 1.88,
+     "y": 1.249,
+     "z": 0.536
+    },
+    "meanVel": {
+     "x": 0.001,
+     "y": -0.011,
+     "z": 0
+    },
+    "onGroundFrac": 0.047,
+    "forcedMoves": 218,
+    "first": {
+     "x": 72.305,
+     "y": 64,
+     "z": -101.271
+    },
+    "last": {
+     "x": 73.302,
+     "y": 63.797,
+     "z": -100.987
+    }
+   }
+  },
+  {
+   "tag": "C-C2-raw-W+1-escape",
+   "method": "rawDrive-fwd+jump",
+   "targetCell": [
+    71,
+    -102
+   ],
+   "seconds": 4,
+   "start": {
+    "x": 73.302,
+    "y": 63,
+    "z": -100.987
+   },
+   "startCell": [
+    73,
+    -101
+   ],
+   "end": {
+    "x": 73.302,
+    "y": 63,
+    "z": -100.987
+   },
+   "endCell": [
+    73,
+    -101
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "forcedMoves": 76,
+   "window": {
+    "n": 42,
+    "posRange": {
+     "x": 0,
+     "y": 0,
+     "z": 0
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.004,
+     "z": 0
+    },
+    "onGroundFrac": 0.048,
+    "forcedMoves": 76,
+    "first": {
+     "x": 73.302,
+     "y": 63,
+     "z": -100.987
+    },
+    "last": {
+     "x": 73.302,
+     "y": 63,
+     "z": -100.987
+    }
+   }
+  },
+  {
+   "tag": "C-C3-goto-E-down-control",
+   "method": "gotoNear",
+   "targetCell": [
+    73,
+    -102
+   ],
+   "targetFeetY": 63,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 73.302,
+    "y": 63,
+    "z": -100.987
+   },
+   "startCell": [
+    73,
+    -101
+   ],
+   "end": {
+    "x": 73.302,
+    "y": 63,
+    "z": -100.987
+   },
+   "endCell": [
+    73,
+    -101
+   ],
+   "dispH": 0,
+   "dispY": 0,
+   "result": {
+    "ok": true
+   },
+   "err": null,
+   "forcedMoves": 0,
+   "window": {
+    "n": 0
+   }
+  },
+  {
+   "tag": "C-C4-raw-E-down-control",
+   "method": "rawDrive-fwd+jump",
+   "targetCell": [
+    73,
+    -102
+   ],
+   "seconds": 4,
+   "start": {
+    "x": 73.302,
+    "y": 63,
+    "z": -100.987
+   },
+   "startCell": [
+    73,
+    -101
+   ],
+   "end": {
+    "x": 73.959,
+    "y": 63.186,
+    "z": -102.696
+   },
+   "endCell": [
+    73,
+    -103
+   ],
+   "dispH": 1.831,
+   "dispY": 0.186,
+   "forcedMoves": 63,
+   "window": {
+    "n": 42,
+    "posRange": {
+     "x": 0.664,
+     "y": 1.252,
+     "z": 1.713
+    },
+    "meanVel": {
+     "x": 0.006,
+     "y": -0.019,
+     "z": -0.016
+    },
+    "onGroundFrac": 0.071,
+    "forcedMoves": 63,
+    "first": {
+     "x": 73.302,
+     "y": 63,
+     "z": -100.987
+    },
+    "last": {
+     "x": 73.959,
+     "y": 63.186,
+     "z": -102.696
+    }
+   }
+  },
+  {
+   "tag": "C-C5-goto-stance-cell-back",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -102
+   ],
+   "targetFeetY": 64,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 73.959,
+    "y": 63,
+    "z": -102.696
+   },
+   "startCell": [
+    73,
+    -103
+   ],
+   "end": {
+    "x": 72.685,
+    "y": 64.177,
+    "z": -101.652
+   },
+   "endCell": [
+    72,
+    -102
+   ],
+   "dispH": 1.647,
+   "dispY": 1.177,
+   "result": {
+    "ok": true,
+    "via": "pathfinder"
+   },
+   "err": null,
+   "forcedMoves": 0,
+   "window": {
+    "n": 4,
+    "posRange": {
+     "x": 1.021,
+     "y": 0.829,
+     "z": 0.837
+    },
+    "meanVel": {
+     "x": -0.111,
+     "y": 0.087,
+     "z": 0.091
+    },
+    "onGroundFrac": 0,
+    "forcedMoves": 0,
+    "first": {
+     "x": 73.706,
+     "y": 63.42,
+     "z": -102.489
+    },
+    "last": {
+     "x": 72.685,
+     "y": 64.177,
+     "z": -101.652
+    }
+   }
+  },
+  {
+   "tag": "C-C6-goto-N-down-control",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -101
+   ],
+   "targetFeetY": 63,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 72.685,
+    "y": 64,
+    "z": -101.652
+   },
+   "startCell": [
+    72,
+    -102
+   ],
+   "end": {
+    "x": 72.47,
+    "y": 63.766,
+    "z": -100.314
+   },
+   "endCell": [
+    72,
+    -101
+   ],
+   "dispH": 1.355,
+   "dispY": -0.234,
+   "result": {
+    "ok": true,
+    "via": "pathfinder"
+   },
+   "err": null,
+   "forcedMoves": 0,
+   "window": {
+    "n": 4,
+    "posRange": {
+     "x": 0.194,
+     "y": 0.234,
+     "z": 1.212
+    },
+    "meanVel": {
+     "x": -0.013,
+     "y": -0.116,
+     "z": 0.085
+    },
+    "onGroundFrac": 0.75,
+    "forcedMoves": 0,
+    "first": {
+     "x": 72.664,
+     "y": 64,
+     "z": -101.526
+    },
+    "last": {
+     "x": 72.47,
+     "y": 63.766,
+     "z": -100.314
+    }
+   }
+  },
+  {
+   "tag": "C-C7-raw-N-down-control",
+   "method": "rawDrive-fwd+jump",
+   "targetCell": [
+    72,
+    -101
+   ],
+   "seconds": 4,
+   "start": {
+    "x": 72.47,
+    "y": 63,
+    "z": -100.314
+   },
+   "startCell": [
+    72,
+    -101
+   ],
+   "end": {
+    "x": 72.846,
+    "y": 65.177,
+    "z": -102.682
+   },
+   "endCell": [
+    72,
+    -103
+   ],
+   "dispH": 2.398,
+   "dispY": 2.177,
+   "forcedMoves": 62,
+   "window": {
+    "n": 42,
+    "posRange": {
+     "x": 0.376,
+     "y": 2.252,
+     "z": 2.368
+    },
+    "meanVel": {
+     "x": 0.003,
+     "y": 0.001,
+     "z": -0.022
+    },
+    "onGroundFrac": 0.071,
+    "forcedMoves": 62,
+    "first": {
+     "x": 72.47,
+     "y": 63,
+     "z": -100.314
+    },
+    "last": {
+     "x": 72.846,
+     "y": 65.177,
+     "z": -102.682
+    }
+   }
+  },
+  {
+   "tag": "C-chain-71,-102",
+   "method": "gotoNear",
+   "targetCell": [
+    71,
+    -102
+   ],
+   "targetFeetY": 65,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 72.846,
+    "y": 64,
+    "z": -102.682
+   },
+   "startCell": [
+    72,
+    -103
+   ],
+   "end": {
+    "x": 71.5,
+    "y": 65.177,
+    "z": -101.5
+   },
+   "endCell": [
+    71,
+    -102
+   ],
+   "dispH": 1.791,
+   "dispY": 1.177,
+   "result": {
+    "ok": true,
+    "via": "pathfinder"
+   },
+   "err": null,
+   "forcedMoves": 0,
+   "window": {
+    "n": 4,
+    "posRange": {
+     "x": 1.1,
+     "y": 0.829,
+     "z": 0.966
+    },
+    "meanVel": {
+     "x": -0.108,
+     "y": 0.087,
+     "z": 0.095
+    },
+    "onGroundFrac": 0,
+    "forcedMoves": 0,
+    "first": {
+     "x": 72.6,
+     "y": 64.42,
+     "z": -102.466
+    },
+    "last": {
+     "x": 71.5,
+     "y": 65.177,
+     "z": -101.5
+    }
+   }
+  },
+  {
+   "tag": "C-chain-71,-101",
+   "method": "gotoNear",
+   "targetCell": [
+    71,
+    -101
+   ],
+   "targetFeetY": 66,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 71.5,
+    "y": 65,
+    "z": -101.5
+   },
+   "startCell": [
+    71,
+    -102
+   ],
+   "end": {
+    "x": 71.475,
+    "y": 62.922,
+    "z": -103.3
+   },
+   "endCell": [
+    71,
+    -104
+   ],
+   "dispH": 1.8,
+   "dispY": -2.078,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 71.5,66,-100.5; at (71.47475949810526, 62.92159999847412, -103.3)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T08:44:39.547Z",
+       "windowProg": 0,
+       "stuckForMs": 3151,
+       "before": {
+        "x": 71.49,
+        "y": 65,
+        "z": -101.3
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 1,
+       "jumpKeyed": true,
+       "after": {
+        "x": 71.47,
+        "y": 62.92,
+        "z": -103.32
+       },
+       "onGroundAfter": false,
+       "dispCycle": 2.9,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:44:39.547Z",
+       "dist": 1.28,
+       "stuckForMs": 3151,
+       "anchorD": 1.28,
+       "altDelta": 0
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 236,
+   "window": {
+    "n": 134,
+    "posRange": {
+     "x": 0.026,
+     "y": 2.078,
+     "z": 2.04
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.015,
+     "z": -0.004
+    },
+    "onGroundFrac": 0.052,
+    "forcedMoves": 236,
+    "first": {
+     "x": 71.5,
+     "y": 65,
+     "z": -101.5
+    },
+    "last": {
+     "x": 71.475,
+     "y": 62.922,
+     "z": -103.319
+    }
+   }
+  },
+  {
+   "tag": "C-chain-70,-101",
+   "method": "gotoNear",
+   "targetCell": [
+    70,
+    -101
+   ],
+   "targetFeetY": 66,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 71.475,
+    "y": 62,
+    "z": -103.319
+   },
+   "startCell": [
+    71,
+    -104
+   ],
+   "end": {
+    "x": 71.3,
+    "y": 63.252,
+    "z": -102.843
+   },
+   "endCell": [
+    71,
+    -103
+   ],
+   "dispH": 0.507,
+   "dispY": 1.252,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 70.5,66,-100.5; at (71.30040218287115, 63.25220334025373, -102.84266923761331)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T08:44:52.845Z",
+       "windowProg": 0.001,
+       "stuckForMs": 3133,
+       "before": {
+        "x": 71.47,
+        "y": 62,
+        "z": -103.3
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.25,
+       "jumpKeyed": true,
+       "after": {
+        "x": 71.3,
+        "y": 63.25,
+        "z": -102.84
+       },
+       "onGroundAfter": false,
+       "dispCycle": 1.343,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:44:52.845Z",
+       "dist": 4.98,
+       "stuckForMs": 3133,
+       "anchorD": 4.98,
+       "altDelta": 0
+      },
+      {
+       "kind": "release",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:44:54.603Z",
+       "reason": "progress",
+       "heldMs": 1758,
+       "dist": 3.7
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 208,
+   "window": {
+    "n": 123,
+    "posRange": {
+     "x": 0.766,
+     "y": 1.252,
+     "z": 2.213
+    },
+    "meanVel": {
+     "x": -0.002,
+     "y": -0.058,
+     "z": 0.005
+    },
+    "onGroundFrac": 0.081,
+    "forcedMoves": 208,
+    "first": {
+     "x": 71.475,
+     "y": 62,
+     "z": -103.319
+    },
+    "last": {
+     "x": 71.3,
+     "y": 63.252,
+     "z": -102.843
+    }
+   }
+  },
+  {
+   "tag": "C-chain-69,-101",
+   "method": "gotoNear",
+   "targetCell": [
+    69,
+    -101
+   ],
+   "targetFeetY": 67,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 71.3,
+    "y": 63,
+    "z": -102.843
+   },
+   "startCell": [
+    71,
+    -103
+   ],
+   "end": {
+    "x": 71.609,
+    "y": 63,
+    "z": -102.309
+   },
+   "endCell": [
+    71,
+    -103
+   ],
+   "dispH": 0.617,
+   "dispY": 0,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 69.5,67,-100.5; at (71.6086438088682, 63, -102.30942506996917)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T08:45:06.160Z",
+       "windowProg": -0.107,
+       "stuckForMs": 3150,
+       "before": {
+        "x": 71.61,
+        "y": 63.52,
+        "z": -102.31
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": -0.23,
+       "faceDistAtJump": 0.4,
+       "jumpKeyed": true,
+       "after": {
+        "x": 71.61,
+        "y": 63,
+        "z": -102.31
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0.52,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:45:06.160Z",
+       "dist": 4.46,
+       "stuckForMs": 3150,
+       "anchorD": 4.35,
+       "altDelta": -0.23
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 236,
+   "window": {
+    "n": 131,
+    "posRange": {
+     "x": 0.395,
+     "y": 0.753,
+     "z": 0.534
+    },
+    "meanVel": {
+     "x": 0,
+     "y": -0.004,
+     "z": 0.002
+    },
+    "onGroundFrac": 0.023,
+    "forcedMoves": 236,
+    "first": {
+     "x": 71.3,
+     "y": 63,
+     "z": -102.843
+    },
+    "last": {
+     "x": 71.609,
+     "y": 63,
+     "z": -102.309
+    }
+   }
+  },
+  {
+   "tag": "C-chain-69,-102",
+   "method": "gotoNear",
+   "targetCell": [
+    69,
+    -102
+   ],
+   "targetFeetY": 67,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 71.609,
+    "y": 63,
+    "z": -102.309
+   },
+   "startCell": [
+    71,
+    -103
+   ],
+   "end": {
+    "x": 71.587,
+    "y": 63.42,
+    "z": -102.301
+   },
+   "endCell": [
+    71,
+    -103
+   ],
+   "dispH": 0.023,
+   "dispY": 0.42,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 69.5,67,-101.5; at (71.58704429149775, 63.41999998688698, -102.3011566350672)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T08:45:19.419Z",
+       "windowProg": 0.01,
+       "stuckForMs": 3152,
+       "before": {
+        "x": 71.59,
+        "y": 63,
+        "z": -102.3
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.4,
+       "jumpKeyed": true,
+       "after": {
+        "x": 71.59,
+        "y": 63.42,
+        "z": -102.3
+       },
+       "onGroundAfter": false,
+       "dispCycle": 0.42,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:45:19.419Z",
+       "dist": 4.58,
+       "stuckForMs": 3152,
+       "anchorD": 4.59,
+       "altDelta": 0
+      },
+      {
+       "kind": "release",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:45:21.174Z",
+       "reason": "progress",
+       "heldMs": 1755,
+       "dist": 4.22
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 231,
+   "window": {
+    "n": 123,
+    "posRange": {
+     "x": 0.11,
+     "y": 0.42,
+     "z": 0.043
+    },
+    "meanVel": {
+     "x": 0.001,
+     "y": -0.008,
+     "z": 0
+    },
+    "onGroundFrac": 0.024,
+    "forcedMoves": 231,
+    "first": {
+     "x": 71.609,
+     "y": 63,
+     "z": -102.309
+    },
+    "last": {
+     "x": 71.587,
+     "y": 63.42,
+     "z": -102.301
+    }
+   }
+  },
+  {
+   "tag": "C-return-stance",
+   "method": "gotoNear",
+   "targetCell": [
+    72,
+    -102
+   ],
+   "targetFeetY": 64,
+   "range": 0.6,
+   "timeoutMs": 9000,
+   "start": {
+    "x": 71.587,
+    "y": 63,
+    "z": -102.301
+   },
+   "startCell": [
+    71,
+    -103
+   ],
+   "end": {
+    "x": 71.584,
+    "y": 64.166,
+    "z": -102.304
+   },
+   "endCell": [
+    71,
+    -103
+   ],
+   "dispH": 0.004,
+   "dispY": 1.166,
+   "result": {
+    "ok": false,
+    "error": "walkTo timeout (5000ms) to 72.5,64,-101.5; at (71.58404179011566, 64.16610926093821, -102.30379681947325)",
+    "wedge": {
+     "cycles": 1,
+     "log": [
+      {
+       "kind": "cycle",
+       "n": 1,
+       "at": "2026-11-08T08:45:32.330Z",
+       "windowProg": 0,
+       "stuckForMs": 3152,
+       "before": {
+        "x": 71.59,
+        "y": 63,
+        "z": -102.3
+       },
+       "onGroundBefore": false,
+       "releaseMode": "backoff",
+       "altDelta": 0,
+       "faceDistAtJump": 0.4,
+       "jumpKeyed": true,
+       "after": {
+        "x": 71.58,
+        "y": 64.17,
+        "z": -102.3
+       },
+       "onGroundAfter": false,
+       "dispCycle": 1.17,
+       "improvedBest": true
+      }
+     ]
+    },
+    "arbiter": {
+     "grants": 1,
+     "log": [
+      {
+       "kind": "grant",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:45:32.329Z",
+       "dist": 1.57,
+       "stuckForMs": 3151,
+       "anchorD": 1.57,
+       "altDelta": 0
+      },
+      {
+       "kind": "release",
+       "recovery": "wedge",
+       "at": "2026-11-08T08:45:34.084Z",
+       "reason": "progress",
+       "heldMs": 1755,
+       "dist": 1.23
+      }
+     ]
+    }
+   },
+   "err": null,
+   "forcedMoves": 224,
+   "window": {
+    "n": 123,
+    "posRange": {
+     "x": 0.303,
+     "y": 1.166,
+     "z": 0.251
+    },
+    "meanVel": {
+     "x": 0.002,
+     "y": -0.009,
+     "z": 0
+    },
+    "onGroundFrac": 0.024,
+    "forcedMoves": 224,
+    "first": {
+     "x": 71.587,
+     "y": 63,
+     "z": -102.301
+    },
+    "last": {
+     "x": 71.584,
+     "y": 64.166,
+     "z": -102.304
+    }
+   }
+  }
+ ],
+ "spawn": {
+  "pos": {
+   "x": 72.305,
+   "y": 64,
+   "z": -101.271
+  },
+  "uuid": "5b8c9ad2-7ed8-3e01-9441-8023f4aa7d67"
+ },
+ "settled": {
+  "pos": {
+   "x": 72.305,
+   "y": 64,
+   "z": -101.271
+  },
+  "health": 1.3333358764648438,
+  "food": 9
+ },
+ "final": {
+  "pos": {
+   "x": 71.584,
+   "y": 63,
+   "z": -102.304
+  },
+  "health": 1.3333358764648438,
+  "food": 9,
+  "inventory": [
+   "oak_planksx18",
+   "bonex1",
+   "crafting_tablex1",
+   "birch_logx10",
+   "stickx2",
+   "birch_saplingx1",
+   "leadx2",
+   "dirtx1"
+  ],
+  "aborted": false,
+  "abortReason": null,
+  "totalForcedMoves": 1555
+ }
+}

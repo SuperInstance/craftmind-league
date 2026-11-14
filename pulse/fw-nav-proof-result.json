@@ -1,0 +1,97 @@
+{
+ "runId": "fwproof2-20261107T1935Z",
+ "attempt": 2,
+ "startedAt": "2026-11-07T19:31:38.600Z",
+ "status": "complete",
+ "stack": "framework: bot.pathfinder.setGoal(goals.GoalNear) with bot.js Movements; settle beat before course and between legs; no helm, no gotoNear, no teleports",
+ "startPos": {
+  "x": 50.68,
+  "y": 65,
+  "z": -82.49
+ },
+ "courseSettle": {
+  "settled": true,
+  "waitedSec": 1.6,
+  "at": {
+   "onGround": true,
+   "speedXZ": 0,
+   "pos": {
+    "x": 50.68,
+    "y": 65,
+    "z": -82.49
+   }
+  }
+ },
+ "legs": [
+  {
+   "to": "WP1",
+   "waypoint": {
+    "x": 51.5,
+    "y": 66,
+    "z": -82.5
+   },
+   "startPos": {
+    "x": 50.68,
+    "y": 65,
+    "z": -82.49
+   },
+   "endPos": {
+    "x": 50.68,
+    "y": 65,
+    "z": -82.49
+   },
+   "displacementXZ": 0,
+   "minDistToWaypoint": 0.82,
+   "durationSec": 0.4,
+   "arrived": true,
+   "damaged": false,
+   "settleAfter": {
+    "settled": true,
+    "waitedSec": 1.2,
+    "at": {
+     "onGround": true,
+     "speedXZ": 0,
+     "pos": {
+      "x": 50.68,
+      "y": 65,
+      "z": -82.49
+     }
+    }
+   },
+   "verdict": "PASS"
+  },
+  {
+   "to": "WP2",
+   "waypoint": {
+    "x": 58.5,
+    "y": 68,
+    "z": -82.5
+   },
+   "startPos": {
+    "x": 50.68,
+    "y": 65,
+    "z": -82.49
+   },
+   "endPos": {
+    "x": 50.68,
+    "y": 65,
+    "z": -82.49
+   },
+   "displacementXZ": 0,
+   "minDistToWaypoint": 7.8,
+   "durationSec": 120.3,
+   "arrived": false,
+   "damaged": false,
+   "settleAfter": null,
+   "verdict": "FAIL"
+  }
+ ],
+ "verdict": "FAIL",
+ "endedAt": "2026-11-07T19:33:42.092Z",
+ "endPos": {
+  "x": 50.68,
+  "y": 65,
+  "z": -82.49
+ },
+ "totalDisplacementXZ": 0
+}

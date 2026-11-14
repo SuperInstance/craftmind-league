@@ -1,0 +1,91 @@
+{
+ "mode": "genuine-fresh",
+ "username": "StanceProbe2",
+ "ts": "2026-11-08T08:49:03.693Z",
+ "events": [
+  {
+   "ev": "DEATH",
+   "at": "2026-11-08T08:49:49.575Z"
+  }
+ ],
+ "legs": [
+  {
+   "tag": "travel-pad",
+   "targetCell": [
+    64,
+    -93
+   ],
+   "ok": false,
+   "err": null,
+   "start": {
+    "x": 25.5,
+    "y": 82,
+    "z": -89.5
+   },
+   "end": {
+    "x": 35.697,
+    "y": 69.024,
+    "z": -103.414
+   },
+   "dispH": 17.25,
+   "forcedMoves": 839
+  }
+ ],
+ "rests": [
+  {
+   "n": 40,
+   "posRange": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "meanVel": {
+    "x": 0,
+    "y": -0.078,
+    "z": 0
+   },
+   "onGroundFrac": 1,
+   "forcedMoves": 0,
+   "tag": "freshgen-at-spawn",
+   "at": {
+    "x": 25.5,
+    "y": 82,
+    "z": -89.5
+   },
+   "cell": [
+    25,
+    -90
+   ]
+  }
+ ],
+ "attempts": [],
+ "spawn": {
+  "pos": {
+   "x": 25.5,
+   "y": 82,
+   "z": -89.5
+  },
+  "uuid": "2206825e-6aad-39f1-ae91-e7d1ed928a46"
+ },
+ "settled": {
+  "pos": {
+   "x": 25.5,
+   "y": 82,
+   "z": -89.5
+  },
+  "health": 20,
+  "food": 20
+ },
+ "final": {
+  "pos": {
+   "x": 35.697,
+   "y": 69.024,
+   "z": -103.414
+  },
+  "health": 15.500000953674316,
+  "food": 20,
+  "aborted": true,
+  "abortReason": "death",
+  "totalForcedMoves": 839
+ }
+}

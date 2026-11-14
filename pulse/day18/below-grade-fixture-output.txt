@@ -1,0 +1,40 @@
+PASS  guard span present in driver source
+PASS  span carries the pad ground truth (66/67) + the verified wake bound (62)
+PASS  A goto to feet 63 (the day-15 bowl entry) refused
+PASS  A refusal trace-rowed with kind/reason/target
+PASS  A goto to feet 65 (== pad-2) refused
+PASS  A goto to feet 66 (pad-1) permitted
+PASS  A goto at pad level permitted
+PASS  A goto ABOVE pad (the bowl exit direction) permitted
+PASS  B dig with top 64 (== pad top-2) refused
+PASS  B refusal trace-rowed
+PASS  B dig with top 65 (pad top-1) permitted
+PASS  B deep dig (top 61) refused
+PASS  C live held-read (prims.inv) disarms: goto 63 permitted
+PASS  C woodChain state disarms: dig top 64 permitted
+PASS  C a stone pickaxe also disarms (held read)
+PASS  F resident: goto BELOW his feet (61) refused, relative mode
+PASS  F resident: refusal trace-rowed (relative)
+PASS  F resident: goto at his own feet level (62) permitted
+PASS  F resident: rung target feet 63 permitted
+PASS  F resident: rung target feet 64 permitted
+PASS  F resident: rung target feet 65 permitted
+PASS  F resident: rung target feet 66 permitted
+PASS  F resident: rung target feet 67 permitted
+PASS  F resident: goto above pad permitted
+PASS  F resident: dig at his feet level (cell 60, top 61 <= feet 62) refused
+PASS  F resident: dig of the support cell itself (61) refused
+PASS  F resident: dig at head level (63, top 64) permitted - the notch cut
+PASS  F resident: rim dig high on the wall (65) permitted
+PASS  F mid-climb (feet 64): goto back down to 63 refused
+PASS  F mid-climb (feet 64): next rung 65 permitted
+PASS  F resident: pickaxe in hand disarms even below pad
+PASS  G pad resident: deep goto refused in ABSOLUTE mode
+PASS  G pad resident: deep dig refused in ABSOLUTE mode
+PASS  D goto below bound outside district permitted (guard is home-only)
+PASS  D from the bowl itself, the exit goto (up, feet 67) permitted
+PASS  E goto branch consults the guard before the pit-guard/walker
+PASS  E dig branch consults the guard before the dig-guard
+PASS  E wood-chain held-state read is wired in the main loop
+
+BELOW-GRADE-DAY18 FIXTURE: 38 PASS / 0 FAIL

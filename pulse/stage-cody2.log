@@ -1,0 +1,6 @@
+[STAGE2] Cody spawn 36.69,64.00,-95.62 onGround false
+[STAGE2] settled 36.69,64.00,-95.62 onGround true
+[STAGE2] direct leg {"ok":false,"error":"walkTo timeout (112784ms) to 49.5,67,-83.5; at (36.69043442043057, 64, -95.67724439687512)"} at 36.69,64.00,-95.68 onGround false
+[STAGE2] hop 41 -92 {"ok":false,"error":"walkTo timeout (52778ms) to 41,68,-92; at (36.307960906247644, 64, -95.41660178049686)"} at 36.31,64.00,-95.42 onGround true
+[STAGE2] DIGS uses 0 log [] evals 45
+[STAGE2] FINAL 36.31,64.00,-95.42 onGround true distToGateStart 17.78 NOT-STAGED

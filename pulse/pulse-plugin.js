@@ -1,0 +1,383 @@
+'use strict';
+/**
+ * pulse-plugin.js — the Pulse's in-world half. Loaded into Cody by
+ * resident-cody.js via createBot's options.plugins (framework idiom,
+ * no framework source modified).
+ *
+ * Jobs:
+ *  1. STATE FEED — write pulse/cody-state.json every ~10 s:
+ *     position, health, food, inventory, held item, time-of-day,
+ *     curriculum stage, runner status, deaths.
+ *  2. SKILL RUNNER — load the active/promoted skill set (or the
+ *     PULSE_SKILLS env override during a trial) and run the skills in
+ *     order, forever, with results recorded into the state feed.
+ *     Skills are idempotent "ensure" modules, so looping is safe.
+ *     While a non-empty set is loaded, global.__pulseRunnerActive is
+ *     true and resident-cody.js's wander steps aside.
+ *  3. EVIDENCE SCAN — every ~30 s write pulse/evidence.json: world
+ *     facts judged from block data (tables, chests + contents, doors,
+ *     torches, nearby logs, and a flood-fill SHELTER analysis). The
+ *     trial gate trusts this, never the scripts' own claims.
+ *  4. NARRATION — keep a brain prompt fragment (the framework's own
+ *     addPromptFragment path) describing the current project/stage,
+ *     refreshed every ~60 s; Cody chats one line on stage changes.
+ *  5. DEATHS — append pulse/deaths.jsonl on every death event.
+ */
+const fs = require('fs');
+const path = require('path');
+
+const PULSE = '/home/caseydigennaro/craftmind-league/pulse';
+const CM = '/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules';
+const { Vec3 } = require(path.join(CM, 'vec3'));
+const prims = require(path.join(PULSE, 'lib', 'prims.js'));
+
+const STATE_PATH = path.join(PULSE, 'cody-state.json');
+const EVIDENCE_PATH = path.join(PULSE, 'evidence.json');
+const ANCHOR_PATH = path.join(PULSE, 'anchor.json');
+const DEATHS_PATH = path.join(PULSE, 'deaths.jsonl');
+const ACTIVE_PATH = path.join(PULSE, 'active.json');
+const CURRICULUM_PATH = path.join(PULSE, 'curriculum.json');
+
+function readJson(p, dflt) {
+  try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return dflt; }
+}
+function writeJson(p, obj) {
+  const tmp = p + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(obj, null, 1));
+  fs.renameSync(tmp, p);
+}
+function log(...a) { console.log('[PULSE]', ...a); }
+
+const rt = {
+  generation: 0,
+  deathsAtBoot: 0,
+  deathsSession: 0,
+  anchor: null,
+  runnerStatus: 'boot',
+  currentSkill: null,
+  lastResult: null,
+  lastStageSeen: null,
+  wired: new WeakSet(),
+  timers: [],
+};
+
+function deathsTotal() {
+  return rt.deathsAtBoot + rt.deathsSession;
+}
+
+function currentStageId() {
+  if (process.env.PULSE_STAGE) return process.env.PULSE_STAGE;
+  const active = readJson(ACTIVE_PATH, {});
+  return active.currentStage || 'S1';
+}
+
+function stageInfo(stageId) {
+  const curr = readJson(CURRICULUM_PATH, { stages: [] });
+  return curr.stages.find((s) => s.id === stageId) || null;
+}
+
+function activeSkillPaths() {
+  if (process.env.PULSE_SKILLS) return process.env.PULSE_SKILLS.split(',').map((s) => s.trim()).filter(Boolean);
+  const active = readJson(ACTIVE_PATH, { stages: {} });
+  const curr = readJson(CURRICULUM_PATH, { stages: [] });
+  const out = [];
+  for (const st of curr.stages) {
+    const a = active.stages && active.stages[st.id];
+    if (a && a.skill) out.push(a.skill);
+  }
+  return out;
+}
+
+// ── state feed ───────────────────────────────────────────────────────
+function writeState(bot) {
+  if (!bot || !bot.entity) return;
+  const p = bot.entity.position;
+  const sm = bot.craftmind && bot.craftmind._stateMachine;
+  const snapshot = {
+    ts: new Date().toISOString(),
+    pos: { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) },
+    health: bot.health,
+    food: bot.food,
+    onGround: bot.entity ? !!bot.entity.onGround : null,
+    inventory: prims.inv(bot),
+    held: bot.heldItem ? bot.heldItem.name : null,
+    timeOfDay: bot.time ? bot.time.timeOfDay : null,
+    isDay: bot.time ? bot.time.isDay : null,
+    spawnPoint: bot.spawnPoint ? { x: bot.spawnPoint.x, y: bot.spawnPoint.y, z: bot.spawnPoint.z } : null,
+    stage: currentStageId(),
+    behaviour: rt.currentSkill || (sm && (sm.currentState || sm.state)) || 'framework',
+    runner: { status: rt.runnerStatus, skill: rt.currentSkill, lastResult: rt.lastResult },
+    deaths: deathsTotal(),
+    anchor: rt.anchor,
+    // Character build (2026-11-07, additive): the character plugin
+    // publishes his current intent/project on a global; surface them
+    // in the state feed when present (null in trial/vanilla modes).
+    intent: (global.__codyCharacter && global.__codyCharacter.intent) || null,
+    project: (global.__codyCharacter && global.__codyCharacter.project) || null,
+  };
+  try { writeJson(STATE_PATH, snapshot); } catch (e) { log('state write failed:', e.message); }
+  return snapshot;
+}
+
+// ── evidence scan ────────────────────────────────────────────────────
+const DOOR_RE = /_door$/;
+const LOG_RE = /_log$/;
+
+function blockNamesMatching(bot, re) {
+  const data = prims.mcData(bot);
+  return Object.keys(data.blocksByName).filter((n) => re.test(n));
+}
+
+function analyseShelter(bot, anchor) {
+  // Flood-fill air volumes near the anchor; a bounded fill that does
+  // not touch the search-box edge is an enclosed volume. Roofed =
+  // every cell has a non-air block within 12 above it. Door/torch =
+  // present among the volume's boundary (non-air neighbour) blocks.
+  const R = 14, YLO = -3, YHI = 9, CAP = 300;
+  const key = (x, y, z) => x + ',' + y + ',' + z;
+  const inBox = (x, y, z) =>
+    Math.abs(x - anchor.x) <= R && Math.abs(z - anchor.z) <= R && y >= anchor.y + YLO && y <= anchor.y + YHI;
+  const tried = new Set();
+  let best = null;
+  const gy = prims.groundY(bot, Math.floor(anchor.x), Math.floor(anchor.z));
+  const seedY = (gy !== null ? gy + 1 : Math.floor(anchor.y));
+  const seeds = [];
+  for (let dx = -R; dx <= R; dx += 2) for (let dz = -R; dz <= R; dz += 2) {
+    for (let dy = 0; dy <= 3; dy++) seeds.push(new Vec3(Math.floor(anchor.x) + dx, seedY + dy, Math.floor(anchor.z) + dz));
+  }
+  for (const seed of seeds) {
+    if (tried.has(key(seed.x, seed.y, seed.z))) continue;
+    const b0 = bot.blockAt(seed);
+    if (!b0 || b0.name !== 'air') continue;
+    // BFS
+    const vol = new Set([key(seed.x, seed.y, seed.z)]);
+    const queue = [seed];
+    const boundary = new Map(); // name -> count
+    let escaped = false;
+    while (queue.length) {
+      const c = queue.pop();
+      // roof check for this cell
+      let roofed = false;
+      for (let dy = 1; dy <= 12; dy++) {
+        const ab = bot.blockAt(new Vec3(c.x, c.y + dy, c.z));
+        if (ab && ab.name !== 'air') { roofed = true; break; }
+      }
+      if (!roofed) { escaped = true; break; }
+      for (const [dx, dy, dz] of [[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]]) {
+        const n = new Vec3(c.x + dx, c.y + dy, c.z + dz);
+        const nk = key(n.x, n.y, n.z);
+        const nb = bot.blockAt(n);
+        if (!nb) { escaped = true; continue; }
+        if (nb.name === 'air') {
+          if (!inBox(n.x, n.y, n.z)) { escaped = true; continue; }
+          if (!vol.has(nk)) {
+            vol.add(nk);
+            if (vol.size > CAP) { escaped = true; queue.length = 0; break; }
+            queue.push(n);
+          }
+        } else {
+          boundary.set(nb.name, (boundary.get(nb.name) || 0) + 1);
+        }
+      }
+      if (escaped) break;
+    }
+    for (const k of vol) tried.add(k);
+    if (escaped || vol.size < 4) continue;
+    const cells = [...vol].map((k) => k.split(',').map(Number));
+    const centre = cells.reduce((a, c) => ({ x: a.x + c[0] / cells.length, y: a.y + c[1] / cells.length, z: a.z + c[2] / cells.length }), { x: 0, y: 0, z: 0 });
+    const bNames = [...boundary.keys()];
+    const cand = {
+      found: true,
+      volumeCells: vol.size,
+      centre: { x: +centre.x.toFixed(1), y: +centre.y.toFixed(1), z: +centre.z.toFixed(1) },
+      hasDoor: bNames.some((n) => DOOR_RE.test(n)),
+      hasTorchInside: bNames.some((n) => n === 'torch' || n === 'wall_torch'),
+      boundaryBlocks: bNames.slice(0, 24),
+    };
+    const score = (cand.hasDoor ? 2 : 0) + (cand.hasTorchInside ? 2 : 0) + Math.min(vol.size, 60) / 60;
+    if (!best || score > best._score) best = { ...cand, _score: score };
+  }
+  if (best) delete best._score;
+  return best || { found: false };
+}
+
+async function writeEvidence(bot) {
+  if (!bot || !bot.entity || !rt.anchor) return;
+  const anchor = rt.anchor;
+  const centre = new Vec3(Math.floor(anchor.x), Math.floor(anchor.y), Math.floor(anchor.z));
+  const toPos = (v) => ({ x: v.x, y: v.y, z: v.z });
+  const tables = prims.findBlocks(bot, ['crafting_table'], 28, 4).map(toPos);
+  const chestPosList = prims.findBlocks(bot, ['chest', 'trapped_chest'], 28, 4);
+  const doorNames = blockNamesMatching(bot, DOOR_RE);
+  const doors = prims.findBlocks(bot, doorNames, 28, 6).map(toPos);
+  const torches = prims.findBlocks(bot, ['torch', 'wall_torch'], 28, 8).map(toPos);
+  const logNames = blockNamesMatching(bot, LOG_RE);
+  const logsNear = prims.findBlocks(bot, logNames, 48, 10).map(toPos);
+  let shelter = { found: false };
+  try { shelter = analyseShelter(bot, centre); } catch (e) { shelter = { found: false, error: e.message }; }
+  // Chest contents only when the runner is between skills and Cody is close.
+  const chests = [];
+  for (const cp of chestPosList) {
+    let contents = null, total = null;
+    const idle = rt.runnerStatus === 'idle' || rt.runnerStatus === 'no-active-skills';
+    if (idle && bot.entity.position.distanceTo(cp) <= 5.5) {
+      const r = await prims.openChestContents(bot, cp);
+      if (r.ok) { contents = r.contents; total = r.total; }
+    }
+    chests.push({ pos: toPos(cp), contents, total });
+  }
+  const ev = {
+    ts: new Date().toISOString(),
+    anchor,
+    tables, chests, doors, torches,
+    nearestLogs: logsNear,
+    shelter,
+  };
+  try { writeJson(EVIDENCE_PATH, ev); } catch (e) { log('evidence write failed:', e.message); }
+  return ev;
+}
+
+// ── narration ────────────────────────────────────────────────────────
+function updateNarration(bot, stageChanged) {
+  const stageId = currentStageId();
+  const info = stageInfo(stageId);
+  try {
+    const brain = bot.craftmind && bot.craftmind._brain;
+    if (brain && brain.llm && brain.llm.addPromptFragment) {
+      const text =
+        `Your current project (a staged curriculum called the Pulse): stage ${stageId}` +
+        (info ? ` — ${info.title}: ${info.goal}` : '') +
+        ` The full quest: settle in — wooden tools, then stone tools, then build a small roofed shelter with a door and a torch near your home anchor, store surplus supplies in a chest inside it, and finally survive a whole night inside the shelter. ` +
+        `You have died ${deathsTotal()} time(s) since arriving in this world. When chatting, you may mention what you are working on and how it is going.`;
+      brain.llm.addPromptFragment('pulse-project', text, 10);
+    }
+  } catch {}
+  if (stageChanged && info) {
+    try { bot.chat(`Project update: stage ${stageId} — ${info.title.toLowerCase()}. Working on it.`); } catch {}
+  }
+}
+
+// ── skill runner ─────────────────────────────────────────────────────
+function loadSkillFresh(p) {
+  delete require.cache[require.resolve(p)];
+  return require(p);
+}
+
+async function runnerLoop(bot, gen) {
+  const ctx = {
+    bot,
+    prims,
+    Vec3,
+    goals: prims.goals,
+    anchor: rt.anchor,
+    stage: currentStageId(),
+    log: (...a) => log(...a),
+  };
+  while (gen === rt.generation && bot.entity) {
+    let skills = [];
+    try { skills = activeSkillPaths(); } catch { skills = []; }
+    global.__pulseRunnerActive = skills.length > 0;
+    if (!skills.length) {
+      rt.runnerStatus = 'no-active-skills';
+      rt.currentSkill = null;
+      await prims.sleep(15000);
+      continue;
+    }
+    for (const p of skills) {
+      if (gen !== rt.generation || !bot.entity) break;
+      let mod;
+      try {
+        mod = loadSkillFresh(p);
+      } catch (e) {
+        rt.runnerStatus = 'skill-load-error';
+        rt.lastResult = { skill: p, ok: false, error: 'require: ' + e.message, ts: new Date().toISOString() };
+        log('skill load error', p, e.message);
+        await prims.sleep(5000);
+        continue;
+      }
+      const name = (mod.meta && mod.meta.name) || path.basename(p);
+      rt.currentSkill = name;
+      rt.runnerStatus = 'running';
+      writeState(bot);
+      try {
+        const res = await mod.run(ctx);
+        rt.lastResult = { skill: name, ok: !(res && res.ok === false), result: res || null, ts: new Date().toISOString() };
+        log('skill', name, '->', JSON.stringify(res || null).slice(0, 240));
+      } catch (e) {
+        rt.lastResult = { skill: name, ok: false, error: e.message, ts: new Date().toISOString() };
+        log('skill threw', name, e.message);
+      }
+      writeState(bot);
+      rt.runnerStatus = 'idle';
+      await prims.sleep(3000);
+    }
+    rt.currentSkill = null;
+    await prims.sleep(8000);
+  }
+  log('runner loop exiting (gen', gen, ')');
+}
+
+// ── wiring ───────────────────────────────────────────────────────────
+function wire(bot) {
+  if (rt.wired.has(bot)) return;
+  rt.wired.add(bot);
+  rt.generation++;
+  const gen = rt.generation;
+  for (const t of rt.timers) clearInterval(t);
+  rt.timers = [];
+
+  try {
+    rt.deathsAtBoot = fs.existsSync(DEATHS_PATH)
+      ? fs.readFileSync(DEATHS_PATH, 'utf8').split('\n').filter(Boolean).length
+      : 0;
+  } catch { rt.deathsAtBoot = 0; }
+  rt.deathsSession = 0;
+
+  bot.on('death', () => {
+    rt.deathsSession++;
+    try {
+      fs.appendFileSync(DEATHS_PATH, JSON.stringify({
+        ts: new Date().toISOString(),
+        timeOfDay: bot.time ? bot.time.timeOfDay : null,
+        pos: bot.entity ? { x: +bot.entity.position.x.toFixed(1), y: +bot.entity.position.y.toFixed(1), z: +bot.entity.position.z.toFixed(1) } : null,
+      }) + '\n');
+    } catch {}
+    log('death recorded (total', deathsTotal() + ')');
+  });
+
+  const onSpawn = () => {
+    if (!bot.entity) return;
+    const p = bot.entity.position;
+    const saved = readJson(ANCHOR_PATH, null);
+    rt.anchor = saved || { x: Math.floor(p.x), y: Math.floor(p.y), z: Math.floor(p.z) };
+    if (!saved) { try { writeJson(ANCHOR_PATH, rt.anchor); } catch {} }
+    log('anchor', JSON.stringify(rt.anchor), 'stage', currentStageId(), 'skills', activeSkillPaths().join(',') || '(none)');
+    writeState(bot);
+    // Loops (guard by generation so stale bots do not keep writing).
+    rt.timers.push(setInterval(() => { if (gen === rt.generation) writeState(bot); }, 10000));
+    rt.timers.push(setInterval(() => { if (gen === rt.generation) writeEvidence(bot); }, 30000));
+    setTimeout(() => { if (gen === rt.generation) writeEvidence(bot); }, 6000);
+    rt.timers.push(setInterval(() => {
+      if (gen !== rt.generation) return;
+      const sid = currentStageId();
+      const changed = rt.lastStageSeen !== null && rt.lastStageSeen !== sid;
+      rt.lastStageSeen = sid;
+      updateNarration(bot, changed);
+    }, 60000));
+    setTimeout(() => { if (gen === rt.generation) { rt.lastStageSeen = currentStageId(); updateNarration(bot, false); } }, 8000);
+    runnerLoop(bot, gen).catch((e) => log('runner crashed:', e.message));
+  };
+  if (bot.entity) onSpawn();
+  bot.once('spawn', onSpawn);
+}
+
+module.exports = {
+  name: 'pulse',
+  version: '1.0.0',
+  description: 'Pulse: state feed, skill runner, evidence scan, project narration for Cody',
+  init(ctx) {
+    if (ctx && ctx.bot) wire(ctx.bot);
+  },
+  // Direct use outside the plugin manager (same wiring).
+  wire,
+};

@@ -1,0 +1,196 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+CensusProbe holding at 41.5 67.0 -95.5
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+
+########## MAP PROBE ##########
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[BotMessenger] Received greeting from MapProbe
+MapProbe spawned at 29.5 66.0 -100.5
+=== CODY NBT (server) ===
+Unknown or incomplete command. See below for error
+data get entity Cody<--[HERE]
+=== NOPLATES ===
+Unknown or incomplete command. See below for error
+team list noplates<--[HERE]
+=== TREE TABLE (columns with logs, box x30..100 z-125..-60) ===
+col (68,-91) birch_log logs y71..71 foot=(68,71,-91) distFromPit 3.8 distFromAnchor 5.0
+col (66,-97) oak_log logs y71..71 foot=(66,71,-97) distFromPit 4.2 distFromAnchor 3.6
+col (60,-90) oak_log logs y72..73 foot=(60,72,-90) distFromPit 5.7 distFromAnchor 5.7
+col (62,-87) oak_log logs y70..72 foot=(62,70,-87) distFromPit 6.6 distFromAnchor 7.3
+col (68,-86) birch_log logs y71..72 foot=(68,71,-86) distFromPit 7.7 distFromAnchor 8.9
+col (61,-80) oak_log logs y71..72 foot=(61,71,-80) distFromPit 13.6 distFromAnchor 14.3
+col (69,-80) oak_log logs y72..72 foot=(69,72,-80) distFromPit 13.7 distFromAnchor 14.9
+col (58,-105) oak_log logs y67..72 foot=(58,67,-105) distFromPit 13.8 distFromAnchor 12.5
+col (51,-97) oak_log logs y72..72 foot=(51,72,-97) distFromPit 14.4 distFromAnchor 13.3
+col (58,-106) oak_log logs y70..70 foot=(58,70,-106) distFromPit 14.7 distFromAnchor 13.4
+col (70,-107) birch_log logs y72..72 foot=(70,72,-107) distFromPit 14.9 distFromAnchor 14.3
+col (77,-84) oak_log logs y69..72 foot=(77,69,-84) distFromPit 15.2 distFromAnchor 16.4
+col (80,-96) birch_log logs y66..72 foot=(80,66,-96) distFromPit 15.5 distFromAnchor 16.1
+col (52,-105) birch_log logs y67..73 foot=(52,67,-105) distFromPit 17.5 distFromAnchor 16.3
+col (54,-79) oak_log logs y72..72 foot=(54,72,-79) distFromPit 17.7 distFromAnchor 18.0
+col (76,-79) oak_log logs y70..72 foot=(76,70,-79) distFromPit 17.9 distFromAnchor 19.2
+col (64,-75) birch_log logs y70..73 foot=(64,70,-75) distFromPit 18.0 distFromAnchor 19.0
+col (71,-76) birch_log logs y67..73 foot=(71,67,-76) distFromPit 18.1 distFromAnchor 19.3
+col (55,-109) oak_log logs y68..73 foot=(55,68,-109) distFromPit 18.8 distFromAnchor 17.5
+col (46,-91) oak_log logs y68..73 foot=(46,68,-91) distFromPit 18.9 distFromAnchor 18.2
+col (58,-111) birch_log logs y68..72 foot=(58,68,-111) distFromPit 19.2 distFromAnchor 18.0
+col (81,-104) oak_log logs y66..69 foot=(81,66,-104) distFromPit 19.6 distFromAnchor 19.7
+col (84,-89) oak_log logs y70..70 foot=(84,70,-89) distFromPit 19.6 distFromAnchor 20.6
+col (77,-109) birch_log logs y66..71 foot=(77,66,-109) distFromPit 20.1 distFromAnchor 19.8
+col (46,-101) oak_log logs y68..71 foot=(46,68,-101) distFromPit 20.4 distFromAnchor 19.3
+col (80,-79) birch_log logs y68..74 foot=(80,68,-79) distFromPit 20.7 distFromAnchor 21.9
+col (66,-72) birch_log logs y70..71 foot=(66,70,-72) distFromPit 21.1 distFromAnchor 22.1
+col (86,-94) oak_log logs y67..70 foot=(86,67,-94) distFromPit 21.2 distFromAnchor 22.0
+col (85,-100) oak_log logs y67..71 foot=(85,67,-100) distFromPit 21.4 distFromAnchor 21.8
+col (47,-80) oak_log logs y71..71 foot=(47,71,-80) distFromPit 22.1 distFromAnchor 22.0
+col (79,-76) oak_log logs y70..71 foot=(79,70,-76) distFromPit 22.2 distFromAnchor 23.4
+col (73,-114) oak_log logs y67..70 foot=(73,67,-114) distFromPit 22.5 distFromAnchor 21.9
+col (50,-110) oak_log logs y68..72 foot=(50,68,-110) distFromPit 22.5 distFromAnchor 21.3
+col (87,-88) oak_log logs y67..71 foot=(87,67,-88) distFromPit 22.8 distFromAnchor 23.8
+col (65,-116) oak_log logs y68..72 foot=(65,68,-116) distFromPit 23.0 distFromAnchor 22.0
+col (47,-108) oak_log logs y71..72 foot=(47,71,-108) distFromPit 23.3 distFromAnchor 22.0
+col (46,-79) oak_log logs y71..71 foot=(46,71,-79) distFromPit 23.5 distFromAnchor 23.4
+col (45,-79) oak_log logs y70..74 foot=(45,70,-79) distFromPit 24.3 distFromAnchor 24.2
+col (57,-116) oak_log logs y68..73 foot=(57,68,-116) distFromPit 24.3 distFromAnchor 23.1
+col (44,-80) oak_log logs y72..72 foot=(44,72,-80) distFromPit 24.5 distFromAnchor 24.4
+col (77,-115) birch_log logs y67..71 foot=(77,67,-115) distFromPit 25.1 distFromAnchor 24.7
+col (40,-88) oak_log logs y69..74 foot=(40,69,-88) distFromPit 25.3 distFromAnchor 24.7
+col (41,-81) oak_log logs y68..73 foot=(41,68,-81) distFromPit 26.7 distFromAnchor 26.4
+col (45,-111) birch_log logs y69..75 foot=(45,69,-111) distFromPit 26.8 distFromAnchor 25.5
+col (60,-120) oak_log logs y68..73 foot=(60,68,-120) distFromPit 27.4 distFromAnchor 26.3
+col (92,-98) oak_log logs y68..71 foot=(92,68,-98) distFromPit 27.6 distFromAnchor 28.3
+col (53,-68) birch_log logs y72..74 foot=(53,72,-68) distFromPit 27.7 distFromAnchor 28.2
+col (93,-91) oak_log logs y72..74 foot=(93,72,-91) distFromPit 28.3 distFromAnchor 29.2
+col (84,-72) acacia_log logs y71..71 foot=(84,71,-72) distFromPit 28.5 distFromAnchor 29.7
+col (86,-74) acacia_log logs y73..74 foot=(86,73,-74) distFromPit 28.5 distFromAnchor 29.7
+col (38,-103) birch_log logs y71..73 foot=(38,71,-103) distFromPit 28.6 distFromAnchor 27.5
+col (77,-67) oak_log logs y71..71 foot=(77,71,-67) distFromPit 28.7 distFromAnchor 30.0
+col (81,-117) birch_log logs y68..74 foot=(81,68,-117) distFromPit 28.9 distFromAnchor 28.6
+col (46,-71) birch_log logs y68..73 foot=(46,68,-71) distFromPit 29.0 distFromAnchor 29.2
+col (85,-72) acacia_log logs y70..70 foot=(85,70,-72) distFromPit 29.1 distFromAnchor 30.4
+col (86,-73) acacia_log logs y72..72 foot=(86,72,-73) distFromPit 29.2 distFromAnchor 30.4
+col (94,-93) oak_log logs y68..78 foot=(94,68,-93) distFromPit 29.2 distFromAnchor 30.0
+col (94,-92) oak_log logs y72..77 foot=(94,72,-92) distFromPit 29.2 distFromAnchor 30.1
+col (94,-91) oak_log logs y72..77 foot=(94,72,-91) distFromPit 29.3 distFromAnchor 30.1
+col (94,-90) oak_log logs y73..73 foot=(94,73,-90) distFromPit 29.3 distFromAnchor 30.3
+col (94,-89) oak_log logs y73..73 foot=(94,73,-89) distFromPit 29.5 distFromAnchor 30.4
+col (92,-81) oak_log logs y70..73 foot=(92,70,-81) distFromPit 29.7 distFromAnchor 30.9
+col (86,-72) acacia_log logs y69..71 foot=(86,69,-72) distFromPit 29.8 distFromAnchor 31.1
+col (52,-120) oak_log logs y68..73 foot=(52,68,-120) distFromPit 29.9 distFromAnchor 28.6
+col (35,-91) oak_log logs y70..73 foot=(35,70,-91) distFromPit 29.9 distFromAnchor 29.2
+col (78,-120) oak_log logs y67..72 foot=(78,67,-120) distFromPit 30.0 distFromAnchor 29.5
+col (40,-76) oak_log logs y68..71 foot=(40,68,-76) distFromPit 30.1 distFromAnchor 30.0
+col (91,-108) oak_log logs y68..71 foot=(91,68,-108) distFromPit 30.2 distFromAnchor 30.4
+col (95,-93) oak_log logs y74..75 foot=(95,74,-93) distFromPit 30.2 distFromAnchor 31.0
+col (43,-115) oak_log logs y69..74 foot=(43,69,-115) distFromPit 31.0 distFromAnchor 29.7
+col (96,-93) oak_log logs y74..74 foot=(96,74,-93) distFromPit 31.2 distFromAnchor 32.0
+col (96,-92) oak_log logs y75..75 foot=(96,75,-92) distFromPit 31.2 distFromAnchor 32.1
+col (34,-101) oak_log logs y70..73 foot=(34,70,-101) distFromPit 31.8 distFromAnchor 30.8
+col (34,-85) oak_log logs y69..73 foot=(34,69,-85) distFromPit 31.8 distFromAnchor 31.3
+col (80,-121) oak_log logs y76..76 foot=(80,76,-121) distFromPit 31.8 distFromAnchor 31.4
+col (35,-81) birch_log logs y71..73 foot=(35,71,-81) distFromPit 32.1 distFromAnchor 31.8
+col (97,-93) oak_log logs y75..75 foot=(97,75,-93) distFromPit 32.2 distFromAnchor 33.0
+col (97,-92) oak_log logs y76..76 foot=(97,76,-92) distFromPit 32.2 distFromAnchor 33.1
+col (37,-110) birch_log logs y70..73 foot=(37,70,-110) distFromPit 32.6 distFromAnchor 31.4
+col (49,-122) oak_log logs y69..73 foot=(49,69,-122) distFromPit 33.0 distFromAnchor 31.8
+col (81,-122) oak_log logs y75..75 foot=(81,75,-122) distFromPit 33.2 distFromAnchor 32.8
+col (85,-120) oak_log logs y74..74 foot=(85,74,-120) distFromPit 33.7 distFromAnchor 33.4
+col (98,-100) oak_log logs y70..74 foot=(98,70,-100) distFromPit 33.9 distFromAnchor 34.5
+col (84,-121) oak_log logs y73..73 foot=(84,73,-121) distFromPit 33.9 distFromAnchor 33.6
+col (31,-90) oak_log logs y75..75 foot=(31,75,-90) distFromPit 33.9 distFromAnchor 33.2
+col (90,-116) oak_log logs y71..76 foot=(90,71,-116) distFromPit 34.1 distFromAnchor 34.1
+col (83,-122) oak_log logs y73..73 foot=(83,73,-122) distFromPit 34.2 distFromAnchor 33.8
+col (41,-68) oak_log logs y67..70 foot=(41,67,-68) distFromPit 34.5 distFromAnchor 34.7
+col (82,-123) oak_log logs y67..77 foot=(82,67,-123) distFromPit 34.6 distFromAnchor 34.1
+col (42,-119) oak_log logs y69..74 foot=(42,69,-119) distFromPit 34.6 distFromAnchor 33.3
+col (30,-90) oak_log logs y75..75 foot=(30,75,-90) distFromPit 34.9 distFromAnchor 34.2
+col (30,-88) oak_log logs y77..77 foot=(30,77,-88) distFromPit 35.2 distFromAnchor 34.5
+col (82,-124) oak_log logs y71..74 foot=(82,71,-124) distFromPit 35.4 distFromAnchor 35.0
+col (31,-104) birch_log logs y74..75 foot=(31,74,-104) distFromPit 35.5 distFromAnchor 34.5
+col (95,-112) birch_log logs y71..75 foot=(95,71,-112) distFromPit 35.7 distFromAnchor 35.8
+col (100,-87) birch_log logs y70..75 foot=(100,70,-87) distFromPit 35.7 distFromAnchor 36.7
+col (81,-125) oak_log logs y71..74 foot=(81,71,-125) distFromPit 35.8 distFromAnchor 35.4
+col (83,-124) oak_log logs y72..72 foot=(83,72,-124) distFromPit 35.9 distFromAnchor 35.5
+col (83,-125) oak_log logs y72..72 foot=(83,72,-125) distFromPit 36.8 distFromAnchor 36.4
+col (36,-70) birch_log logs y64..68 foot=(36,64,-70) distFromPit 36.9 distFromAnchor 36.9
+col (99,-107) oak_log logs y71..75 foot=(99,71,-107) distFromPit 36.9 distFromAnchor 37.3
+col (87,-123) oak_log logs y70..75 foot=(87,70,-123) distFromPit 37.3 distFromAnchor 37.0
+col (44,-62) oak_log logs y70..72 foot=(44,70,-62) distFromPit 37.4 distFromAnchor 37.7
+col (36,-117) oak_log logs y76..76 foot=(36,76,-117) distFromPit 37.5 distFromAnchor 36.2
+col (43,-124) oak_log logs y69..73 foot=(43,69,-124) distFromPit 37.9 distFromAnchor 36.6
+col (91,-121) oak_log logs y71..74 foot=(91,71,-121) distFromPit 38.3 distFromAnchor 38.2
+col (33,-115) birch_log logs y70..74 foot=(33,70,-115) distFromPit 38.7 distFromAnchor 37.4
+col (35,-118) oak_log logs y75..75 foot=(35,75,-118) distFromPit 38.9 distFromAnchor 37.6
+col (37,-65) birch_log logs y64..68 foot=(37,64,-65) distFromPit 39.5 distFromAnchor 39.6
+col (34,-118) oak_log logs y75..75 foot=(34,75,-118) distFromPit 39.7 distFromAnchor 38.4
+col (98,-71) acacia_log logs y74..74 foot=(98,74,-71) distFromPit 39.8 distFromAnchor 41.0
+col (98,-70) acacia_log logs y73..73 foot=(98,73,-70) distFromPit 40.4 distFromAnchor 41.6
+col (98,-69) acacia_log logs y71..73 foot=(98,71,-69) distFromPit 41.0 distFromAnchor 42.2
+col (33,-119) oak_log logs y69..77 foot=(33,69,-119) distFromPit 41.1 distFromAnchor 39.8
+col (94,-122) birch_log logs y70..75 foot=(94,70,-122) distFromPit 41.1 distFromAnchor 41.0
+col (98,-68) acacia_log logs y74..74 foot=(98,74,-68) distFromPit 41.6 distFromAnchor 42.8
+col (33,-120) oak_log logs y74..74 foot=(33,74,-120) distFromPit 41.7 distFromAnchor 40.5
+col (32,-119) oak_log logs y73..73 foot=(32,73,-119) distFromPit 41.9 distFromAnchor 40.6
+col (98,-67) acacia_log logs y75..76 foot=(98,75,-67) distFromPit 42.2 distFromAnchor 43.4
+col (33,-121) oak_log logs y74..74 foot=(33,74,-121) distFromPit 42.4 distFromAnchor 41.1
+col (31,-119) oak_log logs y73..73 foot=(31,73,-119) distFromPit 42.6 distFromAnchor 41.4
+col (98,-120) oak_log logs y71..76 foot=(98,71,-120) distFromPit 42.8 distFromAnchor 42.8
+col (30,-119) oak_log logs y74..74 foot=(30,74,-119) distFromPit 43.4 distFromAnchor 42.2
+col (32,-122) oak_log logs y75..75 foot=(32,75,-122) distFromPit 43.8 distFromAnchor 42.5
+col (32,-123) oak_log logs y75..75 foot=(32,75,-123) distFromPit 44.4 distFromAnchor 43.2
+col (98,-123) oak_log logs y70..75 foot=(98,70,-123) distFromPit 44.7 distFromAnchor 44.7
+tree columns total: 126
+=== PIT CROSS-SECTION (tops + stack, x 62..68, z -95..-90) ===
+(62,-95) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (63,-95) top=66 [grass@66,dirt@65,dirt@64,stone@63,coal_ore@62] | (64,-95) top=70 [oak_leaves@70,oak_leaves@69,grass@66,dirt@65,dirt@64] | (65,-95) top=70 [oak_leaves@70,oak_leaves@69,dirt@65,coal_ore@63,coal_ore@62] | (66,-95) top=69 [oak_leaves@69,dirt@65,dirt@64,stone@63,stone@62] | (67,-95) top=66 [farmland@66,dirt@65,dirt@64,stone@63,stone@62] | (68,-95) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62]
+(62,-94) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (63,-94) top=67 [oak_planks@67,dirt@66,dirt@65,dirt@64,stone@63] | (64,-94) top=67 [crafting_table@67,dirt@66,dirt@65,dirt@64,stone@63] | (65,-94) top=64 [dirt@64,dirt@63,dirt@62,stone@61,stone@60] | (66,-94) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (67,-94) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (68,-94) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62]
+(62,-93) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (63,-93) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (64,-93) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (65,-93) top=65 [grass@65,stone@62,stone@61,stone@60,stone@59] | (66,-93) top=65 [grass@65,stone@62,stone@61,stone@60,stone@59] | (67,-93) top=70 [birch_leaves@70,grass@66,dirt@65,dirt@64,dirt@63] | (68,-93) top=70 [birch_leaves@70,grass@66,dirt@65,dirt@64,stone@63]
+(62,-92) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (63,-92) top=66 [grass@66,dirt@65,dirt@64,stone@62,stone@61] | (64,-92) top=66 [grass@66,dirt@65,dirt@64,dirt@63,stone@62] | (65,-92) top=65 [grass@65,dirt@64,stone@62,stone@61,stone@60] | (66,-92) top=70 [birch_leaves@70,grass@64,dirt@63,stone@61,stone@60] | (67,-92) top=71 [birch_leaves@71,birch_leaves@70,grass@64,stone@63,stone@62] | (68,-92) top=72 [birch_leaves@72,birch_leaves@71,birch_leaves@70,grass@66,dirt@65]
+(62,-91) top=72 [oak_leaves@72,grass@66,dirt@65,dirt@64,stone@63] | (63,-91) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (64,-91) top=67 [grass@67,dirt@66,dirt@65,dirt@64,stone@63] | (65,-91) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (66,-91) top=70 [birch_leaves@70,grass@65,stone@62,stone@61,stone@60] | (67,-91) top=71 [birch_leaves@71,birch_leaves@70,grass@66,dirt@65,dirt@64] | (68,-91) top=71 [birch_log@71,grass@66,dirt@65,dirt@64,stone@63]
+(62,-90) top=72 [oak_leaves@72,grass@67,dirt@66,dirt@65,stone@64] | (63,-90) top=67 [grass@67,dirt@66,dirt@65,stone@64,stone@63] | (64,-90) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (65,-90) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (66,-90) top=66 [grass@66,dirt@65,dirt@64,stone@63,stone@62] | (67,-90) top=70 [birch_leaves@70,grass@66,dirt@65,dirt@64,stone@63] | (68,-90) top=72 [birch_leaves@72,birch_leaves@71,birch_leaves@70,grass@66,dirt@65]
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+[MAP PROBE exited 0]
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+map-driver done

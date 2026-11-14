@@ -1,0 +1,20 @@
+PASS  fence span present in driver source
+PASS  S1: fence fires on a craft under a live goal
+PASS  S1: goal cleared via setGoal(null)
+PASS  S1: pathfinder.stop() NEVER called
+PASS  S1: stop trace-rowed (kind walker-fence, verb + position)
+PASS  S2: fence fires on a dig under held drive states
+PASS  S2: control states cleared
+PASS  S2: stop trace-rowed with hadDrive
+PASS  S3: goto is not fenced (it replaces the goal itself)
+PASS  S3: gotoentity is not fenced
+PASS  S3: no goal was touched by the walk verbs
+PASS  S4: no live goal + no drive -> no fence, no row, no calls
+PASS  S5: all 11 stationary verbs fence a live goal
+PASS  S5: WALK_VERBS is exactly goto + gotoentity
+PASS  W: execCmd wrapper consults walkerFence before the command body runs
+PASS  W: the command body is execCmdInner and its verb branches come after the fence
+PASS  W: result line names the stop truthfully
+PASS  W: fence span never calls pathfinder.stop()
+
+WALKER-FENCE-DAY16 FIXTURE: 18 PASS / 0 FAIL

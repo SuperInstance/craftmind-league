@@ -1,0 +1,14 @@
+[SURVEY2] SurveyH109406 spawn 34.50,68.00,-103.50
+[SURVEY2] rawNav wp1(40,-88) STALLED 20s at 34.57,68.19,-103.30
+[SURVEY2] rawNav wp1(40,-88) arrived false at 34.57,68.19,-103.30 ms 20260
+[SURVEY2] rawNav wp2-start(48.5,-83.5) STALLED 20s at 34.57,68.19,-103.30
+[SURVEY2] rawNav wp2-start(48.5,-83.5) arrived false at 34.57,68.19,-103.30 ms 20257
+[SURVEY2] AT-START 34.57,68.00,-103.30 onGround true
+[SURVEY2] rawNav route-east STALLED 20s at 34.57,68.00,-103.30
+[SURVEY2] rawNav route-east arrived false at 34.57,68.00,-103.30 ms 20262
+[SURVEY2] RAW-EAST arrived false end 34.57,68.00,-103.30 dispXZ 0.00 climbY 0.00
+[SURVEY2] rawNav route-west arrived true at 34.57,68.00,-103.30 ms 0
+[SURVEY2] RAW-WEST arrived true at 34.57,68.00,-103.30
+[SURVEY2] PRIMS gotoNear east {"ok":false,"error":"walkTo timeout (72777ms) to 68.5,66,-83.5; at (47.62936395014508, 68, -103.30407825801139)"} ms 90043 mid 47.63,68.00,-103.30 dispXZ 13.06
+[SURVEY2] PRIMS walkTo west {"ok":false,"error":"walkTo timeout (90000ms) to 34.569666425691494,68,-103.30326808279614; at (43.30526821714942, 68, -103.30222868347359)"} ms 90001 end 43.31,68.00,-103.30
+[SURVEY2] DONE

@@ -1,0 +1,2 @@
+{"ts":"2026-11-10T00:45:03.910Z","act":"NOTIFY","trigger_id":"floor_open","evidence_ref":"contract:/home/caseydigennaro/craftmind-league/pulse/day11/fixture-run/C-1794271503571/contract.json","reason":"FLOOR_OPEN","seq":3,"contract_sha":"1ff81f3fbfcb6500cb1959a3b264a817e6c6dfd68d47b422fb4f207758e02d9a"}
+{"ts":"2026-11-10T00:45:03.977Z","act":"NOTIFY","trigger_id":"sigterm","evidence_ref":"process","reason":"FLOOR_CLOSE","seq":7,"contract_sha":"1ff81f3fbfcb6500cb1959a3b264a817e6c6dfd68d47b422fb4f207758e02d9a"}

@@ -1,0 +1,17 @@
+{
+ "ts": "2026-11-08T08:14:52.624Z",
+ "pos": {
+  "x": 38.7,
+  "y": 66,
+  "z": -100.77
+ },
+ "health": 20,
+ "food": 20,
+ "inventory": [],
+ "chest": "air",
+ "belowChest": "grass_block",
+ "sign": "air",
+ "table": "air",
+ "siteGroundW": "grass_block",
+ "siteGroundS": "grass_block"
+}

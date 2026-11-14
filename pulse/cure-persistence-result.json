@@ -1,0 +1,83 @@
+{
+ "ts": "2026-11-08T05:22:50.566Z",
+ "test": "the-cure-persistence-test-20261107",
+ "samples": [
+  {
+   "tag": "t+4s",
+   "pos": {
+    "x": 29.5,
+    "y": 75,
+    "z": -101.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+8s",
+   "pos": {
+    "x": 29.5,
+    "y": 75,
+    "z": -101.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+12s",
+   "pos": {
+    "x": 29.5,
+    "y": 75,
+    "z": -101.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+16s",
+   "pos": {
+    "x": 29.5,
+    "y": 75,
+    "z": -101.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  },
+  {
+   "tag": "t+20s",
+   "pos": {
+    "x": 29.5,
+    "y": 75,
+    "z": -101.5
+   },
+   "health": 20,
+   "food": 20,
+   "onGround": true
+  }
+ ],
+ "spawn": {
+  "tag": "spawn",
+  "pos": {
+   "x": 29.5,
+   "y": 75,
+   "z": -101.5
+  },
+  "health": null,
+  "food": null,
+  "onGround": false
+ },
+ "final": {
+  "tag": "final",
+  "pos": {
+   "x": 29.5,
+   "y": 75,
+   "z": -101.5
+  },
+  "health": 20,
+  "food": 20,
+  "onGround": true
+ }
+}

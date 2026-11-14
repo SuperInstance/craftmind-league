@@ -1,0 +1,21 @@
+{
+ "the dip": "the bowl south-east of home where days 1-3 began (bowl (77.3,64,-98.3) -> lip (75.3,66,-94.1))",
+ "the pocket": "the dip pocket at (75.3,64,-98.5) that held Cody at the end of day 3",
+ "the anchor": "his crafting-table anchor at (64,67,-93)",
+ "the home shelf": "the flat bench, top y66, around the anchor — home ground",
+ "the pen": "the fenced pen SW of the anchor (ring x61..64 / z-102..-99, gate (64,67,-101))",
+ "the wheat patch": "6 farmland cells at (65,-95..-97) and (67,-95..-97) by the water trench (66,66,-96)",
+ "respawn country": "the clone-pool respawn ground west of home, around (34.5,64,-94.5)",
+ "world spawn": "the world's spawn point (32.5,69,-91.6)",
+ "the pit at home": "his own stone pit by the pad, columns (65..66,-92..-94), floor y63 — dug day 4 hunting furnace stone",
+ "the pad": "the home pad at (60.5,67,-92.5), top y66",
+ "the hollow": "the stone hollow south of home around (71-72,60-63,-88) where day 10's stone was dug",
+ "the spawn bowl": "the bowl by world spawn at (35,65,-92), day 10's first relief trap",
+ "the pen hollow": "the hollow south of the pen where day 10's plank-step building happened",
+ "the pocket lip": "the lip east of home where day 10's stone hunt spent ~50 cycles",
+ "the scenario district (the barn)": "the Director's scenario #1 district: barn x38..42 / z-61..-57, fold z-66..-62, sign at (40,64,-56)",
+ "the home district": "the home shelf and its surrounding country — the league's one stage",
+ "the camera": "the headed Gallery/MagnusandMouse client and cameraman chain on the Orin",
+ "the scratch rig": "the throwaway prov-scratch server on the Thor (port 25875) where proofs run on bodies that are not Cody",
+ "the bowl at home's edge": "the below-grade pocket at home's south-west edge (pocket floor cell (61,60,-91); Cody's stance the entry step at ~(62,62,-91)) — entered tool-less on day 15, guarded into a locked cell on day 16, and the ground day 17's rehearsal gate held over; distinct from the dip and the pocket, which are other holes"
+}

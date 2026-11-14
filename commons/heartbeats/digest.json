@@ -1,0 +1,9 @@
+{
+ "declared_period_s": 30,
+ "detail": "",
+ "emitted_at": "2026-11-14T18:58:52.267839Z",
+ "host": "thor",
+ "last_effect": "digest tick 56040 tod=None",
+ "last_effect_ts": "2026-11-13T20:42:19.499Z",
+ "watcher": "digest"
+}

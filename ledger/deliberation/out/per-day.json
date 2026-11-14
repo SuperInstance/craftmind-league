@@ -1,0 +1,665 @@
+{
+ "per_day": {
+  "1": {
+   "cycles": 192,
+   "failed_calls": 10,
+   "wc": 140.7,
+   "active_minutes": 31.63,
+   "beta_wc_per_min": 4.449,
+   "unweighted_per_min": 6.0711,
+   "visible_acts_ok": 81,
+   "kappa_wc_per_act": 1.737,
+   "usd_est": 0.0356,
+   "tokens": 674654,
+   "by_route": {
+    "governor:qwen3-coder-30b": {
+     "calls": 57,
+     "wc": 5.699999999999996,
+     "usd": 0,
+     "tokens": 186917
+    },
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 135,
+     "wc": 135,
+     "usd": 0.03556861000000001,
+     "tokens": 487737
+    }
+   },
+   "first_cycle_ts": "2026-11-09T06:26:52.392Z",
+   "last_cycle_ts": "2026-11-09T06:58:29.918Z",
+   "span_first_row_ts": "2026-11-09T06:26:08.264Z",
+   "span_last_row_ts": "2026-11-09T07:00:06.744Z",
+   "governor_cycles": 57,
+   "validity": {
+    "valid": true,
+    "flagged": true,
+    "reason": "Route changes are TRACED in-trace (5 failover rows); active 31.6 min >= 30. Flags: 10 model-fail calls without usage records; 30% fallback-tier share; 7 spawn rows (multi-launch file). Outside the baseline window in any case."
+   }
+  },
+  "2": {
+   "cycles": 293,
+   "failed_calls": 2,
+   "wc": 269.6,
+   "active_minutes": 67.81,
+   "beta_wc_per_min": 3.976,
+   "unweighted_per_min": 4.3211,
+   "visible_acts_ok": 152,
+   "kappa_wc_per_act": 1.7737,
+   "usd_est": 0.0807,
+   "tokens": 1292699,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 267,
+     "wc": 267,
+     "usd": 0.08069609296000002,
+     "tokens": 1159050
+    },
+    "governor:qwen3-coder-30b": {
+     "calls": 26,
+     "wc": 2.600000000000001,
+     "usd": 0,
+     "tokens": 133649
+    }
+   },
+   "first_cycle_ts": "2026-11-09T07:18:06.545Z",
+   "last_cycle_ts": "2026-11-09T08:25:54.944Z",
+   "span_first_row_ts": "2026-11-09T07:17:33.287Z",
+   "span_last_row_ts": "2026-11-09T08:25:54.944Z",
+   "governor_cycles": 26,
+   "validity": {
+    "valid": true,
+    "flagged": true,
+    "reason": "One traced failover (26/293 cycles on the fallback tier); active 67.8 min. The failover is in the trace, declared by the day-6 rule retroactively satisfied here."
+   }
+  },
+  "3": {
+   "cycles": 237,
+   "failed_calls": 0,
+   "wc": 23.7,
+   "active_minutes": 71.15,
+   "beta_wc_per_min": 0.3331,
+   "unweighted_per_min": 3.3311,
+   "visible_acts_ok": 87,
+   "kappa_wc_per_act": 0.2724,
+   "usd_est": 0,
+   "tokens": 1918336,
+   "by_route": {
+    "governor:qwen3-coder-30b": {
+     "calls": 237,
+     "wc": 23.700000000000067,
+     "usd": 0,
+     "tokens": 1918336
+    }
+   },
+   "first_cycle_ts": "2026-11-09T08:47:09.472Z",
+   "last_cycle_ts": "2026-11-09T09:58:18.375Z",
+   "span_first_row_ts": "2026-11-09T08:47:06.555Z",
+   "span_last_row_ts": "2026-11-09T10:00:11.415Z",
+   "governor_cycles": 237,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED — fallback-tier regime for the entire day (237/237 cycles governor). Study D.4 names day 3 for inspection and D.7 names the trap: at weight 0.1 its beta (0.33) would chart as the best day of the curve. A single-tier fallback day is a different regime, not a cheap capable day."
+   }
+  },
+  "4": {
+   "cycles": 429,
+   "failed_calls": 9,
+   "wc": 429,
+   "active_minutes": 89.72,
+   "beta_wc_per_min": 4.7815,
+   "unweighted_per_min": 4.7815,
+   "visible_acts_ok": 225,
+   "kappa_wc_per_act": 1.9067,
+   "usd_est": 0.3628,
+   "tokens": 4356559,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 429,
+     "wc": 429,
+     "usd": 0.36279366760000004,
+     "tokens": 4356559
+    }
+   },
+   "first_cycle_ts": "2026-11-09T10:42:25.250Z",
+   "last_cycle_ts": "2026-11-09T12:12:08.474Z",
+   "span_first_row_ts": "2026-11-09T10:41:52.325Z",
+   "span_last_row_ts": "2026-11-09T12:12:09.675Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": true,
+    "flagged": false,
+    "reason": "Single route all day (429/429 capable). The relay death occurred BEFORE launch, was restarted, and RELAY-OK was proven end-to-end pre-wake (day record) — not a mid-run route change. Active 89.7 min."
+   }
+  },
+  "5": {
+   "cycles": 432,
+   "failed_calls": 19,
+   "wc": 378.9,
+   "active_minutes": 90.03,
+   "beta_wc_per_min": 4.2085,
+   "unweighted_per_min": 4.7983,
+   "visible_acts_ok": 206,
+   "kappa_wc_per_act": 1.8393,
+   "usd_est": 0.3971,
+   "tokens": 5529846,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 373,
+     "wc": 373,
+     "usd": 0.39712067640000026,
+     "tokens": 4716813
+    },
+    "governor:qwen3-coder-30b": {
+     "calls": 59,
+     "wc": 5.899999999999995,
+     "usd": 0,
+     "tokens": 813033
+    }
+   },
+   "first_cycle_ts": "2026-11-09T13:12:25.469Z",
+   "last_cycle_ts": "2026-11-09T14:42:27.387Z",
+   "span_first_row_ts": "2026-11-09T13:12:22.677Z",
+   "span_last_row_ts": "2026-11-09T14:42:28.587Z",
+   "governor_cycles": 59,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED — mid-run tier substitution at cycle 387 (failover row 2026-11-09T14:16:27Z; 59 fallback cycles follow). The substitution was the day's charter breach: silent to the operator at the time. Its blended beta (4.21) represents neither regime. Study D.4 names day 5."
+   }
+  },
+  "6": {
+   "cycles": 0,
+   "failed_calls": 0,
+   "wc": 0,
+   "active_minutes": 0,
+   "beta_wc_per_min": null,
+   "unweighted_per_min": null,
+   "visible_acts_ok": 0,
+   "kappa_wc_per_act": null,
+   "usd_est": 0,
+   "tokens": 0,
+   "by_route": {},
+   "first_cycle_ts": null,
+   "last_cycle_ts": null,
+   "span_first_row_ts": "2026-11-09T15:38:47.427Z",
+   "span_last_row_ts": "2026-11-09T15:38:47.428Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED — not a citizen day: 0 cycles; chartered abort after four wake failures. Nothing to meter."
+   }
+  },
+  "7": {
+   "cycles": 0,
+   "failed_calls": 0,
+   "wc": 0,
+   "active_minutes": 0,
+   "beta_wc_per_min": null,
+   "unweighted_per_min": null,
+   "visible_acts_ok": 0,
+   "kappa_wc_per_act": null,
+   "usd_est": 0,
+   "tokens": 0,
+   "by_route": {},
+   "first_cycle_ts": null,
+   "last_cycle_ts": null,
+   "span_first_row_ts": "2026-11-09T16:35:53.216Z",
+   "span_last_row_ts": "2026-11-09T16:37:50.091Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED — not a day run: 0 cycles; a wake/feed verification session only. Active minutes < 30 by construction."
+   }
+  },
+  "8": {
+   "cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED — no run exists: the citizen was not woken (aim proof only). No trace file."
+   }
+  },
+  "9": {
+   "cycles": 28,
+   "failed_calls": 0,
+   "wc": 28,
+   "active_minutes": 7.08,
+   "beta_wc_per_min": 3.9574,
+   "unweighted_per_min": 3.9574,
+   "visible_acts_ok": 12,
+   "kappa_wc_per_act": 2.3333,
+   "usd_est": 0.022,
+   "tokens": 312859,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 28,
+     "wc": 28,
+     "usd": 0.0220211292,
+     "tokens": 312859
+    }
+   },
+   "first_cycle_ts": "2026-11-09T19:07:55.770Z",
+   "last_cycle_ts": "2026-11-09T19:15:00.292Z",
+   "span_first_row_ts": "2026-11-09T19:04:29.030Z",
+   "span_last_row_ts": "2026-11-09T19:23:22.380Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED — active minutes 7.1 by cycle span (~19 spawn-to-abort), below the 30-minute floor; and the day was ended by harness fault (cameraman STOP killed the daylight hold; third death fired the abort). Fails two criteria."
+   }
+  },
+  "10": {
+   "cycles": 303,
+   "failed_calls": 0,
+   "wc": 303,
+   "active_minutes": 84.76,
+   "beta_wc_per_min": 3.575,
+   "unweighted_per_min": 3.575,
+   "visible_acts_ok": 148,
+   "kappa_wc_per_act": 2.0473,
+   "usd_est": 0.3588,
+   "tokens": 4467676,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 303,
+     "wc": 303,
+     "usd": 0.35883280160000003,
+     "tokens": 4467676
+    }
+   },
+   "first_cycle_ts": "2026-11-09T20:41:11.015Z",
+   "last_cycle_ts": "2026-11-09T22:05:56.369Z",
+   "span_first_row_ts": "2026-11-09T20:40:36.235Z",
+   "span_last_row_ts": "2026-11-09T22:05:57.569Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": true,
+    "flagged": false,
+    "reason": "Single route, zero failovers, RELAY-OK proven pre-wake and held all day; active 84.8 min; zero deaths."
+   }
+  },
+  "11": {
+   "cycles": 31,
+   "failed_calls": 0,
+   "wc": 31,
+   "active_minutes": 7.47,
+   "beta_wc_per_min": 4.1516,
+   "unweighted_per_min": 4.1516,
+   "visible_acts_ok": 16,
+   "kappa_wc_per_act": 1.9375,
+   "usd_est": 0.0305,
+   "tokens": 418302,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 31,
+     "wc": 31,
+     "usd": 0.03052315056000001,
+     "tokens": 418302
+    }
+   },
+   "first_cycle_ts": "2026-11-10T00:59:36.157Z",
+   "last_cycle_ts": "2026-11-10T01:07:04.176Z",
+   "span_first_row_ts": "2026-11-10T00:28:31.814Z",
+   "span_last_row_ts": "2026-11-10T01:07:05.377Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED (F2) - active minutes 7.47 by cycle span (31 cycles, 00:59:36Z-01:07:04Z), below the 30-minute floor (D.4 step 1, criterion 3); and the citizen was stopped by harness fault (criterion 4): the floor PARK daylight_unrestorable at 01:07:03Z ended the day on the mirror off-by-one - the three daylight commands demonstrably landed (server log + op results ok:true) and the floor verified none. Same two-criterion failure shape as day 9. The trace file pools the Gate B STOP attempt (3 gate-refuse-start rows, zero cycles) with the played relaunch; only the played span is ruled on. The days beta (4.152) is the rate of a 7.5-minute fragment - a rate without a day."
+   }
+  },
+  "12": {
+   "cycles": 327,
+   "failed_calls": 37,
+   "wc": 321.6,
+   "active_minutes": 80.91,
+   "beta_wc_per_min": 3.9747,
+   "unweighted_per_min": 4.0414,
+   "visible_acts_ok": 150,
+   "kappa_wc_per_act": 2.144,
+   "usd_est": 0.3604,
+   "tokens": 4634611,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 321,
+     "wc": 321,
+     "usd": 0.36043139327999985,
+     "tokens": 4539874
+    },
+    "governor:qwen3-coder-30b": {
+     "calls": 6,
+     "wc": 0.6,
+     "usd": 0,
+     "tokens": 94737
+    }
+   },
+   "first_cycle_ts": "2026-11-10T03:12:39.611Z",
+   "last_cycle_ts": "2026-11-10T04:33:34.337Z",
+   "span_first_row_ts": "2026-11-10T03:12:35.204Z",
+   "span_last_row_ts": "2026-11-10T04:37:35.480Z",
+   "governor_cycles": 6,
+   "validity": {
+    "valid": true,
+    "flagged": true,
+    "reason": "VALID, flagged (F2) - all four criteria pass: no dead relay mid-run (the pre-check death was recovered before Gate B; RELAY-OK at check and at launch; the days 22 daylight assertions landed attempt 1); the one route change is TRACED (failover row at cycle 324 after 37 model-fail rows; 6 governor cycles of 327 = 1.8%, vs day 5s undeclared 59-cycle substitution and day 3s 100% fallback regime - the day-5 rule satisfied in form); active 80.9 min >= 30; full chartered 85-minute window, driver exit rc=0, zero deaths, citizen never stopped by harness fault. Flag: beta 3.975 blends two regimes (321 capable + 6 fallback cycles)."
+   }
+  },
+  "13": {
+   "cycles": 209,
+   "failed_calls": 0,
+   "wc": 209,
+   "active_minutes": 47.76,
+   "beta_wc_per_min": 4.3756,
+   "unweighted_per_min": 4.3756,
+   "visible_acts_ok": 87,
+   "kappa_wc_per_act": 2.4023,
+   "usd_est": 0.2317,
+   "tokens": 2937646,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 209,
+     "wc": 209,
+     "usd": 0.2317197064,
+     "tokens": 2937646
+    }
+   },
+   "first_cycle_ts": "2026-11-10T05:21:17.190Z",
+   "last_cycle_ts": "2026-11-10T06:09:03.063Z",
+   "span_first_row_ts": "2026-11-10T05:19:16.580Z",
+   "span_last_row_ts": "2026-11-10T06:11:50.070Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED (F2) - citizen stopped by harness fault for most of the day (D.4 step 1, criterion 4): the safety-reading-path defect (incident H1). The floor parked correctly 2 s after death 3 (06:09:24Z); the driver never read the park - both safety checks live at the model-cycle head and cycle 212 sat inside the reflex flee/burrow sequence, which checks neither - so deaths 3-9 landed inside one stuck cycle and the lane stopped the driver BY HAND at 06:14:43Z, six deaths past the chartered limit. The day ran 54 of 85 chartered minutes with its final ~50 minutes consumed by the hole/extraction and the burst. Its beta (4.376) is the rate of a day the harness fault owned - the direct analogue of day 9s exclusion and of the unreconciled day the study premise excludes."
+   }
+  },
+  "14": {
+   "cycles": 32,
+   "failed_calls": 0,
+   "wc": 32,
+   "active_minutes": 10.1,
+   "beta_wc_per_min": 3.1679,
+   "unweighted_per_min": 3.1679,
+   "visible_acts_ok": 10,
+   "kappa_wc_per_act": 3.2,
+   "usd_est": 0.0315,
+   "tokens": 434345,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 32,
+     "wc": 32,
+     "usd": 0.031455855760000005,
+     "tokens": 434345
+    }
+   },
+   "first_cycle_ts": "2026-11-10T06:57:45.652Z",
+   "last_cycle_ts": "2026-11-10T07:07:51.733Z",
+   "span_first_row_ts": "2026-11-10T06:55:55.418Z",
+   "span_last_row_ts": "2026-11-10T07:40:41.621Z",
+   "governor_cycles": 0,
+   "validity": {
+    "valid": false,
+    "reason": "EXCLUDED (F2) - active minutes 10.1 by cycle span (32 cycles), below the 30-minute floor (D.4 step 1, criterion 3). The chartered 85 minutes ran 10 min 53 s: the day ended on its own stop rule, read live by the repaired reflex layer (the first live proof the 3-death abort works - deaths stopped at exactly 3). The exclusion is the floor criterion only: the stop was the safety system WORKING, not a harness fault (day 9 fails both criteria; day 14 fails one), and the route was single and traced throughout. Its beta (3.168) is a 10-minute fragment rate."
+   }
+  },
+  "15": {
+   "cycles": 268,
+   "failed_calls": 2,
+   "wc": 196.9,
+   "active_minutes": 85.01,
+   "beta_wc_per_min": 2.3163,
+   "unweighted_per_min": 3.1527,
+   "visible_acts_ok": 89,
+   "kappa_wc_per_act": 2.2124,
+   "usd_est": 0.0776,
+   "tokens": 1988094,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 189,
+     "wc": 189,
+     "usd": 0.07757598072,
+     "tokens": 1335603
+    },
+    "governor:qwen3-coder-30b": {
+     "calls": 79,
+     "wc": 7.899999999999988,
+     "usd": 0,
+     "tokens": 652491
+    }
+   },
+   "first_cycle_ts": "2026-11-10T07:42:19.437Z",
+   "last_cycle_ts": "2026-11-10T09:07:19.887Z",
+   "span_first_row_ts": "2026-11-10T07:42:03.713Z",
+   "span_last_row_ts": "2026-11-10T09:07:21.090Z",
+   "governor_cycles": 79,
+   "validity": {
+    "valid": true,
+    "flagged": true,
+    "reason": "VALID, flagged (F2) - all four criteria pass over the RUN: full chartered 85 minutes (07:42:19Z-09:07:19Z, driver exit rc=0), 268 cycles, zero run deaths, citizen never stopped by harness fault (the days consuming phase was a legal-dig bowl entry - world/harness geometry, not a stop); the mid-run route change is TRACED (model-fail x2 at cycles 192-193, failover row, 79 governor cycles of 268 = 29.5% - day 2s declared-failover precedent at 8.9% extended in degree, not kind; NOT day 5: declared in-trace by the day-5 rule, and the day completed its charter). Flags: (1) beta 2.316 is a two-regime blend (189 capable + 79 fallback cycles) - it must never be quoted as a capable-regime rate; (2) the Gate B provisioning death #136 (07:38:27Z, census-named zombie, stand-only body killed 5.5 s after spawn, before the floor opened) is OUTSIDE the run and its beta; it is a window event, recorded here so the ruling is not misread as the day being deathless end-to-end."
+   }
+  },
+  "16": {
+   "cycles": 237,
+   "failed_calls": 2,
+   "wc": 183,
+   "active_minutes": 84.5,
+   "beta_wc_per_min": 2.1657,
+   "unweighted_per_min": 2.8047,
+   "visible_acts_ok": 23,
+   "kappa_wc_per_act": 7.9565,
+   "usd_est": 0.0839,
+   "tokens": 2116999,
+   "by_route": {
+    "deepinfra:deepseek-v4.1-flash": {
+     "calls": 177,
+     "wc": 177,
+     "usd": 0.08386383320000002,
+     "tokens": 1554543
+    },
+    "governor:qwen3-coder-30b": {
+     "calls": 60,
+     "wc": 5.999999999999995,
+     "usd": 0,
+     "tokens": 562456
+    }
+   },
+   "first_cycle_ts": "2026-11-10T09:41:54.803Z",
+   "last_cycle_ts": "2026-11-10T11:06:24.865Z",
+   "span_first_row_ts": "2026-11-10T09:41:22.467Z",
+   "span_last_row_ts": "2026-11-10T11:06:26.073Z",
+   "governor_cycles": 60,
+   "validity": {
+    "valid": true,
+    "flagged": true,
+    "reason": "VALID, flagged (F2) - all four criteria pass: full chartered 85 minutes (09:41:36Z-11:06:26Z, driver exit rc=0), 237 cycle rows, zero deaths (second consecutive zero-death run day), citizen never stopped by harness fault - the below-grade guard REFUSED targets (69 refusals) but never parked or stopped the body; the day ran to its window. The mid-run route change is TRACED (model-fail x2 at cycles 206/208, failover row, 60 governor cycles of 237 = 25.3%). Flag: beta 2.166 is a two-regime blend (177 capable + 60 fallback cycles) - never a capable-regime rate."
+   }
+  }
+ },
+ "governor_feed_coverage": {
+  "total_rows": 2614,
+  "ts_first": "2026-11-05T22:25:23.731+00:00",
+  "ts_last": "2026-11-10T11:06:24.858+00:00",
+  "by_agent": {
+   "cody": 118,
+   "mara": 54,
+   "jules": 64,
+   "pip": 75,
+   "vega": 559,
+   "<redacted>": 27,
+   "pulse-smith": 23,
+   "geist-mind": 711,
+   "[SECURITY_DATA]": 78,
+   "geist": 2,
+   "anonymous": 1,
+   "bisect-a": 1,
+   "bisect-c": 1,
+   "cody-actor": 191,
+   "town-maren": 9,
+   "town-ilya": 3,
+   "town-anka": 7,
+   "town-theo": 3,
+   "town-stian": 7,
+   "town-runa": 3,
+   "town-vera": 3,
+   "town-tomas": 7,
+   "town-roster": 18,
+   "town-stock": 6,
+   "town-works": 10,
+   "town-social": 7,
+   "town-reflect": 8,
+   "town-smith": 4,
+   "syndicate-mari": 1,
+   "syndicate-cob": 1,
+   "syndicate-och": 1,
+   "syndicate-verm": 1,
+   "syndicate-captain": 1,
+   "syndicate-reflect": 1,
+   "cody-driver": 608
+  },
+  "denied_429": 97
+ },
+ "governor_reconciliation": {
+  "per_day": {
+   "1": {
+    "trace_governor_cycles": 57,
+    "governor_receipts_in_span": 62,
+    "receipts_served_in_span": 62,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 5
+   },
+   "2": {
+    "trace_governor_cycles": 26,
+    "governor_receipts_in_span": 26,
+    "receipts_served_in_span": 26,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "3": {
+    "trace_governor_cycles": 237,
+    "governor_receipts_in_span": 237,
+    "receipts_served_in_span": 237,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "4": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "5": {
+    "trace_governor_cycles": 59,
+    "governor_receipts_in_span": 65,
+    "receipts_served_in_span": 65,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 6
+   },
+   "6": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "7": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "9": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "10": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "11": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "12": {
+    "trace_governor_cycles": 6,
+    "governor_receipts_in_span": 76,
+    "receipts_served_in_span": 6,
+    "receipts_rejected_in_span": 70,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "13": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "14": {
+    "trace_governor_cycles": 0,
+    "governor_receipts_in_span": 0,
+    "receipts_served_in_span": 0,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "15": {
+    "trace_governor_cycles": 79,
+    "governor_receipts_in_span": 79,
+    "receipts_served_in_span": 79,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   },
+   "16": {
+    "trace_governor_cycles": 60,
+    "governor_receipts_in_span": 60,
+    "receipts_served_in_span": 60,
+    "receipts_rejected_in_span": 0,
+    "cycles_unreceipted_in_span": 0,
+    "served_deviation": 0
+   }
+  },
+  "classes": {
+   "receipts_served_total": 538,
+   "receipts_served_in_spans": 535,
+   "receipts_served_outside_spans": 3,
+   "receipts_rejected_total": 70,
+   "receipts_rejected_in_spans": 70,
+   "receipts_rejected_outside_spans": 0,
+   "cycles_unreceipted_in_spans": 0
+  },
+  "trace_governor_cycles_total": 524,
+  "governor_cody_driver_receipts_total": 608,
+  "deviation_calls": 14,
+  "deviation_pct": 2.7,
+  "within_tolerance_5pct": true,
+  "legacy_all_receipts_deviation": {
+   "deviation_calls": 84,
+   "deviation_pct": 16,
+   "note": "The pre-F1 headline figure: ALL receipts (served + rejected + outside-span) vs trace cycles. Retained so the +16.0% breach stays explainable; it mixes classes and is not the D.3 test."
+  },
+  "note": "Reconciled by class (F1, ledger/F1-F2-20261109.md): the D.3 ±5% test compares receipts SERVED (status 200) against trace governor cycles, globally as at ledger impl. Rejected receipts are attempts the route refused — they can never be cycles, so they are reported as their own class, never a deviation. Served receipts outside every trace span are probes/wake checks, the impl-era named class."
+ },
+ "consult_calls_total": 14,
+ "commission_entries": 26,
+ "commission_unmetered": 15
+}

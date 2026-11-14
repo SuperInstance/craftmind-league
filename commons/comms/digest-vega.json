@@ -1,0 +1,110 @@
+{
+  "citizen": "Vega",
+  "ts": "2026-11-13T20:42:14.706Z",
+  "protocol": "commons/comms/PROTOCOL.md (v1)",
+  "self": {
+    "busy": null,
+    "stage": "S2",
+    "position": {
+      "x": 56.7,
+      "y": 65,
+      "z": -65.3
+    }
+  },
+  "peers": {
+    "Cody": {
+      "online": false,
+      "busy": null,
+      "stage": "S1",
+      "position": {
+        "x": 77.3,
+        "y": 64,
+        "z": -98.3
+      },
+      "distance": 38.9
+    },
+    "Geist": {
+      "online": true,
+      "busy": false,
+      "stage": "S1",
+      "position": {
+        "x": 34.5,
+        "y": 67,
+        "z": -98.5
+      },
+      "distance": 40
+    }
+  },
+  "inbox": [],
+  "outbox": [],
+  "recentConfirmed": [
+    {
+      "id": "m77",
+      "from": "Vega",
+      "to": "Cody",
+      "text": "Cody, I'm gathering more wood logs to build a crafting table. I'll need about 10 more logs of each type.",
+      "method": "act",
+      "confirmedAt": "2026-11-07T17:50:38.367Z"
+    },
+    {
+      "id": "m87",
+      "from": "Vega",
+      "to": "Cody",
+      "text": "Cody, I'm heading to gather more wood logs. Should I focus on oak or birch trees?",
+      "method": "reply",
+      "confirmedAt": "2026-11-08T07:39:32.721Z"
+    },
+    {
+      "id": "m88",
+      "from": "Vega",
+      "to": "Cody",
+      "text": "Cody, I'm heading to gather more wood logs. Should I focus on oak or birch trees?",
+      "method": "reply",
+      "confirmedAt": "2026-11-08T07:45:09.297Z"
+    }
+  ],
+  "recentFailed": [
+    {
+      "id": "m100",
+      "from": "Vega",
+      "to": "Cody",
+      "text": "Cody, I'm heading to gather stone for a pickaxe. Should I meet you at the crafting table location?",
+      "ts": "2026-11-08T08:43:36.228Z",
+      "status": "failed",
+      "addresseeBusy": false
+    },
+    {
+      "id": "m101",
+      "from": "Vega",
+      "to": "Cody",
+      "text": "Cody, I'm heading to gather stone for a pickaxe. Should I look for a stone vein near the crafting table I built earlier?",
+      "ts": "2026-11-08T09:30:10.163Z",
+      "status": "failed",
+      "addresseeBusy": false
+    },
+    {
+      "id": "m102",
+      "from": "Vega",
+      "to": "Cody",
+      "text": "Cody, I'm heading to gather stone for a pickaxe. Should I look for a stone vein near the crafting table I built earlier?",
+      "ts": "2026-11-08T09:36:14.592Z",
+      "status": "failed",
+      "addresseeBusy": false
+    }
+  ],
+  "guard": {
+    "Cody|Vega": {
+      "used": 0,
+      "remaining": 3,
+      "max": 3,
+      "windowMinutes": 60
+    },
+    "Geist|Vega": {
+      "used": 0,
+      "remaining": 3,
+      "max": 3,
+      "windowMinutes": 60
+    }
+  },
+  "note": "A message counts as DELIVERED only when the addressee confirms (reply naming the sender, a ledger note, or an observable act). Silence is a legal answer."
+}

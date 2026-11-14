@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "mind-call receipt agent=cody-actor status=200",
+ "last_effect_ts": "2026-11-08T20:54:29.919+00:00",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 8617s exceeds period 900s + grace (limit 2700s)",
+ "ts": "2026-11-08T23:18:07.006612Z",
+ "watcher": "governor"
+}

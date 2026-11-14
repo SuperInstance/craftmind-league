@@ -1,0 +1,9 @@
+{
+ "declared_period_s": 900,
+ "detail": "effect = receipt flow; governor is demand-driven, staleness means no calls flowed OR governor down \u2014 alarm text says which cannot be distinguished from receipts alone",
+ "emitted_at": "2026-11-14T18:58:52.268616Z",
+ "host": "thor",
+ "last_effect": "mind-call receipt agent=cody-driver status=200",
+ "last_effect_ts": "2026-11-10T11:06:24.858+00:00",
+ "watcher": "governor"
+}

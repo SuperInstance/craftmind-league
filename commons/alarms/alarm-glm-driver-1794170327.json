@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "answer id=geist-1a1ba5c7e6e-gs citizen=geist",
+ "last_effect_ts": "2026-11-08T08:54:41.362Z",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 42246s exceeds period 3600s + grace (limit 10800s)",
+ "ts": "2026-11-08T20:38:47.194072Z",
+ "watcher": "glm-driver"
+}

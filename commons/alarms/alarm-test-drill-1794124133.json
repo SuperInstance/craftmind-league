@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "rule-7 drill: synthetic watcher, intentionally stale",
+ "last_effect_ts": "2026-11-08T00:00:00Z",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "FORCED STALE (rule-7 drill)",
+ "ts": "2026-11-08T07:48:53.313258Z",
+ "watcher": "test-drill"
+}

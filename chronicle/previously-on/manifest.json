@@ -1,0 +1,60 @@
+{
+ "generator": "previously-on-1.0.0",
+ "stores": {
+  "beats_sha256": "d1b248e285589809bce04c13be65d9db73ffb24f2e6b6b38cb0006f6d06c23e9",
+  "viewings_sha256": "999c814a49e75885baa8c2142093d3cb354abb3c8090e53e027cf42118cd409e",
+  "tension_sha256_provenance_only": "e4305e5cfd0b091439dd02ecd7539fb381f00f114c374ec8ba5a98d9a5cdfd07"
+ },
+ "aired_conferred_days": {
+  "3": [
+   "w:PRE:001"
+  ],
+  "9": [
+   "w:D09:001"
+  ],
+  "10": [
+   "w:D10:001"
+  ]
+ },
+ "editions": [
+  {
+   "file": "edition-one-going-into-day-11.md",
+   "lines": 19,
+   "beat_citations": 25,
+   "beat_citations_unique": 20,
+   "viewing_citations": 2,
+   "narration_quotes": 5,
+   "aired_marks": 6,
+   "fault_markers": 13,
+   "bytes": 6202,
+   "words": 1067,
+   "sha256": "6ca4f21fb96f8dccdbfa67ef5c99f3b62e38f8ab3fd1584572eee49f03792910"
+  },
+  {
+   "file": "edition-two-full-series.md",
+   "lines": 40,
+   "beat_citations": 53,
+   "beat_citations_unique": 53,
+   "viewing_citations": 4,
+   "narration_quotes": 9,
+   "aired_marks": 4,
+   "fault_markers": 29,
+   "bytes": 10146,
+   "words": 1731,
+   "sha256": "6ae3f2b148095dd2f377025112ae4663f624101f9445a6609670f38e821da072"
+  },
+  {
+   "file": "edition-three-going-into-day-18.md",
+   "lines": 28,
+   "beat_citations": 53,
+   "beat_citations_unique": 49,
+   "viewing_citations": 0,
+   "narration_quotes": 10,
+   "aired_marks": 0,
+   "fault_markers": 22,
+   "bytes": 14228,
+   "words": 2503,
+   "sha256": "80471291ebe3b69b6da3860333081ead357a28057d89f17dd09505ce5914ccbd"
+  }
+ ]
+}

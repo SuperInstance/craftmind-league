@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "answer id=cody-mw8thwe8-pf citizen=cody",
+ "last_effect_ts": "2026-11-09T05:26:48.035Z",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 443194s exceeds period 3600s + grace (limit 10800s)",
+ "ts": "2026-11-14T08:33:22.280455Z",
+ "watcher": "glm-driver"
+}

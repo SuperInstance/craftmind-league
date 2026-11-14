@@ -1,0 +1,9 @@
+{
+ "declared_period_s": 300,
+ "detail": "external dead-man's-switch expecter NOT registered yet (rule 8c gap, declared)",
+ "emitted_at": "2026-11-14T18:58:52.314412Z",
+ "host": "thor",
+ "last_effect": "staleness sweep: 0 fresh, 7 stale",
+ "last_effect_ts": "2026-11-14T18:58:52.314416Z",
+ "watcher": "meta-watcher"
+}

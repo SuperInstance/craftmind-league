@@ -1,0 +1,52 @@
+[
+ {
+  "plan": "fixture-a-day10-replayed-as-plan",
+  "planned_minutes": 84.8,
+  "driver_wc": 303,
+  "beta_plan": 3.5731,
+  "floor_wc_per_min": 1,
+  "binding_floor": "liveness",
+  "ceiling_wc_per_min": 2.3163,
+  "proven_assets_credited": [],
+  "credit": 0,
+  "ruling": "OVER-TARGET",
+  "why": "beta_plan 3.573 wc/min > ceiling 2.316 (beta0 2.3163 with proven-asset credit 0.000). Spending must re-route: a proven asset retires its share, or the plan is re-cut. The gate rules on the plan only — it never touches the body.",
+  "notes": [
+   "Plan includes new scenario(s) but the scenario allowance A is GAP (scenario #1 authoring was never metered): this ruling covers the driver rate only and is PROVISIONAL for the scenario part.",
+   "No proven asset claimed: credit 0. The budget does not fall (beta ceiling = beta0, floored)."
+  ]
+ },
+ {
+  "plan": "fixture-b-starved-plan",
+  "planned_minutes": 120,
+  "driver_wc": 40,
+  "beta_plan": 0.3333,
+  "floor_wc_per_min": 1,
+  "binding_floor": "liveness",
+  "ceiling_wc_per_min": 2.3163,
+  "proven_assets_credited": [],
+  "credit": 0,
+  "ruling": "BELOW-FLOOR",
+  "why": "beta_plan 0.333 wc/min < floor 1.000 (binding: liveness). Under-floor spend is an ALARM, not a saving: check the logger, the route, and idleness — a starved plan produces standing-around.",
+  "notes": [
+   "No proven asset claimed: credit 0. The budget does not fall (beta ceiling = beta0, floored)."
+  ]
+ },
+ {
+  "plan": "fixture-c-bloated-no-proven-asset",
+  "planned_minutes": 85,
+  "driver_wc": 800,
+  "beta_plan": 9.4118,
+  "floor_wc_per_min": 1,
+  "binding_floor": "liveness",
+  "ceiling_wc_per_min": 2.3163,
+  "proven_assets_credited": [],
+  "credit": 0,
+  "ruling": "OVER-TARGET",
+  "why": "beta_plan 9.412 wc/min > ceiling 2.316 (beta0 2.3163 with proven-asset credit 0.000). Spending must re-route: a proven asset retires its share, or the plan is re-cut. The gate rules on the plan only — it never touches the body. HARD-CAP TERRITORY (>= 200% of ceiling): per study D.7 the response is reroute to a proven fallback — none is proven today — or defer the spend; the parent decides at the next safe point.",
+  "notes": [
+   "Plan includes new scenario(s) but the scenario allowance A is GAP (scenario #1 authoring was never metered): this ruling covers the driver rate only and is PROVISIONAL for the scenario part.",
+   "Plan names asset(s) but none meets the proof bar (>=5 live uses, >=80% success, no attributable floor event): credit 0. The budget does not fall."
+  ]
+ }
+]

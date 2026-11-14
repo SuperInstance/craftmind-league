@@ -1,0 +1,2686 @@
+{
+ "pass": 536,
+ "fail": 0,
+ "checks": [
+  {
+   "name": "determinism:edition-one-going-into-day-11.md",
+   "ok": true,
+   "detail": "disk bytes == fresh re-render"
+  },
+  {
+   "name": "determinism:edition-two-full-series.md",
+   "ok": true,
+   "detail": "disk bytes == fresh re-render"
+  },
+  {
+   "name": "determinism:edition-three-going-into-day-18.md",
+   "ok": true,
+   "detail": "disk bytes == fresh re-render"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L1:sealed:b:D09:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L1:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L1:no-day-shape:b:D09:001",
+   "ok": true,
+   "detail": "kind=scenario_placed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L1:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L2:sealed:b:D09:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L2:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L2:no-day-shape:b:D09:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L2:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L3:sealed:b:D09:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L3:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L3:no-day-shape:b:D09:003",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L3:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L4:sealed:b:D09:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L4:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L4:no-day-shape:b:D09:004",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L4:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:sealed:b:D09:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:sealed:b:D09:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:sealed:b:D09:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:fault-shown",
+   "ok": true,
+   "detail": "expected 3 marker(s), found 3"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:no-day-shape:b:D09:005",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:no-day-shape:b:D09:006",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:no-day-shape:b:D09:008",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L5:citation-floor",
+   "ok": true,
+   "detail": "3 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L6:sealed:b:D09:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L6:sealed:b:D03:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L6:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L6:no-day-shape:b:D09:007",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L6:no-day-shape:b:D03:008",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L6:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L7:sealed:b:D10:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L7:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L7:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L7:no-day-shape:b:D10:004",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L7:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L8:sealed:b:D10:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L8:narration-verbatim:b:D10:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L8:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L8:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L8:no-day-shape:b:D10:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L8:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:sealed:b:D10:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:sealed:b:D10:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:narration-verbatim:b:D10:002",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:no-day-shape:b:D10:001",
+   "ok": true,
+   "detail": "kind=scenario_placed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:no-day-shape:b:D10:002",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L9:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L10:sealed:b:D10:009",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L10:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L10:no-day-shape:b:D10:009",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L10:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L11:sealed:b:D10:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L11:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L11:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L11:no-day-shape:b:D10:005",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L11:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:sealed:b:D04:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:sealed:b:D05:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:narration-verbatim:b:D05:001",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:fault-shown",
+   "ok": true,
+   "detail": "expected 2 marker(s), found 2"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:no-day-shape:b:D04:005",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:no-day-shape:b:D05:001",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L12:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L13:sealed:b:D10:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L13:narration-verbatim:b:D10:005",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L13:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L13:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L13:no-day-shape:b:D10:005",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L13:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L14:sealed:b:D02:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L14:narration-verbatim:b:D02:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L14:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L14:no-day-shape:b:D02:003",
+   "ok": true,
+   "detail": "kind=thread_open"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L14:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L15:sealed:b:D10:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L15:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L15:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L15:no-day-shape:b:D10:006",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L15:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L16:sealed:b:D10:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L16:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L16:no-day-shape:b:D10:007",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L16:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:sealed:b:D10:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:sealed:b:D10:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:sealed:b:D10:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:sealed:b:D10:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:no-day-shape:b:D10:004",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:no-day-shape:b:D10:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:no-day-shape:b:D10:006",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:no-day-shape:b:D10:002",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L17:citation-floor",
+   "ok": true,
+   "detail": "4 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L18:viewing-exists:w:D09:001",
+   "ok": true,
+   "detail": "resolves"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L18:testimony-verbatim:w:D09:001",
+   "ok": true,
+   "detail": "quoted bytes == viewing row words"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L18:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L18:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L19:viewing-exists:w:D10:001",
+   "ok": true,
+   "detail": "resolves"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L19:testimony-verbatim:w:D10:001",
+   "ok": true,
+   "detail": "quoted bytes == viewing row words"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L19:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:L19:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:no-tension-citation",
+   "ok": true,
+   "detail": "no [t: citation anywhere"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:tension-word-meta-only",
+   "ok": true,
+   "detail": "word confined to meta lines + the provenance footer"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:tension-footer-provenance-only",
+   "ok": true,
+   "detail": "the footer's only mention is the provenance hash, content unread"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:tension-meta-labelled",
+   "ok": true,
+   "detail": "every meta mention carries the NOT-PROMOTED gate label"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:triple-021",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:scenario-002",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:scenario #2",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:SCENARIO-002",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:tread",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:setblock",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:axis=z",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:prediction",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:loosening",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:shoulder step",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:(65, 66",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:(65,66",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-one-going-into-day-11.md:denylist:65 66 -88",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:L1:viewing-exists:w:STD:001",
+   "ok": true,
+   "detail": "resolves"
+  },
+  {
+   "name": "edition-two-full-series.md:L1:testimony-verbatim:w:STD:001",
+   "ok": true,
+   "detail": "quoted bytes == viewing row words"
+  },
+  {
+   "name": "edition-two-full-series.md:L1:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L1:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L2:sealed:b:PRE:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L2:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L2:no-day-shape:b:PRE:001",
+   "ok": true,
+   "detail": "kind=thread_open"
+  },
+  {
+   "name": "edition-two-full-series.md:L2:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L3:sealed:b:PRE:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L3:sealed:b:PRE:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L3:fault-shown",
+   "ok": true,
+   "detail": "expected 2 marker(s), found 2"
+  },
+  {
+   "name": "edition-two-full-series.md:L3:no-day-shape:b:PRE:002",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L3:no-day-shape:b:PRE:003",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L3:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L4:sealed:b:D01:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L4:sealed:b:D01:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L4:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L4:no-day-shape:b:D01:001",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L4:no-day-shape:b:D01:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L4:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L5:sealed:b:D01:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L5:narration-verbatim:b:D01:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L5:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L5:no-day-shape:b:D01:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L5:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L6:sealed:b:D01:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L6:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L6:no-day-shape:b:D01:004",
+   "ok": true,
+   "detail": "kind=near_miss"
+  },
+  {
+   "name": "edition-two-full-series.md:L6:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L7:sealed:b:D01:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L7:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L7:no-day-shape:b:D01:005",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L7:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L8:sealed:b:D02:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L8:sealed:b:D02:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L8:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L8:no-day-shape:b:D02:001",
+   "ok": true,
+   "detail": "kind=scenario_placed"
+  },
+  {
+   "name": "edition-two-full-series.md:L8:no-day-shape:b:D02:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L8:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L9:sealed:b:D02:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L9:narration-verbatim:b:D02:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L9:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L9:no-day-shape:b:D02:003",
+   "ok": true,
+   "detail": "kind=thread_open"
+  },
+  {
+   "name": "edition-two-full-series.md:L9:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L10:sealed:b:D02:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L10:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L10:no-day-shape:b:D02:004",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L10:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L11:sealed:b:D03:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L11:sealed:b:D03:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L11:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L11:no-day-shape:b:D03:001",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L11:no-day-shape:b:D03:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L11:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L12:sealed:b:D03:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L12:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L12:no-day-shape:b:D03:003",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L12:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:sealed:b:D03:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:sealed:b:D03:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:sealed:b:D03:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:sealed:b:D03:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:fault-shown",
+   "ok": true,
+   "detail": "expected 4 marker(s), found 4"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:no-day-shape:b:D03:004",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:no-day-shape:b:D03:005",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:no-day-shape:b:D03:006",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:no-day-shape:b:D03:007",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L13:citation-floor",
+   "ok": true,
+   "detail": "4 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L14:sealed:b:D03:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L14:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L14:no-day-shape:b:D03:008",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L14:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L15:sealed:b:D03:009",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L15:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L15:no-day-shape:b:D03:009",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L15:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L16:sealed:b:D04:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L16:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L16:no-day-shape:b:D04:001",
+   "ok": true,
+   "detail": "kind=thread_close"
+  },
+  {
+   "name": "edition-two-full-series.md:L16:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L17:sealed:b:D04:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L17:narration-verbatim:b:D04:002",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L17:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L17:no-day-shape:b:D04:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L17:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L18:sealed:b:D04:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L18:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L18:no-day-shape:b:D04:003",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-two-full-series.md:L18:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L19:sealed:b:D04:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L19:narration-verbatim:b:D04:004",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L19:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L19:no-day-shape:b:D04:004",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L19:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L20:sealed:b:D04:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L20:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L20:no-day-shape:b:D04:005",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L20:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L21:sealed:b:D04:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L21:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L21:no-day-shape:b:D04:006",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L21:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L22:sealed:b:D05:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L22:narration-verbatim:b:D05:001",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L22:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L22:no-day-shape:b:D05:001",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L22:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L23:sealed:b:D05:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L23:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L23:no-day-shape:b:D05:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L23:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L24:sealed:b:D05:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L24:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L24:no-day-shape:b:D05:003",
+   "ok": true,
+   "detail": "kind=near_miss"
+  },
+  {
+   "name": "edition-two-full-series.md:L24:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L25:sealed:b:D05:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L25:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L25:no-day-shape:b:D05:004",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L25:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L26:sealed:b:D06:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L26:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L26:no-day-shape:b:D06:001",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L26:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L27:sealed:b:D06:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L27:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L27:no-day-shape:b:D06:002",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L27:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L28:sealed:b:D07:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L28:sealed:b:D07:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L28:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L28:no-day-shape:b:D07:001",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L28:no-day-shape:b:D07:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L28:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:sealed:b:D07:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:sealed:b:D07:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:narration-verbatim:b:D07:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:no-day-shape:b:D07:003",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:no-day-shape:b:D07:004",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L29:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L30:sealed:b:D08:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L30:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L30:no-day-shape:b:D08:001",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L30:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L31:sealed:b:D09:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L31:sealed:b:D09:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L31:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L31:no-day-shape:b:D09:001",
+   "ok": true,
+   "detail": "kind=scenario_placed"
+  },
+  {
+   "name": "edition-two-full-series.md:L31:no-day-shape:b:D09:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L31:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L32:sealed:b:D09:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L32:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L32:no-day-shape:b:D09:003",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L32:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:sealed:b:D09:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:sealed:b:D09:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:sealed:b:D09:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:sealed:b:D09:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:fault-shown",
+   "ok": true,
+   "detail": "expected 3 marker(s), found 3"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:no-day-shape:b:D09:004",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:no-day-shape:b:D09:005",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:no-day-shape:b:D09:006",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:no-day-shape:b:D09:007",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-two-full-series.md:L33:citation-floor",
+   "ok": true,
+   "detail": "4 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L34:sealed:b:D09:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L34:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L34:no-day-shape:b:D09:008",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L34:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:sealed:b:D10:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:sealed:b:D10:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:narration-verbatim:b:D10:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:no-day-shape:b:D10:004",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:no-day-shape:b:D10:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-two-full-series.md:L35:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:sealed:b:D10:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:sealed:b:D10:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:narration-verbatim:b:D10:002",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:no-day-shape:b:D10:001",
+   "ok": true,
+   "detail": "kind=scenario_placed"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:no-day-shape:b:D10:002",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-two-full-series.md:L36:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L37:sealed:b:D10:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L37:narration-verbatim:b:D10:005",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-two-full-series.md:L37:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-two-full-series.md:L37:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L37:no-day-shape:b:D10:005",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L37:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L38:sealed:b:D10:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L38:aired-resolves:w:D10:001",
+   "ok": true,
+   "detail": "confers=true anchor-day-matches-all-beats=true"
+  },
+  {
+   "name": "edition-two-full-series.md:L38:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L38:no-day-shape:b:D10:006",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-two-full-series.md:L38:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L39:sealed:b:D10:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-two-full-series.md:L39:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-two-full-series.md:L39:no-day-shape:b:D10:007",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-two-full-series.md:L39:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:L40:viewing-exists:w:PRE:001",
+   "ok": true,
+   "detail": "resolves"
+  },
+  {
+   "name": "edition-two-full-series.md:L40:viewing-exists:w:D09:001",
+   "ok": true,
+   "detail": "resolves"
+  },
+  {
+   "name": "edition-two-full-series.md:L40:viewing-exists:w:D10:001",
+   "ok": true,
+   "detail": "resolves"
+  },
+  {
+   "name": "edition-two-full-series.md:L40:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-two-full-series.md:L40:citation-floor",
+   "ok": true,
+   "detail": "3 citation(s) on line"
+  },
+  {
+   "name": "edition-two-full-series.md:no-tension-citation",
+   "ok": true,
+   "detail": "no [t: citation anywhere"
+  },
+  {
+   "name": "edition-two-full-series.md:tension-word-meta-only",
+   "ok": true,
+   "detail": "word confined to meta lines + the provenance footer"
+  },
+  {
+   "name": "edition-two-full-series.md:tension-footer-provenance-only",
+   "ok": true,
+   "detail": "the footer's only mention is the provenance hash, content unread"
+  },
+  {
+   "name": "edition-two-full-series.md:tension-meta-labelled",
+   "ok": true,
+   "detail": "every meta mention carries the NOT-PROMOTED gate label"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:triple-021",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:scenario-002",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:scenario #2",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:SCENARIO-002",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:tread",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:setblock",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:axis=z",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:prediction",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:loosening",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:shoulder step",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:(65, 66",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:(65,66",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:denylist:65 66 -88",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-two-full-series.md:aired-claim",
+   "ok": true,
+   "detail": "conferred days recomputed = [3,9,10], claimed = [3,9,10]"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L1:sealed:b:D11:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L1:sealed:b:D11:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L1:fault-shown",
+   "ok": true,
+   "detail": "expected 2 marker(s), found 2"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L1:no-day-shape:b:D11:001",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L1:no-day-shape:b:D11:003",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L1:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L2:sealed:b:D11:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L2:sealed:b:D11:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L2:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L2:no-day-shape:b:D11:006",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L2:no-day-shape:b:D11:007",
+   "ok": true,
+   "detail": "kind=thread_close"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L2:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L3:sealed:b:D11:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L3:narration-verbatim:b:D11:008",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L3:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L3:no-day-shape:b:D11:008",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L3:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L4:sealed:b:D11:010",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L4:sealed:b:D11:015",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L4:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L4:no-day-shape:b:D11:010",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L4:no-day-shape:b:D11:015",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L4:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:sealed:b:D11:012",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:sealed:b:D11:013",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:narration-verbatim:b:D11:013",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:no-day-shape:b:D11:012",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:no-day-shape:b:D11:013",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L5:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L6:sealed:b:D11:014",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L6:sealed:b:D11:017",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L6:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L6:no-day-shape:b:D11:014",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L6:no-day-shape:b:D11:017",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L6:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L7:sealed:b:D12:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L7:narration-verbatim:b:D12:002",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L7:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L7:no-day-shape:b:D12:002",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L7:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L8:sealed:b:D12:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L8:narration-verbatim:b:D12:003",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L8:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L8:no-day-shape:b:D12:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L8:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L9:sealed:b:D12:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L9:sealed:b:D12:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L9:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L9:no-day-shape:b:D12:004",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L9:no-day-shape:b:D12:005",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L9:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L10:sealed:b:D12:010",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L10:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L10:no-day-shape:b:D12:010",
+   "ok": true,
+   "detail": "kind=scenario_response"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L10:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L11:sealed:b:D12:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L11:sealed:b:D12:009",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L11:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L11:no-day-shape:b:D12:007",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L11:no-day-shape:b:D12:009",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L11:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L12:sealed:b:D13:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L12:sealed:b:D13:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L12:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L12:no-day-shape:b:D13:001",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L12:no-day-shape:b:D13:002",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L12:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:sealed:b:D13:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:sealed:b:D13:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:narration-verbatim:b:D13:004",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:no-day-shape:b:D13:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:no-day-shape:b:D13:004",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L13:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:sealed:b:D13:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:sealed:b:D13:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:sealed:b:D13:007",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:fault-shown",
+   "ok": true,
+   "detail": "expected 3 marker(s), found 3"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:no-day-shape:b:D13:005",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:no-day-shape:b:D13:006",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:no-day-shape:b:D13:007",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L14:citation-floor",
+   "ok": true,
+   "detail": "3 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L15:sealed:b:D14:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L15:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L15:no-day-shape:b:D14:001",
+   "ok": true,
+   "detail": "kind=thread_close"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L15:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:sealed:b:D14:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:sealed:b:D14:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:narration-verbatim:b:D14:004",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:no-day-shape:b:D14:003",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:no-day-shape:b:D14:004",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L16:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:sealed:b:D14:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:sealed:b:D14:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:narration-verbatim:b:D14:006",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:fault-shown",
+   "ok": true,
+   "detail": "expected 2 marker(s), found 2"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:no-day-shape:b:D14:006",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:no-day-shape:b:D14:005",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L17:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L18:sealed:b:D14:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L18:sealed:b:D14:009",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L18:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L18:no-day-shape:b:D14:008",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L18:no-day-shape:b:D14:009",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L18:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L19:sealed:b:D15:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L19:sealed:b:D15:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L19:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L19:no-day-shape:b:D15:003",
+   "ok": true,
+   "detail": "kind=death"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L19:no-day-shape:b:D15:001",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L19:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L20:sealed:b:D15:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L20:narration-verbatim:b:D15:002",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L20:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L20:no-day-shape:b:D15:002",
+   "ok": true,
+   "detail": "kind=near_miss"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L20:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:sealed:b:D15:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:sealed:b:D15:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:narration-verbatim:b:D15:006",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:no-day-shape:b:D15:005",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:no-day-shape:b:D15:006",
+   "ok": true,
+   "detail": "kind=recurrence"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L21:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:sealed:b:D16:001",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:sealed:b:D16:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:narration-verbatim:b:D16:002",
+   "ok": true,
+   "detail": "quoted bytes == beat narration field"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:no-day-shape:b:D16:001",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:no-day-shape:b:D16:002",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L22:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L23:sealed:b:D16:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L23:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L23:no-day-shape:b:D16:003",
+   "ok": true,
+   "detail": "kind=near_miss"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L23:citation-floor",
+   "ok": true,
+   "detail": "1 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:sealed:b:D17:002",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:sealed:b:D17:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:sealed:b:D17:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:fault-shown",
+   "ok": true,
+   "detail": "expected 3 marker(s), found 3"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:no-day-shape:b:D17:002",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:no-day-shape:b:D17:003",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:no-day-shape:b:D17:004",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L24:citation-floor",
+   "ok": true,
+   "detail": "3 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L25:sealed:b:D17:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L25:sealed:b:D17:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L25:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L25:no-day-shape:b:D17:006",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L25:no-day-shape:b:D17:008",
+   "ok": true,
+   "detail": "kind=thread_close"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L25:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L26:sealed:b:D17:005",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L26:sealed:b:D17:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L26:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L26:no-day-shape:b:D17:005",
+   "ok": true,
+   "detail": "kind=thread_open"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L26:no-day-shape:b:D17:008",
+   "ok": true,
+   "detail": "kind=thread_close"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L26:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:sealed:b:D11:016",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:sealed:b:D12:003",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:sealed:b:D14:009",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:sealed:b:D17:004",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:fault-shown",
+   "ok": true,
+   "detail": "expected 1 marker(s), found 1"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:no-day-shape:b:D11:016",
+   "ok": true,
+   "detail": "kind=thread_open"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:no-day-shape:b:D12:003",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:no-day-shape:b:D14:009",
+   "ok": true,
+   "detail": "kind=first"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:no-day-shape:b:D17:004",
+   "ok": true,
+   "detail": "kind=crew_fault"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L27:citation-floor",
+   "ok": true,
+   "detail": "4 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L28:sealed:b:D15:008",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L28:sealed:b:D16:006",
+   "ok": true,
+   "detail": "status=sealed"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L28:fault-shown",
+   "ok": true,
+   "detail": "expected 0 marker(s), found 0"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L28:no-day-shape:b:D15:008",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L28:no-day-shape:b:D16:006",
+   "ok": true,
+   "detail": "kind=floor_act"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:L28:citation-floor",
+   "ok": true,
+   "detail": "2 citation(s) on line"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:no-tension-citation",
+   "ok": true,
+   "detail": "no [t: citation anywhere"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:tension-word-meta-only",
+   "ok": true,
+   "detail": "word confined to meta lines + the provenance footer"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:tension-footer-provenance-only",
+   "ok": true,
+   "detail": "the footer's only mention is the provenance hash, content unread"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:tension-meta-labelled",
+   "ok": true,
+   "detail": "every meta mention carries the NOT-PROMOTED gate label"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:triple-021",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:scenario-002",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:scenario #2",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:SCENARIO-002",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:tread",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:setblock",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:axis=z",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:prediction",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:loosening",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:shoulder step",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:(65, 66",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:(65,66",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "edition-three-going-into-day-18.md:denylist:65 66 -88",
+   "ok": true,
+   "detail": "absent"
+  },
+  {
+   "name": "aired:w:ARM:001-confers-nothing",
+   "ok": true,
+   "detail": "exposure-only row confers no aired"
+  },
+  {
+   "name": "aired:w:STD:001-confers-nothing",
+   "ok": true,
+   "detail": "standard row (watched nothing) confers no aired"
+  }
+ ]
+}

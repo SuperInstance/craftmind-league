@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "mind-call receipt agent=vega status=200",
+ "last_effect_ts": "2026-11-08T09:40:48.409+00:00",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 17689s exceeds period 900s + grace (limit 2700s)",
+ "ts": "2026-11-08T14:35:36.983512Z",
+ "watcher": "governor"
+}

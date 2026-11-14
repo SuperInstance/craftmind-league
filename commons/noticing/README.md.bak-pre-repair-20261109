@@ -1,0 +1,47 @@
+# The noticing duty — Jameson's reading of the books
+
+**What this is.** A periodic read of the house's existing books — the governor
+ledger, the league pulse ledger, the death tracker, the scoreboard, the consult
+books — printed as one report per programme day: who consumed, who was denied,
+who died, what was contributed, per identity, with the top imbalance named.
+
+**Why it exists.** The Production Charter (SS4.3) makes Jameson the keeper of
+the house's books and the allocator of its genuine scarcity — and files, inside
+the hat's failure signature, the duty nobody had owned: *reading the books and
+surfacing what they show before it compounds*. Murray Fife's village supplied
+the evidence (Twelve Lives digest, steal #1): a 46-to-7 contribution imbalance,
+fully recorded, that changed nothing because noticing it was nobody's job. Our
+own governor's silent 120/120 default was the same shape in our own house.
+**If Jameson is staffed, staff him for the noticing; the books themselves do
+not need a person.** Casey adopted the duty 2026-11-08 (full-bore mandate).
+
+**Owner.** The noticing duty is a *function*, not a seat. Until separately
+staffed it is worn by the Pull — the borrowed apron, labelled as such
+(Production Charter SS4.3 staffing note). Any worker wearing the duty produces
+the report from the stores, never from another worker's summary (the charter's
+two-source discipline).
+
+**Why it lives here.** The report reads the league's books and serves every
+programme that spends through the one governor — league, town, syndicate — so
+it sits on the league commons shelf beside the other shared stores (consults,
+scoreboard, triples), not inside any one programme's manifest. The town's
+manifest points here (`~/npc-town/manifest/town-1-drafting-inputs.md`).
+
+**Cadence.** Daily, after the programme day closes (programme day = AKST
+calendar day). Command:
+
+```
+python3 ~/craftmind-league/commons/noticing/noticing.py --day YYYY-MM-DD [--notes FILE]
+```
+
+`--day` defaults to today AKST; the normal run passes yesterday. The optional
+`--notes` file carries the duty-wearer's interpretation, appended verbatim and
+labelled — the tables are machine-read from the stores and are never edited.
+
+**Kill criterion.** If three consecutive reports name nothing anyone acts on,
+the report is theatre and stops — and the stop is filed in this directory.
+**Lapse rule.** If the report lapses twice, the lapse itself is the evidence
+for staffing the duty separately (Production Charter SS9, move 4).
+
+**Reports.** `report-YYYY-MM-DD.md`, one per programme day, append-only.
+Report #1: `report-2026-11-08.md` (the full-bore adoption day).

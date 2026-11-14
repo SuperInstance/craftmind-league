@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "answer id=vega-1a1ba17d9e6-wt citizen=vega",
+ "last_effect_ts": "2026-11-08T07:38:48.050Z",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 265999s exceeds period 3600s + grace (limit 10800s)",
+ "ts": "2026-11-11T09:32:06.985467Z",
+ "watcher": "minimax-driver"
+}

@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "moment m0846 citizen=None kind=quiet-beauty",
+ "last_effect_ts": "2026-11-08T23:46:50.000Z",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 187397s exceeds period 600s + grace (limit 1800s)",
+ "ts": "2026-11-11T03:50:06.984906Z",
+ "watcher": "curator"
+}

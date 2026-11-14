@@ -1,0 +1,71 @@
+{
+ "derived_for": "next citizen day (day 11 shape)",
+ "baseline_window_days": [
+  12,
+  15,
+  16
+ ],
+ "valid_days": [
+  1,
+  2,
+  4,
+  10,
+  12,
+  15,
+  16
+ ],
+ "beta_by_window_day": {
+  "12": 3.9747,
+  "15": 2.3163,
+  "16": 2.1657
+ },
+ "beta0_driver_wc_per_min": 2.3163,
+ "beta_noise_band": [
+  2.1657,
+  3.9747
+ ],
+ "C_compilable_share_wc": 0.7758,
+ "C_compilable_share_calls": 0.7861,
+ "nu_novelty_share": 0.2242,
+ "r_residual": 0.1,
+ "beta_inf_accounting_target": 0.6991,
+ "compilable_keys_count": 33,
+ "assets": [
+  {
+   "asset": "furnace-sequence",
+   "status": "ADMITTED-WITH-UNPROVEN-TAIL",
+   "live_uses": 7,
+   "proven": true,
+   "retired_share": 0
+  }
+ ],
+ "credit": 0,
+ "budget_falls": false,
+ "beta_floor_driver_wc_per_min": 1,
+ "floors": {
+  "novelty_wc_per_min": 0.6492,
+  "liveness_wc_per_min": 1,
+  "character_wc_per_min": 0.0706,
+  "audit_judge_per_day": {
+   "value_wc": 5,
+   "basis": "max(5 per day, 5% of beta0_judge); beta0_judge is GAP (no judge baseline exists), so the 5-per-day term stands alone"
+  }
+ },
+ "beta_next_operative_ceiling": 2.3163,
+ "scenario_allowance_A_wc": null,
+ "day_budget_driver_wc": 196.8855,
+ "day_budget_note": "B = beta_next x 85 planned min = 196.8855 wc, PLUS A x 1 new scenario(s) with A = GAP (unmeasured). The no-new-scenario budget is the numeric figure.",
+ "hard_cap_driver_wc": 393.771,
+ "hard_cap_note": "Study D.7: at >= 200% the response is reroute to a PROVEN fallback or defer — never a floor act, never the body. No proven fallback exists today.",
+ "next_day_shape": {
+  "planned_minutes": 85,
+  "n_new_scenarios": 1,
+  "scenario_beats": 1,
+  "basis": "pulse/DAY11-CHARTER-DRAFT-20261109.md (85 min drafted from day 10; scenario #2 single element, one beat)"
+ },
+ "kappa_by_window_day": {
+  "12": 2.144,
+  "15": 2.2124,
+  "16": 7.9565
+ }
+}

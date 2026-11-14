@@ -1,0 +1,21 @@
+{
+ "compiled_utc": "2026-11-10T15:28:02.895Z",
+ "compiler": "chronicle-compile 1.0.0",
+ "dossiers": {
+  "director-days9-10": {
+   "file": "dossiers/director-days9-10.md",
+   "sha256": "a869726fd975c8487406f36df10a12d6b376c3f381554ce9eb07856ff122b52f",
+   "bytes": 8494
+  },
+  "cold-reader-day3": {
+   "file": "dossiers/cold-reader-day3.md",
+   "sha256": "941b8a133f60779a4dc2c8546b6c815a4e29601e721d8acc9919272674a974ed",
+   "bytes": 2749
+  }
+ },
+ "stores": {
+  "beats.jsonl": "d1b248e285589809bce04c13be65d9db73ffb24f2e6b6b38cb0006f6d06c23e9",
+  "viewings.jsonl": "999c814a49e75885baa8c2142093d3cb354abb3c8090e53e027cf42118cd409e",
+  "tension-series.jsonl": "e4305e5cfd0b091439dd02ecd7539fb381f00f114c374ec8ba5a98d9a5cdfd07"
+ }
+}

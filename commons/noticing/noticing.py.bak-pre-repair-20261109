@@ -1,0 +1,286 @@
+#!/usr/bin/env python3
+"""noticing.py — the Jameson noticing report (Production Charter SS4.3; Twelve Lives steal #1).
+
+Reads the books that already exist -- the governor ledger (mind-calls), the league
+pulse ledger, the death tracker, the scoreboard, the consult books -- and prints
+what they show: who consumed, who was denied, who died, what was contributed,
+per identity, over one programme day. It keeps no books of its own and writes
+nothing but its report.
+
+Owner: the noticing duty -- a FUNCTION, worn by the Pull until separately
+staffed (Production Charter SS4.3, borrowed apron, labelled).
+Cadence: daily, after the programme day closes (programme day = AKST calendar day).
+Kill criterion (Twelve Lives digest, steal 1): if three consecutive reports name
+nothing anyone acts on, the report is theatre and stops -- and the stop is filed.
+
+Usage: python3 noticing.py [--day YYYY-MM-DD] [--out PATH] [--notes FILE]
+  --day    AKST programme day to read (default: today AKST; pass yesterday for
+           the normal after-close run).
+  --notes  optional markdown file appended verbatim under a labelled
+           duty-wearer's-notes section (interpretation stays labelled as such;
+           the tables above it are machine-read from the stores).
+Stdlib only. Tolerant parsers: a torn or unparseable line is counted, not fatal.
+"""
+import argparse
+import collections
+import json
+import os
+import sys
+from datetime import datetime, timedelta, timezone
+
+HOME = os.path.expanduser("~")
+LEAGUE = os.path.join(HOME, "craftmind-league")
+TOWN = os.path.join(HOME, "npc-town")
+AKST = timezone(timedelta(hours=-9))
+
+# WP-D's fourteen town identities: eight citizen body keys + six engine keys.
+TOWN_CAST_KEYS = ["town-maren", "town-ilya", "town-anka", "town-theo",
+                  "town-stian", "town-runa", "town-vera", "town-tomas"]
+TOWN_ENGINE_KEYS = ["town-roster", "town-social", "town-stock",
+                    "town-works", "town-smith", "town-reflect"]
+
+
+def parse_ts(s):
+    if not s or not isinstance(s, str):
+        return None
+    try:
+        return datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def load_jsonl(path):
+    rows, bad = [], 0
+    if not os.path.exists(path):
+        return rows, bad, False
+    with open(path, errors="replace") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rows.append(json.loads(line))
+            except Exception:
+                bad += 1
+    return rows, bad, True
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--day", default=None)
+    ap.add_argument("--out", default=None)
+    ap.add_argument("--notes", default=None)
+    args = ap.parse_args()
+
+    if args.day:
+        day = datetime.strptime(args.day, "%Y-%m-%d").date()
+    else:
+        day = datetime.now(AKST).date()
+    w0 = datetime(day.year, day.month, day.day, tzinfo=AKST).astimezone(timezone.utc)
+    w1 = w0 + timedelta(days=1)
+
+    def inw(ts):
+        t = parse_ts(ts)
+        return t is not None and w0 <= t < w1
+
+    out = []
+    out.append("# Noticing report — programme day %s (AKST)" % day.isoformat())
+    out.append("")
+    out.append("**The noticing duty** (Jameson's hat, Production Charter §4.3; "
+               "Twelve Lives steal #1). Owner: the noticing duty, worn by the "
+               "Pull until separately staffed. Window: %s → %s UTC. "
+               "Sources are read, never written, by this report."
+               % (w0.isoformat(), w1.isoformat()))
+    out.append("")
+
+    # ---- the books' own state -------------------------------------------------
+    cfg_path = os.path.join(LEAGUE, "config", "governor.json")
+    identities, budget_agents = [], {}
+    if os.path.exists(cfg_path):
+        cfg = json.load(open(cfg_path))
+        identities = [k for k in cfg.get("agentUpstreams", {}) if not k.startswith("_")]
+        budget_agents = cfg.get("budgets", {}).get("agents", {})
+    out.append("## The books consulted")
+    out.append("")
+    srcs = [
+        ("Governor ledger", os.path.join(LEAGUE, "ledger", "mind-calls.jsonl")),
+        ("Pulse ledger", os.path.join(LEAGUE, "pulse", "ledger.jsonl")),
+        ("Death tracker", os.path.join(LEAGUE, "pulse", "deaths.jsonl")),
+        ("Scoreboard", os.path.join(LEAGUE, "commons", "SCOREBOARD.jsonl")),
+        ("Consults (glm)", os.path.join(LEAGUE, "commons", "consults", "glm.jsonl")),
+        ("Consults (minimax)", os.path.join(LEAGUE, "commons", "consults", "minimax.jsonl")),
+    ]
+    counts = {}
+    for name, p in srcs:
+        rows, bad, exists = load_jsonl(p)
+        counts[name] = (len(rows), bad, exists)
+        out.append("- %s: %s (%d lines%s)" % (
+            name, p.replace(HOME, "~"), len(rows),
+            (", %d unparseable" % bad) if bad else ""))
+    out.append("- Governor config: %d routed identities (%s); explicit budgets: %s; "
+               "all other keys ride the permissive default."
+               % (len(identities), ", ".join(sorted(identities)),
+                  ", ".join(sorted(budget_agents)) or "none"))
+    out.append("")
+
+    # ---- consumption: the governor ledger ------------------------------------
+    mc, _, _ = load_jsonl(os.path.join(LEAGUE, "ledger", "mind-calls.jsonl"))
+    agg = {}
+    for r in mc:
+        if not inw(r.get("ts", "")):
+            continue
+        a = agg.setdefault(r.get("agent", "?"),
+                           {"calls": 0, "ok": 0, "ms": 0.0, "tok": 0, "st": collections.Counter()})
+        a["calls"] += 1
+        a["ms"] += r.get("mind_seconds", 0) or 0
+        a["tok"] += r.get("total_tokens", 0) or 0
+        a["st"][r.get("status")] += 1
+        if r.get("status") == 200:
+            a["ok"] += 1
+    tot_calls = sum(a["calls"] for a in agg.values())
+    tot_ms = sum(a["ms"] for a in agg.values())
+    tot_denied = sum(a["st"].get(429, 0) for a in agg.values())
+    out.append("## Consumption — governor mind-calls")
+    out.append("")
+    out.append("Total: **%d calls, %.1f mind-seconds**, %d denied (429)."
+               % (tot_calls, tot_ms, tot_denied))
+    out.append("")
+    out.append("| identity | calls | ok | denied | mind-s | share | tokens |")
+    out.append("|---|---:|---:|---:|---:|---:|---:|")
+    for name, a in sorted(agg.items(), key=lambda kv: -kv[1]["ms"]):
+        share = (100.0 * a["ms"] / tot_ms) if tot_ms else 0.0
+        out.append("| %s | %d | %d | %d | %.1f | %.1f%% | %d |"
+                   % (name, a["calls"], a["ok"], a["st"].get(429, 0), a["ms"], share, a["tok"]))
+    silent = [i for i in identities if i not in agg]
+    if silent:
+        out.append("")
+        out.append("Routed identities with **no calls** this day: %s." % ", ".join(sorted(silent)))
+    out.append("")
+
+    # ---- deaths ---------------------------------------------------------------
+    deaths, _, _ = load_jsonl(os.path.join(LEAGUE, "pulse", "deaths.jsonl"))
+    dwin = [r for r in deaths if inw(r.get("ts", ""))]
+    out.append("## Deaths")
+    out.append("")
+    out.append("%d in window%s. The tracker carries no citizen field; the "
+               "programme record attributes this file to the resident citizen "
+               "(Cody) — stated as attribution, not as a field read."
+               % (len(dwin), (": " + ", ".join(r["ts"] for r in dwin)) if dwin else ""))
+    out.append("")
+
+    # ---- contributions the stores can see ------------------------------------
+    out.append("## Contributions — where the stores support it")
+    out.append("")
+    sb, _, _ = load_jsonl(os.path.join(LEAGUE, "commons", "SCOREBOARD.jsonl"))
+    sbw = collections.Counter()
+    for r in sb:
+        ts = r.get("ts") or (r.get("evidence") or {}).get("tick", "")
+        if inw(ts):
+            sbw[(r.get("citizen", "?"), r.get("stage", "?"), r.get("event", "?"))] += 1
+    if sbw:
+        for (cit, stage, ev), n in sorted(sbw.items()):
+            out.append("- Scoreboard: %s, %s, %s × %d" % (cit, stage, ev, n))
+    else:
+        out.append("- Scoreboard: no events in window.")
+    for comm in ("glm", "minimax"):
+        rows, _, _ = load_jsonl(os.path.join(LEAGUE, "commons", "consults", comm + ".jsonl"))
+        cw = collections.Counter(r.get("citizen", "?") for r in rows if inw(r.get("ts", "")))
+        if cw:
+            out.append("- Consults asked via %s: %s"
+                       % (comm, ", ".join("%s × %d" % kv for kv in sorted(cw.items()))))
+    pl, _, _ = load_jsonl(os.path.join(LEAGUE, "pulse", "ledger.jsonl"))
+    plw = [r for r in pl if inw(r.get("ts", ""))]
+    kinds = collections.Counter(r.get("kind", "?") for r in plw)
+    out.append("- Pulse ledger: %d lines written in window; kinds: %s"
+               % (len(plw), ", ".join("%s %d" % kv for kv in kinds.most_common())))
+    out.append("")
+    out.append("Confirmations vs consumption (the TOWN-WANT-1 / D2 ratio) is "
+               "**not computable from tonight's stores**: no town day has run, "
+               "so no confirmation store exists yet. The ratio is specified in "
+               "`~/npc-town/manifest/town-1-drafting-inputs.md`; this section "
+               "carries it from the first town day.")
+    out.append("")
+
+    # ---- rule-flagged imbalances ----------------------------------------------
+    flags = []
+    if agg:
+        top_name, top_a = max(agg.items(), key=lambda kv: kv[1]["ms"])
+        share = (100.0 * top_a["ms"] / tot_ms) if tot_ms else 0.0
+        flags.append("**Top imbalance:** `%s` consumed %.1f of %.1f mind-seconds "
+                     "(%.1f%% of the day) in %d calls — the day's thinking was "
+                     "mostly one citizen's driver."
+                     % (top_name, top_a["ms"], tot_ms, share, top_a["calls"]))
+        heavy = [(n, a) for n, a in agg.items() if a["calls"] >= 3]
+        if heavy:
+            n2, a2 = max(heavy, key=lambda kv: kv[1]["ms"] / kv[1]["calls"])
+            flags.append("Heaviest single calls: `%s` averaged %.1f mind-s/call "
+                         "over %d calls — few calls, long thoughts."
+                         % (n2, a2["ms"] / a2["calls"], a2["calls"]))
+    cast_spend = {n: agg[n] for n in TOWN_CAST_KEYS if n in agg}
+    if cast_spend:
+        # A cast join is proven from the CAST MANIFEST (.dat sha table), never
+        # from a bare players/data listing: operator/test bodies (the WP-B
+        # substrate probe, the F4 harm spot-check body WPAHarm) legitimately
+        # leave .dat files on the town server without being cast joins. The
+        # manifest cell starts "PENDING -- no join has occurred"; a real join
+        # replaces that citizen's cell, and only that cell, with a sha256.
+        manifest = os.path.join(TOWN, "manifest", "cast-manifest.md")
+        joined_cast = None
+        if os.path.exists(manifest):
+            with open(manifest, errors="replace") as f:
+                mtext = f.read()
+            pend = sum(1 for n in TOWN_CAST_KEYS if (n + " | PENDING") in mtext)
+            joined_cast = len(TOWN_CAST_KEYS) - pend
+        detail = ", ".join("%s %d calls/%.1f mind-s" % (n, a["calls"], a["ms"])
+                           for n, a in sorted(cast_spend.items()))
+        flags.append("**Identity integrity:** spend under town cast body keys "
+                     "(%s) on a day when the cast itself %s. Spend under a "
+                     "citizen's key by anyone but that citizen is the seam "
+                     "incident class ruled on in TOWN-0 claim Amendment 7."
+                     % (detail, ("had not joined (cast manifest: %d of %d cast "
+                                 ".dat cells still PENDING, which is the join "
+                                 "record of truth — players/data listings also "
+                                 "count operator test bodies and prove nothing)"
+                                 % (len(TOWN_CAST_KEYS) - joined_cast, len(TOWN_CAST_KEYS)))
+                        if joined_cast is not None
+                        else "had not joined per the claim record"))
+    if tot_denied:
+        flags.append("**Denials:** %d budget denials (429) today — a budget "
+                     "exhausted is a citizen thinking against a wall; name the "
+                     "wall's owner before the next window." % tot_denied)
+    else:
+        flags.append("No budget denials today: every metered call was served (all 200s above).")
+    out.append("## Noticed (rule-flagged)")
+    out.append("")
+    for f in flags:
+        out.append("- " + f)
+    out.append("")
+
+    if args.notes:
+        with open(args.notes) as f:
+            notes = f.read().strip()
+        out.append("## Duty-wearer's notes (interpretation, labelled as such)")
+        out.append("")
+        out.append(notes)
+        out.append("")
+
+    out.append("---")
+    out.append("Kill criterion (Twelve Lives steal #1): if three consecutive "
+               "reports name nothing anyone acts on, this report is theatre "
+               "and stops — and the stop gets filed here. Lapse rule: if the "
+               "report lapses twice, the lapse itself is the evidence for "
+               "staffing the duty separately (Production Charter §9, move 4).")
+    text = "\n".join(out) + "\n"
+
+    dest = args.out or os.path.join(LEAGUE, "commons", "noticing",
+                                    "report-%s.md" % day.isoformat())
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    with open(dest, "w") as f:
+        f.write(text)
+    print("wrote %s (%d bytes)" % (dest, len(text)))
+    print("window calls=%d mind_s=%.1f denied=%d deaths=%d" % (tot_calls, tot_ms, tot_denied, len(dwin)))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

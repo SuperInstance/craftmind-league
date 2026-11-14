@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "no VERIFIED LANDED line found",
+ "last_effect_ts": null,
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "no verified effect on record",
+ "ts": "2026-11-10T06:05:07.240556Z",
+ "watcher": "cameraman"
+}

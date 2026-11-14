@@ -1,0 +1,9 @@
+{
+ "declared_period_s": 300,
+ "detail": "rule-1 reference instance; emitter reads the cameraman's own landing-verification records (an independent-store effect it cannot fabricate)",
+ "emitted_at": "2026-11-14T18:57:58.823825Z",
+ "host": "orin",
+ "last_effect": "daylight refresh VERIFIED LANDED in server log",
+ "last_effect_ts": "2026-11-13T20:38:05",
+ "watcher": "cameraman"
+}

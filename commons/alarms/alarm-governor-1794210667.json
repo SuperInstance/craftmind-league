@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "mind-call receipt agent=cody-driver status=200",
+ "last_effect_ts": "2026-11-09T06:38:39.437+00:00",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 4348s exceeds period 900s + grace (limit 2700s)",
+ "ts": "2026-11-09T07:51:07.124085Z",
+ "watcher": "governor"
+}

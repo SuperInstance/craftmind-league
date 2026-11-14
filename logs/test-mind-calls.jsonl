@@ -1,0 +1,2 @@
+{"ts":"2026-11-05T22:25:39.040+00:00","agent":"smoketest","model":"confluence-presence-brain","status":200,"mind_seconds":0.339,"prompt_tokens":9,"completion_tokens":8,"total_tokens":17}
+{"ts":"2026-11-05T22:25:39.049+00:00","agent":"smoketest","model":"confluence-presence-brain","status":429,"mind_seconds":0,"prompt_tokens":null,"completion_tokens":null,"total_tokens":null,"refused":"mind_budget_exhausted","budget":{"calls_used":1,"calls_limit":1,"mind_seconds_used":0.339,"mind_seconds_limit":60}}

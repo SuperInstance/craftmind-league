@@ -1,0 +1,232 @@
+{
+ "base": {
+  "stageId": "S1",
+  "plan": {
+   "goal": "S1",
+   "usedPond": [],
+   "actions": [
+    {
+     "action": "collect",
+     "args": {
+      "block": "oak_log",
+      "count": 3
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "oak_planks",
+      "count": 12
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "stick",
+      "count": 4
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "crafting_table",
+      "count": 1
+     }
+    },
+    {
+     "action": "place",
+     "args": {
+      "item": "crafting_table",
+      "near": "self"
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "wooden_pickaxe",
+      "count": 1
+     }
+    }
+   ]
+  },
+  "mode": "full",
+  "depth": 0,
+  "committedAt": "2026-11-08T08:32:53.724Z",
+  "baseState": {
+   "inventory": {
+    "rotten_flesh": 1,
+    "oak_planks": 4,
+    "oak_sapling": 1,
+    "leaf_litter": 12,
+    "oak_log": 2,
+    "dirt": 4,
+    "oak_button": 1
+   },
+   "position": {
+    "x": 44.7,
+    "y": 68,
+    "z": -99.7
+   },
+   "deaths": 50
+  },
+  "stepResults": [
+   {
+    "action": "collect",
+    "ok": false,
+    "error": "only gained 0 of 3 oak_log: no stand verified within dig reach (last stand distance 13.9 blocks) after stand closure; 33 column(s) refused inside spawn protection",
+    "evidence": {
+     "block": "oak_log",
+     "wanted": 3,
+     "gained": 0,
+     "inventoryNow": [
+      [
+       "oak_log",
+       2
+      ]
+     ],
+     "lastStand": {
+      "cell": {
+       "x": 55,
+       "y": 68,
+       "z": -110
+      },
+      "standDistance": 13.94
+     },
+     "refusedProtected": [
+      {
+       "column": {
+        "x": 46,
+        "y": 68,
+        "z": -101
+       },
+       "protectDist": 14,
+       "why": "column inside spawn protection"
+      },
+      {
+       "column": {
+        "x": 46,
+        "y": 68,
+        "z": -91
+       },
+       "protectDist": 14,
+       "why": "column inside spawn protection"
+      },
+      {
+       "column": {
+        "x": 47,
+        "y": 71,
+        "z": -108
+       },
+       "protectDist": 15,
+       "why": "column inside spawn protection"
+      },
+      {
+       "column": {
+        "x": 34,
+        "y": 70,
+        "z": -101
+       },
+       "protectDist": 5,
+       "why": "column inside spawn protection"
+      },
+      {
+       "column": {
+        "x": 40,
+        "y": 69,
+        "z": -88
+       },
+       "protectDist": 8,
+       "why": "column inside spawn protection"
+      },
+      {
+       "column": {
+        "x": 35,
+        "y": 70,
+        "z": -91
+       },
+       "protectDist": 5,
+       "why": "column inside spawn protection"
+      }
+     ],
+     "cancelledDigs": []
+    }
+   }
+  ],
+  "executedPrefix": 0,
+  "failedStep": 0,
+  "firstOpenStep": 0,
+  "verdictOk": false,
+  "planLength": 6
+ },
+ "pending": {
+  "plan": {
+   "goal": "S1",
+   "usedPond": [],
+   "actions": [
+    {
+     "action": "collect",
+     "args": {
+      "block": "oak_log",
+      "count": 3
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "oak_planks",
+      "count": 12
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "stick",
+      "count": 4
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "crafting_table",
+      "count": 1
+     }
+    },
+    {
+     "action": "place",
+     "args": {
+      "item": "crafting_table",
+      "near": "self"
+     }
+    },
+    {
+     "action": "craft",
+     "args": {
+      "item": "wooden_pickaxe",
+      "count": 1
+     }
+    }
+   ]
+  },
+  "mode": "full",
+  "depth": 0,
+  "derivedAt": "2026-11-08T08:41:29.065Z",
+  "prefixLen": 0,
+  "firstInvalidated": null,
+  "baseCommittedAt": "2026-11-08T08:32:53.724Z"
+ },
+ "rotation": {
+  "arm": "A",
+  "blockIndex": 28,
+  "ticksInBlock": 1,
+  "blockStartedAt": "2026-11-08T08:40:36.792Z",
+  "lastFingerprint": "{\"st\":\"S1\",\"p\":{\"x\":44.7,\"y\":68,\"z\":-99.7},\"i\":{\"stick\":1,\"rotten_flesh\":1,\"crafting_table\":1,\"oak_sapling\":1,\"leaf_litter\":12,\"oak_log\":8,\"dirt\":4,\"oak_button\":1},\"d\":50,\"t\":5102}"
+ },
+ "counters": {
+  "derivations": 244,
+  "continuations": 54,
+  "fulls": 189,
+  "invalidations": 1
+ },
+ "prevContFailSig": null,
+ "contFailStrikes": 0
+}

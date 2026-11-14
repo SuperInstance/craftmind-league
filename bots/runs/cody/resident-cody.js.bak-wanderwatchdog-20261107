@@ -1,0 +1,101 @@
+// resident-cody.js — league citizen "Cody" as a RESIDENT of the Orin world.
+// Same createBot wiring as join-test.js (config resolves from this dir:
+// governor at 127.0.0.1:8642, identity league-cody), but instead of
+// hello-and-quit it: stays online, wanders gently near its spawn anchor,
+// idles, and re-launches itself if the connection ends.
+// Run from this directory:
+//   cd ~/craftmind-league/bots/runs/cody && node resident-cody.js
+// Env overrides: MC_HOST (192.168.0.50), MC_PORT (25565), MC_USER (Cody),
+// MC_VERSION (26.1).
+const path = require('path');
+process.chdir(__dirname);
+
+const { createBot } = require('/home/caseydigennaro/craftmind-league/bots/craftmind/src/bot.js');
+const { goals } = require('/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer-pathfinder');
+const pulsePlugin = require("/home/caseydigennaro/craftmind-league/pulse/pulse-plugin.js");
+
+const opts = {
+  host: process.env.MC_HOST || '192.168.0.50',
+  port: parseInt(process.env.MC_PORT || '25565', 10),
+  username: process.env.MC_USER || 'Cody',
+  version: process.env.MC_VERSION || '26.1',
+};
+
+let relaunches = 0;
+let wanderTimer = null;
+let home = null;
+
+function launch() {
+  console.log(`[RESIDENT] launching Cody (attempt ${relaunches + 1})`, opts);
+  // PULSE WORKER MODE (2026-11-06, uses the framework's own
+  // options.skipPlugins seam): when a pulse skill set is loaded, the
+  // social/idle plugins that write movement controls (measured with
+  // caller traces: wanderer.js clears control states mid-stride and
+  // random-walks over skill driving) are skipped, so trials measure
+  // the SKILLS, not a tug-of-war. Social mode (no skills) is untouched.
+  const workerMode = !!(process.env.PULSE_SKILLS && process.env.PULSE_SKILLS.trim());
+  const skipPlugins = workerMode
+    ? ['wanderer', 'flee-on-danger', 'combat', 'behavior-script', 'npc-system', 'onboarding', 'game-hub']
+    : [];
+  const bot = createBot({ ...opts, plugins: [pulsePlugin], skipPlugins });
+
+  bot.once('spawn', () => {
+    const p = bot.entity.position;
+    if (!home) home = { x: p.x, y: p.y, z: p.z };
+    console.log(`[RESIDENT] spawned at ${p.x.toFixed(1)},${p.y.toFixed(1)},${p.z.toFixed(1)} — home anchor set`);
+    setTimeout(() => {
+      try { bot.chat('Evening — Cody here. I live in this world now; come say hello.'); } catch {}
+    }, 3000);
+    startWander(bot);
+  });
+
+  bot.on('chat', (user, msg) => {
+    console.log(`[RESIDENT] chat <${user}> ${msg}`);
+  });
+
+  bot.on('kicked', (reason) => console.log('[RESIDENT] kicked:', String(reason)));
+  bot.on('error', (err) => console.log('[RESIDENT] error:', err && err.message));
+
+  bot.once('end', (reason) => {
+    console.log('[RESIDENT] connection ended:', String(reason));
+    stopWander();
+    // PULSE SCAFFOLD FIX (2026-11-06): in-process relaunch is impossible
+    // with this mineflayer build \u2014 the second createBot() crashes on
+    // plugin re-injection (boss_bar "Cannot redefine property"). Exit
+    // cleanly instead; restarts happen at process level (trial.js, or
+    // a human/supervisor relaunching this script).
+    console.log('[RESIDENT] exiting for process-level restart');
+    process.exit(0);
+  });
+}
+
+function startWander(bot) {
+  stopWander();
+  const tick = () => {
+    try {
+      if (!bot.entity || !bot.pathfinder) return;
+      // Only wander when not already walking somewhere.
+      if (global.__pulseRunnerActive) return; // the pulse skill runner is driving
+      if (!bot.pathfinder.goal) {
+        const dx = (Math.random() * 2 - 1) * 10;
+        const dz = (Math.random() * 2 - 1) * 10;
+        const x = home.x + dx, z = home.z + dz;
+        bot.pathfinder.setGoal(new goals.GoalNear(x, home.y, z, 1.5));
+        console.log(`[RESIDENT] wandering toward ${x.toFixed(1)},${z.toFixed(1)}`);
+      }
+    } catch (e) {
+      console.log('[RESIDENT] wander tick error:', e.message);
+    }
+  };
+  // First stroll shortly after spawn, then every 30–55 s.
+  wanderTimer = setTimeout(function again() {
+    tick();
+    wanderTimer = setTimeout(again, 30000 + Math.random() * 25000);
+  }, 8000);
+}
+
+function stopWander() {
+  if (wanderTimer) { clearTimeout(wanderTimer); wanderTimer = null; }
+}
+
+launch();

@@ -1,0 +1,403 @@
+{
+  "players": {
+    "magnusandmouse": {
+      "firstMet": "2026-11-07T03:27:05.292Z",
+      "lastSeen": "2026-11-07T10:34:22.780Z",
+      "interactions": 3
+    },
+    "vega": {
+      "firstMet": "2026-11-07T04:30:56.624Z",
+      "lastSeen": "2026-11-08T08:31:52.820Z",
+      "interactions": 148
+    },
+    "geist": {
+      "firstMet": "2026-11-07T05:02:30.348Z",
+      "lastSeen": "2026-11-08T07:20:40.023Z",
+      "interactions": 63
+    },
+    "pulseprobe": {
+      "firstMet": "2026-11-07T05:08:08.751Z",
+      "lastSeen": "2026-11-07T05:08:08.751Z",
+      "interactions": 1
+    },
+    "geistprobe": {
+      "firstMet": "2026-11-07T05:10:33.243Z",
+      "lastSeen": "2026-11-07T05:16:42.699Z",
+      "interactions": 6
+    },
+    "repairprobe": {
+      "firstMet": "2026-11-07T05:31:04.741Z",
+      "lastSeen": "2026-11-07T05:31:04.741Z",
+      "interactions": 1
+    },
+    "probe94029722": {
+      "firstMet": "2026-11-07T05:35:28.561Z",
+      "lastSeen": "2026-11-07T05:35:28.561Z",
+      "interactions": 1
+    },
+    "gatescan": {
+      "firstMet": "2026-11-07T05:39:41.689Z",
+      "lastSeen": "2026-11-07T05:39:41.689Z",
+      "interactions": 1
+    },
+    "scanprobe": {
+      "firstMet": "2026-11-07T05:39:48.187Z",
+      "lastSeen": "2026-11-07T06:38:24.722Z",
+      "interactions": 7
+    },
+    "gateobs": {
+      "firstMet": "2026-11-07T05:43:49.096Z",
+      "lastSeen": "2026-11-07T05:43:49.096Z",
+      "interactions": 1
+    },
+    "gatebare": {
+      "firstMet": "2026-11-07T05:48:36.043Z",
+      "lastSeen": "2026-11-07T05:48:36.043Z",
+      "interactions": 1
+    },
+    "surveyn53951": {
+      "firstMet": "2026-11-07T07:17:26.646Z",
+      "lastSeen": "2026-11-07T07:17:26.646Z",
+      "interactions": 1
+    },
+    "litterlab5831": {
+      "firstMet": "2026-11-07T07:24:41.892Z",
+      "lastSeen": "2026-11-07T07:24:41.892Z",
+      "interactions": 1
+    },
+    "litterlab9074": {
+      "firstMet": "2026-11-07T07:25:45.738Z",
+      "lastSeen": "2026-11-07T07:25:45.738Z",
+      "interactions": 1
+    },
+    "litterlab3118": {
+      "firstMet": "2026-11-07T07:31:37.136Z",
+      "lastSeen": "2026-11-07T07:31:37.136Z",
+      "interactions": 1
+    },
+    "litterlab7742": {
+      "firstMet": "2026-11-07T07:34:53.999Z",
+      "lastSeen": "2026-11-07T07:34:53.999Z",
+      "interactions": 1
+    },
+    "litterlab3827": {
+      "firstMet": "2026-11-07T07:40:35.902Z",
+      "lastSeen": "2026-11-07T07:40:35.902Z",
+      "interactions": 1
+    },
+    "litterlab2563": {
+      "firstMet": "2026-11-07T07:44:53.383Z",
+      "lastSeen": "2026-11-07T07:44:53.383Z",
+      "interactions": 1
+    },
+    "litterlab9377": {
+      "firstMet": "2026-11-07T07:49:34.080Z",
+      "lastSeen": "2026-11-07T07:49:34.080Z",
+      "interactions": 1
+    },
+    "diagprobe5282": {
+      "firstMet": "2026-11-07T07:52:52.342Z",
+      "lastSeen": "2026-11-07T07:52:52.342Z",
+      "interactions": 1
+    },
+    "diagprobe1027": {
+      "firstMet": "2026-11-07T07:57:01.379Z",
+      "lastSeen": "2026-11-07T07:57:01.379Z",
+      "interactions": 1
+    },
+    "litterlab5653": {
+      "firstMet": "2026-11-07T07:58:39.534Z",
+      "lastSeen": "2026-11-07T07:58:39.535Z",
+      "interactions": 1
+    },
+    "litterlab9883": {
+      "firstMet": "2026-11-07T08:04:56.530Z",
+      "lastSeen": "2026-11-07T08:04:56.530Z",
+      "interactions": 1
+    },
+    "litterlab9868": {
+      "firstMet": "2026-11-07T08:08:50.648Z",
+      "lastSeen": "2026-11-07T08:08:50.648Z",
+      "interactions": 1
+    },
+    "litterlab7055": {
+      "firstMet": "2026-11-07T08:21:27.759Z",
+      "lastSeen": "2026-11-07T08:21:27.759Z",
+      "interactions": 1
+    },
+    "litterlab3271": {
+      "firstMet": "2026-11-07T08:24:44.721Z",
+      "lastSeen": "2026-11-07T08:24:44.721Z",
+      "interactions": 1
+    },
+    "litterlab4378": {
+      "firstMet": "2026-11-07T08:28:10.646Z",
+      "lastSeen": "2026-11-07T08:28:10.646Z",
+      "interactions": 1
+    },
+    "litterlab5283": {
+      "firstMet": "2026-11-07T08:31:44.693Z",
+      "lastSeen": "2026-11-07T08:31:44.693Z",
+      "interactions": 1
+    },
+    "litterlab4803": {
+      "firstMet": "2026-11-07T09:00:37.692Z",
+      "lastSeen": "2026-11-07T09:00:37.692Z",
+      "interactions": 1
+    },
+    "surveyg112690": {
+      "firstMet": "2026-11-07T09:02:24.941Z",
+      "lastSeen": "2026-11-07T09:02:24.941Z",
+      "interactions": 1
+    },
+    "scanlab6554": {
+      "firstMet": "2026-11-07T09:03:03.061Z",
+      "lastSeen": "2026-11-07T09:03:03.061Z",
+      "interactions": 1
+    },
+    "digtest123343": {
+      "firstMet": "2026-11-07T09:03:56.497Z",
+      "lastSeen": "2026-11-07T09:03:56.497Z",
+      "interactions": 1
+    },
+    "digtst2111468": {
+      "firstMet": "2026-11-07T09:04:40.942Z",
+      "lastSeen": "2026-11-07T09:14:57.250Z",
+      "interactions": 3
+    },
+    "surveyh109406": {
+      "firstMet": "2026-11-07T09:08:30.908Z",
+      "lastSeen": "2026-11-07T09:08:30.908Z",
+      "interactions": 1
+    },
+    "litterrun8820": {
+      "firstMet": "2026-11-07T09:09:03.789Z",
+      "lastSeen": "2026-11-07T09:09:03.789Z",
+      "interactions": 1
+    },
+    "litterrun8725": {
+      "firstMet": "2026-11-07T09:10:51.889Z",
+      "lastSeen": "2026-11-07T09:10:51.889Z",
+      "interactions": 1
+    },
+    "surveyk121942": {
+      "firstMet": "2026-11-07T09:15:06.312Z",
+      "lastSeen": "2026-11-07T09:15:06.312Z",
+      "interactions": 1
+    },
+    "director102224": {
+      "firstMet": "2026-11-07T09:26:47.798Z",
+      "lastSeen": "2026-11-07T09:29:16.714Z",
+      "interactions": 6
+    },
+    "litterrun3391": {
+      "firstMet": "2026-11-07T09:36:36.641Z",
+      "lastSeen": "2026-11-07T09:36:36.641Z",
+      "interactions": 1
+    },
+    "litterrun4144": {
+      "firstMet": "2026-11-07T09:51:34.868Z",
+      "lastSeen": "2026-11-07T09:51:34.868Z",
+      "interactions": 1
+    },
+    "linkprobe892456": {
+      "firstMet": "2026-11-07T10:07:11.794Z",
+      "lastSeen": "2026-11-07T10:07:15.854Z",
+      "interactions": 2
+    },
+    "traverseg132247": {
+      "firstMet": "2026-11-07T10:23:47.059Z",
+      "lastSeen": "2026-11-07T10:23:47.059Z",
+      "interactions": 1
+    },
+    "traverseg131742": {
+      "firstMet": "2026-11-07T10:26:18.157Z",
+      "lastSeen": "2026-11-07T10:26:18.157Z",
+      "interactions": 1
+    },
+    "traverseg120241": {
+      "firstMet": "2026-11-07T10:45:56.654Z",
+      "lastSeen": "2026-11-07T10:45:56.654Z",
+      "interactions": 1
+    },
+    "traverseg110535": {
+      "firstMet": "2026-11-07T11:05:40.206Z",
+      "lastSeen": "2026-11-07T11:05:40.206Z",
+      "interactions": 1
+    },
+    "litterrun5038": {
+      "firstMet": "2026-11-07T11:17:17.548Z",
+      "lastSeen": "2026-11-07T11:17:17.548Z",
+      "interactions": 1
+    },
+    "traverseg112033": {
+      "firstMet": "2026-11-07T11:20:38.488Z",
+      "lastSeen": "2026-11-07T11:20:38.488Z",
+      "interactions": 1
+    },
+    "litterrun7580": {
+      "firstMet": "2026-11-07T11:33:39.837Z",
+      "lastSeen": "2026-11-07T11:33:39.837Z",
+      "interactions": 1
+    },
+    "litterrun8466": {
+      "firstMet": "2026-11-07T11:58:39.700Z",
+      "lastSeen": "2026-11-07T11:58:39.700Z",
+      "interactions": 1
+    },
+    "traverseg120035": {
+      "firstMet": "2026-11-07T12:00:35.702Z",
+      "lastSeen": "2026-11-07T12:00:35.702Z",
+      "interactions": 1
+    },
+    "surveyg121447": {
+      "firstMet": "2026-11-07T12:14:48.151Z",
+      "lastSeen": "2026-11-07T12:14:48.151Z",
+      "interactions": 1
+    },
+    "traverseg121739": {
+      "firstMet": "2026-11-07T12:17:39.792Z",
+      "lastSeen": "2026-11-07T12:17:39.792Z",
+      "interactions": 1
+    },
+    "prepsurvey": {
+      "firstMet": "2026-11-07T21:16:31.691Z",
+      "lastSeen": "2026-11-07T21:16:31.691Z",
+      "interactions": 1
+    },
+    "floorprep": {
+      "firstMet": "2026-11-07T21:28:06.384Z",
+      "lastSeen": "2026-11-07T21:33:02.085Z",
+      "interactions": 3
+    },
+    "prepsurvey2": {
+      "firstMet": "2026-11-07T21:32:38.095Z",
+      "lastSeen": "2026-11-07T21:32:38.095Z",
+      "interactions": 1
+    },
+    "floorprep2": {
+      "firstMet": "2026-11-07T21:35:00.004Z",
+      "lastSeen": "2026-11-07T21:35:00.004Z",
+      "interactions": 1
+    },
+    "cellsurvey": {
+      "firstMet": "2026-11-08T03:19:35.037Z",
+      "lastSeen": "2026-11-08T03:19:35.037Z",
+      "interactions": 1
+    },
+    "charbare": {
+      "firstMet": "2026-11-08T03:42:01.582Z",
+      "lastSeen": "2026-11-08T03:42:01.582Z",
+      "interactions": 1
+    },
+    "shouldersurvey": {
+      "firstMet": "2026-11-08T05:30:06.010Z",
+      "lastSeen": "2026-11-08T05:30:06.010Z",
+      "interactions": 1
+    },
+    "posprobe": {
+      "firstMet": "2026-11-08T05:39:00.604Z",
+      "lastSeen": "2026-11-08T05:39:00.604Z",
+      "interactions": 1
+    },
+    "prepcrew7": {
+      "firstMet": "2026-11-08T07:24:26.941Z",
+      "lastSeen": "2026-11-08T07:26:27.641Z",
+      "interactions": 2
+    },
+    "prepcrew8": {
+      "firstMet": "2026-11-08T07:29:27.090Z",
+      "lastSeen": "2026-11-08T07:34:50.854Z",
+      "interactions": 2
+    },
+    "prepcrew9": {
+      "firstMet": "2026-11-08T07:32:00.205Z",
+      "lastSeen": "2026-11-08T07:32:00.205Z",
+      "interactions": 1
+    },
+    "geistsurvey2": {
+      "firstMet": "2026-11-08T07:37:49.035Z",
+      "lastSeen": "2026-11-08T07:37:49.035Z",
+      "interactions": 1
+    },
+    "codyprobe2": {
+      "firstMet": "2026-11-08T07:38:08.336Z",
+      "lastSeen": "2026-11-08T07:45:13.043Z",
+      "interactions": 4
+    },
+    "commonswarden": {
+      "firstMet": "2026-11-08T07:47:18.805Z",
+      "lastSeen": "2026-11-08T08:28:26.194Z",
+      "interactions": 5
+    },
+    "simprobe": {
+      "firstMet": "2026-11-08T08:03:16.042Z",
+      "lastSeen": "2026-11-08T08:07:38.286Z",
+      "interactions": 3
+    },
+    "stageverify": {
+      "firstMet": "2026-11-09T07:29:02.312Z",
+      "lastSeen": "2026-11-09T07:29:02.312Z",
+      "interactions": 1
+    },
+    "censusprobe": {
+      "firstMet": "2026-11-09T13:14:51.747Z",
+      "lastSeen": "2026-11-09T13:29:55.021Z",
+      "interactions": 18
+    },
+    "gallery": {
+      "firstMet": "2026-11-09T13:24:20.345Z",
+      "lastSeen": "2026-11-09T19:23:20.914Z",
+      "interactions": 8
+    }
+  },
+  "places": {},
+  "builds": {},
+  "resources": {},
+  "deaths": 167,
+  "deathCauses": [
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:07:49.818Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:09:22.954Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:09:33.218Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:09:53.462Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:10:29.772Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:10:41.085Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:10:58.961Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:11:50.070Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T06:57:39.064Z"
+    },
+    {
+      "cause": "death event",
+      "timestamp": "2026-11-10T07:06:14.117Z"
+    }
+  ],
+  "meta": {},
+  "lastSession": "2026-11-13T13:48:12.957Z",
+  "scriptHistory": []
+}

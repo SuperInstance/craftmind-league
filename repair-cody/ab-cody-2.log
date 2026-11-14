@@ -1,0 +1,6 @@
+[AB2] Cody spawn pos 38.689,66.000,-93.691 onGround false
+[AB2] Cody BATTERY START 38.689,66.000,-93.691 onGround true idlePosPkts 0
+[AB2] Cody RAW east fwd+jump 4s: end 38.689,66.000,-93.691 disp3d 0.000 dx 0.000 rawPosPkts 80
+[AB2] Cody GOTO prims.gotoNear target 58.7,66.0,-93.7 result {"ok":false,"error":"walkTo timeout (52765ms) to 58.68884185007277,66,-93.69142650342474; at (38.68884185007277, 66, -93.69142650342474)"} ms 60120 end 38.689,66.000,-93.691 dispFromRawEnd 0.000 gotoPosPkts 1190
+[AB2] Cody PFDIRECT pathfinder goto same target: TIMEOUT60s ms 60001 end 38.700,66.000,-93.709 dispFromGotoEnd 0.021 dxFromStart 0.011 pfPosPkts 1175
+[AB2] Cody DONE

@@ -1,0 +1,9 @@
+{
+  "name": "craftmind-discgolf",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AI disc golf companion bot for Minecraft",
+  "scripts": {
+    "test": "node --test tests/test-disc-scripts.js tests/test-execution-noise.js"
+  }
+}

@@ -1,0 +1,35 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 75.7,64.0,-105.4 hp=0.1333332061767578 food=0 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Morning, empty belly. Pigs in my own pen, they tell me — let's go see if the world's really been that kind." cmd="goto 70 66 -100"
+[DD] FLOOR: emergency forage — hunting cow
+[DD] FLOOR: emergency forage — hunting cow
+[DD] FLOOR: emergency forage — hunting pig
+[DD] FLOOR: emergency forage — hunting pig
+[DD] FLOOR: emergency forage — hunting pig
+[DD] FLOOR: emergency forage — hunting cow
+[DD] FLOOR: emergency forage — hunting pig
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody

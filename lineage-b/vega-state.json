@@ -1,0 +1,48 @@
+{
+  "ts": "2026-11-08T09:41:20.628Z",
+  "online": true,
+  "name": "Vega",
+  "lineage": "B",
+  "position": {
+    "x": 56.7,
+    "y": 65,
+    "z": -65.3
+  },
+  "health": 3,
+  "food": 2,
+  "inventory": {
+    "leaf_litter": 18,
+    "oak_log": 3,
+    "dirt": 31,
+    "stick": 2,
+    "oak_planks": 3,
+    "wooden_pickaxe": 1,
+    "wheat_seeds": 1
+  },
+  "timeOfDay": 4208,
+  "day": 0,
+  "deaths": 0,
+  "anchor": {
+    "x": 63,
+    "y": 67,
+    "z": -72
+  },
+  "stage": "S2",
+  "standingOn": "grass_block",
+  "stuck": false,
+  "survey": {
+    "oak_log": 30,
+    "spruce_log": 0,
+    "birch_log": 30,
+    "jungle_log": 0,
+    "acacia_log": 8,
+    "dark_oak_log": 0,
+    "stone": 30,
+    "cobblestone": 0,
+    "dirt": 30,
+    "grass_block": 30,
+    "sand": 30,
+    "crafting_table": 2,
+    "chest": 0
+  }
+}

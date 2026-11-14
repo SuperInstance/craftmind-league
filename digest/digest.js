@@ -1,0 +1,338 @@
+// digest.js — WORLD DIGEST v0: the game-master's perception feed.
+//
+// Implements docs/ARCH-AGENT-COMMUNITY.md §3 (Layer 1 — rolling perception:
+// one percept of the moment) at v0 scope. One process, ~10 s tick:
+//
+//   - reads the three citizen state feeds on this box (read-only);
+//   - incrementally reads the commons SCOREBOARD, the pulse ledger and the
+//     comms chat ledger via byte cursors (rolling: each tick consumes only
+//     what is new since the previous tick — history is never re-scanned);
+//   - tails the Orin server log over ssh (same pattern as the comms daemon;
+//     a second, independent tail — the daemon is not disturbed) for joins,
+//     leaves, death messages (the cause the feeds cannot give) and weather
+//     commands (the only weather sense that exists);
+//   - publishes digest.json (the current full digest, atomically replaced)
+//     and appends to digest.jsonl: a delta record per tick, and a full
+//     snapshot record only on bootstrap or when citizen presence changes
+//     (the membership of the digest changed).
+//
+// Silence semantics (§3, inherited from telltape, load-bearing): a feed that
+// stops updating receipts as STALE/UNKNOWN in the digest — never as calm.
+// Deltas are computed against the last LIVE snapshot of each citizen, so a
+// gap is attributed as a gap, not smeared across ticks.
+//
+// The digest never speaks, never grades, never writes anywhere but its own
+// directory. Run from this directory: node digest.js (see start-digest.sh).
+const fs = require("fs");
+const path = require("path");
+const { spawn } = require("child_process");
+process.chdir(__dirname);
+
+const DIR = __dirname;
+const LEAGUE = path.join(DIR, "..");
+const OUT_JSON = path.join(DIR, "digest.json");
+const OUT_LEDGER = path.join(DIR, "digest.jsonl");
+const STATE_FILE = path.join(DIR, "state.json");
+const TICK_MS = 10000;
+const FRESH_MS = 90000; // feed is LIVE if its file changed within this window
+const KEEP_EVENTS = 20;
+const SEED_BYTES = 65536; // one-time bootstrap tail-seed per event source
+
+const CITIZENS = {
+  Cody: { lineage: "A", file: path.join(LEAGUE, "pulse", "cody-state.json"), posKey: "pos" },
+  Vega: { lineage: "B", file: path.join(LEAGUE, "lineage-b", "vega-state.json"), posKey: "position" },
+  Geist: { lineage: "C", file: path.join(LEAGUE, "lineage-c", "geist-state.json"), posKey: "position" },
+};
+const EVENT_SOURCES = [
+  { name: "scoreboard", file: path.join(LEAGUE, "commons", "SCOREBOARD.jsonl") },
+  { name: "pulse-ledger", file: path.join(LEAGUE, "pulse", "ledger.jsonl") },
+  { name: "comms", file: path.join(LEAGUE, "commons", "comms", "chat.jsonl") },
+];
+const DEATH_HINTS = [
+  "was slain", "was shot", "was killed", "was blown up", "was impaled",
+  "was stung", "was poked", "was squashed", "drowned", "fell from",
+  "fell out", "fell off", "hit the ground", "went up in flames",
+  "burned to death", "starved to death", "suffocated", "froze to death",
+  "tried to swim in lava", "withered away", "experienced kinetic energy",
+  "died",
+];
+
+function log(...a) { console.log(new Date().toISOString(), "[DIGEST]", ...a); }
+function nowIso() { return new Date().toISOString(); }
+function readJson(p, fb) { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return fb; } }
+function atomicWriteJson(p, o) {
+  const tmp = p + ".tmp";
+  fs.writeFileSync(tmp, JSON.stringify(o, null, 1) + "\n");
+  fs.renameSync(tmp, p);
+}
+function appendLedger(o) { fs.appendFileSync(OUT_LEDGER, JSON.stringify(o) + "\n"); }
+function dist(a, b) { if (!a || !b) return null; return +Math.hypot(a.x - b.x, a.y - b.y, a.z - b.z).toFixed(1); }
+function r1(n) { return typeof n === "number" ? +n.toFixed(1) : n; }
+function trunc(s, n) { s = String(s == null ? "" : s); return s.length > n ? s.slice(0, n - 1) + "…" : s; }
+
+// ---------------- rolling state (persisted across restarts) ---------------
+let S = null;
+function freshState() {
+  return {
+    tick: 0,
+    cursors: {},        // source name -> {offset, partial}
+    events: [],         // rolling buffer of normalized events, ts-ascending
+    prevLive: {},       // citizen -> last LIVE snapshot (delta baseline)
+    presence: {},       // citizen -> "live" | "stale" | "missing"
+    weather: { state: "unknown", source: null, since: null },
+    pendingServer: [],  // server-log events waiting for the next tick
+  };
+}
+function saveState() { atomicWriteJson(STATE_FILE, S); }
+
+// ---------------- incremental JSONL reading --------------------------------
+function readNewEvents(src) {
+  let st;
+  try { st = fs.statSync(src.file); } catch { return []; }
+  let cur = S.cursors[src.name];
+  if (!cur) { // one-time bootstrap: seed from the tail, never a full re-scan
+    cur = S.cursors[src.name] = { offset: Math.max(0, st.size - SEED_BYTES), partial: "" };
+  }
+  if (st.size < cur.offset) cur = S.cursors[src.name] = { offset: 0, partial: "" }; // truncated/rotated
+  if (st.size === cur.offset) return [];
+  const len = Math.min(st.size - cur.offset, 1 << 20);
+  const buf = Buffer.alloc(len);
+  const fd = fs.openSync(src.file, "r");
+  try { fs.readSync(fd, buf, 0, len, cur.offset); } finally { fs.closeSync(fd); }
+  cur.offset += len;
+  const text = cur.partial + buf.toString("utf8");
+  const lines = text.split("\n");
+  cur.partial = lines.pop(); // last fragment is an incomplete line (or "")
+  const out = [];
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    let o; try { o = JSON.parse(line); } catch { continue; }
+    const ev = summarizeEvent(src.name, o);
+    if (ev) out.push(ev);
+  }
+  return out;
+}
+function summarizeEvent(source, o) {
+  const ts = o.ts || nowIso();
+  if (source === "scoreboard") {
+    const ev = o.evidence || {};
+    let detail = "";
+    if (ev.skill) detail = `skill ${ev.skill}${ev.attempt ? " #" + ev.attempt : ""}`;
+    else if (ev.note) detail = trunc(ev.note, 90);
+    return { ts, source, kind: o.event || "event", citizen: o.citizen || null,
+             summary: trunc(`${o.citizen} ${o.stage || ""} ${o.event || ""}${detail ? " — " + detail : ""}`, 180) };
+  }
+  if (source === "pulse-ledger") {
+    if (o.kind === "trial") return { ts, source, kind: "trial", citizen: "Cody",
+      summary: trunc(`Cody trial ${o.trialId || ""} ${o.stage || ""}: ${o.verdict || "?"}`, 180) };
+    if (o.kind === "gate") return { ts, source, kind: "gate", citizen: "Cody",
+      summary: trunc(`Cody gate ${o.gate || ""}: ${o.verdict || "?"}${o.class ? " (" + o.class + ")" : ""}`, 180) };
+    return { ts, source, kind: o.kind || "event", citizen: "Cody", summary: trunc(`pulse ${o.kind || "event"}`, 180) };
+  }
+  if (source === "comms") {
+    if (o.kind === "chat") return { ts, source, kind: "utterance", citizen: o.from || null,
+      summary: trunc(`${o.from}${o.to ? " → " + o.to : ""}: "${o.text || ""}"`, 180) };
+    if (o.kind === "event") return { ts, source, kind: "comms-" + (o.event || "event"), citizen: o.from || null,
+      summary: trunc(`comms ${o.event || ""} ${o.id || ""}${o.method ? " via " + o.method : ""}`, 180) };
+    return null;
+  }
+  return null;
+}
+
+// ---------------- server-log tail (ssh, reconnecting) ----------------------
+// Same pattern as commons/comms/daemon.js: a read-only tail -F over the
+// orin-lan alias. Independent of the daemon's tail; both may coexist.
+let tailChild = null;
+function startTail() {
+  log("starting server-log tail via ssh orin-lan");
+  tailChild = spawn("ssh", [
+    "-o", "BatchMode=yes", "-o", "ServerAliveInterval=20", "-o", "ServerAliveCountMax=3",
+    "orin-lan", "tail -F -n 0 ~/minecraft-server/logs/latest.log",
+  ], { stdio: ["ignore", "pipe", "pipe"] });
+  let buf = "";
+  tailChild.stdout.on("data", (d) => {
+    buf += d.toString();
+    let i;
+    while ((i = buf.indexOf("\n")) >= 0) {
+      const line = buf.slice(0, i); buf = buf.slice(i + 1);
+      ingestServerLine(line);
+    }
+  });
+  tailChild.stderr.on("data", (d) => log("tail stderr:", String(d).trim().slice(0, 200)));
+  tailChild.on("close", (code) => { log("tail closed (", code, ") — reconnecting in 10 s"); setTimeout(startTail, 10000); });
+  tailChild.on("error", (e) => log("tail spawn error:", e.message));
+}
+function ingestServerLine(line) {
+  const m = line.match(/\[Server thread\/INFO\]: (.*)$/);
+  if (!m) return;
+  const msg = m[1];
+  const ts = nowIso(); // receipt time; the tail streams live, so ≈ event time
+  const wm = msg.match(/issued server command: \/weather (clear|rain|thunder)/);
+  if (wm) { S.weather = { state: wm[1], source: "server-log weather command", since: ts }; return; }
+  for (const name of Object.keys(CITIZENS)) {
+    if (msg === `${name} joined the game`) { S.pendingServer.push({ ts, source: "server-log", kind: "join", citizen: name, summary: `${name} joined the game` }); return; }
+    if (msg === `${name} left the game`) { S.pendingServer.push({ ts, source: "server-log", kind: "leave", citizen: name, summary: `${name} left the game` }); return; }
+    if (msg.startsWith(name + " ") && DEATH_HINTS.some((h) => msg.includes(h))) {
+      S.pendingServer.push({ ts, source: "server-log", kind: "death", citizen: name, summary: trunc(msg, 180) });
+      return;
+    }
+  }
+}
+
+// ---------------- feeds ------------------------------------------------------
+function readFeed(name) {
+  const spec = CITIZENS[name];
+  let st;
+  try { st = fs.statSync(spec.file); } catch { return { status: "missing", ageSec: null, data: null }; }
+  const ageSec = +((Date.now() - st.mtimeMs) / 1000).toFixed(0);
+  const data = readJson(spec.file, null);
+  if (!data) return { status: "missing", ageSec, data: null };
+  return { status: ageSec * 1000 <= FRESH_MS ? "live" : "stale", ageSec, data };
+}
+function snapshotOf(name, feed) {
+  const f = feed.data;
+  const pos = f[CITIZENS[name].posKey] || f.position || f.pos || null;
+  const inv = f.inventory || {};
+  let total = 0; for (const k of Object.keys(inv)) total += inv[k] || 0;
+  const snap = {
+    lineage: CITIZENS[name].lineage,
+    pos: pos ? { x: r1(pos.x), y: r1(pos.y), z: r1(pos.z) } : null,
+    health: r1(f.health), food: f.food != null ? f.food : null,
+    deaths: f.deaths != null ? f.deaths : null,
+    stage: f.stage || null,
+    inventory: { total, items: inv },
+    anchor: f.anchor || null,
+    feed: { status: feed.status, ageSec: feed.ageSec, feedTs: f.ts || null },
+  };
+  const extra = {};
+  if (name === "Cody" && f.behaviour) extra.behaviour = f.behaviour;
+  // Character build (2026-11-07, additive): Cody's live intent/project
+  // from the character loop, when the state feed carries them.
+  if (name === "Cody") { if (f.intent) extra.intent = f.intent; if (f.project) extra.project = f.project; }
+  if (name === "Vega") { if (f.standingOn) extra.standingOn = f.standingOn; if (f.stuck != null) extra.stuck = f.stuck; }
+  if (name === "Geist" && f.oxygen != null) extra.oxygen = f.oxygen;
+  if (Object.keys(extra).length) snap.extra = extra;
+  return snap;
+}
+function phaseOfDay(tod) {
+  if (tod == null) return null;
+  if (tod < 12000) return "day";
+  if (tod < 13800) return "sunset";
+  if (tod < 22200) return "night";
+  return "sunrise";
+}
+
+// ---------------- the tick ---------------------------------------------------
+function computeNotes(name, prev, cur, freshDeaths) {
+  const notes = [];
+  if (!prev) return notes;
+  const d = dist(prev.pos, cur.pos);
+  if (d != null && d > 5) notes.push(`${name} moved ${d} blocks (${prev.pos.x},${prev.pos.y},${prev.pos.z} → ${cur.pos.x},${cur.pos.y},${cur.pos.z})`);
+  if (prev.deaths != null && cur.deaths != null && cur.deaths > prev.deaths) {
+    const k = cur.deaths - prev.deaths;
+    let n = `${name} died ${k > 1 ? k + " times " : ""}(deaths ${prev.deaths} → ${cur.deaths})`;
+    const cause = freshDeaths.filter((e) => e.citizen === name).pop();
+    if (cause) n += ` — "${cause.summary}"`;
+    notes.push(n);
+  }
+  const gained = Object.keys(cur.inventory.items).filter((k) => !(k in prev.inventory.items));
+  const lost = Object.keys(prev.inventory.items).filter((k) => !(k in cur.inventory.items));
+  if (gained.length) notes.push(`${name} gained item type${gained.length > 1 ? "s" : ""}: ${gained.join(", ")}`);
+  if (lost.length) notes.push(`${name} lost item type${lost.length > 1 ? "s" : ""}: ${lost.join(", ")}`);
+  if (typeof prev.health === "number" && typeof cur.health === "number" && prev.health - cur.health >= 3)
+    notes.push(`${name} health dropped ${prev.health} → ${cur.health}`);
+  if (prev.stage !== cur.stage) notes.push(`${name} stage ${prev.stage} → ${cur.stage}`);
+  return notes;
+}
+
+function tick() {
+  S.tick += 1;
+  const ts = nowIso();
+  const notes = [];
+  const citizens = {};
+  const changes = {};
+  let membershipChanged = S.tick === 1;
+
+  // fresh file events (cursor-incremental) + drained server-log events
+  let fresh = [];
+  for (const src of EVENT_SOURCES) fresh = fresh.concat(readNewEvents(src));
+  const serverEvents = S.pendingServer.splice(0, S.pendingServer.length);
+  fresh = fresh.concat(serverEvents);
+  fresh.sort((a, b) => String(a.ts).localeCompare(String(b.ts)));
+  if (fresh.length) {
+    S.events = S.events.concat(fresh).sort((a, b) => String(a.ts).localeCompare(String(b.ts))).slice(-KEEP_EVENTS);
+  }
+  const freshDeaths = serverEvents.filter((e) => e.kind === "death");
+
+  // citizens: snapshot + presence + deltas vs last LIVE snapshot
+  let todPick = null; // {tod, who, key}
+  for (const name of Object.keys(CITIZENS)) {
+    const feed = readFeed(name);
+    const prevPresence = S.presence[name];
+    if (prevPresence !== undefined && prevPresence !== feed.status) {
+      membershipChanged = true;
+      if (feed.status === "stale") notes.push(`${name} feed STALE (last update ${feed.ageSec}s ago) — state UNKNOWN, not calm`);
+      else if (feed.status === "missing") notes.push(`${name} feed MISSING — state UNKNOWN, not calm`);
+      else if (feed.status === "live") notes.push(`${name} feed LIVE again`);
+    }
+    S.presence[name] = feed.status;
+    if (!feed.data) { citizens[name] = { lineage: CITIZENS[name].lineage, feed: { status: feed.status, ageSec: feed.ageSec } }; continue; }
+    const snap = snapshotOf(name, feed);
+    citizens[name] = snap;
+    // time-of-day: prefer the live feed with the newest feed timestamp
+    const f = feed.data;
+    if (feed.status === "live" && typeof f.timeOfDay === "number") {
+      const key = f.ts ? Date.parse(f.ts) : Date.now() - feed.ageSec * 1000;
+      if (!todPick || key > todPick.key) todPick = { tod: f.timeOfDay, who: name, key };
+    }
+    if (feed.status === "live") {
+      const prev = S.prevLive[name];
+      const cn = computeNotes(name, prev, snap, freshDeaths);
+      notes.push(...cn);
+      if (prev) {
+        const ch = {};
+        if (dist(prev.pos, snap.pos)) ch.pos = snap.pos;
+        if (prev.health !== snap.health) ch.health = snap.health;
+        if (prev.food !== snap.food) ch.food = snap.food;
+        if (prev.deaths !== snap.deaths) ch.deaths = snap.deaths;
+        if (prev.stage !== snap.stage) ch.stage = snap.stage;
+        if (prev.inventory.total !== snap.inventory.total) ch.inventoryTotal = snap.inventory.total;
+        if (Object.keys(ch).length) changes[name] = ch;
+      }
+      S.prevLive[name] = snap;
+    }
+  }
+  // last event per citizen
+  for (const name of Object.keys(CITIZENS)) {
+    const last = [...S.events].reverse().find((e) => e.citizen === name) || null;
+    if (citizens[name]) citizens[name].lastEvent = last;
+  }
+
+  const digest = {
+    kind: "world-digest", version: 0, ts, tick: S.tick,
+    timeOfDay: todPick ? todPick.tod : null,
+    phase: todPick ? phaseOfDay(todPick.tod) : null,
+    timeSource: todPick ? `${todPick.who} feed` : null,
+    weather: S.weather,
+    citizens,
+    recentEvents: S.events,
+    worldNotes: notes,
+  };
+  atomicWriteJson(OUT_JSON, digest);
+  if (membershipChanged) {
+    appendLedger({ kind: "snapshot", ts, tick: S.tick, reason: S.tick === 1 ? "bootstrap" : "presence change", digest });
+  } else {
+    appendLedger({ kind: "delta", ts, tick: S.tick, timeOfDay: digest.timeOfDay, notes, newEvents: fresh, changes });
+  }
+  saveState();
+  log(`tick ${S.tick}: tod=${digest.timeOfDay} (${digest.phase || "?"}) notes=${notes.length} freshEvents=${fresh.length} snapshot=${membershipChanged}`);
+}
+
+// ---------------- boot ---------------------------------------------------------
+S = readJson(STATE_FILE, null);
+if (!S || typeof S !== "object" || !S.cursors) { S = freshState(); log("cold boot: cursors seeded at input tails"); }
+else log(`resumed at tick ${S.tick} (rolling cursors restored)`);
+startTail();
+tick();
+setInterval(() => { try { tick(); } catch (e) { log("tick error:", e && e.stack || e); } }, TICK_MS);
+log(`world digest v0 running: tick ${TICK_MS / 1000}s, feeds fresh < ${FRESH_MS / 1000}s`);

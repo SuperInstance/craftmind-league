@@ -1,0 +1,94 @@
+=== day9 launch 2026-11-09T19:04:28Z (RUN_MS=5400000, wake: feed -> OPERATOR RELOCATION to (60.5,67,-92.5) -> day) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 64.3,63.0,-91.5 hp=20 food=20 worldDeaths=120 runDeaths=0 placesKnown=9 abortWiring=shouldAbort(0)=false/shouldAbort(3)=true
+[DD] WAKE: sequence start {"pos":{"x":64.3,"y":63,"z":-91.5},"hp":20,"food":20}
+[DD] WAKE feed: awaiting EXTERNAL feed via the separate-process op channel (no in-process bot)
+[DD] WAKE feed: external feed wait ended {"pos":{"x":64.3,"y":63,"z":-91.5},"hp":20,"food":20} fedOk=true
+[DD] WAKE relocation: requesting the operator move (external op channel) to the pad (60.5,67,-92.5)
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] WAKE relocation: wait ended relocated=true {"pos":{"x":60.5,"y":67,"z":-92.5},"hp":20,"food":20}
+[DD] WAKE: sequence done {"pos":{"x":60.5,"y":67,"z":-92.5},"hp":20,"food":20} fmTotal=1
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Morning, surface. First step of the day goes east to the birch by the dip — that's a real foot with a real trunk over it." cmd="goto 80 66 -96"
+[DD] cycle 2 [deepinfra:deepseek-v4.1-flash] say="Close enough — there's an oak foot at (86,67,-94), eight blocks east. I'll fell that one from the ground." cmd="felltree 86 67 -94"
+[DD] cycle 3 [deepinfra:deepseek-v4.1-flash] say="Three logs! Five days I've been waiting for wood, and there it is. One more oak south of me while I'm out here — no such thing as too much timber." cmd="felltree 87 67 -88"
+[DD] cycle 4 [deepinfra:deepseek-v4.1-flash] say="That one's a phantom — no trunk where my feet landed. Three logs is a fine morning's work anyway. Let me get back home and turn one into a pickaxe." cmd="goto 78 66 -95"
+[DD] cycle 5 [deepinfra:deepseek-v4.1-flash] say="Now let's make planks. Three logs into twelve boards, and a table of my own if I need one." cmd="craft oak_planks 12"
+[DD] cycle 6 [deepinfra:deepseek-v4.1-flash] say="Twelve planks already — the hands knew the count before I did. Now sticks, and a pickaxe to go with them." cmd="craft stick 4"
+[DD] cycle 7 [deepinfra:deepseek-v4.1-flash] say="Sticks in hand. Now the pickaxe — table's right here at the anchor." cmd="craft wooden_pickaxe 1"
+[DD] cycle 8 [deepinfra:deepseek-v4.1-flash] say="Huh — the sticks went somewhere else. Two more from planks, then the pickaxe." cmd="craft stick 4"
+[DD] cycle 9 [deepinfra:deepseek-v4.1-flash] say="Cherry planks? I don't hold cherry anything — the hands grabbed the wrong recipe. Four sticks is what I need for a pickaxe; let's try that straight." cmd="craft wooden_pickaxe 1"
+[DD] cycle 10 [deepinfra:deepseek-v4.1-flash] say="The bench keeps reaching for cherry planks I've never had. My oak planks are gone too — something ate them. Let me look at my own two hands and see what's actually in them." cmd="wait 2"
+[DD] cycle 11 [deepinfra:deepseek-v4.1-flash] say="The bench is confused and my oak planks vanished into it. I still have four sticks and a good table — one more honest try for the pickaxe, and if it plays cherry again I'll go cut a fresh log." cmd="craft wooden_pickaxe 1"
+[DD] cycle 12 [deepinfra:deepseek-v4.1-flash] say="That's the retry gone — bench wants cherry planks that don't exist on this whole shoulder. Fine. The oak NW at (58,-105) is the plan: cut it at the foot and get real logs in my hands." cmd="felltree 58 67 -105"
+[DD] cycle 13 [deepinfra:deepseek-v4.1-flash] say="No logs at that foot — the eyes and the trunk disagree again. I'll walk over and look at the oak myself before I swing." cmd="goto 58 67 -105"
+[DD] cycle 14 [deepinfra:deepseek-v4.1-flash] say="The walker says it arrived but my feet are still at home — that old lie again. The oak's a short real walk NW; I'll go in small hops and trust my feet." cmd="goto 60 67 -99"
+[DD] cycle 15 [deepinfra:deepseek-v4.1-flash] say="I've slid down into the pit mouth again — feet at y62, below grade. Not climbing, not fighting it. Crew, set me back on the surface like this morning, and I'll take the long leg east to real timber." cmd="goto 80 66 -96"
+[DD] cycle 16 [deepinfra:deepseek-v4.1-flash] say="Still down in the pit mouth at y63 — the walker won't lift me out. I'll say it plain: I'm in a below-grade cell. Crew, hands, set me on the surface — then I go east for that birch." cmd="wait 2"
+[DD] cycle 17 [deepinfra:deepseek-v4.1-flash] say="Three blocks down and the walker won't lift me. I'll build my own way up — pillar straight out of this mouth with the dirt in my pocket." cmd="climb 66 -92"
+[DD] cycle 18 [deepinfra:deepseek-v4.1-flash] say="Pillar won't place either — same as the pit. I'm in a below-grade cell and every door's fake. Crew, hands, lift me to the surface at the pad; I'll do the day from up there." cmd="goto 62 67 -93"
+[DD] cycle 19 [deepinfra:deepseek-v4.1-flash] say="I'm sat in the pit at y63, every door fake, same as the pit's whole story. Crew, hands — set me on the pad. Then I want that birch east, and I'm going to keep my feet on the surface this time." cmd="wait 3"
+[DD] cycle 20 [deepinfra:deepseek-v4.1-flash] say="Still in the pit at y63. The column tops east are y64 — one block up, that's a step the walker can take. I'll try a short hop east onto that ledge and work my way out from there." cmd="goto 67 64 -92"
+[DD] cycle 21 [deepinfra:deepseek-v4.1-flash] say="I'm still holed up in the pit mouth at y62, and the walls around me are four and five blocks high now. This is the same trap as day five. Crew, hands — I'm calling it: set me on the surface, I'm not climbing out of this on my own feet." cmd="wait 5"
+[DD] cycle 22 [deepinfra:deepseek-v4.1-flash] say="I'm on the pit floor at y62 and it's the same story as day five — every door's fake. Crew, hands, I need setting on the pad. I'll keep asking till I'm up there." cmd="wait 5"
+[DD] cycle 23 [deepinfra:deepseek-v4.1-flash] say="Still down here at y62 and the walls are four, five blocks high. One more ask, crew — hands, lift me to the pad. If not, I'll dig my own way up the east wall, block by block." cmd="wait 5"
+[DD] cycle 24 [deepinfra:deepseek-v4.1-flash] say="No hands coming, so I dig my own door. The dirt wall north of me tops out at y65 — I'll dig into it and carve a step up." cmd="dig 65 63 -92"
+[DD] cycle 25 [deepinfra:deepseek-v4.1-flash] say="That cell's already open air. The dirt wall's north at y65 — dig the block right there at (65,65,-93) and carve my step up." cmd="dig 65 65 -93"
+[DD] cycle 26 [deepinfra:deepseek-v4.1-flash] say="That block's gone now — the north column reads zero, same as my feet. I've carved into the wall face. Let me try stepping north into that notch and see if my feet actually move." cmd="goto 65 62 -93"
+[DD] cycle 27 [deepinfra:deepseek-v4.1-flash] say="My feet moved — barely, but they moved, and that notch I dug is a real step now. Let me dig the block above the notch too, open a proper stair, then climb north onto the surface." cmd="dig 65 64 -93"
+[DD] DEATH noticed by driver process (run death 1 of 3)
+[AutoRespawn] Died, respawning in 3s...
+[DD] DENSITY block close: acts=27 {"goto":8,"felltree":3,"craft":6,"wait":6,"climb":1,"dig":3} {} 
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] cycle 28 [deepinfra:deepseek-v4.1-flash] say="Died in my own pit again — but I woke out west with my eyes working and a real oak trunk named right there at (35,70,-91). No point mourning the porkchops. First log of my life, and it's eight blocks east." cmd="felltree 35 70 -91"
+[DD] FLOOR: fleeing spider by hop-chain
+[DD] FLOOR hop: hop 1: -> (34.5,74,-91.7) ok=false moved=0.84 pos=(31.7,68.0,-91.4)
+[DD] FLOOR hop: hop 2: -> (33.4,79,-90.4) ok=false moved=0.27 pos=(31.9,69.0,-91.3)
+[DD] FLOOR hop: hop 3: -> (33.9,70,-91.4) ok=true moved=0.78 pos=(32.7,69.4,-91.5)
+[DD] FLOOR hop: hop 4: -> (34.7,74,-91.6) ok=false moved=1.02 pos=(33.7,70.0,-91.5)
+[DD] FLOOR hop: hop 5: -> (35.7,75,-91.6) ok=false moved=0.00 pos=(33.7,70.7,-91.5)
+[DD] FLOOR hop: hop 6: -> (35.3,73,-92.7) ok=false moved=0.01 pos=(33.7,71.0,-91.5)
+[DD] FLOOR hop: hop 7: -> (35.4,75,-90.4) ok=false moved=0.88 pos=(33.3,71.0,-90.7)
+[DD] FLOOR hop: hop 8: -> (35.3,75,-90.9) ok=false moved=0.43 pos=(33.7,70.0,-90.8)
+[DD] FLOOR hop: hop 9: -> (35.7,75,-90.9) ok=false moved=0.22 pos=(33.5,71.0,-90.7)
+[DD] FLOOR hop: hop 10: -> (35.0,75,-92.0) ok=false moved=0.50 pos=(33.2,71.0,-91.2)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":10,"dist":30.8,"start":{"x":32.5,"y":69,"z":-91.6},"end":{"x":33.2,"y":70,"z":-91.2}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] DEATH noticed by driver process (run death 2 of 3)
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[BotMessenger] Received greeting from Gallery
+[DD] DEATH noticed by driver process (run death 3 of 3)
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody
+=== day9 driver exited 2026-11-09T19:24:11Z rc=0 ===

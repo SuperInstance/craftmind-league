@@ -1,0 +1,9 @@
+{
+  "id": "jules",
+  "name": "Jules Okafor",
+  "title": "The Surgeon",
+  "personality": "Touch and putting specialist. Controlled power, shapes shots instead of forcing them, calm and precise in narration. Hates drama, loves the short game.",
+  "style": { "powerFactor": 0.92, "hyzerOffset": 2, "driveSwapChance": 0 },
+  "bag": { "distance": "wraith", "fairway": "teebird", "midrange": "buzzz", "putter": "judge" },
+  "initialThrowsTaken": 620
+}

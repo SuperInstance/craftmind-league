@@ -1,0 +1,515 @@
+# OPERATIONS — Craftmind League
+
+The league's durable operational reference: how the world, the server, and
+the serving stack actually behave, what to do, and what never to do. Every
+fact here cites its source entry in `pulse/ledger.jsonl` (by entry `id`)
+or a named record file. Build narrative lives in the lane records and the
+ledger; this file states only what is current and actionable.
+
+World: Paper 26.1.2 on the Orin (`~/minecraft-server/`), offline mode,
+survival. League home: `~/craftmind-league/` on the Thor. World spawn
+(32, 70, −96); spawn protection radius 16.
+
+---
+
+## 1. Playerdata and the sample-clone (Paper 26.1.2)
+
+Playerdata for this world lives at `world/players/data/` — a two-level
+path under the world folder, one `.dat` per player UUID. (Ledger:
+`store-hunt-verdict-20261107`.)
+
+**The sample-clone.** When a player joins with no loadable `.dat` of
+their own, the server does not spawn them fresh. Paper's
+`PlayerList.placeNewPlayer` calls `loadRandomisedPlayerDataFile`, which
+copies a **random existing `.dat` from `world/players/data/`**,
+randomises inventory / recipe book / seen-credits, relocates `Pos` by a
+cube-root-scaled ordinal offset around the sampled position, and zeroes
+`Motion`. On disconnect, the copy is **written back over the joiner's own
+filename** — so a cloned state re-files itself under the joiner's name
+and the next join inherits it again. The behaviour is self-sealing: it
+survives deleting the joiner's file and it survives a full server
+restart, because the state is re-derived from the pool on disk at every
+join. (Ledger: `store-hunt-verdict-20261107`,
+`server-restart-cure-verdict-20261107`.)
+
+Consequences that are now standing knowledge:
+
+- A brand-new name is not a clean control. A fresh bot joining this
+  world clones the resident sample (measured: fresh name `CodyProbe2`
+  spawned mid-air at the resident sample's position with an offset,
+  20/20). Always interpret a "fresh entity" result against this.
+  (Ledger: `store-hunt-dual-join-20261107`,
+  `store-hunt-verdict-20261107`.)
+- **Standing rule: a citizen's own `.dat` must never be absent while
+  the sample pool is populated.** With the pool present and the
+  citizen's file missing, the next join sample-clones and only luck
+  decides the template. The citizen's existing healthy file is the
+  protection. (Ledger: `the-cure-persistence-verdict-20261107`.)
+- **There is no config off-switch on this build.** A bytecode and
+  config-surface hunt over the 26.1.2 jar and this install's configs
+  found no playerdata-sample gate. `spigot.yml`'s `sample-count: 12`
+  is the server-ping player sample — a different setting; do not touch
+  it for this. The standing rule above is the mitigation.
+  (Ledger: `the-cure-toggle-finding-20261107`.)
+- **Search trap (the three-lane error):** a filesystem search scoped
+  `-path "*players/data*"` run against the server root silently
+  matches nothing real — it can only match a `world/playerdata` path,
+  which does not exist here. Three separate hunts reported the
+  playerdata directory empty on the strength of that pattern while
+  `world/players/data/` held the pool the whole time. Verify
+  playerdata questions by listing `world/players/data/` directly.
+  (Ledger: `store-hunt-verdict-20261107`.)
+- Pool size: the store hunt counted ~170 `.dat` files; the cure's
+  sha256 manifest counted 91 entries at the moment of the pool move.
+  These two ledger figures are not reconciled — treat the manifest
+  (`pulse/cure-pool-manifest-20261107.txt`) as authoritative for the
+  cure, and recount before any future pool operation.
+  (Ledger: `store-hunt-verdict-20261107`,
+  `the-cure-pool-move-20261107`.)
+
+## 2. Diagnosing a frozen citizen — the corrected signature
+
+**Correction (2026-11-08).** `Motion = [0, −0.0784000015258789, 0]` is
+**not** a disease signature. That value is the vanilla first-fall-tick
+constant and is written for every fresh spawn: it appears identically
+in a proven-healthy fresh file (NBT parse: Pos [29.5, 75, −101.5],
+Health 20, food 20, OnGround 1) and in the frozen file. Any league
+document that cites the Motion value as the frozen-state signature is
+superseded by this section; the affected passages in
+`pulse/README.md` carry dated correction pointers to this entry.
+(Ledger: `the-cure-persistence-verdict-20261107`,
+`the-cure-verdict-20261107`.)
+
+The exhibits that actually diagnose the frozen state in a saved file
+are: **`Pos` at an airborne altitude, `OnGround` 0, and drained
+vitals** (the frozen file: Pos y = 78.0, Health 12.83, food 13).
+(Ledger: `the-cure-verdict-20261107`,
+`character-body-diagnosis-20261107`.)
+
+The diagnosis itself is made by controlled probes, not by file
+inspection alone: a bare bot on the same libraries walking the
+identical goal in seconds while a bare bot *as the citizen* moves
+0.00 blocks proves the defect follows the citizen's server-side saved
+state, not any client, driver, plugin, or terrain. (Ledger:
+`character-body-diagnosis-20261107`.) Do not frame the defect as
+server memory or a ghost state: a brand-new server process re-served
+the identical position and vitals because it read them from the pool
+on disk at join. (Ledger: `store-hunt-verdict-20261107`.)
+
+## 3. The cure: pool-aside reset of a citizen's playerdata
+
+The proven procedure for giving a citizen a genuinely fresh body.
+Declare each step in the ledger before executing it. (Ledger:
+`the-cure-declaration-20261107`.)
+
+1. Confirm the citizen is offline. Take a full sha256 manifest of
+   `world/players/data/` before touching anything.
+2. Move the **entire** `world/players/data/` directory aside (all
+   files, custody copies included). With no samples in the pool,
+   `placeNewPlayer` falls through to a true fresh spawn.
+   (Ledger: `the-cure-pool-move-20261107`.)
+3. Discriminator: one bare join as the citizen. Expected result,
+   measured: placement beside world spawn — (31.5, 70, −99.5) against
+   spawn (32, 70, −96) — health 20, food 20, `onGround` true at every
+   sample. Anything else means the mechanism is not what this file
+   says; stop and re-investigate. (Ledger:
+   `the-cure-discriminator-verdict-20261107`.)
+4. **Save quirk:** while `world/players/data/` does not exist *as a
+   directory*, Paper logs `Failed to save player data` at disconnect
+   and writes nothing — measured twice, for a bare session and for a
+   full character-loop session. Do not expect a fresh `.dat` from a
+   join made while the directory is absent. (Ledger:
+   `the-cure-save-behavior-20261107`.)
+5. End-state, in this order: restore the pool directory first; delete
+   **only** the citizen's loadable files (`.dat` and `.dat_old`);
+   keep the named custody copies (`.bak-*`, `.frozen-original`,
+   `.writethrough*`) in place as inert evidence. The citizen's next
+   join then writes a genuinely fresh file into an existing
+   directory. (Ledger: `the-cure-verdict-20261107`.)
+6. Verify the new file by read-only NBT parse (Pos grounded, Health
+   20, food 20, OnGround 1) and record its sha256.
+
+Cure record for Cody, 2026-11-08: 91 files moved aside under manifest;
+discriminator passed as predicted; end-state 90 files (89 pool + his
+fresh `.dat`, sha256 `c8632cc2…`); deaths 38 at start, 38 at end, zero
+operator-caused. (Ledger: `the-cure-verdict-20261107`.)
+
+## 4. Server restarts and the filming surface
+
+A server restart does **not** cure a playerdata fault on its own — the
+sample pool on disk re-serves the state to the new process at the next
+join (measured: byte-identical position and vitals from a brand-new
+process). Restart is a step inside a cure, never the cure. (Ledger:
+`server-restart-cure-20261107`, `server-restart-cure-verdict-20261107`.)
+
+A restart also silently darkens the filming surface: **the headed
+client (MagnusandMouse, Prism on the Orin desktop) does not rejoin by
+itself.** It sits on a "Connection Lost / Server closed" dialog while
+the cameraman process keeps issuing shot commands into a client that
+is not in the world. Any brief that restarts the server must own the
+client rejoin end-to-end, in the same sequence. (Record:
+`~/cameraman/REJOIN-RESTORATION-2026-11-08.md` on the Orin; ledger:
+`server-restart-cure-verdict-20261107`.)
+
+Rejoin procedure, as proven 2026-11-08:
+
+1. **STOP the cameraman first** (its own STOP mechanism) before any
+   GUI work. Its keystrokes will otherwise land in whatever has
+   focus — measured: a CUT burst opened Direct Connection and typed
+   a command fragment into the Server Address field. This is the
+   standing shared-keyboard hazard; it applies to *any* GUI work on
+   the headed client, not only rejoins.
+2. From the disconnect dialog: Back to Server List. The saved-server
+   list may be empty; use **Direct Connection** and type `localhost`
+   (the world is the Orin's own Paper server, port 25565).
+   Screenshot-verify the field reads exactly `localhost` before
+   joining.
+3. Verify the rejoin in the **new** server process's log (a
+   MagnusandMouse login line), then relaunch the cameraman by its
+   proven pattern and verify its commands land as server-log entries,
+   not merely as "sent" lines in its own log.
+
+## 5. Serving the actor model (Qwen3 on :8311)
+
+Pattern for a small resident actor model behind the league governor.
+(Ledger: `casting-actor-server-20261107`,
+`casting-governor-cody-actor-20261107`.)
+
+- Convert: llama.cpp `convert_hf_to_gguf.py --outtype bf16`
+  (Qwen3-0.6B BF16 → `~/models/Qwen3-0.6B-GGUF/qwen3-0.6b-bf16.gguf`).
+- Serve under thor-admit with a declared memory peak
+  (`serve qwen3-0.6b-actor --port 8311 --peak 4G`); llama-server flags:
+  `-ngl 99 --ctx-size 8192 --parallel 4 --cont-batching`. Kill path:
+  stop the thor-admit serve; nothing else references the port.
+- Measured on this box: prompt processing ~1,300 tok/s, decode
+  122–128 tok/s on actor-shaped calls.
+- **Required client setting: `chat_template_kwargs:
+  {enable_thinking: false}`.** Qwen3's default thinking mode spends
+  the entire token budget in `reasoning_content` and returns empty
+  content with `finish_reason: length`. With thinking disabled the
+  same prompt returns a clean completion with `finish_reason: stop`.
+  Any Qwen3 chat client in the league must send this.
+- Governor identity: add the agent to `config/governor.json` with its
+  own budget and an `agentUpstreams` override to the local server
+  (pattern: `cody-actor` = 240 calls / 600 mind-seconds per rolling
+  hour → `http://127.0.0.1:8311/v1`). Back up the config first; a
+  governor restart clears its in-memory budget windows. Verify the
+  override live (model list as the league identity) and confirm the
+  first metered receipt in `ledger/mind-calls.jsonl` before calling
+  the identity done. Existing identities' budgets and upstreams must
+  be verified unchanged in the same write.
+
+## 6. Waypoint arrival-radius deadlock
+
+A waypoint that sits **inside** the gotoNear arrival radius will be
+re-picked forever: gotoNear returns instant-ok (its start-distance
+check passes at `range + 0.6` = 2.2 blocks for range 1.6), the
+selection loop sees the nearest progress waypoint, selects it again,
+and the body freezes bit-identical with zero failure lines. Dense
+waypoint chains (~3-cell hops) create this by construction — adjacent
+arrival radii overlap — where sparse chains masked it. (Ledger:
+`shoulder-wedge-hopskip-20261107`.)
+
+Fix, as landed in `character-plugin.js` (selection loop): a waypoint
+within 2.2 blocks of the body, and not the anchor itself, counts as
+consumed and is skipped. Rule for future route work: whenever a route
+uses dense hops, audit hop spacing against the arrival radius, and
+prefer surveyed per-cell feet-y hop chains over a single long walkTo
+at the destination. (Ledger: `shoulder-wedge-fix-20261107`,
+`shoulder-wedge-hopskip-20261107`.)
+
+## 7. Trial safety: the death circuit-breaker
+
+Standing floor rule for all Pulse trials: **a trial aborts
+automatically at 3 deaths in the run** and is judged on the world
+evidence gathered up to the abort. The mechanism is in the gate, not
+in an operator watching: `trial.js` accepts `--max-deaths N`
+(default 0 = off — always pass it explicitly), counts
+`pulse/deaths.jsonl` records since the trial's baseline on every
+15 s poll, and stamps the trial entry `abortedByCircuitBreaker` at
+the threshold. Origin: Trial 7's corridor grind — 7 deaths in
+3.5 minutes, the last four buying no information. (Ledger:
+`death-circuit-breaker-20261107`.)
+
+## 8. Daylight hold arithmetic
+
+The cameraman holds the world at morning by re-issuing
+`/time set 1000` on a refresh interval (`DAY_REFRESH_S` in
+`~/cameraman/cameraman.py` on the Orin). The arithmetic that sizes
+it: from time 1000, the world reaches 12000 (dusk) in ~550 s of wall
+time. A ~600 s refresh therefore leaks night **every** cycle, and a
+slipped cycle (one measured at 714 s) leaks minutes of mob-spawning
+dark — the largest single killer in the world while it ran
+(citizen deaths attributed in the tightening record: Geist 31 → 50,
+Vega 7 → 20). The current setting is **300 s**, which peaks near
+time-of-day ~7000, mid-morning, never near dusk. Rule: the refresh
+interval must sit comfortably under the ~550 s leak window, with
+margin for a slipped cycle. Real nights stay available on demand:
+stop the cameraman and the hold lapses — night-exam choreography is
+unaffected. (Record: `~/cameraman/DAYLIGHT-TIGHTENING-2026-11-07.md`
+on the Orin, and the `DAY_REFRESH_S` note in `cameraman.py`. No
+`pulse/ledger.jsonl` entry covers the tightening; the record and the
+source are the citations.)
+
+---
+
+*Local file, unpublished. Publication is the owner's gate. Sources:
+`pulse/ledger.jsonl` (entry ids as cited), `~/cameraman/` records on
+the Orin. Written 2026-11-08 from the 2026-11-07/08 night's records.*
+
+---
+
+## Watcher's Charter — first-pass instance (2026-11-08)
+
+Night Study 4 (`~/workspace/studies/watchers-charter-20261107.md`)
+distilled the hold-loss night into eight rules. This section is the
+charter's first league instance: rules 2, 3 and 8 made real for the
+current watcher set, with the compliance table filled from inspection
+on 2026-11-08, worst rows stated as gaps rather than smoothed. The
+cameraman's rule 1 (landing verification + HOLD-LOST alarm +
+self-park, guarded build, incident record
+`~/cameraman/INCIDENT-HOLD-LOSS-2026-11-08.md` on the Orin) predates
+this pass and is the reference instance; its code and process were
+**not** touched here — audited read-only only.
+
+### What was placed
+
+| Artefact | Where | Notes |
+|---|---|---|
+| Heartbeat emitter | Thor `~/craftmind-league/meta-watcher/heartbeat_emitter.py`; Orin copy `~/meta-watcher/heartbeat_emitter.py` | Wrapper-side, stdlib-only. Reads each watcher's **output artefacts** (effects), never a bare pid — a live pid with a frozen artefact reads as dead, which is the curator-crash lesson |
+| Meta-watcher | Thor `~/craftmind-league/meta-watcher/meta_watcher.py` | The league's simplest code: stdlib only, no shared libraries with the watchers. Reads heartbeat effect ages vs declared period + 2× grace; writes `commons/alarms/alarm-<watcher>-<epoch>.json` + a line in `commons/alarms/alarm.log`; writes/removes `commons/alarms/ALL-CLEAR.json` |
+| Runner | `~/craftmind-league/meta-watcher/run-watchers.sh` | One invocation = emitter pass + staleness sweep |
+| Heartbeat store | Thor `~/craftmind-league/commons/heartbeats/<watcher>.json` | A store no watcher owns. Orin beats (cameraman, capture) are **written on the Orin and shipped to the Thor** over the `thor-lan` ssh alias — rule 3, cross-host |
+| Alarm store | Thor `~/craftmind-league/commons/alarms/` | Artefacts + `alarm.log` + `ALL-CLEAR.json` |
+| Schedule | Thor systemd user timer `league-meta-watcher.timer` (5 min); Orin systemd user timer `league-heartbeat-orin.timer` (5 min) | The one declared background checker pair. Ledger: `watchers-charter-first-pass-20261108` |
+
+Each heartbeat carries content, per rule 2: watcher name, host,
+declared period, the **last verified effect in words**, and that
+effect's timestamp. Staleness is judged on the *effect's* age, so a
+heartbeat file that stops being refreshed — or a watcher whose
+artefacts freeze while its process lives — both age into an alarm.
+
+### Compliance table — tonight's truth (inspected 2026-11-08)
+
+| Process | Rule 1 effect store | Rule 2 heartbeat → | Rule 4 black-box truth | Rule 6 safe state |
+|---|---|---|---|---|
+| Cameraman | Minecraft server log landing lines (its own guard verifies each daylight send within 8 s) | Thor commons heartbeats, shipped from the Orin every 5 min; effect read = last `VERIFIED LANDED` line | World time inside the held band, read server-side (its guard); meta-watcher alarms if landings stop ageing-in | STOP self-park after 2 unverified sends + 1 failed recovery — **compliant, the reference row** |
+| Curator | Manifest/reel artefacts on Thor disk (`~/curator/manifests/`) | Thor commons heartbeats; effect read = newest manifest entry | Newest manifest moment age vs its 600 s pulse — now meta-watched: **tonight's silent 06:37Z crash class (frozen artefacts, live-looking silence) now raises an alarm artefact + log line within ~35 min worst case** (600 s period + 2× grace + 5 min sweep). Black-box probe beyond the artefact age (reel content spot-check) still absent — partial | Pulse crash leaves offsets frozen + (since v1.1) no self-incident note; the alarm now comes from outside. Safe state = stops pulsing by dying, which is honest only because the meta-watcher now notices |
+| Digest | `digest/digest.jsonl` growth + the citizens' state it digests | Thor commons heartbeats; effect read = last digest entry (tick + time-of-day) | A probe can read the newest digest entry's ts and compare to the server-log tail — the emitter *is* that read, every 5 min | **Gap:** no declared safe state; a dead digest fabricates nothing (it is read-only) but nothing in the digest itself announces the halt — detection is the meta-watcher's, mitigation is a citizen lane noticing stale world state |
+| Governor | `ledger/mind-calls.jsonl` receipts vs the model servers' own logs | Thor commons heartbeats; effect read = newest receipt (agent + status) | **Partial / declared weakness:** the governor is demand-driven — receipt staleness cannot distinguish "governor down" from "nobody called". Declared period 900 s; the heartbeat states the ambiguity in its own detail field. A synthetic probe call (rule 4 proper) is **not** built — gap | Deny-by-budget behaviour is in its config; on unverified state it has no self-park. Gap, stated |
+| GLM consult driver | Answer entries in `commons/consults/glm.jsonl` (+ consumption by the citizen loop, outside this beat) | Thor commons heartbeats; effect read = newest answer | Declared period 3600 s (answers are demand-driven; an answer within the active hour is the end-to-end proof). **Sharper gap:** a filed-but-unanswered consult aging past the driver's ~60 s poll has no dedicated alarm — the book must be read to see it. Consumption-side staleness (answers filed, never consumed) likewise unprobed — gap | None declared; a dead driver simply stops answering, now visible via this beat within period+grace |
+| MiniMax consult driver | Answer entries in `commons/consults/minimax.jsonl` | Thor commons heartbeats; effect read = newest answer (first answer landed 2026-11-08T07:38Z, Vega's) | Same shape and same gaps as the GLM row | Same as GLM row |
+| Capture (Orin) | Segment files growing on the Orin, `~/capture/segments.jsonl` | **Cross-host:** beat written on the Orin, shipped to the Thor commons every 5 min; effect read = newest segment start | Newest segment age < 2× its ~120 s cadence is checkable from the Thor-side beat — satisfied. A Thor-side read of the segment files themselves (content, not just the index) is not done — partial | systemd unit (`Restart=on-failure`) stops + the beat goes stale on the Thor if it dies; never overwrites old segments. Reasonably compliant |
+
+**Worst rows, in order:** (1) Governor — no black-box probe exists; its
+heartbeat can only report receipt flow, and its staleness is ambiguous
+by construction. (2) Consult drivers — no filed-but-unanswered alarm;
+the books are the evidence and nobody is paged by an aging question.
+(3) Digest — no safe state of its own. (4) Meta-watcher rule 8c — its
+own heartbeat (`commons/heartbeats/meta-watcher.json`) is written
+every sweep, but **no external dead-man's-switch expecter is
+registered**: if the Thor or the timer dies silently, the chain ends
+in silence inside the fleet. That is the charter's own named
+terminus and it is **not yet built** — stated here as the first
+pass's largest single gap. Rule 8b is also partial: the meta-watcher
+runs on the Thor only; the Orin runs no reciprocal sweep of
+Thor-side heartbeats (its beats are consumed on the Thor). What is
+cross-host tonight is the *evidence path* for Orin watchers, not the
+checking itself.
+
+### Meta-watcher runbook
+
+- **Is it running?** `systemctl --user list-timers league-meta-watcher`
+  on the Thor (5 min); `systemctl --user list-timers league-heartbeat-orin`
+  on the Orin. One manual pass: `~/craftmind-league/meta-watcher/run-watchers.sh thor`.
+- **Health at a glance:** `commons/alarms/ALL-CLEAR.json` present and
+  fresh = every watcher fresh at last sweep. Absent + `alarm-*.json`
+  artefacts = read the newest artefact and `alarm.log`.
+- **An alarm names** the stale watcher, the reason (effect age vs
+  period + grace), and its last verified effect — start diagnosis
+  from that effect, not from the watcher's own log (that is the
+  charter's whole point).
+- **Known false-alarm shapes:** governor and the consult drivers are
+  demand-driven; a quiet league (no calls, no consults) ages their
+  beats by design. Their declared periods (900 s / 3600 s) are set
+  wide for exactly this; if alarms fire on a genuinely idle night,
+  the record should say "idle", not "down" — check receipts/books
+  before restarting anything.
+- **The meta-watcher itself:** its heartbeat is
+  `commons/heartbeats/meta-watcher.json`. If that file's
+  `emitted_at` is older than ~15 min, the checker pair has stopped —
+  and per the gap above, nothing will announce it. A human glancing
+  at that file is currently the last link in the chain.
+
+### Rule-7 drill — first instance (ledger `watchers-charter-test-drill-20261108`)
+
+Controlled, end-to-end, against a synthetic watcher only: a
+`test-drill` heartbeat with `force_stale: true` was placed in
+`commons/heartbeats/` at 2026-11-08T07:48:53Z. The meta-watcher
+exited 3, wrote `commons/alarms/alarm-test-drill-1794124133.json`,
+appended the alarm line to `alarm.log`, and removed `ALL-CLEAR.json`.
+The test heartbeat was then deleted; the next sweep (07:49:01Z)
+exited 0 and restored `ALL-CLEAR.json` naming all seven watchers
+(cameraman, capture, curator, digest, glm-driver, governor,
+minimax-driver). Drill artefacts are retained in `commons/alarms/`
+as the record. Two implementation bugs were caught *by this
+machinery running on real data* during the pass — ISO `+00:00`
+timestamps the first staleness reader could not parse, and a
+naive-vs-aware datetime clash on the cameraman's naive-UTC log
+timestamps — both fixed, both re-verified live; they are recorded
+here because a checker that has never failed on real input has not
+been tested either.
+
+---
+
+*Appended 2026-11-08 by the Watcher's Charter first-pass lane.
+Local file, unpublished; publication is the owner's gate. Sources:
+Night Study 4 (`~/workspace/studies/watchers-charter-20261107.md`),
+`pulse/ledger.jsonl` entries `watchers-charter-first-pass-20261108`
+and `watchers-charter-test-drill-20261108`, the incident record on
+the Orin, and direct inspection of the running processes named.*
+
+## Spawn country — standing warning (census 2026-11-08T09:24Z)
+
+Full data: `pulse/spawn-country-census-20261108.json`; ledger
+`spawn-country-census-20261108` (survey) and
+`spawn-country-sweep-design-20261108` (deferral decision). Read this
+before launching ANY body — citizen, probe, or worker — into spawn
+country. The census is a saved-store snapshot (no-body MCA/NBT parse,
+md5-verified): re-run it in the same hour as any launch, because a
+mob in an unloaded chunk keeps its last saved position and re-enters
+play when its chunk loads.
+
+**What the 09:24Z census found.** The working geography (x −20..92,
+z −128..−40) holds five saved surface hostiles, all named below.
+Every daylight-permanent threat named by the 07:20Z mob map —
+golden-helmet skeleton, both homestead-rim creepers, the Geist-line
+creeper, the pocket skeleton, the plateau zombie — is ABSENT from the
+saved store. Two hours of guarded daylight (burn cycles; a golden
+helmet has 77 durability and breaks under sustained sun), despawn
+churn in repeatedly loaded chunks, and tonight's kills thinned the
+remnant population. Do not plan around the mob map's threat list; it
+is superseded for the cells below. The cave population (~170 deep
+underground) is unchanged in kind and still only matters where
+citizens dig.
+
+**Danger cells — the standing list (09:24Z):**
+
+1. **Bow skeleton, (20.5, 67, −81.2)** — the working geography's one
+   live ranged threat. Unhelmeted, `ShouldBurnInDay` 1, bow in hand;
+   outside the survey span, so its cover is unknown — treat it as
+   persistent until a same-hour census or a walking body verifies it
+   burned. Stands inside the protection square's north edge, on
+   Geist's apron (cheb ~14 from his anchor). First walking body:
+   kill it or verify it gone before routing anyone along the north
+   side of the square.
+2. **Spider, (33.7, 68.1, −91.7)** — on the spawn plateau inside the
+   protection square, cheb 4 from world spawn, cheb 7 from Geist's
+   saved cell. Day-neutral: it will not hunt in daylight, but it is
+   the nearest hostile to every fresh spawn and it is NOT neutral at
+   night or if brushed. Any hold failure makes the spawn point itself
+   contested ground.
+3. **Canopy spider, (41.7, 71.1, −87.8)** — airborne above the north
+   shelf route (the one mob-map threat that persists verbatim).
+   Day-neutral; drops on whoever passes under it after dark.
+4. **Spider, (10.7, 68.1, −97.7)** — Geist's west apron. Day-neutral,
+   but it sits on the corridor his lane already treats as dirty.
+5. **Spider, (44.5, 68.0, −71.9)** — Vega's apron edge; nearest
+   surface hostile to her parked position (cheb 16), the commons
+   chest site (cheb 19), and the homestead pad (cheb 21). Day-neutral.
+
+**The standing gate.** No fresh-body experiment launches without
+(1) a same-hour entity-store census and (2) a remnant sweep or
+escort plan for the spawn plateau. Tonight's arithmetic is the
+reason: the remnant population killed 9 stance-probe bodies, Geist
+once inside his first minute (pond cell, 08:59Z — a cell the 09:24Z
+census shows empty, nearest hostile a day-neutral spider at cheb 11),
+and work bots across three lanes, all in nominally guarded daylight.
+The guarded hold fixes time-of-day, not leftovers. Cameraman cadence
+is NOT the gap: 07:26–09:26Z gaps measured 302–315 s, median 303 s,
+zero over 360 s (ledger `spawn-country-census-20261108`).
+
+**Sweep plan, for the first body that can walk** (post-stance-
+verdict): one citizen-grade body, daylight, surveyed rows only —
+verify/kill in this order: (20.5, −81.2) skeleton, (33.7, −91.7)
+plateau spider, (41.7, −87.8) canopy spider, (10.7, −97.7) Geist
+apron spider, (44.5, −71.9) Vega apron spider; then re-census and
+file the delta before the body does anything else. Until that body
+exists, this warning is the sweep.
+
+---
+
+*Appended 2026-11-08 by the spawn-country sweep lane. Local file,
+unpublished; publication is the owner's gate. Sources:
+`pulse/spawn-country-census-20261108.json`, `pulse/ledger.jsonl`
+entries `spawn-country-census-20261108` and
+`spawn-country-sweep-design-20261108`, `pulse/mob-map-20261107.json`
++ README, and the Orin cameraman log.*
+
+## Operator-skill launches — supervision is proven, not assumed (2026-11-08, Vega food-first lane, triple-011)
+
+Three substrate rules, paid for with a citizen's food margin (food 3 -> 2, no
+deaths, no damage — the margin bought the lesson, the citizen kept her record):
+
+1. **Smoke-test the executor's own predicates before launch.** A lineage-b
+   operator skill is launch-ready only when a Thor-side require passes the
+   same checks `runSkill` applies: `typeof (mod.default || mod) ===
+   "function"` and `typeof mod.post === "function"`. `node --check` proves
+   syntax, not contract. Edit a working skill in place; never rewrite it
+   from memory between runs — transcription re-introduces contract drift
+   (export shape, require paths) and the fall-through charges the citizen.
+2. **A watchdog is armed only when its armed-line is read back, naming the
+   /proc-verified citizen pid.** A pidfile written by a compound launch line
+   (`a && b & echo $!`) holds a shell-wrapper pid, not node. Verify
+   `/proc/<pid>/cmdline` is the citizen process. On any latch failure the
+   citizen falls through to the author loop within seconds and roams at her
+   own risk until the floor parks her — a missing armed-line means the
+   launch is unsupervised, full stop.
+3. **Re-run pre-flight margin math whenever the margin changes.** Food (and
+   hp) margins are spent by substrate failures too, not only by the plan.
+   When expected burn meets the remaining margin, the deliverable is the
+   written no-go — floors ratchet one way, and a plan that needs the good
+   case at hp 3 is not a plan.
+
+---
+
+## 9. The pristine-body verdict — the wedge is CELL-BOUND, not body-bound (2026-11-08, triple-016)
+
+**The experiment (ACTIONS item 20; pre-registered `pristine-body-preregistered-20261108`).** A brand-new identity, PristineProbe, was made genuine by the §3 cure mechanics applied to the new name (116-file manifest → pool aside → discriminator join grounded at (42.5, 67, −104.5), hp/food 20/20, save failed on disconnect per the quirk → pool restored, manifest-verified) and given ONE walking session. It had never been cloned and never relocated — every body-side variable was zero.
+
+**Result: it pinned, bit-identical, in its first session.** After five jittery opening legs through the shelf cluster (dispH 3.1/1.0/5.0/5.1/6.1 under 366–490 forcedMoves each), the body settled at **(41.699, 67, −84.318), cell (41,−85)** and never moved again: 14 route/pad legs dispH 0.005–0.151, 9 traverse legs 0–0.03, all 10 stance diagnostics 0–0.028 — including a raw flat-face push at **dispH 0.0 with 76 forcedMoves, numerically identical to Cody's genuine-body baseline** — and 8 park legs 0–0.022. Total **21,791 forcedMoves**, hp/food 20/20 throughout, rests quiet, **zero deaths, zero hostiles within 48 blocks at any rest** (same-hour census: all 23 saved hostiles subterranean; the five 09:24Z surface remnants absent from the saved store). Daylight hold landing-verified throughout the run (landings 21:14:25, 21:19:32, 21:24:43Z inside the window).
+
+**Standing consequences.**
+1. **Clone-inheritance and relocation history are exonerated as causes.** The clone-freeze signature occurs with NO cloning and NO relocation. Do not spend another lane on body provenance as the wedge explanation.
+2. **The pin cell is shared across bodies:** (41,−85) wedged Geist's genuine attempt (41.161, 67, −84.927) and PristineProbe (41.699, 67, −84.318) hours apart; the stance pair (72–73, −101/−102) is Cody's instance. The wedge is a property of **cells on this Paper build**, not of citizens. Cody's genuine body crossed the adjacent shelf on the S1 morning (05:40Z) — so the discriminating variable is now **what differs at the wedge cells between that traversal and every later attempt** (cell-level world state vs a server-side change after the S1 window). That question is the next experiment's to design; it is NOT answered here, and the stance pair itself was never reached by the pristine body, so no stance-specific verdict exists.
+3. **The staircase stays frozen** (its premise was stance-local; the wedge is wider than the stance pair). The dig-step lever stays OFF and untouched — both remain their owners' calls.
+4. **PristineProbe is removed.** Its .dat was recorded (sha256 8f014fdb833729b2307ec19e9025b7e6f3acaa6c719a47bcb39c1ec311cca171) and deleted with its .dat_old per the pre-registered pin end-state; the pool is back to the 116-file manifest, byte-identical except the headed client's own live saves. Citizens untouched and sha-verified before/after: Cody e875776063946437d17a7348b79c1f8bf0c37d7938f31466de1a180d28ba5ca4, Geist 8ecbd23060cea01a83a944e6c75a2d283a89716edfe01e91b6181d4d760d94f0, Vega 4b65ff2e38a43de4da729610c5549151d15adc41d90ddf3db01f42cb52a8edc6.
+5. **Tooling note:** mineflayer's `localPort` option does NOT pin the source port (createBot maps it to `localAddress`; both pristine joins arrived on unpinned ephemeral ports). The stance-probe-era "pinned port" records were never pinned. Source-port pinning requires `localAddress` + an explicit net-level bind and is not available through the current bot route — treat port-pinning as an open tooling gap, not a variable anyone has actually controlled.
+
+### Wedge-cell discriminator addendum (2026-11-08, follow-on to triple-016; triple-017)
+
+FORENSIC: Cody's 05:40Z S1 traversal NEVER crossed the pin cell. His relocate ran route-2 along the z=-101 row (survey corridor z-106..-88; the pin cell (41,-85) is outside it) using the RELOCATE driver (dense ~3-cell BFS hops); every failing attempt since used prims.gotoNear. The 05:40-vs-later contrast dissolves - different route AND different driver. Server timeline: ONE restart all day (04:54:06-42Z, before the crossing); all config files written at that boot; the only gamerule write all day was randomTickSpeed 3->9 at 19:53:24Z (after the Geist/stance failures, before PristineProbe).
+
+SCRATCH TESTS (offline only; live world never touched; dig-step OFF; citizens' .dat shas verified identical before/after): identical walk driver over world copies on the Thor. F = live-world snapshot + the Orin's own Paperclip bundle (paper.jar, boots as Paper 26.1.2-74 @e4e17fc = the live binary family) + fleet JDK25: REPRODUCED THE LIVE PATHOLOGY IN FULL - veto storm on nearly every leg (fm 162-471), pin locus in the same spawn-shoulder cluster (settled ~(35.3,-100.7); approach to (41,-85) never completed), raw flat-face push dispH 0.0/fm 80 and raw +1 N 0.057 (live genuine baselines: 0.0/76, slide-south fail). G = same binary + FRESHLY GENERATED world + grass pad at the pin coordinates: NO pathology (crossings displaced metres; one 83-block relocation-style jump). D = same jar+world without a hostile sweep diverged independently (below) and is excluded from the contrast.
+
+VERDICT (triple-017, confirmed): the veto is a property of the running 26.1.2 server interacting with THIS WORLD's saved state - not the pin cells' block geometry ((41,66,-85) is plain grass, air above), not the driver, not body lineage. Version skew is on the table: the world's chunks are saved at DataVersion 5023 (26.3) while the server that runs them boots 26.1.2-74; chunk (2,-6) carries InhabitedTime 2,087,388. Pins are cluster-shaped ((36,-83), (35.3,-100.7), (41,-85), (28,-100)), not single-cell.
+
+MECHANISM M-3 (independent finding, proven on scratch D): a client logging into an area dense with saved entities can be halted at login state by the entity packet stream - the server logged the spawn, the client never fired its spawn event, position frozen at the previous session's disconnect point. The live world retains ~13,365 item entities server-side (citizens' death drops). Rejoining a citizen into an entity-dense area is a live hazard; sweep entities around a rejoin point first.
+
+SETUP FAILURES FILED (this lane's own): first staging copied paper-26.3-242.jar (the staged upgrade file, mtime Nov 5 22:22) instead of the live Paperclip bundle paper.jar - the live banner 26.1.2-74 comes from paper.jar fetching cache/mojang_26.1.2.jar. System OpenJDK 25 SIGSEGV'd (vframeStreamForte, async-profiler frame) on the 26.3-migrated world in scratch D's first boot; the fleet JDK25 (~/lm-wt/agent-world/runtime/jdk-25) ran it clean. FIFO-fed consoles lose commands at server stop; RCON is the reliable control channel for scratch servers. NOTE for the record: OPERATIONS/triple epoch lines saying "Paper 26.1.2 build 74" describe the BOOT BANNER; chunk data in both the live world and world-26.3-backup is written by 26.3 - save-version provenance is messier than the banner.
+
+OPEN VARIABLE (next experiment, not this lane): byte-level diff of chunk (2,-6) + neighbours between the Nov-5 backup and today's world; and a restart A/B on a CLONED copy of the live world under F's exact setup (fresh boot, re-run A2a) to separate runtime accumulation from saved-chunk-data as the veto's carrier. The live-restart A/B on the REAL server remains Casey's call.
+
+### Wedge supplement — restart A/B answered offline (2026-11-08, ledger wedge-discriminator-h-supplement-20261108)
+
+SCRATCH-H (pristine re-copy of the live world snapshot, F's exact setup: Paperclip bundle = Paper 26.1.2-74 @e4e17fc + fleet JDK25, FRESH BOOT, first session on that boot, hostile sweep per placement): veto reproduced from the fresh boot — A2a enter dispH 5.934 (fm 241), cross-E 0.014 (fm 262), cross-W-back 0.005 (fm 268), pin (28.687,70,-96.307); A1a approach-41,-85 never completed, total fm 2,861. The veto's carrier is therefore the SAVED WORLD DATA as read by the 26.1.2 server, NOT live-runtime accumulation — a live-server restart would not be expected to clear it (expectation from clone evidence). Remaining open variable: which saved-data property (26.3-written chunks at DataVersion 5023 vs the 26.1.2 reader; InhabitedTime 2,087,388 on chunk (2,-6); ~13,365 retained item entities; POI/block-entity state). Next offline steps: byte-level chunk diff Nov-5 vs live; same world under the 26.3 binary with a 26.3-capable client to separate version-skew from world-content.
+
+### Wedge follow-on 1 — saved-data forensics: all four candidates dead (2026-11-08, triple-018)
+
+FORENSICS (offline; read-only evidence copies of the live world + world-26.3-backup at ~/wedge-followon1/evidence/ on the Thor; pure-python MCA/NBT reader mcprobe.py, round-trip-validated byte-identical on 4,642 chunks, 0 failures). Candidate (a) DataVersion skew DEAD: all 674 chunks in live r.0.-1 — and all 2,013 chunks in the live overworld — are DataVersion 4790 in native 26.1.2 Paper shape (starlight.light_version, isLightOn, 25 sections Y-5..19); live level.dat is Version 26.1.2 / Id 4790. The only 5023 data is the Nov-5 backup (level.dat 26.3/5023), whose league-area chunks NEVER PASSED Status structure_starts: backup (2,-6) = InhabitedTime 0, LastUpdate 11, 24 proto-sections, 2,703 raw bytes vs the live chunk's 38,193. The backup is an UNGENERATED world, not an earlier state of the played one — no Nov-5-vs-today terrain diff exists. Record correction: triple-017's "live chunks at 5023" is not reproducible from any current on-disk artefact (their (2,-6) InhabitedTime 2,087,388 matches the live 4790 chunk exactly in that field); and F's saved gamerules are rts=3 like G's — the live 19:53:24Z rts=9 write never persisted into the copies (immaterial to their contrast). Candidate (c) DEAD: the live entities store holds 1,078 entities / 6 items across the whole overworld; F/H copies that vetoed hold 20–30 items; every in-chunk 'entities' list is EMPTY in live, G and backup (the key marks not-yet-full chunks: r.0.-1's 451 such chunks are exactly its non-full ones); pin-cluster entity chunks hold 0–3 entities, 0 items. The ~13,365 item figure is not reproducible from any saved store in any snapshot. Candidate (d) DEAD: 1 POI record in all of live r.0.-1 (none at clusters); block_entities 0 in every cluster/neighbour chunk; block/fluid ticks and PostProcessing 0 in cluster chunks of both worlds; F vs G server.properties differ only in motd/ports and all 58 saved gamerules are identical (incl. player_movement_check 1 in both).
+
+A/B (pre-registered wedge-followon1-inhabitedtime-ab-preregistered-20261108; scratch servers W0/W1 copied from H's dir, Paperclip 26.1.2-74 @e4e17fc + fleet JDK25, region files passed through the validated rebuild pipeline): W0 = identity rebuild (pipeline control), W1 = InhabitedTime zeroed in all 2,013 chunks, nothing else changed. Batteries verbatim (A2a then A1a, fresh bot per arm, dig-step OFF). H control: A2a cross-E 0.014/fm 262, cross-W-back 0.005/268, A1a total fm 2,861, approach never completed. W0: cross-E 0.004/268, cross-W-back 0.002/270, Q1a total fm 2,298, approach never completed — veto reproduced, PIPELINE INNOCENT. W1: cross-E 0.019/265, cross-W-back 0.13/266, Q1a total fm 3,005, approach-leg fm 426, never completed — VETO UNCHANGED. Verdict-matrix branch (2): INHABITEDTIME EXONERATED. All four of triple-017's candidates are now dead; the carrier is in the block content of the played chunks, world-level data (level.dat / data files / world clock ~5.1M vs G ~1.5k), the saved entity-population composition (~1,100 stored entities vs G's near-empty store), or in no single stored property (a client-behaviour x movement-validation interaction over real terrain). Next bisection, designed not run: 2x2 swap {live,G region files} x {live,G level.dat+data} + an entities-store-emptied arm.
+
+26.3-CLIENT FEASIBILITY (research only; nothing built): NO native 26.3 mineflayer exists — minecraft-data's newest protocol is 26.1 (node-minecraft-protocol caps at 26.1). A translation route EXISTS and is proven in the wild: ViaBackwards as a plugin on the scratch 26.3 server (or ViaProxy standalone) with a 26.1-speaking bot (PrismarineJS/mineflayer issue #4189's reporter ran Paper 26.3 + ViaVersion/ViaBackwards 5.12.1 exactly so). HARD PREREQUISITE: 26.3 servers enforce one-position-packet-per-client-tick, reset only by client_tick_end, hard-kicking violators ~1.5 s after join (invalid_player_movement). The fleet's stack CAN'T survive it: bots/craftmind/node_modules is mineflayer 4.39.0 + minecraft-protocol 1.68.0 (disk-verified; no tick_end in lib/plugins/physics.js) — the exact release named in #4189. Mineflayer master carries the fix (#4137, merged 2026-10-03), so the route needs a bot-env mineflayer upgrade + the Via jars (small official downloads; not fetched under this lane's orders). Flagged consequence: scratch-A (26.3-242 + this stack) cannot have produced valid walk data; the F-vs-G contrast triple-017 rests on is unaffected. A genuine 26.3 Prism client would work natively but is operator-driven and is the filming surface — not used.
+
+SETUP FAILURES FILED (this lane's own): first pre-registration append died on shell quoting (re-landed via the library, line 231, before any run); a sed slip dropped one quote in the driver copy (caught by node --check before use); the W1 boot check once matched H's stale copied log instead of the fresh boot (re-verified via RCON before the bot ran). Citizens untouched: Cody/Geist/Vega .dat sha256 on the Orin at handback match the triple-016/017 baselines exactly. Working files: ~/wedge-followon1/ (mcprobe.py, evidence/, W0/, W1/, results/).

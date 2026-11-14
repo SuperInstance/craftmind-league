@@ -1,0 +1,22 @@
+{
+  "players": {
+    "magnusandmouse": {
+      "firstMet": "2026-11-10T00:27:49.251Z",
+      "lastSeen": "2026-11-10T11:06:42.741Z",
+      "interactions": 570
+    },
+    "cody": {
+      "firstMet": "2026-11-10T00:28:31.744Z",
+      "lastSeen": "2026-11-10T11:06:26.078Z",
+      "interactions": 1235
+    }
+  },
+  "places": {},
+  "builds": {},
+  "resources": {},
+  "deaths": 0,
+  "deathCauses": [],
+  "meta": {},
+  "lastSession": "2026-11-10T11:07:02.278Z",
+  "scriptHistory": []
+}

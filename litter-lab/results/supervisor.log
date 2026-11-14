@@ -1,0 +1,6 @@
+supervisor: launch 1 as LitterLab5283 (measured so far: 5)
+Terminated
+supervisor: LitterLab5283 exited code 143
+supervisor: launch 2 as LitterLab4803 (measured so far: 19)
+supervisor: LitterLab4803 exited code 0
+supervisor: 20 cells measured — done

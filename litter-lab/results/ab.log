@@ -1,0 +1,35 @@
+[AB] spawned as LitterRun8725 at 32.50,70.00,-96.50 timeOfDay 7248
+[AB] course {"start":{"x":2.5,"y":68,"z":-111.5},"end":{"x":-31.5,"y":61,"z":-93.5}}
+[AB] on ground at 32.50,70.00,-96.50 standing on grass_block
+[AB] positioning: at 32.50,70.00,-96.50 dist to start 33.5
+[AB] positioning: at 19.59,69.00,-102.54 dist to start 19.3
+[AB] positioning: at 7.50,68.00,-109.51 dist to start 5.4
+[AB] positioning: at 3.58,68.00,-111.31 dist to start 1.1
+[AB] at course start 3.58,68.00,-111.31
+[RUN] {"run":1,"arm":"A","completed":false,"wall_s":124.7,"stallBreaker":7,"displacement":7.89,"distGoal":32.02,"litterDug":2,"litterBefore":319,"timeOfDayStart":8194,"died":false,"startPos":"3.58,68.00,-111.31","endPos":"-4.25,67.20,-110.31"}
+[AB] return leg for run 1 ended at 1.34,68.00,-111.48 distToStart 1.16
+[RUN] {"run":2,"arm":"B","completed":false,"wall_s":61.2,"replans":2,"displacement":5.17,"distGoal":32.48,"litterDug":4,"litterBefore":317,"timeOfDayStart":11633,"died":false,"startPos":"1.34,68.00,-111.48","endPos":"-3.69,67.00,-110.27"}
+[AB] return leg for run 2 ended at -3.30,67.20,-110.23 distToStart 5.94
+[AB] repositioning to start before run 3
+[AB] positioning: at -3.30,67.00,-110.23 dist to start 5.9
+[AB] positioning: at 1.13,68.00,-111.21 dist to start 1.4
+[RUN] {"run":3,"arm":"B","completed":false,"wall_s":37.6,"replans":2,"displacement":4.87,"distGoal":32.52,"litterDug":0,"litterBefore":313,"timeOfDayStart":2108,"died":false,"startPos":"1.13,68.00,-111.21","endPos":"-3.66,67.42,-110.31"}
+[AB] return leg for run 3 ended at -1.30,67.42,-110.48 distToStart 3.94
+[AB] repositioning to start before run 4
+[AB] positioning: at -1.32,67.00,-110.48 dist to start 4.0
+[AB] positioning: at 1.69,68.00,-111.28 dist to start 0.8
+[RUN] {"run":4,"arm":"A","completed":false,"wall_s":110.2,"stallBreaker":4,"displacement":6.67,"distGoal":31.13,"litterDug":2,"litterBefore":313,"timeOfDayStart":3947,"died":false,"startPos":"1.69,68.00,-111.28","endPos":"-4.69,67.00,-109.31"}
+[AB] return leg for run 4 ended at 1.39,68.00,-111.51 distToStart 1.11
+[RUN] {"run":5,"arm":"A","completed":false,"wall_s":158.6,"stallBreaker":5,"displacement":10.21,"distGoal":27.84,"litterDug":3,"litterBefore":311,"timeOfDayStart":6248,"died":false,"startPos":"1.39,68.00,-111.51","endPos":"-8.58,67.00,-109.31"}
+[AB] return leg for run 5 ended at 0.96,68.00,-111.39 distToStart 1.54
+[RUN] {"run":6,"arm":"B","completed":false,"wall_s":38.5,"replans":2,"displacement":7.05,"distGoal":30.24,"litterDug":1,"litterBefore":307,"timeOfDayStart":10368,"died":false,"startPos":"1.01,68.00,-111.39","endPos":"-5.73,67.42,-109.31"}
+[AB] return leg for run 6 ended at -0.30,67.00,-111.34 distToStart 2.80
+[RUN] {"run":7,"arm":"B","completed":false,"wall_s":39,"replans":2,"displacement":5.61,"distGoal":30.39,"litterDug":0,"litterBefore":306,"timeOfDayStart":11747,"died":false,"startPos":"-0.31,67.00,-111.35","endPos":"-5.54,67.00,-109.30"}
+[AB] return leg for run 7 ended at -0.30,67.00,-111.34 distToStart 2.80
+[RUN] {"run":8,"arm":"A","completed":false,"wall_s":103.8,"stallBreaker":3,"displacement":8.41,"distGoal":27.93,"litterDug":0,"litterBefore":306,"timeOfDayStart":13127,"died":false,"startPos":"-0.31,67.00,-111.36","endPos":"-8.47,67.00,-109.31"}
+[AB] return leg for run 8 ended at 2.26,69.17,-111.47 distToStart 0.24
+[RUN] {"run":9,"arm":"A","completed":false,"wall_s":131.5,"stallBreaker":4,"displacement":11.62,"distGoal":27.94,"litterDug":0,"litterBefore":306,"timeOfDayStart":4059,"died":false,"startPos":"2.93,68.00,-111.59","endPos":"-8.46,67.00,-109.31"}
+[AB] return leg for run 9 ended at 3.47,68.00,-112.03 distToStart 1.11
+[RUN] {"run":10,"arm":"B","completed":false,"wall_s":26,"replans":2,"displacement":4.85,"distGoal":34.79,"litterDug":0,"litterBefore":306,"timeOfDayStart":7318,"died":false,"startPos":"3.52,68.00,-112.06","endPos":"-0.68,68.00,-109.64"}
+[AB] return leg for run 10 ended at 2.50,68.00,-111.50 distToStart 0.00
+[AB] DONE all runs, deaths=0

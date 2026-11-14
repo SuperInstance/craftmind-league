@@ -1,0 +1,127 @@
+=== day14 launch 2026-11-10T06:55:54Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE REFUSE-START: lease-expired — the floor holds no live lease for this driver, or the inherited death count is already at the limit; stopping the day per charter
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day14 driver exited 2026-11-10T06:55:56Z rc=0 ===
+=== day14 launch 2026-11-10T06:57:13Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE: live lease confirmed at start
+[DD] spawned at 36.5,73.0,-86.5 hp=20 food=20 worldDeaths=132 runDeaths=0 placesKnown=11 abortWiring=shouldAbort(0)=false/shouldAbort(3)=true
+[DD] WAKE: sequence start {"pos":{"x":36.5,"y":73,"z":-86.5},"hp":20,"food":20}
+[DD] WAKE feed: awaiting EXTERNAL feed via the separate-process op channel (no in-process bot)
+[DD] WAKE feed: external feed wait ended {"pos":{"x":36.5,"y":73,"z":-86.5},"hp":20,"food":20} fedOk=true
+[DD] WAKE: sequence done {"pos":{"x":36.5,"y":73,"z":-86.5},"hp":20,"food":20} fmTotal=0
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Morning again, and this time my pack's full of pork. Home's east — but there's a real oak trunk by spawn my eyes named yesterday. Wood first, then stone, then the furnace." cmd="goto 38 70 -89"
+[DD] DEATH noticed by driver process (run death 1 of 3)
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] cycle 2 [deepinfra:deepseek-v4.1-flash] say="Woke up a different place and empty-handed — but my eyes are naming real trunks now. That oak at (34,70,-101) is six blocks off. Wood first, always wood first." cmd="felltree 34 70 -101"
+[DD] cycle 3 [deepinfra:deepseek-v4.1-flash] say="Felltree didn't reach — I'm still seven blocks off that oak. Let me walk to its foot first, then take it down." cmd="goto 34 70 -101"
+[DD] cycle 4 [deepinfra:deepseek-v4.1-flash] say="The walker keeps giving up short on this broken ground. Short hops, that's the rule — two or three blocks at a time toward that oak." cmd="goto 36 68 -103"
+[DD] cycle 5 [deepinfra:deepseek-v4.1-flash] say="That walker's moving me the wrong way — every hop drifts me east, away from the oak. The oak at (46,68,-101) is seven blocks off to the southeast and closer to where I keep ending up. Try that one." cmd="goto 44 68 -102"
+[DD] cycle 6 [deepinfra:deepseek-v4.1-flash] say="Closer now — the oak at (46,68,-101) is five blocks off. Let me just take it from here; the felltree reaches the trunk." cmd="felltree 46 68 -101"
+[DD] cycle 7 [deepinfra:deepseek-v4.1-flash] say="It worked — but the pack still reads empty. That log must've dropped where I couldn't grab it. Let me collect before it's gone." cmd="collect"
+[DD] cycle 8 [deepinfra:deepseek-v4.1-flash] say="Felled and gathered, but the pack still reads empty — that log went somewhere I can't see. The oak south at (46,68,-91) is thirteen off; let me get right up under a trunk and take one down close, then grab it by hand." cmd="goto 50 68 -110"
+[DD] cycle 9 [deepinfra:deepseek-v4.1-flash] say="Both trunks are within my reach from right here — the birch at (45,69,-111) and the oak at (50,68,-110). Take the oak first, then I'll see if the logs actually land this time." cmd="felltree 50 68 -110"
+[DD] cycle 10 [deepinfra:deepseek-v4.1-flash] say="Five oak logs in hand — that's the keystone I've been chasing for days. Now the chain: planks first, right here." cmd="craft oak_planks 5"
+[DD] cycle 11 [deepinfra:deepseek-v4.1-flash] say="Twelve planks. Now sticks, then a crafting table of my own so I'm not depending on the one back at the anchor." cmd="craft stick 4"
+[DD] cycle 12 [deepinfra:deepseek-v4.1-flash] say="Well — the walker carried me right into the dip while I was crafting. But look: my own table from yesterday is two blocks south, and I'm standing, fed, whole. While I'm here I'll use it." cmd="craft wooden_pickaxe"
+[DD] cycle 13 [deepinfra:deepseek-v4.1-flash] say="A pickaxe in hand at last — and I'm sitting in the dip where I died four times. I won't dig here. But there's stone under my feet and a way out over the lip; let me get up onto the shoulder first before I do anything." cmd="goto 74 67 -96"
+[DD] cycle 14 [deepinfra:deepseek-v4.1-flash] say="Still down in the pocket — the walker won't climb out in short legs. One long leg, east and up past the lip, to open ground at (82,68,-97)." cmd="goto 82 68 -97"
+[DD] cycle 15 [deepinfra:deepseek-v4.1-flash] say="I'm climbing, one block up each try — 65 now. The pocket walls want a pillar, not a walk. I've got planks; let me just stack myself up out of here." cmd="climb 78 -97"
+[DD] cycle 16 [deepinfra:deepseek-v4.1-flash] say="Climb needs me on the column first. Fine — the pocket's east rim has a grass top at y65 right by me. Step east onto it, then walk the long leg out over the lip." cmd="goto 79 65 -98"
+[DD] cycle 17 [deepinfra:deepseek-v4.1-flash] say="Two blocks east and it won't step — that's the pocket's wall, not a walk. The pocket's mouth is up and over the lip to the south. Long leg that way, well past it." cmd="goto 79 66 -92"
+[DD] cycle 18 [deepinfra:deepseek-v4.1-flash] say="Enough walking into walls. The pocket floor's broken — I'll just dig my own way out. Cut the step ahead of me and lay a block behind to climb on." cmd="dig 78 64 -99"
+[DD] cycle 19 [deepinfra:deepseek-v4.1-flash] say="Dug a step down — wrong direction. I'll place the dirt back and instead dig the block at my feet's level to the east so I can step up onto the y65 grass rim." cmd="dig 79 65 -99"
+[DD] cycle 20 [deepinfra:deepseek-v4.1-flash] say="Cut a notch in the rim — now step east into it at y65 and I'm on the lip." cmd="goto 79 65 -99"
+[DD] cycle 21 [deepinfra:deepseek-v4.1-flash] say="The walker just won't step east — the block at my east is still y65, a full block above my feet and it can't hop it. Pile a dirt block under myself right here and get up to its level." cmd="place dirt 77 65 -99"
+[DD] cycle 22 [deepinfra:deepseek-v4.1-flash] say="Column tops read -1 at my east now — that notch worked. One more step east and I'm up on the rim." cmd="goto 79 65 -99"
+[DD] cycle 23 [deepinfra:deepseek-v4.1-flash] say="The walker keeps claiming success and staying put — it's not crossing that lip. Fine. If I can't walk up, I'll dig the rim down to my level so there's nothing to climb." cmd="dig 79 64 -99"
+[DD] cycle 24 [deepinfra:deepseek-v4.1-flash] say="The rim's still a block up at my east — dig that y65 grass down too so the step's level with my feet." cmd="dig 79 65 -99"
+[rate-limiter] Delayed message (window limit): 4510ms
+[DD] cycle 25 [deepinfra:deepseek-v4.1-flash] say="That notch is open now — nothing left to climb. Step east into it." cmd="goto 79 64 -99"
+[rate-limiter] Delayed message (window limit): 808ms
+[DD] cycle 26 [deepinfra:deepseek-v4.1-flash] say="The walker won't leave this spot east — the pocket's got me again, same as it held me yesterday. But the tree's the whole point and it's SE, over open rim. One long leg well past this lip, toward the oak." cmd="goto 84 66 -92"
+[DD] cycle 27 [deepinfra:deepseek-v4.1-flash] say="Well — that long leg lifted me a rung at least, I'm standing up on the pocket's edge now at y65. And there's a spider in the neighbourhood. One more long leg, east and up, toward the oak." cmd="goto 84 66 -92"
+[DD] cycle 28 [deepinfra:deepseek-v4.1-flash] say="Two long legs and the pocket's still got my boots — and now a zombie's out there at 22. The pocket's not a route, it's a trap that already killed me four times. I'm refusing it. Climb straight up out of here — I've got dirt to stack." cmd="climb 77 -98"
+[DD] cycle 29 [deepinfra:deepseek-v4.1-flash] say="Pillar won't place either — this pocket's got me proper, same as yesterday. But my crafting table's right here, and I've got a log and sticks. I'll make planks and a proper pickaxe right where I stand, then work my way out with what I've got." cmd="craft oak_planks 4"
+[DD] DEATH noticed by driver process (run death 2 of 3)
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] cycle 30 [deepinfra:deepseek-v4.1-flash] say="Dead again in the pocket. But look at this — I wake up in the trees, and there's a real oak trunk two blocks north of me at (29,70,-107). First log of my life. Let's take it down by the foot." cmd="felltree 29 70 -107"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (31.4,75,-105.2) ok=false moved=0.01 pos=(29.4,76.0,-104.7)
+[DD] FLOOR hop: hop 2: -> (29.5,75,-102.7) ok=true moved=1.63 pos=(29.5,75.0,-103.1)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"clear","hops":2,"dist":35.8}
+[DD] cycle 32 [deepinfra:deepseek-v4.1-flash] say="I'm up in the leaves, not on the ground — the felltree read no trunk because I'm standing in the canopy. That oak's foot is at (29,70,-107), four north of me. Let me get myself down to the ground first." cmd="goto 29 70 -104"
+[DD] DENSITY block close: acts=32 {"goto":15,"felltree":4,"collect":1,"craft":4,"climb":2,"dig":4,"place":1} {"flee":1} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (31.1,77,-103.4) ok=false moved=2.10 pos=(31.2,68.0,-103.4)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"clear","hops":1,"dist":34.2}
+[DD] cycle 34 [deepinfra:deepseek-v4.1-flash] say="Now I'm down on the ground and that oak's foot is within reach — (29,70,-107), right there. Skeleton and zombie about, so I'll be quick. Taking it by the trunk, bottom up." cmd="felltree 29 70 -107"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] DEATH noticed by driver process (run death 3 of 3)
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] FLOOR hop: hop 1: -> (32.2,76,-104.6) ok=false moved=2.71 pos=(27.9,69.0,-104.0)
+[DD] REFLEX SAFETY ABORT at flee-hop-2 — trigger: park (lease-revoked) deaths: 3 — the body receives no further commands
+[DD] FLOOR: hop-flee done {"ok":false,"why":"safety-abort","aborted":true,"trigger":"park","gateReason":"lease-revoked","deaths":3,"hop":2,"hops":1,"dist":37.2}
+[DD] FLOOR: flee ABORTED by the safety read at hop 2 — trigger park ; no burrow: the stop rule owns the body now
+[DD] REFLEX ABORT — the day stops inside this cycle: park at flee-hop-2 deaths 3
+[DD] CLOSE: gate-parked — the close-exit movement below is SKIPPED (it is itself a command, and no commands run under a dead lease); he stays where the park left him
+[DD] run window over — disconnecting cleanly
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day14 driver exited 2026-11-10T07:08:10Z rc=0 ===

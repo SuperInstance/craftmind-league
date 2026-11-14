@@ -1,0 +1,55 @@
+{
+  "citizen": "Vega",
+  "lineage": "B",
+  "note": "FALLBACK definition: at Lineage B build time, ~/craftmind-league/pulse/curriculum.json (Lineage A) was not yet landed. This ladder is textually identical to the shared exam in lineage-b/exam.js (S1..S5). If the A file lands later, the two must be reconciled to one definition.",
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Wooden tools",
+      "status": "pass",
+      "attempts": 378,
+      "passedTs": "2026-11-08T08:33:54.168Z",
+      "evidence": {
+        "wooden_pickaxe": true,
+        "crafting_table_item": false,
+        "crafting_table_block": {
+          "x": 41,
+          "y": 64,
+          "z": -56
+        },
+        "inventory": {
+          "oak_log": 3,
+          "stick": 2,
+          "oak_planks": 3,
+          "wooden_pickaxe": 1,
+          "leaf_litter": 15,
+          "dirt": 19
+        }
+      }
+    },
+    {
+      "id": "S2",
+      "name": "Stone pickaxe",
+      "status": "pending",
+      "attempts": 6
+    },
+    {
+      "id": "S3",
+      "name": "Shelter",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "id": "S4",
+      "name": "Furnish",
+      "status": "pending",
+      "attempts": 0
+    },
+    {
+      "id": "S5",
+      "name": "Survive the night",
+      "status": "pending",
+      "attempts": 0
+    }
+  ]
+}

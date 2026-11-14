@@ -1,0 +1,16 @@
+#!/bin/sh
+# Start the Lineage C resident (Geist) detached. Idempotent.
+LC=/home/caseydigennaro/craftmind-league/lineage-c
+PIDFILE=$LC/logs/geist.pid
+if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
+  echo "geist already running (pid $(cat "$PIDFILE"))"
+  exit 0
+fi
+export PATH=$HOME/.nvm/versions/node/v22.23.4/bin:$PATH
+# PULSE_MS passthrough: PULSE_MS=7200000 = operator-hold session (deliberation frozen, command channel live). Unset = normal 600000.
+export PULSE_MS=7200000
+cd "$LC"
+mkdir -p logs
+nohup node geist.js >> logs/geist.out 2>&1 &
+echo $! > "$PIDFILE"
+echo "geist started (pid $!)"

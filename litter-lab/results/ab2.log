@@ -1,0 +1,22 @@
+[AB] spawned as LitterRun3391 at 31.50,70.00,-99.50 timeOfDay 13883
+[AB] course {"start":{"x":2.5,"y":68,"z":-111.5},"end":{"x":-31.5,"y":61,"z":-93.5}}
+[AB] on ground at 31.50,70.00,-99.50 standing on grass_block
+[AB] positioning: at 31.50,70.00,-99.50 dist to start 31.4
+[AB] positioning: at 20.31,68.00,-104.70 dist to start 19.1
+[AB] positioning: at 20.31,68.00,-104.70 dist to start 19.1
+[AB] positioning: at 7.66,68.00,-110.56 dist to start 5.2
+[AB] positioning: at 3.59,68.00,-111.30 dist to start 1.1
+[AB] at course start 3.59,68.00,-111.30
+[AB] death #1
+[RUN] {"run":1,"arm":"A2","proto":"amendment3","completed":false,"wall_s":80.8,"stallBreaker":3,"replans":0,"stallBudget":2,"displacement":27.33,"distGoal":62.96,"litterDug":22,"litterBefore":306,"timeOfDayStart":16253,"died":true,"startPos":"3.59,68.00,-111.30","endPos":"30.31,75.71,-105.51"}
+[AB] descending toward 31.5 69 -105.5 from 30.31,75.00,-105.51
+[AB] descending toward 31.5 69 -105.5 from 31.46,75.00,-105.47
+[AB] descending toward 31.5 69 -105.5 from 31.51,75.00,-105.43
+[AB] descending toward 31.5 69 -105.5 from 31.57,75.00,-105.42
+[AB] repositioning to start before run 2
+[AB] positioning: at 31.36,75.00,-105.54 dist to start 29.5
+[AB] positioning: at 30.32,75.00,-105.36 dist to start 28.5
+[AB] positioning: at 30.31,75.00,-105.37 dist to start 28.5
+[AB] positioning: at 30.30,75.00,-105.37 dist to start 28.5
+[AB] positioning: at 30.31,75.00,-105.37 dist to start 28.5
+[AB] ABORT: reposition failed before run 2

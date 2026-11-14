@@ -1,0 +1,3 @@
+[MINIMAX-DRIVER] 2026-11-08T07:38:07.720Z minimax driver started; polling /home/caseydigennaro/craftmind-league/commons/consults/minimax.jsonl every 60s
+[MINIMAX-DRIVER] 2026-11-08T07:38:07.723Z answering consult vega-1a1ba17d9e6-wt ( vega / stuck ) attempt 1
+[MINIMAX-DRIVER] 2026-11-08T07:38:48.050Z answered vega-1a1ba17d9e6-wt in 40s (1194 chars)

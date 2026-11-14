@@ -1,0 +1,46 @@
+{
+  "skills": {
+    "gatherWoodForTools": {
+      "stage": "S1",
+      "status": "candidate",
+      "updated": "2026-11-08T07:39:56.989Z",
+      "evidence": {},
+      "error": "goto timeout after 90000ms toward 22,69,-86 (goto attempt cap)"
+    },
+    "buildCraftingTable": {
+      "stage": "S1",
+      "status": "failed",
+      "updated": "2026-11-07T17:46:17.029Z",
+      "evidence": {},
+      "error": "Not enough wood logs to build crafting table"
+    },
+    "gatherMoreWoodForTools": {
+      "stage": "S1",
+      "status": "candidate",
+      "updated": "2026-11-08T08:32:04.502Z",
+      "evidence": {
+        "hasCraftingTable": false,
+        "hasWoodenPickaxe": false,
+        "oakLogs": 6
+      },
+      "error": "postconditions unmet"
+    },
+    "craftPickaxeThenFood": {
+      "status": "failed",
+      "evidence": {},
+      "error": "craftPickaxeThenFood: pickaxe craft returned but no wooden_pickaxe in inventory",
+      "updated": "2026-11-08T08:31:53.433Z"
+    },
+    "eastMeatRun": {
+      "status": "failed",
+      "evidence": {},
+      "error": "skill exports no function",
+      "updated": "2026-11-08T09:40:35.064Z"
+    },
+    "gatherStoneForPickaxe": {
+      "stage": "S2",
+      "status": "candidate",
+      "updated": "2026-11-08T09:40:48.451Z"
+    }
+  }
+}

@@ -1,0 +1,190 @@
+// resident-cody.js — league citizen "Cody" as a RESIDENT of the Orin world.
+// Same createBot wiring as join-test.js (config resolves from this dir:
+// governor at 127.0.0.1:8642, identity league-cody), but instead of
+// hello-and-quit it: stays online, wanders gently near its spawn anchor,
+// idles, and re-launches itself if the connection ends.
+// Run from this directory:
+//   cd ~/craftmind-league/bots/runs/cody && node resident-cody.js
+// Env overrides: MC_HOST (192.168.0.50), MC_PORT (25565), MC_USER (Cody),
+// MC_VERSION (26.1).
+const fs = require('fs');
+const path = require('path');
+process.chdir(__dirname);
+
+const { createBot } = require('/home/caseydigennaro/craftmind-league/bots/craftmind/src/bot.js');
+const { goals } = require('/home/caseydigennaro/craftmind-league/bots/craftmind/node_modules/mineflayer-pathfinder');
+const pulsePlugin = require("/home/caseydigennaro/craftmind-league/pulse/pulse-plugin.js");
+// CHARACTER MODE (2026-11-07, the Character Build — pulse ledger
+// character-build-20261107): with CODY_CHARACTER=1 the resident loads
+// the character plugin (a goal-directed day loop: homestead build,
+// survival behaviour, self-narration) and skips the movement-writing
+// social plugins exactly as pulse worker mode does, so the loop owns
+// the body the way the skill runner did during trials.
+const characterMode = process.env.CODY_CHARACTER === '1';
+const characterPlugin = characterMode
+  ? require("/home/caseydigennaro/craftmind-league/pulse/character-plugin.js")
+  : null;
+
+const opts = {
+  host: process.env.MC_HOST || '192.168.0.50',
+  port: parseInt(process.env.MC_PORT || '25565', 10),
+  username: process.env.MC_USER || 'Cody',
+  version: process.env.MC_VERSION || '26.1',
+};
+
+let relaunches = 0;
+let wanderTimer = null;
+let home = null;
+
+function launch() {
+  console.log(`[RESIDENT] launching Cody (attempt ${relaunches + 1})`, opts);
+  // PULSE WORKER MODE (2026-11-06, uses the framework's own
+  // options.skipPlugins seam): when a pulse skill set is loaded, the
+  // social/idle plugins that write movement controls (measured with
+  // caller traces: wanderer.js clears control states mid-stride and
+  // random-walks over skill driving) are skipped, so trials measure
+  // the SKILLS, not a tug-of-war. Social mode (no skills) is untouched.
+  const workerMode = !!(process.env.PULSE_SKILLS && process.env.PULSE_SKILLS.trim());
+  const skipPlugins = (workerMode || characterMode)
+    ? ['wanderer', 'flee-on-danger', 'combat', 'behavior-script', 'npc-system', 'onboarding', 'game-hub']
+    : [];
+  const botPlugins = characterMode ? [pulsePlugin, characterPlugin] : [pulsePlugin];
+  const bot = createBot({ ...opts, plugins: botPlugins, skipPlugins });
+  if (characterMode && characterPlugin) {
+    // Belt and braces: wire directly as well (wire() is idempotent);
+    // the framework's plugin manager also inits it via options.plugins.
+    try { characterPlugin.wire(bot); } catch (e) { console.log('[RESIDENT] character wire failed:', e.message); }
+  }
+
+  bot.once('spawn', () => {
+    const p = bot.entity.position;
+    if (!home) {
+      // Home defaults to the league anchor (pulse/anchor.json) when one
+      // is recorded — the wander then strolls the homestead, not the
+      // world-spawn landing cell (2026-11-07, character build).
+      try {
+        const a = JSON.parse(fs.readFileSync('/home/caseydigennaro/craftmind-league/pulse/anchor.json', 'utf8'));
+        if (a && a.x != null) home = { x: a.x, y: a.y, z: a.z };
+      } catch {}
+      if (!home) home = { x: p.x, y: p.y, z: p.z };
+    }
+    console.log(`[RESIDENT] spawned at ${p.x.toFixed(1)},${p.y.toFixed(1)},${p.z.toFixed(1)} — home anchor set`);
+    setTimeout(() => {
+      try { bot.chat('Evening — Cody here. I live in this world now; come say hello.'); } catch {}
+    }, 3000);
+    startWander(bot);
+  });
+
+  bot.on('chat', (user, msg) => {
+    console.log(`[RESIDENT] chat <${user}> ${msg}`);
+  });
+
+  bot.on('kicked', (reason) => console.log('[RESIDENT] kicked:', String(reason)));
+  bot.on('error', (err) => console.log('[RESIDENT] error:', err && err.message));
+
+  bot.once('end', (reason) => {
+    console.log('[RESIDENT] connection ended:', String(reason));
+    stopWander();
+    // PULSE SCAFFOLD FIX (2026-11-06): in-process relaunch is impossible
+    // with this mineflayer build \u2014 the second createBot() crashes on
+    // plugin re-injection (boss_bar "Cannot redefine property"). Exit
+    // cleanly instead; restarts happen at process level (trial.js, or
+    // a human/supervisor relaunching this script).
+    console.log('[RESIDENT] exiting for process-level restart');
+    process.exit(0);
+  });
+}
+
+function startWander(bot) {
+  stopWander();
+  // WANDER WATCHDOG (2026-11-07, substrate repair - pulse ledger
+  // wander-watchdog-repair-declaration-20261107): the original wander
+  // re-targeted only when bot.pathfinder.goal was empty, so ONE wedged
+  // goal silenced roaming forever (Trial 9 watch: 642 polls, x span
+  // 1.0, zero re-targets). The watchdog tracks the active goal; a goal
+  // still active after WD_WINDOW_MS with < WD_MIN_PROGRESS blocks of
+  // net displacement is abandoned (goal cleared + control states
+  // cleared), a short back-off follows, and a NEW target is drawn.
+  // Consecutive wedges escalate: the draw radius widens (x1.6 each,
+  // capped) and redraws avoid the wedged target's direction, so the
+  // resident probes other exits instead of re-wedging on the same
+  // face. Any completed goal restores the original behaviour exactly
+  // (radius 10, unbiased draws). Slow-but-moving goals (>= threshold
+  // per window) roll their window forward and are never abandoned.
+  const WD_WINDOW_MS = 60000;   // no-progress window
+  const WD_MIN_PROGRESS = 1.0;  // blocks of net displacement per window
+  const WD_BACKOFF_MS = 15000;  // pause after abandoning a wedged goal
+  const WD_BASE_RADIUS = 10;    // the resident's original stroll radius
+  const WD_MAX_RADIUS = 32;
+  let wdGoal = null;            // {x, z, setAt, startX, startZ}
+  let wdWedges = 0;             // consecutive wedged goals
+  let wdRadius = WD_BASE_RADIUS;
+  let wdBanOctant = -1;         // direction of last wedged target (0-7); -1 = none
+  let wdBackoffUntil = 0;
+  const octantOf = (dx, dz) => {
+    let a = Math.atan2(dz, dx); if (a < 0) a += Math.PI * 2;
+    return Math.floor(a / (Math.PI / 4)) % 8;
+  };
+  const tick = () => {
+    try {
+      if (!bot.entity || !bot.pathfinder) return;
+      // Only wander when not already walking somewhere.
+      if (global.__pulseRunnerActive) return; // the pulse skill runner is driving
+      if (global.__codyCharacterActive) return; // the character loop is living his day
+      const now = Date.now();
+      const pos = bot.entity.position;
+      if (wdGoal) {
+        if (!bot.pathfinder.goal) {
+          // The pathfinder cleared the goal itself: arrived. Restore
+          // the resident's original behaviour in full.
+          console.log(`[RESIDENT] wander goal reached (${wdGoal.x.toFixed(1)},${wdGoal.z.toFixed(1)}) in ${Math.round((now - wdGoal.setAt) / 1000)}s`);
+          wdGoal = null; wdWedges = 0; wdRadius = WD_BASE_RADIUS; wdBanOctant = -1;
+        } else if (now - wdGoal.setAt >= WD_WINDOW_MS) {
+          const disp = Math.hypot(pos.x - wdGoal.startX, pos.z - wdGoal.startZ);
+          if (disp >= WD_MIN_PROGRESS) {
+            // Moving, just slowly: roll the window, keep the goal.
+            wdGoal.startX = pos.x; wdGoal.startZ = pos.z; wdGoal.setAt = now;
+          } else {
+            // WEDGED: abandon, back off, escalate.
+            wdWedges += 1;
+            wdBanOctant = octantOf(wdGoal.x - wdGoal.startX, wdGoal.z - wdGoal.startZ);
+            console.log(`[RESIDENT] wander watchdog: goal (${wdGoal.x.toFixed(1)},${wdGoal.z.toFixed(1)}) wedged - ${disp.toFixed(2)} blocks in ${Math.round((now - wdGoal.setAt) / 1000)}s; clearing (wedge ${wdWedges})`);
+            bot.pathfinder.setGoal(null);
+            bot.clearControlStates();
+            wdGoal = null;
+            wdBackoffUntil = now + WD_BACKOFF_MS;
+            wdRadius = Math.min(WD_MAX_RADIUS, WD_BASE_RADIUS * Math.pow(1.6, wdWedges));
+          }
+        }
+      }
+      if (!bot.pathfinder.goal && !wdGoal) {
+        if (now < wdBackoffUntil) return;
+        // Draw a target: the resident's original stroll around the
+        // home anchor at the current radius, skipping the wedged
+        // direction while a ban is in force (up to 8 redraws).
+        let x = home.x, z = home.z, tries = 0;
+        do {
+          const dx = (Math.random() * 2 - 1) * wdRadius;
+          const dz = (Math.random() * 2 - 1) * wdRadius;
+          x = home.x + dx; z = home.z + dz; tries += 1;
+        } while (wdBanOctant >= 0 && tries < 8 && octantOf(x - pos.x, z - pos.z) === wdBanOctant);
+        bot.pathfinder.setGoal(new goals.GoalNear(x, home.y, z, 1.5));
+        wdGoal = { x, z, setAt: now, startX: pos.x, startZ: pos.z };
+        console.log(`[RESIDENT] wandering toward ${x.toFixed(1)},${z.toFixed(1)} (radius ${wdRadius.toFixed(0)}${wdWedges ? `, wedges ${wdWedges}` : ''})`);
+      }
+    } catch (e) {
+      console.log('[RESIDENT] wander tick error:', e.message);
+    }
+  };
+  // First stroll shortly after spawn, then every 30–55 s.
+  wanderTimer = setTimeout(function again() {
+    tick();
+    wanderTimer = setTimeout(again, 30000 + Math.random() * 25000);
+  }, 8000);
+}
+
+function stopWander() {
+  if (wanderTimer) { clearTimeout(wanderTimer); wanderTimer = null; }
+}
+
+launch();

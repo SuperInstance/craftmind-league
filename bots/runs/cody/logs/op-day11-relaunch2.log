@@ -1,0 +1,119 @@
+OP day-11 process up; req=floor/run/day11/op/op-req-day11.jsonl res=floor/run/day11/op/op-res-day11.jsonl parklog=floor/run/day11/op/park-notify-day11.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjcyMDI2MTA3fQ==
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+RES {"id":"gateb-relaunch-ping-1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+PARK-NOTIFY ** PARK ** id=gateb-relaunch-park-test-1 reason=GATE_B_RELAUNCH_TEST (recorded to floor/run/day11/op/park-notify-day11.jsonl; no world effect)
+RES {"id":"gateb-relaunch-park-test-1","ok":true,"recorded":true}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Set the weather to clear]
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcyMjkwNzA4fQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-2","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcyMzQ0MTU0fQ==
+[BotMessenger] Received greeting from Cody
+SRV: <Cody> Day eleven. Cody here — woke in the stone hollow where yesterday ended, one cobble in hand and the furnace still wanting seven. Walking home west along the south shoulder — the pit stays on my left and I stay out of it — then stone, counted honest, and the
+SRV: <Cody>  furnace at last.
+SRV: <Cody> Morning. I'm standing in the hollow with one cobble and a furnace still hungry — home's just west along the south shoulder, and I'll walk it the safe way, south of that pit, never across it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.700000, 65.600000, -86.300000]
+SRV: <Cody> Well — there's a real oak trunk five blocks west of me, foot at (65,66,-88). I'm not passing that up. Wood first, then home.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 78.300000, 71.000000, -80.500000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.400000, 65.400000, -85.900000]
+SRV: <Cody> That trunk's out of reach from where I stand — the ground between us is a step up. Let me hop west a couple of blocks first, then take it.
+SRV: <Cody> There it is — the oak's foot is within reach now. Down you come, trunk first.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.500000, 66.000000, -83.544526]
+SRV: <Cody> One more log in the pack. Now let me get down to the home shoulder — west and a step down toward the table.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: <Cody> I'm boxed in by a step on every side but one — let me take the short hop south where the ground's open, then work my way west.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 75.500074, 66.000000, -87.207102]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.000000, 70.000000, -88.200000]
+SRV: <Cody> I keep sliding east instead of west — the ground's fighting me. Let me try a single block west and see if the walker can hold it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 64.200000, 67.200000, -89.600000]
+SRV: <Cody> Still pinned east by that rise. One more short hop west, right onto the grass.
+SRV: <Cody> Every side but south is a wall of leaves and stone. Let me break out south onto open ground and circle round to the table from below.
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-3","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> The walker keeps sliding me north instead of south. South's open grass — one short hop onto it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: <Cody> This little rise has me boxed. Time to stop shuffling and just cut west through — one block at a time toward the table.
+SRV: <Cody> North's a wall of leaves at my head. Let me break the one right above my feet and see if the ground opens up.
+SRV: <Cody> Enough shuffling on this rise. The walker's been sliding me — let me aim a longer leg straight at the pad's west edge and trust the south shoulder.
+SRV: <Cody> That got me up onto the shoulder proper — table's only four blocks north. One short hop to it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 68.072917, 68.000000, -92.699162]
+SRV: <Cody> Home at last, table at my elbow. I've got 18 oak logs and 10 birch in my pack — let me turn some of that into planks and get the furnace chain going.
+SRV: <Cody> Planks in hand. Now the pickaxe head needs sticks — and I've got cobblestone and a stone pickaxe to make.
+SRV: <Cody> Sticks and planks and a table at my elbow. Now a proper stone pickaxe — I've got the cobblestone for it.
+SRV: <Cody> Deepslate? No — I want plain cobblestone, three of it. The bench is reading something odd; let me just make a wooden pickaxe first to go dig the stone myself.
+SRV: <Cody> Wooden pickaxe in hand — now let me go dig the stone for my furnace. The shoulder south of the pit gives out to dirt, so I'll dig down a couple blocks right here.
+SRV: <Cody> No block under my feet there — the ground's at my own level. Let me dig the grass I'm standing on and see what's beneath it.
+SRV: <Cody> My feet are floating a half-block above the ground — that's why nothing's where I'm digging. Let me step over to the pad's west edge and work from solid ground.
+SRV: <Cody> Solid ground now. Let me dig down into the shoulder here and see if the dirt gives out to stone.
+SRV: <Cody> Grass came up clean. One deeper — dirt, then maybe stone.
+SRV: <Cody> Two down, still dirt. One more — stone's usually just under the shoulder here.
+SRV: <Cody> Still dirt. One more down — I'm not stopping till I hit stone.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 58.700000, 68.600000, -91.400000]
+SRV: <Cody> Two cobble. Keep going — this seam's wide enough to feed me.
+SRV: <Cody> That one's already open air. Try the other side of the seam.
+SRV: <Cody> Careful — I've wandered down to the pit's rim. Back off the edge and work the stone from where I can stand safe.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.400000, 73.000000, -83.400000]
+SRV: <Cody> I'm standing down in a dug dip beside my own pit — not going anywhere from here by wishing. Let me step up onto the open shoulder south of it.
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 60.300895, 65.000000, -93.442435]
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-4","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-5","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-6","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+SRV: <Cody> I've dug myself into a little hollow and the walker won't climb out by wishing. I've got dirt in my pocket — I'll pillar up out of here.
+PARK-NOTIFY ** PARK ** id=floor-park-7 reason=DAYLIGHT_UNRESTORABLE (recorded to floor/run/day11/op/park-notify-day11.jsonl; no world effect)
+RES {"id":"floor-park-7","ok":true,"recorded":true}
+SRV: <Cody> Crew is calling time on this take. Saving where I stand — Cody.
+SRV: Cody left the game
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.300000, 71.000000, -82.400000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Set the weather to clear]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 69.000000, 70.000000, -94.200000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 71.300000, 71.000000, -82.400000]
+RES {"id":"relaunch-close-quit","ok":true,"bye":true}
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed

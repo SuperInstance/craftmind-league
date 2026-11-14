@@ -1,0 +1,389 @@
+// helpers.js — SEEDED primitives for Lineage B.
+//
+// DECLARED SEEDED CODE: hand-written generic mineflayer plumbing (movement,
+// digging, crafting, placing, inventory, world scans). These are NOT authored
+// by Vega's minds and are never presented as such (house rule). The authored
+// skills in library/ compose these primitives and the raw bot API.
+const { goals } = require("mineflayer-pathfinder");
+const { Vec3 } = require("vec3");
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Cooperative run cancellation (scaffold): the executor marks the active run;
+// when a skill times out, its token is cancelled and every primitive below
+// refuses to keep driving the bot for a superseded run.
+let RUN = { cancelled: false };
+function setRun(r) { RUN = r || { cancelled: false }; }
+function checkRun() { if (RUN.cancelled) throw new Error("run superseded (cancelled by executor)"); }
+const v3 = (x, y, z) => new Vec3(x, y, z);
+
+function count(bot, name) {
+  return bot.inventory.items().filter((i) => i.name === name).reduce((a, i) => a + i.count, 0);
+}
+function has(bot, name, n = 1) { return count(bot, name) >= n; }
+function inventoryList(bot) {
+  const m = {};
+  for (const i of bot.inventory.items()) m[i.name] = (m[i.name] || 0) + i.count;
+  return m;
+}
+async function equip(bot, name, dest = "hand") {
+  const it = bot.inventory.items().find((i) => i.name === name);
+  if (!it) throw new Error("equip: no " + name + " in inventory");
+  await bot.equip(it, dest);
+}
+async function equipAny(bot, names) {
+  for (const n of names) {
+    const it = bot.inventory.items().find((i) => i.name === n);
+    if (it) { await bot.equip(it, "hand"); return n; }
+  }
+  return null;
+}
+// Stall-breaker (SEEDED substrate, declared 2026-11-07 — see README
+// addendum). Measured root cause of the goto timeouts: the pathfinder
+// follow loop starts 1-block climbs from a standstill pressed against the
+// step face (centre = face + 0.30), where a jump does not clear the step in
+// this physics — so it resets "stuck" every ~3.5 s until the caller's
+// timeout dies. A jump taken with a run-up clears the same step. When a
+// goto attempt stalls: back off, run up and jump toward the goal; if still
+// stuck, dig the face blocks at feet/head height and run up again.
+async function rawDrive(bot, ux, uz, ms, jump) {
+  const s = bot.entity.position.clone();
+  await bot.lookAt(s.offset(ux * 6, 0, uz * 6), true);
+  await sleep(60);
+  if (jump) bot.setControlState("jump", true);
+  bot.setControlState("forward", true);
+  await sleep(ms);
+  try { bot.clearControlStates(); } catch {}
+  await sleep(150);
+  return bot.entity.position.distanceTo(s);
+}
+async function unstickToward(bot, tx, tz) {
+  checkRun();
+  const p0 = bot.entity.position.clone();
+  const dx = tx - p0.x, dz = tz - p0.z;
+  const h = Math.hypot(dx, dz);
+  if (h < 0.5) return 0;
+  const ux = dx / h, uz = dz / h;
+  await rawDrive(bot, -ux, -uz, 380, false);
+  await rawDrive(bot, ux, uz, 1100, true);
+  if (bot.entity.position.distanceTo(p0) >= 0.4) return bot.entity.position.distanceTo(p0);
+  // Dig solid face blocks AND leaf_litter, in every front cell the AABB
+  // spans: prismarine-data reports litter as collision-free in all states,
+  // but the server face-stops bots at some litter cells (measured, GP11) —
+  // digging the litter removes the client/server disagreement.
+  const q = bot.entity.position;
+  const fx = Math.floor(q.x + ux * 0.9), fz = Math.floor(q.z + uz * 0.9), fy = Math.floor(q.y);
+  const perpCells = new Set();
+  if (Math.abs(ux) > Math.abs(uz)) { perpCells.add(Math.floor(q.z - 0.3)); perpCells.add(Math.floor(q.z + 0.3)); }
+  else { perpCells.add(Math.floor(q.x - 0.3)); perpCells.add(Math.floor(q.x + 0.3)); }
+  for (const pc of perpCells) {
+    for (const yy of [fy, fy + 1]) {
+      const cell = Math.abs(ux) > Math.abs(uz) ? v3(fx, yy, pc) : v3(pc, yy, fz);
+      const b = bot.blockAt(cell);
+      if (b && (b.boundingBox === "block" || b.name === "leaf_litter")) {
+        try { await Promise.race([bot.dig(b), sleep(6000).then(() => { throw new Error("dig-face cap"); })]); } catch { try { bot.stopDigging(); } catch {} }
+      }
+    }
+  }
+  await rawDrive(bot, -ux, -uz, 300, false);
+  await rawDrive(bot, ux, uz, 1100, true);
+  return bot.entity.position.distanceTo(p0);
+}
+
+async function goto(bot, x, y, z, range = 1.5, timeoutMs = 90000) {
+  checkRun();
+  // Flush a stale stopPathing flag first: pathfinder.stop() sets a flag that a
+  // later setGoal consumes by emitting path_stop, which would instantly kill
+  // this goto (PathStopped). setGoal(null) forces that consumption NOW, before
+  // goto() registers its listeners. (Scaffold fix, 2026-11-06.)
+  try { bot.pathfinder.setGoal(null); } catch {}
+  const deadline = Date.now() + timeoutMs;
+  let lastErr = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const cap = Math.min(30000, deadline - Date.now());
+    if (cap <= 4000) break;
+    let timer;
+    const gp = bot.pathfinder.goto(new goals.GoalNear(x, y, z, range));
+    gp.catch(() => {});
+    try {
+      await Promise.race([
+        gp,
+        new Promise((_, rej) => { timer = setTimeout(() => rej(new Error("goto attempt cap")), cap); }),
+      ]);
+      clearTimeout(timer);
+      try { bot.pathfinder.setGoal(null); } catch {}
+      return;
+    } catch (e) {
+      clearTimeout(timer);
+      lastErr = e;
+      try { bot.pathfinder.setGoal(null); } catch {}
+      const p = bot.entity.position;
+      if (Math.hypot(x - p.x, z - p.z) <= range + 0.6) return; // close enough: the last-node jam is not a travel failure
+      if (Date.now() >= deadline) break;
+      await unstickToward(bot, x, z).catch(() => {});
+    }
+  }
+  throw new Error("goto timeout after " + timeoutMs + "ms toward " + x + "," + y + "," + z + (lastErr ? " (" + lastErr.message + ")" : ""));
+}
+// Getting home is a preference, not a precondition: never let a long shore/
+// hill path (the pathfinder can churn for minutes there) eat a whole skill
+// run. Returns true if she is at the anchor, false if the walk failed.
+async function gotoAnchor(bot, anchor) {
+  if (!anchor) return false;
+  const p = bot.entity.position;
+  if (Math.hypot(p.x - anchor.x, p.z - anchor.z) <= 3) return true;
+  try { await goto(bot, anchor.x, anchor.y, anchor.z, 2, 60000); return true; }
+  catch (e) { return false; }
+}
+
+function blockId(bot, name) {
+  const b = bot.registry.blocksByName[name];
+  if (!b) throw new Error("unknown block " + name);
+  return b.id;
+}
+function findBlocks(bot, name, maxDistance = 48, countN = 20) {
+  return bot.findBlocks({ matching: blockId(bot, name), maxDistance, count: countN });
+}
+function findBlock(bot, name, maxDistance = 48) {
+  return bot.findBlock({ matching: blockId(bot, name), maxDistance });
+}
+
+// Dig `count` blocks of `blockName`; the yield lands in inventory as `dropName`.
+async function collect(bot, blockName, countWanted, opts = {}) {
+  checkRun();
+  const dropName = opts.drop || blockName;
+  const tools = opts.tools || [];
+  const maxDistance = opts.maxDistance || 48;
+  const start = count(bot, dropName);
+  // Substrate repair 2026-11-07 (see README addendum): the old selection
+  // ranked columns by lowest base first and threw on the first goto
+  // failure, so one deterministic pick — a trunk whose base sits +2 up a
+  // littered rise, 2.4 blocks away — failed every attempt identically for
+  // hours (22,69,-86). Now: rank columns reachable-first (distance plus a
+  // penalty for bases above her), remember failed columns, fall through
+  // to the next column, and if a goto fails but the lowest log is within
+  // dig reach from where she stands, dig it from there.
+  const tried = new Map(); // "x,z" -> why this column was abandoned
+  let guard = 0;
+  while (count(bot, dropName) - start < countWanted) {
+    checkRun();
+    if (++guard > countWanted * 3 + 6) throw new Error("collect: gave up on " + blockName + " (got " + (count(bot, dropName) - start) + "/" + countWanted + "; columns abandoned: " + [...tried.entries()].map(([k, v]) => k + " (" + v + ")").join("; ") + ")");
+    const positions = findBlocks(bot, blockName, maxDistance, 24);
+    if (!positions.length) throw new Error("collect: no " + blockName + " within " + maxDistance + " blocks");
+    // Group into whole columns (work one trunk bottom-up, as before).
+    const cols = new Map();
+    for (const pos of positions) {
+      let y0 = pos.y;
+      while (true) { const b = bot.blockAt(v3(pos.x, y0 - 1, pos.z)); if (b && b.name === blockName) y0--; else break; }
+      const key = pos.x + "," + pos.z;
+      if (!cols.has(key)) cols.set(key, { x: pos.x, z: pos.z, y0 });
+    }
+    const p = bot.entity.position;
+    const ranked = [...cols.values()]
+      .filter((c) => !tried.has(c.x + "," + c.z))
+      .map((c) => { const d = Math.hypot(c.x - p.x, c.z - p.z); return { ...c, cost: d + 3 * Math.max(0, c.y0 - Math.floor(p.y)) }; })
+      .sort((a, b) => a.cost - b.cost);
+    if (!ranked.length) throw new Error("collect: every " + blockName + " column in range was tried and abandoned (" + [...tried.entries()].map(([k, v]) => k + " (" + v + ")").join("; ") + ")");
+    const best = ranked[0];
+    if (tools.length) await equipAny(bot, tools);
+    let arrived = true;
+    try { await goto(bot, best.x, best.y0, best.z, 1.6); }
+    catch (e) {
+      const q = bot.entity.position;
+      const d3 = Math.hypot(best.x + 0.5 - q.x, best.y0 + 0.5 - q.y, best.z + 0.5 - q.z);
+      if (d3 <= 4.2) arrived = true; // lowest log is within dig reach from here — dig from where she stands
+      else { tried.set(best.x + "," + best.z, "goto failed: " + String(e.message).slice(0, 60)); arrived = false; }
+    }
+    if (!arrived) continue;
+    // Dig this column upward while logs remain and are reachable.
+    const before = count(bot, dropName);
+    for (let y = best.y0; y < best.y0 + 10; y++) {
+      checkRun();
+      if (count(bot, dropName) - start >= countWanted) break;
+      const block = bot.blockAt(v3(best.x, y, best.z));
+      if (!block || block.name !== blockName) {
+        if (y > best.y0) break; else continue;
+      }
+      if (!bot.canDigBlock || !bot.canDigBlock(block)) break;
+      await bot.lookAt(v3(best.x + 0.5, y + 0.5, best.z + 0.5), true);
+      await bot.dig(block); // substrate fix 2026-11-07: this mineflayer build has no digBlock (the name is bot.dig, as in Lineage C executors) — every collect dig would have thrown "not a function"
+      try { await goto(bot, best.x, best.y0, best.z, 0.5); } catch {}
+      await sleep(300);
+    }
+    if (count(bot, dropName) === before && count(bot, dropName) - start < countWanted) {
+      tried.set(best.x + "," + best.z, "no yield (unreachable or dig refused)");
+    }
+  }
+  return count(bot, dropName) - start;
+}
+
+async function craft(bot, name, countWanted = 1) {
+  checkRun();
+  const item = bot.registry.itemsByName[name];
+  if (!item) throw new Error("unknown item " + name);
+  // Substrate repair 2026-11-07 (see README addendum). The old version of
+  // this helper was the deterministic S1 break, in three ways:
+  // (1) When no no-table recipe was currently satisfiable it threw
+  //     a message claiming the item needs a crafting table and none is
+  //     near — even for items that need NO table (crafting_table itself,
+  //     stick, planks). The usual true cause: recipes in this data
+  //     version are PER WOOD TYPE (12 variants of the table recipe, one
+  //     per plank type) and the recipesFor call inside this helper only
+  //     returns variants whose ingredients the inventory already meets —
+  //     so logs-not-yet-planks, or a mixed 2 oak + 2 birch plank stack,
+  //     satisfies NO variant and the helper reported a missing table.
+  //     The author mind iterated against that false error for 350+
+  //     attempts (77 occurrences of it in ticks.jsonl).
+  // (2) countWanted was passed BOTH as the result-count for recipe
+  //     selection AND as the repeat count for the craft call; for
+  //     multi-yield recipes (planks x4, stick x4) that over-crafts by
+  //     the yield factor and dies mid-sequence when the logs run out
+  //     (observed as window updateSlot timeouts).
+  // (3) The fallback error named no actual missing ingredient.
+  // Now: result-count semantics end to end, and an honest diagnosis.
+  let table = null;
+  let recipes = bot.recipesFor(item.id, null, countWanted, null);
+  if (!recipes || !recipes.length) {
+    table = findBlock(bot, "crafting_table", 32);
+    if (table) {
+      await goto(bot, table.position.x, table.position.y, table.position.z, 2);
+      recipes = bot.recipesFor(item.id, null, countWanted, table);
+    }
+  }
+  if (!recipes || !recipes.length) throw new Error("craft: cannot make " + name + " yet — " + craftDiagnosis(bot, item, countWanted, !!table));
+  const recipe = recipes[0];
+  const crafts = Math.max(1, Math.ceil(countWanted / ((recipe.result && recipe.result.count) || 1)));
+  await bot.craft(recipe, crafts, table);
+}
+
+// Why can she not craft this yet? Compare every recipe variant and its
+// ingredient delta against the live inventory and report the CLOSEST
+// variant and its real gaps, so the author mind revises against the truth.
+function craftDiagnosis(bot, item, countWanted, tableNear) {
+  let all = [];
+  try { all = bot.recipesAll(item.id, null, true) || []; } catch {}
+  let best = null;
+  for (const r of all) {
+    const crafts = Math.max(1, Math.ceil(countWanted / ((r.result && r.result.count) || 1)));
+    const missing = [];
+    for (const d of r.delta || []) {
+      if (d.count < 0) {
+        const need = -d.count * crafts;
+        const have = bot.inventory.count(d.id, d.metadata);
+        if (have < need) missing.push(((bot.registry.items[d.id] || {}).name || ("item " + d.id)) + " x" + need + " (have " + have + ")");
+      }
+    }
+    const total = missing.length;
+    if (!best || total < best.total) best = { missing, total, requiresTable: !!r.requiresTable };
+  }
+  if (!best) return "no recipe exists for this item in this data version";
+  const parts = [];
+  if (best.missing.length) parts.push("closest recipe variant is missing: " + best.missing.join(", "));
+  else parts.push("ingredients for one variant are present");
+  if (best.requiresTable && !tableNear) parts.push("that variant must be made at a crafting table and none is within 32 blocks");
+  if (!best.requiresTable) parts.push("no crafting table is needed for this item");
+  parts.push("note: planks/sticks recipes are per wood type — mixed plank stacks do not combine; craft precursors (logs -> planks of ONE type) first if planks are missing");
+  return parts.join("; ");
+}
+
+// Place item `name` so it occupies exactly (x,y,z).
+async function placeAt(bot, name, x, y, z) {
+  checkRun();
+  x = Math.floor(x); y = Math.floor(y); z = Math.floor(z); // substrate hardening 2026-11-07: callers have passed raw float positions
+  const target = new Vec3(x, y, z);
+  const existing = bot.blockAt(target);
+  if (existing && existing.name === name) return true;
+  if (existing && existing.name !== "air") throw new Error(`placeAt: ${x},${y},${z} occupied by ${existing.name}`);
+  const dirs = [v3(0,-1,0), v3(0,1,0), v3(1,0,0), v3(-1,0,0), v3(0,0,1), v3(0,0,-1)];
+  for (const d of dirs) {
+    const refPos = target.plus(d);
+    const ref = bot.blockAt(refPos);
+    if (!ref || ref.boundingBox !== "block") continue;
+    await goto(bot, target.x, target.y, target.z, 3);
+    await equip(bot, name);
+    await bot.lookAt(target.offset(0.5, 0.5, 0.5), true);
+    await bot.placeBlock(ref, target.minus(refPos));
+    await sleep(200);
+    const now = bot.blockAt(target);
+    if (now && now.name !== "air") return true;
+  }
+  throw new Error(`placeAt: no solid neighbour to place ${name} at ${x},${y},${z}`);
+}
+
+function groundHeight(bot, x, z, nearY) {
+  for (let y = nearY + 14; y >= nearY - 16; y--) {
+    const b = bot.blockAt(new Vec3(x, y, z));
+    if (b && b.boundingBox === "block") return y;
+  }
+  return null;
+}
+
+// Which gatherable resources are actually around? Grounds the author mind.
+function survey(bot) {
+  const kinds = ["oak_log","spruce_log","birch_log","jungle_log","acacia_log","dark_oak_log","stone","cobblestone","dirt","grass_block","sand","crafting_table","chest"];
+  const out = {};
+  for (const k of kinds) { try { out[k] = findBlocks(bot, k, 40, 30).length; } catch { out[k] = 0; } }
+  return out;
+}
+
+// S3 evidence scan: is there a real enclosed, roofed shelter near `anchor`
+// with a door and a torch inside? Returns {ok, evidence} from block data only.
+function scanShelter(bot, anchor) {
+  const doorNames = ["oak_door","spruce_door","birch_door","jungle_door","acacia_door","dark_oak_door","iron_door"];
+  let doors = [];
+  for (const d of doorNames) { try { doors = doors.concat(findBlocks(bot, d, 26, 10).map((p) => ({ name: d, pos: p }))); } catch {} }
+  if (!doors.length) return { ok: false, evidence: { reason: "no door block within 26 of anchor" } };
+  doors.sort((a, b) => a.pos.distanceTo(new Vec3(anchor.x, anchor.y, anchor.z)) - b.pos.distanceTo(new Vec3(anchor.x, anchor.y, anchor.z)));
+  const solid = (x, y, z) => { const b = bot.blockAt(new Vec3(x, y, z)); return b && b.boundingBox === "block"; };
+  const air = (x, y, z) => { const b = bot.blockAt(new Vec3(x, y, z)); return b && (b.name === "air" || b.name === "cave_air"); };
+  for (const door of doors.slice(0, 4)) {
+    const base = door.pos; // door bottom block position
+    const fy = base.y - 1;  // floor top is at fy; interior air at fy+1, fy+2
+    for (const dir of [v3(1,0,0), v3(-1,0,0), v3(0,0,1), v3(0,0,-1)]) {
+      const sx = base.x + dir.x, sz = base.z + dir.z;
+      if (!solid(sx, fy, sz) || !air(sx, fy + 1, sz) || !air(sx, fy + 2, sz)) continue;
+      // BFS the interior air volume at the two standing heights
+      const seen = new Set(), queue = [[sx, sz]]; let torchAt = null; let leaky = false;
+      while (queue.length) {
+        const [cx, cz] = queue.pop(); const key = cx + "," + cz;
+        if (seen.has(key)) continue; seen.add(key);
+        if (seen.size > 60) { leaky = true; break; }
+        if (!solid(cx, fy, cz)) { leaky = true; break; }
+        if (!air(cx, fy + 1, cz) || !air(cx, fy + 2, cz)) { leaky = true; break; }
+        if (!solid(cx, fy + 3, cz)) { leaky = true; break; } // roof
+        for (const t of ["torch", "wall_torch"]) {
+          // torch evidence checked over the volume below
+        }
+        for (const [nx, nz] of [[cx+1,cz],[cx-1,cz],[cx,cz+1],[cx,cz-1]]) {
+          if (!seen.has(nx + "," + nz)) {
+            if (air(nx, fy + 1, nz) && air(nx, fy + 2, nz) && solid(nx, fy, nz) && solid(nx, fy + 3, nz)) queue.push([nx, nz]);
+            else if (air(nx, fy + 1, nz) && !solid(nx, fy + 3, nz)) { /* opening that is not the door */ }
+          }
+        }
+        // perimeter cells that are air at standing height but fail floor/roof are walls check:
+        // (door cell itself excluded)
+      }
+      if (leaky || seen.size < 3) continue;
+      // torch inside the volume?
+      for (const key of seen) {
+        const [cx, cz] = key.split(",").map(Number);
+        for (const y of [fy + 1, fy + 2]) {
+          const b = bot.blockAt(new Vec3(cx, y, cz));
+          if (b && (b.name === "torch" || b.name === "wall_torch")) torchAt = { x: cx, y, z: cz };
+        }
+      }
+      // also torches can be attached on interior walls just outside the air cells; scan 1-block ring
+      if (!torchAt) {
+        for (let dx = -3; dx <= 3 && !torchAt; dx++) for (let dz = -3; dz <= 3 && !torchAt; dz++) for (const y of [fy + 1, fy + 2]) {
+          const b = bot.blockAt(new Vec3(sx + dx, y, sz + dz));
+          if (b && b.name === "wall_torch") torchAt = { x: sx + dx, y, z: sz + dz };
+        }
+      }
+      if (!torchAt) return { ok: false, evidence: { reason: "enclosed roofed volume found but no torch inside", door: { name: door.name, x: base.x, y: base.y, z: base.z }, cells: seen.size } };
+      return { ok: true, evidence: { door: { name: door.name, x: base.x, y: base.y, z: base.z }, interiorCells: seen.size, torchAt, floorY: fy, centre: { x: sx, y: fy + 1, z: sz } } };
+    }
+  }
+  return { ok: false, evidence: { reason: "doors exist but none fronts an enclosed roofed volume", doors: doors.length } };
+}
+
+module.exports = { setRun, sleep, v3, count, has, inventoryList, equip, equipAny, goto, gotoAnchor, findBlocks, findBlock, collect, craft, placeAt, groundHeight, survey, scanShelter };

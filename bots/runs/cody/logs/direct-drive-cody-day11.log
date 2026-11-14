@@ -1,0 +1,152 @@
+=== day11 launch 2026-11-10T00:28:31Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE REFUSE-START: no-lease — the floor holds no live lease for this driver; stopping the day per charter
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day11 driver exited 2026-11-10T00:28:33Z rc=0 ===
+=== day11 launch 2026-11-10T00:30:10Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE REFUSE-START: no-lease — the floor holds no live lease for this driver; stopping the day per charter
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day11 driver exited 2026-11-10T00:30:12Z rc=0 ===
+=== day11 launch 2026-11-10T00:58:10Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE REFUSE-START: lease-absent — the floor holds no live lease for this driver; stopping the day per charter
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day11 driver exited 2026-11-10T00:58:12Z rc=0 ===
+=== day11 launch 2026-11-10T00:59:03Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE: live lease confirmed at start
+[DD] spawned at 70.3,64.0,-88.6 hp=20 food=20 worldDeaths=123 runDeaths=0 placesKnown=11 abortWiring=shouldAbort(0)=false/shouldAbort(3)=true
+[DD] WAKE: sequence start {"pos":{"x":70.3,"y":64,"z":-88.6},"hp":20,"food":20}
+[DD] WAKE feed: awaiting EXTERNAL feed via the separate-process op channel (no in-process bot)
+[DD] WAKE feed: external feed wait ended {"pos":{"x":70.3,"y":64,"z":-88.6},"hp":20,"food":20} fedOk=true
+[DD] WAKE: sequence done {"pos":{"x":70.3,"y":64,"z":-88.6},"hp":20,"food":20} fmTotal=0
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Morning. I'm standing in the hollow with one cobble and a furnace still hungry — home's just west along the south shoulder, and I'll walk it the safe way, south of that pit, never across it." cmd="goto 62 67 -89"
+[DD] cycle 2 [deepinfra:deepseek-v4.1-flash] say="Well — there's a real oak trunk five blocks west of me, foot at (65,66,-88). I'm not passing that up. Wood first, then home." cmd="felltree 65 66 -88"
+[DD] cycle 3 [deepinfra:deepseek-v4.1-flash] say="That trunk's out of reach from where I stand — the ground between us is a step up. Let me hop west a couple of blocks first, then take it." cmd="goto 67 64 -88"
+[DD] cycle 4 [deepinfra:deepseek-v4.1-flash] say="There it is — the oak's foot is within reach now. Down you come, trunk first." cmd="felltree 65 66 -88"
+[DD] cycle 5 [deepinfra:deepseek-v4.1-flash] say="One more log in the pack. Now let me get down to the home shoulder — west and a step down toward the table." cmd="goto 64 67 -89"
+[DD] cycle 6 [deepinfra:deepseek-v4.1-flash] say="I'm boxed in by a step on every side but one — let me take the short hop south where the ground's open, then work my way west." cmd="goto 67 64 -89"
+[DD] cycle 7 [deepinfra:deepseek-v4.1-flash] say="I keep sliding east instead of west — the ground's fighting me. Let me try a single block west and see if the walker can hold it." cmd="goto 68 64 -87"
+[DD] cycle 8 [deepinfra:deepseek-v4.1-flash] say="Still pinned east by that rise. One more short hop west, right onto the grass." cmd="goto 68 65 -88"
+[DD] cycle 9 [deepinfra:deepseek-v4.1-flash] say="Every side but south is a wall of leaves and stone. Let me break out south onto open ground and circle round to the table from below." cmd="goto 68 64 -89"
+[DD] cycle 10 [deepinfra:deepseek-v4.1-flash] say="The walker keeps sliding me north instead of south. South's open grass — one short hop onto it." cmd="goto 69 66 -88"
+[DD] cycle 11 [deepinfra:deepseek-v4.1-flash] say="This little rise has me boxed. Time to stop shuffling and just cut west through — one block at a time toward the table." cmd="goto 67 65 -88"
+[DD] cycle 12 [deepinfra:deepseek-v4.1-flash] say="North's a wall of leaves at my head. Let me break the one right above my feet and see if the ground opens up." cmd="dig 68 66 -87"
+[DD] cycle 13 [deepinfra:deepseek-v4.1-flash] say="Enough shuffling on this rise. The walker's been sliding me — let me aim a longer leg straight at the pad's west edge and trust the south shoulder." cmd="goto 62 67 -92"
+[DD] cycle 14 [deepinfra:deepseek-v4.1-flash] say="That got me up onto the shoulder proper — table's only four blocks north. One short hop to it." cmd="goto 64 67 -93"
+[DD] cycle 15 [deepinfra:deepseek-v4.1-flash] say="Home at last, table at my elbow. I've got 18 oak logs and 10 birch in my pack — let me turn some of that into planks and get the furnace chain going." cmd="craft oak_planks 8"
+[DD] cycle 16 [deepinfra:deepseek-v4.1-flash] say="Planks in hand. Now the pickaxe head needs sticks — and I've got cobblestone and a stone pickaxe to make." cmd="craft stick 4"
+[DD] cycle 17 [deepinfra:deepseek-v4.1-flash] say="Sticks and planks and a table at my elbow. Now a proper stone pickaxe — I've got the cobblestone for it." cmd="craft stone_pickaxe 1"
+[DD] cycle 18 [deepinfra:deepseek-v4.1-flash] say="Deepslate? No — I want plain cobblestone, three of it. The bench is reading something odd; let me just make a wooden pickaxe first to go dig the stone myself." cmd="craft wooden_pickaxe 1"
+[DD] cycle 19 [deepinfra:deepseek-v4.1-flash] say="Wooden pickaxe in hand — now let me go dig the stone for my furnace. The shoulder south of the pit gives out to dirt, so I'll dig down a couple blocks right here." cmd="dig 64 66 -92"
+[DD] cycle 20 [deepinfra:deepseek-v4.1-flash] say="No block under my feet there — the ground's at my own level. Let me dig the grass I'm standing on and see what's beneath it." cmd="dig 64 67 -93"
+[DD] cycle 21 [deepinfra:deepseek-v4.1-flash] say="My feet are floating a half-block above the ground — that's why nothing's where I'm digging. Let me step over to the pad's west edge and work from solid ground." cmd="goto 62 67 -92"
+[DD] cycle 22 [deepinfra:deepseek-v4.1-flash] say="Solid ground now. Let me dig down into the shoulder here and see if the dirt gives out to stone." cmd="dig 61 66 -92"
+[DD] cycle 23 [deepinfra:deepseek-v4.1-flash] say="Grass came up clean. One deeper — dirt, then maybe stone." cmd="dig 61 65 -92"
+[rate-limiter] Delayed message (window limit): 2599ms
+[DD] cycle 24 [deepinfra:deepseek-v4.1-flash] say="Two down, still dirt. One more — stone's usually just under the shoulder here." cmd="dig 61 64 -92"
+[rate-limiter] Delayed message (window limit): 2239ms
+[DD] cycle 25 [deepinfra:deepseek-v4.1-flash] say="Still dirt. One more down — I'm not stopping till I hit stone." cmd="dig 61 63 -92"
+[rate-limiter] Delayed message (window limit): 5060ms
+[DD] cycle 26 [deepinfra:deepseek-v4.1-flash] say="Stone! There it is. Let me widen this little hole — I need eight cobble for the furnace." cmd="dig 62 63 -92"
+[rate-limiter] Delayed message (window limit): 1134ms
+[DD] cycle 27 [deepinfra:deepseek-v4.1-flash] say="Two cobble. Keep going — this seam's wide enough to feed me." cmd="dig 63 63 -92"
+[rate-limiter] Delayed message (window limit): 1532ms
+[DD] cycle 28 [deepinfra:deepseek-v4.1-flash] say="That one's already open air. Try the other side of the seam." cmd="dig 60 63 -92"
+[DD] cycle 29 [deepinfra:deepseek-v4.1-flash] say="Careful — I've wandered down to the pit's rim. Back off the edge and work the stone from where I can stand safe." cmd="goto 60 67 -90"
+[DD] cycle 30 [deepinfra:deepseek-v4.1-flash] say="I'm standing down in a dug dip beside my own pit — not going anywhere from here by wishing. Let me step up onto the open shoulder south of it." cmd="goto 62 67 -89"
+[DD] cycle 31 [deepinfra:deepseek-v4.1-flash] say="I've dug myself into a little hollow and the walker won't climb out by wishing. I've got dirt in my pocket — I'll pillar up out of here." cmd="climb 63 -90"
+[DD] GATE PARK at cycle head: lease-revoked — stopping within this cycle; no further commands
+[DD] CLOSE: gate-parked — the close-exit movement below is SKIPPED (it is itself a command, and no commands run under a dead lease); he stays where the park left him
+[DD] run window over — disconnecting cleanly
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day11 driver exited 2026-11-10T01:07:09Z rc=0 ===

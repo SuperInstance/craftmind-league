@@ -1,0 +1,49 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 75.7,63.0,-98.6 hp=9.133333206176758 food=3 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 1 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 2 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] FAILOVER: primary failed 3x consecutively — governor fallback (Qwen3-Coder-30B) for the rest of the run
+[DD] cycle 3 [governor:qwen3-coder-30b] say="Okay, that's it — I'm getting out of this bowl before I get myself killed again." cmd="goto 64 67 -93"
+[DD] cycle 4 [governor:qwen3-coder-30b] say="Alright, crafting table's still there from last time. Let me see if I can get some food before heading home." cmd="dig 74 64 -98"
+[DD] cycle 5 [governor:qwen3-coder-30b] say="Right, the crafting table's there. Let me see what I can make with what I've got." cmd="craft wooden_pickaxe"
+[DD] cycle 6 [governor:qwen3-coder-30b] say="Need to get some planks first, then I can make a pickaxe." cmd="craft wooden_planks 1"
+[DD] cycle 7 [governor:qwen3-coder-30b] say="Right, I've got planks already. Let me try making a pickaxe properly." cmd="craft pickaxe"
+[DD] cycle 8 [governor:qwen3-coder-30b] say="I've got the materials, I just need to remember how to make a pickaxe." cmd="place crafting_table 75 64 -98"
+[DD] cycle 9 [governor:qwen3-coder-30b] say="Alright, I'll just use the one I've got here and try to make a pickaxe with it." cmd="craft wooden_pickaxe"
+[DD] cycle 10 [governor:qwen3-coder-30b] say="I need to get some food first. There's an apple oak nearby." cmd="gotoentity oak_log"
+[rate-limiter] Delayed message (window limit): 8495ms
+[DD] cycle 11 [governor:qwen3-coder-30b] say="Alright, let's see if I can find some apples or food around here." cmd="collect"
+[rate-limiter] Delayed message (window limit): 3105ms
+[DD] cycle 12 [governor:qwen3-coder-30b] say="Got some logs, now I need to get to the shoulder and start building." cmd="goto 64 67 -93"
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody

@@ -1,0 +1,129 @@
+Generating 67 disc images...
+Output: /home/lucineer/projects/craftmind-discgolf/assets/discs
+
+[1/67] Innova Wraith... ✓ (exists)
+[2/67] Innova Destroyer... ✓ (exists)
+[3/67] Innova Firebird... ✓ (exists)
+[4/67] Innova Valkyrie... ✓ (exists)
+[5/67] Innova Teebird... ✓ (exists)
+[6/67] Innova Leopard... ✓ (exists[9[7/67] Innova Aviar...✓
+[10/67] Innova Mako3... ✓
+[11/67] Innova Roadrunner... ✓
+[12/67] Innova Skeeter... ✓
+[13/67] Innova Pegasus... ✓
+[14/67] Innova Cheetah... ✓
+[15/67] Discraft Buzzz... ✓
+[16/67] Discraft Zone... ✓
+[17/67] Discraft Luna... ✓
+[18/67] Discraft Zeus...     Network: getaddrinfo EAI_AGAIN generativelanguage.googleapis.com
+✗
+[19/67] Discraft Raptor... ✓
+[20/67] Discraft Nuke... ✓
+[21/67] Discraft Undertaker... ✓
+[22/67] Discraft Flame... ✓
+[23/67] Discraft Challenger... ✓
+[24/67] Discraft Predator... ✓
+[25/67] Dynamic Discs Judge... ✓
+[26/67] Dynamic Discs Truth... ✓
+[27/67] Dynamic Discs Felon... ✓
+[28/67] Dynamic Discs Sheriff... ✓
+[29/67] Dynamic Discs Trespass... ✓
+[30/67] Dynamic Discs Warrant... ✓
+[31/67] Latitude 64 River... ✓
+[32/67] Latitude 64 Fuse... ✓
+[33/67] Latitude 64 Saint... ✓
+[34/67] Latitude 64 Explorer... ✓
+[35/67] Latitude 64 Diamond... ✓
+[36/67] Latitude 64 Mercy... ✓ (exists)
+[37/67] Latitude 64 Pearl... ✓
+[38/67] Latitude 64 Trust... ✓
+[39/67] MVP Photon... ✓
+[40/67] MVP Tesla... ✓
+[41/67] MVP Volt... ✓ (exists)
+[42/67] MVP Envy... ✓
+[43/67] MVP Atom...     Network: getaddrinfo EAI_AGAIN generativelanguage.googleapis.com
+✗
+[44/67] MVP Theory... ✓
+[45/67] Axiom Relay... ✓
+[46/67] Axiom Crave... ✓
+[47/67] Prodigy D1... ✓
+[48/67] Prodigy D4... ✓
+[49/67] Prodigy M4... ✓ (exists)
+[50/67] Prodigy PA3... ✓
+[51/67] Prodigy F7... ✓ (exists)
+[52/67] Discmania P2... ✓
+[53/67] Discmania FD... ✓ (exists)
+[54/67] Discmania DD3... ✓
+[55/67] Discmania PD... ✓
+[56/67] Discmania Lunatic... ✓
+[57/67] Disc[57/67] Discmania✓
+[58/67] Disc[58/67] Discmania✓
+[59/67] Disc[59/67] Discmani✓
+[60/67] Craf[60/67] CraftMind✓
+[61/67] Craf[61/67] CraftMind Sitka✓
+[62/67] Craf[62/67] CraftMind Sa✓
+[63/67] CraftMind Aurora... ✓
+[64/67] CraftMind Glacier... ✓
+[65/67] CraftMind Edgecumbe... ✓
+[66/67] CraftMind Brown Bear... ✓
+[67/67] CraftMind Bald Eagle... ✓
+
+Done! 60 generated, 5 skipped, 2 failed
+Failed: discraft_zeus, mvp_atom
+Assets: /home/lucineer/projects/craftmind-discgolf/asset✓
+
+Done! 51 generated, 14 skipped, 2 failed
+Failed: dd_felon, custom_salmon_run
+Assets: /home/lucineer/projects/craftmind-discgolf/assets/discs
+mage. Text: none
+✗
+[45/67] Axiom Relay...     No image. Text: none
+✗
+[46/67] Axiom Crave...     No image. Text: none
+✗
+[47/67] Prodigy D1...     No image. Text: none
+✗
+[48/67] Prodigy D4...     No image. Text: none
+✗
+[49/67] Prodigy M4...     Network: getaddrinfo EAI_AGAIN generativelanguage.googleapis.com
+✗
+[50/67] Prodigy PA3...     Network: getaddrinfo EAI_AGAIN generativelanguage.googleapis.com
+✗
+[51/67] Prodigy F7...     No image. Text: none
+✗
+[52/67] Discmania P2...     No image. Text: none
+✗
+[53/67] Discmania FD...     No image. Text: none
+✗
+[54/67] Discmania DD3...     No image. Text: none
+✗
+[55/67] Discmania PD...     No image. Text: none
+✗
+[56/67] Discmania Lunatic...     No image. Text: none
+✗
+[57/67] Discmania Fortune...     No image. Text: none
+✗
+[58/67] Discmania Geotrax...     No image. Text: none
+✗
+[59/67] Discmania Method...     No image. Text: none
+✗
+[60/67] CraftMind Tsunami...     No image. Text: none
+✗
+[61/67] CraftMind Sitka Slammer...     No image. Text: none
+✗
+[62/67] CraftMind Salmon Run...     No image. Text: none
+✗
+[63/67] CraftMind Aurora...     No image. Text: none
+✗
+[64/67] CraftMind Glacier...     No image. Text: none
+✗
+[65/67] CraftMind Edgecumbe...     No image. Text: none
+✗
+[66/67] CraftMind Brown Bear...     No image. Text: none
+✗
+[67/67] CraftMind Bald Eagle...     No image. Text: none
+✗
+
+Done! 0 generated, 0 skipped, 67 failed
+Failed: innova_wraith, innova_destroyer, innova_firebird, innova_valkyrie, innova_teebird, innova_leopard, innova_aviar, innova_roc, innova_katana, innova_mako3, innova_roadrunner, innova_skeeter, innova_pegasus, innova_cheetah, discraft_buzzz, discraft_zone, discraft_luna, discraft_zeus, discraft_raptor, discraft_nuke, discraft_undertaker, discraft_flame, discraft_challenger, discraft_predator, dd_judge, dd_truth, dd_felon, dd_sheriff, dd_trespass, dd_warrant, lat64_river, lat64_fuse, lat64_saint, lat64_explorer, lat64_diamond, lat64_mercy, lat64_pearl, lat64_trust, mvp_photon, mvp_tesla, mvp_volt, mvp_envy, mvp_atom, mvp_theory, mvp_relay, mvp_crave, prodigy_d1, prodigy_d4, prodigy_m4, prodigy_pa3, prodigy_f7, dm_p2, dm_fd, dm_dd3, dm_pd, dm_lunatic, dm_fortune, dm_geotrax, dm_method, custom_tsunami, custom_sitka_slammer, custom_salmon_run, custom_northern_lights, custom_glacier, custom_volcano, custom_bear, custom_eagle
+Assets: /home/lucineer/projects/craftmind-discgolf/assets/discs

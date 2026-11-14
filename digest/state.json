@@ -1,0 +1,294 @@
+{
+ "tick": 56040,
+ "cursors": {
+  "scoreboard": {
+   "offset": 162890,
+   "partial": ""
+  },
+  "pulse-ledger": {
+   "offset": 716335,
+   "partial": "{\"branch\":\"a-standing-guarded-restored-after-day18\",\"cap\":\"2026-11-13T21:56:36Z\",\"id\":\"cameraman-cap-renewal-20261108-t\",\"kind\":\"cameraman-cap-renewal-check\",\"pid\":\"3338565\",\"started\":\"2026-11-13T13:56:36Z\",\"summary\":\"Renewal #22 check (job t, fired 10:13 AKST / 19:13Z 2026-11-13). DEDUP: cron list showed no other pending cameraman renewal (only job t enabled) - no duplicate. PREMISE SUPERSEDED BY DAY-18 CLOSE: pid 3106349 day12-live keeper (started 11:58:03Z, cap 19:58:03Z) was STOPped cleanly at 13:56:32Z (STOP file present -- exiting cleanly in keeper-day18.log, last VERIFIED 13:55:14Z) after Day 18 closed at 13:57Z ledger; the Day-18 lane restored the guarded cameraman. NEW SESSION VERIFIED SAME WAY: pid 3338565 python3 cameraman.py (GUARDED build, MAX_RUNTIME_S=8*60*60 confirmed at line 144, no CAM_DAY_REFRESH_OFF in env, stdout/stderr to ~/cameraman/guarded-restore-day18.log per /proc/3338565/fd, cwd ~/cameraman), started 2026-11-13T13:56:36Z (process lstart; log startup 13:56:37Z camera=MagnusandMouse citizens=Cody), startup DAYLIGHT VERIFIED LANDED 13:56:39Z, WEATHER clear at start, VERIFIED LANDED every ~300-313s thereafter (63 VERIFIED in session; last hour 17:34:54,17:40:07,17:45:13,17:50:16,17:55:17,18:00:31,18:05:33,18:10:35,18:15:38,18:20:48,18:26:04,18:31:23,18:36:25,18:41:38,18:46:41,18:51:43,18:56:46,19:01:51,19:06:52,19:11:55Z), zero HOLD-LOST/WARNING/ALARM in the 3338565 session, STOP absent, cuts landing in server log. New cap 2026-11-13T21:56:36Z (12:56:36 AKST Nov 13) - ~2h41m remained at check, so branch (a): DO NOT restart. Thor: no NEW cameraman alarm artefact since alarm-cameraman-1794378456.json (06:27:36Z 2026-11-11; newest cameraman alarm file on Thor is still that one); heartbeat cameraman.json emitted 2026-11-13T19:08:46Z last_effect_ts 19:06:52Z VERIFIED LANDED - fresh. MagnusandMouse in world issuing only cameraman cuts/time/weather (no leave in latest.log, no sign Casey driving); Gallery joined 10:53:40Z and left 13:56:20Z at Day-18 close (floor stopped). Cody: joined 12:13:42Z for Day 18, left 13:48:13Z at day close, NOT currently in game - cameraman in stall/fallback framing on his last position (66.7,63.1,-91.3); per day-close ledger Cody sleeps in the water cell at (66.31,63,-91.3), hp/food 20/20. Next follow-up cameraman-cap-renewal-20261108-u scheduled ~45 min before cap: 2026-11-13T21:11:36Z (12:11:36 AKST Nov 13). No other process touched; no pushes.\",\"ts\":\"2026-11-13T19:15Z\"}"
+  },
+  "comms": {
+   "offset": 1353253,
+   "partial": ""
+  }
+ },
+ "events": [
+  {
+   "ts": "2026-11-13T12:40:44.152Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:50:44.695Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"I'm UP — feet at 66, two levels above where I woke, and the pad's grass is right there south of me. The bowl let me go. And my eyes just named a birch trunk at (71,67,-76) …"
+  },
+  {
+   "ts": "2026-11-13T12:51:16.765Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:51:52.638Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Feet at 66, and the ground south of me tops at 67 — one step up and I'm on the pad. The grass is a single block above my boots, the walker climbs that by itself. South, ont…"
+  },
+  {
+   "ts": "2026-11-13T12:52:11.596Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:52:19.129Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Feet at 67 — I'm on the pad! The bowl's behind me and I'm standing on home ground. The wood chain runs now. My table's right north of me, but first the tree: the birch foot…"
+  },
+  {
+   "ts": "2026-11-13T12:52:50.443Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:53:20.651Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Hmm — the walker says I'm at 66, -90 but the ground under me reads feet at 68, and there's stone at 62 north of me. I'm up on a rise, and the birch is fifteen blocks off so…"
+  },
+  {
+   "ts": "2026-11-13T12:53:38.500Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:55:09.405Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Back down at 63, right at the water's edge, and a zombie a block off. The floor keeps bouncing me around this bowl. I'm not going to fight a zombie with porkchops — let me …"
+  },
+  {
+   "ts": "2026-11-13T12:55:40.826Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:05:47.544Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:15:50.001Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"The short hop west did nothing — I'm still down at 63 beside the water. The rule says short gotos inside a low cell don't move me at all; I need one long leg well past the …"
+  },
+  {
+   "ts": "2026-11-13T13:16:21.434Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:26:24.818Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Still stuck at 63 — the long leg didn't take either, and a zombie's two blocks off. The walls around me top at 66, three levels up, and the walker can't climb that. There's…"
+  },
+  {
+   "ts": "2026-11-13T13:26:56.405Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:36:58.359Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Four legs and I haven't moved an inch — I'm pinned in this low cell at 63 with water at my boots. Every wall around me tops three levels up, and the walker won't climb that…"
+  },
+  {
+   "ts": "2026-11-13T13:37:02.565Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:48:13.044Z",
+   "source": "server-log",
+   "kind": "leave",
+   "citizen": "Cody",
+   "summary": "Cody left the game"
+  },
+  {
+   "ts": "2026-11-13T13:57:00Z",
+   "source": "pulse-ledger",
+   "kind": "day-close",
+   "citizen": "Cody",
+   "summary": "pulse day-close"
+  }
+ ],
+ "prevLive": {
+  "Vega": {
+   "lineage": "B",
+   "pos": {
+    "x": 56.7,
+    "y": 65,
+    "z": -65.3
+   },
+   "health": 3,
+   "food": 2,
+   "deaths": 0,
+   "stage": "S2",
+   "inventory": {
+    "total": 59,
+    "items": {
+     "leaf_litter": 18,
+     "oak_log": 3,
+     "dirt": 31,
+     "stick": 2,
+     "oak_planks": 3,
+     "wooden_pickaxe": 1,
+     "wheat_seeds": 1
+    }
+   },
+   "anchor": {
+    "x": 63,
+    "y": 67,
+    "z": -72
+   },
+   "feed": {
+    "status": "live",
+    "ageSec": 84,
+    "feedTs": "2026-11-08T09:41:20.628Z"
+   },
+   "extra": {
+    "standingOn": "grass_block",
+    "stuck": false
+   },
+   "lastEvent": {
+    "ts": "2026-11-08T09:41:21.246Z",
+    "source": "server-log",
+    "kind": "leave",
+    "citizen": "Vega",
+    "summary": "Vega left the game"
+   }
+  },
+  "Geist": {
+   "lineage": "C",
+   "pos": {
+    "x": 34.5,
+    "y": 67,
+    "z": -98.5
+   },
+   "health": 20,
+   "food": 20,
+   "deaths": 57,
+   "stage": "S1",
+   "inventory": {
+    "total": 0,
+    "items": {}
+   },
+   "anchor": {
+    "x": 7,
+    "y": 67,
+    "z": -85
+   },
+   "feed": {
+    "status": "live",
+    "ageSec": 89,
+    "feedTs": null
+   },
+   "extra": {
+    "oxygen": 20
+   },
+   "lastEvent": {
+    "ts": "2026-11-08T09:00:18.384Z",
+    "source": "server-log",
+    "kind": "leave",
+    "citizen": "Geist",
+    "summary": "Geist left the game"
+   }
+  },
+  "Cody": {
+   "lineage": "A",
+   "pos": {
+    "x": 77.3,
+    "y": 64,
+    "z": -98.3
+   },
+   "health": 9.1,
+   "food": 4,
+   "deaths": 116,
+   "stage": "S1",
+   "inventory": {
+    "total": 8,
+    "items": {
+     "oak_log": 6,
+     "oak_sapling": 2
+    }
+   },
+   "anchor": {
+    "x": 64,
+    "y": 67,
+    "z": -93
+   },
+   "feed": {
+    "status": "live",
+    "ageSec": 84,
+    "feedTs": "2026-11-09T06:15:16.786Z"
+   },
+   "extra": {
+    "behaviour": "framework",
+    "intent": "Heading to the homestead",
+    "project": "relocate"
+   },
+   "lastEvent": {
+    "ts": "2026-11-09T06:15:23.190Z",
+    "source": "server-log",
+    "kind": "leave",
+    "citizen": "Cody",
+    "summary": "Cody left the game"
+   }
+  }
+ },
+ "presence": {
+  "Cody": "stale",
+  "Vega": "stale",
+  "Geist": "stale"
+ },
+ "weather": {
+  "state": "clear",
+  "source": "server-log weather command",
+  "since": "2026-11-13T13:56:42.147Z"
+ },
+ "pendingServer": []
+}

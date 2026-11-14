@@ -1,0 +1,269 @@
+{
+ "kind": "world-digest",
+ "version": 0,
+ "ts": "2026-11-13T20:42:19.499Z",
+ "tick": 56040,
+ "timeOfDay": null,
+ "phase": null,
+ "timeSource": null,
+ "weather": {
+  "state": "clear",
+  "source": "server-log weather command",
+  "since": "2026-11-13T13:56:42.147Z"
+ },
+ "citizens": {
+  "Cody": {
+   "lineage": "A",
+   "pos": {
+    "x": 77.3,
+    "y": 64,
+    "z": -98.3
+   },
+   "health": 9.1,
+   "food": 4,
+   "deaths": 116,
+   "stage": "S1",
+   "inventory": {
+    "total": 8,
+    "items": {
+     "oak_log": 6,
+     "oak_sapling": 2
+    }
+   },
+   "anchor": {
+    "x": 64,
+    "y": 67,
+    "z": -93
+   },
+   "feed": {
+    "status": "stale",
+    "ageSec": 397623,
+    "feedTs": "2026-11-09T06:15:16.786Z"
+   },
+   "extra": {
+    "behaviour": "framework",
+    "intent": "Heading to the homestead",
+    "project": "relocate"
+   },
+   "lastEvent": {
+    "ts": "2026-11-13T13:57:00Z",
+    "source": "pulse-ledger",
+    "kind": "day-close",
+    "citizen": "Cody",
+    "summary": "pulse day-close"
+   }
+  },
+  "Vega": {
+   "lineage": "B",
+   "pos": {
+    "x": 56.7,
+    "y": 65,
+    "z": -65.3
+   },
+   "health": 3,
+   "food": 2,
+   "deaths": 0,
+   "stage": "S2",
+   "inventory": {
+    "total": 59,
+    "items": {
+     "leaf_litter": 18,
+     "oak_log": 3,
+     "dirt": 31,
+     "stick": 2,
+     "oak_planks": 3,
+     "wooden_pickaxe": 1,
+     "wheat_seeds": 1
+    }
+   },
+   "anchor": {
+    "x": 63,
+    "y": 67,
+    "z": -72
+   },
+   "feed": {
+    "status": "stale",
+    "ageSec": 471658,
+    "feedTs": "2026-11-08T09:41:20.628Z"
+   },
+   "extra": {
+    "standingOn": "grass_block",
+    "stuck": false
+   },
+   "lastEvent": null
+  },
+  "Geist": {
+   "lineage": "C",
+   "pos": {
+    "x": 34.5,
+    "y": 67,
+    "z": -98.5
+   },
+   "health": 20,
+   "food": 20,
+   "deaths": 57,
+   "stage": "S1",
+   "inventory": {
+    "total": 0,
+    "items": {}
+   },
+   "anchor": {
+    "x": 7,
+    "y": 67,
+    "z": -85
+   },
+   "feed": {
+    "status": "stale",
+    "ageSec": 474125,
+    "feedTs": null
+   },
+   "extra": {
+    "oxygen": 20
+   },
+   "lastEvent": null
+  }
+ },
+ "recentEvents": [
+  {
+   "ts": "2026-11-13T12:40:44.152Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:50:44.695Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"I'm UP — feet at 66, two levels above where I woke, and the pad's grass is right there south of me. The bowl let me go. And my eyes just named a birch trunk at (71,67,-76) …"
+  },
+  {
+   "ts": "2026-11-13T12:51:16.765Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:51:52.638Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Feet at 66, and the ground south of me tops at 67 — one step up and I'm on the pad. The grass is a single block above my boots, the walker climbs that by itself. South, ont…"
+  },
+  {
+   "ts": "2026-11-13T12:52:11.596Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:52:19.129Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Feet at 67 — I'm on the pad! The bowl's behind me and I'm standing on home ground. The wood chain runs now. My table's right north of me, but first the tree: the birch foot…"
+  },
+  {
+   "ts": "2026-11-13T12:52:50.443Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:53:20.651Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Hmm — the walker says I'm at 66, -90 but the ground under me reads feet at 68, and there's stone at 62 north of me. I'm up on a rise, and the birch is fifteen blocks off so…"
+  },
+  {
+   "ts": "2026-11-13T12:53:38.500Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T12:55:09.405Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Back down at 63, right at the water's edge, and a zombie a block off. The floor keeps bouncing me around this bowl. I'm not going to fight a zombie with porkchops — let me …"
+  },
+  {
+   "ts": "2026-11-13T12:55:40.826Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:05:47.544Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:15:50.001Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"The short hop west did nothing — I'm still down at 63 beside the water. The rule says short gotos inside a low cell don't move me at all; I need one long leg well past the …"
+  },
+  {
+   "ts": "2026-11-13T13:16:21.434Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:26:24.818Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Still stuck at 63 — the long leg didn't take either, and a zombie's two blocks off. The walls around me top at 66, three levels up, and the walker can't climb that. There's…"
+  },
+  {
+   "ts": "2026-11-13T13:26:56.405Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:36:58.359Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Four legs and I haven't moved an inch — I'm pinned in this low cell at 63 with water at my boots. Every wall around me tops three levels up, and the walker won't climb that…"
+  },
+  {
+   "ts": "2026-11-13T13:37:02.565Z",
+   "source": "comms",
+   "kind": "utterance",
+   "citizen": "Cody",
+   "summary": "Cody: \"Company! Moving —\""
+  },
+  {
+   "ts": "2026-11-13T13:48:13.044Z",
+   "source": "server-log",
+   "kind": "leave",
+   "citizen": "Cody",
+   "summary": "Cody left the game"
+  },
+  {
+   "ts": "2026-11-13T13:57:00Z",
+   "source": "pulse-ledger",
+   "kind": "day-close",
+   "citizen": "Cody",
+   "summary": "pulse day-close"
+  }
+ ],
+ "worldNotes": []
+}

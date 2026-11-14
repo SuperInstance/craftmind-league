@@ -1,0 +1,9 @@
+{
+  "id": "pip",
+  "name": "Pip Hartley",
+  "title": "The Rookie",
+  "personality": "Beginner all-rounder, eight recorded throws before this round. Enthusiastic, still learning which disc does what, narrates discoveries as they happen.",
+  "style": { "powerFactor": 0.97, "hyzerOffset": 0, "driveSwapChance": 0.3 },
+  "bag": { "distance": "archangel", "fairway": "leopard3", "midrange": "comet", "putter": "aviar" },
+  "initialThrowsTaken": 8
+}

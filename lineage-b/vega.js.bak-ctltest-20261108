@@ -1,0 +1,495 @@
+// vega.js — Lineage B resident: "Vega", a Voyager-pattern citizen.
+//
+// One process holds: the body (mineflayer), the state feed, the skill
+// executor (runs a skill, then grades it from world evidence), the night
+// watch (S5), and the PULSE — every ~10 min (and once soon after a failed
+// tick) the two minds tick: curriculum mind confirms the task on the shared
+// exam ladder, author mind writes/revises ONE skill, the world grades it.
+//
+// Run from this directory:  node vega.js
+// Env overrides: MC_HOST (192.168.0.50), MC_PORT (25565), MC_USER (Vega), MC_VERSION (26.1).
+const fs = require("fs");
+const path = require("path");
+const { execFileSync } = require("child_process");
+process.chdir(__dirname);
+
+const mineflayer = require("mineflayer");
+const { pathfinder, Movements } = require("mineflayer-pathfinder");
+const helpers = require("./helpers");
+const minds = require("./minds");
+const exam = require("./exam");
+
+const DIR = __dirname;
+const LEAGUE = path.dirname(DIR);
+const F = {
+  state: path.join(DIR, "vega-state.json"),
+  anchor: path.join(DIR, "anchor.json"),
+  curriculum: path.join(DIR, "curriculum.json"),
+  libIndex: path.join(DIR, "library", "index.json"),
+  ticks: path.join(DIR, "logs", "ticks.jsonl"),
+  scoreboard: path.join(LEAGUE, "commons", "SCOREBOARD.jsonl"),
+  pond: path.join(LEAGUE, "commons", "pond"),
+};
+const OPTS = {
+  host: process.env.MC_HOST || "192.168.0.50",
+  port: parseInt(process.env.MC_PORT || "25565", 10),
+  username: process.env.MC_USER || "Vega",
+  version: process.env.MC_VERSION || "26.1",
+};
+const SKILL_TIMEOUT_S = { S1: 300, S2: 300, S3: 720, S4: 420, S5: 60 };
+const PULSE_MS = 10 * 60 * 1000;
+
+function log(...a) { console.log(new Date().toISOString(), "[VEGA]", ...a); }
+function readJson(p, fallback) { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return fallback; } }
+function writeJson(p, o) { fs.writeFileSync(p, JSON.stringify(o, null, 2)); }
+function appendLine(p, o) { fs.appendFileSync(p, JSON.stringify(o) + "\n"); }
+
+function scoreboard(stage, event, evidence) {
+  appendLine(F.scoreboard, { ts: new Date().toISOString(), lineage: "B", citizen: "Vega", stage, event, evidence });
+}
+
+// ---------- curriculum progress ----------
+function loadProgress() {
+  let p = readJson(F.curriculum, null);
+  if (!p) {
+    p = { citizen: "Vega", lineage: "B", stages: exam.STAGES.map((s) => ({ id: s.id, name: s.name, status: "pending", attempts: 0 })) };
+    writeJson(F.curriculum, p);
+  }
+  return p;
+}
+let progress = loadProgress();
+function currentStage() {
+  const rec = progress.stages.find((s) => s.status !== "pass");
+  if (!rec) return null;
+  return exam.STAGES.find((s) => s.id === rec.id);
+}
+function stageRec(id) { return progress.stages.find((s) => s.id === id); }
+
+// ---------- shared skill context ----------
+let bot = null, spawned = false, deaths = 0, relaunches = 0, firstSpawnDone = false;
+let anchor = readJson(F.anchor, null);
+const CTX = { anchor: null, shelter: null, nightRecord: null };
+let STATE = { online: false };
+let posHist = []; // scaffold: stuck detection for the state feed
+let tickBusy = false, soonTick = null;
+
+function refreshState() {
+  if (!bot || !bot.entity) { STATE = { online: false, ts: new Date().toISOString() }; return STATE; }
+  const p = bot.entity.position;
+  STATE = {
+    ts: new Date().toISOString(), online: true, name: OPTS.username, lineage: "B",
+    position: { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) },
+    health: bot.health, food: bot.food,
+    inventory: helpers.inventoryList(bot),
+    timeOfDay: bot.time ? bot.time.timeOfDay : null, day: bot.time ? bot.time.day : null,
+    deaths, anchor, stage: currentStage() ? currentStage().id : "DONE",
+    standingOn: (() => { try { const b = bot.blockAt(p.offset(0, -1, 0)); return b ? b.name : null; } catch { return null; } })(),
+    stuck: (() => { posHist.push([p.x, p.z, Date.now()]); if (posHist.length > 40) posHist.shift(); if (posHist.length < 25) return false; const [fx, fz] = posHist[0]; return Math.hypot(p.x - fx, p.z - fz) < 2; })(),
+    survey: (() => { try { return helpers.survey(bot); } catch { return {}; } })(),
+  };
+  CTX.state = STATE;
+  return STATE;
+}
+
+// ---------- night watch (S5 evidence) ----------
+let night = null;
+function nightWatch() {
+  if (!bot || !bot.entity || !bot.time) return;
+  const tod = bot.time.timeOfDay;
+  if (!night && tod >= 13000 && tod < 23000) {
+    night = { active: true, complete: false, day: bot.time.day, startedTs: new Date().toISOString(), deathsAtStart: deaths, insideAtMid: null, midChecked: false };
+    log("night watch: night began (day " + night.day + ")");
+  }
+  if (night && !night.midChecked && tod >= 16500 && tod <= 20000) {
+    night.midChecked = true;
+    const c = CTX.shelter && CTX.shelter.centre;
+    if (c) { const p = bot.entity.position; night.insideAtMid = Math.hypot(p.x - c.x, p.z - c.z) <= 6; night.midPos = { x: +p.x.toFixed(1), y: +p.y.toFixed(1), z: +p.z.toFixed(1) }; }
+    else night.insideAtMid = false;
+  }
+  if (night && (tod >= 23000 || tod < 12000)) {
+    night.complete = true; night.active = false;
+    night.deathsDuring = deaths - night.deathsAtStart;
+    night.endedTs = new Date().toISOString();
+    CTX.nightRecord = night;
+    log("night watch: night complete:", JSON.stringify(night));
+    night = null;
+    if (currentStage() && currentStage().id === "S5") setTimeout(() => tick("night-complete"), 5000);
+  }
+}
+
+// ---------- skill executor ----------
+function parseSkillName(code) { const m = code.match(/\/\/\s*skill:\s*([A-Za-z0-9_]+)/); return m ? m[1] : null; }
+function readIndex() { return readJson(F.libIndex, { skills: {} }); }
+function updateIndex(name, patchObj) {
+  const idx = readIndex();
+  idx.skills[name] = { ...(idx.skills[name] || {}), ...patchObj, updated: new Date().toISOString() };
+  writeJson(F.libIndex, idx);
+}
+async function runSkill(file, stage) {
+  let mod;
+  try { delete require.cache[require.resolve(file)]; mod = require(file); }
+  catch (e) { return { ok: false, error: "load: " + e.message, evidence: {} }; }
+  const fn = mod && (mod.default || mod);
+  if (typeof fn !== "function") return { ok: false, error: "skill exports no function", evidence: {} };
+  const timeoutMs = (SKILL_TIMEOUT_S[stage.id] || 300) * 1000;
+  const run = { cancelled: false };
+  helpers.setRun(run);
+  let error = null;
+  try {
+    await Promise.race([
+      fn(bot, helpers, CTX),
+      new Promise((_, rej) => setTimeout(() => { run.cancelled = true; rej(new Error("skill timeout after " + timeoutMs + "ms")); }, timeoutMs)),
+    ]);
+  } catch (e) { error = e.message; }
+  run.cancelled = true; // settled: no dangling await may drive the bot afterwards
+  helpers.setRun({ cancelled: false });
+  try { bot.pathfinder.setGoal(null); } catch {}
+  try { bot.clearControlStates(); } catch {}
+  if (error) return { ok: false, error, evidence: {} };
+  if (typeof mod.post === "function") {
+    try {
+      const p = await mod.post(bot, helpers, CTX);
+      if (!p || !p.ok) return { ok: false, error: "postconditions unmet", evidence: (p && p.evidence) || {} };
+      return { ok: true, evidence: p.evidence || {} };
+    } catch (e) { return { ok: false, error: "post threw: " + e.message, evidence: {} }; }
+  }
+  return { ok: true, evidence: {} };
+}
+async function safeCheck(stage) {
+  try { return await exam.CHECKS[stage.id](bot, CTX); }
+  catch (e) { return { ok: false, evidence: { checkError: e.message } }; }
+}
+
+// ---------- stage transitions ----------
+async function passStage(stage, verdict, skillFile, tickId) {
+  const rec = stageRec(stage.id);
+  rec.status = "pass"; rec.passedTs = new Date().toISOString(); rec.evidence = verdict.evidence;
+  writeJson(F.curriculum, progress);
+  scoreboard(stage.id, "pass", verdict.evidence);
+  if (skillFile) {
+    const name = parseSkillName(fs.readFileSync(skillFile, "utf8")) || path.basename(skillFile, ".js");
+    const header = `// POND — proven skill, copied from Lineage B on stage pass.\n// provenance: lineage B / citizen Vega / stage ${stage.id} / ${rec.passedTs}\n// evidence: ${JSON.stringify(verdict.evidence).slice(0, 400)}\n`;
+    fs.writeFileSync(path.join(F.pond, `B-${name}.js`), header + fs.readFileSync(skillFile, "utf8"));
+    log("pond: published", name);
+  }
+  log("STAGE PASS", stage.id, stage.name);
+  const line = await minds.narrate({ event: `Vega just passed stage ${stage.id} (${stage.name}) of her survival exam.`, fallback: `Stage ${stage.id} done — ${stage.name}. Onward.` });
+  try { bot.chat(line); } catch {}
+}
+
+function scheduleSoonTick() {
+  if (soonTick) return;
+  soonTick = setTimeout(() => { soonTick = null; tick("retry-after-fail"); }, 3 * 60 * 1000);
+}
+
+// ---------- THE PULSE ----------
+async function tick(reason) {
+  if (tickBusy) return;
+  if (!bot || !spawned || !bot.entity) { log("tick skipped (offline):", reason); return; }
+  const stage = currentStage();
+  if (!stage) { log("tick: exam complete — Vega idles as a resident."); return; }
+  tickBusy = true;
+  const tickId = new Date().toISOString();
+  log("TICK", tickId, "reason:", reason, "stage:", stage.id);
+  try {
+    refreshState();
+    // (0) ambient verification: maybe the world already satisfies this stage
+    const ambient = await safeCheck(stage);
+    if (ambient.ok) { await passStage(stage, ambient, null, tickId); return; }
+    // (1) curriculum mind
+    let plan = null;
+    try {
+      plan = await minds.curriculumMind({ state: slimState(STATE), anchor, stages: progress.stages, libraryIndex: readIndex(), recentOutcomes: recentOutcomes() });
+      if (plan && plan.stage !== stage.id) log("curriculum mind named", plan.stage, "— exam order enforced:", stage.id);
+    } catch (e) { log("curriculum mind failed:", e.message); }
+    // comms (protocol v1, 2026-11-07): the curriculum mind may attach one
+    // chat line — a reply confirming a fellow citizen's message, or a
+    // genuine message of her own. Spoken via the same bot.chat path as her
+    // narration; the comms daemon's ledger judges delivery, not this line.
+    if (plan && plan.say) {
+      const line = String(plan.say).slice(0, 200);
+      try { bot.chat(line); log("comms say:", line); } catch {}
+    }
+    const taskText = (plan && plan.task) || stage.task;
+    // (2) author -> execute -> grade, up to 4 attempts (Voyager loop)
+    const rec = stageRec(stage.id);
+    let lastAttempt = null;
+    for (let attempt = 1; attempt <= 4; attempt++) {
+      let code;
+      try {
+        code = await minds.authorMind({ stage, task: taskText, anchor, state: slimState(refreshState()), libraryIndex: readIndex(), lastAttempt });
+      } catch (e) {
+        log("author mind failed:", e.message);
+        lastAttempt = { error: "author: " + e.message, evidence: {}, code: (lastAttempt && lastAttempt.code) || "" };
+        continue;
+      }
+      const name = parseSkillName(code) || ("skill" + stage.id);
+      const attemptsDir = path.join(DIR, "library", "attempts");
+      fs.mkdirSync(attemptsDir, { recursive: true });
+      const attemptFile = path.join(attemptsDir, `${stage.id}-${Date.now()}-a${attempt}.js`);
+      fs.writeFileSync(attemptFile, code);
+      try { execFileSync(process.execPath, ["--check", attemptFile], { timeout: 15000 }); }
+      catch (e) { log("skill syntax error:", name); lastAttempt = { error: "syntax: " + String(e.message).slice(0, 300), evidence: {}, code }; continue; }
+      const canonical = path.join(DIR, "library", name + ".js");
+      fs.writeFileSync(canonical, code);
+      updateIndex(name, { stage: stage.id, status: "candidate" });
+      rec.attempts = (rec.attempts || 0) + 1; writeJson(F.curriculum, progress);
+      scoreboard(stage.id, "attempt", { skill: name, attempt, tick: tickId });
+      log("executing skill", name, "attempt", attempt);
+      const res = await runSkill(canonical, stage);
+      appendLine(F.ticks, { ts: new Date().toISOString(), tick: tickId, stage: stage.id, attempt, skill: name, ok: res.ok, error: res.error || null, evidence: res.evidence });
+      if (res.ok) {
+        const verdict = await safeCheck(stage);
+        if (verdict.ok) {
+          updateIndex(name, { status: "proven", evidence: verdict.evidence });
+          await passStage(stage, verdict, canonical, tickId);
+          return;
+        }
+        log("skill post ok but EXAM check still failing for", stage.id);
+        lastAttempt = { error: "stage check still failing after skill ran", evidence: verdict.evidence, code };
+        updateIndex(name, { status: "unproven", evidence: verdict.evidence });
+        continue;
+      }
+      log("skill failed:", name, "—", res.error);
+      updateIndex(name, { status: "failed", evidence: res.evidence || {}, error: res.error });
+      lastAttempt = { error: res.error || "postconditions unmet", evidence: res.evidence || {}, code };
+    }
+    scoreboard(stage.id, "fail", { attempts: 4, lastError: lastAttempt && lastAttempt.error });
+    appendLine(F.ticks, { ts: new Date().toISOString(), tick: tickId, stage: stage.id, event: "tick-failed", lastError: lastAttempt && lastAttempt.error });
+    log("tick failed for", stage.id, "— will retry on the pulse");
+    scheduleSoonTick();
+  } catch (e) {
+    log("tick crashed:", e.stack || e.message);
+  } finally { tickBusy = false; }
+}
+function slimState(st) {
+  if (!st) return st;
+  const survey = {};
+  for (const [k, v] of Object.entries(st.survey || {})) if (v > 0) survey[k] = v;
+  return { position: st.position, health: st.health, food: st.food, inventory: st.inventory, timeOfDay: st.timeOfDay, deaths: st.deaths, survey };
+}
+function recentOutcomes() {
+  try {
+    const lines = fs.readFileSync(F.ticks, "utf8").trim().split("\n").filter(Boolean).slice(-6);
+    return lines.map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+  } catch { return []; }
+}
+
+// ---------- body ----------
+function launch() {
+  log("launching Vega (attempt " + (relaunches + 1) + ")", JSON.stringify(OPTS));
+  bot = mineflayer.createBot(OPTS);
+  bot.loadPlugin(pathfinder);
+  CTX.bot = bot;
+
+  bot.once("spawn", async () => {
+    spawned = true;
+    try {
+      const movements = new Movements(bot);
+      // Travel tuning (scaffold): walk-only routing. With digging/placing
+      // enabled, A* branching explodes in wooded slopes and a 9-block hop
+      // churned for 90 s. Digging stays available to skills as an explicit
+      // act (bot.digBlock is not governed by Movements).
+      // Substrate repair 2026-11-07 (see README addendum): canDig=true and a
+      // deeper drop allowance. Walk-only routing (canDig=false) left Vega
+      // stranded in her spawn canopy: from leaves at y75 every route to the
+      // ground needs either a dig (the leaf column beneath her) or a drop
+      // of ~6-9 blocks, and maxDropDown defaulted to 4 — so A* had no legal
+      // move at all and every goto churned until the 90 s skill timeout.
+      // Digging stays an explicit act for skills; this only re-enables it
+      // for TRAVEL planning. allow1by1towers stays false (no towering).
+      movements.canDig = true;
+      movements.maxDropDown = 10;
+  // Substrate (2026-11-07): leaf_litter step exclusion — prismarine data
+  // calls litter collision-free, but in this build litter piles collide
+  // at fractional heights (measured on Lineage C probes GP5/GP11: perched
+  // stands at +0.1..0.9, face-stops at tall piles), so A* plans walk-
+  // throughs the server refuses. Heavy step cost routes A* around litter
+  // patches; still crossable at cost when there is no other way.
+  movements.exclusionAreasStep.push((block) => (block && block.name === "leaf_litter" ? 100 : 0));
+  // Substrate (2026-11-08): spawn-protection BREAK exclusion. Pathfinder
+  // event narration ([path] lines in vega.out) exposed the loop behind
+  // every travel wedge this night: with canDig=true, A* plans dig-steps
+  // through the wooded ground INSIDE the spawn-protection square, the
+  // follower full-stops at the toBreak node, the server silently cancels
+  // the dig, and after the 3.5 s futility timer the path resets as
+  // "stuck" and replans the IDENTICAL dig-step — forever (~1 block/min
+  // net, two 300 s skill timeouts). Movement is not protected, only
+  // block changes are; so make breaking inside the square (x 15..49,
+  // z -113..-79, the helpers' +1-margin box) prohibitively expensive:
+  // A* walks through the square and digs only outside it. Explicit digs
+  // (collect) are governed by helpers' own protection guard, not this.
+  movements.exclusionAreasBreak.push((block) => {
+    if (!block || !block.position) return 0;
+    const bx = block.position.x, bz = block.position.z;
+    return (bx >= 15 && bx <= 49 && bz >= -113 && bz <= -79) ? 100000 : 0;
+  });
+      movements.allow1by1towers = false;
+      bot.pathfinder.setMovements(movements);
+      // Operator observability (2026-11-08): narrate the pathfinder's own
+      // verdicts into vega.out — path_update carries the A* result
+      // (success / partial / noPath / timeout) and path_reset the reason
+      // a plan was abandoned. Vega's travel failures have been invisible
+      // from outside (position traces only); this names them at source.
+      bot.on("path_update", (r) => { try {
+        log("[path] update:", r && r.status, "nodes", r && r.path ? r.path.length : 0, "ms", r && Math.round(r.time || 0));
+        if (r && r.status === "success" && r.path) {
+          global.__vegaLastPath = r.path.map((n) => n.x + "," + n.y + "," + n.z + ((n.toBreak && n.toBreak.length) ? "[B" + n.toBreak.length + "]" : "") + ((n.toPlace && n.toPlace.length) ? "[P" + n.toPlace.length + "]" : ""));
+          log("[path] route:", global.__vegaLastPath.join(" -> "));
+        }
+      } catch {} });
+      bot.on("path_reset", (reason) => { try { log("[path] reset:", String(reason)); } catch {} });
+      bot.on("goal_reached", () => { try { log("[path] goal reached"); } catch {} });
+      // Stuck snapshot (2026-11-08): when the follower declares 'stuck',
+      // dump her position and every non-air block in the 3x3x3 cube at
+      // her feet — the obstacle the plan cannot clear becomes a named
+      // block in the log instead of a rumour in a position trace.
+      bot.on("path_reset", (reason) => {
+        if (String(reason) !== "stuck") return;
+        try {
+          const p = bot.entity.position;
+          const fx = Math.floor(p.x), fy = Math.floor(p.y), fz = Math.floor(p.z);
+          const blocks = [];
+          for (let dx = -1; dx <= 1; dx++) for (let dy = 0; dy <= 2; dy++) for (let dz = -1; dz <= 1; dz++) {
+            const b = bot.blockAt(new (require("vec3").Vec3)(fx + dx, fy + dy, fz + dz));
+            if (b && b.name !== "air") blocks.push(b.name + "@" + (fx + dx) + "," + (fy + dy) + "," + (fz + dz));
+          }
+          log("[path] stuck-snapshot at", p.x.toFixed(1), p.y.toFixed(1), p.z.toFixed(1), "yaw", bot.entity.yaw.toFixed(2), "blocks:", blocks.join(" "));
+          log("[path] stuck-route-head:", (global.__vegaLastPath || []).slice(0, 6).join(" -> "));
+        } catch (e) { log("[path] stuck-snapshot failed:", e.message); }
+      });
+      // Sim-gate diagnostics (2026-11-08, follower-wedge lane): synthetic
+      // PlayerState sims from her exact wedge coordinates PASS every gate
+      // (probe evidence, three wedge cells), so on 'stuck' replay the
+      // follower's own gates from the LIVE entity/control state and A/B them
+      // against a synthetic standing state. Names the refusal inputs.
+      bot.on("path_reset", (reason) => {
+        if (String(reason) !== "stuck") return;
+        try {
+          const nowMs = Date.now();
+          if (global.__simDiagLast && nowMs - global.__simDiagLast < 20000) return;
+          global.__simDiagLast = nowMs;
+          const head = (global.__vegaLastPath || [])[0];
+          if (!head) return;
+          const parts = head.replace(/\[(B|P)\d+\]/g, "").split(",").map(Number);
+          if (parts.length !== 3 || parts.some((n) => Number.isNaN(n))) return;
+          const Vec3D = require("vec3").Vec3;
+          const node = new Vec3D(parts[0], parts[1], parts[2]);
+          const PhysicsD = require("mineflayer-pathfinder/lib/physics");
+          const phys = new PhysicsD(bot);
+          const pathArr = [node];
+          const e = bot.entity;
+          log("[sim] at", e.position.toString(), "vel", e.velocity.toString(), "onGround", e.onGround, "ctrl", JSON.stringify(bot.controlState), "node", node.toString());
+          log("[sim] live-gates straight", phys.canStraightLine(pathArr), "straightSprint", phys.canStraightLine(pathArr, true), "sprintJump", phys.canSprintJump(pathArr), "walkJump", phys.canWalkJump(pathArr));
+          const reachedFn = phys.getReached(pathArr);
+          const worldD = { getBlock: (pos) => bot.blockAt(pos, false) };
+          const { PlayerState } = require("prismarine-physics");
+          const trace = (synthetic) => {
+            let st;
+            if (synthetic) {
+              st = new PlayerState(bot, { forward: false, back: false, left: false, right: false, jump: false, sprint: false, sneak: false });
+              st.pos.update(e.position); st.vel.set(0, 0, 0); st.onGround = true;
+            } else {
+              st = new PlayerState(bot, { forward: bot.controlState.forward, back: bot.controlState.back, left: bot.controlState.left, right: bot.controlState.right, jump: bot.controlState.jump, sprint: bot.controlState.sprint, sneak: bot.controlState.sneak });
+            }
+            const controller = phys.getController(node, true, false, 0);
+            const traj = [];
+            for (let t = 0; t < 20; t++) {
+              controller(st, t);
+              bot.physics.simulatePlayer(st, worldD);
+              traj.push(st.pos.x.toFixed(2) + "," + st.pos.y.toFixed(2) + "," + st.pos.z.toFixed(2) + (st.onGround ? "G" : "."));
+              if (reachedFn(st)) break;
+            }
+            return (reachedFn(st) ? "REACHED " : "FAILED ") + traj.join(" ");
+          };
+          log("[sim] walkjump LIVE-state:", trace(false));
+          log("[sim] walkjump SYNTHETIC :", trace(true));
+        } catch (err) { log("[sim] diag failed:", err && err.message); }
+      });
+    } catch (e) { log("movements error:", e.message); }
+    const p = bot.entity.position;
+    log("spawned at", p.x.toFixed(1), p.y.toFixed(1), p.z.toFixed(1));
+    CTX.anchor = anchor;
+    refreshState();
+    if (firstSpawnDone) return;
+    firstSpawnDone = true;
+    setTimeout(() => { try { bot.chat("Evening — Vega here. New resident, different school: I write my own skills and the world grades them."); } catch {} }, 3000);
+    setTimeout(() => tick("first"), 20000);
+    if (!anchor) {
+      // Claim a build site clear of Cody — time-boxed; wherever she stands
+      // when the clock runs out becomes the anchor (scaffold rule, not a skill).
+      const target = { x: Math.floor(p.x) + 40, z: Math.floor(p.z) + 32 };
+      log("walking to anchor claim near", target.x, target.z);
+      try {
+        await Promise.race([
+          helpers.goto(bot, target.x, p.y, target.z, 2),
+          helpers.sleep(75000).then(() => { throw new Error("anchor walk timeout 75s"); }),
+        ]);
+      } catch (e) { log("anchor walk ended:", e.message); }
+      try { bot.pathfinder.setGoal(null); } catch {}
+      const q = bot.entity.position;
+      anchor = { x: Math.floor(q.x), y: Math.floor(q.y), z: Math.floor(q.z) };
+      writeJson(F.anchor, anchor);
+      CTX.anchor = anchor;
+      log("anchor recorded:", JSON.stringify(anchor));
+    }
+  });
+
+  bot.on("death", () => { deaths++; log("Vega died (total " + deaths + ")"); setTimeout(() => { try { bot.respawn(); } catch {} }, 1500); });
+  bot.on("chat", (user, msg) => { if (user !== OPTS.username) log("chat <" + user + "> " + msg); });
+  bot.on("kicked", (r) => log("kicked:", String(r)));
+  bot.on("error", (e) => log("error:", e && e.message));
+  bot.once("end", (r) => {
+    spawned = false; log("connection ended:", String(r));
+    relaunches++;
+    if (relaunches <= 30) setTimeout(launch, Math.min(10000 * relaunches, 60000));
+    else { log("too many relaunches — exiting"); process.exit(1); }
+  });
+}
+
+fs.mkdirSync(path.join(DIR, "library", "attempts"), { recursive: true });
+fs.mkdirSync(path.join(DIR, "logs"), { recursive: true });
+CTX.anchor = anchor;
+launch();
+// SUBSTRATE (declared 2026-11-07, see README addendum): canopy-descent
+// reflex. NOT a skill and never presented as one: if Vega is standing on
+// leaves with no solid ground within 4 blocks below and no skill is
+// running, dig the block beneath and drop, step by step, until she stands
+// on ground — the descent her author mind kept prescribing in words but
+// whose executions died in pathfinding timeouts. Every firing is logged
+// as SUBSTRATE. (Same pattern as Lineage C's `descend` executor and
+// canopy substrate, adopted as a body reflex here.)
+let descentBusy = false;
+async function canopyDescentReflex() {
+  if (descentBusy || tickBusy || !bot || !spawned || !bot.entity) return;
+  try {
+    const feet0 = bot.entity.position.floored();
+    const under = bot.blockAt(feet0.offset(0, -1, 0));
+    if (!under || !/leaves$/.test(under.name)) return;
+    for (let d = 2; d <= 4; d++) {
+      const b = bot.blockAt(feet0.offset(0, -d, 0));
+      if (b && b.boundingBox === "block" && !/leaves$/.test(b.name)) return; // ground close below: fine
+    }
+    descentBusy = true;
+    log("SUBSTRATE canopy-descent: standing on leaves, no ground within 4 below — digging down");
+    const GROUND = ["grass_block", "dirt", "stone", "sand", "gravel", "coarse_dirt", "podzol", "mycelium", "cobblestone", "bedrock", "clay", "sandstone", "dirt_path"];
+    for (let step = 0; step < 12; step++) {
+      if (tickBusy) break;
+      const feet = bot.entity.position.floored();
+      const below = bot.blockAt(feet.offset(0, -1, 0));
+      if (!below) break;
+      if (GROUND.includes(below.name)) break;
+      if (below.boundingBox === "empty") { await helpers.sleep(350); continue; }
+      try { await bot.dig(below); } catch (e) { log("SUBSTRATE canopy-descent: dig failed:", e.message); break; }
+      await helpers.sleep(450);
+    }
+    const p = bot.entity.position;
+    const un = bot.blockAt(p.offset(0, -1, 0));
+    log("SUBSTRATE canopy-descent: done at", p.x.toFixed(1), p.y.toFixed(1), p.z.toFixed(1), "standingOn", un ? un.name : null);
+  } catch {}
+  descentBusy = false;
+}
+
+setInterval(() => { writeJson(F.state, refreshState()); nightWatch(); canopyDescentReflex(); }, 10000);
+setInterval(() => tick("pulse"), PULSE_MS);
+log("lineage-b resident process up; pulse every " + (PULSE_MS / 60000) + " min");

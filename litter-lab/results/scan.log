@@ -1,0 +1,10 @@
+[SCAN] spawned as ScanLab6554 at (27.5, 70, -92.5)
+[SCAN] near segment A start: true bot at (-14.498665259565366, 66, -95.30010580415055)
+[SCAN] segment A len 38.5 litterWithin3: 83 profileSamples: 20 litterTopSamples: 1 waterSamples: 0 standYrange: 61 - 76
+[SCAN] profile A 0:sand@61 2:sand@62 4:sand@63 6:grass@65 8:grass@66 10:grass@66 12:grass@67 14:grass@67 16:grass@67 18:oak_leaves@72 20:oak_leaves@73 22:birch_leaves@74 24:birch_leaves@75 26:birch_leaves@74 28:oak_leaves@76 30:oak_leaves@75 32:oak_leaves@73 34:oak_leaves@71 36:grass@68 38:leaf_litter@68
+[SCAN] startCol A {"top":"sand","standY":61} endCol {"top":"grass_block","standY":68}
+[SCAN] near segment B start: true bot at (-19.7505022322536, 66, -96.69997086340321)
+[SCAN] segment B len 42.7 litterWithin3: 91 profileSamples: 22 litterTopSamples: 0 waterSamples: 0 standYrange: 61 - 78
+[SCAN] profile B 0:dirt@61 2:dirt@62 4:grass@64 6:grass@65 8:grass@66 10:grass@66 12:grass@67 14:grass@67 16:grass@67 18:grass@68 20:grass@68 22:grass@68 24:grass@68 26:grass@67 28:oak_leaves@72 30:oak_leaves@74 32:oak_leaves@72 34:oak_leaves@78 36:oak_leaves@78 38:oak_leaves@74 40:oak_leaves@73 42:oak_leaves@73
+[SCAN] startCol B {"top":"dirt","standY":61} endCol {"top":"oak_leaves","standY":71}
+[SCAN] DONE

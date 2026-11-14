@@ -1,0 +1,68 @@
+{
+  "citizen": "Geist",
+  "lineage": "C",
+  "deaths": 57,
+  "maxSeen": {
+    "leaf_litter": 12,
+    "dirt": 16,
+    "arrow": 2,
+    "oak_log": 8,
+    "oak_sapling": 1,
+    "oak_planks": 4,
+    "stick": 16,
+    "rotten_flesh": 1,
+    "oak_button": 1,
+    "crafting_table": 1
+  },
+  "shelter": null,
+  "stages": [
+    {
+      "id": "S1",
+      "status": "pending",
+      "attempts": 219,
+      "passedAt": null,
+      "lastEvidence": {
+        "wooden_pickaxe": false,
+        "crafting_table_item": false,
+        "crafting_table_block": null,
+        "inventory": {
+          "rotten_flesh": 1,
+          "oak_planks": 4,
+          "oak_sapling": 1,
+          "leaf_litter": 12,
+          "oak_log": 2,
+          "dirt": 4,
+          "oak_button": 1
+        }
+      }
+    },
+    {
+      "id": "S2",
+      "status": "pending",
+      "attempts": 0,
+      "passedAt": null,
+      "lastEvidence": null
+    },
+    {
+      "id": "S3",
+      "status": "pending",
+      "attempts": 0,
+      "passedAt": null,
+      "lastEvidence": null
+    },
+    {
+      "id": "S4",
+      "status": "pending",
+      "attempts": 0,
+      "passedAt": null,
+      "lastEvidence": null
+    },
+    {
+      "id": "S5",
+      "status": "pending",
+      "attempts": 0,
+      "passedAt": null,
+      "lastEvidence": null
+    }
+  ]
+}

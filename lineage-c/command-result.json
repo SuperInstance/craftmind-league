@@ -1,0 +1,83 @@
+{
+  "ts": "2026-11-08T08:39:39.325Z",
+  "results": [
+    {
+      "action": "goto",
+      "args": {
+        "x": 48,
+        "y": 68,
+        "z": -99
+      },
+      "ok": true,
+      "evidence": {
+        "wentTo": "coords",
+        "from": {
+          "x": 44,
+          "y": 68,
+          "z": -100
+        },
+        "at": {
+          "x": 44,
+          "y": 68,
+          "z": -100
+        },
+        "horizontalDistanceToTarget": 3.4
+      },
+      "error": null
+    },
+    {
+      "action": "goto",
+      "args": {
+        "x": 50,
+        "y": 67,
+        "z": -100
+      },
+      "ok": false,
+      "evidence": {
+        "wentTo": "coords",
+        "from": {
+          "x": 44,
+          "y": 68,
+          "z": -100
+        },
+        "at": {
+          "x": 44,
+          "y": 68,
+          "z": -100
+        },
+        "horizontalDistanceToTarget": 5.3
+      },
+      "error": null
+    }
+  ],
+  "state": {
+    "citizen": "Geist",
+    "lineage": "C",
+    "position": {
+      "x": 44.7,
+      "y": 68.8,
+      "z": -99.7
+    },
+    "health": 14,
+    "food": 8,
+    "oxygen": -1,
+    "timeOfDay": 3981,
+    "inventory": {
+      "stick": 1,
+      "rotten_flesh": 1,
+      "crafting_table": 1,
+      "oak_sapling": 1,
+      "leaf_litter": 12,
+      "oak_log": 8,
+      "dirt": 4,
+      "oak_button": 1
+    },
+    "deaths": 50,
+    "stage": "S1",
+    "anchor": {
+      "x": 7,
+      "y": 67,
+      "z": -85
+    }
+  }
+}

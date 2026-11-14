@@ -1,0 +1,1546 @@
+{
+  "roundStart": "2026-11-06T01:37:46.721Z",
+  "roundEnd": "2026-11-06T01:38:27.500Z",
+  "scale": 0.05,
+  "capture": 0.75,
+  "maxStrokes": 8,
+  "results": [
+    {
+      "citizen": {
+        "id": "mara",
+        "name": "Mara Voss",
+        "title": "The Bomber",
+        "personality": "Power player. Full-send drives, trusts big hyzer lines, talks like every drive is a statement. Short memory for misses.",
+        "style": {
+          "powerFactor": 1.08,
+          "hyzerOffset": 6,
+          "driveSwapChance": 0
+        },
+        "bag": {
+          "distance": "boss",
+          "fairway": "firebird",
+          "midrange": "wasp",
+          "putter": "luna"
+        },
+        "initialThrowsTaken": 850
+      },
+      "throwsBefore": 850,
+      "throwsAfter": 879,
+      "totalStrokes": 29,
+      "totalPar": 30,
+      "scoreToPar": -1,
+      "holes": [
+        {
+          "hole": 1,
+          "name": "The Opener",
+          "par": 3,
+          "cardDistance": 180,
+          "simDistance": 9,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.93,
+              "executedPower": 0.881,
+              "flightDistance": 6.4,
+              "remaining": 2.61,
+              "landing": "short",
+              "narration": "That Firebird was supposed to be a statement, not a short field goal.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.4,
+              "executedPower": 0.391,
+              "flightDistance": 3.25,
+              "remaining": 0.64,
+              "landing": "short",
+              "narration": "That Luna flight was a masterpiece of controlled power - the wind couldn't stop that beautiful hyzer turn!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 2,
+          "name": "Pine Needle Alley",
+          "par": 3,
+          "cardDistance": 210,
+          "simDistance": 10.5,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 1,
+              "executedPower": 0.917,
+              "flightDistance": 5.42,
+              "remaining": 5.29,
+              "landing": "obstacle",
+              "narration": "That Firebird was supposed to be a statement, not a surrender to the wind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "wasp",
+              "slot": "midrange",
+              "intendedPower": 0.66,
+              "executedPower": 0.699,
+              "flightDistance": 5.03,
+              "remaining": 0.28,
+              "landing": "in_basket",
+              "narration": "That Wasp flight was a goddamn masterpiece, trust the hyzer and let it rip.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 3,
+          "name": "Elevation Drop",
+          "par": 4,
+          "cardDistance": 320,
+          "simDistance": 16,
+          "strokes": 6,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "boss",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.988,
+              "flightDistance": 5.69,
+              "remaining": 10.32,
+              "landing": "short",
+              "narration": "That Boss flight was a statement - 140-degree wind, 10.32 units from basket, but I'm not here for misses.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.99,
+              "executedPower": 1,
+              "flightDistance": 2.88,
+              "remaining": 7.73,
+              "landing": "short",
+              "narration": "That Firebird flight was a masterpiece of intentional overkill - the wind couldn't handle that hyzer angle!",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.87,
+              "executedPower": 0.847,
+              "flightDistance": 6.29,
+              "remaining": 1.47,
+              "landing": "short",
+              "narration": "That Firebird threw like it was born for wind 2, but I'm not mad - just needed to trust the hyzer more.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.24,
+              "executedPower": 0.254,
+              "flightDistance": 2.4,
+              "remaining": 0.93,
+              "landing": "short",
+              "narration": "That Luna flight was a statement - 140 degrees into 2mph wind, finished 0.93 units from basket, short. Power player, full-send, trust the big hyzer.",
+              "narrationError": null
+            },
+            {
+              "stroke": 5,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.24,
+              "executedPower": 0.269,
+              "flightDistance": 2.54,
+              "remaining": 1.61,
+              "landing": "short",
+              "narration": "That Luna throw was a beautiful statement of power and precision - the wind couldn't handle my full-send hyzer line!",
+              "narrationError": null
+            },
+            {
+              "stroke": 6,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.25,
+              "executedPower": 0.223,
+              "flightDistance": 2.23,
+              "remaining": 0.61,
+              "landing": "short",
+              "narration": "That Luna was a beautiful statement shot - big hyzer, full power, landed exactly where I wanted it to.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 4,
+          "name": "The Tunnel",
+          "par": 3,
+          "cardDistance": 195,
+          "simDistance": 9.75,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.96,
+              "executedPower": 1,
+              "flightDistance": 6.68,
+              "remaining": 3.07,
+              "landing": "short",
+              "narration": "That Firebird was supposed to be a statement, not a shorty.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.47,
+              "executedPower": 0.443,
+              "flightDistance": 3.5,
+              "remaining": 0.43,
+              "landing": "short",
+              "narration": "That Luna was a statement piece of art, throwing that big hyzer line right into the wind and still putting it right on the pin.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 5,
+          "name": "Risk/Reward",
+          "par": 4,
+          "cardDistance": 380,
+          "simDistance": 19,
+          "strokes": 5,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "boss",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.97,
+              "flightDistance": 6.05,
+              "remaining": 12.99,
+              "landing": "short",
+              "narration": "That Boss throw was a beautiful statement of power and intention, even if it landed short and wide.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "boss",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.947,
+              "flightDistance": 3.8,
+              "remaining": 9.48,
+              "landing": "short",
+              "narration": "That Boss throw was a beauty, 260 degrees into 6 mph wind, finished 9.48 units short - that's exactly how I like 'em!",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.95,
+              "executedPower": 0.94,
+              "flightDistance": 3.03,
+              "remaining": 6.48,
+              "landing": "short",
+              "narration": "That Firebird was supposed to scream through that wind, not dance like a drunk bird.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "wasp",
+              "slot": "midrange",
+              "intendedPower": 0.73,
+              "executedPower": 0.713,
+              "flightDistance": 2.28,
+              "remaining": 4.81,
+              "landing": "short",
+              "narration": "That Wasp was supposed to be a statement, not a shorty.",
+              "narrationError": null
+            },
+            {
+              "stroke": 5,
+              "disc": "wasp",
+              "slot": "midrange",
+              "intendedPower": 0.64,
+              "executedPower": 0.611,
+              "flightDistance": 4.67,
+              "remaining": 0.15,
+              "landing": "short",
+              "narration": "That Wasp was a masterpiece of intentional misalignment - beautiful hyzer turn, zero second chances, just pure power and precision.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 6,
+          "name": "Ace Run",
+          "par": 3,
+          "cardDistance": 155,
+          "simDistance": 7.75,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.87,
+              "executedPower": 0.835,
+              "flightDistance": 6.25,
+              "remaining": 1.5,
+              "landing": "short",
+              "narration": "That Firebird was supposed to be a statement, not a shorty.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.24,
+              "executedPower": 0.259,
+              "flightDistance": 2.45,
+              "remaining": 0.95,
+              "landing": "short",
+              "narration": "That Luna was supposed to be a statement, not a shorty.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.24,
+              "executedPower": 0.263,
+              "flightDistance": 2.46,
+              "remaining": 1.51,
+              "landing": "short",
+              "narration": "That Luna was supposed to fly 320 degrees into wind 2, but it landed short and 1.51 units from the basket - that's not how it's supposed to work!",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.24,
+              "executedPower": 0.223,
+              "flightDistance": 2.18,
+              "remaining": 0.68,
+              "landing": "short",
+              "narration": "That Luna was a statement shot - full-send hyzer right into the wind, landed short but still found the basket.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 7,
+          "name": "The Grove",
+          "par": 3,
+          "cardDistance": 240,
+          "simDistance": 12,
+          "strokes": 3,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "boss",
+              "slot": "distance",
+              "intendedPower": 0.97,
+              "executedPower": 0.957,
+              "flightDistance": 7.92,
+              "remaining": 4.08,
+              "landing": "short",
+              "narration": "That hyzer was a masterpiece, threw it like I was painting with wind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "wasp",
+              "slot": "midrange",
+              "intendedPower": 0.6,
+              "executedPower": 0.592,
+              "flightDistance": 2.79,
+              "remaining": 2.32,
+              "landing": "short",
+              "narration": "That Wasp was supposed to be a statement, not a short field goal.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.36,
+              "executedPower": 0.332,
+              "flightDistance": 2.9,
+              "remaining": 0.59,
+              "landing": "short",
+              "narration": "That Luna flight was a masterpiece of controlled chaos - the wind ate it alive but I trusted the hyzer and it danced into the basket.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 8,
+          "name": "Water Hazard",
+          "par": 4,
+          "cardDistance": 350,
+          "simDistance": 17.5,
+          "strokes": 3,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "boss",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.985,
+              "flightDistance": 6.1,
+              "remaining": 11.64,
+              "landing": "short",
+              "narration": "That Boss throw was a masterpiece of intentional misalignment - the wind ate it clean and left me 11.64 units short, but I'm still hitting my line.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "boss",
+              "slot": "distance",
+              "intendedPower": 0.96,
+              "executedPower": 0.911,
+              "flightDistance": 7.76,
+              "remaining": 3.88,
+              "landing": "short",
+              "narration": "That Boss throw was a statement, not a miss - the wind was no match for that hyzer line!",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "luna",
+              "slot": "putter",
+              "intendedPower": 0.6,
+              "executedPower": 0.575,
+              "flightDistance": 4.07,
+              "remaining": 0.2,
+              "landing": "short",
+              "narration": "That Luna flight was a masterpiece of intentional misalignment - the wind ate my hyzer like a hungry bear.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 9,
+          "name": "Clubhouse Finish",
+          "par": 3,
+          "cardDistance": 175,
+          "simDistance": 8.75,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "firebird",
+              "slot": "fairway",
+              "intendedPower": 0.92,
+              "executedPower": 0.918,
+              "flightDistance": 3.51,
+              "remaining": 5.36,
+              "landing": "short",
+              "narration": "That Firebird was supposed to be a statement, not a short-sided miss.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "wasp",
+              "slot": "midrange",
+              "intendedPower": 0.67,
+              "executedPower": 0.694,
+              "flightDistance": 5.02,
+              "remaining": 0.34,
+              "landing": "in_basket",
+              "narration": "That Wasp flight was a masterpiece of commitment and courage, statement complete.",
+              "narrationError": null
+            }
+          ]
+        }
+      ],
+      "driveDispersion": 1.244,
+      "meanAbsNoise": {
+        "dPower": 0.0283,
+        "dHyzer": 1.18,
+        "dAimYaw": 1.02
+      },
+      "narrationFailures": 0,
+      "throwsTotal": 29
+    },
+    {
+      "citizen": {
+        "id": "jules",
+        "name": "Jules Okafor",
+        "title": "The Surgeon",
+        "personality": "Touch and putting specialist. Controlled power, shapes shots instead of forcing them, calm and precise in narration. Hates drama, loves the short game.",
+        "style": {
+          "powerFactor": 0.92,
+          "hyzerOffset": 2,
+          "driveSwapChance": 0
+        },
+        "bag": {
+          "distance": "wraith",
+          "fairway": "teebird",
+          "midrange": "buzzz",
+          "putter": "judge"
+        },
+        "initialThrowsTaken": 620
+      },
+      "throwsBefore": 620,
+      "throwsAfter": 648,
+      "totalStrokes": 28,
+      "totalPar": 30,
+      "scoreToPar": -2,
+      "holes": [
+        {
+          "hole": 1,
+          "name": "The Opener",
+          "par": 3,
+          "cardDistance": 180,
+          "simDistance": 9,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.79,
+              "executedPower": 0.764,
+              "flightDistance": 5.74,
+              "remaining": 3.26,
+              "landing": "short",
+              "narration": "That wind angle cost me the read, should have played it safe and let it roll.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.43,
+              "executedPower": 0.455,
+              "flightDistance": 3.45,
+              "remaining": 0.19,
+              "landing": "short",
+              "narration": "That Judge flighted left and short, but the short game saved me on this par 3.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 2,
+          "name": "Pine Needle Alley",
+          "par": 3,
+          "cardDistance": 210,
+          "simDistance": 10.5,
+          "strokes": 3,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.85,
+              "executedPower": 0.834,
+              "flightDistance": 5.94,
+              "remaining": 4.56,
+              "landing": "short",
+              "narration": "That Teebird was too much power for that 4mph wind, I should have shaped it left instead.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "buzzz",
+              "slot": "midrange",
+              "intendedPower": 0.53,
+              "executedPower": 0.548,
+              "flightDistance": 1.96,
+              "remaining": 3.34,
+              "landing": "short",
+              "narration": "That Buzzz needed more power and better angle against the wind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.44,
+              "executedPower": 0.469,
+              "flightDistance": 3.51,
+              "remaining": 0.22,
+              "landing": "short",
+              "narration": "That Judge was perfect for the conditions, just needed to shape it left and let it do the work.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 3,
+          "name": "Elevation Drop",
+          "par": 4,
+          "cardDistance": 320,
+          "simDistance": 16,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "wraith",
+              "slot": "distance",
+              "intendedPower": 0.95,
+              "executedPower": 0.999,
+              "flightDistance": 5.41,
+              "remaining": 10.61,
+              "landing": "short",
+              "narration": "That Wraith flight was too aggressive for the conditions, ended up short and wide.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.86,
+              "executedPower": 0.861,
+              "flightDistance": 2.2,
+              "remaining": 8.57,
+              "landing": "short",
+              "narration": "That Teebird felt like I was forcing power into wind instead of letting it flow.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.77,
+              "executedPower": 0.735,
+              "flightDistance": 5.6,
+              "remaining": 2.98,
+              "landing": "short",
+              "narration": "That Teebird felt like a mistake from the start, wind 2 had me in a tough spot.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.39,
+              "executedPower": 0.346,
+              "flightDistance": 2.93,
+              "remaining": 0.05,
+              "landing": "short",
+              "narration": "That Judge throw was pure luck, I needed that 0.05 unit finish to bail me out.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 4,
+          "name": "The Tunnel",
+          "par": 3,
+          "cardDistance": 195,
+          "simDistance": 9.75,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.82,
+              "executedPower": 0.815,
+              "flightDistance": 5.87,
+              "remaining": 3.88,
+              "landing": "short",
+              "narration": "That power 0.82 was too much for that 5mph wind - should've shaped it more.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.51,
+              "executedPower": 0.503,
+              "flightDistance": 3.67,
+              "remaining": 0.22,
+              "landing": "short",
+              "narration": "That Judge throw was pure luck, I should have laid up and putted.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 5,
+          "name": "Risk/Reward",
+          "par": 4,
+          "cardDistance": 380,
+          "simDistance": 19,
+          "strokes": 6,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "wraith",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.998,
+              "flightDistance": 5.63,
+              "remaining": 13.41,
+              "landing": "obstacle",
+              "narration": "That Wraith throw was too much power for that 6 mph wind - I should have shaped it left instead of forcing it straight.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "wraith",
+              "slot": "distance",
+              "intendedPower": 0.87,
+              "executedPower": 0.879,
+              "flightDistance": 3.42,
+              "remaining": 10.31,
+              "landing": "short",
+              "narration": "That Wraith throw was too much power for that 6mph wind - I should have shaped it left instead of forcing it straight.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.85,
+              "executedPower": 0.844,
+              "flightDistance": 3.14,
+              "remaining": 7.18,
+              "landing": "short",
+              "narration": "That Teebird throw screamed \"controlled power\" but my shape was off, landing short and 7.18 units from the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "buzzz",
+              "slot": "midrange",
+              "intendedPower": 0.65,
+              "executedPower": 0.669,
+              "flightDistance": 1.29,
+              "remaining": 7.59,
+              "landing": "obstacle",
+              "narration": "That Buzzz throw was too much power for that 6mph wind - I should have shaped it left instead of forcing it straight.",
+              "narrationError": null
+            },
+            {
+              "stroke": 5,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.73,
+              "executedPower": 0.749,
+              "flightDistance": 5.67,
+              "remaining": 1.93,
+              "landing": "short",
+              "narration": "That wind 6 at 260 degrees was brutal, my Teebird just couldn't handle the crosswind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 6,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.25,
+              "executedPower": 0.254,
+              "flightDistance": 2.31,
+              "remaining": 0.39,
+              "landing": "short",
+              "narration": "That Judge throw was perfect for the conditions, controlled power with the right shape.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 6,
+          "name": "Ace Run",
+          "par": 3,
+          "cardDistance": 155,
+          "simDistance": 7.75,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.74,
+              "executedPower": 0.778,
+              "flightDistance": 5.79,
+              "remaining": 1.96,
+              "landing": "short",
+              "narration": "That wind 2 throw was too much power, my friend.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.26,
+              "executedPower": 0.241,
+              "flightDistance": 2.25,
+              "remaining": 0.29,
+              "landing": "short",
+              "narration": "That Judge throw was perfect control, let it dance in that 2mph wind 20 degrees off target, landed short but within 0.3 units of the basket, that's the kind of precision that makes the short game beautiful.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 7,
+          "name": "The Grove",
+          "par": 3,
+          "cardDistance": 240,
+          "simDistance": 12,
+          "strokes": 3,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "wraith",
+              "slot": "distance",
+              "intendedPower": 0.83,
+              "executedPower": 0.777,
+              "flightDistance": 6.61,
+              "remaining": 5.4,
+              "landing": "short",
+              "narration": "That Wraith throw was too much power for that 40-degree wind, I should have shaped it more gently.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "buzzz",
+              "slot": "midrange",
+              "intendedPower": 0.57,
+              "executedPower": 0.587,
+              "flightDistance": 2.8,
+              "remaining": 3.37,
+              "landing": "short",
+              "narration": "That Buzzz was too much power for that angle and wind - should have been more controlled with a lower flighted disc.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "judge",
+              "slot": "putter",
+              "intendedPower": 0.44,
+              "executedPower": 0.442,
+              "flightDistance": 3.41,
+              "remaining": 0.07,
+              "landing": "short",
+              "narration": "That Judge throw was pure luck, the wind carried it right to the basket.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 8,
+          "name": "Water Hazard",
+          "par": 4,
+          "cardDistance": 350,
+          "simDistance": 17.5,
+          "strokes": 3,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "wraith",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 1,
+              "flightDistance": 7.38,
+              "remaining": 10.12,
+              "landing": "short",
+              "narration": "That Wraith throw was too much power for that wind direction, I should have shaped it more gently.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.84,
+              "executedPower": 0.803,
+              "flightDistance": 5.82,
+              "remaining": 4.3,
+              "landing": "short",
+              "narration": "That Teebird throw was too much power for that wind direction, I should have shaped it more carefully.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "buzzz",
+              "slot": "midrange",
+              "intendedPower": 0.52,
+              "executedPower": 0.547,
+              "flightDistance": 4.37,
+              "remaining": 0.17,
+              "landing": "short",
+              "narration": "That Buzzz felt perfect off the tee, controlled power with just enough fade to hold the wind.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 9,
+          "name": "Clubhouse Finish",
+          "par": 3,
+          "cardDistance": 175,
+          "simDistance": 8.75,
+          "strokes": 3,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "teebird",
+              "slot": "fairway",
+              "intendedPower": 0.78,
+              "executedPower": 0.778,
+              "flightDistance": 3.12,
+              "remaining": 5.67,
+              "landing": "short",
+              "narration": "That teebird was too aggressive for the wind, I should have shaped it more gently.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "buzzz",
+              "slot": "midrange",
+              "intendedPower": 0.58,
+              "executedPower": 0.604,
+              "flightDistance": 2.15,
+              "remaining": 4.22,
+              "landing": "short",
+              "narration": "That Buzzz throw was too much power for that 3mph wind - I should have shaped it left instead of forcing it straight.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "buzzz",
+              "slot": "midrange",
+              "intendedPower": 0.52,
+              "executedPower": 0.518,
+              "flightDistance": 4.28,
+              "remaining": 0.07,
+              "landing": "short",
+              "narration": "That Buzzz flight was pure geometry, letting the wind shape my controlled power into that perfect short landing that found the basket.",
+              "narrationError": null
+            }
+          ]
+        }
+      ],
+      "driveDispersion": 1.111,
+      "meanAbsNoise": {
+        "dPower": 0.0209,
+        "dHyzer": 1.59,
+        "dAimYaw": 0.87
+      },
+      "narrationFailures": 0,
+      "throwsTotal": 28
+    },
+    {
+      "citizen": {
+        "id": "pip",
+        "name": "Pip Hartley",
+        "title": "The Rookie",
+        "personality": "Beginner all-rounder, eight recorded throws before this round. Enthusiastic, still learning which disc does what, narrates discoveries as they happen.",
+        "style": {
+          "powerFactor": 0.97,
+          "hyzerOffset": 0,
+          "driveSwapChance": 0.3
+        },
+        "bag": {
+          "distance": "archangel",
+          "fairway": "leopard3",
+          "midrange": "comet",
+          "putter": "aviar"
+        },
+        "initialThrowsTaken": 8
+      },
+      "throwsBefore": 8,
+      "throwsAfter": 42,
+      "totalStrokes": 34,
+      "totalPar": 30,
+      "scoreToPar": 4,
+      "holes": [
+        {
+          "hole": 1,
+          "name": "The Opener",
+          "par": 3,
+          "cardDistance": 180,
+          "simDistance": 9,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.83,
+              "executedPower": 0.656,
+              "flightDistance": 5.34,
+              "remaining": 3.66,
+              "landing": "short",
+              "narration": "That Leopard3 went exactly where I expected, straight and true into the wind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.51,
+              "executedPower": 0.688,
+              "flightDistance": 4.31,
+              "remaining": 0.66,
+              "landing": "short",
+              "narration": "The Aviar felt perfect in the wind, finishing right on the pin!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 2,
+          "name": "Pine Needle Alley",
+          "par": 3,
+          "cardDistance": 210,
+          "simDistance": 10.5,
+          "strokes": 8,
+          "holed": false,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.9,
+              "executedPower": 1,
+              "flightDistance": 6.43,
+              "remaining": 4.09,
+              "landing": "short",
+              "narration": "That Leopard3 throw was a lesson in wind reading, finishing 4 units short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "comet",
+              "slot": "midrange",
+              "intendedPower": 0.54,
+              "executedPower": 0.591,
+              "flightDistance": 4.72,
+              "remaining": 0.97,
+              "landing": "short",
+              "narration": "My Comet flew straight and true despite the crosswind, landing just short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.352,
+              "flightDistance": 2.91,
+              "remaining": 1.95,
+              "landing": "short",
+              "narration": "My Aviar went short and right, wind 4 at 80 degrees, 1.95 units from basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.27,
+              "executedPower": 0.355,
+              "flightDistance": 2.91,
+              "remaining": 1.05,
+              "landing": "short",
+              "narration": "My Aviar went short and wide into the wind, another lesson in power and angle.",
+              "narrationError": null
+            },
+            {
+              "stroke": 5,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.369,
+              "flightDistance": 3.01,
+              "remaining": 1.98,
+              "landing": "short",
+              "narration": "The Aviar screamed through that 4mph wind but I'm still getting the hang of wind direction impact.",
+              "narrationError": null
+            },
+            {
+              "stroke": 6,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.27,
+              "executedPower": 0.474,
+              "flightDistance": 3.5,
+              "remaining": 1.53,
+              "landing": "short",
+              "narration": "My Aviar sailed short and wide into that 4mph wind, landing 1.53 units from the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 7,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.305,
+              "flightDistance": 2.57,
+              "remaining": 1.04,
+              "landing": "short",
+              "narration": "My Aviar flew beautifully into that 4mph wind, just a touch short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 8,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.196,
+              "flightDistance": 1.93,
+              "remaining": 0.89,
+              "landing": "short",
+              "narration": "My Aviar sailed short and wide into the wind, landing just 0.89 units from the basket.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 3,
+          "name": "Elevation Drop",
+          "par": 4,
+          "cardDistance": 320,
+          "simDistance": 16,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "archangel",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.938,
+              "flightDistance": 6.59,
+              "remaining": 9.41,
+              "landing": "short",
+              "narration": "That Archangel felt so good in my hand but I'm still learning how power affects distance.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.85,
+              "executedPower": 0.837,
+              "flightDistance": 1.61,
+              "remaining": 9.39,
+              "landing": "short",
+              "narration": "That Leopard3 felt so different in the wind, slicing left when I expected it to hold course.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.85,
+              "executedPower": 0.815,
+              "flightDistance": 5.76,
+              "remaining": 3.63,
+              "landing": "short",
+              "narration": "That Leopard3 throw was a lesson in wind resistance and power management.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.5,
+              "executedPower": 0.524,
+              "flightDistance": 3.65,
+              "remaining": 0.46,
+              "landing": "short",
+              "narration": "My Aviar screamed into that 140-degree wind and somehow found the chains!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 4,
+          "name": "The Tunnel",
+          "par": 3,
+          "cardDistance": 195,
+          "simDistance": 9.75,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.87,
+              "executedPower": 0.929,
+              "flightDistance": 6.03,
+              "remaining": 4.02,
+              "landing": "short",
+              "narration": "My Leopard3 died in the wind, short and wide, time to learn what works in this crosswind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "comet",
+              "slot": "midrange",
+              "intendedPower": 0.53,
+              "executedPower": 0.508,
+              "flightDistance": 4.27,
+              "remaining": 0.7,
+              "landing": "short",
+              "narration": "Comet flew straight and true, landing just short but still banking in for the easy par!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 5,
+          "name": "Risk/Reward",
+          "par": 4,
+          "cardDistance": 380,
+          "simDistance": 19,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "archangel",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 0.901,
+              "flightDistance": 6.27,
+              "remaining": 12.73,
+              "landing": "short",
+              "narration": "The Archangel flew straight and true, landing short but close to the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "archangel",
+              "slot": "distance",
+              "intendedPower": 0.9,
+              "executedPower": 0.836,
+              "flightDistance": 2.21,
+              "remaining": 10.79,
+              "landing": "short",
+              "narration": "My Archangel flew straight into the wind but landed ten units short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.91,
+              "executedPower": 1,
+              "flightDistance": 6.27,
+              "remaining": 4.8,
+              "landing": "short",
+              "narration": "My Leopard3 sailed too far left into the 6mph wind, landing 4.8 units short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "comet",
+              "slot": "midrange",
+              "intendedPower": 0.57,
+              "executedPower": 0.618,
+              "flightDistance": 4.66,
+              "remaining": 0.33,
+              "landing": "short",
+              "narration": "Comet flew straight and true despite the wind, finishing just 0.33 units from the basket in the short landing zone.",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 6,
+          "name": "Ace Run",
+          "par": 3,
+          "cardDistance": 155,
+          "simDistance": 7.75,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.78,
+              "executedPower": 0.699,
+              "flightDistance": 5.47,
+              "remaining": 2.56,
+              "landing": "short",
+              "narration": "My Leopard3 sailed way short into the wind, guess I need more power for this angle.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.36,
+              "executedPower": 0.435,
+              "flightDistance": 3.43,
+              "remaining": 0.87,
+              "landing": "short",
+              "narration": "The Aviar's gentle fade was no match for this headwind, landing short and wide.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.409,
+              "flightDistance": 3.19,
+              "remaining": 2.32,
+              "landing": "short",
+              "narration": "Aviar went exactly where I expected, straight and true into the wind.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.32,
+              "executedPower": 0.27,
+              "flightDistance": 2.39,
+              "remaining": 0.24,
+              "landing": "short",
+              "narration": "The Aviar danced in that crosswind, came in low and fast, and found the chain!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 7,
+          "name": "The Grove",
+          "par": 3,
+          "cardDistance": 240,
+          "simDistance": 12,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "archangel",
+              "slot": "distance",
+              "intendedPower": 0.87,
+              "executedPower": 0.954,
+              "flightDistance": 6.36,
+              "remaining": 5.69,
+              "landing": "short",
+              "narration": "My Archangel soared but the wind pushed it left and short, another lesson in power and angle.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "comet",
+              "slot": "midrange",
+              "intendedPower": 0.62,
+              "executedPower": 0.66,
+              "flightDistance": 4.88,
+              "remaining": 0.87,
+              "landing": "short",
+              "narration": "My Comet threw a perfect fade but I needed more distance to clear the trees.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.265,
+              "flightDistance": 2.41,
+              "remaining": 1.56,
+              "landing": "short",
+              "narration": "My Aviar flew short and left, wind really effected this one.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.22,
+              "executedPower": 0.123,
+              "flightDistance": 1.35,
+              "remaining": 0.25,
+              "landing": "short",
+              "narration": "My Aviar danced in that crosswind perfectly, dancing short but finding the basket!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 8,
+          "name": "Water Hazard",
+          "par": 4,
+          "cardDistance": 350,
+          "simDistance": 17.5,
+          "strokes": 4,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "archangel",
+              "slot": "distance",
+              "intendedPower": 1,
+              "executedPower": 1,
+              "flightDistance": 6.67,
+              "remaining": 10.96,
+              "landing": "short",
+              "narration": "My Archangel screamed through that 5mph wind but I topped it big, way short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.92,
+              "executedPower": 0.764,
+              "flightDistance": 5.73,
+              "remaining": 5.23,
+              "landing": "short",
+              "narration": "That Leopard3 felt like it was fighting the wind the whole way.",
+              "narrationError": null
+            },
+            {
+              "stroke": 3,
+              "disc": "comet",
+              "slot": "midrange",
+              "intendedPower": 0.59,
+              "executedPower": 0.54,
+              "flightDistance": 4.29,
+              "remaining": 1,
+              "landing": "short",
+              "narration": "Comet flew too far left into wind, short of basket, need to adjust power and angle.",
+              "narrationError": null
+            },
+            {
+              "stroke": 4,
+              "disc": "aviar",
+              "slot": "putter",
+              "intendedPower": 0.21,
+              "executedPower": 0.05,
+              "flightDistance": 0.57,
+              "remaining": 0.43,
+              "landing": "short",
+              "narration": "That Aviar flighted perfectly into the wind and holy cow did it finish short!",
+              "narrationError": null
+            }
+          ]
+        },
+        {
+          "hole": 9,
+          "name": "Clubhouse Finish",
+          "par": 3,
+          "cardDistance": 175,
+          "simDistance": 8.75,
+          "strokes": 2,
+          "holed": true,
+          "throws": [
+            {
+              "stroke": 1,
+              "disc": "leopard3",
+              "slot": "fairway",
+              "intendedPower": 0.82,
+              "executedPower": 0.927,
+              "flightDistance": 3.86,
+              "remaining": 5.31,
+              "landing": "short",
+              "narration": "My Leopard3 cried wolf on the wind, finishing 5.31 units short of the basket.",
+              "narrationError": null
+            },
+            {
+              "stroke": 2,
+              "disc": "comet",
+              "slot": "midrange",
+              "intendedPower": 0.6,
+              "executedPower": 0.638,
+              "flightDistance": 4.79,
+              "remaining": 0.53,
+              "landing": "short",
+              "narration": "Comet flew straight and true, landing just short but still banking in perfectly.",
+              "narrationError": null
+            }
+          ]
+        }
+      ],
+      "driveDispersion": 1.157,
+      "meanAbsNoise": {
+        "dPower": 0.0886,
+        "dHyzer": 7.51,
+        "dAimYaw": 4.86
+      },
+      "narrationFailures": 0,
+      "throwsTotal": 34
+    }
+  ],
+  "mindByAgent": {
+    "mara": {
+      "calls": 29,
+      "mindSeconds": 13.582
+    },
+    "jules": {
+      "calls": 28,
+      "mindSeconds": 12.786
+    },
+    "pip": {
+      "calls": 34,
+      "mindSeconds": 14.067
+    }
+  },
+  "budgetAfter": {
+    "window_s": 3600,
+    "agents": {
+      "cody": {
+        "calls_used": 0,
+        "calls_limit": 240,
+        "mind_seconds_used": 0,
+        "mind_seconds_limit": 300
+      },
+      "mara": {
+        "calls_used": 101,
+        "calls_limit": 120,
+        "mind_seconds_used": 50.178,
+        "mind_seconds_limit": 120
+      },
+      "jules": {
+        "calls_used": 100,
+        "calls_limit": 120,
+        "mind_seconds_used": 43.197,
+        "mind_seconds_limit": 120
+      },
+      "pip": {
+        "calls_used": 106,
+        "calls_limit": 120,
+        "mind_seconds_used": 46.118,
+        "mind_seconds_limit": 120
+      }
+    }
+  }
+}

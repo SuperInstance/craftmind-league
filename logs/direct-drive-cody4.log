@@ -1,0 +1,330 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 76.7,63.0,-99.7 hp=9.133333206176758 food=3 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 1 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 2 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] FAILOVER: primary failed 3x consecutively — governor fallback (Qwen3-Coder-30B) for the rest of the run
+[DD] cycle 3 [governor:qwen3-coder-30b] say="Alright, I'm not dying today. Let's get some food." cmd="gotoentity oak_log"
+[DD] cycle 4 [governor:qwen3-coder-30b] say="Guess I'll have to make do with what's around here." cmd="dig 76 64 -99"
+[DD] cycle 5 [governor:qwen3-coder-30b] say="Alright, let's see what's actually here." cmd="look 76 63 -99"
+[DD] cycle 6 [governor:qwen3-coder-30b] say="Just grass and air. Need to get to that apple oak." cmd="goto 66 -97"
+[DD] cycle 7 [governor:qwen3-coder-30b] say="Right, need to get to the apple oak. I'll head west toward the shoulder and see what I can find." cmd="goto 64 67 -93"
+[DD] cycle 8 [governor:qwen3-coder-30b] say="Alright, I'm not dying today. Let's get some food." cmd="gotoentity oak"
+[DD] cycle 9 [governor:qwen3-coder-30b] say="Okay, no oaks around. Let's try collecting some items and see if I can find food or a way out." cmd="collect"
+[DD] cycle 10 [governor:qwen3-coder-30b] say="Nothing here. Time to make a pickaxe and get moving." cmd="craft wooden_pickaxe"
+[DD] cycle 11 [governor:qwen3-coder-30b] say="Need to make a crafting table first." cmd="craft crafting_table"
+[DD] cycle 12 [governor:qwen3-coder-30b] say="Alright, now I can make a pickaxe." cmd="craft wooden_pickaxe"
+[DD] cycle 13 [governor:qwen3-coder-30b] say="Hmm, let's try making sticks first." cmd="craft sticks"
+[DD] cycle 14 [governor:qwen3-coder-30b] say="Right, I need to make planks first. Let's chop some trees." cmd="felltree 76 63 -99"
+[DD] cycle 15 [governor:qwen3-coder-30b] say="I need to get some wood. Let's try a different spot." cmd="goto 70 65 -95"
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 76.6,63.0,-99.3 hp=9.133333206176758 food=3 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 1 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 2 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] FAILOVER: primary failed 3x consecutively — governor fallback (Qwen3-Coder-30B) for the rest of the run
+[DD] cycle 3 [governor:qwen3-coder-30b] say="Alright, I'm not dying today. Let's get some food." cmd="gotoentity oak_log"
+[DD] cycle 4 [governor:qwen3-coder-30b] say="Right, no fallen logs. Let's see if there's a tree I can fell nearby." cmd="dig 76 65 -99"
+[DD] cycle 5 [governor:qwen3-coder-30b] say="Okay, let's try a different approach. I need to get to that apple oak." cmd="goto 66 -97"
+[DD] cycle 6 [governor:qwen3-coder-30b] say="Alright, I need to get out of this dip first. Let's head west toward home." cmd="goto 64 67 -93"
+[DD] cycle 7 [governor:qwen3-coder-30b] say="That's not working. I need to find a way out of this bowl." cmd="climb 76 -99"
+[DD] cycle 8 [governor:qwen3-coder-30b] say="I need to get some food first. Let's try collecting what I can see." cmd="collect"
+[DD] cycle 9 [governor:qwen3-coder-30b] say="Alright, I'll make a pickaxe and see if I can get some wood from the nearby trees." cmd="craft wooden_pickaxe"
+[DD] cycle 10 [governor:qwen3-coder-30b] say="Let's try crafting sticks and a crafting table first, then maybe I can make a pickaxe." cmd="craft sticks"
+[DD] cycle 11 [governor:qwen3-coder-30b] say="I need to get to that apple oak. Let's try going east first, then north." cmd="goto 80 65 -95"
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 77.7,65.0,-98.1 hp=9.133333206176758 food=3 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Third time waking in this dip — right, no more wandering. Home's fourteen blocks west and I've got a pickaxe and a plan. Climbing out the short way." cmd="goto 74 65 -96"
+[DD] cycle 2 [deepinfra:deepseek-v4.1-flash] say="Good, the ground's leveling out — every step west is a step home. Keep going." cmd="goto 70 66 -95"
+[DD] cycle 3 [deepinfra:deepseek-v4.1-flash] say="Eight blocks to the shoulder. There's the apple oak's leaves up west — but home first, then I'll come back for apples with a full belly's patience." cmd="goto 67 66 -94"
+[DD] cycle 4 [deepinfra:deepseek-v4.1-flash] say="That's the apple oak right over my head — leaves full of fruit waiting to drop. Before I go home, let me shake something loose. Fell a bit of this trunk and see what falls." cmd="felltree 66 67 -97"
+[DD] cycle 5 [deepinfra:deepseek-v4.1-flash] say="No trunk where I guessed — the apple oak's leaves are hanging high. Let me look up and see what I'm actually working with." cmd="look 66 70 -97"
+[DD] cycle 6 [deepinfra:deepseek-v4.1-flash] say="Leaves all round but I can't reach the trunk from here. Apples drop when leaves decay — so let me get up in among them and knock a few loose. No pillar blocks to spare though... let me check what's under these leaves first." cmd="dig 66 70 -94"
+[DD] cycle 7 [deepinfra:deepseek-v4.1-flash] say="I keep swinging at air. Enough guessing — I'm starving and the leaves aren't cooperating. Home's three blocks off; get there, get food sorted, then come back to this tree properly." cmd="goto 64 67 -93"
+[DD] cycle 8 [deepinfra:deepseek-v4.1-flash] say="Home ground under my feet. Now the hunger's the real monster — I've got logs but no food. Let me get a crafting table down and make a pickaxe, then I can actually dig for something." cmd="place crafting_table 64 67 -93"
+[DD] cycle 9 [deepinfra:deepseek-v4.1-flash] say="Table's down. Logs to planks, planks to sticks, sticks and planks into a pickaxe. The hands know this one." cmd="craft wooden_pickaxe 1"
+[DD] cycle 10 [deepinfra:deepseek-v4.1-flash] say="No recipe? Right — I need sticks first, and sticks need planks. Let me break a log into planks and go from there." cmd="craft oak_planks 4"
+[rate-limiter] Delayed message (window limit): 5907ms
+[DD] cycle 11 [deepinfra:deepseek-v4.1-flash] say="Ten planks now. Sticks from two of them, then the pickaxe." cmd="craft stick 4"
+[DD] cycle 12 [deepinfra:deepseek-v4.1-flash] say="Sticks in hand. Now the pickaxe — three planks and two sticks at the table." cmd="craft wooden_pickaxe 1"
+[DD] cycle 13 [deepinfra:deepseek-v4.1-flash] say="Pickaxe! Now I can actually break ground. But food's the pressing thing — let me get back to that apple oak and fell it properly, see if the apples drop." cmd="goto 66 67 -96"
+[DD] cycle 14 [deepinfra:deepseek-v4.1-flash] say="That oak's right there — leaves stacked to my shoulder. Fell the trunk and let the leaves drop their apples." cmd="felltree 66 67 -96"
+[DD] cycle 15 [deepinfra:deepseek-v4.1-flash] say="No trunk there — just leaves. The leaves are what drop apples anyway. Let me dig into them." cmd="dig 66 70 -96"
+[DD] cycle 16 [deepinfra:deepseek-v4.1-flash] say="Leaf broke, no apple. Keep at it — the canopy's thick, apples are in there somewhere." cmd="dig 66 71 -96"
+[DD] cycle 17 [deepinfra:deepseek-v4.1-flash] say="Can't reach that high leaf — and food's ticking down. Let me grab what's on the ground first, then think." cmd="collect"
+[DD] cycle 18 [deepinfra:deepseek-v4.1-flash] say="Nothing on the ground. Fine — the trunk's the real prize. Let me find the oak's log and fell it from the base; the leaves'll wither and maybe drop apples." cmd="dig 67 68 -94"
+[DD] cycle 19 [deepinfra:deepseek-v4.1-flash] say="No log here either — just air under the leaves. The trunk must be a step further. I'm starving; let me just get home where I know the ground, and eat whatever's growing there." cmd="goto 64 67 -93"
+[DD] cycle 20 [deepinfra:deepseek-v4.1-flash] say="Home ground under my boots. No animals about, so it's leaves and luck. That oak's canopy is right overhead — let me knock out the low leaves I can actually reach from here." cmd="dig 64 70 -93"
+[DD] cycle 21 [deepinfra:deepseek-v4.1-flash] say="The north column runs leaves up to y72. Let me hit the lowest one I can reach." cmd="dig 64 69 -93"
+[DD] cycle 22 [deepinfra:deepseek-v4.1-flash] say="Leaves only start at y72 up there — too high to reach from the ground. I'll walk under the canopy edge and grab the lowest leaf I can actually touch." cmd="goto 64 67 -91"
+[DD] cycle 23 [deepinfra:deepseek-v4.1-flash] say="North column's leaves drop to y70 here — that's within reach. Let me tear into it." cmd="dig 64 70 -91"
+[rate-limiter] Delayed message (window limit): 1420ms
+[DD] cycle 24 [deepinfra:deepseek-v4.1-flash] say="The north leaves sit at y70 but a column over — my x is off. Let me stand right under that column." cmd="goto 64 66 -90"
+[rate-limiter] Delayed message (window limit): 10644ms
+[DD] cycle 25 [deepinfra:deepseek-v4.1-flash] say="West column has oak leaves at y72 — still too high from my feet. I'll pillar up one block on my own dirt and reach from there." cmd="climb 64 -90"
+[rate-limiter] Delayed message (window limit): 6805ms
+[DD] cycle 26 [deepinfra:deepseek-v4.1-flash] say="Leaves at y72 are five above my feet — out of reach, and I can't pillar. But there's a birch trunk's leaves at y71 east. Let me try felling the oak column itself and let the canopy drop apples." cmd="felltree 64 72 -91"
+[rate-limiter] Delayed message (window limit): 3953ms
+[DD] cycle 27 [deepinfra:deepseek-v4.1-flash] say="Food's down to 2 — I need to eat, not admire leaves. That birch canopy east is at y71, and birch trunks stand lower. Let me find the actual trunk." cmd="goto 66 67 -90"
+[rate-limiter] Delayed message (window limit): 1090ms
+[DD] cycle 28 [deepinfra:deepseek-v4.1-flash] say="Walker says I'm at 66 but I'm still at 64.5 — that dip's ground keeps eating my steps. Fine. I've got one log and five planks; let me set down a crafting table right here and make a pickaxe before I starve." cmd="craft crafting_table"
+[rate-limiter] Delayed message (window limit): 1424ms
+[DD] cycle 29 [deepinfra:deepseek-v4.1-flash] say="Table made. Now I need it placed and a pickaxe in my hand — but first, food. Let me place the table here so I've got a proper workbench." cmd="place crafting_table 65 67 -90"
+[rate-limiter] Delayed message (window limit): 1855ms
+[DD] cycle 30 [deepinfra:deepseek-v4.1-flash] say="Leaf litter in the way. Place it on the grass north instead." cmd="place crafting_table 64 67 -91"
+[rate-limiter] Delayed message (window limit): 1729ms
+[DD] cycle 31 [deepinfra:deepseek-v4.1-flash] say="North ground is at y66, so the air cell above it is y67 — but that cell needs a solid neighbour. My own feet block is grass at y66; place onto it directly." cmd="place crafting_table 64 66 -90"
+[rate-limiter] Delayed message (window limit): 1799ms
+[DD] cycle 32 [deepinfra:deepseek-v4.1-flash] say="South ground is y67 — so its air cell is y68, and it touches my own footing. Try there." cmd="place crafting_table 64 68 -90"
+[rate-limiter] Delayed message (window limit): 1604ms
+[DD] cycle 33 [deepinfra:deepseek-v4.1-flash] say="I'm standing in a hole and everything's offset. South ground is y67, so air above it is y68 at z-90... wait, south is z+1. Place at z-89, y68." cmd="place crafting_table 64 68 -89"
+[rate-limiter] Delayed message (window limit): 2488ms
+[DD] cycle 34 [deepinfra:deepseek-v4.1-flash] say="Every cell's got something in it or nothing to lean on. My feet are on grass at y66 — the air cell I'm standing in is y67 at my own column. Place right where I stand." cmd="place crafting_table 64 67 -90"
+[rate-limiter] Delayed message (window limit): 12324ms
+[DD] cycle 35 [deepinfra:deepseek-v4.1-flash] say="I'm in a pit — my feet cell has no floor touching it from where I stand. The north grass at y66 is one down and beside me; its top face is y67. Put the table on that block's top, at 64,67,-91... no, that's beside. Let me just place onto the block directly north of me at its top: 64,67,-91." cmd="place crafting_table 64 67 -91"
+[rate-limiter] Delayed message (window limit): 9313ms
+[DD] cycle 36 [deepinfra:deepseek-v4.1-flash] say="North is z-1, so the block north of me is at z-91 and its top is y67 — that's the cell I keep trying and it won't take. I'll walk toward home where the ground's solid and set the table down there." cmd="goto 64 67 -93"
+[rate-limiter] Delayed message (window limit): 5991ms
+[DD] cycle 37 [deepinfra:deepseek-v4.1-flash] say="I'm standing on grass at y67 here, so the air cell above my feet is y68 — and it touches the block I'm on. Set the table down right here." cmd="place crafting_table 64 68 -91"
+[rate-limiter] Delayed message (window limit): 3192ms
+[DD] cycle 38 [deepinfra:deepseek-v4.1-flash] say="My feet are at y67 but the block under my feet is y66 — so the air cell at 64,68,-91 is two up, not touching. The cell just above the ground I stand on is y67. Place there." cmd="place crafting_table 64 67 -91"
+[rate-limiter] Delayed message (window limit): 612ms
+[DD] cycle 39 [deepinfra:deepseek-v4.1-flash] say="I keep guessing wrong about my own feet. Let me look down at exactly what I'm standing on before I place another one." cmd="look 64 66 -91"
+[rate-limiter] Delayed message (window limit): 437ms
+[DD] cycle 40 [deepinfra:deepseek-v4.1-flash] say="The column I'm on sits at y67 — the ground block is y66, so air above it is y67. But placements keep refusing. Let me try the solid grass to my south, its top face y67, cell above at y68." cmd="place crafting_table 64 68 -90"
+[rate-limiter] Delayed message (window limit): 930ms
+[DD] cycle 41 [deepinfra:deepseek-v4.1-flash] say="Every cell I try is empty air with nothing beside it. The one place a block's guaranteed to touch something is on top of me — but I can't do that. Let me put a dirt block down first, then the table on that." cmd="place dirt 64 67 -91"
+[DD] cycle 42 [deepinfra:deepseek-v4.1-flash] say="There — dirt down at my feet. Now the table sits on top of that dirt and it's got something to lean on." cmd="place crafting_table 64 68 -91"
+[DD] cycle 43 [deepinfra:deepseek-v4.1-flash] say="Wait — the dirt went to y67, same as my feet, not below. So the cell on top of it is y68... which is still refusing. But that dirt's top face at y68 should touch. Unless I'm standing IN that cell. Let me step off and place beside me." cmd="goto 66 67 -91"
+[DD] cycle 44 [deepinfra:deepseek-v4.1-flash] say="Walker says it arrived but I'm still at 64.5. Fine — from here, the dirt block I placed is beside me. Let me put the table on the cell above it now that I'm not standing in it." cmd="place crafting_table 64 68 -91"
+[rate-limiter] Delayed message (window limit): 670ms
+[DD] cycle 45 [deepinfra:deepseek-v4.1-flash] say="The dirt's at y67 and I'm standing at y67 — so the dirt went where I stand, meaning the cell above it is y68 which is where I'm breathing. The place won't overlap me. The grass to my south tops at y67, so the cell above it is y68 too — but I'm not in that one. Try there." cmd="place crafting_table 64 68 -90"
+[rate-limiter] Delayed message (window limit): 10775ms
+[DD] cycle 46 [deepinfra:deepseek-v4.1-flash] say="Still nothing. Maybe the south grass is actually at y66 top, so its cell above is y67, not y68. Let me place at y67 on the south grass instead." cmd="place crafting_table 64 67 -90"
+[rate-limiter] Delayed message (window limit): 8388ms
+[DD] cycle 47 [deepinfra:deepseek-v4.1-flash] say="I keep guessing coordinates blind. Let me actually look at the ground south of me and read what's solid before I place anything else." cmd="look 64 66 -90"
+[rate-limiter] Delayed message (window limit): 5798ms
+[DD] cycle 48 [deepinfra:deepseek-v4.1-flash] say="Food's down to 2 and I'm chasing coordinates in the dark. Survival first — the table can wait. I need to eat. Let me find that apple oak and get some apples before I starve standing here." cmd="goto 66 67 -97"
+[DD] cycle 49 [deepinfra:deepseek-v4.1-flash] say="I'm right under the apple oak now — leaves overhead at y70. If I fell the trunk, the leaves decay and drop their apples. Let me find the log and bring it down." cmd="felltree 66 67 -97"
+[DD] cycle 50 [deepinfra:deepseek-v4.1-flash] say="No log at that spot — the trunk must be a step off. The leaves hang above me; let me look up and find the actual column." cmd="look 66 70 -96"
+[DD] cycle 51 [deepinfra:deepseek-v4.1-flash] say="Leaves are all around at y70 but I can't see the trunk from here. Let me just dig the leaves directly — they drop apples when they break, and I'm starving enough to punch leaves all afternoon." cmd="dig 66 70 -96"
+[DD] cycle 52 [deepinfra:deepseek-v4.1-flash] say="Empty air there too. The leaves are east and north of me — let me dig the one right at my east, the oak leaves at y70." cmd="dig 67 70 -96"
+[DD] cycle 53 [deepinfra:deepseek-v4.1-flash] say="No apple yet. Let me clear the rest of these leaves — one of them's bound to have an apple in it." cmd="dig 66 70 -95"
+[DD] cycle 54 [deepinfra:deepseek-v4.1-flash] say="Still no apple. Keep at it — the north leaves at y70 are next." cmd="dig 66 70 -97"
+[DD] cycle 55 [deepinfra:deepseek-v4.1-flash] say="The leaf canopy's thinner than I hoped and no apples yet. Let me look around up top and see where the real trunk and the rest of the leaves are." cmd="look 68 72 -97"
+[rate-limiter] Delayed message (window limit): 9769ms
+[DD] cycle 56 [deepinfra:deepseek-v4.1-flash] say="I'll just keep stripping this canopy — leaves at my east, y70, the next one over." cmd="dig 67 70 -95"
+[rate-limiter] Delayed message (window limit): 6906ms
+[DD] cycle 57 [deepinfra:deepseek-v4.1-flash] say="Three leaves down, no apple. One more at the north face, then I'll reassess — starving here punching leaves isn't a plan." cmd="dig 67 70 -97"
+[rate-limiter] Delayed message (window limit): 4065ms
+[DD] cycle 58 [deepinfra:deepseek-v4.1-flash] say="The canopy's thinning but no apples dropped. I've got a sapling and a log — let me get to the trunk and fell the oak proper, that's where the apples fall from." cmd="goto 67 67 -96"
+[rate-limiter] Delayed message (window limit): 1429ms
+[DD] cycle 59 [deepinfra:deepseek-v4.1-flash] say="Walker says I'm there but my feet disagree. Where's the trunk of this apple oak? Let me look up the column." cmd="look 67 72 -96"
+[rate-limiter] Delayed message (window limit): 987ms
+[DD] cycle 60 [deepinfra:deepseek-v4.1-flash] say="The leaves are up at y70 all around me — the trunk must be right there. Let me fell the column where I dug those leaves." cmd="felltree 67 70 -96"
+[rate-limiter] Delayed message (window limit): 1572ms
+[DD] cycle 61 [deepinfra:deepseek-v4.1-flash] say="Leaves but no trunk there — the oak's trunk is somewhere else. I'm too hungry to hunt blind. Home's three blocks west; there's ground there I know. Let me go stand on the shoulder." cmd="goto 64 67 -93"
+[rate-limiter] Delayed message (window limit): 1286ms
+[DD] cycle 62 [deepinfra:deepseek-v4.1-flash] say="There's the shoulder. Now, food. Nothing alive within sight — but I've got a log and a sapling. Let me get a crafting table down and make a pickaxe; stone beats leaves for getting fed." cmd="craft oak_planks 4"
+[DD] cycle 63 [deepinfra:deepseek-v4.1-flash] say="Well, the log became planks and a table anyway — the hands know. Let me set the table down on the shoulder and get to work." cmd="place crafting_table 64 67 -94"
+[DD] cycle 64 [deepinfra:deepseek-v4.1-flash] say="Table's down. Now a pickaxe — planks and sticks I've got. Give me the pick." cmd="craft wooden_pickaxe 1"
+[DD] cycle 65 [deepinfra:deepseek-v4.1-flash] say="A pickaxe! Now stone. There's grass under my feet and the dip's walls are full of the stuff — but first, I want to see if that oak up north drops anything when I take its trunk." cmd="felltree 65 70 -93"
+[DD] cycle 66 [deepinfra:deepseek-v4.1-flash] say="Leaves again, no trunk. Fine — the dip's walls are stone under the grass. Let me dig down a step here and see what's under the shoulder." cmd="dig 65 66 -93"
+[DD] cycle 67 [deepinfra:deepseek-v4.1-flash] say="One down. Keep going — under the grass there should be stone, and stone means a real tool." cmd="dig 65 65 -93"
+[DD] cycle 68 [deepinfra:deepseek-v4.1-flash] say="Dirt, dirt... keep going, the stone's down here somewhere." cmd="dig 65 64 -93"
+[DD] cycle 69 [deepinfra:deepseek-v4.1-flash] say="Three deep and still dirt. One more — if it's dirt all the way I'll go sideways into the dip wall instead." cmd="dig 65 63 -93"
+[rate-limiter] Delayed message (window limit): 813ms
+[DD] cycle 70 [deepinfra:deepseek-v4.1-flash] say="Stone! Now I need more than one — let me widen this hole a bit before I climb back out." cmd="dig 64 63 -93"
+[DD] cycle 71 [deepinfra:deepseek-v4.1-flash] say="The walker can't get down into that hole — fine, that's the dip's lesson again. I've got one stone's worth of a hole and a pickaxe. Let me get some height and look for a real tree instead." cmd="look 66 70 -97"
+[DD] cycle 72 [deepinfra:deepseek-v4.1-flash] say="That apple oak's still standing east of me. Felling it gets me logs and maybe an apple — and I'm at two hunger, so an apple's not nothing." cmd="goto 66 67 -97"
+[DD] cycle 73 [deepinfra:deepseek-v4.1-flash] say="The dip's swallowed the walker twice now. Fine — I'm standing on the shoulder at home. I'll work from right here instead of chasing that oak." cmd="dig 64 67 -94"
+[DD] cycle 74 [deepinfra:deepseek-v4.1-flash] say="Picked up a crafting table — somebody left one here, or I did and forgot. Either way, put it back down and I've got my bench." cmd="place crafting_table 64 67 -94"
+[DD] cycle 75 [deepinfra:deepseek-v4.1-flash] say="Bench is up. Now — planks from my logs, sticks from planks, and a wooden pickaxe. That's the whole game right there." cmd="craft oak_planks 8"
+[DD] cycle 76 [deepinfra:deepseek-v4.1-flash] say="No logs in hand — I must have used them all getting to planks already. Five planks and four sticks is enough for a pickaxe head and handle. Let's make it." cmd="craft wooden_pickaxe"
+[DD] cycle 77 [deepinfra:deepseek-v4.1-flash] say="Pickaxe in hand. Now the real problem: food at two. I'll dig down a little and look for coal, but honestly — I need to eat before I get fancy." cmd="dig 64 67 -93"
+[DD] cycle 78 [deepinfra:deepseek-v4.1-flash] say="There was a second table tucked in here. Fine — I'll keep this one in my pocket and go find something with a pulse to eat." cmd="gotoentity cow"
+[DD] cycle 79 [deepinfra:deepseek-v4.1-flash] say="Chased a cow and ended up out east in the trees instead. Well — there's oak leaves right here, and oak's the tree that's never let me down. Might shake something loose." cmd="dig 78 68 -105"
+[DD] cycle 80 [deepinfra:deepseek-v4.1-flash] say="Leaves are east of me, not where I swung. Let me fell this oak — the leaves decay after, and decayed oak is how apples find you." cmd="felltree 78 68 -105"
+[DD] cycle 81 [deepinfra:deepseek-v4.1-flash] say="That's leaves, not a trunk. The birch log's north of me at y71 — but birch never gave me an apple. Still, wood is wood and I'm out of it. Let me take what's actually in reach." cmd="dig 78 68 -106"
+[DD] cycle 82 [deepinfra:deepseek-v4.1-flash] say="I keep swinging at air. The east block at y68 is the leaves — let me actually walk to it and see what's there." cmd="goto 79 65 -105"
+[DD] cycle 83 [deepinfra:deepseek-v4.1-flash] say="I'm right under the leaves now. Punching leaves costs nothing and sometimes an apple falls out — worth a swing." cmd="dig 78 68 -105"
+[DD] cycle 84 [deepinfra:deepseek-v4.1-flash] say="The leaves are east, but I'm standing at x77.7 and the block's at x78 — that's within reach, yet it says nothing's there. Maybe it's higher than y68. Let me look straight at it." cmd="look 78 68 -105"
+[DD] cycle 85 [deepinfra:deepseek-v4.1-flash] say="I keep trusting the scan and it keeps lying. That birch trunk north of me at y71 is real — I'll fell the tree that's actually there and get wood for a real tool." cmd="felltree 78 71 -106"
+[rate-limiter] Delayed message (window limit): 12093ms
+[DD] cycle 86 [deepinfra:deepseek-v4.1-flash] say="The scan says north is birch at y71 — but I've been guessing coordinates. Let me walk north and let the walker tell me where the ground actually is." cmd="goto 77 65 -108"
+[DD] cycle 87 [deepinfra:deepseek-v4.1-flash] say="Now birch leaves right above me north — that means a birch trunk is close. Let me look up and find the actual log." cmd="look 77 71 -110"
+[DD] cycle 88 [deepinfra:deepseek-v4.1-flash] say="Food's down to 2 and I'm burning time guessing at trees. The birch leaves north are close — let me just dig the leaf block right there and see what's behind it." cmd="dig 77 70 -109"
+[DD] cycle 89 [deepinfra:deepseek-v4.1-flash] say="That leaf block's too high to reach — I can't climb 4 up. But I've got a pickaxe and sticks; let me just settle my hunger by getting somewhere I can actually stand and work. First, eat nothing — I have none — so let me get real wood. The birch trunk is at column around here; let me dig the block right at my head level north." cmd="dig 77 68 -108"
+[DD] cycle 90 [deepinfra:deepseek-v4.1-flash] say="Enough poking at air. The birch leaves hang at y70 north — a trunk is under them somewhere. Let me step north one and look at what's actually at my feet level around y66-67." cmd="goto 77 66 -110"
+[DD] cycle 91 [deepinfra:deepseek-v4.1-flash] say="North's a wall of leaves I can't climb. Fine — the dip wins this round. I'll turn west toward the shoulder where the ground's open and I know the way home." cmd="goto 74 66 -106"
+[DD] cycle 92 [deepinfra:deepseek-v4.1-flash] say="Now there's birch leaves right at my level north and east — a trunk's gotta be in there. Let me dig the leaf at my own height and see the wood behind." cmd="dig 75 67 -108"
+[DD] cycle 93 [deepinfra:deepseek-v4.1-flash] say="The leaves are up at y70, not where I'm swinging. Let me reach the nearest one — east of me at y70 — and pull it down." cmd="dig 76 70 -107"
+[DD] cycle 94 [deepinfra:deepseek-v4.1-flash] say="One leaf down, nothing behind it but more leaf. Let me pull the one right above my head north and hope the trunk shows." cmd="dig 75 70 -108"
+[DD] cycle 95 [deepinfra:deepseek-v4.1-flash] say="Still leaf, leaf, leaf. I'm at food 2 and burning daylight. Let me stop swinging at the canopy and just get home to the shoulder — I know that ground, and hunger's the real enemy now." cmd="goto 70 66 -101"
+[DD] cycle 96 [deepinfra:deepseek-v4.1-flash] say="Dropped into a stone pit at y62 and took a knock on the way — health 6 now. This is the dip doing what the dip does. One thing at a time: get up out of this hole to the grass at y66 west." cmd="goto 70 66 -104"
+[DD] cycle 97 [deepinfra:deepseek-v4.1-flash] say="That's the retry spent — the walker won't climb the wall to the grass. The interruption's the plan now: I pillar up out of this pit with what's in my pack." cmd="climb 71 -105"
+[DD] cycle 98 [deepinfra:deepseek-v4.1-flash] say="Pillar failed — the pack's got planks but the climb wanted a block under my feet and got none. Fine. The west wall's grass at y66, four up. Let me dig a step into the stone so I can walk up instead." cmd="dig 71 63 -103"
+[DD] cycle 99 [deepinfra:deepseek-v4.1-flash] say="No block there either — that cell's open air. The grass wall is west at y66; let me cut into the stone right at my own level toward it and carve a stair up." cmd="dig 71 62 -103"
+[DD] cycle 100 [deepinfra:deepseek-v4.1-flash] say="I'm swinging at empty air. The stone's south of me at y61 — dig the block right under my south edge and step down into the gap instead of up." cmd="dig 71 62 -105"
+[DD] cycle 101 [deepinfra:deepseek-v4.1-flash] say="Empty again — the stone the readout promised is south at y61, but my feet sit higher than that. Let me just look at what's actually around me before I swing blind once more." cmd="look 71 62 -105"
+[DD] cycle 102 [deepinfra:deepseek-v4.1-flash] say="I'm crouched in a pocket where the floor's mostly my own feet. The east side reads stone at y62 — that's the one wall I can actually reach. Let me dig straight into it." cmd="dig 72 62 -105"
+[DD] cycle 103 [deepinfra:deepseek-v4.1-flash] say="The stone's at my feet level, not my eye level — the column reads are tops, not the block I want. Dig the block I'm standing in: right below my feet." cmd="dig 71 61 -105"
+[rate-limiter] Delayed message (window limit): 3042ms
+[DD] cycle 104 [deepinfra:deepseek-v4.1-flash] say="There we go — a real block, and I dropped a step. Now the west wall's grass is five up from here. Let me cut a stair step into the stone toward it." cmd="dig 70 61 -104"
+[rate-limiter] Delayed message (window limit): 3698ms
+[DD] cycle 105 [deepinfra:deepseek-v4.1-flash] say="Two stone down and my pickaxe is holding. But I'm starving and this won't fill my belly. Let me try walking the low ground west — the walker climbs one step, and home's only fourteen blocks off." cmd="goto 68 61 -103"
+[DD] cycle 106 [deepinfra:deepseek-v4.1-flash] say="Walker's beaten by the dip again — same as every driver before it. Food's down to one. I'll stop trying to commute and just live here: cut a step up into the west grass wall, one block at a time." cmd="dig 70 62 -104"
+[DD] cycle 107 [deepinfra:deepseek-v4.1-flash] say="One more cut up the west wall and I'll have a stair I can actually stand on. Keep going." cmd="dig 70 63 -104"
+[DD] cycle 108 [deepinfra:deepseek-v4.1-flash] say="Air at 63 — so the grass wall's top is at 66, three above the stone I cleared. I'll take the whole column at 70,-104 down to my level so I've got a proper step." cmd="dig 70 64 -104"
+[DD] cycle 109 [deepinfra:deepseek-v4.1-flash] say="Huh — the west column's mostly air, so the grass at 66 is a floating lip, not a wall. Let me look at what's actually around me before I cut blind." cmd="look 70 66 -104"
+[DD] cycle 110 [deepinfra:deepseek-v4.1-flash] say="I'm starving and the wall won't give me a stair. Time to just pillar straight up — I've got cobble and a pickaxe, and the top will at least be flat ground I can walk on." cmd="climb 71 -104"
+[DD] cycle 111 [deepinfra:deepseek-v4.1-flash] say="Pillar failed — nothing under me to build from. Fine. The north column's got grass at 66 too. Let me check what's actually solid one block north of me where I can reach it." cmd="dig 71 62 -104"
+[DD] cycle 112 [deepinfra:deepseek-v4.1-flash] say="I'm at feet-level 61 but the ground I'm standing on reads higher — my feet are in a hole. The stone east of me at 62 is the real floor. Let me step up onto it." cmd="goto 72 62 -104"
+[rate-limiter] Delayed message (window limit): 6174ms
+[DD] cycle 113 [deepinfra:deepseek-v4.1-flash] say="Now I'm up on the stone shelf. West of me the grass sits at 66 — that's the lip I want. Let me try walking onto it." cmd="goto 70 66 -104"
+[DD] cycle 114 [deepinfra:deepseek-v4.1-flash] say="The lip at 66 is four above me — can't step that. But my feet are at 61 with stone under at 62; I'm in a dip in the stone itself. Let me stack a cobble step right beside me and climb out of this hole." cmd="place cobblestone 71 62 -103"
+[DD] cycle 115 [deepinfra:deepseek-v4.1-flash] say="One cobble step up. Now I can stand on it and reach the next level — let me hop up onto my own step." cmd="goto 71 62 -103"
+[DD] cycle 116 [deepinfra:deepseek-v4.1-flash] say="Still reading my feet at 61 — the walker says it arrived but I haven't popped up. Let me try stepping onto the cobble from the south side properly." cmd="goto 71 61 -103"
+[DD] cycle 117 [deepinfra:deepseek-v4.1-flash] say="The walker keeps parking me in the same spot — this hole's lip is too tall to climb by walking. West grass is at 66, four up. I'll pillar: jump and slap cobble under me till I'm level with the top." cmd="climb 71 -104"
+[DD] cycle 118 [deepinfra:deepseek-v4.1-flash] say="Pillar keeps failing — I'm not actually standing where I think. But there's stone to my east at 62 and grass at 66 north. Let me dig into the stone wall east and carve myself a staircase up." cmd="dig 72 62 -104"
+[DD] cycle 119 [deepinfra:deepseek-v4.1-flash] say="The stone's south of me at y61, not east. Let me stop guessing at my own feet and just look down — where exactly is the floor I'm standing on?" cmd="look 71 60 -104"
+[DD] cycle 120 [deepinfra:deepseek-v4.1-flash] say="I'm at 61 standing on something at 60. North grass is at 66 — that's five up, no good. But east stone at 62 is just one above my feet. Let me step up onto that stone to the east." cmd="goto 72 62 -104"
+[rate-limiter] Delayed message (window limit): 10147ms
+[DD] cycle 121 [deepinfra:deepseek-v4.1-flash] say="Walker says arrived but I'm glued at 61 — same spot every time. This lip is a trap. Let me try the north grass side instead, walking straight at it." cmd="goto 71 66 -103"
+[DD] cycle 122 [deepinfra:deepseek-v4.1-flash] say="Now I've drifted south to -106, and the ground around me is all five up — a sheer wall. But south at my feet there's stone at y61, one below me. Let me dig that out and drop down into a lower pocket, maybe walk out from there." cmd="dig 71 60 -107"
+[DD] cycle 123 [deepinfra:deepseek-v4.1-flash] say="One stone out of the way. The top of the wall is five up — too tall to climb by walking, but I've got cobble. Let me pillar properly this time, standing still and jumping straight up." cmd="climb 71 -106"
+[DD] cycle 124 [deepinfra:deepseek-v4.1-flash] say="Pillar's failed twice now — the walker won't jump and place clean. Fine. There's a stone pocket south at my feet level; if I dig a step down and carve a ramp, I can walk myself out of this bowl the hard way. Let me open up the block right below my south edge." cmd="dig 71 60 -106"
+[DD] cycle 125 [deepinfra:deepseek-v4.1-flash] say="Hunger's biting hard — food's at 1. I can't out-climb this bowl empty. The apple oak's the plan: fell it, let the leaves drop apples. But first, the wall — let me check if there's a walkable seam north where the tops are lower." cmd="goto 71 62 -108"
+[DD] cycle 126 [deepinfra:deepseek-v4.1-flash] say="Still pinned at 61 — the walker reports arrival but I haven't moved an inch. The stone pocket south is two deep now. Let me just step down into it and see if I can walk along the low ground instead of fighting the wall." cmd="goto 71 59 -106"
+[DD] cycle 127 [deepinfra:deepseek-v4.1-flash] say="Walker keeps saying arrived while my feet never move — it's stuck on something at this exact spot. Let me not trust the walker at all: dig the block directly under me and drop into the hole, break the grip." cmd="dig 71 60 -106"
+[DD] cycle 128 [deepinfra:deepseek-v4.1-flash] say="That hole's already dug out. The east side tops out at y63 — only two above my feet, and the walker climbs one. Let me dig the block at 72,62,-106 to make a step, then walk onto it." cmd="dig 72 62 -106"
+[rate-limiter] Delayed message (window limit): 6962ms
+[DD] cycle 129 [deepinfra:deepseek-v4.1-flash] say="My feet are at y61 but the ground reads east at y63 — there's air where I think stone is. Let me just try walking one block east onto the lower shelf and trust my legs, not the map." cmd="goto 73 63 -106"
+[rate-limiter] Delayed message (window limit): 4096ms
+[DD] cycle 130 [deepinfra:deepseek-v4.1-flash] say="The pathfinder moved me — east and south are open ground now, only one or two up. The dip's letting me out on the east side. Keep walking east and let the low ground carry me around." cmd="goto 76 62 -105"
+[DD] cycle 131 [deepinfra:deepseek-v4.1-flash] say="East's a wall at three out — pathfinder gave up. But south drops to y61 stone, level with my feet. That's the seam. Go south." cmd="goto 73 61 -103"
+[DD] cycle 132 [deepinfra:deepseek-v4.1-flash] say="Now I'm on level-ish ground at y62 and home's only 12 blocks off to the northwest. Food's at 1 — I'm running on fumes. Push northwest, straight for the shoulder." cmd="goto 70 63 -100"
+[DD] cycle 133 [deepinfra:deepseek-v4.1-flash] say="West's a wall at y66 — three up, can't climb that. But home's northwest and the ground's stepping down north. I'll work around the west wall by going north first, then cut back." cmd="goto 70 63 -97"
+[DD] cycle 134 [deepinfra:deepseek-v4.1-flash] say="North's stone at y61 — two down, that's a drop I can take. The dip keeps beating my plans, so let it. Go north and down into the low ground." cmd="goto 72 61 -96"
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 74.7,63.0,-103.5 hp=0.1333332061767578 food=0 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Food at zero and my knees like water. I need to eat something before I do anything else — let me see what's in reach." cmd="look 74 63 -99"
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[DD] FLOOR: emergency forage — hunting chicken
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody

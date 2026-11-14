@@ -1,0 +1,7 @@
+[AB] Cody spawn pos 26.384,73.000,-93.693 onGround false vehicle null
+[AB] Cody settled pos 26.384,73.000,-93.693 onGround true idlePosPkts 0
+[AB] Cody BATTERY START 26.384,73.000,-93.693 onGround true
+[AB] Cody RAW east fwd+jump 4s: end 38.641,66.000,-93.691 disp3d 14.115 dx 12.257 rawPosPkts 1
+[AB] Cody GOTO gotoNear target 46.4,73.0,-93.7 result {"ok":false,"error":"walkTo timeout (52634ms) to 46.38417920267244,73,-93.69347597082779; at (38.68884185007277, 66, -93.69142650342474)"} ms 60243 end 38.689,66.000,-93.691 dispFromStart 14.156 dxFromStart 12.305 gotoPosPkts 1188
+[AB] Cody position packet samples [{"phase":"pre","x":26.384,"y":73,"z":-93.693,"teleportId":1},{"phase":"raw","x":38.621,"y":66,"z":-93.691,"teleportId":2},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":3},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":4},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":5},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":6},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":7},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":8},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":9},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":10},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":11},{"phase":"goto","x":38.689,"y":66,"z":-93.691,"teleportId":12}]
+[AB] Cody DONE

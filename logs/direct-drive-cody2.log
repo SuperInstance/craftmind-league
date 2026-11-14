@@ -1,0 +1,54 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 75.3,66.0,-94.1 hp=9.133333206176758 food=4 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 1 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 2 ) — waiting 5s
+[DD] model attempt 1 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model attempt 2 returned empty content on deepinfra:deepseek-v4.1-flash
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] FAILOVER: primary failed 3x consecutively — governor fallback (Qwen3-Coder-30B) for the rest of the run
+[DD] cycle 3 [governor:qwen3-coder-30b] say="Okay, time to get out of this dip and find some food." cmd="goto 64 67 -93"
+[DD] cycle 4 [governor:qwen3-coder-30b] say="Alright, the direct path is blocked. Time to find another way." cmd="goto 62 67 -95"
+[DD] cycle 5 [governor:qwen3-coder-30b] say="Found a good spot for a crafting table, let's set that up first." cmd="place crafting_table 63 67 -94"
+[DD] cycle 6 [governor:qwen3-coder-30b] say="Need to build a foundation first, then place the table." cmd="place oak_planks 63 67 -94"
+[DD] cycle 7 [governor:qwen3-coder-30b] say="Alright, I need to get some planks first. Let's make a crafting table on solid ground." cmd="craft oak_planks 6"
+[DD] cycle 8 [governor:qwen3-coder-30b] say="Now I can build a proper foundation and place the crafting table." cmd="place oak_planks 63 67 -94"
+[DD] cycle 9 [governor:qwen3-coder-30b] say="Good, now I can place the crafting table on top of this." cmd="place crafting_table 63 68 -94"
+[DD] cycle 10 [governor:qwen3-coder-30b] say="Alright, let's just place it on the ground level and see if I can craft a pickaxe here." cmd="place crafting_table 63 67 -94"
+[DD] cycle 11 [governor:qwen3-coder-30b] say="Okay, the table's already placed. Now let's craft that pickaxe." cmd="craft wooden_pickaxe"
+[rate-limiter] Delayed message (window limit): 1210ms
+[DD] cycle 12 [governor:qwen3-coder-30b] say="Must've moved while crafting. Let's head back and try again." cmd="goto 64 67 -93"
+[DD] cycle 13 [governor:qwen3-coder-30b] say="Alright, I'm close enough. Let's just place the table properly and try crafting again." cmd="place crafting_table 63 67 -94"
+[DD] cycle 14 [governor:qwen3-coder-30b] say="The table's already here. Let's try crafting with the crafting table we have, maybe I missed the recipe." cmd="craft wooden_pickaxe 1"
+[DD] cycle 15 [governor:qwen3-coder-30b] say="Right, I need sticks too. Let's make planks first, then sticks, then the pickaxe." cmd="craft oak_planks 6"
+[DD] cycle 16 [governor:qwen3-coder-30b] say="No, I've got planks already. Let's just eat and go home to make a proper setup." cmd="eat"
+[DD] cycle 17 [governor:qwen3-coder-30b] say="Alright, I'm starving. Let's get some apples or something edible, then head home." cmd="gotoentity oak_log"
+[DD] cycle 18 [governor:qwen3-coder-30b] say="Well, no logs. Let's look for a cow or sheep for food, or maybe some grass to eat." cmd="gotoentity cow"
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody

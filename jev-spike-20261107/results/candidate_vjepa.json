@@ -1,0 +1,76 @@
+{
+ "loaded": true,
+ "windows": [
+  {
+   "id": "W1",
+   "truth": "PROGRESS",
+   "label": "AMBIGUOUS",
+   "velocity_median": 16.9844,
+   "consistency_median": -0.3475,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": false
+  },
+  {
+   "id": "W2",
+   "truth": "STUCK",
+   "label": "AMBIGUOUS",
+   "velocity_median": 4.7085,
+   "consistency_median": -0.5171,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": false
+  },
+  {
+   "id": "W3",
+   "truth": "STUCK",
+   "label": "AMBIGUOUS",
+   "velocity_median": 11.913,
+   "consistency_median": -0.421,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": false
+  },
+  {
+   "id": "W4",
+   "truth": "PROGRESS",
+   "label": "PROGRESS",
+   "velocity_median": 9.0245,
+   "consistency_median": 0.11,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": true
+  },
+  {
+   "id": "W5",
+   "truth": "PROGRESS",
+   "label": "AMBIGUOUS",
+   "velocity_median": 21.7091,
+   "consistency_median": -0.7831,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": false
+  },
+  {
+   "id": "W6",
+   "truth": "PROGRESS",
+   "label": "AMBIGUOUS",
+   "velocity_median": 14.9025,
+   "consistency_median": -0.367,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": false
+  },
+  {
+   "id": "W7",
+   "truth": "STUCK",
+   "label": "AMBIGUOUS",
+   "velocity_median": 8.7754,
+   "consistency_median": -0.0406,
+   "n_clips": 4,
+   "n_embedded": 4,
+   "correct": false
+  }
+ ],
+ "accuracy": "1/7"
+}

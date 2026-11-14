@@ -1,0 +1,21 @@
+{
+  "citizen": "Geist",
+  "lineage": "C",
+  "position": {
+    "x": 34.5,
+    "y": 67,
+    "z": -98.5
+  },
+  "health": 20,
+  "food": 20,
+  "oxygen": 20,
+  "timeOfDay": 4244,
+  "inventory": {},
+  "deaths": 57,
+  "stage": "S1",
+  "anchor": {
+    "x": 7,
+    "y": 67,
+    "z": -85
+  }
+}

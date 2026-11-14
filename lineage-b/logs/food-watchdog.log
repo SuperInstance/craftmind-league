@@ -1,0 +1,5 @@
+2026-11-08T09:29:48Z watchdog armed pid=3404863 offset=711083
+2026-11-08T09:32:02Z WATCHDOG PARK: operator latch failed - parking before author loop
+2026-11-08T09:32:05Z watchdog done (operator latch failed - parking before author loop)
+2026-11-08T09:41:05Z watchdog armed pid=3414848 offset=759604
+2026-11-08T09:41:21Z watchdog: process exited on its own

@@ -1,0 +1,142 @@
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 35440)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 438, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 414, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 323, in parse_request
+    self.send_error(
+  File "/usr/lib/python3.12/http/server.py", line 491, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 40836)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 438, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 414, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 323, in parse_request
+    self.send_error(
+  File "/usr/lib/python3.12/http/server.py", line 491, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33872)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 438, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 414, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 323, in parse_request
+    self.send_error(
+  File "/usr/lib/python3.12/http/server.py", line 491, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55904)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 438, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 414, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 323, in parse_request
+    self.send_error(
+  File "/usr/lib/python3.12/http/server.py", line 491, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58804)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 438, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 414, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 323, in parse_request
+    self.send_error(
+  File "/usr/lib/python3.12/http/server.py", line 491, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53826)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 438, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 414, in handle_one_request
+    if not self.parse_request():
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/server.py", line 323, in parse_request
+    self.send_error(
+  File "/usr/lib/python3.12/http/server.py", line 491, in send_error
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)
+governor on http://127.0.0.1:8642 → http://127.0.0.1:8310/v1 (ledger /home/caseydigennaro/craftmind-league/ledger/mind-calls.jsonl)

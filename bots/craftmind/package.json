@@ -1,0 +1,28 @@
+{
+  "name": "craftmind",
+  "version": "1.0.0",
+  "description": "AI-powered Minecraft bots with LLM brains and multi-bot orchestration.",
+  "main": "src/index.js",
+  "types": "types.d.ts",
+  "scripts": {
+    "start": "node src/bot.js",
+    "orchestrator": "node src/orchestrator.js",
+    "test": "node --test tests/index.test.js tests/cognition.test.js tests/polish.test.js"
+  },
+  "keywords": [
+    "minecraft",
+    "mineflayer",
+    "ai",
+    "llm",
+    "bot"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "minecraft-data": "^3.119.0",
+    "mineflayer": "^4.35.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "rcon-client": "^4.2.5"
+  }
+}

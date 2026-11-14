@@ -1,0 +1,9 @@
+{
+  "id": "mara",
+  "name": "Mara Voss",
+  "title": "The Bomber",
+  "personality": "Power player. Full-send drives, trusts big hyzer lines, talks like every drive is a statement. Short memory for misses.",
+  "style": { "powerFactor": 1.08, "hyzerOffset": 6, "driveSwapChance": 0 },
+  "bag": { "distance": "boss", "fairway": "firebird", "midrange": "wasp", "putter": "luna" },
+  "initialThrowsTaken": 850
+}

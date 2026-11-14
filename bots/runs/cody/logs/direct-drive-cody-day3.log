@@ -1,0 +1,297 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 68.3,67.0,-95.0 hp=0.1333332061767578 food=0 deathsBaseline=116 placesKnown=5
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [governor:qwen3-coder-30b] say="Time to harvest that wheat and get some real food in me." cmd="goto 66 67 -96"
+[DD] cycle 2 [governor:qwen3-coder-30b] say="Alright, time to gather that ripe wheat and make some bread." cmd="dig 66 67 -96"
+[DD] cycle 3 [governor:qwen3-coder-30b] say="Must've misread the coordinates. Let me get those wheat plants instead." cmd="goto 66 67 -95"
+[DD] cycle 4 [governor:qwen3-coder-30b] say="There's the wheat patch. Let's gather those ripe plants." cmd="dig 66 67 -95"
+[DD] cycle 5 [governor:qwen3-coder-30b] say="These coordinates are confusing. Let me just go to the crafting table and make bread properly." cmd="goto 64 67 -94"
+[rate-limiter] Delayed message (window limit): 11886ms
+[DD] cycle 6 [governor:qwen3-coder-30b] say="Alright, I'll just take the wheat directly from the plants since they're right here. Let's make some bread." cmd="craft bread 2"
+[rate-limiter] Delayed message (window limit): 4244ms
+[DD] cycle 7 [governor:qwen3-coder-30b] say="Must've forgotten I need a furnace for bread. Let's get that set up first." cmd="goto 64 67 -94"
+[DD] cycle 8 [governor:qwen3-coder-30b] say="I need to build a furnace first before I can cook anything." cmd="craft furnace"
+[DD] cycle 9 [governor:qwen3-coder-30b] say="I need to get back to the pen and see what animals I can harvest for food." cmd="goto 62 67 -100"
+[DD] FLOOR: ate chicken -> food 2
+[DD] cycle 10 [governor:qwen3-coder-30b] say="Alright, I've got some chickens. Let's cook one and eat it." cmd="attack chicken"
+[DD] FLOOR: ate chicken -> food 4
+[DD] cycle 11 [governor:qwen3-coder-30b] say="I'll try again, this time I'll get that chicken." cmd="attack chicken"
+[DD] cycle 12 [governor:qwen3-coder-30b] say="Alright, I'll just grab the wheat and make bread. I don't need to cook it." cmd="goto 66 67 -96"
+[DD] cycle 13 [governor:qwen3-coder-30b] say="The wheat patch is too far. I'll go back to the crafting table and try making bread with the wheat I already have." cmd="goto 64 67 -94"
+[DD] cycle 14 [governor:qwen3-coder-30b] say="Something's wrong with the pathfinder. I'll try to climb up and see if I can get a better view." cmd="climb 64 -94"
+[DD] cycle 15 [governor:qwen3-coder-30b] say="I'll try going to the crafting table directly, I know where it is." cmd="gotoentity crafting_table"
+[DD] cycle 16 [governor:qwen3-coder-30b] say="Alright, I'll just place the crafting table right here and see if I can make some bread." cmd="place crafting_table 64 67 -94"
+[DD] cycle 17 [governor:qwen3-coder-30b] say="I'll just eat the wheat I have and try to get some food in my belly first." cmd="eat"
+[DD] cycle 18 [governor:qwen3-coder-30b] say="Well, I guess I'll just go to the wheat patch and harvest some of that ripe wheat." cmd="goto 66 67 -96"
+[DD] cycle 19 [governor:qwen3-coder-30b] say="Alright, time to harvest that wheat and make some bread." cmd="dig 66 67 -96"
+[DD] cycle 20 [governor:qwen3-coder-30b] say="Guess I need to get closer to the wheat plants themselves." cmd="goto 66 67 -97"
+[DD] cycle 21 [governor:qwen3-coder-30b] say="Okay, I'm at the wheat patch now. Let's harvest the wheat plants." cmd="dig 66 67 -97"
+[DD] cycle 22 [governor:qwen3-coder-30b] say="These wheat blocks are not where I expect them to be. Let me try a different approach and look for the actual wheat plants." cmd="goto 67 67 -96"
+[DD] cycle 23 [governor:qwen3-coder-30b] say="Alright, I'm at the edge of the wheat patch. Let's try to dig the wheat plants directly." cmd="dig 67 67 -96"
+[DD] cycle 24 [governor:qwen3-coder-30b] say="Got one wheat plant. Now I need to collect the wheat and make some bread." cmd="collect"
+[DD] cycle 25 [governor:qwen3-coder-30b] say="I've gathered some wheat. Now I need to go back to the crafting table and make bread." cmd="goto 64 67 -94"
+[DD] cycle 26 [governor:qwen3-coder-30b] say="Back at the crafting table. Time to make some bread." cmd="craft bread 1"
+[DD] cycle 27 [governor:qwen3-coder-30b] say="Hmm, I need to check what I have and how to make bread properly." cmd="look 64 67 -94"
+[DD] cycle 28 [governor:qwen3-coder-30b] say="I need to eat the wheat I gathered and then try to make bread again." cmd="eat"
+[DD] cycle 29 [governor:qwen3-coder-30b] say="I need to go back to the wheat patch and gather more wheat to make bread." cmd="goto 66 67 -96"
+[DD] cycle 30 [governor:qwen3-coder-30b] say="Okay, I've got more wheat. Now I'll go back to the crafting table and try making bread again." cmd="dig 67 67 -96"
+[DD] cycle 31 [governor:qwen3-coder-30b] say="I need to collect the wheat from the farmland block I'm standing on." cmd="collect"
+[DD] cycle 32 [governor:qwen3-coder-30b] say="Now I have more wheat. Let's go back to the crafting table and try making bread." cmd="goto 64 67 -94"
+[DD] cycle 33 [governor:qwen3-coder-30b] say="Alright, I'm at the crafting table. Let's try making some bread with the wheat I collected." cmd="craft bread 1"
+[DD] cycle 34 [governor:qwen3-coder-30b] say="I need to figure out how to make bread. Let me check what I have and what the recipe requires." cmd="look 64 67 -94"
+[DD] cycle 35 [governor:qwen3-coder-30b] say="I need to eat something to restore my health and food levels before I can properly work on building." cmd="eat"
+[DD] cycle 36 [governor:qwen3-coder-30b] say="I need to get some food. Let's go to the pen and see if I can find something edible there." cmd="goto 62 67 -100"
+[DD] cycle 37 [governor:qwen3-coder-30b] say="I see a chicken here. Let's try to catch it and see if I can get some food." cmd="attack chicken"
+[DD] FLOOR: ate chicken -> food 6
+[DD] cycle 38 [governor:qwen3-coder-30b] say="Got some chicken. Now let's go back to the crafting table and try making food properly." cmd="goto 64 67 -94"
+[DD] cycle 39 [governor:qwen3-coder-30b] say="The path to the crafting table is blocked. I'll try going around and see if I can find another way." cmd="goto 65 67 -94"
+[DD] cycle 40 [governor:qwen3-coder-30b] say="I need to get to the crafting table to make bread. I'll try a different approach and climb up to get a better view." cmd="climb 64 -94"
+[DD] cycle 41 [governor:qwen3-coder-30b] say="I'm right next to the crafting table. Let's try to place it down and see if I can use it from here." cmd="place crafting_table 64 67 -94"
+[DD] cycle 42 [governor:qwen3-coder-30b] say="Okay, the crafting table is already here. I need to make some bread. I have enough wheat to make a loaf." cmd="craft bread 1"
+[DD] cycle 43 [governor:qwen3-coder-30b] say="I need to get some wheat first. Let's go to the wheat patch and harvest it." cmd="goto 66 67 -96"
+[DD] cycle 44 [governor:qwen3-coder-30b] say="Got to the wheat patch. Time to harvest the ripe wheat." cmd="dig 66 67 -96"
+[DD] cycle 45 [governor:qwen3-coder-30b] say="The wheat is on the farmland blocks, not the air above. Let's try digging the farmland blocks." cmd="dig 66 66 -96"
+[DD] cycle 46 [governor:qwen3-coder-30b] say="I dug the water instead of the wheat. Let me try again, targeting the wheat plants directly." cmd="goto 66 67 -95"
+[DD] cycle 47 [governor:qwen3-coder-30b] say="Okay, I'm at the wheat patch. Let's harvest the wheat plants properly this time." cmd="dig 66 67 -95"
+[DD] cycle 48 [governor:qwen3-coder-30b] say="I need to get the wheat from the farmland blocks. Let's try digging the block right under the wheat plant, which should be a farmland block." cmd="dig 66 66 -95"
+[DD] cycle 49 [governor:qwen3-coder-30b] say="I keep digging the wrong blocks. I need to get back to the crafting table and figure out how to make bread properly." cmd="goto 64 67 -94"
+[DD] cycle 50 [governor:qwen3-coder-30b] say="Okay, back at the table. I need to make bread. I have 5 wheat from the farmland, but I need to get them from the plants, not the blocks. Let me try to collect the wheat items directly." cmd="collect"
+[DD] cycle 51 [governor:qwen3-coder-30b] say="I need to go back to the wheat patch and harvest the wheat plants properly. I'll try to dig the wheat block directly." cmd="goto 66 67 -96"
+[DD] cycle 52 [governor:qwen3-coder-30b] say="I'm at the wheat patch again. I need to harvest the ripe wheat plants directly. Let's dig the wheat block at the top of the farmland." cmd="dig 66 67 -96"
+[DD] cycle 53 [governor:qwen3-coder-30b] say="I need to get the wheat from the wheat plants, not the farmland block. I'll try to dig the wheat plant itself, which should drop wheat items when broken." cmd="dig 66 68 -96"
+[DD] cycle 54 [governor:qwen3-coder-30b] say="Let me check what's actually in the wheat patch again, and see if I can find a way to get the wheat items from the plants themselves." cmd="look 66 68 -96"
+[DD] cycle 55 [governor:qwen3-coder-30b] say="There's no wheat plant at that spot. I should go back to the crafting table and try to figure out how to craft bread properly. I have the wheat items now, but I need to get them from the plants." cmd="goto 64 67 -94"
+[DD] cycle 56 [governor:qwen3-coder-30b] say="I need to get the wheat from the plants. Maybe I can just collect the items that drop when I break the plants. Let's try to go back to the wheat patch and see if I can get the wheat items directly by breaking them." cmd="goto 66 67 -96"
+[DD] cycle 57 [governor:qwen3-coder-30b] say="Let me try to collect the wheat items that should drop from the plants. I'll go to the wheat patch and see if I can get the wheat directly from the plants." cmd="collect"
+[DD] cycle 58 [governor:qwen3-coder-30b] say="I'm still not getting the wheat items. I'll go back to the crafting table and try to make bread using the wheat I saw earlier. I need to eat and get my food up." cmd="goto 64 67 -94"
+[DD] cycle 59 [governor:qwen3-coder-30b] say="I need to craft some bread. I have enough wheat to make at least one loaf, and I need to eat to restore my food level." cmd="craft bread 1"
+[DD] cycle 60 [governor:qwen3-coder-30b] say="I need to get the wheat items from the plants first before I can make bread. Let's go back to the wheat patch and break the plants to get the wheat." cmd="goto 66 67 -96"
+[DD] cycle 61 [governor:qwen3-coder-30b] say="I need to get the wheat from the plants. I'll try to break the wheat plants to collect the wheat items. Let's see if I can do that now." cmd="dig 66 67 -96"
+[DD] cycle 62 [governor:qwen3-coder-30b] say="I need to get the wheat from the wheat patch. The wheat plants are ripe, so I should be able to collect wheat from them. I'll try digging a bit more carefully to get the wheat." cmd="dig 66 67 -95"
+[DD] cycle 63 [governor:qwen3-coder-30b] say="I'm still not getting the wheat items. I'll go back to the crafting table and try to see what I can do with the wheat I've collected. I'll try to find a way to eat something." cmd="goto 64 67 -94"
+[DD] cycle 64 [governor:qwen3-coder-30b] say="I need to eat something to restore my food level. I'll try eating an egg if I have any, or else I'll have to find another way to get food." cmd="eat"
+[DD] cycle 65 [governor:qwen3-coder-30b] say="I need to get some food. I'll go back to the wheat patch and try to figure out how to get wheat. Maybe I can find a way to harvest it properly." cmd="goto 66 67 -96"
+[DD] cycle 66 [governor:qwen3-coder-30b] say="I need to get some wheat to eat. I'll try to break the wheat plants again, but this time I'll make sure I'm targeting the right block." cmd="dig 66 67 -95"
+[DD] cycle 67 [governor:qwen3-coder-30b] say="I'm still not able to harvest the wheat. I'll go back to the crafting table and try to figure out how to make bread or something edible from what I have." cmd="goto 64 67 -94"
+[DD] cycle 68 [governor:qwen3-coder-30b] say="I need to get some food. Since I can't seem to harvest wheat properly, I'll try to make a furnace first to cook some meat, and then maybe I can find something else to eat." cmd="craft furnace 1"
+[DD] cycle 69 [governor:qwen3-coder-30b] say="I need to find a way to eat. Let's try to make bread with the wheat I have, or at least see if I can find something else to eat." cmd="craft bread 1"
+[DD] cycle 70 [governor:qwen3-coder-30b] say="I need to eat something. I'll try to eat an egg since that's the only food I have in my inventory." cmd="eat"
+[DD] cycle 71 [governor:qwen3-coder-30b] say="I need to get some food. I'll go back to the wheat patch and try to gather the wheat properly this time. I'll also check if there's a way to get the wheat from the farmland directly." cmd="goto 66 67 -96"
+[DD] cycle 72 [governor:qwen3-coder-30b] say="Okay, I'm at the wheat patch. I need to harvest the ripe wheat plants. Let's try to break them one by one." cmd="dig 66 67 -96"
+[DD] cycle 73 [governor:qwen3-coder-30b] say="I need to get some food. I'll go back to the crafting table and try to figure out how to cook or make something edible from what I have." cmd="goto 64 67 -94"
+[DD] cycle 74 [governor:qwen3-coder-30b] say="I need to find a way to eat. Since I can't make bread or a furnace, I'll try to get some food from the pen. I remember there were pigs there." cmd="goto 62 67 -100"
+[DD] cycle 75 [governor:qwen3-coder-30b] say="I need to get some food. I'll try to get closer to the pen and see if I can find a way to enter it without the walker failing." cmd="goto 65 67 -100"
+[DD] cycle 76 [governor:qwen3-coder-30b] say="I'm at the gate of the pen. I'll try to open it and see if I can get some food from the pigs inside." cmd="place oak_fence 65 67 -100"
+[DD] cycle 77 [governor:qwen3-coder-30b] say="The gate is already there. I'll try to get some food from the pigs in the pen. I'll go towards the center of the pen." cmd="goto 64 67 -98"
+[DD] cycle 78 [governor:qwen3-coder-30b] say="I'm in the pen now. I need to get some food. I'll try to kill one of the pigs." cmd="attack pig"
+[DD] FLOOR: ate porkchop -> food 9
+[DD] cycle 79 [governor:qwen3-coder-30b] say="I got some porkchop from the pig. Now I need to go back to the crafting table and try to cook it." cmd="goto 64 67 -94"
+[DD] cycle 80 [governor:qwen3-coder-30b] say="I'm at the crafting table. I'll try to craft a furnace to cook the porkchop." cmd="craft furnace 1"
+[DD] cycle 81 [governor:qwen3-coder-30b] say="I need to make a furnace out of cobblestone. I have 4 cobblestone, so I'll place them in a 2x2 pattern on the crafting table." cmd="place cobblestone 64 67 -94"
+[DD] cycle 82 [governor:qwen3-coder-30b] say="I need to use the crafting table to make a furnace. I'll place the cobblestone in the crafting grid." cmd="craft furnace"
+[DD] cycle 83 [governor:qwen3-coder-30b] say="I need to check the recipe for a furnace. I think it's 8 cobblestone in a 2x2 pattern." cmd="look 64 67 -94"
+[DD] cycle 84 [governor:qwen3-coder-30b] say="I need to eat the porkchop I got from the pig first, since I'm still starving." cmd="eat"
+[DD] cycle 85 [governor:qwen3-coder-30b] say="I need to get some food. I'll go to the wheat patch and harvest some wheat." cmd="goto 66 67 -96"
+[DD] cycle 86 [governor:qwen3-coder-30b] say="I'll harvest the ripe wheat plants and then go back to the crafting table to make bread." cmd="dig 66 67 -96"
+[DD] cycle 87 [governor:qwen3-coder-30b] say="I need to harvest the wheat blocks, not the location. I'll try digging the wheat plant blocks directly." cmd="dig 66 67 -95"
+[DD] cycle 88 [governor:qwen3-coder-30b] say="I need to get closer to the wheat and see what's actually there. Let me go to the center of the wheat patch." cmd="goto 67 67 -95"
+[DD] cycle 89 [governor:qwen3-coder-30b] say="I see the wheat is on farmland. I'll try digging the farmland block to get the wheat." cmd="dig 67 67 -95"
+[DD] cycle 90 [governor:qwen3-coder-30b] say="Good, I got some wheat. Now I'll go back to the crafting table and make bread." cmd="goto 64 67 -94"
+[DD] cycle 91 [governor:qwen3-coder-30b] say="I'll craft some bread with the wheat I gathered." cmd="craft bread 1"
+[DD] cycle 92 [governor:qwen3-coder-30b] say="I need to get more wheat to make bread. I'll go back and harvest more wheat." cmd="goto 67 67 -95"
+[DD] cycle 93 [governor:qwen3-coder-30b] say="I need to get more wheat. Let's try harvesting from another spot in the wheat patch." cmd="dig 66 67 -95"
+[DD] cycle 94 [governor:qwen3-coder-30b] say="I need to find a different way to get wheat. Let's go back to the crafting table and see what I can do with the resources I have." cmd="goto 64 67 -94"
+[DD] cycle 95 [governor:qwen3-coder-30b] say="I need to eat something to restore my food level. I'll eat the egg I have." cmd="eat"
+[DD] cycle 96 [governor:qwen3-coder-30b] say="I need to find a way to cook some food. Let's try making a furnace first." cmd="craft furnace 1"
+[DD] cycle 97 [governor:qwen3-coder-30b] say="I need to get some food first. Let's go to the pen and see if I can find anything edible there." cmd="goto 62 67 -100"
+[DD] cycle 98 [governor:qwen3-coder-30b] say="The walker is having trouble with the pen. I'll try going to the fence gate instead and see if I can get some food from the wheat patch." cmd="goto 65 67 -100"
+[DD] cycle 99 [governor:qwen3-coder-30b] say="I'll go to the wheat patch and harvest the ripe wheat." cmd="goto 66 67 -96"
+[DD] cycle 100 [governor:qwen3-coder-30b] say="Now that I'm at the wheat patch, I'll harvest the ripe wheat plants." cmd="dig 66 67 -96"
+[DD] cycle 101 [governor:qwen3-coder-30b] say="I need to get the wheat from the farmland blocks. Let's try digging the farmland itself." cmd="dig 66 66 -96"
+[DD] cycle 102 [governor:qwen3-coder-30b] say="I'll try collecting the wheat from the ground near the farmland." cmd="collect"
+[DD] cycle 103 [governor:qwen3-coder-30b] say="I got some wheat. Now I'll head back to the crafting table and make some bread." cmd="goto 64 67 -94"
+[DD] cycle 104 [governor:qwen3-coder-30b] say="I'm at the crafting table. I'll craft some bread with the wheat I collected." cmd="craft bread 1"
+[DD] cycle 105 [governor:qwen3-coder-30b] say="I need to gather more wheat to make bread. I'll go back to the wheat patch." cmd="goto 66 67 -96"
+[DD] cycle 106 [governor:qwen3-coder-30b] say="I need to get more wheat from the ripe plants. Let's try collecting from the actual wheat plants this time." cmd="collect"
+[DD] cycle 107 [governor:qwen3-coder-30b] say="I need to harvest the wheat plants directly since collecting didn't work. Let's dig the wheat plants." cmd="dig 66 66 -97"
+[DD] cycle 108 [governor:qwen3-coder-30b] say="I need to try digging the actual wheat plants, not the grass beneath them." cmd="dig 66 67 -97"
+[DD] cycle 109 [governor:qwen3-coder-30b] say="I need to get back to the crafting table and try crafting bread again, maybe I missed something." cmd="goto 64 67 -94"
+[DD] cycle 110 [governor:qwen3-coder-30b] say="I need to check if I have enough wheat to craft bread. I only have 1 wheat, but I need 3. Let's go back to the wheat patch and harvest more." cmd="goto 66 67 -96"
+[DD] cycle 111 [governor:qwen3-coder-30b] say="I need to get the wheat plants directly. Let's try digging the wheat blocks specifically." cmd="dig 66 67 -97"
+[DD] cycle 112 [governor:qwen3-coder-30b] say="I need to go to the pen and see if I can get more wheat or other food sources there." cmd="goto 62 67 -100"
+[DD] cycle 113 [governor:qwen3-coder-30b] say="The walker is having trouble with the pen. Let me try a different approach and see if I can get some food from the nearby cows and pigs." cmd="attack cow"
+[DD] cycle 114 [governor:qwen3-coder-30b] say="I'll try attacking the pig instead, they're easier to catch." cmd="attack pig"
+[DD] cycle 115 [governor:qwen3-coder-30b] say="I need to get back to the crafting table and try crafting bread with what I have." cmd="goto 64 67 -94"
+[DD] cycle 116 [governor:qwen3-coder-30b] say="I have one wheat and need three to make bread. I'll go back to the wheat patch and see if I can harvest more." cmd="goto 66 67 -96"
+[DD] cycle 117 [governor:qwen3-coder-30b] say="There are four ripe wheat plants here. I'll dig them up to get more wheat." cmd="dig 66 67 -97"
+[DD] cycle 118 [governor:qwen3-coder-30b] say="I'll try digging the wheat plants directly instead of the block beneath them." cmd="dig 66 68 -96"
+[DD] cycle 119 [governor:qwen3-coder-30b] say="Let's try harvesting the wheat by right-clicking on the plant itself." cmd="gotoentity wheat"
+[DD] cycle 120 [governor:qwen3-coder-30b] say="I need to get back to the crafting table and try crafting bread with what I have." cmd="goto 64 67 -94"
+[DD] cycle 121 [governor:qwen3-coder-30b] say="I have one wheat and need three to make bread. I'll go back to the wheat patch and see if I can harvest more." cmd="goto 66 67 -96"
+[DD] cycle 122 [governor:qwen3-coder-30b] say="I see the wheat plants clearly now. I'll try to break them by walking into them." cmd="dig 66 67 -96"
+[DD] cycle 123 [governor:qwen3-coder-30b] say="I'll try to collect the wheat from the ground near the wheat patch." cmd="collect"
+[DD] cycle 124 [governor:qwen3-coder-30b] say="I need to get some more wheat to make bread. I'll go back to the crafting table and see if I can use the wheat seeds to plant more." cmd="goto 64 67 -94"
+[DD] cycle 125 [governor:qwen3-coder-30b] say="I have wheat seeds and need to plant them. I'll go back to the wheat patch and plant some seeds." cmd="goto 66 67 -96"
+[DD] cycle 126 [governor:qwen3-coder-30b] say="I need to plant the wheat seeds on the farmland." cmd="place wheat_seeds 66 67 -96"
+[DD] cycle 127 [governor:qwen3-coder-30b] say="I need to find a solid block to place the wheat seeds on. I'll try placing them on the dirt block next to the wheat patch." cmd="place wheat_seeds 65 67 -96"
+[DD] cycle 128 [governor:qwen3-coder-30b] say="I'll go back to the crafting table and make some bread with the wheat I have." cmd="goto 64 67 -94"
+[DD] cycle 129 [governor:qwen3-coder-30b] say="I'll craft some bread using the wheat I have." cmd="craft bread 1"
+[DD] cycle 130 [governor:qwen3-coder-30b] say="I need to gather more wheat to make bread. I'll go back to the wheat patch and harvest the ripe wheat." cmd="goto 66 67 -96"
+[DD] cycle 131 [governor:qwen3-coder-30b] say="I'll harvest the ripe wheat plants." cmd="dig 66 67 -96"
+[DD] cycle 132 [governor:qwen3-coder-30b] say="I need to get closer to the wheat plants to dig them." cmd="goto 66 67 -95"
+[DD] cycle 133 [governor:qwen3-coder-30b] say="I'll try digging the wheat plant directly." cmd="dig 66 67 -95"
+[DD] cycle 134 [governor:qwen3-coder-30b] say="I'll go back to the crafting table and try to figure out how to make bread properly." cmd="goto 64 67 -94"
+[DD] cycle 135 [governor:qwen3-coder-30b] say="Let me check the crafting recipe for bread again. I need to use the crafting table properly." cmd="craft bread 1"
+[DD] cycle 136 [governor:qwen3-coder-30b] say="I need to gather more wheat first. Let's go back to the wheat patch and collect the ripe wheat." cmd="goto 66 67 -96"
+[DD] cycle 137 [governor:qwen3-coder-30b] say="I'll collect the ripe wheat from the plants." cmd="collect"
+[DD] cycle 138 [governor:qwen3-coder-30b] say="I need to get the wheat from the actual plants, not just collect. Let's dig one of the ripe wheat plants." cmd="dig 66 67 -96"
+[DD] cycle 139 [governor:qwen3-coder-30b] say="The wheat plants are not showing up as diggable blocks. Let's try to eat what I already have and then go to the pen to get some meat." cmd="eat"
+[DD] cycle 140 [governor:qwen3-coder-30b] say="I need to go to the pen to get some meat and then figure out how to cook it properly." cmd="goto 62 67 -100"
+[DD] cycle 141 [governor:qwen3-coder-30b] say="The walker is having trouble with the pen location. Let's try going to the gate first, which I know is at 65,67,-100, and then work our way to the pen from there." cmd="goto 65 67 -100"
+[DD] cycle 142 [governor:qwen3-coder-30b] say="Okay, I'm at the gate. Now I need to get to the pen. I'll go west from here." cmd="goto 62 67 -100"
+[DD] cycle 143 [governor:qwen3-coder-30b] say="I'm in the pen now. I need to get some meat from the animals here. Let's start with a pig." cmd="attack pig"
+[DD] FLOOR: ate porkchop -> food 12
+[DD] cycle 144 [governor:qwen3-coder-30b] say="Great, I've got some pork chops. Now I need to build a furnace and cook them." cmd="goto 64 67 -94"
+[DD] FLOOR: ate porkchop -> food 15
+[DD] cycle 145 [governor:qwen3-coder-30b] say="I'm at the crafting table. I need to make a furnace out of cobblestone." cmd="craft furnace 1"
+[DD] cycle 146 [governor:qwen3-coder-30b] say="I need to check the recipe for a furnace. I think it's 8 cobblestone in a square pattern." cmd="craft furnace"
+[DD] cycle 147 [governor:qwen3-coder-30b] say="I need to make a furnace. I have 4 cobblestone, so I need to get more. Let's go to the dip to get more cobblestone." cmd="goto 74 64 -100"
+[DD] cycle 148 [governor:qwen3-coder-30b] say="I'm at the dip. I need to collect more cobblestone to make a furnace." cmd="dig 74 64 -99"
+[DD] cycle 149 [governor:qwen3-coder-30b] say="I need to find some cobblestone. Let's try digging around here." cmd="dig 73 64 -99"
+[DD] cycle 150 [governor:qwen3-coder-30b] say="I need to get more cobblestone. I'll try going back to the surface and looking for it." cmd="goto 64 67 -94"
+[DD] cycle 151 [governor:qwen3-coder-30b] say="I'm stuck in the dip. I need to get out and find a different way to get cobblestone." cmd="climb 76 -98"
+[DD] cycle 152 [governor:qwen3-coder-30b] say="I need to get out of this dip. I'll try going to the fence gate to get back to the surface." cmd="goto 65 67 -100"
+[DD] cycle 153 [governor:qwen3-coder-30b] say="I'm really stuck in the dip. I need to get back to the surface and find a different approach to getting cobblestone." cmd="goto 77 64 -98"
+[DD] cycle 154 [governor:qwen3-coder-30b] say="Okay, I'm back at the crafting table. I need to get some cobblestone to make a furnace. Let's try gathering cobblestone from the nearby area." cmd="goto 66 66 -97"
+[DD] cycle 155 [governor:qwen3-coder-30b] say="I'm going to try getting some cobblestone by digging near the water trench." cmd="dig 66 66 -96"
+[DD] cycle 156 [governor:qwen3-coder-30b] say="I need to get to the wheat patch and see if I can harvest some wheat first, then try to get cobblestone." cmd="goto 66 67 -96"
+[DD] cycle 157 [governor:qwen3-coder-30b] say="I'm going to try harvesting the ripe wheat directly from where I'm standing." cmd="dig 66 67 -96"
+[DD] cycle 158 [governor:qwen3-coder-30b] say="I'll go back to the crafting table and try to make some bread with the wheat I have." cmd="goto 77 64 -98"
+[DD] cycle 159 [governor:qwen3-coder-30b] say="I have some wheat, so I'll craft some bread to eat and regain some food." cmd="craft bread 1"
+[DD] cycle 160 [governor:qwen3-coder-30b] say="I need to get back to the anchor point to use the crafting table there and make bread." cmd="goto 64 67 -94"
+[DD] cycle 161 [governor:qwen3-coder-30b] say="I'll try going to the pen to see if I can get some meat and maybe find a way to make bread." cmd="goto 62 67 -100"
+[DD] cycle 162 [governor:qwen3-coder-30b] say="I'm going to try to get some cobblestone from the stone pit mouth to build a furnace." cmd="goto 65 67 -93"
+[DD] cycle 163 [governor:qwen3-coder-30b] say="I'm going to collect the wheat from the patch directly since I can see it and it's ripe." cmd="dig 66 67 -96"
+[DD] cycle 164 [governor:qwen3-coder-30b] say="I'll try going to the water trench to see if I can find a way to get to the wheat patch." cmd="goto 66 66 -97"
+[DD] cycle 165 [governor:qwen3-coder-30b] say="Let's try to use the crafting table I found nearby to make some bread with the wheat I have." cmd="use 77 64 -98"
+[DD] cycle 166 [governor:qwen3-coder-30b] say="I'll go back to the anchor point and try to use the crafting table there to make bread." cmd="goto 64 67 -94"
+[DD] cycle 167 [governor:qwen3-coder-30b] say="I'm going to try to eat the wheat I have to restore some food." cmd="eat"
+[DD] FLOOR: ate porkchop -> food 18
+[DD] cycle 168 [governor:qwen3-coder-30b] say="Now that I've eaten, I'll try to go to the pen and see if I can get some meat from the animals there." cmd="goto 62 67 -100"
+[DD] cycle 169 [governor:qwen3-coder-30b] say="I'll go to the wheat patch and harvest the ripe wheat." cmd="goto 66 67 -96"
+[DD] cycle 170 [governor:qwen3-coder-30b] say="Let's try to collect the wheat directly from the ground near me since I can't seem to get to the patch." cmd="collect"
+[DD] cycle 171 [governor:qwen3-coder-30b] say="I'll try to use the crafting table at 77, 64, -98 to make some bread with the wheat I have." cmd="place crafting_table 77 64 -98"
+[DD] cycle 172 [governor:qwen3-coder-30b] say="I'll try to make bread using the crafting table I already have." cmd="craft bread 1"
+[DD] cycle 173 [governor:qwen3-coder-30b] say="I need to get to my crafting table at the anchor to make bread properly." cmd="goto 64 67 -94"
+[DD] cycle 174 [governor:qwen3-coder-30b] say="I'll try going to the pen to see if I can get some meat from the animals there, since I've been having trouble reaching my crafting table." cmd="goto 62 67 -100"
+[DD] cycle 175 [governor:qwen3-coder-30b] say="I'll try to eat the wheat I have and then see if I can get to the wheat patch to harvest more." cmd="eat"
+[DD] cycle 176 [governor:qwen3-coder-30b] say="I'll try to get to the wheat patch and harvest some wheat to make bread." cmd="goto 66 67 -96"
+[DD] cycle 177 [governor:qwen3-coder-30b] say="I'll go to the water trench to see if I can get some food from there, since I can't seem to reach the wheat patch or my crafting table." cmd="goto 66 66 -97"
+[DD] cycle 178 [governor:qwen3-coder-30b] say="I'll try to collect the items around me and see if I can find something edible or useful nearby." cmd="collect"
+[DD] cycle 179 [governor:qwen3-coder-30b] say="I'll try to use the crafting table I found nearby to make some bread, even if I can't get to my main one." cmd="place crafting_table 77 64 -98"
+[DD] cycle 180 [governor:qwen3-coder-30b] say="I'll try to make bread with the wheat I have and the crafting table I found." cmd="craft bread 1"
+[DD] cycle 181 [governor:qwen3-coder-30b] say="I'll go to the pen to see if I can get some meat from the animals there, since I can't seem to make bread." cmd="goto 62 67 -100"
+[DD] cycle 182 [governor:qwen3-coder-30b] say="I'll try to eat the wheat I have to restore some food." cmd="eat"
+[DD] cycle 183 [governor:qwen3-coder-30b] say="I'll try to go to the wheat patch and harvest the ripe wheat there." cmd="goto 66 67 -96"
+[DD] cycle 184 [governor:qwen3-coder-30b] say="I'll try to gather the wheat directly from the patch since I can't walk there." cmd="dig 66 67 -96"
+[DD] cycle 185 [governor:qwen3-coder-30b] say="I'll try to collect the wheat that's already in the wheat patch." cmd="collect"
+[DD] cycle 186 [governor:qwen3-coder-30b] say="I'll go back to the crafting table at the shoulder and try to make bread with the wheat I have." cmd="goto 64 67 -94"
+[DD] cycle 187 [governor:qwen3-coder-30b] say="I'll try to use the crafting table I found nearby to make bread." cmd="place crafting_table 77 64 -98"
+[DD] cycle 188 [governor:qwen3-coder-30b] say="I'll try crafting bread with the wheat I have." cmd="craft bread 1"
+[DD] cycle 189 [governor:qwen3-coder-30b] say="I need to get more wheat to make bread. I'll go to the wheat patch and try to gather the ripe wheat there." cmd="goto 66 67 -96"
+[DD] cycle 190 [governor:qwen3-coder-30b] say="I'll try to collect the wheat from the wheat patch manually since I can see it." cmd="dig 66 67 -96"
+[DD] cycle 191 [governor:qwen3-coder-30b] say="I'll go to the pen and see if I can get some food there." cmd="goto 62 67 -100"
+[DD] cycle 192 [governor:qwen3-coder-30b] say="I'll try to collect the wheat from the wheat patch by walking closer to it." cmd="goto 66 67 -97"
+[DD] cycle 193 [governor:qwen3-coder-30b] say="I'll try to eat the wheat I already have and then see if I can find a way to make bread." cmd="eat"
+[DD] cycle 194 [governor:qwen3-coder-30b] say="I need to figure out how to make bread. Let me try to place the crafting table I have and see if I can craft bread properly this time." cmd="place crafting_table 77 64 -98"
+[DD] cycle 195 [governor:qwen3-coder-30b] say="I'll try to craft bread using the crafting table I already have, even if it's not at my home location." cmd="craft bread 1"
+[DD] cycle 196 [governor:qwen3-coder-30b] say="I need to get to my home crafting table to make bread properly. Let's try going there directly." cmd="goto 64 67 -94"
+[DD] cycle 197 [governor:qwen3-coder-30b] say="I'll try to go to the wheat patch and harvest the ripe wheat first, then maybe I can make bread with that." cmd="goto 66 67 -96"
+[DD] cycle 198 [governor:qwen3-coder-30b] say="The walker seems to be having trouble reaching these locations. Let's try a different approach and see if I can collect the wheat from the ground near me, then head towards the pen to see what I can do there." cmd="collect"
+[DD] cycle 199 [governor:qwen3-coder-30b] say="I'll try to go to the pen directly since that's where I know I can find animals to eat, even if I can't get to the wheat patch or crafting table right now." cmd="goto 62 67 -100"
+[DD] cycle 200 [governor:qwen3-coder-30b] say="I need to eat something to get my food level up, even if it's just the wheat I have. Let's try eating it first." cmd="eat"
+[DD] cycle 201 [governor:qwen3-coder-30b] say="I have to get to my crafting table to make bread, even if I have to climb or find another way. Let's try to get to the crafting table I know is right here at 77,64,-98, which is only 2 blocks away from my current position." cmd="goto 77 64 -98"
+[DD] cycle 202 [governor:qwen3-coder-30b] say="Okay, I made it to the crafting table. Now I need to make bread with the wheat I have." cmd="craft bread 1"
+[DD] cycle 203 [governor:qwen3-coder-30b] say="I need to get more wheat to make bread, so I'll head to the wheat patch and harvest some of the ripe wheat there." cmd="goto 66 67 -96"
+[DD] cycle 204 [governor:qwen3-coder-30b] say="I need to get to the wheat patch to harvest some wheat. Since the walker keeps failing to reach it, I'll try to go directly to the wheat patch by using the coordinates of the farmland blocks, which I remember from yesterday. I'll start by climbing up to get a better view and then move towards the wheat patch." cmd="climb 66 -96"
+[DD] cycle 205 [governor:qwen3-coder-30b] say="I'll try to go directly to the wheat patch by heading west towards the water trench, since I know that's where it is. I'll head to the water first and then make my way to the wheat patch." cmd="goto 66 66 -97"
+[DD] cycle 206 [governor:qwen3-coder-30b] say="The walker is having trouble navigating to the wheat patch. I'll try to go to the pen instead, which I know I can get to. I'll head to the gate at 65,67,-100 and then walk around to the pen area." cmd="goto 65 67 -100"
+[DD] cycle 207 [governor:qwen3-coder-30b] say="I'm going to try a different approach. I'll go to my crafting table first, which I know I can reach, and then try to make bread using the wheat I already have. If I can't craft bread, I'll eat the wheat I have to restore some food." cmd="goto 77 64 -98"
+[DD] cycle 208 [governor:qwen3-coder-30b] say="Okay, I'm at the crafting table. I need to make bread, but I don't have enough wheat. I'll eat the wheat I have to restore some food, then go back to the wheat patch to harvest more." cmd="eat"
+[DD] cycle 209 [governor:qwen3-coder-30b] say="I need to go back to the wheat patch and harvest the ripe wheat. Since I can't get there with the walker, I'll try to find another way. I'll head towards the water trench and then make my way to the wheat patch by going north and then west." cmd="goto 66 66 -97"
+[DD] cycle 210 [governor:qwen3-coder-30b] say="I'm going to try to go to the wheat patch by manually walking. I'll head north and then west to reach the wheat patch. Since I know the wheat patch is at 66, 67, -96, I'll try to get there by going to 66, 67, -97 first and then moving west." cmd="goto 66 67 -97"
+[DD] cycle 211 [governor:qwen3-coder-30b] say="I'm going to try to get to the wheat patch by going to the water trench first, since I can see it, and then head to the wheat patch. I'll go to 66, 66, -97 and then try to move to the wheat patch from there." cmd="goto 66 66 -97"
+[DD] cycle 212 [governor:qwen3-coder-30b] say="I'm going to try a different approach. I'll go to the pen first since I know how to get there, and then I'll try to get to the wheat patch from there. I'll head to the gate at 65, 67, -100." cmd="goto 65 67 -100"
+[DD] cycle 213 [governor:qwen3-coder-30b] say="I'm going to try to go to the wheat patch by climbing. I'll climb the column at 66, -97 to get to the wheat patch. I'll need to climb up to y=67 to get on top of the water trench and then move to the wheat patch." cmd="climb 66 -97"
+[DD] cycle 214 [governor:qwen3-coder-30b] say="I'll try to go to the wheat patch by going around the water trench. I'll head north to get to the wheat patch, since I can see it's at 66, 67, -96. I'll go to 66, 66, -96 first, then move to the wheat patch." cmd="goto 66 66 -96"
+[DD] cycle 215 [governor:qwen3-coder-30b] say="I'll try to go to the wheat patch by going to the crafting table first, then moving from there. I'll go to the crafting table at 77, 64, -98." cmd="goto 77 64 -98"
+[DD] cycle 216 [governor:qwen3-coder-30b] say="I'm going to eat the wheat I have now to get my food up, then I'll try to get to the wheat patch by going to the water trench and then to the wheat patch." cmd="eat"
+[DD] cycle 217 [governor:qwen3-coder-30b] say="I'll try to get to the wheat patch by going to the water trench first, then to the wheat patch. I'll go to 66, 66, -97 to get to the water trench." cmd="goto 66 66 -97"
+[DD] cycle 218 [governor:qwen3-coder-30b] say="I'll try to go to the wheat patch by going around the water trench. I'll go north to 66, 67, -96 to get to the wheat patch." cmd="goto 66 67 -96"
+[DD] cycle 219 [governor:qwen3-coder-30b] say="I'll go to the pen instead, since I can't get to the wheat patch right now. I'll go to the pen at 62, 67, -100." cmd="goto 62 67 -100"
+[DD] cycle 220 [governor:qwen3-coder-30b] say="I'll try to go to the gate in the fence line at 65, 67, -100, since I know that's where the pen is. I'll go to the gate." cmd="goto 65 67 -100"
+[DD] cycle 221 [governor:qwen3-coder-30b] say="I'll go to the crafting table at 77, 64, -98 to see if I can get there, and then try to get to the wheat patch from there." cmd="goto 77 64 -98"
+[DD] cycle 222 [governor:qwen3-coder-30b] say="I'll try to craft some bread from the wheat I have, then go to the wheat patch to harvest more." cmd="craft bread"
+[DD] cycle 223 [governor:qwen3-coder-30b] say="I'll eat the wheat I have to restore some food, then go to the wheat patch to harvest more." cmd="eat"
+[DD] cycle 224 [governor:qwen3-coder-30b] say="I'll go to the wheat patch and harvest the ripe wheat, then try to craft bread with the wheat I gather." cmd="goto 66 67 -96"
+[DD] cycle 225 [governor:qwen3-coder-30b] say="I'll try to get to the wheat patch by going to the water trench at 66, 66, -97 first, then to the wheat patch." cmd="goto 66 66 -97"
+[DD] cycle 226 [governor:qwen3-coder-30b] say="I'll try going to the pen instead, since I know where it is and it's closer. I'll go to the gate at 65, 67, -100." cmd="goto 65 67 -100"
+[DD] cycle 227 [governor:qwen3-coder-30b] say="I'll try to get to the pen by going to the anchor point at 64, 67, -94 where my crafting table is, then head to the pen." cmd="goto 64 67 -94"
+[DD] cycle 228 [governor:qwen3-coder-30b] say="I'll try to collect the wheat from the ground near me first, then figure out how to get to the wheat patch." cmd="collect"
+[DD] cycle 229 [governor:qwen3-coder-30b] say="I'll try to eat the wheat I have to restore some food, then see if I can find a way to the wheat patch by going to the crafting table at 77, 64, -98." cmd="eat"
+[DD] cycle 230 [governor:qwen3-coder-30b] say="I'll try to craft bread using the wheat I have, even if it's just one piece." cmd="craft bread"
+[DD] cycle 231 [governor:qwen3-coder-30b] say="I need to get to the wheat patch to harvest more wheat. I'll try going to the water trench first, then the wheat patch." cmd="goto 66 66 -97"
+[DD] cycle 232 [governor:qwen3-coder-30b] say="I'll try to go directly to the wheat patch at 66, 67, -96." cmd="goto 66 67 -96"
+[DD] cycle 233 [governor:qwen3-coder-30b] say="The walker is having trouble with the terrain. I'll try to go to the crafting table at 77, 64, -98 first, then work from there." cmd="goto 77 64 -98"
+[DD] cycle 234 [governor:qwen3-coder-30b] say="Okay, I'm at the crafting table. I need to make a furnace to cook the meat, and also harvest the wheat from the patch." cmd="craft furnace"
+[DD] cycle 235 [governor:qwen3-coder-30b] say="I need to make bread first, then try to get to the wheat patch to harvest more wheat." cmd="craft bread 1"
+[DD] cycle 236 [governor:qwen3-coder-30b] say="I need to get to the wheat patch and harvest some wheat. I'll try to go directly to the wheat patch at 66, 67, -96." cmd="goto 66 67 -96"
+[DD] cycle 237 [governor:qwen3-coder-30b] say="I'll try going to the pen instead, since I know it's at 62, 67, -100." cmd="goto 62 67 -100"
+[DD] FLOOR: fleeing phantom
+[DD] FLOOR: flee did not clear — burrowing
+[DD] DEATH noticed by driver process
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] DEATH noticed by driver process
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] DEATH noticed by driver process
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[DD] DEATH noticed by driver process
+[AutoRespawn] Died, respawning in 3s...
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[AutoRespawn] Alive and well
+[AutoRespawn] Respawned
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody

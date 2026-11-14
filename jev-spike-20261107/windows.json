@@ -1,0 +1,9 @@
+[
+ {"id":"W1","start":"2026-11-08T05:14:35Z","end":"2026-11-08T05:16:35Z","truth":"PROGRESS","truth_basis":"Ledger the-cure-verdict-20261107 + digest: session-1 relocate walk (38.7,66,-99.6)->(44.7,67,-94.4), grounded, on foot."},
+ {"id":"W2","start":"2026-11-08T05:18:00Z","end":"2026-11-08T05:20:00Z","truth":"STUCK","truth_basis":"Ledger the-cure-verdict-20261107: wedged at shoulder cell (50.6,68,-95.7), walkTo timeouts; digest shows zero position changes in window."},
+ {"id":"W3","start":"2026-11-08T05:25:00Z","end":"2026-11-08T05:27:00Z","truth":"STUCK","truth_basis":"Ledger shoulder-wedge-lane-20261107: route-0/1 hops stalling from west of the survey box; digest shows +-1.5-block jitter around (31.7,70,-101.7/-99.3), no net travel."},
+ {"id":"W4","start":"2026-11-08T05:37:00Z","end":"2026-11-08T05:39:00Z","truth":"PROGRESS","truth_basis":"Ledger shoulder-wedge-verdict-20261107: after fix-2 relaunch (pid 3155359) Cody walked (49.5,68,-94.5)->(55.4,68,-92.5) en route to the relocate milestone at 05:40:31.998Z."},
+ {"id":"W5","start":"2026-11-08T05:40:45Z","end":"2026-11-08T05:42:45Z","truth":"PROGRESS","truth_basis":"Ledger character-pickaxe-done 05:43:28.093Z + digest: pickaxe chain gather phase, inventoryTotal 1->2->6, repeated tree trips (note: digest records several (70.7,67.4,-93.5) samples inside work windows - the framework idle-return point, a transcript artefact, not teleports)."},
+ {"id":"W6","start":"2026-11-08T05:44:10Z","end":"2026-11-08T05:46:10Z","truth":"PROGRESS","truth_basis":"Ledger shoulder-wedge-verdict-20261107 + digest: hut project under way, inventoryTotal 45->52, pad->trees->pad work loop."},
+ {"id":"W7","start":"2026-11-08T05:31:00Z","end":"2026-11-08T05:33:00Z","truth":"STUCK","truth_basis":"Ledger shoulder-wedge-hopskip-20261107: bit-identical freeze at (49.520228525822326,68,-94.48096637587368) across 12 full-precision probe samples during fix-1 verification; digest shows no position changes in window."}
+]

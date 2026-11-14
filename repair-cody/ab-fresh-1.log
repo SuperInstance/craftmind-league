@@ -1,0 +1,8 @@
+[AB] ABProbe731946 spawn pos 23.500,68.000,-103.500 onGround false vehicle null
+[AB] ABProbe731946 settled pos 23.500,68.000,-103.500 onGround true idlePosPkts 0
+[AB] ABProbe731946 approach gotoNear cell 26.384,73,-93.693 result {"ok":false,"error":"walkTo timeout (51560ms) to 26.384,73,-93.693; at (23.397925098511156, 68, -103.30720491486137)"} ms 60185 pos 23.398,68.000,-103.307 onGround false approachPosPkts 1178
+[AB] ABProbe731946 BATTERY START 23.398,68.000,-103.307 onGround false
+[AB] ABProbe731946 RAW east fwd+jump 4s: end 27.686,69.001,-103.308 disp3d 4.404 dx 4.288 rawPosPkts 51
+[AB] ABProbe731946 GOTO gotoNear target 43.4,68.0,-103.3 result {"ok":false,"error":"walkTo timeout (52795ms) to 43.39792509851115,68,-103.30720491486137; at (27.686366817489002, 68, -103.30806438550817)"} ms 60085 end 27.686,68.000,-103.308 dispFromStart 4.288 dxFromStart 4.288 gotoPosPkts 1195
+[AB] ABProbe731946 position packet samples [{"phase":"pre","x":23.5,"y":68,"z":-103.5,"teleportId":1},{"phase":"approach","x":23.5,"y":68,"z":-103.5,"teleportId":2},{"phase":"approach","x":23.5,"y":68,"z":-103.475,"teleportId":3},{"phase":"approach","x":23.5,"y":68,"z":-103.449,"teleportId":4},{"phase":"approach","x":23.496,"y":68,"z":-103.424,"teleportId":5},{"phase":"approach","x":23.482,"y":68,"z":-103.403,"teleportId":6},{"phase":"approach","x":23.465,"y":68,"z":-103.383,"teleportId":7},{"phase":"approach","x":23.449,"y":68,"z":-103.364,"teleportId":8},{"phase":"approach","x":23.433,"y":68,"z":-103.344,"teleportId":9},{"phase":"approach","x":23.417,"y":68,"z":-103.324,"teleportId":10},{"phase":"approach","x":23.398,"y":68,"z":-103.307,"teleportId":11},{"phase":"approach","x":23.398,"y":68,"z":-103.307,"teleportId":12}]
+[AB] ABProbe731946 DONE

@@ -1,0 +1,43 @@
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] spawned at 77.3,64.0,-98.3 hp=9.133333206176758 food=4 deathsBaseline=116
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty content
+[DD] no model reply (cycle 1 ) — waiting 5s
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty content
+[DD] no model reply (cycle 2 ) — waiting 5s
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty content
+[DD] FAILOVER: primary failed 3x consecutively — governor fallback (Qwen3-Coder-30B) for the rest of the run
+[DD] cycle 3 [governor:qwen3-coder-30b] say="Alright, time to get out of this dip and find some food." cmd="goto 64 67 -93"
+[DD] cycle 4 [governor:qwen3-coder-30b] say="Well that's not going to work. Let me see what's around here first." cmd="look 77 64 -98"
+[DD] cycle 5 [governor:qwen3-coder-30b] say="The ground here is all jumbled up - gotta find a way out of this dip." cmd="dig 77 63 -98"
+[DD] cycle 6 [governor:qwen3-coder-30b] say="That's more like it - clearing a path." cmd="dig 76 63 -98"
+[DD] cycle 7 [governor:qwen3-coder-30b] say="Okay, now I can see the way out. Let's head west." cmd="goto 65 67 -93"
+[DD] cycle 8 [governor:qwen3-coder-30b] say="This dip is tricky. Let me try a different approach - head north first to get to higher ground." cmd="goto 77 67 -95"
+[DD] cycle 9 [governor:qwen3-coder-30b] say="Alright, I'm going to climb out of here. I can see a good spot to start climbing." cmd="climb 75 -95"
+[DD] cycle 10 [governor:qwen3-coder-30b] say="Need to place a block first to climb. Let's place one here and then climb." cmd="place oak_log 75 66 -95"
+[DD] cycle 11 [governor:qwen3-coder-30b] say="Okay, I'll try placing it on the ground first to build a step." cmd="place oak_log 75 65 -95"
+[DD] cycle 12 [governor:qwen3-coder-30b] say="Alright, let's just walk out of here then. I'll head north to get higher ground." cmd="goto 75 67 -95"
+[DD] cycle 13 [governor:qwen3-coder-30b] say="Okay, I'm out of the dip. Now I need to get some food. Let's go find some apples or animals." cmd="goto 66 -97"
+[DD] cycle 14 [governor:qwen3-coder-30b] say="Right, I need to get to the apple oak. Let's go to (66,-97) - that's where the apples drop." cmd="goto 66 -97"
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody

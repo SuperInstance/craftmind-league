@@ -1,0 +1,62 @@
+OP day-11 process up; req=floor/run/day11/op/op-req-day11.jsonl res=floor/run/day11/op/op-res-day11.jsonl parklog=floor/run/day11/op/park-notify-day11.jsonl
+SRV: Gallery joined the game
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+OP spawned as Gallery at {"x":30.5,"y":82,"z":-87.5}
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+SRV: <Gallery> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIEdhbGxlcnkuIiwicG9zaXRpb24iOnsieCI6MzAsInkiOjgyLCJ6IjotODh9fSwidGltZXN0YW1wIjoxNzk0MjcwMjg0OTEzfQ==
+RES {"id":"gateb-ping-1","ok":true,"spawned":true,"fixture":false,"pos":{"x":30.5,"y":82,"z":-87.5}}
+PARK-NOTIFY ** PARK ** id=floor-park-1 reason=SENSOR_PATH_BROKEN (recorded to floor/run/day11/op/park-notify-day11.jsonl; no world effect)
+RES {"id":"floor-park-1","ok":true,"recorded":true}
+PARK-NOTIFY ** PARK ** id=gateb-park-test-1 reason=GATE_B_TEST (recorded to floor/run/day11/op/park-notify-day11.jsonl; no world effect)
+RES {"id":"gateb-park-test-1","ok":true,"recorded":true}
+OP chat: /time set 1000
+SRV: Set minecraft:overworld to  tick(s)
+RES {"id":"floor-daylight-1","ok":true,"chat":"/time set 1000","srv":["Set minecraft:overworld to  tick(s)"]}
+PARK-NOTIFY ** PARK ** id=floor-park-2 reason=DRIVER_HEARTBEAT_LOST (recorded to floor/run/day11/op/park-notify-day11.jsonl; no world effect)
+RES {"id":"floor-park-2","ok":true,"recorded":true}
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 74.000000, 82.000000, -91.000000]
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcwNTExODEzfQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 44.000000, 79.000000, -84.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+PARK-NOTIFY ** PARK ** id=floor-park-3 reason=DRIVER_HEARTBEAT_LOST (recorded to floor/run/day11/op/park-notify-day11.jsonl; no world effect)
+RES {"id":"floor-park-3","ok":true,"recorded":true}
+SRV: Cody joined the game
+SRV: <Cody> BOT_MSG:1:greeting:eyJ0eXBlIjoiZ3JlZXRpbmciLCJwYXlsb2FkIjp7Im1lc3NhZ2UiOiJIZWxsbyEgSSdtIENvZHkuIiwicG9zaXRpb24iOnsieCI6NzAsInkiOjY0LCJ6IjotODl9fSwidGltZXN0YW1wIjoxNzk0MjcwNjExMTA0fQ==
+[BotMessenger] Received greeting from Cody
+SRV: Cody left the game
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Teleported MagnusandMouse to 67.700000, 66.200000, -85.000000]
+SRV: [MagnusandMouse: Set minecraft:overworld to  tick(s)]
+SRV: [MagnusandMouse: Set the weather to clear]
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Gallery

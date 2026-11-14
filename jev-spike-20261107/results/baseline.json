@@ -1,0 +1,89 @@
+{
+ "windows": [
+  {
+   "id": "W1",
+   "truth": "PROGRESS",
+   "label": "PROGRESS",
+   "net": 6.47,
+   "path": 11.05,
+   "inv_events": 0,
+   "inv_delta": 0,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": true
+  },
+  {
+   "id": "W2",
+   "truth": "STUCK",
+   "label": "STUCK",
+   "net": 0.0,
+   "path": 0.0,
+   "inv_events": 0,
+   "inv_delta": 0,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": true
+  },
+  {
+   "id": "W3",
+   "truth": "STUCK",
+   "label": "STUCK",
+   "net": 2.86,
+   "path": 9.46,
+   "inv_events": 0,
+   "inv_delta": 0,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": true
+  },
+  {
+   "id": "W4",
+   "truth": "PROGRESS",
+   "label": "STUCK",
+   "net": 0.0,
+   "path": 0.0,
+   "inv_events": 0,
+   "inv_delta": 0,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": false
+  },
+  {
+   "id": "W5",
+   "truth": "PROGRESS",
+   "label": "PROGRESS",
+   "net": 12.31,
+   "path": 62.17,
+   "inv_events": 3,
+   "inv_delta": 6,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": true
+  },
+  {
+   "id": "W6",
+   "truth": "PROGRESS",
+   "label": "PROGRESS",
+   "net": 8.46,
+   "path": 36.03,
+   "inv_events": 5,
+   "inv_delta": 6,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": true
+  },
+  {
+   "id": "W7",
+   "truth": "STUCK",
+   "label": "STUCK",
+   "net": 0.0,
+   "path": 0.0,
+   "inv_events": 0,
+   "inv_delta": 0,
+   "milestones": 0,
+   "n_samples": 12,
+   "correct": true
+  }
+ ],
+ "accuracy": "6/7"
+}

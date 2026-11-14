@@ -1,0 +1,434 @@
+{
+  "a3d33c2d-5267-3d8f-8d04-c1aa4c4d7008": {
+    "uuid": "a3d33c2d-5267-3d8f-8d04-c1aa4c4d7008",
+    "name": "MagnusandMouse",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T03:27:05.291Z",
+    "firstJoin": "2026-11-07T03:27:05.291Z",
+    "completed": false
+  },
+  "0e029227-0563-3364-9f03-c40e2b3263ea": {
+    "uuid": "0e029227-0563-3364-9f03-c40e2b3263ea",
+    "name": "Vega",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T04:30:56.624Z",
+    "firstJoin": "2026-11-07T04:30:56.624Z",
+    "completed": false
+  },
+  "00096e79-ab53-3cb8-a763-f07c1c6afa04": {
+    "uuid": "00096e79-ab53-3cb8-a763-f07c1c6afa04",
+    "name": "Geist",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:02:30.348Z",
+    "firstJoin": "2026-11-07T05:02:30.348Z",
+    "completed": false
+  },
+  "36a95414-dc6d-3ac2-8f34-1a29c7ba40e3": {
+    "uuid": "36a95414-dc6d-3ac2-8f34-1a29c7ba40e3",
+    "name": "PulseProbe",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:08:08.751Z",
+    "firstJoin": "2026-11-07T05:08:08.751Z",
+    "completed": false
+  },
+  "3ff9fed6-ba33-3fb4-bad3-b12374eea3ce": {
+    "uuid": "3ff9fed6-ba33-3fb4-bad3-b12374eea3ce",
+    "name": "GeistProbe",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:10:33.242Z",
+    "firstJoin": "2026-11-07T05:10:33.242Z",
+    "completed": false
+  },
+  "77433db9-365f-361f-83a1-4275c8c5cac5": {
+    "uuid": "77433db9-365f-361f-83a1-4275c8c5cac5",
+    "name": "RepairProbe",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:31:04.741Z",
+    "firstJoin": "2026-11-07T05:31:04.741Z",
+    "completed": false
+  },
+  "8619e5ee-91f8-381f-b73c-677989f82f39": {
+    "uuid": "8619e5ee-91f8-381f-b73c-677989f82f39",
+    "name": "Probe94029722",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:35:28.560Z",
+    "firstJoin": "2026-11-07T05:35:28.560Z",
+    "completed": false
+  },
+  "081695c7-f594-3295-bd2b-c65c06dce467": {
+    "uuid": "081695c7-f594-3295-bd2b-c65c06dce467",
+    "name": "GateScan",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:39:41.688Z",
+    "firstJoin": "2026-11-07T05:39:41.688Z",
+    "completed": false
+  },
+  "493f9334-343c-3e91-b4a4-fe9f06756621": {
+    "uuid": "493f9334-343c-3e91-b4a4-fe9f06756621",
+    "name": "ScanProbe",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T05:39:48.187Z",
+    "firstJoin": "2026-11-07T05:39:48.187Z",
+    "completed": false
+  },
+  "d36146af-626d-339d-99ec-5ee0ba30232b": {
+    "uuid": "d36146af-626d-339d-99ec-5ee0ba30232b",
+    "name": "SurveyN53951",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:17:26.646Z",
+    "firstJoin": "2026-11-07T07:17:26.646Z",
+    "completed": false
+  },
+  "2f454977-cb8d-3364-b4f1-1e116104c50c": {
+    "uuid": "2f454977-cb8d-3364-b4f1-1e116104c50c",
+    "name": "LitterLab5831",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:24:41.892Z",
+    "firstJoin": "2026-11-07T07:24:41.892Z",
+    "completed": false
+  },
+  "e7764fc5-cf1a-30a8-9b54-db0f24470037": {
+    "uuid": "e7764fc5-cf1a-30a8-9b54-db0f24470037",
+    "name": "LitterLab9074",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:25:45.738Z",
+    "firstJoin": "2026-11-07T07:25:45.738Z",
+    "completed": false
+  },
+  "25743878-58a9-38d1-9a20-c08e4f57ed44": {
+    "uuid": "25743878-58a9-38d1-9a20-c08e4f57ed44",
+    "name": "LitterLab3118",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:31:37.135Z",
+    "firstJoin": "2026-11-07T07:31:37.135Z",
+    "completed": false
+  },
+  "a8e3c8a5-ead7-3f6a-898a-23dcad7c981b": {
+    "uuid": "a8e3c8a5-ead7-3f6a-898a-23dcad7c981b",
+    "name": "LitterLab7742",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:34:53.999Z",
+    "firstJoin": "2026-11-07T07:34:53.999Z",
+    "completed": false
+  },
+  "c79cef2a-07e1-3a81-b843-97caa5c7f382": {
+    "uuid": "c79cef2a-07e1-3a81-b843-97caa5c7f382",
+    "name": "LitterLab3827",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:40:35.901Z",
+    "firstJoin": "2026-11-07T07:40:35.901Z",
+    "completed": false
+  },
+  "a6d25560-e009-34ff-bde1-5bb2f23726a9": {
+    "uuid": "a6d25560-e009-34ff-bde1-5bb2f23726a9",
+    "name": "LitterLab2563",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:44:53.382Z",
+    "firstJoin": "2026-11-07T07:44:53.382Z",
+    "completed": false
+  },
+  "aaaf0b1b-b0ba-3899-bc93-1585ac761349": {
+    "uuid": "aaaf0b1b-b0ba-3899-bc93-1585ac761349",
+    "name": "LitterLab9377",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:49:34.079Z",
+    "firstJoin": "2026-11-07T07:49:34.080Z",
+    "completed": false
+  },
+  "8956e7c8-b964-3425-b952-bd32f5e9ab15": {
+    "uuid": "8956e7c8-b964-3425-b952-bd32f5e9ab15",
+    "name": "DiagProbe5282",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:52:52.341Z",
+    "firstJoin": "2026-11-07T07:52:52.341Z",
+    "completed": false
+  },
+  "77962838-0f6f-3fd9-ade5-8a6e420eca48": {
+    "uuid": "77962838-0f6f-3fd9-ade5-8a6e420eca48",
+    "name": "DiagProbe1027",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:57:01.378Z",
+    "firstJoin": "2026-11-07T07:57:01.378Z",
+    "completed": false
+  },
+  "92f532a9-1d30-31e9-82bc-cfff93769af6": {
+    "uuid": "92f532a9-1d30-31e9-82bc-cfff93769af6",
+    "name": "LitterLab5653",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T07:58:39.534Z",
+    "firstJoin": "2026-11-07T07:58:39.534Z",
+    "completed": false
+  },
+  "e7d108e2-72b4-36f6-9695-dbf51ecf8a26": {
+    "uuid": "e7d108e2-72b4-36f6-9695-dbf51ecf8a26",
+    "name": "LitterLab9883",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T08:04:56.530Z",
+    "firstJoin": "2026-11-07T08:04:56.530Z",
+    "completed": false
+  },
+  "53bda7ab-e044-3c0e-8a2d-d38ed24577d9": {
+    "uuid": "53bda7ab-e044-3c0e-8a2d-d38ed24577d9",
+    "name": "LitterLab9868",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T08:08:50.647Z",
+    "firstJoin": "2026-11-07T08:08:50.647Z",
+    "completed": false
+  },
+  "b951a381-b8ac-3e9f-859f-1842f6ef6e5b": {
+    "uuid": "b951a381-b8ac-3e9f-859f-1842f6ef6e5b",
+    "name": "LitterLab7055",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T08:21:27.759Z",
+    "firstJoin": "2026-11-07T08:21:27.759Z",
+    "completed": false
+  },
+  "ed5ae986-c698-306b-9013-7879b5fd7081": {
+    "uuid": "ed5ae986-c698-306b-9013-7879b5fd7081",
+    "name": "LitterLab3271",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T08:24:44.720Z",
+    "firstJoin": "2026-11-07T08:24:44.720Z",
+    "completed": false
+  },
+  "269a23ff-9aa0-3fb7-976e-1649e767e8d2": {
+    "uuid": "269a23ff-9aa0-3fb7-976e-1649e767e8d2",
+    "name": "LitterLab4378",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T08:28:10.645Z",
+    "firstJoin": "2026-11-07T08:28:10.645Z",
+    "completed": false
+  },
+  "7a355396-1908-30bf-924a-ed7261482a14": {
+    "uuid": "7a355396-1908-30bf-924a-ed7261482a14",
+    "name": "LitterLab5283",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T08:31:44.693Z",
+    "firstJoin": "2026-11-07T08:31:44.693Z",
+    "completed": false
+  },
+  "779cc0fb-0b6c-3376-a51f-9d58aa2157dd": {
+    "uuid": "779cc0fb-0b6c-3376-a51f-9d58aa2157dd",
+    "name": "LitterLab4803",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:00:37.692Z",
+    "firstJoin": "2026-11-07T09:00:37.692Z",
+    "completed": false
+  },
+  "3be5b08b-fb4a-30f9-ba88-2a128c20c9bb": {
+    "uuid": "3be5b08b-fb4a-30f9-ba88-2a128c20c9bb",
+    "name": "SurveyG112690",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:02:24.941Z",
+    "firstJoin": "2026-11-07T09:02:24.941Z",
+    "completed": false
+  },
+  "03f969ef-8979-3399-ac43-7bb882527a07": {
+    "uuid": "03f969ef-8979-3399-ac43-7bb882527a07",
+    "name": "ScanLab6554",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:03:03.061Z",
+    "firstJoin": "2026-11-07T09:03:03.061Z",
+    "completed": false
+  },
+  "30b5da12-b577-34af-86a9-8c0af1608d7d": {
+    "uuid": "30b5da12-b577-34af-86a9-8c0af1608d7d",
+    "name": "DigTest123343",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:03:56.497Z",
+    "firstJoin": "2026-11-07T09:03:56.497Z",
+    "completed": false
+  },
+  "c091f38d-d7fd-3390-9b91-19d523c44aad": {
+    "uuid": "c091f38d-d7fd-3390-9b91-19d523c44aad",
+    "name": "DigTst2111468",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:04:40.942Z",
+    "firstJoin": "2026-11-07T09:04:40.942Z",
+    "completed": false
+  },
+  "8ec9169e-a40b-3723-aef5-f1cc94a52f6d": {
+    "uuid": "8ec9169e-a40b-3723-aef5-f1cc94a52f6d",
+    "name": "SurveyH109406",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:08:30.907Z",
+    "firstJoin": "2026-11-07T09:08:30.907Z",
+    "completed": false
+  },
+  "31fa3c06-bb23-3b9d-aea2-15fe4dd043c6": {
+    "uuid": "31fa3c06-bb23-3b9d-aea2-15fe4dd043c6",
+    "name": "LitterRun8820",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:09:03.788Z",
+    "firstJoin": "2026-11-07T09:09:03.788Z",
+    "completed": false
+  },
+  "7b4593d3-9415-321f-be70-d009845375da": {
+    "uuid": "7b4593d3-9415-321f-be70-d009845375da",
+    "name": "LitterRun8725",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:10:51.889Z",
+    "firstJoin": "2026-11-07T09:10:51.889Z",
+    "completed": false
+  },
+  "a58dedc9-9d71-3fcd-a652-26934884e536": {
+    "uuid": "a58dedc9-9d71-3fcd-a652-26934884e536",
+    "name": "SurveyK121942",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:15:06.311Z",
+    "firstJoin": "2026-11-07T09:15:06.311Z",
+    "completed": false
+  },
+  "bc607756-2bf8-3cc3-b30e-91259cde1279": {
+    "uuid": "bc607756-2bf8-3cc3-b30e-91259cde1279",
+    "name": "Director102224",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:26:47.797Z",
+    "firstJoin": "2026-11-07T09:26:47.797Z",
+    "completed": false
+  },
+  "09631409-4e48-3310-9e0f-a045226820f0": {
+    "uuid": "09631409-4e48-3310-9e0f-a045226820f0",
+    "name": "LitterRun3391",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:36:36.640Z",
+    "firstJoin": "2026-11-07T09:36:36.640Z",
+    "completed": false
+  },
+  "b65a7e1a-f256-3b26-85cb-7cce6846bdfd": {
+    "uuid": "b65a7e1a-f256-3b26-85cb-7cce6846bdfd",
+    "name": "LitterRun4144",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T09:51:34.867Z",
+    "firstJoin": "2026-11-07T09:51:34.867Z",
+    "completed": false
+  },
+  "5e0809b4-ce61-3eca-9178-c6d16ab8fe2d": {
+    "uuid": "5e0809b4-ce61-3eca-9178-c6d16ab8fe2d",
+    "name": "LinkProbe892456",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T10:07:11.794Z",
+    "firstJoin": "2026-11-07T10:07:11.794Z",
+    "completed": false
+  },
+  "d682a392-3874-3e09-8325-183245483658": {
+    "uuid": "d682a392-3874-3e09-8325-183245483658",
+    "name": "TraverseG132247",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T10:23:47.059Z",
+    "firstJoin": "2026-11-07T10:23:47.059Z",
+    "completed": false
+  },
+  "0d71ca10-0dcc-38ed-b986-2531923823cb": {
+    "uuid": "0d71ca10-0dcc-38ed-b986-2531923823cb",
+    "name": "TraverseG131742",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T10:26:18.156Z",
+    "firstJoin": "2026-11-07T10:26:18.156Z",
+    "completed": false
+  },
+  "9bce6c53-bdc8-35da-80b5-243008608d8a": {
+    "uuid": "9bce6c53-bdc8-35da-80b5-243008608d8a",
+    "name": "TraverseG120241",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T10:45:56.654Z",
+    "firstJoin": "2026-11-07T10:45:56.654Z",
+    "completed": false
+  },
+  "f7fc6759-00c4-3a98-8904-abf6c152487f": {
+    "uuid": "f7fc6759-00c4-3a98-8904-abf6c152487f",
+    "name": "TraverseG110535",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T11:05:40.205Z",
+    "firstJoin": "2026-11-07T11:05:40.205Z",
+    "completed": false
+  },
+  "1e87bdc6-b067-339e-8f9b-49cf41345793": {
+    "uuid": "1e87bdc6-b067-339e-8f9b-49cf41345793",
+    "name": "LitterRun5038",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T11:17:17.547Z",
+    "firstJoin": "2026-11-07T11:17:17.547Z",
+    "completed": false
+  },
+  "5bbd995f-9063-3f8c-a619-3409e6bc27af": {
+    "uuid": "5bbd995f-9063-3f8c-a619-3409e6bc27af",
+    "name": "TraverseG112033",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T11:20:38.488Z",
+    "firstJoin": "2026-11-07T11:20:38.488Z",
+    "completed": false
+  },
+  "8568daad-d99e-3dcf-b4c1-19da901fd13e": {
+    "uuid": "8568daad-d99e-3dcf-b4c1-19da901fd13e",
+    "name": "LitterRun7580",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T11:33:39.836Z",
+    "firstJoin": "2026-11-07T11:33:39.836Z",
+    "completed": false
+  },
+  "43457e61-ab82-3150-ba88-8d391f2a9c07": {
+    "uuid": "43457e61-ab82-3150-ba88-8d391f2a9c07",
+    "name": "LitterRun8466",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T11:58:39.699Z",
+    "firstJoin": "2026-11-07T11:58:39.699Z",
+    "completed": false
+  },
+  "a5b0cd80-eac0-3695-b9ff-9acd73751690": {
+    "uuid": "a5b0cd80-eac0-3695-b9ff-9acd73751690",
+    "name": "TraverseG120035",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T12:00:35.700Z",
+    "firstJoin": "2026-11-07T12:00:35.700Z",
+    "completed": false
+  },
+  "487d622c-70d3-3d5f-bc1e-bae06e8bd786": {
+    "uuid": "487d622c-70d3-3d5f-bc1e-bae06e8bd786",
+    "name": "SurveyG121447",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T12:14:48.150Z",
+    "firstJoin": "2026-11-07T12:14:48.150Z",
+    "completed": false
+  },
+  "e4742ff5-5806-39b0-bbde-3e53f01742fe": {
+    "uuid": "e4742ff5-5806-39b0-bbde-3e53f01742fe",
+    "name": "TraverseG121739",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T12:17:39.792Z",
+    "firstJoin": "2026-11-07T12:17:39.792Z",
+    "completed": false
+  },
+  "64aeac44-1a37-3744-b09a-7e197dcc7f16": {
+    "uuid": "64aeac44-1a37-3744-b09a-7e197dcc7f16",
+    "name": "PrepSurvey",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T21:16:31.690Z",
+    "firstJoin": "2026-11-07T21:16:31.690Z",
+    "completed": false
+  },
+  "61b502c1-a4a1-3131-b1b6-56d25fe82ac8": {
+    "uuid": "61b502c1-a4a1-3131-b1b6-56d25fe82ac8",
+    "name": "FloorPrep",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T21:28:06.383Z",
+    "firstJoin": "2026-11-07T21:28:06.383Z",
+    "completed": false
+  },
+  "65763ed7-6a00-3731-9951-8b5903455823": {
+    "uuid": "65763ed7-6a00-3731-9951-8b5903455823",
+    "name": "PrepSurvey2",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T21:32:38.095Z",
+    "firstJoin": "2026-11-07T21:32:38.095Z",
+    "completed": false
+  },
+  "67bb45ab-c1cd-3ace-9fb3-ca080ba77d75": {
+    "uuid": "67bb45ab-c1cd-3ace-9fb3-ca080ba77d75",
+    "name": "FloorPrep2",
+    "stage": "welcome",
+    "stageStarted": "2026-11-07T21:35:00.004Z",
+    "firstJoin": "2026-11-07T21:35:00.004Z",
+    "completed": false
+  }
+}

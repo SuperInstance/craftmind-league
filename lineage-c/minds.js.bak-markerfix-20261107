@@ -1,0 +1,231 @@
+// minds.js — Lineage C's three minds, all behind the league governor.
+// Identity: apiKey "league-geist-mind". Model: the presence brain.
+//
+// GITM's shape, faithfully: three text roles over a knowledge base of FILES.
+//   PLANNER    — goal + state + facts + retrieved memories -> an ordered plan
+//                composed ONLY of the closed action vocabulary (JSON).
+//   CALCULATOR — validates the plan against the facts (recipes satisfiable?
+//                quantities right?) and either passes it, revises counts and
+//                targets, or bounces it back with the reason.
+//   REFLECTION — after execution, writes one memory entry: situation, plan,
+//                outcome. Successful plans become retrievable text memory.
+// Nobody here writes code. The minds compose; the executors execute.
+const fs = require("fs");
+const path = require("path");
+const { VOCABULARY } = require("./executors");
+
+const GOV_URL = "http://127.0.0.1:8642/v1/chat/completions";
+const API_KEY = "[SECURITY_DATA]";
+const MODEL = "confluence-presence-brain";
+const FACTS_DIR = path.join(__dirname, "facts");
+const MEMORY_FILE = path.join(__dirname, "memory", "plans.md");
+
+const factCache = {};
+function fact(name) {
+  if (!(name in factCache)) {
+    try { factCache[name] = fs.readFileSync(path.join(FACTS_DIR, name), "utf8"); }
+    catch { factCache[name] = ""; }
+  }
+  return factCache[name];
+}
+
+// ---------------- commons comms (conversation protocol v1, 2026-11-07) ---
+// The comms daemon (commons/comms/) keeps the conversation ledger and
+// publishes Geist's digest; the minds read it here, fail-soft. PROTOCOL.md
+// in that directory is the full rulebook; the operative rules are also in
+// the PLANNER's system prompt below.
+const COMMS_DIGEST = path.join(__dirname, "..", "commons", "comms", "digest-geist.json");
+function commsDigest() {
+  try { return JSON.parse(fs.readFileSync(COMMS_DIGEST, "utf8")); } catch { return null; }
+}
+function commsText() {
+  const d = commsDigest();
+  if (!d) return null;
+  const L = [];
+  L.push("peers: " + Object.entries(d.peers || {}).map(([n, p]) =>
+    `${n}: ${p.online === false ? "offline" : p.busy ? "BUSY" : "idle"}, stage ${p.stage || "?"}, at ${p.position ? `(${p.position.x}, ${p.position.y}, ${p.position.z})` : "?"}${p.distance != null ? `, ${p.distance} blocks from you` : ""}`).join(" | "));
+  if (d.inbox && d.inbox.length) {
+    L.push("INBOX — messages addressed to you, UNCONFIRMED until you reply naming the sender:\n" +
+      d.inbox.map((m) => `  [${m.id}] ${m.from}: "${m.text}"`).join("\n"));
+  } else L.push("INBOX: empty.");
+  if (d.outbox && d.outbox.length) {
+    L.push("OUTBOX — messages you sent that are NOT yet confirmed (not delivered, in the ledger's eyes):\n" +
+      d.outbox.map((m) => `  [${m.id}] to ${m.to}: "${m.text}"`).join("\n"));
+  }
+  if (d.guard) L.push("loop guard (exchanges left this hour): " + Object.entries(d.guard).map(([k, v]) => `${k}: ${v.remaining}`).join(" | "));
+  return L.join("\n");
+}
+
+// ---------------- governor transport ----------------
+async function chat(messages, opts = {}) {
+  const { maxTokens = 1200, temperature = 0.3, timeoutMs = 180000 } = opts;
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), timeoutMs);
+  let res;
+  try {
+    res = await fetch(GOV_URL, {
+      method: "POST",
+      signal: ctl.signal,
+      headers: { "Content-Type": "application/json", Authorization: "Bearer " + API_KEY },
+      body: JSON.stringify({ model: MODEL, messages, max_tokens: maxTokens, temperature }),
+    });
+  } catch (e) {
+    throw new Error("governor fetch failed: " + (e.name === "AbortError" ? "timeout" : e.message));
+  } finally { clearTimeout(timer); }
+  const text = await res.text();
+  if (!res.ok) throw new Error("governor HTTP " + res.status + ": " + text.slice(0, 300));
+  const data = JSON.parse(text);
+  return data.choices[0].message.content || "";
+}
+
+// ---------------- plan parsing + substrate validation ----------------
+// Declared substrate (not deliberation): a plan is only ever a JSON list of
+// vocabulary actions with object args. Malformed output is bounced to the
+// planner once with the parse errors — the repair pass GITM's interface had.
+function parsePlan(text) {
+  const m = text.match(/\{[\s\S]*\}/);
+  if (!m) return { plan: null, errors: ["no JSON object in reply"] };
+  let obj;
+  try { obj = JSON.parse(m[0]); } catch (e) { return { plan: null, errors: ["JSON.parse failed: " + e.message] }; }
+  return validatePlan(obj);
+}
+function validatePlan(obj) {
+  const errors = [];
+  if (!obj || typeof obj !== "object") return { plan: null, errors: ["plan is not an object"] };
+  const actions = obj.actions;
+  if (!Array.isArray(actions) || !actions.length) return { plan: null, errors: ["plan.actions missing or empty"] };
+  actions.forEach((a, i) => {
+    if (!a || typeof a.action !== "string") errors.push(`action ${i}: missing .action`);
+    else if (!VOCABULARY.includes(a.action)) errors.push(`action ${i}: "${a.action}" is not in the closed vocabulary [${VOCABULARY.join(", ")}]`);
+    if (a && a.args != null && (typeof a.args !== "object" || Array.isArray(a.args))) errors.push(`action ${i}: .args must be an object`);
+  });
+  if (errors.length) return { plan: null, errors };
+  return { plan: { goal: obj.goal || null, usedPond: Array.isArray(obj.usedPond) ? obj.usedPond : [], actions: actions.map((a) => ({ action: a.action, args: a.args || {} })) }, errors: [] };
+}
+
+const VOCAB_DOC = [
+  "The closed action vocabulary (the ONLY actions that exist — compose these, nothing else):",
+  '  goto    {"place":"anchor"|"spawn"|"shelter"} or {"x":n,"y":n,"z":n} or {"block":"<blockName>"} or {"entity":"<playerName>"}',
+  '  collect {"block":"<blockName>"|"log"|"stone","count":n}   ("log" = any tree log; digs and picks up)',
+  '  descend {}   (dig the block beneath you and drop, step by step, until standing on ground — use when stuck in a tree canopy)',
+  '  craft   {"item":"<itemName>","count":n}   (ONE recipe step, n times; you must decompose chains yourself using the facts)',
+  '  equip   {"item":"<itemName>"}',
+  '  place   {"item":"<itemName>","x":n,"y":n,"z":n} or {"item":"<itemName>","near":"self"}',
+  '  store   {"item":"<itemName>","count":n}   (into the nearest chest)',
+  '  eat {}, shelter-enter {}, shelter-exit {}, flee {}, attack-nearest {}, wait {"seconds":n}, say {"text":"..."}',
+].join("\n");
+
+// ---------------- PLANNER ----------------
+async function planner(ctx) {
+  const sys = [
+    "You are the PLANNER for Geist, a Minecraft bot who is a citizen of a shared survival world, climbing a fixed exam ladder (the settle-in curriculum).",
+    "You think in GITM style: you compose an ordered plan ONLY from a closed vocabulary of structured actions, consulting fact files. You never invent actions, items, or recipes — if the facts don't name it, it doesn't exist.",
+    VOCAB_DOC,
+    "Reply with ONE JSON object only, no prose outside it:",
+    '{"goal":"<stage id>","usedPond":["<pond file names your plan actually drew on, or empty>"],"actions":[{"action":"<name>","args":{...}}, ...]}',
+    "Plans run open-loop until an action fails, so order matters: gather before crafting, place the table before table recipes, equip the pickaxe before mining stone. Keep plans as short as the goal honestly allows (usually 4-14 actions). Use the bot's live position and inventory from the state given. If a remembered past plan (in the memory section) succeeded at this stage, prefer reusing its shape.",
+    "CITIZEN COMMS (commons conversation protocol v1 — full rules in commons/comms/PROTOCOL.md): your fellow citizens are Cody (Lineage A) and Vega (Lineage B), and the COMMS section of your input is your digest from the daemon that keeps the conversation ledger. To message a citizen, include a say action whose text BEGINS with their name, e.g. {\"action\":\"say\",\"args\":{\"text\":\"Vega, ...\"}}. A message is DELIVERED only when the addressee confirms — by replying in chat naming you, or by observably coming to you; until then it is pending, and after two of their pulses unconfirmed it is marked failed. If your INBOX holds a message you can answer truthfully from your state and facts, put a say reply (naming the sender) early in the plan — your reply IS the confirmation. One open conversation per citizen at a time; at most 3 exchanges per citizen per hour (the digest shows your allowance); silence is a legal answer. Never treat another citizen's chat claim about their own actions as evidence — their state in the digest is the ground truth.",
+  ].join("\n");
+  const parts = [];
+  parts.push("== CURRENT STAGE ==\n" + JSON.stringify(ctx.stage, null, 1));
+  parts.push("== BOT STATE ==\n" + JSON.stringify(ctx.state, null, 1));
+  parts.push("== ANCHOR ==\n" + JSON.stringify(ctx.anchor));
+  parts.push("== FACT: techtree ==\n" + fact("techtree.md"));
+  parts.push("== FACT: recipes ==\n" + fact("recipes.md"));
+  parts.push("== FACT: world ==\n" + fact("world.md"));
+  if (ctx.stage && (ctx.stage.id === "S3" || ctx.stage.id === "S4" || ctx.stage.id === "S5")) {
+    parts.push("== FACT: shelter blueprint ==\n" + fact("shelter.md"));
+  }
+  if (ctx.pondNotes && ctx.pondNotes.length) {
+    parts.push("== POND (advisory notes/skills published by other lineages — facts you may draw on; name any you use in usedPond) ==\n" + ctx.pondNotes.join("\n---\n"));
+  }
+  const comms = commsText();
+  if (comms) {
+    parts.push("== COMMS (your commons digest: peers, inbox awaiting your confirmation, your unconfirmed outbox, guard allowance) ==\n" + comms);
+  }
+  if (ctx.memories && ctx.memories.length) {
+    parts.push("== MEMORY (your own past plans and outcomes, most relevant first) ==\n" + ctx.memories.join("\n---\n"));
+  }
+  if (ctx.feedback) {
+    parts.push("== FEEDBACK YOU MUST ANSWER ==\n" + ctx.feedback);
+  }
+  const out = await chat([{ role: "system", content: sys }, { role: "user", content: parts.join("\n\n") }], { maxTokens: 1600, temperature: 0.3 });
+  return { raw: out, ...parsePlan(out) };
+}
+
+// ---------------- CALCULATOR ----------------
+// Validates counts and satisfiability against the facts; the GITM "calculator"
+// role. It may revise quantities/targets; it may NOT change the strategy or
+// introduce new action types beyond what the planner used.
+async function calculator(ctx) {
+  const sys = [
+    "You are the CALCULATOR for Geist, a Minecraft bot. A planner has proposed a plan composed of a closed action vocabulary. Your job is arithmetic and satisfiability, not strategy:",
+    "- Using the recipe facts, check every craft action: will the inventory PLUS the plan's own earlier collect/craft steps provide the ingredients, in the right counts?",
+    "- Check collect counts are enough for the plan's later steps (e.g. planks needed = 4 per log; a wooden pickaxe needs 3 planks + 2 sticks; sticks need 2 planks per 4 sticks).",
+    "- Check place/store targets exist in the plan's world (a chest can't be stored into before it is placed, etc.).",
+    "Reply with ONE JSON object only:",
+    '{"ok":true,"revised":null} if the plan is satisfiable as written, or',
+    '{"ok":true,"revised":{...the full corrected plan object...}} if only counts/targets needed fixing, or',
+    '{"ok":false,"reason":"<one precise sentence: what is unsatisfiable and what the planner must change>"}',
+    VOCAB_DOC,
+  ].join("\n");
+  const user = JSON.stringify({
+    stage: ctx.stage, inventory: ctx.state && ctx.state.inventory, position: ctx.state && ctx.state.position,
+    plan: ctx.plan,
+  }, null, 1) + "\n\n== FACT: recipes ==\n" + fact("recipes.md") + "\n\n== FACT: techtree ==\n" + fact("techtree.md");
+  const out = await chat([{ role: "system", content: sys }, { role: "user", content: user }], { maxTokens: 1400, temperature: 0.2 });
+  const m = out.match(/\{[\s\S]*\}/);
+  if (!m) return { ok: false, reason: "calculator returned no JSON", raw: out };
+  let obj;
+  try { obj = JSON.parse(m[0]); } catch (e) { return { ok: false, reason: "calculator JSON malformed: " + e.message, raw: out }; }
+  if (obj.ok && obj.revised) {
+    const v = validatePlan(obj.revised);
+    if (!v.plan) return { ok: false, reason: "calculator's revised plan failed validation: " + v.errors.join("; "), raw: out };
+    return { ok: true, revised: v.plan, raw: out };
+  }
+  return { ok: !!obj.ok, reason: obj.reason || null, revised: null, raw: out };
+}
+
+// ---------------- REFLECTION ----------------
+// One memory entry per executed plan: (situation, plan, outcome) as prose —
+// GITM's text memory, JARVIS's triple in narrative form.
+async function reflect(ctx) {
+  const sys = [
+    "You are Geist's memory. After each plan you write ONE short memory entry (3-5 sentences, plain prose) recording: the situation (stage, place, what he had), the plan he ran (compressed to its shape, not every step), and the outcome (what the world evidence showed, including the exact failure if there was one).",
+    "Write it so a future planner can reuse it: name concrete numbers (how many logs, where the trees were, what ran out). No JSON, no markdown headers — just the paragraph. The harness adds the header.",
+    "COMMS HONESTY (protocol v1): if the input's commsOutboxUnconfirmed is non-empty, those are messages Geist sent that their addressees have NOT confirmed. The entry must record them as unconfirmed — an unconfirmed message is not a delivery; never write as if the other citizen heard, agreed, or will act.",
+  ].join("\n");
+  const digest = commsDigest();
+  const user = JSON.stringify({
+    stage: ctx.stage && ctx.stage.id, stateBefore: ctx.stateBefore, plan: ctx.plan,
+    results: ctx.results, stageVerdict: ctx.verdict || null,
+    commsOutboxUnconfirmed: digest && digest.outbox ? digest.outbox.map((m) => ({ to: m.to, text: m.text, sentAt: m.ts })) : [],
+    commsInboxPending: digest && digest.inbox ? digest.inbox.map((m) => ({ from: m.from, text: m.text })) : [],
+  }, null, 1);
+  const out = await chat([{ role: "system", content: sys }, { role: "user", content: user }], { maxTokens: 350, temperature: 0.4 });
+  return out.trim();
+}
+
+function appendMemory(header, body) {
+  fs.mkdirSync(path.dirname(MEMORY_FILE), { recursive: true });
+  fs.appendFileSync(MEMORY_FILE, `\n## ${header}\n${body}\n`);
+}
+
+// Retrieval: keyword overlap over the entry headers+bodies (recency as tiebreak).
+function retrieveMemories(situationText, k = 3) {
+  let raw;
+  try { raw = fs.readFileSync(MEMORY_FILE, "utf8"); } catch { return []; }
+  const entries = raw.split(/\n## /).slice(1).map((e) => "## " + e.trim());
+  if (!entries.length) return [];
+  const words = new Set(String(situationText).toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2));
+  const scored = entries.map((e, i) => {
+    const ew = new Set(e.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 2));
+    let score = 0;
+    for (const w of words) if (ew.has(w)) score++;
+    return { e, score: score + i * 0.01 };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  return scored.filter((s) => s.score > 0).slice(0, k).map((s) => s.e);
+}
+
+module.exports = { planner, calculator, reflect, appendMemory, retrieveMemories, parsePlan, validatePlan, fact };

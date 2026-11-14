@@ -1,0 +1,440 @@
+=== day18 launch 2026-11-13T12:09:07Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation — he wakes in the bowl) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE REFUSE-START: lease-revoked — the floor holds no live lease for this driver, or the inherited death count is already at the limit; stopping the day per charter
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day18 driver exited 2026-11-13T12:09:09Z rc=0 ===
+=== day18 launch 2026-11-13T12:10:08Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation — he wakes in the bowl) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE REFUSE-START: lease-revoked — the floor holds no live lease for this driver, or the inherited death count is already at the limit; stopping the day per charter
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[fishing-bridge] Plugin destroyed
+[rate-limiter] Plugin destroyed
+=== day18 driver exited 2026-11-13T12:10:10Z rc=0 ===
+=== day18 launch 2026-11-13T12:13:42Z (RUN_MS=5100000, wake: floor feed-verify -> lease -> driver feed-confirm -> day, NO relocation — he wakes in the bowl) ===
+[BotMessenger] Started state sync (interval: 5000ms)
+[fishing-bridge] Plugin loaded
+[rate-limiter] Plugin loaded
+[game-registry] Starting plugin load sequence...
+[game-registry] Already loaded: rate-limiter
+[game-registry] Skipping fishing-bridge: Missing dependencies: rate-limiter
+[game-registry] Required plugin fishing-bridge skipped due to missing dependencies!
+[game-registry] Skipping npc-system: Missing dependencies: fishing-bridge
+[game-registry] Skipping onboarding: Missing dependencies: npc-system
+[game-registry] Skipping economy: Missing dependencies: fishing-bridge
+[game-registry] Skipping quest-engine: Missing dependencies: economy
+[game-registry] Skipping collection: Missing dependencies: economy
+[game-registry] Skipping leaderboard: Missing dependencies: economy, collection
+[game-registry] Skipping challenges: Missing dependencies: leaderboard
+[game-registry] Skipping tournament: Missing dependencies: challenges
+[game-registry] Skipping market: Missing dependencies: economy
+[game-registry] Skipping social: Missing dependencies: market
+[game-registry] ✗ Failed to load analytics: Plugin file not found: /home/caseydigennaro/craftmind-league/bots/craftmind/src/analytics/index.js
+[game-registry] Load complete: 0 loaded, 1 failed, 12 skipped
+[fishing-bridge] Bot spawned, initializing ESM modules...
+[BotMessenger] Sent greeting to ALL
+[DD] GATE: live lease confirmed at start
+[DD] spawned at 62.6,62.0,-90.7 hp=20 food=20 worldDeaths=136 runDeaths=0 placesKnown=1 abortWiring=shouldAbort(0)=false/shouldAbort(3)=true
+[DD] WAKE: sequence start {"pos":{"x":62.6,"y":62,"z":-90.7},"hp":20,"food":20}
+[DD] WAKE feed: awaiting EXTERNAL feed via the separate-process op channel (no in-process bot)
+[DD] WAKE feed: external feed wait ended {"pos":{"x":62.6,"y":62,"z":-90.7},"hp":20,"food":20} fedOk=true
+[DD] WAKE: sequence done {"pos":{"x":62.6,"y":62,"z":-90.7},"hp":20,"food":20} fmTotal=0
+[fishing-bridge] Failed to load ESM modules: Cannot find module '/home/caseydigennaro/craftmind-league/bots/craftmind-fishing/src/world/fish-spawner.js' imported from /home/caseydigennaro/craftmind-league/bots/craftmind/src/plugins/fishing-bridge.js
+[DD] cycle 1 [deepinfra:deepseek-v4.1-flash] say="Morning in the bowl again. East edge, step up onto my own pad — that's the whole first act." cmd="goto 62 67 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 3 [deepinfra:deepseek-v4.1-flash] say="Still in the bowl, zombie on my heels. East face is my way up — one long leg onto the pad." cmd="goto 64 67 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 5 [deepinfra:deepseek-v4.1-flash] say="Two long legs and I'm still at the floor. Fine — the house said it plain: dig one dirt from the rim and make my own rung." cmd="dig 61 63 -90"
+[DD] DIG GUARD: armed — entry level 62 at (62,-91); cap: no dig with top below 60
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 7 [deepinfra:deepseek-v4.1-flash] say="Dig aborted — that zombie's still on me and the floor keeps hopping me. Let me deal with it before I try anything with my hands." cmd="attack zombie"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 9 [deepinfra:deepseek-v4.1-flash] say="That zombie's right on me and the floor keeps snatching me away. I'll take the swing again — it's that or get chewed." cmd="attack zombie"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[rate-limiter] Delayed message (window limit): 9611ms
+[DD] cycle 11 [deepinfra:deepseek-v4.1-flash] say="Two swings, two interruptions, and I haven't moved an inch. The floor's got me pinned — I'll try the rung again while it's busy hopping." cmd="dig 61 63 -90"
+[rate-limiter] Delayed message (window limit): 8219ms
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[rate-limiter] Delayed message (window limit): 5972ms
+[DD] cycle 13 [deepinfra:deepseek-v4.1-flash] say="Every hand-verb gets aborted and every walk gets hopped back. I'm going to stand still and let the floor do its thing — wait it out and see where I land." cmd="wait 10"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 15 [deepinfra:deepseek-v4.1-flash] say="Ten seconds of standing still and I'm still in the same hole with the same zombie at four blocks. Nothing's moving but the clock. Let me try one clean long leg — west, where the ground's up at y67." cmd="goto 55 67 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (62.8,67,-91.9) ok=false moved=0.57 pos=(61.7,61.0,-90.2)
+[DD] FLOOR hop: hop 2: -> (63.0,67,-91.7) ok=false moved=0.01 pos=(61.7,61.2,-90.1)
+[DD] FLOOR hop: hop 3: -> (61.9,67,-92.1) ok=false moved=0.24 pos=(61.7,61.0,-90.4)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":3,"dist":3.5}
+[DD] cycle 17 [deepinfra:deepseek-v4.1-flash] say="I dropped a level instead of climbing — the floor's pulling me down, not out. West wall's six above my feet and I've no pickaxe. The only way up is a block I place myself. Let me dig the dirt at my own level first." cmd="dig 60 61 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.5}
+[DD] cycle 19 [deepinfra:deepseek-v4.1-flash] say="Empty air where I dug — I'm standing in a hollow, not a floor. The rim's above me on every side. Let me get a clean look at what's actually under and around my feet." cmd="look 61 61 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.5}
+[DD] cycle 21 [deepinfra:deepseek-v4.1-flash] say="I'm in the bowl again — the low cell at home's west edge, same as I slept in. The house proved no way out of this by my own hands. So I'll do the one thing that's left: flag it and wait for the crew's hands." cmd="wait 15"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.5}
+[DD] cycle 23 [deepinfra:deepseek-v4.1-flash] say="No hands came. Fine — the rung's the spare key the house named: dig one dirt out of the rim wall at my own level, place it against the east face, step up. East wall's stone brick, but the north and south are grass. Let me try the north rim." cmd="dig 61 66 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.3,63,-90.9) ok=false moved=0.38 pos=(61.7,62.0,-90.7)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":1,"dist":3.2}
+[DD] cycle 25 [deepinfra:deepseek-v4.1-flash] say="Can't even reach the rim — walker times out. The house proved no way out of this bowl by my own body. I'm not going to burn another day cutting at walls the crew already measured. I'll stand fed and whole and wait for the world's side to open, like the verdict said." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.2}
+[DD] cycle 27 [deepinfra:deepseek-v4.1-flash] say="Still nobody's hands. But I noticed something: I'm at y62 now, a level up from where I was, and the north rim reads only a few above me. The house said every step UP is open. Let me try one long leg north, well past the rim." cmd="goto 61 67 -85"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.3}
+[DD] cycle 29 [deepinfra:deepseek-v4.1-flash] say="Dropped right back to y61 — the bowl won't let me hold even the level I stood on. That's the machinery the crew measured, not me failing. I'll stop poking at it and just stand here fed, and let the world's side come to me." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.3}
+[DD] cycle 31 [deepinfra:deepseek-v4.1-flash] say="The house said the placed rung is the bowl's spare key — dig one dirt bare-handed from a rim wall at my own level, place it against the face, step up. My feet are at y61; the north rim's grass tops sit at y66. Let me try digging the dirt right at my reach, north." cmd="dig 61 62 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.3}
+[DD] cycle 33 [deepinfra:deepseek-v4.1-flash] say="Nothing at my own level to dig — the rim's all above my reach. That's the bowl being a bowl. I'll stop wasting daylight on it. Standing fed and whole, waiting for the world's side — that's the whole honest plan now." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.3}
+[DD] cycle 35 [deepinfra:deepseek-v4.1-flash] say="Let me actually look at what's around me instead of guessing — maybe there's a step I've been standing past this whole time." cmd="look 62 62 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.3}
+[DD] cycle 37 [deepinfra:deepseek-v4.1-flash] say="The east column reads stone_bricks at y63 — that's only two above my feet. If I can get onto that, I'm a step up. Let me try a long leg east, well past it." cmd="goto 72 63 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.4}
+[DD] cycle 39 [deepinfra:deepseek-v4.1-flash] say="That leg didn't even leave the cell — the walker gave up before it started. East wall's two above me, so it's a wall, not a step. I'll sit fed and whole and let the world's side do what the house says only it can." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.4}
+[DD] cycle 41 [deepinfra:deepseek-v4.1-flash] say="South's the one column that reads level with my feet — grass at y67, same as me. If anywhere opens, it's that way. One long leg south, well past it." cmd="goto 61 61 -80"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (62.7,67,-91.0) ok=false moved=0.72 pos=(62.3,61.0,-89.7)
+[DD] FLOOR hop: hop 2: -> (63.2,67,-91.5) ok=false moved=0.00 pos=(62.3,61.0,-89.7)
+[DD] FLOOR hop: hop 3: -> (62.0,67,-91.7) ok=false moved=1.01 pos=(62.3,62.0,-90.7)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":3,"dist":2.9}
+[DD] cycle 43 [deepinfra:deepseek-v4.1-flash] say="I'm up a level now — feet at y62, and the south column reads level with me. That's the first real move I've made all day. South again, one long leg." cmd="goto 62 62 -80"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.2,67,-91.2) ok=false moved=0.41 pos=(62.7,61.0,-89.6)
+[DD] FLOOR hop: hop 2: -> (63.4,67,-91.5) ok=false moved=0.05 pos=(62.7,62.0,-89.7)
+[DD] FLOOR hop: hop 3: -> (62.3,67,-91.6) ok=false moved=0.04 pos=(62.7,61.6,-89.7)
+[DD] FLOOR hop: hop 4: -> (64.3,64,-90.8) ok=false moved=0.01 pos=(62.7,61.8,-89.7)
+[DD] FLOOR hop: hop 5: -> (63.4,67,-91.5) ok=false moved=0.04 pos=(62.7,62.0,-89.7)
+[DD] FLOOR hop: hop 6: -> (62.3,67,-91.7) ok=false moved=0.56 pos=(63.3,62.0,-89.7)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":6,"dist":3.4}
+[DD] cycle 45 [deepinfra:deepseek-v4.1-flash] say="The south column beside me reads level with my feet — that's a step I can actually take. Long leg south, past the wall." cmd="goto 63 62 -80"
+[DD] DENSITY block close: acts=45 {"goto":8,"dig":5,"attack":2,"wait":6,"look":2} {"flee":22} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.6,67,-91.3) ok=false moved=1.36 pos=(63.5,63.0,-90.6)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":1,"dist":2.4}
+[DD] cycle 47 [deepinfra:deepseek-v4.1-flash] say="Every leg gains me a level and no ground — I'm climbing the inside of this bowl one hop at a time. y63 now, home's four above me. South column's level again. Keep going." cmd="goto 63 64 -80"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.8,67,-91.3) ok=false moved=1.37 pos=(63.7,63.1,-90.7)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":1,"dist":2.3}
+[DD] cycle 49 [deepinfra:deepseek-v4.1-flash] say="North of me is oak planks at y67 — that's my own pad, three above my feet. That's not a wall, that's a shelf I can reach. Long leg north, well past it." cmd="goto 63 67 -88"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.4}
+[DD] cycle 51 [deepinfra:deepseek-v4.1-flash] say="The world keeps setting me back down at y62 no matter which way I aim. Fine — I'm not going to spend the morning arguing with my own feet. There's a zombie on me and a pig nearby; I'll sit tight, fed and whole, and let the world's side make its move." cmd="wait 15"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.4}
+[DD] cycle 53 [deepinfra:deepseek-v4.1-flash] say="The zombie keeps getting hopped away from me by my own floor, and I keep landing back at y62. But that dirt wall west of me is at my hand level — dirt digs bare-handed. Let me take one block out of it and see what the world says." cmd="dig 62 62 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.4}
+[DD] cycle 55 [deepinfra:deepseek-v4.1-flash] say="No block there — I'm reading air where I thought wall. Let me dig the grass right under my own hand at my feet level, west side, and see if I can carve a step." cmd="dig 62 61 -90"
+[DD] BELOW-GRADE GUARD (relative): dig with top 62 refused - at/below his feet 62 while below the pad; the floor he stands on is not dug
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3.4}
+[DD] cycle 57 [deepinfra:deepseek-v4.1-flash] say="The crew's rule shut that dig — fine, down is shut, that's the rule doing its job. The column tops west and south read y67, four and five above me. That's the pad itself. One long leg south, well past the bowl's wall." cmd="goto 63 67 -82"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.7,67,-91.3) ok=false moved=1.34 pos=(63.6,63.0,-90.7)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":1,"dist":2.3}
+[DD] cycle 59 [deepinfra:deepseek-v4.1-flash] say="Every leg ends with the floor setting me back down. The pad's own blocks are at y67, three above my feet, and the walker can't take three. But a placed block is a first-class step — and I've got nothing to place. So: the oak to the west. Walk there, and my eyes name its foot." cmd="goto 58 67 -105"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.3}
+[DD] cycle 61 [deepinfra:deepseek-v4.1-flash] say="Each leg gains me exactly one level — y62, then y63. That's the world's one step, same as the stand-in body found. So I'll take it: one long leg west again, and see if the next rung comes." cmd="goto 58 67 -105"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 63 [deepinfra:deepseek-v4.1-flash] say="That rung didn't come twice. y63 is where I live, and the pad is four above. The crew proved no body walks out of here alone — so I'll stop burning daylight on legs that don't land. Fed, whole, twenty-seven porkchops. I'll eat when I need to and let the world's side make its move." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 65 [deepinfra:deepseek-v4.1-flash] say="The clock jumped backwards — 4287 down to 1412. The crew's hold is doing something odd, but the sky's still light and I'm still standing. Nothing came at me. Let me look up at the pad and see what's actually there." cmd="look 64 67 -94"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 67 [deepinfra:deepseek-v4.1-flash] say="Still the same four walls and a table I can see but can't reach. One more long leg — south this time, along the open shoulder where the ground tops read y67 — and if it doesn't gain, I stop pretending the bowl isn't the day." cmd="goto 60 67 -88"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 69 [deepinfra:deepseek-v4.1-flash] say="Didn't move an inch. Fine — the bowl is the day, and I won't cut at its walls. But the room's mine at my own level: that stone-brick face east of me at y64, and the dirt at hand height. Let me see what's actually under my feet and beside me." cmd="dig 64 64 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 71 [deepinfra:deepseek-v4.1-flash] say="Digging aborted — the guard's line, or the ground's. Alright. I'm not going to keep knocking on walls that refuse. Fed, whole, twenty-seven porkchops, and the world's side hasn't come yet. I'll sit with that a while." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 73 [deepinfra:deepseek-v4.1-flash] say="The clock's gone backwards again — 2252 down to 1286. Something in the crew's hold is loose. I'm not going to burn a whole day tapping at walls. But that dirt at hand height on the south face — that's mine to dig, and it's the one card left in this room." cmd="dig 63 63 -89"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 75 [deepinfra:deepseek-v4.1-flash] say="Aborted again. Every dig at my own feet is being refused, and I know why — I'm standing below the pad with no pickaxe, and that guard is doing exactly its job. So I'll stop arguing with it. The world's side, or nothing. I'll keep my feet still and my porkchops close." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 77 [deepinfra:deepseek-v4.1-flash] say="Still here, still whole. The clock keeps slipping — 1386 up to 1906 — but the sky stays light and nothing's come at me. I'll take the quiet and hold my ground." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 79 [deepinfra:deepseek-v4.1-flash] say="Two waits and the world hasn't moved a rung for me. Sitting still isn't a plan either. The pad's north of me and only four up — let me try one leg north, straight at the table's own column, and see what the ground gives." cmd="goto 64 67 -92"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.3}
+[DD] cycle 81 [deepinfra:deepseek-v4.1-flash] say="One block north, that's all the wall gave me — and it's the same one step this whole bowl allows. I've proven that now, in my own body, same as the stand-in. So: no more knocking. Twenty-seven porkchops and a light sky is a fine way to spend a day I can't spend working." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.3}
+[DD] cycle 83 [deepinfra:deepseek-v4.1-flash] say="Still light, still fed, still breathing. The clock's creeping up toward midday and nothing in this room has changed for me. I'll keep the watch and keep my feet where they are." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.3}
+[DD] cycle 85 [deepinfra:deepseek-v4.1-flash] say="Every wait, the same zombie shows up and the floor hops me home two blocks at a time — and I end up right back here. That's not a coincidence, that's the room telling me something. Fine. If the floor wants to carry me toward home, I'll let it carry me and keep moving with it instead of fighting it." cmd="goto 60 67 -93"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 87 [deepinfra:deepseek-v4.1-flash] say="Barely a third of a block west for all that. The bowl gives one step and takes it back. I've argued with this wall long enough — I'm going to sit down, eat when I'm hungry, and let the world decide when it wants to open." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 89 [deepinfra:deepseek-v4.1-flash] say="Midday's nearly here and the room's still the same room. But there's dirt in that west wall at my own level — and dirt digs bare-handed, stone doesn't. If I can't climb out, maybe I can walk out sideways." cmd="dig 62 63 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 91 [deepinfra:deepseek-v4.1-flash] say="Nothing at my own level there — it's air. So the west wall isn't a wall at my feet at all. Then maybe the way out is at the level of my eyes, not my boots. Let me look and see what's actually around me." cmd="look 63 64 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 93 [deepinfra:deepseek-v4.1-flash] say="The column tops say the ground west of me stands at three above my feet — a step and a half up, not a wall. The walker climbs +1 on its own; if that west ground is a stair, I want to be standing on it. Let me try a long leg west onto the open shoulder." cmd="goto 58 67 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.1}
+[DD] cycle 95 [deepinfra:deepseek-v4.1-flash] say="A tenth of a block west and the clock's reset to dawn. Something's turning the day over every time I push at that wall — like the room wants me to start fresh. Alright. I'll stop shoving and just watch the morning come in." cmd="wait 20"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.1}
+[DD] cycle 97 [deepinfra:deepseek-v4.1-flash] say="The north ground at my own level is oak planks — my own table's floor, standing one step up. Dirt and planks both dig bare-handed. If I can't go west, maybe I go north, up onto the pad one notch at a time." cmd="dig 63 63 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.1}
+[DD] cycle 99 [deepinfra:deepseek-v4.1-flash] say="Air again at my feet. Fine — the room's telling me my feet are already on open floor. The wall I keep hitting is the one above me. Let me try digging the block right over my head's level, where the oak planks actually are." cmd="dig 63 64 -91"
+[DD] DENSITY block close: acts=54 {"goto":9,"wait":9,"dig":7,"look":2} {"flee":27} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.1}
+[DD] cycle 101 [deepinfra:deepseek-v4.1-flash] say="Two air cells in a row — so there's a gap over my head, not a wall. That means the block north of me at the planks' height is the real thing to test. Let me put my hands on the plank block itself." cmd="dig 63 67 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.1}
+[rate-limiter] Delayed message (window limit): 13926ms
+[DD] cycle 103 [deepinfra:deepseek-v4.1-flash] say="Air at (63,-91) all the way up — so my north is open sky above my feet, and the planks are somewhere else. I keep reading a map that doesn't match my boots. Let me just look at what's actually north of me at head height." cmd="look 63 65 -92"
+[rate-limiter] Delayed message (window limit): 12722ms
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.1}
+[rate-limiter] Delayed message (window limit): 10266ms
+[DD] cycle 105 [deepinfra:deepseek-v4.1-flash] say="I've been swinging at ghosts. My feet are at 63, the pad's at 67 — that's four up, and the house says every step up is open now. Let me stop poking walls and just aim high: one long leg north onto the pad itself." cmd="goto 64 67 -94"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2}
+[DD] cycle 107 [deepinfra:deepseek-v4.1-flash] say="Barely half a block of progress on a four-block climb — the walker won't climb a wall this tall, and the house proved it on a stand-in body already. My hands are empty and the bowl's floor is where I live. So I'll stop chasing the pad and take the room at my level: dig the dirt laterally, build myself something to stand on." cmd="dig 62 63 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2}
+[DD] cycle 109 [deepinfra:deepseek-v4.1-flash] say="Air there too — I'm standing in a pocket, not a hole with walls at my shoulders. The column tops tell me what's real: south of me is grass at my own level, one step up. That's the one direction the ground actually agrees with me. Let me walk south, on ground, and see where the bowl lets out." cmd="goto 63 64 -88"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.7,67,-91.3) ok=false moved=1.39 pos=(63.6,63.0,-90.7)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":1,"dist":2.3}
+[DD] cycle 111 [deepinfra:deepseek-v4.1-flash] say="Half a block south and I'm still at 63 — the ground south of me isn't where I thought either. Every map I'm reading is one level off. Let me stop guessing and just walk south on what's under my boots, one honest block at a time." cmd="goto 63 63 -87"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.2}
+[DD] cycle 113 [deepinfra:deepseek-v4.1-flash] say="I gained a level — I'm at 64 now, not 63. That's real. The ground's climbing under me a step at a time. So I keep walking, and I stop trusting the numbers I read off the map and trust the ones my boots give back." cmd="goto 63 65 -88"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.4}
+[DD] cycle 115 [deepinfra:deepseek-v4.1-flash] say="North of me now reads crafting_table at y67 — that's my table, three blocks off, and the ground between has a two-level drop in it. The walker won't take that. But I'm at 64 and the pad's at 67, and the house says every step up is open. Let me try the climb straight at the table column." cmd="goto 64 67 -94"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 117 [deepinfra:deepseek-v4.1-flash] say="Third try at the pad and I'm still at 64 — that's my one retry and more, and the house told me plain yesterday: the body alone can't walk out of this bowl. So the scene isn't the climb anymore. It's what I can do from where I stand. West of me is grass at 67 — a wall I can't climb — but the column right at my feet reads 0. Let me dig at my own level, sideways, and see what the dirt gives me." cmd="dig 65 64 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 119 [deepinfra:deepseek-v4.1-flash] say="Dig aborted — that's the below-grade guard refusing a dig at my own feet, and it's right to. But the column east of me reads -2, a drop, and the house says down stays shut. What about the one that reads +2 west — grass at 67? That's a step up, not down. Let me try digging the block I'd stand on to climb, at the level above my feet." cmd="dig 63 65 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.7}
+[DD] cycle 121 [deepinfra:deepseek-v4.1-flash] say="Aborted again — and the clock jumped back to dawn, so the crew's holding time hard. Two digs refused in a row tells me the guard reads my feet, not the target. Fine. The one thing I haven't tried from right here is walking east, toward the water trench — that's a real place I know, and it's on my own level, not down." cmd="goto 66 64 -91"
+[DD] PIT GUARD: goto into the pit (66,-91) refused; re-aiming at (62,67,-92)
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.4}
+[DD] cycle 123 [deepinfra:deepseek-v4.1-flash] say="The crew stopped my east walk — that 'water trench' I remember is the pit's own water, the drowning trap, and they won't let me near it. Good. So east is poison and up is refused and down is shut. But south of me the column reads 0 and then -1 — flat-ish ground at my own level. Let me just walk south along the shoulder and see if the bowl opens out somewhere I haven't tried." cmd="goto 64 64 -86"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.6}
+[DD] cycle 125 [deepinfra:deepseek-v4.1-flash] say="South didn't move me either — the bowl's walls are all around at my level and the walker can't thread them. Every direction's a dead end but one, and that one's the water. So here's my thinking: the pit's a drowning trap because I fell in and couldn't climb out. But if the water's shallow enough to stand in, and its rim reads lower than my feet, maybe it's a road, not a grave. I'll walk to the water's edge and look before I commit." cmd="look 66 63 -91"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.6}
+[DD] cycle 127 [deepinfra:deepseek-v4.1-flash] say="Water at 63, my feet at 64 — one deep, and I can stand in one deep. The pit's only a trap if I can't climb the far rim. But the crew keeps re-aiming me away from it, and I trust that more than I trust my own optimism. New thought: the zombie's been three blocks off me all morning and hasn't touched me. What if the bowl's not as sealed as I think — what if something ELSE walks in and out? Let me watch that zombie's path." cmd="wait 15"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.6}
+[DD] cycle 129 [deepinfra:deepseek-v4.1-flash] say="Zombie's still just three blocks off, patient as a landlord, and the pig's wandering close. Nothing's walked in or out but me. I've tried every direction the walker will take and it won't take any. So let me test the one thing I haven't: a single step up onto that grass at 67 right at my west shoulder — not a goto, just the place command, building myself a tread. If the guard's line is my feet, a block placed into a cell above my feet should be legal." cmd="place cooked_porkchop 63 64 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.6}
+[DD] cycle 131 [deepinfra:deepseek-v4.1-flash] say="Wrong cell — that one's floating air with nothing to lean on. The grass at 67 is the floor above me, so the cell to build in is the one right on top of it: 63, 68, -90. That's a step up, not down, and the guard should allow an up. Let me try placing there." cmd="place cooked_porkchop 63 68 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":2.6}
+[DD] cycle 133 [deepinfra:deepseek-v4.1-flash] say="Leaf litter in the way at the top of the grass — and me with nothing but porkchops to place. I can't build a step out of dinner. But the grass at 67 west of me is only three above my feet, and the column tops read 2 there, not 3 — so the ground actually steps up to my level somewhere. Let me try a short hop west onto the grass shoulder itself, not the pit, just west." cmd="goto 62 67 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (63.8,68,-89.8) ok=false moved=0.73 pos=(65.0,64.0,-90.3)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":1,"dist":3.3}
+[DD] cycle 135 [deepinfra:deepseek-v4.1-flash] say="Moved! East this time, a block and a half, not west — the walker slid me along the wall instead. But look at the ground now: dirt at my feet north, grass at 66 west and east, cobblestone south. The bowl's floor is opening up. Cobblestone south of me — that's the way. Let me push south along the low ground and see if it climbs." cmd="goto 65 64 -87"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (65.8,67,-88.5) ok=false moved=0.00 pos=(64.9,66.5,-86.7)
+[DD] FLOOR hop: hop 2: -> (63.5,72,-88.2) ok=false moved=0.02 pos=(64.9,66.0,-86.7)
+[DD] FLOOR hop: hop 3: -> (66.6,66,-87.7) ok=false moved=0.04 pos=(64.9,66.0,-86.7)
+[DD] FLOOR hop: hop 4: -> (65.8,67,-88.5) ok=false moved=1.12 pos=(64.4,65.0,-85.7)
+[DD] FLOOR hop: hop 5: -> (64.3,68,-87.7) ok=false moved=1.01 pos=(64.4,66.0,-86.7)
+[DD] FLOOR hop: hop 6: -> (65.4,67,-88.4) ok=false moved=0.01 pos=(64.4,66.0,-86.7)
+[DD] FLOOR hop: hop 7: -> (63.1,72,-88.3) ok=false moved=1.26 pos=(65.1,65.0,-85.7)
+[DD] FLOOR hop: hop 8: -> (64.8,68,-87.7) ok=false moved=1.02 pos=(65.0,66.0,-86.7)
+[DD] FLOOR hop: hop 9: -> (65.9,67,-88.5) ok=false moved=0.01 pos=(65.0,66.8,-86.7)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":9,"dist":6.4,"start":{"x":64.9,"y":66,"z":-86.7},"end":{"x":65,"y":66,"z":-86.7}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] FLOOR: burrow hold over
+[DD] cycle 137 [deepinfra:deepseek-v4.1-flash] say="I'm UP — feet at 66, two levels above where I woke, and the pad's grass is right there south of me. The bowl let me go. And my eyes just named a birch trunk at (71,67,-76) — a real foot, reachable from the ground. Wood first, at home. Let me get my feet onto the pad proper." cmd="goto 62 67 -90"
+[DD] DENSITY block close: acts=38 {"dig":4,"look":2,"goto":10,"wait":1,"place":2} {"flee":19} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (66.6,66,-87.5) ok=true moved=1.50 pos=(66.5,66.2,-87.0)
+[DD] FLOOR hop: hop 2: -> (65.8,67,-89.2) ok=true moved=1.39 pos=(66.0,67.0,-88.6)
+[DD] FLOOR hop: hop 3: -> (66.2,71,-90.8) ok=false moved=2.92 pos=(64.5,66.0,-91.4)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":3,"dist":1.6}
+[DD] cycle 139 [deepinfra:deepseek-v4.1-flash] say="Feet at 66, and the ground south of me tops at 67 — one step up and I'm on the pad. The grass is a single block above my boots, the walker climbs that by itself. South, onto home ground." cmd="goto 64 67 -89"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":0,"dist":3}
+[DD] cycle 141 [deepinfra:deepseek-v4.1-flash] say="Feet at 67 — I'm on the pad! The bowl's behind me and I'm standing on home ground. The wood chain runs now. My table's right north of me, but first the tree: the birch foot at (71,67,-76) my eyes named. Let me walk to it." cmd="goto 71 67 -77"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (65.4,67,-88.7) ok=true moved=0.88 pos=(66.3,66.2,-89.4)
+[DD] FLOOR hop: hop 2: -> (65.8,67,-87.5) ok=false moved=1.66 pos=(65.9,67.1,-87.9)
+[DD] FLOOR hop: hop 3: -> (64.0,72,-88.3) ok=false moved=2.25 pos=(63.6,68.0,-87.9)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":3,"dist":2}
+[DD] cycle 143 [deepinfra:deepseek-v4.1-flash] say="Hmm — the walker says I'm at 66, -90 but the ground under me reads feet at 68, and there's stone at 62 north of me. I'm up on a rise, and the birch is fifteen blocks off southeast. Let me push toward it in a short hop and see what the ground does." cmd="goto 68 67 -84"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (66.9,72,-86.0) ok=false moved=1.80 pos=(66.7,64.0,-85.6)
+[DD] FLOOR hop: hop 2: -> (65.1,65,-86.8) ok=false moved=0.20 pos=(66.6,65.1,-85.8)
+[DD] FLOOR hop: hop 3: -> (68.1,66,-87.1) ok=true moved=1.28 pos=(67.6,65.4,-86.6)
+[DD] FLOOR hop: hop 4: -> (68.8,66,-88.1) ok=true moved=1.30 pos=(68.4,66.0,-87.6)
+[DD] FLOOR hop: hop 5: -> (66.6,67,-88.3) ok=true moved=0.84 pos=(67.7,67.0,-88.0)
+[DD] FLOOR hop: hop 6: -> (65.5,67,-88.8) ok=true moved=1.95 pos=(65.5,67.0,-88.6)
+[DD] FLOOR hop: hop 7: -> (63.9,68,-89.8) ok=true moved=0.78 pos=(64.8,68.0,-89.0)
+[DD] FLOOR hop: hop 8: -> (66.4,71,-90.1) ok=false moved=2.30 pos=(66.6,65.0,-90.3)
+[DD] FLOOR hop: hop 9: -> (66.3,66,-92.3) ok=false moved=1.06 pos=(66.4,63.0,-91.3)
+[DD] FLOOR: hop-flee done {"ok":true,"via":"mustered at target","hops":9,"dist":2.9}
+[DD] cycle 145 [deepinfra:deepseek-v4.1-flash] say="Back down at 63, right at the water's edge, and a zombie a block off. The floor keeps bouncing me around this bowl. I'm not going to fight a zombie with porkchops — let me get up onto the grass shoulder west, one level at a time, and put distance between me and that water." cmd="goto 62 66 -90"
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (64.6,64,-90.4) ok=false moved=0.00 pos=(66.3,63.1,-91.3)
+[DD] FLOOR hop: hop 2: -> (65.4,67,-89.5) ok=false moved=0.30 pos=(66.6,63.0,-91.3)
+[DD] FLOOR hop: hop 3: -> (65.7,67,-89.6) ok=false moved=0.05 pos=(66.7,63.0,-91.3)
+[DD] FLOOR hop: hop 4: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.0,-91.3)
+[DD] FLOOR hop: hop 5: -> (64.7,66,-91.6) ok=false moved=0.02 pos=(66.7,63.0,-91.3)
+[DD] FLOOR hop: hop 6: -> (65.7,67,-89.6) ok=false moved=0.02 pos=(66.7,63.0,-91.3)
+[DD] FLOOR hop: hop 7: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.0,-91.3)
+[DD] FLOOR hop: hop 8: -> (64.7,66,-91.6) ok=false moved=0.01 pos=(66.7,63.0,-91.3)
+[DD] FLOOR hop: hop 9: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.0,-91.3)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":9,"dist":5.2,"start":{"x":66.3,"y":63.1,"z":-91.3},"end":{"x":66.7,"y":63,"z":-91.3}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] FLOOR: burrow hold over
+[DD] model attempt 1 failed on deepinfra:deepseek-v4.1-flash : read ECONNRESET 
+[DD] model attempt 2 failed on deepinfra:deepseek-v4.1-flash : read ECONNRESET 
+[DD] model call failed on deepinfra:deepseek-v4.1-flash : empty/failed after retry
+[DD] no model reply (cycle 147 ) — waiting 5s
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (64.9,64,-90.4) ok=false moved=0.02 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 2: -> (65.7,67,-89.6) ok=false moved=0.02 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 3: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 4: -> (64.9,64,-90.4) ok=false moved=0.01 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 5: -> (65.7,67,-89.6) ok=false moved=0.01 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 6: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 7: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 8: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 9: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":9,"dist":5.2,"start":{"x":66.7,"y":63,"z":-91.3},"end":{"x":66.7,"y":63.1,"z":-91.3}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] FLOOR: burrow hold over
+[DD] cycle 149 [deepinfra:deepseek-v4.1-flash] say="The short hop west did nothing — I'm still down at 63 beside the water. The rule says short gotos inside a low cell don't move me at all; I need one long leg well past the wall. The grass shoulder at 66 is two levels up. Long leg west, clear past it." cmd="goto 60 66 -90"
+[DD] DENSITY block close: acts=11 {"goto":5} {"flee":6} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (64.9,64,-90.4) ok=false moved=0.02 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 2: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 3: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 4: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 5: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 6: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 7: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 8: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 9: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":9,"dist":5.2,"start":{"x":66.7,"y":63.1,"z":-91.3},"end":{"x":66.7,"y":63.1,"z":-91.3}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] FLOOR: burrow hold over
+[DD] cycle 151 [deepinfra:deepseek-v4.1-flash] say="Still stuck at 63 — the long leg didn't take either, and a zombie's two blocks off. The walls around me top at 66, three levels up, and the walker can't climb that. There's water right at my feet. Let me at least get out of the wet cell — try the south grass at 66, one long leg past it." cmd="goto 66 66 -84"
+[DD] DENSITY block close: acts=2 {"goto":1} {"flee":1} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 2: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 3: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 4: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 5: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 6: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 7: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 8: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 9: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":9,"dist":5.2,"start":{"x":66.7,"y":63.1,"z":-91.3},"end":{"x":66.7,"y":63.1,"z":-91.3}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] FLOOR: burrow hold over
+[DD] cycle 153 [deepinfra:deepseek-v4.1-flash] say="Four legs and I haven't moved an inch — I'm pinned in this low cell at 63 with water at my boots. Every wall around me tops three levels up, and the walker won't climb that. I've got nothing to place and no pickaxe. Cody's honest: I'm in a hole I can't walk out of. Crew — I'm stuck in the water cell at 66,63,-91 and I can't get out." cmd="wait 3"
+[DD] DENSITY block close: acts=2 {"wait":1} {"flee":1} 
+[DD] FLOOR: fleeing zombie by hop-chain
+[DD] FLOOR hop: hop 1: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 2: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 3: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 4: -> (64.9,64,-90.4) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 5: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 6: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 7: -> (64.9,64,-90.4) ok=false moved=0.02 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 8: -> (65.7,67,-89.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR hop: hop 9: -> (64.7,66,-91.6) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] FLOOR: hop-flee done {"ok":false,"via":"budget exhausted","hops":9,"dist":5.2,"start":{"x":66.7,"y":63.1,"z":-91.3},"end":{"x":66.7,"y":63.1,"z":-91.3}}
+[DD] FLOOR: flee did not clear — burrowing
+[DD] FLOOR: burrow hold over
+[DD] CLOSE: below grade at window end — running the long-leg exit to the bench as the close act
+[DD] CLOSE hop: hop 1: -> (64.8,64,-90.8) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] CLOSE hop: hop 2: -> (64.8,66,-92.0) ok=false moved=0.00 pos=(66.7,63.1,-91.3)
+[DD] CLOSE hop: hop 3: -> (65.5,63,-92.9) ok=false moved=0.39 pos=(66.3,63.0,-91.3)
+[DD] CLOSE hop: hop 4: -> (64.4,64,-90.9) ok=false moved=0.00 pos=(66.3,63.0,-91.3)
+[DD] CLOSE hop: hop 5: -> (64.4,67,-92.0) ok=false moved=0.00 pos=(66.3,63.0,-91.3)
+[BotMessenger] Stopped state sync
+[BotMessenger] Shutdown complete for Cody
+=== day18 driver exited 2026-11-13T13:48:13Z rc=0 ===

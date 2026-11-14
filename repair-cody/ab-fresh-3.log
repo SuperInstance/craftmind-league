@@ -1,0 +1,11 @@
+[AB3] ABProbe731946 spawn pos 27.686,68.000,-103.308 onGround false
+[AB3] ABProbe731946 NAV end arrived false pos 27.686,68.000,-103.308 navMs 90034 navPosPkts 1795
+[AB3] ABProbe731946 SCAN z=-104 y=67 [26:grass_block] [27:grass_block] [28:dirt] [29:dirt] [30:dirt] [31:dirt] [32:grass_block] 
+[AB3] ABProbe731946 SCAN z=-104 y=68 [26:air] [27:air] [28:dirt] [29:dirt] [30:dirt] [31:dirt] [32:air] 
+[AB3] ABProbe731946 SCAN z=-104 y=69 [26:air] [27:air] [28:grass_block] [29:grass_block] [30:grass_block] [31:grass_block] [32:air] 
+[AB3] ABProbe731946 SCAN z=-104 y=70 [26:air] [27:air] [28:air] [29:leaf_litter] [30:leaf_litter] [31:air] [32:air] 
+[AB3] ABProbe731946 BATTERY START 27.686,68.000,-103.308 onGround true
+[AB3] ABProbe731946 RAW east fwd+jump 4s: end 27.686,68.000,-103.308 disp3d 0.000 dx 0.000 rawPosPkts 80
+[AB3] ABProbe731946 GOTO prims.gotoNear target 47.7,68.0,-103.3 result {"ok":false,"error":"walkTo timeout (52789ms) to 47.686366817489,68,-103.30806438550817; at (27.686366817489002, 68, -103.30806438550817)"} ms 60098 end 27.686,68.000,-103.308 dispFromRawEnd 0.000 gotoPosPkts 1193
+[AB3] ABProbe731946 PFDIRECT pathfinder goto same target: TIMEOUT60s ms 60001 end 27.686,68.000,-103.308 dispFromGotoEnd 0.000 dxFromStart 0.000 pfPosPkts 1179
+[AB3] ABProbe731946 DONE

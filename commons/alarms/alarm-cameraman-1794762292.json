@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "daylight refresh VERIFIED LANDED in server log",
+ "last_effect_ts": "2026-11-13T20:38:05",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 160007s exceeds period 300s + grace (limit 900s)",
+ "ts": "2026-11-15T17:04:52.293952Z",
+ "watcher": "cameraman"
+}

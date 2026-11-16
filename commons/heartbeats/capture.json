@@ -1,7 +1,7 @@
 {
  "declared_period_s": 300,
  "detail": "",
- "emitted_at": "2026-11-14T18:57:58.824686Z",
+ "emitted_at": "2026-11-16T16:31:45.822086Z",
  "host": "orin",
  "last_effect": "segment seg-1794602491.mp4 started",
  "last_effect_ts": "2026-11-13T20:41:31Z",

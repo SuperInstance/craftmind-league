@@ -1,7 +1,7 @@
 {
  "declared_period_s": 3600,
  "detail": "effect = answers, not polls. Demand-driven: the driver polls the book every ~60 s but an answer only exists when a citizen files a consult, so the declared period is 3600 s (one answer per active hour expected) with 2x grace on top. A filed-but-unanswered consult aging past the driver's own poll cycle is the sharper alarm and is read directly from the book by anyone auditing; this beat proves the seat path end-to-end when answers flow.",
- "emitted_at": "2026-11-14T18:58:52.269171Z",
+ "emitted_at": "2026-11-16T16:31:22.266825Z",
  "host": "thor",
  "last_effect": "answer id=vega-1a1ba17d9e6-wt citizen=vega",
  "last_effect_ts": "2026-11-08T07:38:48.050Z",

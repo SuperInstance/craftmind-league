@@ -1,0 +1,9 @@
+{
+ "kind": "watcher-alarm",
+ "last_effect": "digest tick 56040 tod=None",
+ "last_effect_ts": "2026-11-13T20:42:19.499Z",
+ "raised_by": "meta-watcher (charter rule 8, first pass)",
+ "reason": "effect age 110343s exceeds period 30s + grace (limit 90s)",
+ "ts": "2026-11-15T03:21:22.275997Z",
+ "watcher": "digest"
+}
